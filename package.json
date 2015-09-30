@@ -1,0 +1,27 @@
+{
+  "name": "bangs",
+  "version": "0.1.0",
+  "description": "Bangs are single-responsibility CSS class selectors with exactly one property and marked with !important.",
+  "private": true,
+  "main": "bangs.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chharvey/bangs.git"
+  },
+  "keywords": [
+    "css",
+    "atomic"
+  ],
+  "author": "Chris Harvey <chrisharvey2pi@gmail.com> (https://chharvey.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chharvey/bangs/issues"
+  },
+  "homepage": "https://github.com/chharvey/bangs#readme",
+  "devDependencies": {
+    "lessc-each": "^1.0.1"
+  }
+}
