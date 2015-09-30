@@ -36,14 +36,14 @@ The initials are below.
 
 ```
 #### Structure                       #### Text
-!d     display                        !fs     font-style
-!w     width                          !fv     font-variant
-!p     padding                        !fw     font-weight
-!m     margin                         !fz     font-size
-!jc    justify-content                !ff     font-family
-!o     order                          !tt     text-transform
-                                      !ta     text-align
-#### Theme                            !lst    list-style-type
+!d    display                        !fs     font-style
+!w    width                          !fv     font-variant
+!p    padding                        !fw     font-weight
+!m    margin                         !fz     font-size
+!j    justify-content                !ff     font-family
+!o    order                          !tt     text-transform
+                                     !ta     text-align
+#### Theme                           !lst    list-style-type
 !bg     background (shorthand)
 !bgc    background-color
 ```
