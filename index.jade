@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title Bangs
+    meta(charset="utf-8")
+    meta(name="author", content="Chris Harvey")
+    meta(name="description", content="Bangs are single-responsibility CSS class selectors with exactly one property and marked with !important.")
+    link(rel="stylesheet", href="bangs.css")
+  body
+    main
+      section
+        h1 _display.less
+        div(class="!d:0 ") { display: initial      !important; }
+        div(class="!d:i ") { display: inherit      !important; }
+        div(class="!d:n ") { display: none         !important; }
+        div(class="!d:bk") { display: block        !important; }
+        div(class="!d:il") { display: inline       !important; }
+        div(class="!d:ib") { display: inline-block !important; }
+        div(class="!d:tb") { display: table        !important; }
+        div(class="!d:tc") { display: table-cell   !important; }
+        div(class="!d:fx") { display: flex         !important; }

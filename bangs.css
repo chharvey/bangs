@@ -1,0 +1,91 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
+    bangs.less
+\*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*################################*\
+    _display.less
+\*################################*/
+.\!d\:0 {
+  display: initial      !important;
+}
+.\!d\:i {
+  display: inherit      !important;
+}
+.\!d\:n {
+  display: none         !important;
+}
+.\!d\:bk {
+  display: block        !important;
+}
+.\!d\:il {
+  display: inline       !important;
+}
+.\!d\:ib {
+  display: inline-block !important;
+}
+.\!d\:tb {
+  display: table        !important;
+}
+.\!d\:tc {
+  display: table-cell !important;
+}
+.\!d\:fx {
+  display: flex         !important;
+}
+@media screen {
+  .\!d\:0\@s {
+    display: initial      !important;
+  }
+  .\!d\:i\@s {
+    display: inherit      !important;
+  }
+  .\!d\:n\@s {
+    display: none         !important;
+  }
+  .\!d\:bk\@s {
+    display: block        !important;
+  }
+  .\!d\:il\@s {
+    display: inline       !important;
+  }
+  .\!d\:ib\@s {
+    display: inline-block !important;
+  }
+  .\!d\:tb\@s {
+    display: table        !important;
+  }
+  .\!d\:tc\@s {
+    display: table-cell !important;
+  }
+  .\!d\:fx\@s {
+    display: flex         !important;
+  }
+}
+@media print {
+  .\!d\:0\@p {
+    display: initial      !important;
+  }
+  .\!d\:i\@p {
+    display: inherit      !important;
+  }
+  .\!d\:n\@p {
+    display: none         !important;
+  }
+  .\!d\:bk\@p {
+    display: block        !important;
+  }
+  .\!d\:il\@p {
+    display: inline       !important;
+  }
+  .\!d\:ib\@p {
+    display: inline-block !important;
+  }
+  .\!d\:tb\@p {
+    display: table        !important;
+  }
+  .\!d\:tc\@p {
+    display: table-cell !important;
+  }
+  .\!d\:fx\@p {
+    display: flex         !important;
+  }
+}
