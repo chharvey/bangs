@@ -95,9 +95,9 @@ b    bottom
 :ed    flex-end
 
 #### Text
-:it    italic            :ca    capitalize        :dz    decimal-leading-zero
-:sc    small-caps        :uc    uppercase         :ur    upper-roman
-:bd    bold              :lc    lowercase         :ua    upper-alpha
+:t     italic            :ca    capitalize        :dz    decimal-leading-zero
+:s     small-caps        :uc    uppercase         :ur    upper-roman
+:b     bold              :lc    lowercase         :ua    upper-alpha
 :ss    sans-serif        :lt    left              :dc    decimal
 :sf    serif             :rt    right             :la    lower-alpha
 :ms    monospace         :cr    center            :lr    lower-roman
