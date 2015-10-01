@@ -643,6 +643,29 @@ html
             li(class="!lst:lr@p") .!lst:lr@p { list-style-type: lower-roman          !important; }
             li(class="!lst:lg@p") .!lst:lg@p { list-style-type: lower-greek          !important; }
       section
+        h1 _list-style-position.less
+        section
+          h1 all media queries
+          ul
+            li(class="!lsp:0 ") .!lsp:0  { list-style-position: initial !important; }
+            li(class="!lsp:i ") .!lsp:i  { list-style-position: inherit !important; }
+            li(class="!lsp:os") .!lsp:os { list-style-position: outside !important; }
+            li(class="!lsp:is") .!lsp:is { list-style-position: inside  !important; }
+        section
+          h1 @media screen
+          ul
+            li(class="!lsp:0@s ") .!lsp:0@s  { list-style-position: initial !important; }
+            li(class="!lsp:i@s ") .!lsp:i@s  { list-style-position: inherit !important; }
+            li(class="!lsp:os@s") .!lsp:os@s { list-style-position: outside !important; }
+            li(class="!lsp:is@s") .!lsp:is@s { list-style-position: inside  !important; }
+        section
+          h1 @media print
+          ul
+            li(class="!lsp:0@p ") .!lsp:0@p  { list-style-position: initial !important; }
+            li(class="!lsp:i@p ") .!lsp:i@p  { list-style-position: inherit !important; }
+            li(class="!lsp:os@p") .!lsp:os@p { list-style-position: outside !important; }
+            li(class="!lsp:is@p") .!lsp:is@p { list-style-position: inside  !important; }
+      section
         h1 _background-color.less
         section
           h1 all media queries

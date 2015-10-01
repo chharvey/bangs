@@ -44,7 +44,7 @@ The initials are below.
 !o    order                          !tt     text-transform
                                      !ta     text-align
 #### Theme                           !lst    list-style-type
-!bg     background
+!bg     background                   !lsp    list-style-position
 !bgc    background-color
 ```
 
@@ -102,7 +102,8 @@ b    bottom
 :sf    serif             :rt    right             :la    lower-alpha
 :ms    monospace         :cr    center            :lr    lower-roman
 :fy    fantasy           :jf    justify           :lg    lower-greek
-:cs    cursive
+:cs    cursive                                    :os    outside
+                                                  :is    inside
 
 ##### `font-weight`
 :1    100        :4    400        :7    700
