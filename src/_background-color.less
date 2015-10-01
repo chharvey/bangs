@@ -1,0 +1,23 @@
+
+/*################################*\
+    _background-color.less
+\*################################*/
+
+.\!bgc\:0 { background-color: initial      !important; }
+.\!bgc\:i { background-color: inherit      !important; }
+.\!bgc\:t { background-color: transparent  !important; }
+.\!bgc\:c { background-color: currentColor !important; }
+
+@media screen {
+  .\!bgc\:0\@s { .\!bgc\:0; }
+  .\!bgc\:i\@s { .\!bgc\:i; }
+  .\!bgc\:t\@s { .\!bgc\:t; }
+  .\!bgc\:c\@s { .\!bgc\:c; }
+}
+
+@media print {
+  .\!bgc\:0\@p { .\!bgc\:0; }
+  .\!bgc\:i\@p { .\!bgc\:i; }
+  .\!bgc\:t\@p { .\!bgc\:t; }
+  .\!bgc\:c\@p { .\!bgc\:c; }
+}

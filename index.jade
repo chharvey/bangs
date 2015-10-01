@@ -6,16 +6,676 @@ html
     meta(name="author", content="Chris Harvey")
     meta(name="description", content="Bangs are single-responsibility CSS class selectors with exactly one property and marked with !important.")
     link(rel="stylesheet", href="bangs.css")
+    style.
+      [class^='!'] {
+        background-color: rgba(0,0,0, 0.1);
+        outline: 1px solid rgba(0,0,0, 0.1);
+      }
+      .ss-flexbox {
+        opacity: 0.25;
+        color: red;
+      }
+      .ss-flexbox::before {
+        display: block;
+        content: 'Flexbox properties still in draft mode.';
+        font-weight: 900;
+        font-size: 1.5em;
+        line-height: 1;
+        text-align: center;
+      }
   body
     main
       section
         h1 _display.less
-        div(class="!d:0 ") { display: initial      !important; }
-        div(class="!d:i ") { display: inherit      !important; }
-        div(class="!d:n ") { display: none         !important; }
-        div(class="!d:bk") { display: block        !important; }
-        div(class="!d:il") { display: inline       !important; }
-        div(class="!d:ib") { display: inline-block !important; }
-        div(class="!d:tb") { display: table        !important; }
-        div(class="!d:tc") { display: table-cell   !important; }
-        div(class="!d:fx") { display: flex         !important; }
+        section
+          h1 all media queries
+          div(class="!d:0 ") .!d:0  { display: initial      !important; }
+          div(class="!d:i ") .!d:i  { display: inherit      !important; }
+          div(class="!d:n ") .!d:n  { display: none         !important; }
+          div(class="!d:bk") .!d:bk { display: block        !important; }
+          div(class="!d:il") .!d:il { display: inline       !important; }
+          div(class="!d:ib") .!d:ib { display: inline-block !important; }
+          //- div(class="!d:tb") .!d:tb { display: table        !important; }
+          //- div(class="!d:tc") .!d:tc { display: table-cell   !important; }
+          div(class="!d:fx") .!d:fx { display: flex         !important; }
+        section
+          h1 @media screen
+          div(class="!d:0@s ") .!d:0@s  { display: initial      !important; }
+          div(class="!d:i@s ") .!d:i@s  { display: inherit      !important; }
+          div(class="!d:n@s ") .!d:n@s  { display: none         !important; }
+          div(class="!d:bk@s") .!d:bk@s { display: block        !important; }
+          div(class="!d:il@s") .!d:il@s { display: inline       !important; }
+          div(class="!d:ib@s") .!d:ib@s { display: inline-block !important; }
+          //- div(class="!d:tb@s") .!d:tb@s { display: table        !important; }
+          //- div(class="!d:tc@s") .!d:tc@s { display: table-cell   !important; }
+          div(class="!d:fx@s") .!d:fx@s { display: flex         !important; }
+        section
+          h1 @media print
+          div(class="!d:0@p ") .!d:0@p  { display: initial      !important; }
+          div(class="!d:i@p ") .!d:i@p  { display: inherit      !important; }
+          div(class="!d:n@p ") .!d:n@p  { display: none         !important; }
+          div(class="!d:bk@p") .!d:bk@p { display: block        !important; }
+          div(class="!d:il@p") .!d:il@p { display: inline       !important; }
+          div(class="!d:ib@p") .!d:ib@p { display: inline-block !important; }
+          //- div(class="!d:tb@p") .!d:tb@p { display: table        !important; }
+          //- div(class="!d:tc@p") .!d:tc@p { display: table-cell   !important; }
+          div(class="!d:fx@p") .!d:fx@p { display: flex         !important; }
+      section
+        h1 _width.less
+        section
+          h1 all media queries
+          div(class="!w:1o1") .!w:1o1 { width: 100% !important; }
+          div(class="!w:1o2") .!w:1o2 { width: 50% !important; }
+          div(class="!w:2o2") .!w:2o2 { width: 100% !important; }
+          div(class="!w:1o3") .!w:1o3 { width: 33.33333333% !important; }
+          div(class="!w:2o3") .!w:2o3 { width: 66.66666667% !important; }
+          div(class="!w:3o3") .!w:3o3 { width: 100% !important; }
+          div(class="!w:1o4") .!w:1o4 { width: 25% !important; }
+          div(class="!w:2o4") .!w:2o4 { width: 50% !important; }
+          div(class="!w:3o4") .!w:3o4 { width: 75% !important; }
+          div(class="!w:4o4") .!w:4o4 { width: 100% !important; }
+          div(class="!w:1o5") .!w:1o5 { width: 20% !important; }
+          div(class="!w:2o5") .!w:2o5 { width: 40% !important; }
+          div(class="!w:3o5") .!w:3o5 { width: 60% !important; }
+          div(class="!w:4o5") .!w:4o5 { width: 80% !important; }
+          div(class="!w:5o5") .!w:5o5 { width: 100% !important; }
+          div(class="!w:1o6") .!w:1o6 { width: 16.66666667% !important; }
+          div(class="!w:2o6") .!w:2o6 { width: 33.33333333% !important; }
+          div(class="!w:3o6") .!w:3o6 { width: 50% !important; }
+          div(class="!w:4o6") .!w:4o6 { width: 66.66666667% !important; }
+          div(class="!w:5o6") .!w:5o6 { width: 83.33333333% !important; }
+          div(class="!w:6o6") .!w:6o6 { width: 100% !important; }
+        section
+          h1 @media screen
+          div(class="!w:1o1@s") .!w:1o1@s { width: 100% !important; }
+          div(class="!w:1o2@s") .!w:1o2@s { width: 50% !important; }
+          div(class="!w:2o2@s") .!w:2o2@s { width: 100% !important; }
+          div(class="!w:1o3@s") .!w:1o3@s { width: 33.33333333% !important; }
+          div(class="!w:2o3@s") .!w:2o3@s { width: 66.66666667% !important; }
+          div(class="!w:3o3@s") .!w:3o3@s { width: 100% !important; }
+          div(class="!w:1o4@s") .!w:1o4@s { width: 25% !important; }
+          div(class="!w:2o4@s") .!w:2o4@s { width: 50% !important; }
+          div(class="!w:3o4@s") .!w:3o4@s { width: 75% !important; }
+          div(class="!w:4o4@s") .!w:4o4@s { width: 100% !important; }
+          div(class="!w:1o5@s") .!w:1o5@s { width: 20% !important; }
+          div(class="!w:2o5@s") .!w:2o5@s { width: 40% !important; }
+          div(class="!w:3o5@s") .!w:3o5@s { width: 60% !important; }
+          div(class="!w:4o5@s") .!w:4o5@s { width: 80% !important; }
+          div(class="!w:5o5@s") .!w:5o5@s { width: 100% !important; }
+          div(class="!w:1o6@s") .!w:1o6@s { width: 16.66666667% !important; }
+          div(class="!w:2o6@s") .!w:2o6@s { width: 33.33333333% !important; }
+          div(class="!w:3o6@s") .!w:3o6@s { width: 50% !important; }
+          div(class="!w:4o6@s") .!w:4o6@s { width: 66.66666667% !important; }
+          div(class="!w:5o6@s") .!w:5o6@s { width: 83.33333333% !important; }
+          div(class="!w:6o6@s") .!w:6o6@s { width: 100% !important; }
+        section
+          h1 @media print
+          div(class="!w:1o1@p") .!w:1o1@p { width: 100% !important; }
+          div(class="!w:1o2@p") .!w:1o2@p { width: 50% !important; }
+          div(class="!w:2o2@p") .!w:2o2@p { width: 100% !important; }
+          div(class="!w:1o3@p") .!w:1o3@p { width: 33.33333333% !important; }
+          div(class="!w:2o3@p") .!w:2o3@p { width: 66.66666667% !important; }
+          div(class="!w:3o3@p") .!w:3o3@p { width: 100% !important; }
+          div(class="!w:1o4@p") .!w:1o4@p { width: 25% !important; }
+          div(class="!w:2o4@p") .!w:2o4@p { width: 50% !important; }
+          div(class="!w:3o4@p") .!w:3o4@p { width: 75% !important; }
+          div(class="!w:4o4@p") .!w:4o4@p { width: 100% !important; }
+          div(class="!w:1o5@p") .!w:1o5@p { width: 20% !important; }
+          div(class="!w:2o5@p") .!w:2o5@p { width: 40% !important; }
+          div(class="!w:3o5@p") .!w:3o5@p { width: 60% !important; }
+          div(class="!w:4o5@p") .!w:4o5@p { width: 80% !important; }
+          div(class="!w:5o5@p") .!w:5o5@p { width: 100% !important; }
+          div(class="!w:1o6@p") .!w:1o6@p { width: 16.66666667% !important; }
+          div(class="!w:2o6@p") .!w:2o6@p { width: 33.33333333% !important; }
+          div(class="!w:3o6@p") .!w:3o6@p { width: 50% !important; }
+          div(class="!w:4o6@p") .!w:4o6@p { width: 66.66666667% !important; }
+          div(class="!w:5o6@p") .!w:5o6@p { width: 83.33333333% !important; }
+          div(class="!w:6o6@p") .!w:6o6@p { width: 100% !important; }
+      section
+        h1 _padding.less
+        section
+          h1 all media queries
+          div(class="!pl:0") .!pl:0 { padding-left: 0      !important; }
+          div(class="!pl:h") .!pl:h { padding-left: 0.5rem !important; }
+          div(class="!pl:1") .!pl:1 { padding-left: 1rem   !important; }
+          div(class="!pl:2") .!pl:2 { padding-left: 2rem   !important; }
+          div(class="!pl:4") .!pl:4 { padding-left: 4rem   !important; }
+          div(class="!pr:0") .!pr:0 { padding-right: 0      !important; }
+          div(class="!pr:h") .!pr:h { padding-right: 0.5rem !important; }
+          div(class="!pr:1") .!pr:1 { padding-right: 1rem   !important; }
+          div(class="!pr:2") .!pr:2 { padding-right: 2rem   !important; }
+          div(class="!pr:4") .!pr:4 { padding-right: 4rem   !important; }
+          div(class="!pt:0") .!pt:0 { padding-top: 0      !important; }
+          div(class="!pt:h") .!pt:h { padding-top: 0.5rem !important; }
+          div(class="!pt:1") .!pt:1 { padding-top: 1rem   !important; }
+          div(class="!pt:2") .!pt:2 { padding-top: 2rem   !important; }
+          div(class="!pt:4") .!pt:4 { padding-top: 4rem   !important; }
+          div(class="!pb:0") .!pb:0 { padding-bottom: 0      !important; }
+          div(class="!pb:h") .!pb:h { padding-bottom: 0.5rem !important; }
+          div(class="!pb:1") .!pb:1 { padding-bottom: 1rem   !important; }
+          div(class="!pb:2") .!pb:2 { padding-bottom: 2rem   !important; }
+          div(class="!pb:4") .!pb:4 { padding-bottom: 4rem   !important; }
+          div(class="!px:0") .!px:0 { padding-left: 0      !important; padding-right: 0      !important; }
+          div(class="!px:h") .!px:h { padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
+          div(class="!px:1") .!px:1 { padding-left: 1rem   !important; padding-right: 1rem   !important; }
+          div(class="!px:2") .!px:2 { padding-left: 2rem   !important; padding-right: 2rem   !important; }
+          div(class="!px:4") .!px:4 { padding-left: 4rem   !important; padding-right: 4rem   !important; }
+          div(class="!py:0") .!py:0 { padding-top: 0      !important; padding-bottom: 0      !important; }
+          div(class="!py:h") .!py:h { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
+          div(class="!py:1") .!py:1 { padding-top: 1rem   !important; padding-bottom: 1rem   !important; }
+          div(class="!py:2") .!py:2 { padding-top: 2rem   !important; padding-bottom: 2rem   !important; }
+          div(class="!py:4") .!py:4 { padding-top: 4rem   !important; padding-bottom: 4rem   !important; }
+          div(class="!pa:0") .!pa:0 { padding-left: 0      !important; padding-right: 0      !important; padding-top: 0      !important; padding-bottom: 0      !important; }
+          div(class="!pa:h") .!pa:h { padding-left: 0.5rem !important; padding-right: 0.5rem !important; padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
+          div(class="!pa:1") .!pa:1 { padding-left: 1rem   !important; padding-right: 1rem   !important; padding-top: 1rem   !important; padding-bottom: 1rem   !important; }
+          div(class="!pa:2") .!pa:2 { padding-left: 2rem   !important; padding-right: 2rem   !important; padding-top: 2rem   !important; padding-bottom: 2rem   !important; }
+          div(class="!pa:4") .!pa:4 { padding-left: 4rem   !important; padding-right: 4rem   !important; padding-top: 4rem   !important; padding-bottom: 4rem   !important; }
+        section
+          h1 @media screen
+          div(class="!pl:0@s") .!pl:0@s { padding-left: 0      !important; }
+          div(class="!pl:h@s") .!pl:h@s { padding-left: 0.5rem !important; }
+          div(class="!pl:1@s") .!pl:1@s { padding-left: 1rem   !important; }
+          div(class="!pl:2@s") .!pl:2@s { padding-left: 2rem   !important; }
+          div(class="!pl:4@s") .!pl:4@s { padding-left: 4rem   !important; }
+          div(class="!pr:0@s") .!pr:0@s { padding-right: 0      !important; }
+          div(class="!pr:h@s") .!pr:h@s { padding-right: 0.5rem !important; }
+          div(class="!pr:1@s") .!pr:1@s { padding-right: 1rem   !important; }
+          div(class="!pr:2@s") .!pr:2@s { padding-right: 2rem   !important; }
+          div(class="!pr:4@s") .!pr:4@s { padding-right: 4rem   !important; }
+          div(class="!pt:0@s") .!pt:0@s { padding-top: 0      !important; }
+          div(class="!pt:h@s") .!pt:h@s { padding-top: 0.5rem !important; }
+          div(class="!pt:1@s") .!pt:1@s { padding-top: 1rem   !important; }
+          div(class="!pt:2@s") .!pt:2@s { padding-top: 2rem   !important; }
+          div(class="!pt:4@s") .!pt:4@s { padding-top: 4rem   !important; }
+          div(class="!pb:0@s") .!pb:0@s { padding-bottom: 0      !important; }
+          div(class="!pb:h@s") .!pb:h@s { padding-bottom: 0.5rem !important; }
+          div(class="!pb:1@s") .!pb:1@s { padding-bottom: 1rem   !important; }
+          div(class="!pb:2@s") .!pb:2@s { padding-bottom: 2rem   !important; }
+          div(class="!pb:4@s") .!pb:4@s { padding-bottom: 4rem   !important; }
+          div(class="!px:0@s") .!px:0@s { padding-left: 0      !important; padding-right: 0      !important; }
+          div(class="!px:h@s") .!px:h@s { padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
+          div(class="!px:1@s") .!px:1@s { padding-left: 1rem   !important; padding-right: 1rem   !important; }
+          div(class="!px:2@s") .!px:2@s { padding-left: 2rem   !important; padding-right: 2rem   !important; }
+          div(class="!px:4@s") .!px:4@s { padding-left: 4rem   !important; padding-right: 4rem   !important; }
+          div(class="!py:0@s") .!py:0@s { padding-top: 0      !important; padding-bottom: 0      !important; }
+          div(class="!py:h@s") .!py:h@s { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
+          div(class="!py:1@s") .!py:1@s { padding-top: 1rem   !important; padding-bottom: 1rem   !important; }
+          div(class="!py:2@s") .!py:2@s { padding-top: 2rem   !important; padding-bottom: 2rem   !important; }
+          div(class="!py:4@s") .!py:4@s { padding-top: 4rem   !important; padding-bottom: 4rem   !important; }
+          div(class="!pa:0@s") .!pa:0@s { padding-left: 0      !important; padding-right: 0      !important; padding-top: 0      !important; padding-bottom: 0      !important; }
+          div(class="!pa:h@s") .!pa:h@s { padding-left: 0.5rem !important; padding-right: 0.5rem !important; padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
+          div(class="!pa:1@s") .!pa:1@s { padding-left: 1rem   !important; padding-right: 1rem   !important; padding-top: 1rem   !important; padding-bottom: 1rem   !important; }
+          div(class="!pa:2@s") .!pa:2@s { padding-left: 2rem   !important; padding-right: 2rem   !important; padding-top: 2rem   !important; padding-bottom: 2rem   !important; }
+          div(class="!pa:4@s") .!pa:4@s { padding-left: 4rem   !important; padding-right: 4rem   !important; padding-top: 4rem   !important; padding-bottom: 4rem   !important; }
+        section
+          h1 @media print
+          div(class="!pl:0@p") .!pl:0@p { padding-left: 0      !important; }
+          div(class="!pl:h@p") .!pl:h@p { padding-left: 0.5rem !important; }
+          div(class="!pl:1@p") .!pl:1@p { padding-left: 1rem   !important; }
+          div(class="!pl:2@p") .!pl:2@p { padding-left: 2rem   !important; }
+          div(class="!pl:4@p") .!pl:4@p { padding-left: 4rem   !important; }
+          div(class="!pr:0@p") .!pr:0@p { padding-right: 0      !important; }
+          div(class="!pr:h@p") .!pr:h@p { padding-right: 0.5rem !important; }
+          div(class="!pr:1@p") .!pr:1@p { padding-right: 1rem   !important; }
+          div(class="!pr:2@p") .!pr:2@p { padding-right: 2rem   !important; }
+          div(class="!pr:4@p") .!pr:4@p { padding-right: 4rem   !important; }
+          div(class="!pt:0@p") .!pt:0@p { padding-top: 0      !important; }
+          div(class="!pt:h@p") .!pt:h@p { padding-top: 0.5rem !important; }
+          div(class="!pt:1@p") .!pt:1@p { padding-top: 1rem   !important; }
+          div(class="!pt:2@p") .!pt:2@p { padding-top: 2rem   !important; }
+          div(class="!pt:4@p") .!pt:4@p { padding-top: 4rem   !important; }
+          div(class="!pb:0@p") .!pb:0@p { padding-bottom: 0      !important; }
+          div(class="!pb:h@p") .!pb:h@p { padding-bottom: 0.5rem !important; }
+          div(class="!pb:1@p") .!pb:1@p { padding-bottom: 1rem   !important; }
+          div(class="!pb:2@p") .!pb:2@p { padding-bottom: 2rem   !important; }
+          div(class="!pb:4@p") .!pb:4@p { padding-bottom: 4rem   !important; }
+          div(class="!px:0@p") .!px:0@p { padding-left: 0      !important; padding-right: 0      !important; }
+          div(class="!px:h@p") .!px:h@p { padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
+          div(class="!px:1@p") .!px:1@p { padding-left: 1rem   !important; padding-right: 1rem   !important; }
+          div(class="!px:2@p") .!px:2@p { padding-left: 2rem   !important; padding-right: 2rem   !important; }
+          div(class="!px:4@p") .!px:4@p { padding-left: 4rem   !important; padding-right: 4rem   !important; }
+          div(class="!py:0@p") .!py:0@p { padding-top: 0      !important; padding-bottom: 0      !important; }
+          div(class="!py:h@p") .!py:h@p { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
+          div(class="!py:1@p") .!py:1@p { padding-top: 1rem   !important; padding-bottom: 1rem   !important; }
+          div(class="!py:2@p") .!py:2@p { padding-top: 2rem   !important; padding-bottom: 2rem   !important; }
+          div(class="!py:4@p") .!py:4@p { padding-top: 4rem   !important; padding-bottom: 4rem   !important; }
+          div(class="!pa:0@p") .!pa:0@p { padding-left: 0      !important; padding-right: 0      !important; padding-top: 0      !important; padding-bottom: 0      !important; }
+          div(class="!pa:h@p") .!pa:h@p { padding-left: 0.5rem !important; padding-right: 0.5rem !important; padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
+          div(class="!pa:1@p") .!pa:1@p { padding-left: 1rem   !important; padding-right: 1rem   !important; padding-top: 1rem   !important; padding-bottom: 1rem   !important; }
+          div(class="!pa:2@p") .!pa:2@p { padding-left: 2rem   !important; padding-right: 2rem   !important; padding-top: 2rem   !important; padding-bottom: 2rem   !important; }
+          div(class="!pa:4@p") .!pa:4@p { padding-left: 4rem   !important; padding-right: 4rem   !important; padding-top: 4rem   !important; padding-bottom: 4rem   !important; }
+      section
+        h1 _margin.less
+        section
+          h1 all media queries
+          div(class="!ml:0") .!ml:0 { margin-left: 0      !important; }
+          div(class="!ml:h") .!ml:h { margin-left: 0.5rem !important; }
+          div(class="!ml:1") .!ml:1 { margin-left: 1rem   !important; }
+          div(class="!ml:2") .!ml:2 { margin-left: 2rem   !important; }
+          div(class="!ml:4") .!ml:4 { margin-left: 4rem   !important; }
+          div(class="!mr:0") .!mr:0 { margin-right: 0      !important; }
+          div(class="!mr:h") .!mr:h { margin-right: 0.5rem !important; }
+          div(class="!mr:1") .!mr:1 { margin-right: 1rem   !important; }
+          div(class="!mr:2") .!mr:2 { margin-right: 2rem   !important; }
+          div(class="!mr:4") .!mr:4 { margin-right: 4rem   !important; }
+          div(class="!mt:0") .!mt:0 { margin-top: 0      !important; }
+          div(class="!mt:h") .!mt:h { margin-top: 0.5rem !important; }
+          div(class="!mt:1") .!mt:1 { margin-top: 1rem   !important; }
+          div(class="!mt:2") .!mt:2 { margin-top: 2rem   !important; }
+          div(class="!mt:4") .!mt:4 { margin-top: 4rem   !important; }
+          div(class="!mb:0") .!mb:0 { margin-bottom: 0      !important; }
+          div(class="!mb:h") .!mb:h { margin-bottom: 0.5rem !important; }
+          div(class="!mb:1") .!mb:1 { margin-bottom: 1rem   !important; }
+          div(class="!mb:2") .!mb:2 { margin-bottom: 2rem   !important; }
+          div(class="!mb:4") .!mb:4 { margin-bottom: 4rem   !important; }
+          div(class="!mx:0") .!mx:0 { margin-left: 0      !important; margin-right: 0      !important; }
+          div(class="!mx:h") .!mx:h { margin-left: 0.5rem !important; margin-right: 0.5rem !important; }
+          div(class="!mx:1") .!mx:1 { margin-left: 1rem   !important; margin-right: 1rem   !important; }
+          div(class="!mx:2") .!mx:2 { margin-left: 2rem   !important; margin-right: 2rem   !important; }
+          div(class="!mx:4") .!mx:4 { margin-left: 4rem   !important; margin-right: 4rem   !important; }
+          div(class="!my:0") .!my:0 { margin-top: 0      !important; margin-bottom: 0      !important; }
+          div(class="!my:h") .!my:h { margin-top: 0.5rem !important; margin-bottom: 0.5rem !important; }
+          div(class="!my:1") .!my:1 { margin-top: 1rem   !important; margin-bottom: 1rem   !important; }
+          div(class="!my:2") .!my:2 { margin-top: 2rem   !important; margin-bottom: 2rem   !important; }
+          div(class="!my:4") .!my:4 { margin-top: 4rem   !important; margin-bottom: 4rem   !important; }
+          div(class="!ma:0") .!ma:0 { margin-left: 0      !important; margin-right: 0      !important; margin-top: 0      !important; margin-bottom: 0      !important; }
+          div(class="!ma:h") .!ma:h { margin-left: 0.5rem !important; margin-right: 0.5rem !important; margin-top: 0.5rem !important; margin-bottom: 0.5rem !important; }
+          div(class="!ma:1") .!ma:1 { margin-left: 1rem   !important; margin-right: 1rem   !important; margin-top: 1rem   !important; margin-bottom: 1rem   !important; }
+          div(class="!ma:2") .!ma:2 { margin-left: 2rem   !important; margin-right: 2rem   !important; margin-top: 2rem   !important; margin-bottom: 2rem   !important; }
+          div(class="!ma:4") .!ma:4 { margin-left: 4rem   !important; margin-right: 4rem   !important; margin-top: 4rem   !important; margin-bottom: 4rem   !important; }
+        section
+          h1 @media screen
+          div(class="!ml:0@s") .!ml:0@s { margin-left: 0      !important; }
+          div(class="!ml:h@s") .!ml:h@s { margin-left: 0.5rem !important; }
+          div(class="!ml:1@s") .!ml:1@s { margin-left: 1rem   !important; }
+          div(class="!ml:2@s") .!ml:2@s { margin-left: 2rem   !important; }
+          div(class="!ml:4@s") .!ml:4@s { margin-left: 4rem   !important; }
+          div(class="!mr:0@s") .!mr:0@s { margin-right: 0      !important; }
+          div(class="!mr:h@s") .!mr:h@s { margin-right: 0.5rem !important; }
+          div(class="!mr:1@s") .!mr:1@s { margin-right: 1rem   !important; }
+          div(class="!mr:2@s") .!mr:2@s { margin-right: 2rem   !important; }
+          div(class="!mr:4@s") .!mr:4@s { margin-right: 4rem   !important; }
+          div(class="!mt:0@s") .!mt:0@s { margin-top: 0      !important; }
+          div(class="!mt:h@s") .!mt:h@s { margin-top: 0.5rem !important; }
+          div(class="!mt:1@s") .!mt:1@s { margin-top: 1rem   !important; }
+          div(class="!mt:2@s") .!mt:2@s { margin-top: 2rem   !important; }
+          div(class="!mt:4@s") .!mt:4@s { margin-top: 4rem   !important; }
+          div(class="!mb:0@s") .!mb:0@s { margin-bottom: 0      !important; }
+          div(class="!mb:h@s") .!mb:h@s { margin-bottom: 0.5rem !important; }
+          div(class="!mb:1@s") .!mb:1@s { margin-bottom: 1rem   !important; }
+          div(class="!mb:2@s") .!mb:2@s { margin-bottom: 2rem   !important; }
+          div(class="!mb:4@s") .!mb:4@s { margin-bottom: 4rem   !important; }
+          div(class="!mx:0@s") .!mx:0@s { margin-left: 0      !important; margin-right: 0      !important; }
+          div(class="!mx:h@s") .!mx:h@s { margin-left: 0.5rem !important; margin-right: 0.5rem !important; }
+          div(class="!mx:1@s") .!mx:1@s { margin-left: 1rem   !important; margin-right: 1rem   !important; }
+          div(class="!mx:2@s") .!mx:2@s { margin-left: 2rem   !important; margin-right: 2rem   !important; }
+          div(class="!mx:4@s") .!mx:4@s { margin-left: 4rem   !important; margin-right: 4rem   !important; }
+          div(class="!my:0@s") .!my:0@s { margin-top: 0      !important; margin-bottom: 0      !important; }
+          div(class="!my:h@s") .!my:h@s { margin-top: 0.5rem !important; margin-bottom: 0.5rem !important; }
+          div(class="!my:1@s") .!my:1@s { margin-top: 1rem   !important; margin-bottom: 1rem   !important; }
+          div(class="!my:2@s") .!my:2@s { margin-top: 2rem   !important; margin-bottom: 2rem   !important; }
+          div(class="!my:4@s") .!my:4@s { margin-top: 4rem   !important; margin-bottom: 4rem   !important; }
+          div(class="!ma:0@s") .!ma:0@s { margin-left: 0      !important; margin-right: 0      !important; margin-top: 0      !important; margin-bottom: 0      !important; }
+          div(class="!ma:h@s") .!ma:h@s { margin-left: 0.5rem !important; margin-right: 0.5rem !important; margin-top: 0.5rem !important; margin-bottom: 0.5rem !important; }
+          div(class="!ma:1@s") .!ma:1@s { margin-left: 1rem   !important; margin-right: 1rem   !important; margin-top: 1rem   !important; margin-bottom: 1rem   !important; }
+          div(class="!ma:2@s") .!ma:2@s { margin-left: 2rem   !important; margin-right: 2rem   !important; margin-top: 2rem   !important; margin-bottom: 2rem   !important; }
+          div(class="!ma:4@s") .!ma:4@s { margin-left: 4rem   !important; margin-right: 4rem   !important; margin-top: 4rem   !important; margin-bottom: 4rem   !important; }
+        section
+          h1 @media print
+          div(class="!ml:0@p") .!ml:0@p { margin-left: 0      !important; }
+          div(class="!ml:h@p") .!ml:h@p { margin-left: 0.5rem !important; }
+          div(class="!ml:1@p") .!ml:1@p { margin-left: 1rem   !important; }
+          div(class="!ml:2@p") .!ml:2@p { margin-left: 2rem   !important; }
+          div(class="!ml:4@p") .!ml:4@p { margin-left: 4rem   !important; }
+          div(class="!mr:0@p") .!mr:0@p { margin-right: 0      !important; }
+          div(class="!mr:h@p") .!mr:h@p { margin-right: 0.5rem !important; }
+          div(class="!mr:1@p") .!mr:1@p { margin-right: 1rem   !important; }
+          div(class="!mr:2@p") .!mr:2@p { margin-right: 2rem   !important; }
+          div(class="!mr:4@p") .!mr:4@p { margin-right: 4rem   !important; }
+          div(class="!mt:0@p") .!mt:0@p { margin-top: 0      !important; }
+          div(class="!mt:h@p") .!mt:h@p { margin-top: 0.5rem !important; }
+          div(class="!mt:1@p") .!mt:1@p { margin-top: 1rem   !important; }
+          div(class="!mt:2@p") .!mt:2@p { margin-top: 2rem   !important; }
+          div(class="!mt:4@p") .!mt:4@p { margin-top: 4rem   !important; }
+          div(class="!mb:0@p") .!mb:0@p { margin-bottom: 0      !important; }
+          div(class="!mb:h@p") .!mb:h@p { margin-bottom: 0.5rem !important; }
+          div(class="!mb:1@p") .!mb:1@p { margin-bottom: 1rem   !important; }
+          div(class="!mb:2@p") .!mb:2@p { margin-bottom: 2rem   !important; }
+          div(class="!mb:4@p") .!mb:4@p { margin-bottom: 4rem   !important; }
+          div(class="!mx:0@p") .!mx:0@p { margin-left: 0      !important; margin-right: 0      !important; }
+          div(class="!mx:h@p") .!mx:h@p { margin-left: 0.5rem !important; margin-right: 0.5rem !important; }
+          div(class="!mx:1@p") .!mx:1@p { margin-left: 1rem   !important; margin-right: 1rem   !important; }
+          div(class="!mx:2@p") .!mx:2@p { margin-left: 2rem   !important; margin-right: 2rem   !important; }
+          div(class="!mx:4@p") .!mx:4@p { margin-left: 4rem   !important; margin-right: 4rem   !important; }
+          div(class="!my:0@p") .!my:0@p { margin-top: 0      !important; margin-bottom: 0      !important; }
+          div(class="!my:h@p") .!my:h@p { margin-top: 0.5rem !important; margin-bottom: 0.5rem !important; }
+          div(class="!my:1@p") .!my:1@p { margin-top: 1rem   !important; margin-bottom: 1rem   !important; }
+          div(class="!my:2@p") .!my:2@p { margin-top: 2rem   !important; margin-bottom: 2rem   !important; }
+          div(class="!my:4@p") .!my:4@p { margin-top: 4rem   !important; margin-bottom: 4rem   !important; }
+          div(class="!ma:0@p") .!ma:0@p { margin-left: 0      !important; margin-right: 0      !important; margin-top: 0      !important; margin-bottom: 0      !important; }
+          div(class="!ma:h@p") .!ma:h@p { margin-left: 0.5rem !important; margin-right: 0.5rem !important; margin-top: 0.5rem !important; margin-bottom: 0.5rem !important; }
+          div(class="!ma:1@p") .!ma:1@p { margin-left: 1rem   !important; margin-right: 1rem   !important; margin-top: 1rem   !important; margin-bottom: 1rem   !important; }
+          div(class="!ma:2@p") .!ma:2@p { margin-left: 2rem   !important; margin-right: 2rem   !important; margin-top: 2rem   !important; margin-bottom: 2rem   !important; }
+          div(class="!ma:4@p") .!ma:4@p { margin-left: 4rem   !important; margin-right: 4rem   !important; margin-top: 4rem   !important; margin-bottom: 4rem   !important; }
+      section.ss-flexbox
+        h1 _justify.less
+        section
+          h1 all media queries
+          div(class="!j:bt") .!j:bt { justify-content: space-between !important; }
+          div(class="!j:ad") .!j:ad { justify-content: space-around  !important; }
+          div(class="!j:cr") .!j:cr { justify-content: center        !important; }
+          div(class="!j:st") .!j:st { justify-content: flex-start    !important; }
+          div(class="!j:ed") .!j:ed { justify-content: flex-end      !important; }
+        section
+          h1 @media screen
+          div(class="!j:bt@s") .!j:bt@s { justify-content: space-between !important; }
+          div(class="!j:ad@s") .!j:ad@s { justify-content: space-around  !important; }
+          div(class="!j:cr@s") .!j:cr@s { justify-content: center        !important; }
+          div(class="!j:st@s") .!j:st@s { justify-content: flex-start    !important; }
+          div(class="!j:ed@s") .!j:ed@s { justify-content: flex-end      !important; }
+        section
+          h1 @media print
+          div(class="!j:bt@p") .!j:bt@p { justify-content: space-between !important; }
+          div(class="!j:ad@p") .!j:ad@p { justify-content: space-around  !important; }
+          div(class="!j:cr@p") .!j:cr@p { justify-content: center        !important; }
+          div(class="!j:st@p") .!j:st@p { justify-content: flex-start    !important; }
+          div(class="!j:ed@p") .!j:ed@p { justify-content: flex-end      !important; }
+      section.ss-flexbox
+        h1 _order.less
+        section
+          h1 all media queries
+          div(class="!o:0") .!o:0 { order:  0 !important; }
+          div(class="!o:1") .!o:1 { order:  1 !important; }
+          div(class="!o:2") .!o:2 { order:  2 !important; }
+          div(class="!o:3") .!o:3 { order:  3 !important; }
+          div(class="!o:4") .!o:4 { order:  4 !important; }
+          div(class="!o:5") .!o:5 { order:  5 !important; }
+          div(class="!o:6") .!o:6 { order:  6 !important; }
+          div(class="!o:7") .!o:7 { order:  7 !important; }
+          div(class="!o:8") .!o:8 { order:  8 !important; }
+          div(class="!o:9") .!o:9 { order:  9 !important; }
+          div(class="!o:a") .!o:a { order: 10 !important; }
+          div(class="!o:b") .!o:b { order: 11 !important; }
+          div(class="!o:c") .!o:c { order: 12 !important; }
+          div(class="!o:d") .!o:d { order: 13 !important; }
+          div(class="!o:e") .!o:e { order: 14 !important; }
+          div(class="!o:f") .!o:f { order: 15 !important; }
+        section
+          h1 @media screen
+          div(class="!o:0@s") .!o:0@s { order:  0 !important; }
+          div(class="!o:1@s") .!o:1@s { order:  1 !important; }
+          div(class="!o:2@s") .!o:2@s { order:  2 !important; }
+          div(class="!o:3@s") .!o:3@s { order:  3 !important; }
+          div(class="!o:4@s") .!o:4@s { order:  4 !important; }
+          div(class="!o:5@s") .!o:5@s { order:  5 !important; }
+          div(class="!o:6@s") .!o:6@s { order:  6 !important; }
+          div(class="!o:7@s") .!o:7@s { order:  7 !important; }
+          div(class="!o:8@s") .!o:8@s { order:  8 !important; }
+          div(class="!o:9@s") .!o:9@s { order:  9 !important; }
+          div(class="!o:a@s") .!o:a@s { order: 10 !important; }
+          div(class="!o:b@s") .!o:b@s { order: 11 !important; }
+          div(class="!o:c@s") .!o:c@s { order: 12 !important; }
+          div(class="!o:d@s") .!o:d@s { order: 13 !important; }
+          div(class="!o:e@s") .!o:e@s { order: 14 !important; }
+          div(class="!o:f@s") .!o:f@s { order: 15 !important; }
+        section
+          h1 @media print
+          div(class="!o:0@p") .!o:0@p { order:  0 !important; }
+          div(class="!o:1@p") .!o:1@p { order:  1 !important; }
+          div(class="!o:2@p") .!o:2@p { order:  2 !important; }
+          div(class="!o:3@p") .!o:3@p { order:  3 !important; }
+          div(class="!o:4@p") .!o:4@p { order:  4 !important; }
+          div(class="!o:5@p") .!o:5@p { order:  5 !important; }
+          div(class="!o:6@p") .!o:6@p { order:  6 !important; }
+          div(class="!o:7@p") .!o:7@p { order:  7 !important; }
+          div(class="!o:8@p") .!o:8@p { order:  8 !important; }
+          div(class="!o:9@p") .!o:9@p { order:  9 !important; }
+          div(class="!o:a@p") .!o:a@p { order: 10 !important; }
+          div(class="!o:b@p") .!o:b@p { order: 11 !important; }
+          div(class="!o:c@p") .!o:c@p { order: 12 !important; }
+          div(class="!o:d@p") .!o:d@p { order: 13 !important; }
+          div(class="!o:e@p") .!o:e@p { order: 14 !important; }
+          div(class="!o:f@p") .!o:f@p { order: 15 !important; }
+      section
+        h1 _font-style.less
+        section
+          h1 all media queries
+          div(class="!fs:0") .!fs:0 { font-style: initial !important; }
+          div(class="!fs:i") .!fs:i { font-style: inherit !important; }
+          div(class="!fs:n") .!fs:n { font-style: normal  !important; }
+          div(class="!fs:t") .!fs:t { font-style: italic  !important; }
+        section
+          h1 @media screen
+          div(class="!fs:0@s") .!fs:0@s { font-style: initial !important; }
+          div(class="!fs:i@s") .!fs:i@s { font-style: inherit !important; }
+          div(class="!fs:n@s") .!fs:n@s { font-style: normal  !important; }
+          div(class="!fs:t@s") .!fs:t@s { font-style: italic  !important; }
+        section
+          h1 @media print
+          div(class="!fs:0@p") .!fs:0@p { font-style: initial !important; }
+          div(class="!fs:i@p") .!fs:i@p { font-style: inherit !important; }
+          div(class="!fs:n@p") .!fs:n@p { font-style: normal  !important; }
+          div(class="!fs:t@p") .!fs:t@p { font-style: italic  !important; }
+      section
+        h1 _font-variant.less
+        section
+          h1 all media queries
+          div(class="!fv:0") .!fv:0 { font-variant: initial    !important; }
+          div(class="!fv:i") .!fv:i { font-variant: inherit    !important; }
+          div(class="!fv:n") .!fv:n { font-variant: normal     !important; }
+          div(class="!fv:s") .!fv:s { font-variant: small-caps !important; }
+        section
+          h1 @media screen
+          div(class="!fv:0@s") .!fv:0@s { font-variant: initial    !important; }
+          div(class="!fv:i@s") .!fv:i@s { font-variant: inherit    !important; }
+          div(class="!fv:n@s") .!fv:n@s { font-variant: normal     !important; }
+          div(class="!fv:s@s") .!fv:s@s { font-variant: small-caps !important; }
+        section
+          h1 @media print
+          div(class="!fv:0@p") .!fv:0@p { font-variant: initial    !important; }
+          div(class="!fv:i@p") .!fv:i@p { font-variant: inherit    !important; }
+          div(class="!fv:n@p") .!fv:n@p { font-variant: normal     !important; }
+          div(class="!fv:s@p") .!fv:s@p { font-variant: small-caps !important; }
+      section
+        h1 _font-weight.less
+        section
+          h1 all media queries
+          div(class="!fw:0") .!fw:0 { font-weight: initial !important; }
+          div(class="!fw:i") .!fw:i { font-weight: inherit !important; }
+          div(class="!fw:n") .!fw:n { font-weight: normal  !important; }
+          div(class="!fw:b") .!fw:b { font-weight: bold    !important; }
+          div(class="!fw:1") .!fw:1 { font-weight: 100     !important; }
+          div(class="!fw:2") .!fw:2 { font-weight: 200     !important; }
+          div(class="!fw:3") .!fw:3 { font-weight: 300     !important; }
+          div(class="!fw:4") .!fw:4 { font-weight: 400     !important; }
+          div(class="!fw:5") .!fw:5 { font-weight: 500     !important; }
+          div(class="!fw:6") .!fw:6 { font-weight: 600     !important; }
+          div(class="!fw:7") .!fw:7 { font-weight: 700     !important; }
+          div(class="!fw:8") .!fw:8 { font-weight: 800     !important; }
+          div(class="!fw:9") .!fw:9 { font-weight: 900     !important; }
+        section
+          h1 @media screen
+          div(class="!fw:0@s") .!fw:0@s { font-weight: initial !important; }
+          div(class="!fw:i@s") .!fw:i@s { font-weight: inherit !important; }
+          div(class="!fw:n@s") .!fw:n@s { font-weight: normal  !important; }
+          div(class="!fw:b@s") .!fw:b@s { font-weight: bold    !important; }
+          div(class="!fw:1@s") .!fw:1@s { font-weight: 100     !important; }
+          div(class="!fw:2@s") .!fw:2@s { font-weight: 200     !important; }
+          div(class="!fw:3@s") .!fw:3@s { font-weight: 300     !important; }
+          div(class="!fw:4@s") .!fw:4@s { font-weight: 400     !important; }
+          div(class="!fw:5@s") .!fw:5@s { font-weight: 500     !important; }
+          div(class="!fw:6@s") .!fw:6@s { font-weight: 600     !important; }
+          div(class="!fw:7@s") .!fw:7@s { font-weight: 700     !important; }
+          div(class="!fw:8@s") .!fw:8@s { font-weight: 800     !important; }
+          div(class="!fw:9@s") .!fw:9@s { font-weight: 900     !important; }
+        section
+          h1 @media print
+          div(class="!fw:0@p") .!fw:0@p { font-weight: initial !important; }
+          div(class="!fw:i@p") .!fw:i@p { font-weight: inherit !important; }
+          div(class="!fw:n@p") .!fw:n@p { font-weight: normal  !important; }
+          div(class="!fw:b@p") .!fw:b@p { font-weight: bold    !important; }
+          div(class="!fw:1@p") .!fw:1@p { font-weight: 100     !important; }
+          div(class="!fw:2@p") .!fw:2@p { font-weight: 200     !important; }
+          div(class="!fw:3@p") .!fw:3@p { font-weight: 300     !important; }
+          div(class="!fw:4@p") .!fw:4@p { font-weight: 400     !important; }
+          div(class="!fw:5@p") .!fw:5@p { font-weight: 500     !important; }
+          div(class="!fw:6@p") .!fw:6@p { font-weight: 600     !important; }
+          div(class="!fw:7@p") .!fw:7@p { font-weight: 700     !important; }
+          div(class="!fw:8@p") .!fw:8@p { font-weight: 800     !important; }
+          div(class="!fw:9@p") .!fw:9@p { font-weight: 900     !important; }
+      section
+        h1 _font-family.less
+        section
+          h1 all media queries
+          div(class="!ff:0 ") .!ff:0  { font-family: initial    !important; }
+          div(class="!ff:i ") .!ff:i  { font-family: inherit    !important; }
+          div(class="!ff:ss") .!ff:ss { font-family: sans-serif !important; }
+          div(class="!ff:sf") .!ff:sf { font-family: serif      !important; }
+          div(class="!ff:ms") .!ff:ms { font-family: monospace  !important; }
+          div(class="!ff:fy") .!ff:fy { font-family: fantasy    !important; }
+          div(class="!ff:cs") .!ff:cs { font-family: cursive    !important; }
+        section
+          h1 @media screen
+          div(class="!ff:0@s ") .!ff:0@s  { font-family: initial    !important; }
+          div(class="!ff:i@s ") .!ff:i@s  { font-family: inherit    !important; }
+          div(class="!ff:ss@s") .!ff:ss@s { font-family: sans-serif !important; }
+          div(class="!ff:sf@s") .!ff:sf@s { font-family: serif      !important; }
+          div(class="!ff:ms@s") .!ff:ms@s { font-family: monospace  !important; }
+          div(class="!ff:fy@s") .!ff:fy@s { font-family: fantasy    !important; }
+          div(class="!ff:cs@s") .!ff:cs@s { font-family: cursive    !important; }
+        section
+          h1 @media print
+          div(class="!ff:0@p ") .!ff:0@p  { font-family: initial    !important; }
+          div(class="!ff:i@p ") .!ff:i@p  { font-family: inherit    !important; }
+          div(class="!ff:ss@p") .!ff:ss@p { font-family: sans-serif !important; }
+          div(class="!ff:sf@p") .!ff:sf@p { font-family: serif      !important; }
+          div(class="!ff:ms@p") .!ff:ms@p { font-family: monospace  !important; }
+          div(class="!ff:fy@p") .!ff:fy@p { font-family: fantasy    !important; }
+          div(class="!ff:cs@p") .!ff:cs@p { font-family: cursive    !important; }
+      section
+        h1 _text-transform.less
+        section
+          h1 all media queries
+          div(class="!tt:0 ") .!tt:0  { text-transform: initial    !important; }
+          div(class="!tt:i ") .!tt:i  { text-transform: inherit    !important; }
+          div(class="!tt:n ") .!tt:n  { text-transform: none       !important; }
+          div(class="!tt:ca") .!tt:ca { text-transform: capitalize !important; }
+          div(class="!tt:uc") .!tt:uc { text-transform: uppercase  !important; }
+          div(class="!tt:lc") .!tt:lc { text-transform: lowercase  !important; }
+        section
+          h1 @media screen
+          div(class="!tt:0@s ") .!tt:0@s  { text-transform: initial    !important; }
+          div(class="!tt:i@s ") .!tt:i@s  { text-transform: inherit    !important; }
+          div(class="!tt:n@s ") .!tt:n@s  { text-transform: none       !important; }
+          div(class="!tt:ca@s") .!tt:ca@s { text-transform: capitalize !important; }
+          div(class="!tt:uc@s") .!tt:uc@s { text-transform: uppercase  !important; }
+          div(class="!tt:lc@s") .!tt:lc@s { text-transform: lowercase  !important; }
+        section
+          h1 @media print
+          div(class="!tt:0@p ") .!tt:0@p  { text-transform: initial    !important; }
+          div(class="!tt:i@p ") .!tt:i@p  { text-transform: inherit    !important; }
+          div(class="!tt:n@p ") .!tt:n@p  { text-transform: none       !important; }
+          div(class="!tt:ca@p") .!tt:ca@p { text-transform: capitalize !important; }
+          div(class="!tt:uc@p") .!tt:uc@p { text-transform: uppercase  !important; }
+          div(class="!tt:lc@p") .!tt:lc@p { text-transform: lowercase  !important; }
+      section
+        h1 _text-align.less
+        section
+          h1 all media queries
+          div(class="!ta:0 ") .!ta:0  { text-align: initial !important; }
+          div(class="!ta:i ") .!ta:i  { text-align: inherit !important; }
+          div(class="!ta:lt") .!ta:lt { text-align: left    !important; }
+          div(class="!ta:rt") .!ta:rt { text-align: right   !important; }
+          div(class="!ta:cr") .!ta:cr { text-align: center  !important; }
+          div(class="!ta:jf") .!ta:jf { text-align: justify !important; }
+        section
+          h1 @media screen
+          div(class="!ta:0@s ") .!ta:0@s  { text-align: initial !important; }
+          div(class="!ta:i@s ") .!ta:i@s  { text-align: inherit !important; }
+          div(class="!ta:lt@s") .!ta:lt@s { text-align: left    !important; }
+          div(class="!ta:rt@s") .!ta:rt@s { text-align: right   !important; }
+          div(class="!ta:cr@s") .!ta:cr@s { text-align: center  !important; }
+          div(class="!ta:jf@s") .!ta:jf@s { text-align: justify !important; }
+        section
+          h1 @media print
+          div(class="!ta:0@p ") .!ta:0@p  { text-align: initial !important; }
+          div(class="!ta:i@p ") .!ta:i@p  { text-align: inherit !important; }
+          div(class="!ta:lt@p") .!ta:lt@p { text-align: left    !important; }
+          div(class="!ta:rt@p") .!ta:rt@p { text-align: right   !important; }
+          div(class="!ta:cr@p") .!ta:cr@p { text-align: center  !important; }
+          div(class="!ta:jf@p") .!ta:jf@p { text-align: justify !important; }
+      section
+        h1 _list-style-type.less
+        section
+          h1 all media queries
+          ul
+            li(class="!lst:0 ") .!lst:0  { list-style-type: initial              !important; }
+            li(class="!lst:i ") .!lst:i  { list-style-type: inherit              !important; }
+            li(class="!lst:dz") .!lst:dz { list-style-type: decimal-leading-zero !important; }
+            li(class="!lst:ur") .!lst:ur { list-style-type: upper-roman          !important; }
+            li(class="!lst:ua") .!lst:ua { list-style-type: upper-alpha          !important; }
+            li(class="!lst:dc") .!lst:dc { list-style-type: decimal              !important; }
+            li(class="!lst:la") .!lst:la { list-style-type: lower-alpha          !important; }
+            li(class="!lst:lr") .!lst:lr { list-style-type: lower-roman          !important; }
+            li(class="!lst:lg") .!lst:lg { list-style-type: lower-greek          !important; }
+        section
+          h1 @media screen
+          ul
+            li(class="!lst:0@s ") .!lst:0@s  { list-style-type: initial              !important; }
+            li(class="!lst:i@s ") .!lst:i@s  { list-style-type: inherit              !important; }
+            li(class="!lst:dz@s") .!lst:dz@s { list-style-type: decimal-leading-zero !important; }
+            li(class="!lst:ur@s") .!lst:ur@s { list-style-type: upper-roman          !important; }
+            li(class="!lst:ua@s") .!lst:ua@s { list-style-type: upper-alpha          !important; }
+            li(class="!lst:dc@s") .!lst:dc@s { list-style-type: decimal              !important; }
+            li(class="!lst:la@s") .!lst:la@s { list-style-type: lower-alpha          !important; }
+            li(class="!lst:lr@s") .!lst:lr@s { list-style-type: lower-roman          !important; }
+            li(class="!lst:lg@s") .!lst:lg@s { list-style-type: lower-greek          !important; }
+        section
+          h1 @media print
+          ul
+            li(class="!lst:0@p ") .!lst:0@p  { list-style-type: initial              !important; }
+            li(class="!lst:i@p ") .!lst:i@p  { list-style-type: inherit              !important; }
+            li(class="!lst:dz@p") .!lst:dz@p { list-style-type: decimal-leading-zero !important; }
+            li(class="!lst:ur@p") .!lst:ur@p { list-style-type: upper-roman          !important; }
+            li(class="!lst:ua@p") .!lst:ua@p { list-style-type: upper-alpha          !important; }
+            li(class="!lst:dc@p") .!lst:dc@p { list-style-type: decimal              !important; }
+            li(class="!lst:la@p") .!lst:la@p { list-style-type: lower-alpha          !important; }
+            li(class="!lst:lr@p") .!lst:lr@p { list-style-type: lower-roman          !important; }
+            li(class="!lst:lg@p") .!lst:lg@p { list-style-type: lower-greek          !important; }
+      section
+        h1 _background-color.less
+        section
+          h1 all media queries
+          div(class="!bgc:0") .!bgc:0 { background-color: initial      !important; }
+          div(class="!bgc:i") .!bgc:i { background-color: inherit      !important; }
+          div(class="!bgc:t") .!bgc:t { background-color: transparent  !important; }
+          div(class="!bgc:c") .!bgc:c { background-color: currentColor !important; }
+        section
+          h1 @media screen
+          div(class="!bgc:0@s") .!bgc:0@s { background-color: initial      !important; }
+          div(class="!bgc:i@s") .!bgc:i@s { background-color: inherit      !important; }
+          div(class="!bgc:t@s") .!bgc:t@s { background-color: transparent  !important; }
+          div(class="!bgc:c@s") .!bgc:c@s { background-color: currentColor !important; }
+        section
+          h1 @media print
+          div(class="!bgc:0@p") .!bgc:0@p { background-color: initial      !important; }
+          div(class="!bgc:i@p") .!bgc:i@p { background-color: inherit      !important; }
+          div(class="!bgc:t@p") .!bgc:t@p { background-color: transparent  !important; }
+          div(class="!bgc:c@p") .!bgc:c@p { background-color: currentColor !important; }
+      section
+        h1 _background-image.less
+        section
+          h1 all media queries
+          div(class="!bgi:0") .!bgi:0 { background-image: initial !important; }
+          div(class="!bgi:i") .!bgi:i { background-image: inherit !important; }
+          div(class="!bgi:n") .!bgi:n { background-image: none    !important; }
+        section
+          h1 @media screen
+          div(class="!bgi:0@s") .!bgi:0@s { background-image: initial !important; }
+          div(class="!bgi:i@s") .!bgi:i@s { background-image: inherit !important; }
+          div(class="!bgi:n@s") .!bgi:n@s { background-image: none    !important; }
+        section
+          h1 @media print
+          div(class="!bgi:0@p") .!bgi:0@p { background-image: initial !important; }
+          div(class="!bgi:i@p") .!bgi:i@p { background-image: inherit !important; }
+          div(class="!bgi:n@p") .!bgi:n@p { background-image: none    !important; }

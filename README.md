@@ -1,5 +1,5 @@
 # bangs
-Bangs are single-responsibility CSS class selectors with exactly one property and marked with !important. Inspired by Atoms, Tachyons, Gravitons and BEMIT.
+Bangs are unopinionated, single-responsibility CSS class selectors with exactly one property and marked with !important. Inspired by Atoms, Tachyons, Gravitons and BEMIT.
 
 ## Examples
 
@@ -36,15 +36,15 @@ The initials are below.
 
 ```
 #### Structure                       #### Text
-!d     display                        !fs     font-style
-!w     width                          !fv     font-variant
-!p     padding                        !fw     font-weight
-!m     margin                         !fz     font-size
-!jc    justify-content                !ff     font-family
-!o     order                          !tt     text-transform
-                                      !ta     text-align
-#### Theme                            !lst    list-style-type
-!bg     background (shorthand)
+!d    display                        !fs     font-style
+!w    width                          !fv     font-variant
+!p    padding                        !fw     font-weight
+!m    margin                         !fz     font-size
+!j    justify-content                !ff     font-family
+!o    order                          !tt     text-transform
+                                     !ta     text-align
+#### Theme                           !lst    list-style-type
+!bg     background
 !bgc    background-color
 ```
 
@@ -95,9 +95,9 @@ b    bottom
 :ed    flex-end
 
 #### Text
-:it    italic            :ca    capitalize        :dz    decimal-leading-zero
-:sc    small-caps        :uc    uppercase         :ur    upper-roman
-:bd    bold              :lc    lowercase         :ua    upper-alpha
+:t     italic            :ca    capitalize        :dz    decimal-leading-zero
+:s     small-caps        :uc    uppercase         :ur    upper-roman
+:b     bold              :lc    lowercase         :ua    upper-alpha
 :ss    sans-serif        :lt    left              :dc    decimal
 :sf    serif             :rt    right             :la    lower-alpha
 :ms    monospace         :cr    center            :lr    lower-roman
@@ -110,7 +110,8 @@ b    bottom
 :3    300        :6    600        :9    900
 
 #### Colors
-:tp    transparent
+:t    transparent
+:c    currentColor
 ```
 
 ### Media Queries
