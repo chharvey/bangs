@@ -1752,3 +1752,64 @@
     text-transform: lowercase  !important;
   }
 }
+/*################################*\
+    _text-align.less
+\*################################*/
+.\!ta\:0 {
+  text-align: initial !important;
+}
+.\!ta\:i {
+  text-align: inherit !important;
+}
+.\!ta\:lt {
+  text-align: left    !important;
+}
+.\!ta\:rt {
+  text-align: right   !important;
+}
+.\!ta\:cr {
+  text-align: center  !important;
+}
+.\!ta\:jf {
+  text-align: justify !important;
+}
+@media screen {
+  .\!ta\:0\@s {
+    text-align: initial !important;
+  }
+  .\!ta\:i\@s {
+    text-align: inherit !important;
+  }
+  .\!ta\:lt\@s {
+    text-align: left    !important;
+  }
+  .\!ta\:rt\@s {
+    text-align: right   !important;
+  }
+  .\!ta\:cr\@s {
+    text-align: center  !important;
+  }
+  .\!ta\:jf\@s {
+    text-align: justify !important;
+  }
+}
+@media print {
+  .\!ta\:0\@p {
+    text-align: initial !important;
+  }
+  .\!ta\:i\@p {
+    text-align: inherit !important;
+  }
+  .\!ta\:lt\@p {
+    text-align: left    !important;
+  }
+  .\!ta\:rt\@p {
+    text-align: right   !important;
+  }
+  .\!ta\:cr\@p {
+    text-align: center  !important;
+  }
+  .\!ta\:jf\@p {
+    text-align: justify !important;
+  }
+}
