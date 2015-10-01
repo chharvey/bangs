@@ -1454,3 +1454,46 @@
     font-style: italic  !important;
   }
 }
+/*################################*\
+    _font-variant.less
+\*################################*/
+.\!fv\:0 {
+  font-variant: initial     !important;
+}
+.\!fv\:i {
+  font-variant: inherit     !important;
+}
+.\!fv\:n {
+  font-variant: normal      !important;
+}
+.\!fv\:sc {
+  font-variant: small-caps !important;
+}
+@media screen {
+  .\!fv\:0\@s {
+    font-variant: initial     !important;
+  }
+  .\!fv\:i\@s {
+    font-variant: inherit     !important;
+  }
+  .\!fv\:n\@s {
+    font-variant: normal      !important;
+  }
+  .\!fv\:sc\@s {
+    font-variant: small-caps !important;
+  }
+}
+@media print {
+  .\!fv\:0\@p {
+    font-variant: initial     !important;
+  }
+  .\!fv\:i\@p {
+    font-variant: inherit     !important;
+  }
+  .\!fv\:n\@p {
+    font-variant: normal      !important;
+  }
+  .\!fv\:sc\@p {
+    font-variant: small-caps !important;
+  }
+}
