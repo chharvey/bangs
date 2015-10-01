@@ -1,6 +1,6 @@
 {
   "name": "bangs",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Bangs are single-responsibility CSS class selectors with exactly one property and marked with !important.",
   "main": "bangs.css",
   "scripts": {
