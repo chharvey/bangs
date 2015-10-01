@@ -45,7 +45,7 @@ The initials are below.
                                      !ta     text-align
 #### Theme                           !lst    list-style-type
 !bg     background                   !lsp    list-style-position
-!bgc    background-color
+!bgc    background-color             !lsi    list-style-image
 ```
 
 #### Qualifiers

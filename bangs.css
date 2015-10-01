@@ -2035,6 +2035,40 @@
   }
 }
 /*################################*\
+    _list-style-image.less
+\*################################*/
+.\!lsi\:0 {
+  list-style-image: initial !important;
+}
+.\!lsi\:i {
+  list-style-image: inherit !important;
+}
+.\!lsi\:n {
+  list-style-image: none    !important;
+}
+@media screen {
+  .\!lsi\:0\@s {
+    list-style-image: initial !important;
+  }
+  .\!lsi\:i\@s {
+    list-style-image: inherit !important;
+  }
+  .\!lsi\:n\@s {
+    list-style-image: none    !important;
+  }
+}
+@media print {
+  .\!lsi\:0\@p {
+    list-style-image: initial !important;
+  }
+  .\!lsi\:i\@p {
+    list-style-image: inherit !important;
+  }
+  .\!lsi\:n\@p {
+    list-style-image: none    !important;
+  }
+}
+/*################################*\
     _background-color.less
 \*################################*/
 .\!bgc\:0 {
