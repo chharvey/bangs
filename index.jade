@@ -6,43 +6,48 @@ html
     meta(name="author", content="Chris Harvey")
     meta(name="description", content="Bangs are single-responsibility CSS class selectors with exactly one property and marked with !important.")
     link(rel="stylesheet", href="bangs.css")
+    style.
+      div {
+        background-color: #eee;
+        outline: 1px solid #ccc;
+      }
   body
     main
       section
         h1 _display.less
         section
           h1 all media queries
-          span(class="!d:0 ") .!d:0  { display: initial      !important; }
-          span(class="!d:i ") .!d:i  { display: inherit      !important; }
-          span(class="!d:n ") .!d:n  { display: none         !important; }
-          span(class="!d:bk") .!d:bk { display: block        !important; }
-          span(class="!d:il") .!d:il { display: inline       !important; }
-          span(class="!d:ib") .!d:ib { display: inline-block !important; }
-          //- span(class="!d:tb") .!d:tb { display: table        !important; }
-          //- span(class="!d:tc") .!d:tc { display: table-cell   !important; }
-          span(class="!d:fx") .!d:fx { display: flex         !important; }
+          div(class="!d:0 ") .!d:0  { display: initial      !important; }
+          div(class="!d:i ") .!d:i  { display: inherit      !important; }
+          div(class="!d:n ") .!d:n  { display: none         !important; }
+          div(class="!d:bk") .!d:bk { display: block        !important; }
+          div(class="!d:il") .!d:il { display: inline       !important; }
+          div(class="!d:ib") .!d:ib { display: inline-block !important; }
+          //- div(class="!d:tb") .!d:tb { display: table        !important; }
+          //- div(class="!d:tc") .!d:tc { display: table-cell   !important; }
+          div(class="!d:fx") .!d:fx { display: flex         !important; }
         section
           h1 @media screen
-          span(class="!d:0@s ") .!d:0@s  { display: initial      !important; }
-          span(class="!d:i@s ") .!d:i@s  { display: inherit      !important; }
-          span(class="!d:n@s ") .!d:n@s  { display: none         !important; }
-          span(class="!d:bk@s") .!d:bk@s { display: block        !important; }
-          span(class="!d:il@s") .!d:il@s { display: inline       !important; }
-          span(class="!d:ib@s") .!d:ib@s { display: inline-block !important; }
-          //- span(class="!d:tb@s") .!d:tb@s { display: table        !important; }
-          //- span(class="!d:tc@s") .!d:tc@s { display: table-cell   !important; }
-          span(class="!d:fx@s") .!d:fx@s { display: flex         !important; }
+          div(class="!d:0@s ") .!d:0@s  { display: initial      !important; }
+          div(class="!d:i@s ") .!d:i@s  { display: inherit      !important; }
+          div(class="!d:n@s ") .!d:n@s  { display: none         !important; }
+          div(class="!d:bk@s") .!d:bk@s { display: block        !important; }
+          div(class="!d:il@s") .!d:il@s { display: inline       !important; }
+          div(class="!d:ib@s") .!d:ib@s { display: inline-block !important; }
+          //- div(class="!d:tb@s") .!d:tb@s { display: table        !important; }
+          //- div(class="!d:tc@s") .!d:tc@s { display: table-cell   !important; }
+          div(class="!d:fx@s") .!d:fx@s { display: flex         !important; }
         section
           h1 @media print
-          span(class="!d:0@p ") .!d:0@p  { display: initial      !important; }
-          span(class="!d:i@p ") .!d:i@p  { display: inherit      !important; }
-          span(class="!d:n@p ") .!d:n@p  { display: none         !important; }
-          span(class="!d:bk@p") .!d:bk@p { display: block        !important; }
-          span(class="!d:il@p") .!d:il@p { display: inline       !important; }
-          span(class="!d:ib@p") .!d:ib@p { display: inline-block !important; }
-          //- span(class="!d:tb@p") .!d:tb@p { display: table        !important; }
-          //- span(class="!d:tc@p") .!d:tc@p { display: table-cell   !important; }
-          span(class="!d:fx@p") .!d:fx@p { display: flex         !important; }
+          div(class="!d:0@p ") .!d:0@p  { display: initial      !important; }
+          div(class="!d:i@p ") .!d:i@p  { display: inherit      !important; }
+          div(class="!d:n@p ") .!d:n@p  { display: none         !important; }
+          div(class="!d:bk@p") .!d:bk@p { display: block        !important; }
+          div(class="!d:il@p") .!d:il@p { display: inline       !important; }
+          div(class="!d:ib@p") .!d:ib@p { display: inline-block !important; }
+          //- div(class="!d:tb@p") .!d:tb@p { display: table        !important; }
+          //- div(class="!d:tc@p") .!d:tc@p { display: table-cell   !important; }
+          div(class="!d:fx@p") .!d:fx@p { display: flex         !important; }
       section
         h1 _width.less
         section
