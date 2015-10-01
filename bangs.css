@@ -1621,3 +1621,283 @@
     font-weight: 900     !important;
   }
 }
+/*################################*\
+    _font-family.less
+\*################################*/
+.\!ff\:0 {
+  font-family: initial    !important;
+}
+.\!ff\:i {
+  font-family: inherit    !important;
+}
+.\!ff\:ss {
+  font-family: sans-serif !important;
+}
+.\!ff\:sf {
+  font-family: serif      !important;
+}
+.\!ff\:ms {
+  font-family: monospace  !important;
+}
+.\!ff\:fy {
+  font-family: fantasy    !important;
+}
+.\!ff\:cs {
+  font-family: cursive    !important;
+}
+@media screen {
+  .\!ff\:0\@s {
+    font-family: initial    !important;
+  }
+  .\!ff\:i\@s {
+    font-family: inherit    !important;
+  }
+  .\!ff\:ss\@s {
+    font-family: sans-serif !important;
+  }
+  .\!ff\:sf\@s {
+    font-family: serif      !important;
+  }
+  .\!ff\:ms\@s {
+    font-family: monospace  !important;
+  }
+  .\!ff\:fy\@s {
+    font-family: fantasy    !important;
+  }
+  .\!ff\:cs\@s {
+    font-family: cursive    !important;
+  }
+}
+@media print {
+  .\!ff\:0\@p {
+    font-family: initial    !important;
+  }
+  .\!ff\:i\@p {
+    font-family: inherit    !important;
+  }
+  .\!ff\:ss\@p {
+    font-family: sans-serif !important;
+  }
+  .\!ff\:sf\@p {
+    font-family: serif      !important;
+  }
+  .\!ff\:ms\@p {
+    font-family: monospace  !important;
+  }
+  .\!ff\:fy\@p {
+    font-family: fantasy    !important;
+  }
+  .\!ff\:cs\@p {
+    font-family: cursive    !important;
+  }
+}
+/*################################*\
+    _text-transform.less
+\*################################*/
+.\!tt\:0 {
+  text-transform: initial    !important;
+}
+.\!tt\:i {
+  text-transform: inherit    !important;
+}
+.\!tt\:n {
+  text-transform: none       !important;
+}
+.\!tt\:ca {
+  text-transform: capitalize !important;
+}
+.\!tt\:uc {
+  text-transform: uppercase  !important;
+}
+.\!tt\:lc {
+  text-transform: lowercase  !important;
+}
+@media screen {
+  .\!tt\:0\@s {
+    text-transform: initial    !important;
+  }
+  .\!tt\:i\@s {
+    text-transform: inherit    !important;
+  }
+  .\!tt\:n\@s {
+    text-transform: none       !important;
+  }
+  .\!tt\:ca\@s {
+    text-transform: capitalize !important;
+  }
+  .\!tt\:uc\@s {
+    text-transform: uppercase  !important;
+  }
+  .\!tt\:lc\@s {
+    text-transform: lowercase  !important;
+  }
+}
+@media print {
+  .\!tt\:0\@p {
+    text-transform: initial    !important;
+  }
+  .\!tt\:i\@p {
+    text-transform: inherit    !important;
+  }
+  .\!tt\:n\@p {
+    text-transform: none       !important;
+  }
+  .\!tt\:ca\@p {
+    text-transform: capitalize !important;
+  }
+  .\!tt\:uc\@p {
+    text-transform: uppercase  !important;
+  }
+  .\!tt\:lc\@p {
+    text-transform: lowercase  !important;
+  }
+}
+/*################################*\
+    _text-align.less
+\*################################*/
+.\!ta\:0 {
+  text-align: initial !important;
+}
+.\!ta\:i {
+  text-align: inherit !important;
+}
+.\!ta\:lt {
+  text-align: left    !important;
+}
+.\!ta\:rt {
+  text-align: right   !important;
+}
+.\!ta\:cr {
+  text-align: center  !important;
+}
+.\!ta\:jf {
+  text-align: justify !important;
+}
+@media screen {
+  .\!ta\:0\@s {
+    text-align: initial !important;
+  }
+  .\!ta\:i\@s {
+    text-align: inherit !important;
+  }
+  .\!ta\:lt\@s {
+    text-align: left    !important;
+  }
+  .\!ta\:rt\@s {
+    text-align: right   !important;
+  }
+  .\!ta\:cr\@s {
+    text-align: center  !important;
+  }
+  .\!ta\:jf\@s {
+    text-align: justify !important;
+  }
+}
+@media print {
+  .\!ta\:0\@p {
+    text-align: initial !important;
+  }
+  .\!ta\:i\@p {
+    text-align: inherit !important;
+  }
+  .\!ta\:lt\@p {
+    text-align: left    !important;
+  }
+  .\!ta\:rt\@p {
+    text-align: right   !important;
+  }
+  .\!ta\:cr\@p {
+    text-align: center  !important;
+  }
+  .\!ta\:jf\@p {
+    text-align: justify !important;
+  }
+}
+/*################################*\
+    _list-style-type.less
+\*################################*/
+.\!lst\:0 {
+  list-style-type: initial              !important;
+}
+.\!lst\:i {
+  list-style-type: inherit              !important;
+}
+.\!lst\:dz {
+  list-style-type: decimal-leading-zero !important;
+}
+.\!lst\:ur {
+  list-style-type: upper-roman !important;
+}
+.\!lst\:ua {
+  list-style-type: upper-alpha !important;
+}
+.\!lst\:dc {
+  list-style-type: decimal              !important;
+}
+.\!lst\:la {
+  list-style-type: lower-alpha !important;
+}
+.\!lst\:lr {
+  list-style-type: lower-roman !important;
+}
+.\!lst\:lg {
+  list-style-type: lower-greek !important;
+}
+@media screen {
+  .\!lst\:0\@s {
+    list-style-type: initial              !important;
+  }
+  .\!lst\:i\@s {
+    list-style-type: inherit              !important;
+  }
+  .\!lst\:dz\@s {
+    list-style-type: decimal-leading-zero !important;
+  }
+  .\!lst\:ur\@s {
+    list-style-type: upper-roman !important;
+  }
+  .\!lst\:ua\@s {
+    list-style-type: upper-alpha !important;
+  }
+  .\!lst\:dc\@s {
+    list-style-type: decimal              !important;
+  }
+  .\!lst\:la\@s {
+    list-style-type: lower-alpha !important;
+  }
+  .\!lst\:lr\@s {
+    list-style-type: lower-roman !important;
+  }
+  .\!lst\:lg\@s {
+    list-style-type: lower-greek !important;
+  }
+}
+@media print {
+  .\!lst\:0\@p {
+    list-style-type: initial              !important;
+  }
+  .\!lst\:i\@p {
+    list-style-type: inherit              !important;
+  }
+  .\!lst\:dz\@p {
+    list-style-type: decimal-leading-zero !important;
+  }
+  .\!lst\:ur\@p {
+    list-style-type: upper-roman !important;
+  }
+  .\!lst\:ua\@p {
+    list-style-type: upper-alpha !important;
+  }
+  .\!lst\:dc\@p {
+    list-style-type: decimal              !important;
+  }
+  .\!lst\:la\@p {
+    list-style-type: lower-alpha !important;
+  }
+  .\!lst\:lr\@p {
+    list-style-type: lower-roman !important;
+  }
+  .\!lst\:lg\@p {
+    list-style-type: lower-greek !important;
+  }
+}
