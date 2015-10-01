@@ -1,0 +1,21 @@
+
+/*################################*\
+    _font-style.less
+\*################################*/
+
+.\!fs\:0  { font-style: initial !important; }
+.\!fs\:i  { font-style: inherit !important; }
+.\!fs\:n  { font-style: normal  !important; }
+.\!fs\:it { font-style: italic  !important; }
+@media screen {
+  .\!fs\:0\@s  { .\!fs\:0 ; }
+  .\!fs\:i\@s  { .\!fs\:i ; }
+  .\!fs\:n\@s  { .\!fs\:n ; }
+  .\!fs\:it\@s { .\!fs\:it; }
+}
+@media print {
+  .\!fs\:0\@p  { .\!fs\:0 ; }
+  .\!fs\:i\@p  { .\!fs\:i ; }
+  .\!fs\:n\@p  { .\!fs\:n ; }
+  .\!fs\:it\@p { .\!fs\:it; }
+}

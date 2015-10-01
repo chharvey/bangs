@@ -1411,3 +1411,46 @@
     order: 15 !important;
   }
 }
+/*################################*\
+    _font-style.less
+\*################################*/
+.\!fs\:0 {
+  font-style: initial !important;
+}
+.\!fs\:i {
+  font-style: inherit !important;
+}
+.\!fs\:n {
+  font-style: normal  !important;
+}
+.\!fs\:it {
+  font-style: italic  !important;
+}
+@media screen {
+  .\!fs\:0\@s {
+    font-style: initial !important;
+  }
+  .\!fs\:i\@s {
+    font-style: inherit !important;
+  }
+  .\!fs\:n\@s {
+    font-style: normal  !important;
+  }
+  .\!fs\:it\@s {
+    font-style: italic  !important;
+  }
+}
+@media print {
+  .\!fs\:0\@p {
+    font-style: initial !important;
+  }
+  .\!fs\:i\@p {
+    font-style: inherit !important;
+  }
+  .\!fs\:n\@p {
+    font-style: normal  !important;
+  }
+  .\!fs\:it\@p {
+    font-style: italic  !important;
+  }
+}
