@@ -1901,3 +1901,46 @@
     list-style-type: lower-greek !important;
   }
 }
+/*################################*\
+    _background.less
+\*################################*/
+.\!bgc\:0 {
+  background-color: initial      !important;
+}
+.\!bgc\:i {
+  background-color: inherit      !important;
+}
+.\!bgc\:t {
+  background-color: transparent  !important;
+}
+.\!bgc\:c {
+  background-color: currentColor !important;
+}
+@media screen {
+  .\!bgc\:0\@s {
+    background-color: initial      !important;
+  }
+  .\!bgc\:i\@s {
+    background-color: inherit      !important;
+  }
+  .\!bgc\:t\@s {
+    background-color: transparent  !important;
+  }
+  .\!bgc\:c\@s {
+    background-color: currentColor !important;
+  }
+}
+@media print {
+  .\!bgc\:0\@p {
+    background-color: initial      !important;
+  }
+  .\!bgc\:i\@p {
+    background-color: inherit      !important;
+  }
+  .\!bgc\:t\@p {
+    background-color: transparent  !important;
+  }
+  .\!bgc\:c\@p {
+    background-color: currentColor !important;
+  }
+}

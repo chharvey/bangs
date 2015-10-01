@@ -44,7 +44,7 @@ The initials are below.
 !o    order                          !tt     text-transform
                                      !ta     text-align
 #### Theme                           !lst    list-style-type
-!bg     background (shorthand)
+!bg     background
 !bgc    background-color
 ```
 
@@ -110,7 +110,8 @@ b    bottom
 :3    300        :6    600        :9    900
 
 #### Colors
-:tp    transparent
+:t    transparent
+:c    currentColor
 ```
 
 ### Media Queries
