@@ -1,0 +1,21 @@
+
+/*################################*\
+    _font-variant.less
+\*################################*/
+
+.\!fv\:0  { font-variant: initial     !important; }
+.\!fv\:i  { font-variant: inherit     !important; }
+.\!fv\:n  { font-variant: normal      !important; }
+.\!fv\:sc { font-variant: small-caps  !important; }
+@media screen {
+  .\!fv\:0\@s  { .\!fv\:0 ; }
+  .\!fv\:i\@s  { .\!fv\:i ; }
+  .\!fv\:n\@s  { .\!fv\:n ; }
+  .\!fv\:sc\@s { .\!fv\:sc; }
+}
+@media print {
+  .\!fv\:0\@p  { .\!fv\:0 ; }
+  .\!fv\:i\@p  { .\!fv\:i ; }
+  .\!fv\:n\@p  { .\!fv\:n ; }
+  .\!fv\:sc\@p { .\!fv\:sc; }
+}
