@@ -1,0 +1,20 @@
+
+/*################################*\
+    _list-style-image.less
+\*################################*/
+
+.\!lsi\:0 { list-style-image: initial !important; }
+.\!lsi\:i { list-style-image: inherit !important; }
+.\!lsi\:n { list-style-image: none    !important; }
+
+@media screen {
+  .\!lsi\:0\@s { .\!lsi\:0; }
+  .\!lsi\:i\@s { .\!lsi\:i; }
+  .\!lsi\:n\@s { .\!lsi\:n; }
+}
+
+@media print {
+  .\!lsi\:0\@p { .\!lsi\:0; }
+  .\!lsi\:i\@p { .\!lsi\:i; }
+  .\!lsi\:n\@p { .\!lsi\:n; }
+}

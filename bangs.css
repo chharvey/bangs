@@ -1992,6 +1992,83 @@
   }
 }
 /*################################*\
+    _list-style-position.less
+\*################################*/
+.\!lsp\:0 {
+  list-style-position: initial !important;
+}
+.\!lsp\:i {
+  list-style-position: inherit !important;
+}
+.\!lsp\:os {
+  list-style-position: outside !important;
+}
+.\!lsp\:is {
+  list-style-position: inside  !important;
+}
+@media screen {
+  .\!lsp\:0\@s {
+    list-style-position: initial !important;
+  }
+  .\!lsp\:i\@s {
+    list-style-position: inherit !important;
+  }
+  .\!lsp\:os\@s {
+    list-style-position: outside !important;
+  }
+  .\!lsp\:is\@s {
+    list-style-position: inside  !important;
+  }
+}
+@media print {
+  .\!lsp\:0\@p {
+    list-style-position: initial !important;
+  }
+  .\!lsp\:i\@p {
+    list-style-position: inherit !important;
+  }
+  .\!lsp\:os\@p {
+    list-style-position: outside !important;
+  }
+  .\!lsp\:is\@p {
+    list-style-position: inside  !important;
+  }
+}
+/*################################*\
+    _list-style-image.less
+\*################################*/
+.\!lsi\:0 {
+  list-style-image: initial !important;
+}
+.\!lsi\:i {
+  list-style-image: inherit !important;
+}
+.\!lsi\:n {
+  list-style-image: none    !important;
+}
+@media screen {
+  .\!lsi\:0\@s {
+    list-style-image: initial !important;
+  }
+  .\!lsi\:i\@s {
+    list-style-image: inherit !important;
+  }
+  .\!lsi\:n\@s {
+    list-style-image: none    !important;
+  }
+}
+@media print {
+  .\!lsi\:0\@p {
+    list-style-image: initial !important;
+  }
+  .\!lsi\:i\@p {
+    list-style-image: inherit !important;
+  }
+  .\!lsi\:n\@p {
+    list-style-image: none    !important;
+  }
+}
+/*################################*\
     _background-color.less
 \*################################*/
 .\!bgc\:0 {
