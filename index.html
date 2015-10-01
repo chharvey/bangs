@@ -7,9 +7,21 @@
     <meta name="description" content="Bangs are single-responsibility CSS class selectors with exactly one property and marked with !important.">
     <link rel="stylesheet" href="bangs.css">
     <style>
-      div {
-        background-color: #eee;
-        outline: 1px solid #ccc;
+      * {
+        background-color: rgba(0,0,0, 0.05);
+        outline: 1px solid rgba(0,0,0, 0.1);
+      }
+      .ss-flexbox {
+        opacity: 0.25;
+        color: red;
+      }
+      .ss-flexbox::before {
+        display: block;
+        content: 'Flexbox properties still in draft mode.';
+        font-weight: 900;
+        font-size: 1.5em;
+        line-height: 1;
+        text-align: center;
       }
     </style>
   </head>
@@ -357,7 +369,7 @@
           <div class="!mb:4@p">.!mb:4@p { margin-bottom: 4rem   !important; }</div>
         </section>
       </section>
-      <section>
+      <section class="ss-flexbox">
         <h1>_justify.less</h1>
         <section>
           <h1>all media queries</h1>
@@ -384,7 +396,7 @@
           <div class="!j:ed@p">.!j:ed@p { justify-content: flex-end      !important; }</div>
         </section>
       </section>
-      <section>
+      <section class="ss-flexbox">
         <h1>_order.less</h1>
         <section>
           <h1>all media queries</h1>
