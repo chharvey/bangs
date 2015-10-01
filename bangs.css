@@ -1423,7 +1423,7 @@
 .\!fs\:n {
   font-style: normal  !important;
 }
-.\!fs\:it {
+.\!fs\:t {
   font-style: italic  !important;
 }
 @media screen {
@@ -1436,7 +1436,7 @@
   .\!fs\:n\@s {
     font-style: normal  !important;
   }
-  .\!fs\:it\@s {
+  .\!fs\:t\@s {
     font-style: italic  !important;
   }
 }
@@ -1450,7 +1450,7 @@
   .\!fs\:n\@p {
     font-style: normal  !important;
   }
-  .\!fs\:it\@p {
+  .\!fs\:t\@p {
     font-style: italic  !important;
   }
 }
@@ -1458,42 +1458,42 @@
     _font-variant.less
 \*################################*/
 .\!fv\:0 {
-  font-variant: initial     !important;
+  font-variant: initial    !important;
 }
 .\!fv\:i {
-  font-variant: inherit     !important;
+  font-variant: inherit    !important;
 }
 .\!fv\:n {
-  font-variant: normal      !important;
+  font-variant: normal     !important;
 }
-.\!fv\:sc {
+.\!fv\:s {
   font-variant: small-caps !important;
 }
 @media screen {
   .\!fv\:0\@s {
-    font-variant: initial     !important;
+    font-variant: initial    !important;
   }
   .\!fv\:i\@s {
-    font-variant: inherit     !important;
+    font-variant: inherit    !important;
   }
   .\!fv\:n\@s {
-    font-variant: normal      !important;
+    font-variant: normal     !important;
   }
-  .\!fv\:sc\@s {
+  .\!fv\:s\@s {
     font-variant: small-caps !important;
   }
 }
 @media print {
   .\!fv\:0\@p {
-    font-variant: initial     !important;
+    font-variant: initial    !important;
   }
   .\!fv\:i\@p {
-    font-variant: inherit     !important;
+    font-variant: inherit    !important;
   }
   .\!fv\:n\@p {
-    font-variant: normal      !important;
+    font-variant: normal     !important;
   }
-  .\!fv\:sc\@p {
+  .\!fv\:s\@p {
     font-variant: small-caps !important;
   }
 }
@@ -1509,7 +1509,7 @@
 .\!fw\:n {
   font-weight: normal  !important;
 }
-.\!fw\:bd {
+.\!fw\:b {
   font-weight: bold    !important;
 }
 .\!fw\:1 {
@@ -1549,7 +1549,7 @@
   .\!fw\:n\@s {
     font-weight: normal  !important;
   }
-  .\!fw\:bd\@s {
+  .\!fw\:b\@s {
     font-weight: bold    !important;
   }
   .\!fw\:1\@s {
@@ -1590,7 +1590,7 @@
   .\!fw\:n\@p {
     font-weight: normal  !important;
   }
-  .\!fw\:bd\@p {
+  .\!fw\:b\@p {
     font-weight: bold    !important;
   }
   .\!fw\:1\@p {
