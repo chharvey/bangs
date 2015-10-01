@@ -1691,3 +1691,64 @@
     font-family: cursive    !important;
   }
 }
+/*################################*\
+    _text-transform.less
+\*################################*/
+.\!tt\:0 {
+  text-transform: initial    !important;
+}
+.\!tt\:i {
+  text-transform: inherit    !important;
+}
+.\!tt\:n {
+  text-transform: none       !important;
+}
+.\!tt\:ca {
+  text-transform: capitalize !important;
+}
+.\!tt\:uc {
+  text-transform: uppercase  !important;
+}
+.\!tt\:lc {
+  text-transform: lowercase  !important;
+}
+@media screen {
+  .\!tt\:0\@s {
+    text-transform: initial    !important;
+  }
+  .\!tt\:i\@s {
+    text-transform: inherit    !important;
+  }
+  .\!tt\:n\@s {
+    text-transform: none       !important;
+  }
+  .\!tt\:ca\@s {
+    text-transform: capitalize !important;
+  }
+  .\!tt\:uc\@s {
+    text-transform: uppercase  !important;
+  }
+  .\!tt\:lc\@s {
+    text-transform: lowercase  !important;
+  }
+}
+@media print {
+  .\!tt\:0\@p {
+    text-transform: initial    !important;
+  }
+  .\!tt\:i\@p {
+    text-transform: inherit    !important;
+  }
+  .\!tt\:n\@p {
+    text-transform: none       !important;
+  }
+  .\!tt\:ca\@p {
+    text-transform: capitalize !important;
+  }
+  .\!tt\:uc\@p {
+    text-transform: uppercase  !important;
+  }
+  .\!tt\:lc\@p {
+    text-transform: lowercase  !important;
+  }
+}
