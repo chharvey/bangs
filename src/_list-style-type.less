@@ -1,0 +1,38 @@
+
+/*################################*\
+    _list-style-type.less
+\*################################*/
+
+.\!lst\:0  { list-style-type: initial              !important; }
+.\!lst\:i  { list-style-type: inherit              !important; }
+.\!lst\:dz { list-style-type: decimal-leading-zero !important; } //  01.  02.  03.
+.\!lst\:ur { list-style-type: upper-roman          !important; } //   I.  II. III.
+.\!lst\:ua { list-style-type: upper-alpha          !important; } //   A.   B.   C.
+.\!lst\:dc { list-style-type: decimal              !important; } //   1.   2.   3.
+.\!lst\:la { list-style-type: lower-alpha          !important; } //   a.   b.   c.
+.\!lst\:lr { list-style-type: lower-roman          !important; } //   i.  ii. iii.
+.\!lst\:lg { list-style-type: lower-greek          !important; } //   α.   β.   γ.
+
+@media screen {
+  .\!lst\:0\@s  { .\!lst\:0 ; }
+  .\!lst\:i\@s  { .\!lst\:i ; }
+  .\!lst\:dz\@s { .\!lst\:dz; }
+  .\!lst\:ur\@s { .\!lst\:ur; }
+  .\!lst\:ua\@s { .\!lst\:ua; }
+  .\!lst\:dc\@s { .\!lst\:dc; }
+  .\!lst\:la\@s { .\!lst\:la; }
+  .\!lst\:lr\@s { .\!lst\:lr; }
+  .\!lst\:lg\@s { .\!lst\:lg; }
+}
+
+@media print {
+  .\!lst\:0\@p  { .\!lst\:0 ; }
+  .\!lst\:i\@p  { .\!lst\:i ; }
+  .\!lst\:dz\@p { .\!lst\:dz; }
+  .\!lst\:ur\@p { .\!lst\:ur; }
+  .\!lst\:ua\@p { .\!lst\:ua; }
+  .\!lst\:dc\@p { .\!lst\:dc; }
+  .\!lst\:la\@p { .\!lst\:la; }
+  .\!lst\:lr\@p { .\!lst\:lr; }
+  .\!lst\:lg\@p { .\!lst\:lg; }
+}

@@ -1,0 +1,27 @@
+
+/*################################*\
+    _justify-content.less
+\*################################*/
+@import (reference) url('../node_modules/xmeter/src/__tool.fallback.flexbox.less');
+
+.\!j\:bt { #XMETER .justify-content(space-between) !important; }
+.\!j\:ad { #XMETER .justify-content(space-around)  !important; }
+.\!j\:cr { #XMETER .justify-content(center)        !important; }
+.\!j\:st { #XMETER .justify-content(flex-start)    !important; }
+.\!j\:ed { #XMETER .justify-content(flex-end)      !important; }
+
+@media screen {
+  .\!j\:bt\@s { .\!j\:bt; }
+  .\!j\:ad\@s { .\!j\:ad; }
+  .\!j\:cr\@s { .\!j\:cr; }
+  .\!j\:st\@s { .\!j\:st; }
+  .\!j\:ed\@s { .\!j\:ed; }
+}
+
+@media print {
+  .\!j\:bt\@p { .\!j\:bt; }
+  .\!j\:ad\@p { .\!j\:ad; }
+  .\!j\:cr\@p { .\!j\:cr; }
+  .\!j\:st\@p { .\!j\:st; }
+  .\!j\:ed\@p { .\!j\:ed; }
+}

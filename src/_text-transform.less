@@ -1,0 +1,29 @@
+
+/*################################*\
+    _text-transform.less
+\*################################*/
+
+.\!tt\:0  { text-transform: initial    !important; }
+.\!tt\:i  { text-transform: inherit    !important; }
+.\!tt\:n  { text-transform: none       !important; }
+.\!tt\:ca { text-transform: capitalize !important; }
+.\!tt\:uc { text-transform: uppercase  !important; }
+.\!tt\:lc { text-transform: lowercase  !important; }
+
+@media screen {
+  .\!tt\:0\@s  { .\!tt\:0 ; }
+  .\!tt\:i\@s  { .\!tt\:i ; }
+  .\!tt\:n\@s  { .\!tt\:n ; }
+  .\!tt\:ca\@s { .\!tt\:ca; }
+  .\!tt\:uc\@s { .\!tt\:uc; }
+  .\!tt\:lc\@s { .\!tt\:lc; }
+}
+
+@media print {
+  .\!tt\:0\@p  { .\!tt\:0 ; }
+  .\!tt\:i\@p  { .\!tt\:i ; }
+  .\!tt\:n\@p  { .\!tt\:n ; }
+  .\!tt\:ca\@p { .\!tt\:ca; }
+  .\!tt\:uc\@p { .\!tt\:uc; }
+  .\!tt\:lc\@p { .\!tt\:lc; }
+}
