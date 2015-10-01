@@ -1621,3 +1621,73 @@
     font-weight: 900     !important;
   }
 }
+/*################################*\
+    _font-family.less
+\*################################*/
+.\!ff\:0 {
+  font-family: initial    !important;
+}
+.\!ff\:i {
+  font-family: inherit    !important;
+}
+.\!ff\:ss {
+  font-family: sans-serif !important;
+}
+.\!ff\:sf {
+  font-family: serif      !important;
+}
+.\!ff\:ms {
+  font-family: monospace  !important;
+}
+.\!ff\:fy {
+  font-family: fantasy    !important;
+}
+.\!ff\:cs {
+  font-family: cursive    !important;
+}
+@media screen {
+  .\!ff\:0\@s {
+    font-family: initial    !important;
+  }
+  .\!ff\:i\@s {
+    font-family: inherit    !important;
+  }
+  .\!ff\:ss\@s {
+    font-family: sans-serif !important;
+  }
+  .\!ff\:sf\@s {
+    font-family: serif      !important;
+  }
+  .\!ff\:ms\@s {
+    font-family: monospace  !important;
+  }
+  .\!ff\:fy\@s {
+    font-family: fantasy    !important;
+  }
+  .\!ff\:cs\@s {
+    font-family: cursive    !important;
+  }
+}
+@media print {
+  .\!ff\:0\@p {
+    font-family: initial    !important;
+  }
+  .\!ff\:i\@p {
+    font-family: inherit    !important;
+  }
+  .\!ff\:ss\@p {
+    font-family: sans-serif !important;
+  }
+  .\!ff\:sf\@p {
+    font-family: serif      !important;
+  }
+  .\!ff\:ms\@p {
+    font-family: monospace  !important;
+  }
+  .\!ff\:fy\@p {
+    font-family: fantasy    !important;
+  }
+  .\!ff\:cs\@p {
+    font-family: cursive    !important;
+  }
+}
