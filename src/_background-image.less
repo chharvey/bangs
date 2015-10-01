@@ -1,0 +1,20 @@
+
+/*################################*\
+    _background-image.less
+\*################################*/
+
+.\!bgi\:0 { background-image: initial !important; }
+.\!bgi\:i { background-image: inherit !important; }
+.\!bgi\:n { background-image: none    !important; }
+
+@media screen {
+  .\!bgi\:0\@s { .\!bgi\:0; }
+  .\!bgi\:i\@s { .\!bgi\:i; }
+  .\!bgi\:n\@s { .\!bgi\:n; }
+}
+
+@media print {
+  .\!bgi\:0\@p { .\!bgi\:0; }
+  .\!bgi\:i\@p { .\!bgi\:i; }
+  .\!bgi\:n\@p { .\!bgi\:n; }
+}

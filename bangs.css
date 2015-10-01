@@ -1902,7 +1902,7 @@
   }
 }
 /*################################*\
-    _background.less
+    _background-color.less
 \*################################*/
 .\!bgc\:0 {
   background-color: initial      !important;
@@ -1942,5 +1942,39 @@
   }
   .\!bgc\:c\@p {
     background-color: currentColor !important;
+  }
+}
+/*################################*\
+    _background-image.less
+\*################################*/
+.\!bgi\:0 {
+  background-image: initial !important;
+}
+.\!bgi\:i {
+  background-image: inherit !important;
+}
+.\!bgi\:n {
+  background-image: none    !important;
+}
+@media screen {
+  .\!bgi\:0\@s {
+    background-image: initial !important;
+  }
+  .\!bgi\:i\@s {
+    background-image: inherit !important;
+  }
+  .\!bgi\:n\@s {
+    background-image: none    !important;
+  }
+}
+@media print {
+  .\!bgi\:0\@p {
+    background-image: initial !important;
+  }
+  .\!bgi\:i\@p {
+    background-image: inherit !important;
+  }
+  .\!bgi\:n\@p {
+    background-image: none    !important;
   }
 }
