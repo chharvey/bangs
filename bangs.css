@@ -1497,3 +1497,127 @@
     font-variant: small-caps !important;
   }
 }
+/*################################*\
+    _font-weight.less
+\*################################*/
+.\!fw\:0 {
+  font-weight: initial !important;
+}
+.\!fw\:i {
+  font-weight: inherit !important;
+}
+.\!fw\:n {
+  font-weight: normal  !important;
+}
+.\!fw\:bd {
+  font-weight: bold    !important;
+}
+.\!fw\:1 {
+  font-weight: 100     !important;
+}
+.\!fw\:2 {
+  font-weight: 200     !important;
+}
+.\!fw\:3 {
+  font-weight: 300     !important;
+}
+.\!fw\:4 {
+  font-weight: 400     !important;
+}
+.\!fw\:5 {
+  font-weight: 500     !important;
+}
+.\!fw\:6 {
+  font-weight: 600     !important;
+}
+.\!fw\:7 {
+  font-weight: 700     !important;
+}
+.\!fw\:8 {
+  font-weight: 800     !important;
+}
+.\!fw\:9 {
+  font-weight: 900     !important;
+}
+@media screen {
+  .\!fw\:0\@s {
+    font-weight: initial !important;
+  }
+  .\!fw\:i\@s {
+    font-weight: inherit !important;
+  }
+  .\!fw\:n\@s {
+    font-weight: normal  !important;
+  }
+  .\!fw\:bd\@s {
+    font-weight: bold    !important;
+  }
+  .\!fw\:1\@s {
+    font-weight: 100     !important;
+  }
+  .\!fw\:2\@s {
+    font-weight: 200     !important;
+  }
+  .\!fw\:3\@s {
+    font-weight: 300     !important;
+  }
+  .\!fw\:4\@s {
+    font-weight: 400     !important;
+  }
+  .\!fw\:5\@s {
+    font-weight: 500     !important;
+  }
+  .\!fw\:6\@s {
+    font-weight: 600     !important;
+  }
+  .\!fw\:7\@s {
+    font-weight: 700     !important;
+  }
+  .\!fw\:8\@s {
+    font-weight: 800     !important;
+  }
+  .\!fw\:9\@s {
+    font-weight: 900     !important;
+  }
+}
+@media print {
+  .\!fw\:0\@p {
+    font-weight: initial !important;
+  }
+  .\!fw\:i\@p {
+    font-weight: inherit !important;
+  }
+  .\!fw\:n\@p {
+    font-weight: normal  !important;
+  }
+  .\!fw\:bd\@p {
+    font-weight: bold    !important;
+  }
+  .\!fw\:1\@p {
+    font-weight: 100     !important;
+  }
+  .\!fw\:2\@p {
+    font-weight: 200     !important;
+  }
+  .\!fw\:3\@p {
+    font-weight: 300     !important;
+  }
+  .\!fw\:4\@p {
+    font-weight: 400     !important;
+  }
+  .\!fw\:5\@p {
+    font-weight: 500     !important;
+  }
+  .\!fw\:6\@p {
+    font-weight: 600     !important;
+  }
+  .\!fw\:7\@p {
+    font-weight: 700     !important;
+  }
+  .\!fw\:8\@p {
+    font-weight: 800     !important;
+  }
+  .\!fw\:9\@p {
+    font-weight: 900     !important;
+  }
+}
