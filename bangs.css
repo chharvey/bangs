@@ -1813,3 +1813,91 @@
     text-align: justify !important;
   }
 }
+/*################################*\
+    _list-style-type.less
+\*################################*/
+.\!lst\:0 {
+  list-style-type: initial              !important;
+}
+.\!lst\:i {
+  list-style-type: inherit              !important;
+}
+.\!lst\:dz {
+  list-style-type: decimal-leading-zero !important;
+}
+.\!lst\:ur {
+  list-style-type: upper-roman !important;
+}
+.\!lst\:ua {
+  list-style-type: upper-alpha !important;
+}
+.\!lst\:dc {
+  list-style-type: decimal              !important;
+}
+.\!lst\:la {
+  list-style-type: lower-alpha !important;
+}
+.\!lst\:lr {
+  list-style-type: lower-roman !important;
+}
+.\!lst\:lg {
+  list-style-type: lower-greek !important;
+}
+@media screen {
+  .\!lst\:0\@s {
+    list-style-type: initial              !important;
+  }
+  .\!lst\:i\@s {
+    list-style-type: inherit              !important;
+  }
+  .\!lst\:dz\@s {
+    list-style-type: decimal-leading-zero !important;
+  }
+  .\!lst\:ur\@s {
+    list-style-type: upper-roman !important;
+  }
+  .\!lst\:ua\@s {
+    list-style-type: upper-alpha !important;
+  }
+  .\!lst\:dc\@s {
+    list-style-type: decimal              !important;
+  }
+  .\!lst\:la\@s {
+    list-style-type: lower-alpha !important;
+  }
+  .\!lst\:lr\@s {
+    list-style-type: lower-roman !important;
+  }
+  .\!lst\:lg\@s {
+    list-style-type: lower-greek !important;
+  }
+}
+@media print {
+  .\!lst\:0\@p {
+    list-style-type: initial              !important;
+  }
+  .\!lst\:i\@p {
+    list-style-type: inherit              !important;
+  }
+  .\!lst\:dz\@p {
+    list-style-type: decimal-leading-zero !important;
+  }
+  .\!lst\:ur\@p {
+    list-style-type: upper-roman !important;
+  }
+  .\!lst\:ua\@p {
+    list-style-type: upper-alpha !important;
+  }
+  .\!lst\:dc\@p {
+    list-style-type: decimal              !important;
+  }
+  .\!lst\:la\@p {
+    list-style-type: lower-alpha !important;
+  }
+  .\!lst\:lr\@p {
+    list-style-type: lower-roman !important;
+  }
+  .\!lst\:lg\@p {
+    list-style-type: lower-greek !important;
+  }
+}
