@@ -1,14 +1,15 @@
 # bangs
-Bangs are unopinionated, single-responsibility CSS class selectors with exactly one property and marked with !important. Inspired by Atoms, Tachyons, Gravitons and BEMIT.
+Bangs are unopinionated, single-responsibility CSS class selectors with exactly one property and marked with !important.
+Inspired by [Atoms](http://acss.io/), [Tachyons](http://tachyons.io/), [Gravitons](http://jxnblk.com/gravitons/), and [BEMIT](http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/).
 
 ## Examples
 
 
 ```html
 <style>
-  .\!fw_b { font-weight: bold; }
+  .\!fw\:b { font-weight: bold; }
   @media print {
-    .\!ff_ss\@p { font-family: sans-serif; }
+    .\!ff\:ss\@p { font-family: sans-serif; }
   }
 </style>
 <p class="!fw:b">friends with benefits</p>
@@ -22,15 +23,10 @@ The syntax of a bang classame goes like this:
 !propqual:val@media
 ```
 
-Bang classnames always start with `!`. Yes, that’s valid HTML. (In CSS, the bang must be escaped with a backslash.)
-
-The initials for the property, and property-qualifier if applicable, are concatenated. So margin-left would be `ml`.
-
-Then comes the colon (escaped in CSS), followed by the initials for the value.
-
-Finally, optionally, the at-sign (escaped in CSS) and the initials for the media query.
-
-The initials are below.
+1. Bang classnames always start with `!`. Yes, that’s valid HTML. (In CSS, the bang must be escaped with a backslash.)
+2. The initials for the property, and property-qualifier if applicable, are concatenated.
+3. Then comes the colon (escaped in CSS), followed by the initials for the value.
+4. Finally, optionally, the at-sign (escaped in CSS) and the initials for the media query.
 
 ### Properties
 
@@ -51,19 +47,19 @@ The initials are below.
 #### Qualifiers
 
 ```
-a    all
-x    horizontal
-v    vertical
 l    left
 r    right
 t    top
 b    bottom
+x    horizontal
+v    vertical
+a    all
 ```
 
 ### Values
 
 ```
-#### All
+#### All Properties
 :0    initial, 0
 :i    inherit
 :n    none, normal
@@ -124,16 +120,19 @@ b    bottom
 
 ## Usage
 
-Use these classes in HTML only!
+Add a bang to an HTML element’s `[class]` attribute to override its normal behavior
+(whether that behavior be defined by the browser or another class’s styles).
+Think of them as an alternative to inline styles.
 
-Bangs are meant to be used as trumps. Add a bang to an HTML element’s `[class]` attribute to
-override its normal behavior (browser-default, base, object, or component styles).
-Use them as an alternative to inline styles. Use them when you would say,
+Use them when you would say,
 
 > I want this to look just like a \_\_\_\_\_ component except with a different \_\_\_\_\_.
 
+Bangs are meant to be used as trumps. Use them in HTML only!
 Do not use bangs when building your CSS codebase. They are not meant to be used as
 building blocks for making bigger objects/components.
 
-I do *not* recommend using *only* bangs in your markup, as dictated by **Atomic CSS**. This
-can be very confusing and can actually hinder development. Use bangs only as exceptions.
+At the same time, I do *not* recommend using *only* bangs in your markup, as dictated by
+**Atomic CSS**. This can be very confusing and can actually hinder development. You should
+use classes with styles that correspond to actual objects and components.
+Use bangs only as exceptions, not the norm.
