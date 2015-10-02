@@ -35,7 +35,7 @@ The syntax of a bang classame goes like this:
 !d    display                !fs    font-style                  !tt    text-transform
 !w    width                  !fv    font-variant                !ta    text-align
 !p    padding                !fw    font-weight                 !td    text-decoration
-!m    margin                 !fz    font-size
+!m    margin                 !fz    font-size                   !va    vertical-align
 !j    justify-content        !ff    font-family
 !o    order
                              #### Lists
@@ -91,15 +91,25 @@ a    all
 :ed    flex-end
 
 #### Text
-:t     italic            :dz    decimal-leading-zero        :ca    capitalize        :u    underline
-:s     small-caps        :ur    upper-roman                 :uc    uppercase         :o    overline
-:b     bold              :ua    upper-alpha                 :lc    lowercase         :s    line-through
-:ss    sans-serif        :dc    decimal                     :lt    left
-:sf    serif             :la    lower-alpha                 :rt    right
-:ms    monospace         :lr    lower-roman                 :cr    center
-:fy    fantasy           :lg    lower-greek                 :jf    justify
-:cs    cursive           :os    outside
-                         :is    inside
+:t     italic            :lt    left              :u    underline           :a     baseline
+:s     small-caps        :rt    right             :o    overline            :b     bottom
+:b     bold              :cr    center            :s    line-through        :m     middle
+:ss    sans-serif        :jf    justify                                     :t     top
+:sf    serif                                                                :tb    text-bottom
+:ms    monospace         :ca    capitalize                                  :tt    text-top
+:fy    fantasy           :uc    uppercase                                   :sb    sub
+:cs    cursive           :lc    lowercase                                   :st    super
+
+##### Lists
+:dz    decimal-leading-zero
+:ur    upper-roman
+:ua    upper-alpha
+:dc    decimal
+:la    lower-alpha
+:lr    lower-roman
+:lg    lower-greek
+:os    outside
+:is    inside
 
 ##### `font-weight`
 :1    100        :4    400        :7    700

@@ -1843,6 +1843,103 @@
   }
 }
 /*################################*\
+    _vertical-align.less
+\*################################*/
+.\!va\:0 {
+  vertical-align: initial     !important;
+}
+.\!va\:i {
+  vertical-align: inherit     !important;
+}
+.\!va\:a {
+  vertical-align: baseline    !important;
+}
+.\!va\:b {
+  vertical-align: bottom      !important;
+}
+.\!va\:m {
+  vertical-align: middle      !important;
+}
+.\!va\:t {
+  vertical-align: top         !important;
+}
+.\!va\:tb {
+  vertical-align: text-bottom !important;
+}
+.\!va\:tt {
+  vertical-align: text-top !important;
+}
+.\!va\:sb {
+  vertical-align: sub         !important;
+}
+.\!va\:st {
+  vertical-align: super       !important;
+}
+@media screen {
+  .\!va\:0\@s {
+    vertical-align: initial     !important;
+  }
+  .\!va\:i\@s {
+    vertical-align: inherit     !important;
+  }
+  .\!va\:a\@s {
+    vertical-align: baseline    !important;
+  }
+  .\!va\:b\@s {
+    vertical-align: bottom      !important;
+  }
+  .\!va\:m\@s {
+    vertical-align: middle      !important;
+  }
+  .\!va\:t\@s {
+    vertical-align: top         !important;
+  }
+  .\!va\:tb\@s {
+    vertical-align: text-bottom !important;
+  }
+  .\!va\:tt\@s {
+    vertical-align: text-top !important;
+  }
+  .\!va\:sb\@s {
+    vertical-align: sub         !important;
+  }
+  .\!va\:st\@s {
+    vertical-align: super       !important;
+  }
+}
+@media print {
+  .\!va\:0\@p {
+    vertical-align: initial     !important;
+  }
+  .\!va\:i\@p {
+    vertical-align: inherit     !important;
+  }
+  .\!va\:a\@p {
+    vertical-align: baseline    !important;
+  }
+  .\!va\:b\@p {
+    vertical-align: bottom      !important;
+  }
+  .\!va\:m\@p {
+    vertical-align: middle      !important;
+  }
+  .\!va\:t\@p {
+    vertical-align: top         !important;
+  }
+  .\!va\:tb\@p {
+    vertical-align: text-bottom !important;
+  }
+  .\!va\:tt\@p {
+    vertical-align: text-top !important;
+  }
+  .\!va\:sb\@p {
+    vertical-align: sub         !important;
+  }
+  .\!va\:st\@p {
+    vertical-align: super       !important;
+  }
+}
+/*################################*\
     _text-transform.less
 \*################################*/
 .\!tt\:0 {
