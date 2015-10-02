@@ -31,17 +31,17 @@ The syntax of a bang classame goes like this:
 ### Properties
 
 ```
-#### Structure                       #### Text
-!d    display                        !fs     font-style
-!w    width                          !fv     font-variant
-!p    padding                        !fw     font-weight
-!m    margin                         !fz     font-size
-!j    justify-content                !ff     font-family
-!o    order                          !tt     text-transform
-                                     !ta     text-align
-#### Theme                           !lst    list-style-type
-!bg     background                   !lsp    list-style-position
-!bgc    background-color             !lsi    list-style-image
+#### Structure               #### Font                          #### Text
+!d    display                !fs    font-style                  !tt    text-transform
+!w    width                  !fv    font-variant                !ta    text-align
+!p    padding                !fw    font-weight                 !td    text-decoration
+!m    margin                 !fz    font-size
+!j    justify-content        !ff    font-family
+!o    order
+                             #### Lists
+#### Theme                   !lst    list-style-type
+!bg     background           !lsp    list-style-position
+!bgc    background-color     !lsi    list-style-image
 ```
 
 #### Qualifiers
@@ -91,15 +91,15 @@ a    all
 :ed    flex-end
 
 #### Text
-:t     italic            :ca    capitalize        :dz    decimal-leading-zero
-:s     small-caps        :uc    uppercase         :ur    upper-roman
-:b     bold              :lc    lowercase         :ua    upper-alpha
-:ss    sans-serif        :lt    left              :dc    decimal
-:sf    serif             :rt    right             :la    lower-alpha
-:ms    monospace         :cr    center            :lr    lower-roman
-:fy    fantasy           :jf    justify           :lg    lower-greek
-:cs    cursive                                    :os    outside
-                                                  :is    inside
+:t     italic            :dz    decimal-leading-zero        :ca    capitalize        :u    underline
+:s     small-caps        :ur    upper-roman                 :uc    uppercase         :o    overline
+:b     bold              :ua    upper-alpha                 :lc    lowercase         :s    line-through
+:ss    sans-serif        :dc    decimal                     :lt    left
+:sf    serif             :la    lower-alpha                 :rt    right
+:ms    monospace         :lr    lower-roman                 :cr    center
+:fy    fantasy           :lg    lower-greek                 :jf    justify
+:cs    cursive           :os    outside
+                         :is    inside
 
 ##### `font-weight`
 :1    100        :4    400        :7    700

@@ -1782,6 +1782,67 @@
   }
 }
 /*################################*\
+    _text-align.less
+\*################################*/
+.\!ta\:0 {
+  text-align: initial !important;
+}
+.\!ta\:i {
+  text-align: inherit !important;
+}
+.\!ta\:lt {
+  text-align: left    !important;
+}
+.\!ta\:rt {
+  text-align: right   !important;
+}
+.\!ta\:cr {
+  text-align: center  !important;
+}
+.\!ta\:jf {
+  text-align: justify !important;
+}
+@media screen {
+  .\!ta\:0\@s {
+    text-align: initial !important;
+  }
+  .\!ta\:i\@s {
+    text-align: inherit !important;
+  }
+  .\!ta\:lt\@s {
+    text-align: left    !important;
+  }
+  .\!ta\:rt\@s {
+    text-align: right   !important;
+  }
+  .\!ta\:cr\@s {
+    text-align: center  !important;
+  }
+  .\!ta\:jf\@s {
+    text-align: justify !important;
+  }
+}
+@media print {
+  .\!ta\:0\@p {
+    text-align: initial !important;
+  }
+  .\!ta\:i\@p {
+    text-align: inherit !important;
+  }
+  .\!ta\:lt\@p {
+    text-align: left    !important;
+  }
+  .\!ta\:rt\@p {
+    text-align: right   !important;
+  }
+  .\!ta\:cr\@p {
+    text-align: center  !important;
+  }
+  .\!ta\:jf\@p {
+    text-align: justify !important;
+  }
+}
+/*################################*\
     _text-transform.less
 \*################################*/
 .\!tt\:0 {
@@ -1843,64 +1904,64 @@
   }
 }
 /*################################*\
-    _text-align.less
+    _text-decoration.less
 \*################################*/
-.\!ta\:0 {
-  text-align: initial !important;
+.\!td\:0 {
+  text-decoration: initial      !important;
 }
-.\!ta\:i {
-  text-align: inherit !important;
+.\!td\:i {
+  text-decoration: inherit      !important;
 }
-.\!ta\:lt {
-  text-align: left    !important;
+.\!td\:n {
+  text-decoration: none         !important;
 }
-.\!ta\:rt {
-  text-align: right   !important;
+.\!td\:u {
+  text-decoration: underline    !important;
 }
-.\!ta\:cr {
-  text-align: center  !important;
+.\!td\:o {
+  text-decoration: overline     !important;
 }
-.\!ta\:jf {
-  text-align: justify !important;
+.\!td\:s {
+  text-decoration: line-through !important;
 }
 @media screen {
-  .\!ta\:0\@s {
-    text-align: initial !important;
+  .\!td\:0\@s {
+    text-decoration: initial      !important;
   }
-  .\!ta\:i\@s {
-    text-align: inherit !important;
+  .\!td\:i\@s {
+    text-decoration: inherit      !important;
   }
-  .\!ta\:lt\@s {
-    text-align: left    !important;
+  .\!td\:n\@s {
+    text-decoration: none         !important;
   }
-  .\!ta\:rt\@s {
-    text-align: right   !important;
+  .\!td\:u\@s {
+    text-decoration: underline    !important;
   }
-  .\!ta\:cr\@s {
-    text-align: center  !important;
+  .\!td\:o\@s {
+    text-decoration: overline     !important;
   }
-  .\!ta\:jf\@s {
-    text-align: justify !important;
+  .\!td\:s\@s {
+    text-decoration: line-through !important;
   }
 }
 @media print {
-  .\!ta\:0\@p {
-    text-align: initial !important;
+  .\!td\:0\@p {
+    text-decoration: initial      !important;
   }
-  .\!ta\:i\@p {
-    text-align: inherit !important;
+  .\!td\:i\@p {
+    text-decoration: inherit      !important;
   }
-  .\!ta\:lt\@p {
-    text-align: left    !important;
+  .\!td\:n\@p {
+    text-decoration: none         !important;
   }
-  .\!ta\:rt\@p {
-    text-align: right   !important;
+  .\!td\:u\@p {
+    text-decoration: underline    !important;
   }
-  .\!ta\:cr\@p {
-    text-align: center  !important;
+  .\!td\:o\@p {
+    text-decoration: overline     !important;
   }
-  .\!ta\:jf\@p {
-    text-align: justify !important;
+  .\!td\:s\@p {
+    text-decoration: line-through !important;
   }
 }
 /*################################*\
