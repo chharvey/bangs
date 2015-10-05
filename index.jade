@@ -523,6 +523,38 @@ html
           div(class="!fw:7@p") .!fw:7@p { font-weight: 700     !important; }
           div(class="!fw:8@p") .!fw:8@p { font-weight: 800     !important; }
           div(class="!fw:9@p") .!fw:9@p { font-weight: 900     !important; }
+      section#font-size
+        h1 _font-size.less
+        section
+          h1 all media queries
+          div(class="!fz:0 ") .!fz:0  { font-size: initial  !important; }
+          div(class="!fz:i ") .!fz:i  { font-size: inherit  !important; }
+          div(class="!fz:h1") .!fz:h1 { font-size: 2rem     !important; }
+          div(class="!fz:h2") .!fz:h2 { font-size: 1.5rem   !important; }
+          div(class="!fz:h3") .!fz:h3 { font-size: 1.25rem  !important; }
+          div(class="!fz:h4") .!fz:h4 { font-size: 1rem     !important; }
+          div(class="!fz:h5") .!fz:h5 { font-size: 0.875rem !important; }
+          div(class="!fz:h6") .!fz:h6 { font-size: 0.75rem  !important; }
+        section
+          h1 @media screen
+          div(class="!fz:0@s ") .!fz:0@s  { font-size: initial  !important; }
+          div(class="!fz:i@s ") .!fz:i@s  { font-size: inherit  !important; }
+          div(class="!fz:h1@s") .!fz:h1@s { font-size: 2rem     !important; }
+          div(class="!fz:h2@s") .!fz:h2@s { font-size: 1.5rem   !important; }
+          div(class="!fz:h3@s") .!fz:h3@s { font-size: 1.25rem  !important; }
+          div(class="!fz:h4@s") .!fz:h4@s { font-size: 1rem     !important; }
+          div(class="!fz:h5@s") .!fz:h5@s { font-size: 0.875rem !important; }
+          div(class="!fz:h6@s") .!fz:h6@s { font-size: 0.75rem  !important; }
+        section
+          h1 @media print
+          div(class="!fz:0@p ") .!fz:0@p  { font-size: initial  !important; }
+          div(class="!fz:i@p ") .!fz:i@p  { font-size: inherit  !important; }
+          div(class="!fz:h1@p") .!fz:h1@p { font-size: 2rem     !important; }
+          div(class="!fz:h2@p") .!fz:h2@p { font-size: 1.5rem   !important; }
+          div(class="!fz:h3@p") .!fz:h3@p { font-size: 1.25rem  !important; }
+          div(class="!fz:h4@p") .!fz:h4@p { font-size: 1rem     !important; }
+          div(class="!fz:h5@p") .!fz:h5@p { font-size: 0.875rem !important; }
+          div(class="!fz:h6@p") .!fz:h6@p { font-size: 0.75rem  !important; }
       section#font-family
         h1 _font-family.less
         section
@@ -616,6 +648,35 @@ html
           div(class="!va:tt@p") .!va:tt@p { vertical-align: text-top    !important; }
           div(class="!va:sb@p") .!va:sb@p { vertical-align: sub         !important; }
           div(class="!va:st@p") .!va:st@p { vertical-align: super       !important; }
+      section#white-space
+        h1 _white-space.less
+        section
+          h1 all media queries
+          div(class="!ws:0 ") .!ws:0  { white-space: initial  !important; }
+          div(class="!ws:i ") .!ws:i  { white-space: inherit  !important; }
+          div(class="!ws:n ") .!ws:n  { white-space: normal   !important; }
+          div(class="!ws:nw") .!ws:nw { white-space: nowrap   !important; }
+          div(class="!ws:pr") .!ws:pr { white-space: pre      !important; }
+          div(class="!ws:pw") .!ws:pw { white-space: pre-wrap !important; }
+          div(class="!ws:pl") .!ws:pl { white-space: pre-line !important; }
+        section
+          h1 @media screen
+          div(class="!ws:0@s ") .!ws:0@s  { white-space: initial  !important; }
+          div(class="!ws:i@s ") .!ws:i@s  { white-space: inherit  !important; }
+          div(class="!ws:n@s ") .!ws:n@s  { white-space: normal   !important; }
+          div(class="!ws:nw@s") .!ws:nw@s { white-space: nowrap   !important; }
+          div(class="!ws:pr@s") .!ws:pr@s { white-space: pre      !important; }
+          div(class="!ws:pw@s") .!ws:pw@s { white-space: pre-wrap !important; }
+          div(class="!ws:pl@s") .!ws:pl@s { white-space: pre-line !important; }
+        section
+          h1 @media print
+          div(class="!ws:0@p ") .!ws:0@p  { white-space: initial  !important; }
+          div(class="!ws:i@p ") .!ws:i@p  { white-space: inherit  !important; }
+          div(class="!ws:n@p ") .!ws:n@p  { white-space: normal   !important; }
+          div(class="!ws:nw@p") .!ws:nw@p { white-space: nowrap   !important; }
+          div(class="!ws:pr@p") .!ws:pr@p { white-space: pre      !important; }
+          div(class="!ws:pw@p") .!ws:pw@p { white-space: pre-wrap !important; }
+          div(class="!ws:pl@p") .!ws:pl@p { white-space: pre-line !important; }
       section#text-transform
         h1 _text-transform.less
         section
@@ -642,6 +703,32 @@ html
           div(class="!tt:ca@p") .!tt:ca@p { text-transform: capitalize !important; }
           div(class="!tt:uc@p") .!tt:uc@p { text-transform: uppercase  !important; }
           div(class="!tt:lc@p") .!tt:lc@p { text-transform: lowercase  !important; }
+      section#text-rendering
+        h1 _text-rendering.less
+        section
+          h1 all media queries
+          div(class="!tr:0")   .!tr:0   { text-rendering: initial            !important; }
+          div(class="!tr:i")   .!tr:i   { text-rendering: inherit            !important; }
+          div(class="!tr:a")   .!tr:a   { text-rendering: auto               !important; }
+          div(class="!tr:s")   .!tr:s   { text-rendering: optimizeSpeed      !important; }
+          div(class="!tr:l")   .!tr:l   { text-rendering: optimizeLegibility !important; }
+          div(class="!tr:g")   .!tr:g   { text-rendering: geometricPrecision !important; }
+        section
+          h1 @media screen
+          div(class="!tr:0@s") .!tr:0@s { text-rendering: initial            !important; }
+          div(class="!tr:i@s") .!tr:i@s { text-rendering: inherit            !important; }
+          div(class="!tr:a@s") .!tr:a@s { text-rendering: auto               !important; }
+          div(class="!tr:s@s") .!tr:s@s { text-rendering: optimizeSpeed      !important; }
+          div(class="!tr:l@s") .!tr:l@s { text-rendering: optimizeLegibility !important; }
+          div(class="!tr:g@s") .!tr:g@s { text-rendering: geometricPrecision !important; }
+        section
+          h1 @media print
+          div(class="!tr:0@p") .!tr:0@p { text-rendering: initial            !important; }
+          div(class="!tr:i@p") .!tr:i@p { text-rendering: inherit            !important; }
+          div(class="!tr:a@p") .!tr:a@p { text-rendering: auto               !important; }
+          div(class="!tr:s@p") .!tr:s@p { text-rendering: optimizeSpeed      !important; }
+          div(class="!tr:l@p") .!tr:l@p { text-rendering: optimizeLegibility !important; }
+          div(class="!tr:g@p") .!tr:g@p { text-rendering: geometricPrecision !important; }
       section#text-decoration
         h1 _text-decoration.less
         section
@@ -668,6 +755,26 @@ html
           div(class="!td:u@p") .!td:u@p { text-decoration: underline    !important; }
           div(class="!td:o@p") .!td:o@p { text-decoration: overline     !important; }
           div(class="!td:s@p") .!td:s@p { text-decoration: line-through !important; }
+      section#page-break
+        h1 _page-break.less
+        p.
+          #[strong Note:]
+          The #[code page-break-before] and #[code page-break-after] properties are only relevant
+          when printing, so all media query classes have been left out.
+        section
+          h1 all media queries
+          div(class="!pbb:0") .!pbb:0 { page-break-before: initial !important; }
+          div(class="!pbb:i") .!pbb:i { page-break-before: inherit !important; }
+          div(class="!pbb:a") .!pbb:a { page-break-before: auto    !important; }
+          div(class="!pbb:t") .!pbb:t { page-break-before: always  !important; }
+          div(class="!pbb:f") .!pbb:f { page-break-before: avoid   !important; }
+        section
+          h1 all media queries
+          div(class="!pba:0") .!pba:0 { page-break-after: initial !important; }
+          div(class="!pba:i") .!pba:i { page-break-after: inherit !important; }
+          div(class="!pba:a") .!pba:a { page-break-after: auto    !important; }
+          div(class="!pba:t") .!pba:t { page-break-after: always  !important; }
+          div(class="!pba:f") .!pba:f { page-break-after: avoid   !important; }
       section#list-style-type
         h1 _list-style-type.less
         section
@@ -749,6 +856,26 @@ html
             li(class="!lsi:0@p") .!lsi:0@p { list-style-image: initial !important; }
             li(class="!lsi:i@p") .!lsi:i@p { list-style-image: inherit !important; }
             li(class="!lsi:n@p") .!lsi:n@p { list-style-image: none    !important; }
+      section#color
+        h1 _color.less
+        section
+          h1 all media queries
+          div(class="!c:0") .!c:0 { color: initial      !important; }
+          div(class="!c:i") .!c:i { color: inherit      !important; }
+          div(class="!c:t") .!c:t { color: transparent  !important; }
+          div(class="!c:c") .!c:c { color: currentColor !important; }
+        section
+          h1 @media screen
+          div(class="!c:0@s") .!c:0@s { color: initial      !important; }
+          div(class="!c:i@s") .!c:i@s { color: inherit      !important; }
+          div(class="!c:t@s") .!c:t@s { color: transparent  !important; }
+          div(class="!c:c@s") .!c:c@s { color: currentColor !important; }
+        section
+          h1 @media print
+          div(class="!c:0@p") .!c:0@p { color: initial      !important; }
+          div(class="!c:i@p") .!c:i@p { color: inherit      !important; }
+          div(class="!c:t@p") .!c:t@p { color: transparent  !important; }
+          div(class="!c:c@p") .!c:c@p { color: currentColor !important; }
       section#background-color
         h1 _background-color.less
         section
@@ -786,3 +913,26 @@ html
           div(class="!bgi:0@p") .!bgi:0@p { background-image: initial !important; }
           div(class="!bgi:i@p") .!bgi:i@p { background-image: inherit !important; }
           div(class="!bgi:n@p") .!bgi:n@p { background-image: none    !important; }
+      section#visibility
+        h1 _visibility.less
+        section
+          h1 all media queries
+          div(class="!v:0") .!v:0 { visibility: initial  !important; }
+          div(class="!v:i") .!v:i { visibility: inherit  !important; }
+          div(class="!v:v") .!v:v { visibility: visible  !important; }
+          div(class="!v:h") .!v:h { visibility: hidden   !important; }
+          div(class="!v:c") .!v:c { visibility: collapse !important; }
+        section
+          h1 @media screen
+          div(class="!v:0@s") .!v:0@s { visibility: initial  !important; }
+          div(class="!v:i@s") .!v:i@s { visibility: inherit  !important; }
+          div(class="!v:v@s") .!v:v@s { visibility: visible  !important; }
+          div(class="!v:h@s") .!v:h@s { visibility: hidden   !important; }
+          div(class="!v:c@s") .!v:c@s { visibility: collapse !important; }
+        section
+          h1 @media print
+          div(class="!v:0@p") .!v:0@p { visibility: initial  !important; }
+          div(class="!v:i@p") .!v:i@p { visibility: inherit  !important; }
+          div(class="!v:v@p") .!v:v@p { visibility: visible  !important; }
+          div(class="!v:h@p") .!v:h@p { visibility: hidden   !important; }
+          div(class="!v:c@p") .!v:c@p { visibility: collapse !important; }

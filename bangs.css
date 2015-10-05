@@ -1712,6 +1712,103 @@
   }
 }
 /*################################*\
+    _font-size.less
+\*################################*/
+.\!fz\:0 {
+  font-size: initial                !important;
+}
+.\!fz\:i {
+  font-size: inherit                !important;
+}
+.\!fz\:h1 {
+  font-size: 32px !important;
+  font-size: 2rem !important;
+}
+.\!fz\:h2 {
+  font-size: 24px !important;
+  font-size: 1.5rem !important;
+}
+.\!fz\:h3 {
+  font-size: 20px !important;
+  font-size: 1.25rem !important;
+}
+.\!fz\:h4 {
+  font-size: 16px !important;
+  font-size: 1rem !important;
+}
+.\!fz\:h5 {
+  font-size: 14px !important;
+  font-size: 0.875rem !important;
+}
+.\!fz\:h6 {
+  font-size: 12px !important;
+  font-size: 0.75rem !important;
+}
+@media screen {
+  .\!fz\:0\@s {
+    font-size: initial                !important;
+  }
+  .\!fz\:i\@s {
+    font-size: inherit                !important;
+  }
+  .\!fz\:h1\@s {
+    font-size: 32px !important;
+    font-size: 2rem !important;
+  }
+  .\!fz\:h2\@s {
+    font-size: 24px !important;
+    font-size: 1.5rem !important;
+  }
+  .\!fz\:h3\@s {
+    font-size: 20px !important;
+    font-size: 1.25rem !important;
+  }
+  .\!fz\:h4\@s {
+    font-size: 16px !important;
+    font-size: 1rem !important;
+  }
+  .\!fz\:h5\@s {
+    font-size: 14px !important;
+    font-size: 0.875rem !important;
+  }
+  .\!fz\:h6\@s {
+    font-size: 12px !important;
+    font-size: 0.75rem !important;
+  }
+}
+@media print {
+  .\!fz\:0\@p {
+    font-size: initial                !important;
+  }
+  .\!fz\:i\@p {
+    font-size: inherit                !important;
+  }
+  .\!fz\:h1\@p {
+    font-size: 32px !important;
+    font-size: 2rem !important;
+  }
+  .\!fz\:h2\@p {
+    font-size: 24px !important;
+    font-size: 1.5rem !important;
+  }
+  .\!fz\:h3\@p {
+    font-size: 20px !important;
+    font-size: 1.25rem !important;
+  }
+  .\!fz\:h4\@p {
+    font-size: 16px !important;
+    font-size: 1rem !important;
+  }
+  .\!fz\:h5\@p {
+    font-size: 14px !important;
+    font-size: 0.875rem !important;
+  }
+  .\!fz\:h6\@p {
+    font-size: 12px !important;
+    font-size: 0.75rem !important;
+  }
+}
+/*################################*\
     _font-family.less
 \*################################*/
 .\!ff\:0 {
@@ -1940,6 +2037,76 @@
   }
 }
 /*################################*\
+    _white-space.less
+\*################################*/
+.\!ws\:0 {
+  white-space: initial  !important;
+}
+.\!ws\:i {
+  white-space: inherit  !important;
+}
+.\!ws\:n {
+  white-space: normal   !important;
+}
+.\!ws\:nw {
+  white-space: nowrap   !important;
+}
+.\!ws\:pr {
+  white-space: pre      !important;
+}
+.\!ws\:pw {
+  white-space: pre-wrap !important;
+}
+.\!ws\:pl {
+  white-space: pre-line !important;
+}
+@media screen {
+  .\!ws\:0\@s {
+    white-space: initial  !important;
+  }
+  .\!ws\:i\@s {
+    white-space: inherit  !important;
+  }
+  .\!ws\:n\@s {
+    white-space: normal   !important;
+  }
+  .\!ws\:nw\@s {
+    white-space: nowrap   !important;
+  }
+  .\!ws\:pr\@s {
+    white-space: pre      !important;
+  }
+  .\!ws\:pw\@s {
+    white-space: pre-wrap !important;
+  }
+  .\!ws\:pl\@s {
+    white-space: pre-line !important;
+  }
+}
+@media print {
+  .\!ws\:0\@p {
+    white-space: initial  !important;
+  }
+  .\!ws\:i\@p {
+    white-space: inherit  !important;
+  }
+  .\!ws\:n\@p {
+    white-space: normal   !important;
+  }
+  .\!ws\:nw\@p {
+    white-space: nowrap   !important;
+  }
+  .\!ws\:pr\@p {
+    white-space: pre      !important;
+  }
+  .\!ws\:pw\@p {
+    white-space: pre-wrap !important;
+  }
+  .\!ws\:pl\@p {
+    white-space: pre-line !important;
+  }
+}
+/*################################*\
     _text-transform.less
 \*################################*/
 .\!tt\:0 {
@@ -1998,6 +2165,67 @@
   }
   .\!tt\:lc\@p {
     text-transform: lowercase  !important;
+  }
+}
+/*################################*\
+    _text-rendering.less
+\*################################*/
+.\!tr\:0 {
+  text-rendering: initial            !important;
+}
+.\!tr\:i {
+  text-rendering: inherit            !important;
+}
+.\!tr\:a {
+  text-rendering: auto               !important;
+}
+.\!tr\:s {
+  text-rendering: optimizeSpeed      !important;
+}
+.\!tr\:l {
+  text-rendering: optimizeLegibility !important;
+}
+.\!tr\:g {
+  text-rendering: geometricPrecision !important;
+}
+@media screen {
+  .\!tr\:0\@s {
+    text-rendering: initial            !important;
+  }
+  .\!tr\:i\@s {
+    text-rendering: inherit            !important;
+  }
+  .\!tr\:a\@s {
+    text-rendering: auto               !important;
+  }
+  .\!tr\:s\@s {
+    text-rendering: optimizeSpeed      !important;
+  }
+  .\!tr\:l\@s {
+    text-rendering: optimizeLegibility !important;
+  }
+  .\!tr\:g\@s {
+    text-rendering: geometricPrecision !important;
+  }
+}
+@media print {
+  .\!tr\:0\@p {
+    text-rendering: initial            !important;
+  }
+  .\!tr\:i\@p {
+    text-rendering: inherit            !important;
+  }
+  .\!tr\:a\@p {
+    text-rendering: auto               !important;
+  }
+  .\!tr\:s\@p {
+    text-rendering: optimizeSpeed      !important;
+  }
+  .\!tr\:l\@p {
+    text-rendering: optimizeLegibility !important;
+  }
+  .\!tr\:g\@p {
+    text-rendering: geometricPrecision !important;
   }
 }
 /*################################*\
@@ -2060,6 +2288,39 @@
   .\!td\:s\@p {
     text-decoration: line-through !important;
   }
+}
+/*################################*\
+    _page-break.less
+\*################################*/
+.\!pbb\:0 {
+  page-break-before: initial !important;
+}
+.\!pbb\:i {
+  page-break-before: inherit !important;
+}
+.\!pbb\:a {
+  page-break-before: auto    !important;
+}
+.\!pbb\:t {
+  page-break-before: always  !important;
+}
+.\!pbb\:f {
+  page-break-before: avoid   !important;
+}
+.\!pba\:0 {
+  page-break-after: initial !important;
+}
+.\!pba\:i {
+  page-break-after: inherit !important;
+}
+.\!pba\:a {
+  page-break-after: auto    !important;
+}
+.\!pba\:t {
+  page-break-after: always  !important;
+}
+.\!pba\:f {
+  page-break-after: avoid   !important;
 }
 /*################################*\
     _list-style-type.less
@@ -2227,6 +2488,49 @@
   }
 }
 /*################################*\
+    _color.less
+\*################################*/
+.\!c\:0 {
+  color: initial      !important;
+}
+.\!c\:i {
+  color: inherit      !important;
+}
+.\!c\:t {
+  color: transparent  !important;
+}
+.\!c\:c {
+  color: currentColor !important;
+}
+@media screen {
+  .\!c\:0\@s {
+    color: initial      !important;
+  }
+  .\!c\:i\@s {
+    color: inherit      !important;
+  }
+  .\!c\:t\@s {
+    color: transparent  !important;
+  }
+  .\!c\:c\@s {
+    color: currentColor !important;
+  }
+}
+@media print {
+  .\!c\:0\@p {
+    color: initial      !important;
+  }
+  .\!c\:i\@p {
+    color: inherit      !important;
+  }
+  .\!c\:t\@p {
+    color: transparent  !important;
+  }
+  .\!c\:c\@p {
+    color: currentColor !important;
+  }
+}
+/*################################*\
     _background-color.less
 \*################################*/
 .\!bgc\:0 {
@@ -2301,5 +2605,57 @@
   }
   .\!bgi\:n\@p {
     background-image: none    !important;
+  }
+}
+/*################################*\
+    _visibility.less
+\*################################*/
+.\!v\:0 {
+  visibility: initial  !important;
+}
+.\!v\:i {
+  visibility: inherit  !important;
+}
+.\!v\:v {
+  visibility: visible  !important;
+}
+.\!v\:h {
+  visibility: hidden   !important;
+}
+.\!v\:c {
+  visibility: collapse !important;
+}
+@media screen {
+  .\!v\:0\@s {
+    visibility: initial  !important;
+  }
+  .\!v\:i\@s {
+    visibility: inherit  !important;
+  }
+  .\!v\:v\@s {
+    visibility: visible  !important;
+  }
+  .\!v\:h\@s {
+    visibility: hidden   !important;
+  }
+  .\!v\:c\@s {
+    visibility: collapse !important;
+  }
+}
+@media print {
+  .\!v\:0\@p {
+    visibility: initial  !important;
+  }
+  .\!v\:i\@p {
+    visibility: inherit  !important;
+  }
+  .\!v\:v\@p {
+    visibility: visible  !important;
+  }
+  .\!v\:h\@p {
+    visibility: hidden   !important;
+  }
+  .\!v\:c\@p {
+    visibility: collapse !important;
   }
 }

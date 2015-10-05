@@ -36,12 +36,14 @@ The syntax of a bang classame goes like this:
 !w    width                  !fv    font-variant                !ta    text-align
 !p    padding                !fw    font-weight                 !td    text-decoration
 !m    margin                 !fz    font-size                   !va    vertical-align
-!j    justify-content        !ff    font-family
-!o    order
+!j    justify-content        !ff    font-family                 !ws    white-space
+!o    order                                                     !tr    text-rendering
                              #### Lists
 #### Theme                   !lst    list-style-type
-!bg     background           !lsp    list-style-position
+!c      color                !lsp    list-style-position
 !bgc    background-color     !lsi    list-style-image
+!bgi    background-image     
+!v      visibility
 ```
 
 #### Qualifiers
@@ -100,6 +102,11 @@ a    all
 :fy    fantasy           :uc    uppercase                                   :sb    sub
 :cs    cursive           :lc    lowercase                                   :st    super
 
+:nw    nowrap  
+:pr    pre     
+:pw    pre-wrap
+:pl    pre-line
+
 ##### Lists
 :dz    decimal-leading-zero
 :ur    upper-roman
@@ -116,9 +123,16 @@ a    all
 :2    200        :5    500        :8    800
 :3    300        :6    600        :9    900
 
-#### Colors
+#### Theme
+
+##### Colors
 :t    transparent
 :c    currentColor
+
+##### Visibility
+:v    visible
+:h    hidden
+:c    collapse
 ```
 
 ### Media Queries
