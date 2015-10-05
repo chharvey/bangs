@@ -25,7 +25,7 @@ html
       }
   body
     main
-      section
+      section#display
         h1 _display.less
         section
           h1 all media queries
@@ -60,7 +60,7 @@ html
           //- div(class="!d:tb@p") .!d:tb@p { display: table        !important; }
           //- div(class="!d:tc@p") .!d:tc@p { display: table-cell   !important; }
           div(class="!d:fx@p") .!d:fx@p { display: flex         !important; }
-      section
+      section#width
         h1 _width.less
         section
           h1 all media queries
@@ -131,7 +131,7 @@ html
           div(class="!w:4o6@p") .!w:4o6@p { width: 66.66666667% !important; }
           div(class="!w:5o6@p") .!w:5o6@p { width: 83.33333333% !important; }
           div(class="!w:6o6@p") .!w:6o6@p { width: 100% !important; }
-      section
+      section#padding
         h1 _padding.less
         section
           h1 all media queries
@@ -244,7 +244,7 @@ html
           div(class="!pa:1@p") .!pa:1@p { padding-left: 1rem   !important; padding-right: 1rem   !important; padding-top: 1rem   !important; padding-bottom: 1rem   !important; }
           div(class="!pa:2@p") .!pa:2@p { padding-left: 2rem   !important; padding-right: 2rem   !important; padding-top: 2rem   !important; padding-bottom: 2rem   !important; }
           div(class="!pa:4@p") .!pa:4@p { padding-left: 4rem   !important; padding-right: 4rem   !important; padding-top: 4rem   !important; padding-bottom: 4rem   !important; }
-      section
+      section#margin
         h1 _margin.less
         section
           h1 all media queries
@@ -357,7 +357,7 @@ html
           div(class="!ma:1@p") .!ma:1@p { margin-left: 1rem   !important; margin-right: 1rem   !important; margin-top: 1rem   !important; margin-bottom: 1rem   !important; }
           div(class="!ma:2@p") .!ma:2@p { margin-left: 2rem   !important; margin-right: 2rem   !important; margin-top: 2rem   !important; margin-bottom: 2rem   !important; }
           div(class="!ma:4@p") .!ma:4@p { margin-left: 4rem   !important; margin-right: 4rem   !important; margin-top: 4rem   !important; margin-bottom: 4rem   !important; }
-      section.ss-flexbox
+      section#justify-content.ss-flexbox
         h1 _justify-content.less
         section
           h1 all media queries
@@ -380,7 +380,7 @@ html
           div(class="!j:cr@p") .!j:cr@p { justify-content: center        !important; }
           div(class="!j:st@p") .!j:st@p { justify-content: flex-start    !important; }
           div(class="!j:ed@p") .!j:ed@p { justify-content: flex-end      !important; }
-      section.ss-flexbox
+      section#order.ss-flexbox
         h1 _order.less
         section
           h1 all media queries
@@ -436,7 +436,7 @@ html
           div(class="!o:d@p") .!o:d@p { order: 13 !important; }
           div(class="!o:e@p") .!o:e@p { order: 14 !important; }
           div(class="!o:f@p") .!o:f@p { order: 15 !important; }
-      section
+      section#font-style
         h1 _font-style.less
         section
           h1 all media queries
@@ -456,7 +456,7 @@ html
           div(class="!fs:i@p") .!fs:i@p { font-style: inherit !important; }
           div(class="!fs:n@p") .!fs:n@p { font-style: normal  !important; }
           div(class="!fs:t@p") .!fs:t@p { font-style: italic  !important; }
-      section
+      section#font-variant
         h1 _font-variant.less
         section
           h1 all media queries
@@ -476,7 +476,7 @@ html
           div(class="!fv:i@p") .!fv:i@p { font-variant: inherit    !important; }
           div(class="!fv:n@p") .!fv:n@p { font-variant: normal     !important; }
           div(class="!fv:s@p") .!fv:s@p { font-variant: small-caps !important; }
-      section
+      section#font-weight
         h1 _font-weight.less
         section
           h1 all media queries
@@ -523,7 +523,7 @@ html
           div(class="!fw:7@p") .!fw:7@p { font-weight: 700     !important; }
           div(class="!fw:8@p") .!fw:8@p { font-weight: 800     !important; }
           div(class="!fw:9@p") .!fw:9@p { font-weight: 900     !important; }
-      section
+      section#font-family
         h1 _font-family.less
         section
           h1 all media queries
@@ -552,7 +552,7 @@ html
           div(class="!ff:ms@p") .!ff:ms@p { font-family: monospace  !important; }
           div(class="!ff:fy@p") .!ff:fy@p { font-family: fantasy    !important; }
           div(class="!ff:cs@p") .!ff:cs@p { font-family: cursive    !important; }
-      section
+      section#text-align
         h1 _text-align.less
         section
           h1 all media queries
@@ -578,7 +578,7 @@ html
           div(class="!ta:rt@p") .!ta:rt@p { text-align: right   !important; }
           div(class="!ta:cr@p") .!ta:cr@p { text-align: center  !important; }
           div(class="!ta:jf@p") .!ta:jf@p { text-align: justify !important; }
-      section
+      section#vertical-align
         h1 _vertical-align.less
         section
           h1 all media queries
@@ -616,7 +616,7 @@ html
           div(class="!va:tt@p") .!va:tt@p { vertical-align: text-top    !important; }
           div(class="!va:sb@p") .!va:sb@p { vertical-align: sub         !important; }
           div(class="!va:st@p") .!va:st@p { vertical-align: super       !important; }
-      section
+      section#text-transform
         h1 _text-transform.less
         section
           h1 all media queries
@@ -642,7 +642,7 @@ html
           div(class="!tt:ca@p") .!tt:ca@p { text-transform: capitalize !important; }
           div(class="!tt:uc@p") .!tt:uc@p { text-transform: uppercase  !important; }
           div(class="!tt:lc@p") .!tt:lc@p { text-transform: lowercase  !important; }
-      section
+      section#text-decoration
         h1 _text-decoration.less
         section
           h1 all media queries
@@ -668,7 +668,7 @@ html
           div(class="!td:u@p") .!td:u@p { text-decoration: underline    !important; }
           div(class="!td:o@p") .!td:o@p { text-decoration: overline     !important; }
           div(class="!td:s@p") .!td:s@p { text-decoration: line-through !important; }
-      section
+      section#list-style-type
         h1 _list-style-type.less
         section
           h1 all media queries
@@ -706,7 +706,7 @@ html
             li(class="!lst:la@p") .!lst:la@p { list-style-type: lower-alpha          !important; }
             li(class="!lst:lr@p") .!lst:lr@p { list-style-type: lower-roman          !important; }
             li(class="!lst:lg@p") .!lst:lg@p { list-style-type: lower-greek          !important; }
-      section
+      section#list-style-position
         h1 _list-style-position.less
         section
           h1 all media queries
@@ -729,7 +729,7 @@ html
             li(class="!lsp:i@p ") .!lsp:i@p  { list-style-position: inherit !important; }
             li(class="!lsp:os@p") .!lsp:os@p { list-style-position: outside !important; }
             li(class="!lsp:is@p") .!lsp:is@p { list-style-position: inside  !important; }
-      section
+      section#list-style-image
         h1 _list-style-image.less
         section
           h1 all media queries
@@ -749,7 +749,7 @@ html
             li(class="!lsi:0@p") .!lsi:0@p { list-style-image: initial !important; }
             li(class="!lsi:i@p") .!lsi:i@p { list-style-image: inherit !important; }
             li(class="!lsi:n@p") .!lsi:n@p { list-style-image: none    !important; }
-      section
+      section#background-color
         h1 _background-color.less
         section
           h1 all media queries
@@ -769,7 +769,7 @@ html
           div(class="!bgc:i@p") .!bgc:i@p { background-color: inherit      !important; }
           div(class="!bgc:t@p") .!bgc:t@p { background-color: transparent  !important; }
           div(class="!bgc:c@p") .!bgc:c@p { background-color: currentColor !important; }
-      section
+      section#background-image
         h1 _background-image.less
         section
           h1 all media queries
