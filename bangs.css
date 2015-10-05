@@ -1712,6 +1712,103 @@
   }
 }
 /*################################*\
+    _font-size.less
+\*################################*/
+.\!fz\:0 {
+  font-size: initial                !important;
+}
+.\!fz\:i {
+  font-size: inherit                !important;
+}
+.\!fz\:h1 {
+  font-size: 32px !important;
+  font-size: 2rem !important;
+}
+.\!fz\:h2 {
+  font-size: 24px !important;
+  font-size: 1.5rem !important;
+}
+.\!fz\:h3 {
+  font-size: 20px !important;
+  font-size: 1.25rem !important;
+}
+.\!fz\:h4 {
+  font-size: 16px !important;
+  font-size: 1rem !important;
+}
+.\!fz\:h5 {
+  font-size: 14px !important;
+  font-size: 0.875rem !important;
+}
+.\!fz\:h6 {
+  font-size: 12px !important;
+  font-size: 0.75rem !important;
+}
+@media screen {
+  .\!fz\:0\@s {
+    font-size: initial                !important;
+  }
+  .\!fz\:i\@s {
+    font-size: inherit                !important;
+  }
+  .\!fz\:h1\@s {
+    font-size: 32px !important;
+    font-size: 2rem !important;
+  }
+  .\!fz\:h2\@s {
+    font-size: 24px !important;
+    font-size: 1.5rem !important;
+  }
+  .\!fz\:h3\@s {
+    font-size: 20px !important;
+    font-size: 1.25rem !important;
+  }
+  .\!fz\:h4\@s {
+    font-size: 16px !important;
+    font-size: 1rem !important;
+  }
+  .\!fz\:h5\@s {
+    font-size: 14px !important;
+    font-size: 0.875rem !important;
+  }
+  .\!fz\:h6\@s {
+    font-size: 12px !important;
+    font-size: 0.75rem !important;
+  }
+}
+@media print {
+  .\!fz\:0\@p {
+    font-size: initial                !important;
+  }
+  .\!fz\:i\@p {
+    font-size: inherit                !important;
+  }
+  .\!fz\:h1\@p {
+    font-size: 32px !important;
+    font-size: 2rem !important;
+  }
+  .\!fz\:h2\@p {
+    font-size: 24px !important;
+    font-size: 1.5rem !important;
+  }
+  .\!fz\:h3\@p {
+    font-size: 20px !important;
+    font-size: 1.25rem !important;
+  }
+  .\!fz\:h4\@p {
+    font-size: 16px !important;
+    font-size: 1rem !important;
+  }
+  .\!fz\:h5\@p {
+    font-size: 14px !important;
+    font-size: 0.875rem !important;
+  }
+  .\!fz\:h6\@p {
+    font-size: 12px !important;
+    font-size: 0.75rem !important;
+  }
+}
+/*################################*\
     _font-family.less
 \*################################*/
 .\!ff\:0 {
