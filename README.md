@@ -43,6 +43,7 @@ The syntax of a bang classame goes like this:
 !c      color                !lsp    list-style-position
 !bgc    background-color     !lsi    list-style-image
 !bgi    background-image     
+!v      visibility
 ```
 
 #### Qualifiers
@@ -122,9 +123,16 @@ a    all
 :2    200        :5    500        :8    800
 :3    300        :6    600        :9    900
 
-#### Colors
+#### Theme
+
+##### Colors
 :t    transparent
 :c    currentColor
+
+##### Visibility
+:v    visible
+:h    hidden
+:c    collapse
 ```
 
 ### Media Queries

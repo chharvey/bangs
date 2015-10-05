@@ -867,3 +867,26 @@ html
           div(class="!bgi:0@p") .!bgi:0@p { background-image: initial !important; }
           div(class="!bgi:i@p") .!bgi:i@p { background-image: inherit !important; }
           div(class="!bgi:n@p") .!bgi:n@p { background-image: none    !important; }
+      section#visibility
+        h1 _visibility.less
+        section
+          h1 all media queries
+          div(class="!v:0") .!v:0 { visibility: initial  !important; }
+          div(class="!v:i") .!v:i { visibility: inherit  !important; }
+          div(class="!v:v") .!v:v { visibility: visible  !important; }
+          div(class="!v:h") .!v:h { visibility: hidden   !important; }
+          div(class="!v:c") .!v:c { visibility: collapse !important; }
+        section
+          h1 @media screen
+          div(class="!v:0@s") .!v:0@s { visibility: initial  !important; }
+          div(class="!v:i@s") .!v:i@s { visibility: inherit  !important; }
+          div(class="!v:v@s") .!v:v@s { visibility: visible  !important; }
+          div(class="!v:h@s") .!v:h@s { visibility: hidden   !important; }
+          div(class="!v:c@s") .!v:c@s { visibility: collapse !important; }
+        section
+          h1 @media print
+          div(class="!v:0@p") .!v:0@p { visibility: initial  !important; }
+          div(class="!v:i@p") .!v:i@p { visibility: inherit  !important; }
+          div(class="!v:v@p") .!v:v@p { visibility: visible  !important; }
+          div(class="!v:h@p") .!v:h@p { visibility: hidden   !important; }
+          div(class="!v:c@p") .!v:c@p { visibility: collapse !important; }

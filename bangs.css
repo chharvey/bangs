@@ -2513,3 +2513,55 @@
     background-image: none    !important;
   }
 }
+/*################################*\
+    _visibility.less
+\*################################*/
+.\!v\:0 {
+  visibility: initial  !important;
+}
+.\!v\:i {
+  visibility: inherit  !important;
+}
+.\!v\:v {
+  visibility: visible  !important;
+}
+.\!v\:h {
+  visibility: hidden   !important;
+}
+.\!v\:c {
+  visibility: collapse !important;
+}
+@media screen {
+  .\!v\:0\@s {
+    visibility: initial  !important;
+  }
+  .\!v\:i\@s {
+    visibility: inherit  !important;
+  }
+  .\!v\:v\@s {
+    visibility: visible  !important;
+  }
+  .\!v\:h\@s {
+    visibility: hidden   !important;
+  }
+  .\!v\:c\@s {
+    visibility: collapse !important;
+  }
+}
+@media print {
+  .\!v\:0\@p {
+    visibility: initial  !important;
+  }
+  .\!v\:i\@p {
+    visibility: inherit  !important;
+  }
+  .\!v\:v\@p {
+    visibility: visible  !important;
+  }
+  .\!v\:h\@p {
+    visibility: hidden   !important;
+  }
+  .\!v\:c\@p {
+    visibility: collapse !important;
+  }
+}
