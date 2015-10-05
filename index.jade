@@ -755,6 +755,26 @@ html
           div(class="!td:u@p") .!td:u@p { text-decoration: underline    !important; }
           div(class="!td:o@p") .!td:o@p { text-decoration: overline     !important; }
           div(class="!td:s@p") .!td:s@p { text-decoration: line-through !important; }
+      section#page-break
+        h1 _page-break.less
+        p.
+          #[strong Note:]
+          The #[code page-break-before] and #[code page-break-after] properties are only relevant
+          when printing, so all media query classes have been left out.
+        section
+          h1 all media queries
+          div(class="!pbb:0") .!pbb:0 { page-break-before: initial !important; }
+          div(class="!pbb:i") .!pbb:i { page-break-before: inherit !important; }
+          div(class="!pbb:a") .!pbb:a { page-break-before: auto    !important; }
+          div(class="!pbb:t") .!pbb:t { page-break-before: always  !important; }
+          div(class="!pbb:f") .!pbb:f { page-break-before: avoid   !important; }
+        section
+          h1 all media queries
+          div(class="!pba:0") .!pba:0 { page-break-after: initial !important; }
+          div(class="!pba:i") .!pba:i { page-break-after: inherit !important; }
+          div(class="!pba:a") .!pba:a { page-break-after: auto    !important; }
+          div(class="!pba:t") .!pba:t { page-break-after: always  !important; }
+          div(class="!pba:f") .!pba:f { page-break-after: avoid   !important; }
       section#list-style-type
         h1 _list-style-type.less
         section

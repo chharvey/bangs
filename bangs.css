@@ -2290,6 +2290,39 @@
   }
 }
 /*################################*\
+    _page-break.less
+\*################################*/
+.\!pbb\:0 {
+  page-break-before: initial !important;
+}
+.\!pbb\:i {
+  page-break-before: inherit !important;
+}
+.\!pbb\:a {
+  page-break-before: auto    !important;
+}
+.\!pbb\:t {
+  page-break-before: always  !important;
+}
+.\!pbb\:f {
+  page-break-before: avoid   !important;
+}
+.\!pba\:0 {
+  page-break-after: initial !important;
+}
+.\!pba\:i {
+  page-break-after: inherit !important;
+}
+.\!pba\:a {
+  page-break-after: auto    !important;
+}
+.\!pba\:t {
+  page-break-after: always  !important;
+}
+.\!pba\:f {
+  page-break-after: avoid   !important;
+}
+/*################################*\
     _list-style-type.less
 \*################################*/
 .\!lst\:0 {
