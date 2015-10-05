@@ -2168,6 +2168,67 @@
   }
 }
 /*################################*\
+    _text-rendering.less
+\*################################*/
+.\!tr\:0 {
+  text-rendering: initial            !important;
+}
+.\!tr\:i {
+  text-rendering: inherit            !important;
+}
+.\!tr\:a {
+  text-rendering: auto               !important;
+}
+.\!tr\:s {
+  text-rendering: optimizeSpeed      !important;
+}
+.\!tr\:l {
+  text-rendering: optimizeLegibility !important;
+}
+.\!tr\:g {
+  text-rendering: geometricPrecision !important;
+}
+@media screen {
+  .\!tr\:0\@s {
+    text-rendering: initial            !important;
+  }
+  .\!tr\:i\@s {
+    text-rendering: inherit            !important;
+  }
+  .\!tr\:a\@s {
+    text-rendering: auto               !important;
+  }
+  .\!tr\:s\@s {
+    text-rendering: optimizeSpeed      !important;
+  }
+  .\!tr\:l\@s {
+    text-rendering: optimizeLegibility !important;
+  }
+  .\!tr\:g\@s {
+    text-rendering: geometricPrecision !important;
+  }
+}
+@media print {
+  .\!tr\:0\@p {
+    text-rendering: initial            !important;
+  }
+  .\!tr\:i\@p {
+    text-rendering: inherit            !important;
+  }
+  .\!tr\:a\@p {
+    text-rendering: auto               !important;
+  }
+  .\!tr\:s\@p {
+    text-rendering: optimizeSpeed      !important;
+  }
+  .\!tr\:l\@p {
+    text-rendering: optimizeLegibility !important;
+  }
+  .\!tr\:g\@p {
+    text-rendering: geometricPrecision !important;
+  }
+}
+/*################################*\
     _text-decoration.less
 \*################################*/
 .\!td\:0 {

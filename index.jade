@@ -703,6 +703,32 @@ html
           div(class="!tt:ca@p") .!tt:ca@p { text-transform: capitalize !important; }
           div(class="!tt:uc@p") .!tt:uc@p { text-transform: uppercase  !important; }
           div(class="!tt:lc@p") .!tt:lc@p { text-transform: lowercase  !important; }
+      section#text-rendering
+        h1 _text-rendering.less
+        section
+          h1 all media queries
+          div(class="!tr:0")   .!tr:0   { text-rendering: initial            !important; }
+          div(class="!tr:i")   .!tr:i   { text-rendering: inherit            !important; }
+          div(class="!tr:a")   .!tr:a   { text-rendering: auto               !important; }
+          div(class="!tr:s")   .!tr:s   { text-rendering: optimizeSpeed      !important; }
+          div(class="!tr:l")   .!tr:l   { text-rendering: optimizeLegibility !important; }
+          div(class="!tr:g")   .!tr:g   { text-rendering: geometricPrecision !important; }
+        section
+          h1 @media screen
+          div(class="!tr:0@s") .!tr:0@s { text-rendering: initial            !important; }
+          div(class="!tr:i@s") .!tr:i@s { text-rendering: inherit            !important; }
+          div(class="!tr:a@s") .!tr:a@s { text-rendering: auto               !important; }
+          div(class="!tr:s@s") .!tr:s@s { text-rendering: optimizeSpeed      !important; }
+          div(class="!tr:l@s") .!tr:l@s { text-rendering: optimizeLegibility !important; }
+          div(class="!tr:g@s") .!tr:g@s { text-rendering: geometricPrecision !important; }
+        section
+          h1 @media print
+          div(class="!tr:0@p") .!tr:0@p { text-rendering: initial            !important; }
+          div(class="!tr:i@p") .!tr:i@p { text-rendering: inherit            !important; }
+          div(class="!tr:a@p") .!tr:a@p { text-rendering: auto               !important; }
+          div(class="!tr:s@p") .!tr:s@p { text-rendering: optimizeSpeed      !important; }
+          div(class="!tr:l@p") .!tr:l@p { text-rendering: optimizeLegibility !important; }
+          div(class="!tr:g@p") .!tr:g@p { text-rendering: geometricPrecision !important; }
       section#text-decoration
         h1 _text-decoration.less
         section
