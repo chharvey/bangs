@@ -36,7 +36,7 @@ The syntax of a bang classame goes like this:
 !w    width                  !fv    font-variant                !ta    text-align
 !p    padding                !fw    font-weight                 !td    text-decoration
 !m    margin                 !fz    font-size                   !va    vertical-align
-!j    justify-content        !ff    font-family
+!j    justify-content        !ff    font-family                 !ws    white-space
 !o    order
                              #### Lists
 #### Theme                   !lst    list-style-type
@@ -99,6 +99,11 @@ a    all
 :ms    monospace         :ca    capitalize                                  :tt    text-top
 :fy    fantasy           :uc    uppercase                                   :sb    sub
 :cs    cursive           :lc    lowercase                                   :st    super
+
+:nw    nowrap  
+:pr    pre     
+:pw    pre-wrap
+:pl    pre-line
 
 ##### Lists
 :dz    decimal-leading-zero

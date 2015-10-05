@@ -2037,6 +2037,76 @@
   }
 }
 /*################################*\
+    _white-space.less
+\*################################*/
+.\!ws\:0 {
+  white-space: initial  !important;
+}
+.\!ws\:i {
+  white-space: inherit  !important;
+}
+.\!ws\:n {
+  white-space: normal   !important;
+}
+.\!ws\:nw {
+  white-space: nowrap   !important;
+}
+.\!ws\:pr {
+  white-space: pre      !important;
+}
+.\!ws\:pw {
+  white-space: pre-wrap !important;
+}
+.\!ws\:pl {
+  white-space: pre-line !important;
+}
+@media screen {
+  .\!ws\:0\@s {
+    white-space: initial  !important;
+  }
+  .\!ws\:i\@s {
+    white-space: inherit  !important;
+  }
+  .\!ws\:n\@s {
+    white-space: normal   !important;
+  }
+  .\!ws\:nw\@s {
+    white-space: nowrap   !important;
+  }
+  .\!ws\:pr\@s {
+    white-space: pre      !important;
+  }
+  .\!ws\:pw\@s {
+    white-space: pre-wrap !important;
+  }
+  .\!ws\:pl\@s {
+    white-space: pre-line !important;
+  }
+}
+@media print {
+  .\!ws\:0\@p {
+    white-space: initial  !important;
+  }
+  .\!ws\:i\@p {
+    white-space: inherit  !important;
+  }
+  .\!ws\:n\@p {
+    white-space: normal   !important;
+  }
+  .\!ws\:nw\@p {
+    white-space: nowrap   !important;
+  }
+  .\!ws\:pr\@p {
+    white-space: pre      !important;
+  }
+  .\!ws\:pw\@p {
+    white-space: pre-wrap !important;
+  }
+  .\!ws\:pl\@p {
+    white-space: pre-line !important;
+  }
+}
+/*################################*\
     _text-transform.less
 \*################################*/
 .\!tt\:0 {
