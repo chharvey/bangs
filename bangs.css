@@ -2394,6 +2394,49 @@
   }
 }
 /*################################*\
+    _color.less
+\*################################*/
+.\!c\:0 {
+  color: initial      !important;
+}
+.\!c\:i {
+  color: inherit      !important;
+}
+.\!c\:t {
+  color: transparent  !important;
+}
+.\!c\:c {
+  color: currentColor !important;
+}
+@media screen {
+  .\!c\:0\@s {
+    color: initial      !important;
+  }
+  .\!c\:i\@s {
+    color: inherit      !important;
+  }
+  .\!c\:t\@s {
+    color: transparent  !important;
+  }
+  .\!c\:c\@s {
+    color: currentColor !important;
+  }
+}
+@media print {
+  .\!c\:0\@p {
+    color: initial      !important;
+  }
+  .\!c\:i\@p {
+    color: inherit      !important;
+  }
+  .\!c\:t\@p {
+    color: transparent  !important;
+  }
+  .\!c\:c\@p {
+    color: currentColor !important;
+  }
+}
+/*################################*\
     _background-color.less
 \*################################*/
 .\!bgc\:0 {

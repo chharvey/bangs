@@ -40,8 +40,9 @@ The syntax of a bang classame goes like this:
 !o    order
                              #### Lists
 #### Theme                   !lst    list-style-type
-!bg     background           !lsp    list-style-position
+!c      color                !lsp    list-style-position
 !bgc    background-color     !lsi    list-style-image
+!bgi    background-image     
 ```
 
 #### Qualifiers
