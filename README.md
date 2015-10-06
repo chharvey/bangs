@@ -31,19 +31,24 @@ The syntax of a bang classame goes like this:
 ### Properties
 
 ```
-#### Structure               #### Font                          #### Text
-!d    display                !fs    font-style                  !tt    text-transform
-!w    width                  !fv    font-variant                !ta    text-align
-!p    padding                !fw    font-weight                 !td    text-decoration
-!m    margin                 !fz    font-size                   !va    vertical-align
-!j    justify-content        !ff    font-family                 !ws    white-space
-!o    order                                                     !tr    text-rendering
-                             #### Lists
-#### Theme                   !lst    list-style-type
-!c      color                !lsp    list-style-position
-!bgc    background-color     !lsi    list-style-image
-!bgi    background-image     
-!v      visibility
+#### Layout                   #### Font                          #### Text Structure
+!d     display                 !fs    font-style                  !ta     text-align
+!w     width                   !fv    font-variant                !ws     white-space
+!p     padding                 !fw    font-weight                 !pbb    page-break-before
+!m     margin                  !fz    font-size                   !pba    page-break-after
+!ps    position                !ff    font-family
+!f     float
+!va    vertical-align
+
+#### Flexbox
+!j    justify-content
+!o    order
+
+#### Text Style               #### List Style                    #### Cosmetics
+!tt    text-transform         !lst    list-style-type            !c      color
+!tr    text-rendering         !lsp    list-style-position        !bgc    background-color
+!td    text-decoration        !lsi    list-style-image           !bgi    background-image
+                                                                 !v      visibility
 ```
 
 #### Qualifiers
@@ -66,46 +71,53 @@ a    all
 :i    inherit
 :n    none, normal
 
-#### Display
-:bk    block               :tb    table
-:il    inline              :tc    table-cell
-:ib    inline-block        :fx    flex
+#### Display                #### Width
+:bk    block                :1o1    100%        :1o5    20%
+:il    inline               :1o2    50%         :2o5    40%
+:ib    inline-block         :1o3    33%         :3o5    60%
+:tb    table                :2o3    66%         :4o5    80%
+:tc    table-cell           :1o4    25%         :1o6    16%
+:fx    flex                 :3o4    75%         :5o6    83%
 
-#### Width
-:1o1    100%        :1o5    20%
-:1o2    50%         :2o5    40%
-:1o3    33%         :3o5    60%
-:2o3    66%         :4o5    80%
-:1o4    25%         :1o6    16%
-:3o4    75%         :5o6    83%
 
-#### Padding, Margin
-:h    0.5rem
-:1    1rem
-:2    2rem
-:4    4rem
+#### Padding, Margin        #### `justify-content`
+:h    0.5rem                :bt    space-between
+:1    1rem                  :ad    space-around
+:2    2rem                  :cr    center
+:4    4rem                  :st    flex-start
+                            :ed    flex-end
 
-#### `justify-content`
-:bt    space-between
-:ad    space-around
-:cr    center
-:st    flex-start
-:ed    flex-end
-
-#### Text
-:t     italic            :lt    left              :u    underline           :a     baseline
-:s     small-caps        :rt    right             :o    overline            :b     bottom
-:b     bold              :cr    center            :s    line-through        :m     middle
+#### Font, Text
+:t     italic            :lt    left                                        :a     baseline
+:s     small-caps        :rt    right                                       :b     bottom
+:b     bold              :cr    center                                      :m     middle
 :ss    sans-serif        :jf    justify                                     :t     top
 :sf    serif                                                                :tb    text-bottom
-:ms    monospace         :ca    capitalize                                  :tt    text-top
-:fy    fantasy           :uc    uppercase                                   :sb    sub
-:cs    cursive           :lc    lowercase                                   :st    super
+:ms    monospace         :nw    nowrap                                                     :tt    text-top
+:fy    fantasy           :pr    pre                                                        :sb    sub
+:cs    cursive           :pw    pre-wrap                                                   :st    super
+x                        :pl    pre-line                                                          
 
-:nw    nowrap  
-:pr    pre     
-:pw    pre-wrap
-:pl    pre-line
+
+
+
+
+
+
+:ca    capitalize
+:uc    uppercase
+:lc    lowercase
+
+:u    underline   
+:o    overline    
+:s    line-through
+
+
+
+
+
+
+
 
 ##### Lists
 :dz    decimal-leading-zero
@@ -123,7 +135,7 @@ a    all
 :2    200        :5    500        :8    800
 :3    300        :6    600        :9    900
 
-#### Theme
+#### Cosmetics
 
 ##### Colors
 :t    transparent
