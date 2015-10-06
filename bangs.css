@@ -713,7 +713,13 @@
     _margin.less
 \*################################*/
 .\!ml\:0 {
-  margin-left: 0      !important;
+  margin-left: initial !important;
+}
+.\!ml\:i {
+  margin-left: inherit !important;
+}
+.\!ml\:a {
+  margin-left: auto    !important;
 }
 .\!ml\:h {
   margin-left: 0.5rem !important;
@@ -728,7 +734,13 @@
   margin-left: 4rem   !important;
 }
 .\!mr\:0 {
-  margin-right: 0      !important;
+  margin-right: initial !important;
+}
+.\!mr\:i {
+  margin-right: inherit !important;
+}
+.\!mr\:a {
+  margin-right: auto    !important;
 }
 .\!mr\:h {
   margin-right: 0.5rem !important;
@@ -743,7 +755,13 @@
   margin-right: 4rem   !important;
 }
 .\!mt\:0 {
-  margin-top: 0      !important;
+  margin-top: initial !important;
+}
+.\!mt\:i {
+  margin-top: inherit !important;
+}
+.\!mt\:a {
+  margin-top: auto    !important;
 }
 .\!mt\:h {
   margin-top: 0.5rem !important;
@@ -758,7 +776,13 @@
   margin-top: 4rem   !important;
 }
 .\!mb\:0 {
-  margin-bottom: 0      !important;
+  margin-bottom: initial !important;
+}
+.\!mb\:i {
+  margin-bottom: inherit !important;
+}
+.\!mb\:a {
+  margin-bottom: auto    !important;
 }
 .\!mb\:h {
   margin-bottom: 0.5rem !important;
@@ -773,8 +797,16 @@
   margin-bottom: 4rem   !important;
 }
 .\!mx\:0 {
-  margin-left: 0      !important;
-  margin-right: 0      !important;
+  margin-left: initial !important;
+  margin-right: initial !important;
+}
+.\!mx\:i {
+  margin-left: inherit !important;
+  margin-right: inherit !important;
+}
+.\!mx\:a {
+  margin-left: auto    !important;
+  margin-right: auto    !important;
 }
 .\!mx\:h {
   margin-left: 0.5rem !important;
@@ -793,8 +825,16 @@
   margin-right: 4rem   !important;
 }
 .\!my\:0 {
-  margin-top: 0      !important;
-  margin-bottom: 0      !important;
+  margin-top: initial !important;
+  margin-bottom: initial !important;
+}
+.\!my\:i {
+  margin-top: inherit !important;
+  margin-bottom: inherit !important;
+}
+.\!my\:a {
+  margin-top: auto    !important;
+  margin-bottom: auto    !important;
 }
 .\!my\:h {
   margin-top: 0.5rem !important;
@@ -813,10 +853,22 @@
   margin-bottom: 4rem   !important;
 }
 .\!ma\:0 {
-  margin-left: 0      !important;
-  margin-right: 0      !important;
-  margin-top: 0      !important;
-  margin-bottom: 0      !important;
+  margin-left: initial !important;
+  margin-right: initial !important;
+  margin-top: initial !important;
+  margin-bottom: initial !important;
+}
+.\!ma\:i {
+  margin-left: inherit !important;
+  margin-right: inherit !important;
+  margin-top: inherit !important;
+  margin-bottom: inherit !important;
+}
+.\!ma\:a {
+  margin-left: auto    !important;
+  margin-right: auto    !important;
+  margin-top: auto    !important;
+  margin-bottom: auto    !important;
 }
 .\!ma\:h {
   margin-left: 0.5rem !important;
@@ -844,7 +896,13 @@
 }
 @media screen {
   .\!ml\:0\@s {
-    margin-left: 0      !important;
+    margin-left: initial !important;
+  }
+  .\!ml\:i\@s {
+    margin-left: inherit !important;
+  }
+  .\!ml\:a\@s {
+    margin-left: auto    !important;
   }
   .\!ml\:h\@s {
     margin-left: 0.5rem !important;
@@ -859,7 +917,13 @@
     margin-left: 4rem   !important;
   }
   .\!mr\:0\@s {
-    margin-right: 0      !important;
+    margin-right: initial !important;
+  }
+  .\!mr\:i\@s {
+    margin-right: inherit !important;
+  }
+  .\!mr\:a\@s {
+    margin-right: auto    !important;
   }
   .\!mr\:h\@s {
     margin-right: 0.5rem !important;
@@ -874,7 +938,13 @@
     margin-right: 4rem   !important;
   }
   .\!mt\:0\@s {
-    margin-top: 0      !important;
+    margin-top: initial !important;
+  }
+  .\!mt\:i\@s {
+    margin-top: inherit !important;
+  }
+  .\!mt\:a\@s {
+    margin-top: auto    !important;
   }
   .\!mt\:h\@s {
     margin-top: 0.5rem !important;
@@ -889,7 +959,13 @@
     margin-top: 4rem   !important;
   }
   .\!mb\:0\@s {
-    margin-bottom: 0      !important;
+    margin-bottom: initial !important;
+  }
+  .\!mb\:i\@s {
+    margin-bottom: inherit !important;
+  }
+  .\!mb\:a\@s {
+    margin-bottom: auto    !important;
   }
   .\!mb\:h\@s {
     margin-bottom: 0.5rem !important;
@@ -904,8 +980,16 @@
     margin-bottom: 4rem   !important;
   }
   .\!mx\:0\@s {
-    margin-left: 0      !important;
-    margin-right: 0      !important;
+    margin-left: initial !important;
+    margin-right: initial !important;
+  }
+  .\!mx\:i\@s {
+    margin-left: inherit !important;
+    margin-right: inherit !important;
+  }
+  .\!mx\:a\@s {
+    margin-left: auto    !important;
+    margin-right: auto    !important;
   }
   .\!mx\:h\@s {
     margin-left: 0.5rem !important;
@@ -924,8 +1008,16 @@
     margin-right: 4rem   !important;
   }
   .\!my\:0\@s {
-    margin-top: 0      !important;
-    margin-bottom: 0      !important;
+    margin-top: initial !important;
+    margin-bottom: initial !important;
+  }
+  .\!my\:i\@s {
+    margin-top: inherit !important;
+    margin-bottom: inherit !important;
+  }
+  .\!my\:a\@s {
+    margin-top: auto    !important;
+    margin-bottom: auto    !important;
   }
   .\!my\:h\@s {
     margin-top: 0.5rem !important;
@@ -944,10 +1036,22 @@
     margin-bottom: 4rem   !important;
   }
   .\!ma\:0\@s {
-    margin-left: 0      !important;
-    margin-right: 0      !important;
-    margin-top: 0      !important;
-    margin-bottom: 0      !important;
+    margin-left: initial !important;
+    margin-right: initial !important;
+    margin-top: initial !important;
+    margin-bottom: initial !important;
+  }
+  .\!ma\:i\@s {
+    margin-left: inherit !important;
+    margin-right: inherit !important;
+    margin-top: inherit !important;
+    margin-bottom: inherit !important;
+  }
+  .\!ma\:a\@s {
+    margin-left: auto    !important;
+    margin-right: auto    !important;
+    margin-top: auto    !important;
+    margin-bottom: auto    !important;
   }
   .\!ma\:h\@s {
     margin-left: 0.5rem !important;
@@ -976,7 +1080,13 @@
 }
 @media print {
   .\!ml\:0\@p {
-    margin-left: 0      !important;
+    margin-left: initial !important;
+  }
+  .\!ml\:i\@p {
+    margin-left: inherit !important;
+  }
+  .\!ml\:a\@p {
+    margin-left: auto    !important;
   }
   .\!ml\:h\@p {
     margin-left: 0.5rem !important;
@@ -991,7 +1101,13 @@
     margin-left: 4rem   !important;
   }
   .\!mr\:0\@p {
-    margin-right: 0      !important;
+    margin-right: initial !important;
+  }
+  .\!mr\:i\@p {
+    margin-right: inherit !important;
+  }
+  .\!mr\:a\@p {
+    margin-right: auto    !important;
   }
   .\!mr\:h\@p {
     margin-right: 0.5rem !important;
@@ -1006,7 +1122,13 @@
     margin-right: 4rem   !important;
   }
   .\!mt\:0\@p {
-    margin-top: 0      !important;
+    margin-top: initial !important;
+  }
+  .\!mt\:i\@p {
+    margin-top: inherit !important;
+  }
+  .\!mt\:a\@p {
+    margin-top: auto    !important;
   }
   .\!mt\:h\@p {
     margin-top: 0.5rem !important;
@@ -1021,7 +1143,13 @@
     margin-top: 4rem   !important;
   }
   .\!mb\:0\@p {
-    margin-bottom: 0      !important;
+    margin-bottom: initial !important;
+  }
+  .\!mb\:i\@p {
+    margin-bottom: inherit !important;
+  }
+  .\!mb\:a\@p {
+    margin-bottom: auto    !important;
   }
   .\!mb\:h\@p {
     margin-bottom: 0.5rem !important;
@@ -1036,8 +1164,16 @@
     margin-bottom: 4rem   !important;
   }
   .\!mx\:0\@p {
-    margin-left: 0      !important;
-    margin-right: 0      !important;
+    margin-left: initial !important;
+    margin-right: initial !important;
+  }
+  .\!mx\:i\@p {
+    margin-left: inherit !important;
+    margin-right: inherit !important;
+  }
+  .\!mx\:a\@p {
+    margin-left: auto    !important;
+    margin-right: auto    !important;
   }
   .\!mx\:h\@p {
     margin-left: 0.5rem !important;
@@ -1056,8 +1192,16 @@
     margin-right: 4rem   !important;
   }
   .\!my\:0\@p {
-    margin-top: 0      !important;
-    margin-bottom: 0      !important;
+    margin-top: initial !important;
+    margin-bottom: initial !important;
+  }
+  .\!my\:i\@p {
+    margin-top: inherit !important;
+    margin-bottom: inherit !important;
+  }
+  .\!my\:a\@p {
+    margin-top: auto    !important;
+    margin-bottom: auto    !important;
   }
   .\!my\:h\@p {
     margin-top: 0.5rem !important;
@@ -1076,10 +1220,22 @@
     margin-bottom: 4rem   !important;
   }
   .\!ma\:0\@p {
-    margin-left: 0      !important;
-    margin-right: 0      !important;
-    margin-top: 0      !important;
-    margin-bottom: 0      !important;
+    margin-left: initial !important;
+    margin-right: initial !important;
+    margin-top: initial !important;
+    margin-bottom: initial !important;
+  }
+  .\!ma\:i\@p {
+    margin-left: inherit !important;
+    margin-right: inherit !important;
+    margin-top: inherit !important;
+    margin-bottom: inherit !important;
+  }
+  .\!ma\:a\@p {
+    margin-left: auto    !important;
+    margin-right: auto    !important;
+    margin-top: auto    !important;
+    margin-bottom: auto    !important;
   }
   .\!ma\:h\@p {
     margin-left: 0.5rem !important;
