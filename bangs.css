@@ -83,6 +83,18 @@
 /*################################*\
     _width.less
 \*################################*/
+.\!w\:0 {
+  width: initial !important;
+}
+.\!w\:i {
+  width: inherit !important;
+}
+.\!w\:a {
+  width: auto    !important;
+}
+.\!w\:0o1 {
+  width: 0    !important;
+}
 .\!w\:1o1 {
   width: 100% !important;
 }
@@ -147,6 +159,18 @@
   width: 100% !important;
 }
 @media screen {
+  .\!w\:0\@s {
+    width: initial !important;
+  }
+  .\!w\:i\@s {
+    width: inherit !important;
+  }
+  .\!w\:a\@s {
+    width: auto    !important;
+  }
+  .\!w\:0o1\@s {
+    width: 0    !important;
+  }
   .\!w\:1o1\@s {
     width: 100% !important;
   }
@@ -212,6 +236,18 @@
   }
 }
 @media print {
+  .\!w\:0\@p {
+    width: initial !important;
+  }
+  .\!w\:i\@p {
+    width: inherit !important;
+  }
+  .\!w\:a\@p {
+    width: auto    !important;
+  }
+  .\!w\:0o1\@p {
+    width: 0    !important;
+  }
   .\!w\:1o1\@p {
     width: 100% !important;
   }
