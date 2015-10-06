@@ -2691,43 +2691,43 @@
 /*################################*\
     _background-color.less
 \*################################*/
-.\!bgc\:0 {
+.\!bc\:0 {
   background-color: initial      !important;
 }
-.\!bgc\:i {
+.\!bc\:i {
   background-color: inherit      !important;
 }
-.\!bgc\:t {
+.\!bc\:t {
   background-color: transparent  !important;
 }
-.\!bgc\:c {
+.\!bc\:c {
   background-color: currentColor !important;
 }
 @media screen {
-  .\!bgc\:0\@s {
+  .\!bc\:0\@s {
     background-color: initial      !important;
   }
-  .\!bgc\:i\@s {
+  .\!bc\:i\@s {
     background-color: inherit      !important;
   }
-  .\!bgc\:t\@s {
+  .\!bc\:t\@s {
     background-color: transparent  !important;
   }
-  .\!bgc\:c\@s {
+  .\!bc\:c\@s {
     background-color: currentColor !important;
   }
 }
 @media print {
-  .\!bgc\:0\@p {
+  .\!bc\:0\@p {
     background-color: initial      !important;
   }
-  .\!bgc\:i\@p {
+  .\!bc\:i\@p {
     background-color: inherit      !important;
   }
-  .\!bgc\:t\@p {
+  .\!bc\:t\@p {
     background-color: transparent  !important;
   }
-  .\!bgc\:c\@p {
+  .\!bc\:c\@p {
     background-color: currentColor !important;
   }
 }
