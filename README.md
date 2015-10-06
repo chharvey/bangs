@@ -16,7 +16,7 @@ Inspired by [Atoms](http://acss.io/), [Tachyons](http://tachyons.io/), [Graviton
 <p class="!ff:ss@p">fast forward slightly slower please</p>
 ```
 
-## Legend
+## Syntax
 
 The syntax of a bang classame goes like this:
 ```
@@ -28,119 +28,15 @@ The syntax of a bang classame goes like this:
 3. Then comes the colon (escaped in CSS), followed by the initials for the value.
 4. Finally, optionally, the at-sign (escaped in CSS) and the initials for the media query.
 
-### Properties
+### Constants
+In the classname syntax, there exist certain constants to promote predicability.
+For all properties,
 
-```
-#### Structure               #### Font                          #### Text
-!d    display                !fs    font-style                  !tt    text-transform
-!w    width                  !fv    font-variant                !ta    text-align
-!p    padding                !fw    font-weight                 !td    text-decoration
-!m    margin                 !fz    font-size                   !va    vertical-align
-!j    justify-content        !ff    font-family                 !ws    white-space
-!o    order                                                     !tr    text-rendering
-                             #### Lists
-#### Theme                   !lst    list-style-type
-!c      color                !lsp    list-style-position
-!bgc    background-color     !lsi    list-style-image
-!bgi    background-image     
-!v      visibility
-```
-
-#### Qualifiers
-
-```
-l    left
-r    right
-t    top
-b    bottom
-x    horizontal
-v    vertical
-a    all
-```
-
-### Values
-
-```
-#### All Properties
-:0    initial, 0
-:i    inherit
-:n    none, normal
-
-#### Display
-:bk    block               :tb    table
-:il    inline              :tc    table-cell
-:ib    inline-block        :fx    flex
-
-#### Width
-:1o1    100%        :1o5    20%
-:1o2    50%         :2o5    40%
-:1o3    33%         :3o5    60%
-:2o3    66%         :4o5    80%
-:1o4    25%         :1o6    16%
-:3o4    75%         :5o6    83%
-
-#### Padding, Margin
-:h    0.5rem
-:1    1rem
-:2    2rem
-:4    4rem
-
-#### `justify-content`
-:bt    space-between
-:ad    space-around
-:cr    center
-:st    flex-start
-:ed    flex-end
-
-#### Text
-:t     italic            :lt    left              :u    underline           :a     baseline
-:s     small-caps        :rt    right             :o    overline            :b     bottom
-:b     bold              :cr    center            :s    line-through        :m     middle
-:ss    sans-serif        :jf    justify                                     :t     top
-:sf    serif                                                                :tb    text-bottom
-:ms    monospace         :ca    capitalize                                  :tt    text-top
-:fy    fantasy           :uc    uppercase                                   :sb    sub
-:cs    cursive           :lc    lowercase                                   :st    super
-
-:nw    nowrap  
-:pr    pre     
-:pw    pre-wrap
-:pl    pre-line
-
-##### Lists
-:dz    decimal-leading-zero
-:ur    upper-roman
-:ua    upper-alpha
-:dc    decimal
-:la    lower-alpha
-:lr    lower-roman
-:lg    lower-greek
-:os    outside
-:is    inside
-
-##### `font-weight`
-:1    100        :4    400        :7    700
-:2    200        :5    500        :8    800
-:3    300        :6    600        :9    900
-
-#### Theme
-
-##### Colors
-:t    transparent
-:c    currentColor
-
-##### Visibility
-:v    visible
-:h    hidden
-:c    collapse
-```
-
-### Media Queries
-
-```
-@s    screen
-@p    print
-```
+- a value of `:i` stands for `inherit`
+- a value of `:0` stands for `initial` or `0`
+  (in the case of a conflict, it stands for `initial`, and `0` is assigned another abbreviation)
+- a value of `:n`, if it exists, stands for `normal` or `none`
+- a value of `:a`, if it exists, stands for `auto`
 
 ## Usage
 

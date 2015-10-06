@@ -1062,6 +1062,103 @@
   }
 }
 /*################################*\
+    _vertical-align.less
+\*################################*/
+.\!va\:0 {
+  vertical-align: initial     !important;
+}
+.\!va\:i {
+  vertical-align: inherit     !important;
+}
+.\!va\:a {
+  vertical-align: baseline    !important;
+}
+.\!va\:b {
+  vertical-align: bottom      !important;
+}
+.\!va\:m {
+  vertical-align: middle      !important;
+}
+.\!va\:t {
+  vertical-align: top         !important;
+}
+.\!va\:tb {
+  vertical-align: text-bottom !important;
+}
+.\!va\:tt {
+  vertical-align: text-top !important;
+}
+.\!va\:sb {
+  vertical-align: sub         !important;
+}
+.\!va\:st {
+  vertical-align: super       !important;
+}
+@media screen {
+  .\!va\:0\@s {
+    vertical-align: initial     !important;
+  }
+  .\!va\:i\@s {
+    vertical-align: inherit     !important;
+  }
+  .\!va\:a\@s {
+    vertical-align: baseline    !important;
+  }
+  .\!va\:b\@s {
+    vertical-align: bottom      !important;
+  }
+  .\!va\:m\@s {
+    vertical-align: middle      !important;
+  }
+  .\!va\:t\@s {
+    vertical-align: top         !important;
+  }
+  .\!va\:tb\@s {
+    vertical-align: text-bottom !important;
+  }
+  .\!va\:tt\@s {
+    vertical-align: text-top !important;
+  }
+  .\!va\:sb\@s {
+    vertical-align: sub         !important;
+  }
+  .\!va\:st\@s {
+    vertical-align: super       !important;
+  }
+}
+@media print {
+  .\!va\:0\@p {
+    vertical-align: initial     !important;
+  }
+  .\!va\:i\@p {
+    vertical-align: inherit     !important;
+  }
+  .\!va\:a\@p {
+    vertical-align: baseline    !important;
+  }
+  .\!va\:b\@p {
+    vertical-align: bottom      !important;
+  }
+  .\!va\:m\@p {
+    vertical-align: middle      !important;
+  }
+  .\!va\:t\@p {
+    vertical-align: top         !important;
+  }
+  .\!va\:tb\@p {
+    vertical-align: text-bottom !important;
+  }
+  .\!va\:tt\@p {
+    vertical-align: text-top !important;
+  }
+  .\!va\:sb\@p {
+    vertical-align: sub         !important;
+  }
+  .\!va\:st\@p {
+    vertical-align: super       !important;
+  }
+}
+/*################################*\
     _justify-content.less
 \*################################*/
 .\!j\:bt {
@@ -1940,103 +2037,6 @@
   }
 }
 /*################################*\
-    _vertical-align.less
-\*################################*/
-.\!va\:0 {
-  vertical-align: initial     !important;
-}
-.\!va\:i {
-  vertical-align: inherit     !important;
-}
-.\!va\:a {
-  vertical-align: baseline    !important;
-}
-.\!va\:b {
-  vertical-align: bottom      !important;
-}
-.\!va\:m {
-  vertical-align: middle      !important;
-}
-.\!va\:t {
-  vertical-align: top         !important;
-}
-.\!va\:tb {
-  vertical-align: text-bottom !important;
-}
-.\!va\:tt {
-  vertical-align: text-top !important;
-}
-.\!va\:sb {
-  vertical-align: sub         !important;
-}
-.\!va\:st {
-  vertical-align: super       !important;
-}
-@media screen {
-  .\!va\:0\@s {
-    vertical-align: initial     !important;
-  }
-  .\!va\:i\@s {
-    vertical-align: inherit     !important;
-  }
-  .\!va\:a\@s {
-    vertical-align: baseline    !important;
-  }
-  .\!va\:b\@s {
-    vertical-align: bottom      !important;
-  }
-  .\!va\:m\@s {
-    vertical-align: middle      !important;
-  }
-  .\!va\:t\@s {
-    vertical-align: top         !important;
-  }
-  .\!va\:tb\@s {
-    vertical-align: text-bottom !important;
-  }
-  .\!va\:tt\@s {
-    vertical-align: text-top !important;
-  }
-  .\!va\:sb\@s {
-    vertical-align: sub         !important;
-  }
-  .\!va\:st\@s {
-    vertical-align: super       !important;
-  }
-}
-@media print {
-  .\!va\:0\@p {
-    vertical-align: initial     !important;
-  }
-  .\!va\:i\@p {
-    vertical-align: inherit     !important;
-  }
-  .\!va\:a\@p {
-    vertical-align: baseline    !important;
-  }
-  .\!va\:b\@p {
-    vertical-align: bottom      !important;
-  }
-  .\!va\:m\@p {
-    vertical-align: middle      !important;
-  }
-  .\!va\:t\@p {
-    vertical-align: top         !important;
-  }
-  .\!va\:tb\@p {
-    vertical-align: text-bottom !important;
-  }
-  .\!va\:tt\@p {
-    vertical-align: text-top !important;
-  }
-  .\!va\:sb\@p {
-    vertical-align: sub         !important;
-  }
-  .\!va\:st\@p {
-    vertical-align: super       !important;
-  }
-}
-/*################################*\
     _white-space.less
 \*################################*/
 .\!ws\:0 {
@@ -2105,6 +2105,39 @@
   .\!ws\:pl\@p {
     white-space: pre-line !important;
   }
+}
+/*################################*\
+    _page-break.less
+\*################################*/
+.\!pbb\:0 {
+  page-break-before: initial !important;
+}
+.\!pbb\:i {
+  page-break-before: inherit !important;
+}
+.\!pbb\:a {
+  page-break-before: auto    !important;
+}
+.\!pbb\:t {
+  page-break-before: always  !important;
+}
+.\!pbb\:f {
+  page-break-before: avoid   !important;
+}
+.\!pba\:0 {
+  page-break-after: initial !important;
+}
+.\!pba\:i {
+  page-break-after: inherit !important;
+}
+.\!pba\:a {
+  page-break-after: auto    !important;
+}
+.\!pba\:t {
+  page-break-after: always  !important;
+}
+.\!pba\:f {
+  page-break-after: avoid   !important;
 }
 /*################################*\
     _text-transform.less
@@ -2288,39 +2321,6 @@
   .\!td\:s\@p {
     text-decoration: line-through !important;
   }
-}
-/*################################*\
-    _page-break.less
-\*################################*/
-.\!pbb\:0 {
-  page-break-before: initial !important;
-}
-.\!pbb\:i {
-  page-break-before: inherit !important;
-}
-.\!pbb\:a {
-  page-break-before: auto    !important;
-}
-.\!pbb\:t {
-  page-break-before: always  !important;
-}
-.\!pbb\:f {
-  page-break-before: avoid   !important;
-}
-.\!pba\:0 {
-  page-break-after: initial !important;
-}
-.\!pba\:i {
-  page-break-after: inherit !important;
-}
-.\!pba\:a {
-  page-break-after: auto    !important;
-}
-.\!pba\:t {
-  page-break-after: always  !important;
-}
-.\!pba\:f {
-  page-break-after: avoid   !important;
 }
 /*################################*\
     _list-style-type.less
