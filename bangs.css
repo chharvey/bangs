@@ -2734,34 +2734,34 @@
 /*################################*\
     _background-image.less
 \*################################*/
-.\!bgi\:0 {
+.\!bi\:0 {
   background-image: initial !important;
 }
-.\!bgi\:i {
+.\!bi\:i {
   background-image: inherit !important;
 }
-.\!bgi\:n {
+.\!bi\:n {
   background-image: none    !important;
 }
 @media screen {
-  .\!bgi\:0\@s {
+  .\!bi\:0\@s {
     background-image: initial !important;
   }
-  .\!bgi\:i\@s {
+  .\!bi\:i\@s {
     background-image: inherit !important;
   }
-  .\!bgi\:n\@s {
+  .\!bi\:n\@s {
     background-image: none    !important;
   }
 }
 @media print {
-  .\!bgi\:0\@p {
+  .\!bi\:0\@p {
     background-image: initial !important;
   }
-  .\!bgi\:i\@p {
+  .\!bi\:i\@p {
     background-image: inherit !important;
   }
-  .\!bgi\:n\@p {
+  .\!bi\:n\@p {
     background-image: none    !important;
   }
 }
