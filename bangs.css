@@ -2142,16 +2142,16 @@
 .\!ta\:i {
   text-align: inherit !important;
 }
-.\!ta\:lt {
+.\!ta\:l {
   text-align: left    !important;
 }
-.\!ta\:rt {
+.\!ta\:r {
   text-align: right   !important;
 }
-.\!ta\:cr {
+.\!ta\:c {
   text-align: center  !important;
 }
-.\!ta\:jf {
+.\!ta\:j {
   text-align: justify !important;
 }
 @media screen {
@@ -2161,16 +2161,16 @@
   .\!ta\:i\@s {
     text-align: inherit !important;
   }
-  .\!ta\:lt\@s {
+  .\!ta\:l\@s {
     text-align: left    !important;
   }
-  .\!ta\:rt\@s {
+  .\!ta\:r\@s {
     text-align: right   !important;
   }
-  .\!ta\:cr\@s {
+  .\!ta\:c\@s {
     text-align: center  !important;
   }
-  .\!ta\:jf\@s {
+  .\!ta\:j\@s {
     text-align: justify !important;
   }
 }
@@ -2181,16 +2181,16 @@
   .\!ta\:i\@p {
     text-align: inherit !important;
   }
-  .\!ta\:lt\@p {
+  .\!ta\:l\@p {
     text-align: left    !important;
   }
-  .\!ta\:rt\@p {
+  .\!ta\:r\@p {
     text-align: right   !important;
   }
-  .\!ta\:cr\@p {
+  .\!ta\:c\@p {
     text-align: center  !important;
   }
-  .\!ta\:jf\@p {
+  .\!ta\:j\@p {
     text-align: justify !important;
   }
 }
