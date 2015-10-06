@@ -2309,13 +2309,13 @@
 .\!tt\:n {
   text-transform: none       !important;
 }
-.\!tt\:ca {
+.\!tt\:c {
   text-transform: capitalize !important;
 }
-.\!tt\:uc {
+.\!tt\:u {
   text-transform: uppercase  !important;
 }
-.\!tt\:lc {
+.\!tt\:l {
   text-transform: lowercase  !important;
 }
 @media screen {
@@ -2328,13 +2328,13 @@
   .\!tt\:n\@s {
     text-transform: none       !important;
   }
-  .\!tt\:ca\@s {
+  .\!tt\:c\@s {
     text-transform: capitalize !important;
   }
-  .\!tt\:uc\@s {
+  .\!tt\:u\@s {
     text-transform: uppercase  !important;
   }
-  .\!tt\:lc\@s {
+  .\!tt\:l\@s {
     text-transform: lowercase  !important;
   }
 }
@@ -2348,13 +2348,13 @@
   .\!tt\:n\@p {
     text-transform: none       !important;
   }
-  .\!tt\:ca\@p {
+  .\!tt\:c\@p {
     text-transform: capitalize !important;
   }
-  .\!tt\:uc\@p {
+  .\!tt\:u\@p {
     text-transform: uppercase  !important;
   }
-  .\!tt\:lc\@p {
+  .\!tt\:l\@p {
     text-transform: lowercase  !important;
   }
 }
