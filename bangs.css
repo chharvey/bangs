@@ -316,7 +316,10 @@
     _padding.less
 \*################################*/
 .\!pl\:0 {
-  padding-left: 0      !important;
+  padding-left: initial !important;
+}
+.\!pl\:i {
+  padding-left: inherit !important;
 }
 .\!pl\:h {
   padding-left: 0.5rem !important;
@@ -331,7 +334,10 @@
   padding-left: 4rem   !important;
 }
 .\!pr\:0 {
-  padding-right: 0      !important;
+  padding-right: initial !important;
+}
+.\!pr\:i {
+  padding-right: inherit !important;
 }
 .\!pr\:h {
   padding-right: 0.5rem !important;
@@ -346,7 +352,10 @@
   padding-right: 4rem   !important;
 }
 .\!pt\:0 {
-  padding-top: 0      !important;
+  padding-top: initial !important;
+}
+.\!pt\:i {
+  padding-top: inherit !important;
 }
 .\!pt\:h {
   padding-top: 0.5rem !important;
@@ -361,7 +370,10 @@
   padding-top: 4rem   !important;
 }
 .\!pb\:0 {
-  padding-bottom: 0      !important;
+  padding-bottom: initial !important;
+}
+.\!pb\:i {
+  padding-bottom: inherit !important;
 }
 .\!pb\:h {
   padding-bottom: 0.5rem !important;
@@ -376,8 +388,12 @@
   padding-bottom: 4rem   !important;
 }
 .\!px\:0 {
-  padding-left: 0      !important;
-  padding-right: 0      !important;
+  padding-left: initial !important;
+  padding-right: initial !important;
+}
+.\!px\:i {
+  padding-left: inherit !important;
+  padding-right: inherit !important;
 }
 .\!px\:h {
   padding-left: 0.5rem !important;
@@ -396,8 +412,12 @@
   padding-right: 4rem   !important;
 }
 .\!py\:0 {
-  padding-top: 0      !important;
-  padding-bottom: 0      !important;
+  padding-top: initial !important;
+  padding-bottom: initial !important;
+}
+.\!py\:i {
+  padding-top: inherit !important;
+  padding-bottom: inherit !important;
 }
 .\!py\:h {
   padding-top: 0.5rem !important;
@@ -416,10 +436,16 @@
   padding-bottom: 4rem   !important;
 }
 .\!pa\:0 {
-  padding-left: 0      !important;
-  padding-right: 0      !important;
-  padding-top: 0      !important;
-  padding-bottom: 0      !important;
+  padding-left: initial !important;
+  padding-right: initial !important;
+  padding-top: initial !important;
+  padding-bottom: initial !important;
+}
+.\!pa\:i {
+  padding-left: inherit !important;
+  padding-right: inherit !important;
+  padding-top: inherit !important;
+  padding-bottom: inherit !important;
 }
 .\!pa\:h {
   padding-left: 0.5rem !important;
@@ -447,7 +473,10 @@
 }
 @media screen {
   .\!pl\:0\@s {
-    padding-left: 0      !important;
+    padding-left: initial !important;
+  }
+  .\!pl\:i\@s {
+    padding-left: inherit !important;
   }
   .\!pl\:h\@s {
     padding-left: 0.5rem !important;
@@ -462,7 +491,10 @@
     padding-left: 4rem   !important;
   }
   .\!pr\:0\@s {
-    padding-right: 0      !important;
+    padding-right: initial !important;
+  }
+  .\!pr\:i\@s {
+    padding-right: inherit !important;
   }
   .\!pr\:h\@s {
     padding-right: 0.5rem !important;
@@ -477,7 +509,10 @@
     padding-right: 4rem   !important;
   }
   .\!pt\:0\@s {
-    padding-top: 0      !important;
+    padding-top: initial !important;
+  }
+  .\!pt\:i\@s {
+    padding-top: inherit !important;
   }
   .\!pt\:h\@s {
     padding-top: 0.5rem !important;
@@ -492,7 +527,10 @@
     padding-top: 4rem   !important;
   }
   .\!pb\:0\@s {
-    padding-bottom: 0      !important;
+    padding-bottom: initial !important;
+  }
+  .\!pb\:i\@s {
+    padding-bottom: inherit !important;
   }
   .\!pb\:h\@s {
     padding-bottom: 0.5rem !important;
@@ -507,8 +545,12 @@
     padding-bottom: 4rem   !important;
   }
   .\!px\:0\@s {
-    padding-left: 0      !important;
-    padding-right: 0      !important;
+    padding-left: initial !important;
+    padding-right: initial !important;
+  }
+  .\!px\:i\@s {
+    padding-left: inherit !important;
+    padding-right: inherit !important;
   }
   .\!px\:h\@s {
     padding-left: 0.5rem !important;
@@ -527,8 +569,12 @@
     padding-right: 4rem   !important;
   }
   .\!py\:0\@s {
-    padding-top: 0      !important;
-    padding-bottom: 0      !important;
+    padding-top: initial !important;
+    padding-bottom: initial !important;
+  }
+  .\!py\:i\@s {
+    padding-top: inherit !important;
+    padding-bottom: inherit !important;
   }
   .\!py\:h\@s {
     padding-top: 0.5rem !important;
@@ -547,10 +593,16 @@
     padding-bottom: 4rem   !important;
   }
   .\!pa\:0\@s {
-    padding-left: 0      !important;
-    padding-right: 0      !important;
-    padding-top: 0      !important;
-    padding-bottom: 0      !important;
+    padding-left: initial !important;
+    padding-right: initial !important;
+    padding-top: initial !important;
+    padding-bottom: initial !important;
+  }
+  .\!pa\:i\@s {
+    padding-left: inherit !important;
+    padding-right: inherit !important;
+    padding-top: inherit !important;
+    padding-bottom: inherit !important;
   }
   .\!pa\:h\@s {
     padding-left: 0.5rem !important;
@@ -579,7 +631,10 @@
 }
 @media print {
   .\!pl\:0\@p {
-    padding-left: 0      !important;
+    padding-left: initial !important;
+  }
+  .\!pl\:i\@p {
+    padding-left: inherit !important;
   }
   .\!pl\:h\@p {
     padding-left: 0.5rem !important;
@@ -594,7 +649,10 @@
     padding-left: 4rem   !important;
   }
   .\!pr\:0\@p {
-    padding-right: 0      !important;
+    padding-right: initial !important;
+  }
+  .\!pr\:i\@p {
+    padding-right: inherit !important;
   }
   .\!pr\:h\@p {
     padding-right: 0.5rem !important;
@@ -609,7 +667,10 @@
     padding-right: 4rem   !important;
   }
   .\!pt\:0\@p {
-    padding-top: 0      !important;
+    padding-top: initial !important;
+  }
+  .\!pt\:i\@p {
+    padding-top: inherit !important;
   }
   .\!pt\:h\@p {
     padding-top: 0.5rem !important;
@@ -624,7 +685,10 @@
     padding-top: 4rem   !important;
   }
   .\!pb\:0\@p {
-    padding-bottom: 0      !important;
+    padding-bottom: initial !important;
+  }
+  .\!pb\:i\@p {
+    padding-bottom: inherit !important;
   }
   .\!pb\:h\@p {
     padding-bottom: 0.5rem !important;
@@ -639,8 +703,12 @@
     padding-bottom: 4rem   !important;
   }
   .\!px\:0\@p {
-    padding-left: 0      !important;
-    padding-right: 0      !important;
+    padding-left: initial !important;
+    padding-right: initial !important;
+  }
+  .\!px\:i\@p {
+    padding-left: inherit !important;
+    padding-right: inherit !important;
   }
   .\!px\:h\@p {
     padding-left: 0.5rem !important;
@@ -659,8 +727,12 @@
     padding-right: 4rem   !important;
   }
   .\!py\:0\@p {
-    padding-top: 0      !important;
-    padding-bottom: 0      !important;
+    padding-top: initial !important;
+    padding-bottom: initial !important;
+  }
+  .\!py\:i\@p {
+    padding-top: inherit !important;
+    padding-bottom: inherit !important;
   }
   .\!py\:h\@p {
     padding-top: 0.5rem !important;
@@ -679,10 +751,16 @@
     padding-bottom: 4rem   !important;
   }
   .\!pa\:0\@p {
-    padding-left: 0      !important;
-    padding-right: 0      !important;
-    padding-top: 0      !important;
-    padding-bottom: 0      !important;
+    padding-left: initial !important;
+    padding-right: initial !important;
+    padding-top: initial !important;
+    padding-bottom: initial !important;
+  }
+  .\!pa\:i\@p {
+    padding-left: inherit !important;
+    padding-right: inherit !important;
+    padding-top: inherit !important;
+    padding-bottom: inherit !important;
   }
   .\!pa\:h\@p {
     padding-left: 0.5rem !important;
