@@ -25,6 +25,9 @@
 .\!d\:fx {
   display: flex         !important;
 }
+.\!d\:li {
+  display: list-item !important;
+}
 @media screen {
   .\!d\:0\@s {
     display: initial      !important;
@@ -46,6 +49,9 @@
   }
   .\!d\:fx\@s {
     display: flex         !important;
+  }
+  .\!d\:li\@s {
+    display: list-item !important;
   }
 }
 @media print {
@@ -69,6 +75,9 @@
   }
   .\!d\:fx\@p {
     display: flex         !important;
+  }
+  .\!d\:li\@p {
+    display: list-item !important;
   }
 }
 /*################################*\
