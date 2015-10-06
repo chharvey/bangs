@@ -361,11 +361,11 @@ html
         h1 _position.less
         section
           h1 all media queries
-          div(class="!ps:0") .!ps:0 { position: initial  !important; }
-          div(class="!ps:i") .!ps:i { position: inherit  !important; }
-          div(class="!ps:s") .!ps:s { position: static   !important; }
-          div(class="!ps:r") .!ps:r { position: relative !important; }
-          div(class="!ps:f") .!ps:f { position: fixed    !important; }
+          div(class="!ps:0")   .!ps:0   { position: initial  !important; }
+          div(class="!ps:i")   .!ps:i   { position: inherit  !important; }
+          div(class="!ps:s")   .!ps:s   { position: static   !important; }
+          div(class="!ps:r")   .!ps:r   { position: relative !important; }
+          div(class="!ps:f")   .!ps:f   { position: fixed    !important; }
         section
           h1 @media screen
           div(class="!ps:0@s") .!ps:0@s { position: initial  !important; }
@@ -655,28 +655,28 @@ html
         h1 _text-align.less
         section
           h1 all media queries
-          div(class="!ta:0 ")   .!ta:0    { text-align: initial !important; }
-          div(class="!ta:i ")   .!ta:i    { text-align: inherit !important; }
-          div(class="!ta:lt")   .!ta:lt   { text-align: left    !important; }
-          div(class="!ta:rt")   .!ta:rt   { text-align: right   !important; }
-          div(class="!ta:cr")   .!ta:cr   { text-align: center  !important; }
-          div(class="!ta:jf")   .!ta:jf   { text-align: justify !important; }
+          div(class="!ta:0")   .!ta:0   { text-align: initial !important; }
+          div(class="!ta:i")   .!ta:i   { text-align: inherit !important; }
+          div(class="!ta:l")   .!ta:l   { text-align: left    !important; }
+          div(class="!ta:r")   .!ta:r   { text-align: right   !important; }
+          div(class="!ta:c")   .!ta:c   { text-align: center  !important; }
+          div(class="!ta:j")   .!ta:j   { text-align: justify !important; }
         section
           h1 @media screen
-          div(class="!ta:0@s ") .!ta:0@s  { text-align: initial !important; }
-          div(class="!ta:i@s ") .!ta:i@s  { text-align: inherit !important; }
-          div(class="!ta:lt@s") .!ta:lt@s { text-align: left    !important; }
-          div(class="!ta:rt@s") .!ta:rt@s { text-align: right   !important; }
-          div(class="!ta:cr@s") .!ta:cr@s { text-align: center  !important; }
-          div(class="!ta:jf@s") .!ta:jf@s { text-align: justify !important; }
+          div(class="!ta:0@s") .!ta:0@s { text-align: initial !important; }
+          div(class="!ta:i@s") .!ta:i@s { text-align: inherit !important; }
+          div(class="!ta:l@s") .!ta:l@s { text-align: left    !important; }
+          div(class="!ta:r@s") .!ta:r@s { text-align: right   !important; }
+          div(class="!ta:c@s") .!ta:c@s { text-align: center  !important; }
+          div(class="!ta:j@s") .!ta:j@s { text-align: justify !important; }
         section
           h1 @media print
-          div(class="!ta:0@p ") .!ta:0@p  { text-align: initial !important; }
-          div(class="!ta:i@p ") .!ta:i@p  { text-align: inherit !important; }
-          div(class="!ta:lt@p") .!ta:lt@p { text-align: left    !important; }
-          div(class="!ta:rt@p") .!ta:rt@p { text-align: right   !important; }
-          div(class="!ta:cr@p") .!ta:cr@p { text-align: center  !important; }
-          div(class="!ta:jf@p") .!ta:jf@p { text-align: justify !important; }
+          div(class="!ta:0@p") .!ta:0@p { text-align: initial !important; }
+          div(class="!ta:i@p") .!ta:i@p { text-align: inherit !important; }
+          div(class="!ta:l@p") .!ta:l@p { text-align: left    !important; }
+          div(class="!ta:r@p") .!ta:r@p { text-align: right   !important; }
+          div(class="!ta:c@p") .!ta:c@p { text-align: center  !important; }
+          div(class="!ta:j@p") .!ta:j@p { text-align: justify !important; }
       section#vertical-align
         h1 _vertical-align.less
         section
@@ -744,32 +744,52 @@ html
           div(class="!ws:pr@p") .!ws:pr@p { white-space: pre      !important; }
           div(class="!ws:pw@p") .!ws:pw@p { white-space: pre-wrap !important; }
           div(class="!ws:pl@p") .!ws:pl@p { white-space: pre-line !important; }
+      section#page-break
+        h1 _page-break.less
+        p.
+          #[strong Note:]
+          The #[code page-break-before] and #[code page-break-after] properties are only relevant
+          when printing, so all media query classes have been left out.
+        section
+          h1 all media queries
+          div(class="!pbb:0") .!pbb:0 { page-break-before: initial !important; }
+          div(class="!pbb:i") .!pbb:i { page-break-before: inherit !important; }
+          div(class="!pbb:a") .!pbb:a { page-break-before: auto    !important; }
+          div(class="!pbb:t") .!pbb:t { page-break-before: always  !important; }
+          div(class="!pbb:f") .!pbb:f { page-break-before: avoid   !important; }
+        section
+          h1 all media queries
+          div(class="!pba:0") .!pba:0 { page-break-after: initial !important; }
+          div(class="!pba:i") .!pba:i { page-break-after: inherit !important; }
+          div(class="!pba:a") .!pba:a { page-break-after: auto    !important; }
+          div(class="!pba:t") .!pba:t { page-break-after: always  !important; }
+          div(class="!pba:f") .!pba:f { page-break-after: avoid   !important; }
       section#text-transform
         h1 _text-transform.less
         section
           h1 all media queries
-          div(class="!tt:0 ")   .!tt:0    { text-transform: initial    !important; }
-          div(class="!tt:i ")   .!tt:i    { text-transform: inherit    !important; }
-          div(class="!tt:n ")   .!tt:n    { text-transform: none       !important; }
-          div(class="!tt:ca")   .!tt:ca   { text-transform: capitalize !important; }
-          div(class="!tt:uc")   .!tt:uc   { text-transform: uppercase  !important; }
-          div(class="!tt:lc")   .!tt:lc   { text-transform: lowercase  !important; }
+          div(class="!tt:0")   .!tt:0   { text-transform: initial    !important; }
+          div(class="!tt:i")   .!tt:i   { text-transform: inherit    !important; }
+          div(class="!tt:n")   .!tt:n   { text-transform: none       !important; }
+          div(class="!tt:c")   .!tt:c   { text-transform: capitalize !important; }
+          div(class="!tt:u")   .!tt:u   { text-transform: uppercase  !important; }
+          div(class="!tt:l")   .!tt:l   { text-transform: lowercase  !important; }
         section
           h1 @media screen
-          div(class="!tt:0@s ") .!tt:0@s  { text-transform: initial    !important; }
-          div(class="!tt:i@s ") .!tt:i@s  { text-transform: inherit    !important; }
-          div(class="!tt:n@s ") .!tt:n@s  { text-transform: none       !important; }
-          div(class="!tt:ca@s") .!tt:ca@s { text-transform: capitalize !important; }
-          div(class="!tt:uc@s") .!tt:uc@s { text-transform: uppercase  !important; }
-          div(class="!tt:lc@s") .!tt:lc@s { text-transform: lowercase  !important; }
+          div(class="!tt:0@s") .!tt:0@s { text-transform: initial    !important; }
+          div(class="!tt:i@s") .!tt:i@s { text-transform: inherit    !important; }
+          div(class="!tt:n@s") .!tt:n@s { text-transform: none       !important; }
+          div(class="!tt:c@s") .!tt:c@s { text-transform: capitalize !important; }
+          div(class="!tt:u@s") .!tt:u@s { text-transform: uppercase  !important; }
+          div(class="!tt:l@s") .!tt:l@s { text-transform: lowercase  !important; }
         section
           h1 @media print
-          div(class="!tt:0@p ") .!tt:0@p  { text-transform: initial    !important; }
-          div(class="!tt:i@p ") .!tt:i@p  { text-transform: inherit    !important; }
-          div(class="!tt:n@p ") .!tt:n@p  { text-transform: none       !important; }
-          div(class="!tt:ca@p") .!tt:ca@p { text-transform: capitalize !important; }
-          div(class="!tt:uc@p") .!tt:uc@p { text-transform: uppercase  !important; }
-          div(class="!tt:lc@p") .!tt:lc@p { text-transform: lowercase  !important; }
+          div(class="!tt:0@p") .!tt:0@p { text-transform: initial    !important; }
+          div(class="!tt:i@p") .!tt:i@p { text-transform: inherit    !important; }
+          div(class="!tt:n@p") .!tt:n@p { text-transform: none       !important; }
+          div(class="!tt:c@p") .!tt:c@p { text-transform: capitalize !important; }
+          div(class="!tt:u@p") .!tt:u@p { text-transform: uppercase  !important; }
+          div(class="!tt:l@p") .!tt:l@p { text-transform: lowercase  !important; }
       section#text-rendering
         h1 _text-rendering.less
         section
@@ -822,26 +842,6 @@ html
           div(class="!td:u@p") .!td:u@p { text-decoration: underline    !important; }
           div(class="!td:o@p") .!td:o@p { text-decoration: overline     !important; }
           div(class="!td:s@p") .!td:s@p { text-decoration: line-through !important; }
-      section#page-break
-        h1 _page-break.less
-        p.
-          #[strong Note:]
-          The #[code page-break-before] and #[code page-break-after] properties are only relevant
-          when printing, so all media query classes have been left out.
-        section
-          h1 all media queries
-          div(class="!pbb:0") .!pbb:0 { page-break-before: initial !important; }
-          div(class="!pbb:i") .!pbb:i { page-break-before: inherit !important; }
-          div(class="!pbb:a") .!pbb:a { page-break-before: auto    !important; }
-          div(class="!pbb:t") .!pbb:t { page-break-before: always  !important; }
-          div(class="!pbb:f") .!pbb:f { page-break-before: avoid   !important; }
-        section
-          h1 all media queries
-          div(class="!pba:0") .!pba:0 { page-break-after: initial !important; }
-          div(class="!pba:i") .!pba:i { page-break-after: inherit !important; }
-          div(class="!pba:a") .!pba:a { page-break-after: auto    !important; }
-          div(class="!pba:t") .!pba:t { page-break-after: always  !important; }
-          div(class="!pba:f") .!pba:f { page-break-after: avoid   !important; }
       section#list-style-type
         h1 _list-style-type.less
         section
@@ -947,39 +947,39 @@ html
         h1 _background-color.less
         section
           h1 all media queries
-          div(class="!bgc:0")   .!bgc:0   { background-color: initial      !important; }
-          div(class="!bgc:i")   .!bgc:i   { background-color: inherit      !important; }
-          div(class="!bgc:t")   .!bgc:t   { background-color: transparent  !important; }
-          div(class="!bgc:c")   .!bgc:c   { background-color: currentColor !important; }
+          div(class="!bc:0")   .!bc:0   { background-color: initial      !important; }
+          div(class="!bc:i")   .!bc:i   { background-color: inherit      !important; }
+          div(class="!bc:t")   .!bc:t   { background-color: transparent  !important; }
+          div(class="!bc:c")   .!bc:c   { background-color: currentColor !important; }
         section
           h1 @media screen
-          div(class="!bgc:0@s") .!bgc:0@s { background-color: initial      !important; }
-          div(class="!bgc:i@s") .!bgc:i@s { background-color: inherit      !important; }
-          div(class="!bgc:t@s") .!bgc:t@s { background-color: transparent  !important; }
-          div(class="!bgc:c@s") .!bgc:c@s { background-color: currentColor !important; }
+          div(class="!bc:0@s") .!bc:0@s { background-color: initial      !important; }
+          div(class="!bc:i@s") .!bc:i@s { background-color: inherit      !important; }
+          div(class="!bc:t@s") .!bc:t@s { background-color: transparent  !important; }
+          div(class="!bc:c@s") .!bc:c@s { background-color: currentColor !important; }
         section
           h1 @media print
-          div(class="!bgc:0@p") .!bgc:0@p { background-color: initial      !important; }
-          div(class="!bgc:i@p") .!bgc:i@p { background-color: inherit      !important; }
-          div(class="!bgc:t@p") .!bgc:t@p { background-color: transparent  !important; }
-          div(class="!bgc:c@p") .!bgc:c@p { background-color: currentColor !important; }
+          div(class="!bc:0@p") .!bc:0@p { background-color: initial      !important; }
+          div(class="!bc:i@p") .!bc:i@p { background-color: inherit      !important; }
+          div(class="!bc:t@p") .!bc:t@p { background-color: transparent  !important; }
+          div(class="!bc:c@p") .!bc:c@p { background-color: currentColor !important; }
       section#background-image
         h1 _background-image.less
         section
           h1 all media queries
-          div(class="!bgi:0")   .!bgi:0   { background-image: initial !important; }
-          div(class="!bgi:i")   .!bgi:i   { background-image: inherit !important; }
-          div(class="!bgi:n")   .!bgi:n   { background-image: none    !important; }
+          div(class="!bi:0")   .!bi:0   { background-image: initial !important; }
+          div(class="!bi:i")   .!bi:i   { background-image: inherit !important; }
+          div(class="!bi:n")   .!bi:n   { background-image: none    !important; }
         section
           h1 @media screen
-          div(class="!bgi:0@s") .!bgi:0@s { background-image: initial !important; }
-          div(class="!bgi:i@s") .!bgi:i@s { background-image: inherit !important; }
-          div(class="!bgi:n@s") .!bgi:n@s { background-image: none    !important; }
+          div(class="!bi:0@s") .!bi:0@s { background-image: initial !important; }
+          div(class="!bi:i@s") .!bi:i@s { background-image: inherit !important; }
+          div(class="!bi:n@s") .!bi:n@s { background-image: none    !important; }
         section
           h1 @media print
-          div(class="!bgi:0@p") .!bgi:0@p { background-image: initial !important; }
-          div(class="!bgi:i@p") .!bgi:i@p { background-image: inherit !important; }
-          div(class="!bgi:n@p") .!bgi:n@p { background-image: none    !important; }
+          div(class="!bi:0@p") .!bi:0@p { background-image: initial !important; }
+          div(class="!bi:i@p") .!bi:i@p { background-image: inherit !important; }
+          div(class="!bi:n@p") .!bi:n@p { background-image: none    !important; }
       section#visibility
         h1 _visibility.less
         section

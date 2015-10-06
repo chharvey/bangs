@@ -2142,16 +2142,16 @@
 .\!ta\:i {
   text-align: inherit !important;
 }
-.\!ta\:lt {
+.\!ta\:l {
   text-align: left    !important;
 }
-.\!ta\:rt {
+.\!ta\:r {
   text-align: right   !important;
 }
-.\!ta\:cr {
+.\!ta\:c {
   text-align: center  !important;
 }
-.\!ta\:jf {
+.\!ta\:j {
   text-align: justify !important;
 }
 @media screen {
@@ -2161,16 +2161,16 @@
   .\!ta\:i\@s {
     text-align: inherit !important;
   }
-  .\!ta\:lt\@s {
+  .\!ta\:l\@s {
     text-align: left    !important;
   }
-  .\!ta\:rt\@s {
+  .\!ta\:r\@s {
     text-align: right   !important;
   }
-  .\!ta\:cr\@s {
+  .\!ta\:c\@s {
     text-align: center  !important;
   }
-  .\!ta\:jf\@s {
+  .\!ta\:j\@s {
     text-align: justify !important;
   }
 }
@@ -2181,16 +2181,16 @@
   .\!ta\:i\@p {
     text-align: inherit !important;
   }
-  .\!ta\:lt\@p {
+  .\!ta\:l\@p {
     text-align: left    !important;
   }
-  .\!ta\:rt\@p {
+  .\!ta\:r\@p {
     text-align: right   !important;
   }
-  .\!ta\:cr\@p {
+  .\!ta\:c\@p {
     text-align: center  !important;
   }
-  .\!ta\:jf\@p {
+  .\!ta\:j\@p {
     text-align: justify !important;
   }
 }
@@ -2309,13 +2309,13 @@
 .\!tt\:n {
   text-transform: none       !important;
 }
-.\!tt\:ca {
+.\!tt\:c {
   text-transform: capitalize !important;
 }
-.\!tt\:uc {
+.\!tt\:u {
   text-transform: uppercase  !important;
 }
-.\!tt\:lc {
+.\!tt\:l {
   text-transform: lowercase  !important;
 }
 @media screen {
@@ -2328,13 +2328,13 @@
   .\!tt\:n\@s {
     text-transform: none       !important;
   }
-  .\!tt\:ca\@s {
+  .\!tt\:c\@s {
     text-transform: capitalize !important;
   }
-  .\!tt\:uc\@s {
+  .\!tt\:u\@s {
     text-transform: uppercase  !important;
   }
-  .\!tt\:lc\@s {
+  .\!tt\:l\@s {
     text-transform: lowercase  !important;
   }
 }
@@ -2348,13 +2348,13 @@
   .\!tt\:n\@p {
     text-transform: none       !important;
   }
-  .\!tt\:ca\@p {
+  .\!tt\:c\@p {
     text-transform: capitalize !important;
   }
-  .\!tt\:uc\@p {
+  .\!tt\:u\@p {
     text-transform: uppercase  !important;
   }
-  .\!tt\:lc\@p {
+  .\!tt\:l\@p {
     text-transform: lowercase  !important;
   }
 }
@@ -2691,77 +2691,77 @@
 /*################################*\
     _background-color.less
 \*################################*/
-.\!bgc\:0 {
+.\!bc\:0 {
   background-color: initial      !important;
 }
-.\!bgc\:i {
+.\!bc\:i {
   background-color: inherit      !important;
 }
-.\!bgc\:t {
+.\!bc\:t {
   background-color: transparent  !important;
 }
-.\!bgc\:c {
+.\!bc\:c {
   background-color: currentColor !important;
 }
 @media screen {
-  .\!bgc\:0\@s {
+  .\!bc\:0\@s {
     background-color: initial      !important;
   }
-  .\!bgc\:i\@s {
+  .\!bc\:i\@s {
     background-color: inherit      !important;
   }
-  .\!bgc\:t\@s {
+  .\!bc\:t\@s {
     background-color: transparent  !important;
   }
-  .\!bgc\:c\@s {
+  .\!bc\:c\@s {
     background-color: currentColor !important;
   }
 }
 @media print {
-  .\!bgc\:0\@p {
+  .\!bc\:0\@p {
     background-color: initial      !important;
   }
-  .\!bgc\:i\@p {
+  .\!bc\:i\@p {
     background-color: inherit      !important;
   }
-  .\!bgc\:t\@p {
+  .\!bc\:t\@p {
     background-color: transparent  !important;
   }
-  .\!bgc\:c\@p {
+  .\!bc\:c\@p {
     background-color: currentColor !important;
   }
 }
 /*################################*\
     _background-image.less
 \*################################*/
-.\!bgi\:0 {
+.\!bi\:0 {
   background-image: initial !important;
 }
-.\!bgi\:i {
+.\!bi\:i {
   background-image: inherit !important;
 }
-.\!bgi\:n {
+.\!bi\:n {
   background-image: none    !important;
 }
 @media screen {
-  .\!bgi\:0\@s {
+  .\!bi\:0\@s {
     background-image: initial !important;
   }
-  .\!bgi\:i\@s {
+  .\!bi\:i\@s {
     background-image: inherit !important;
   }
-  .\!bgi\:n\@s {
+  .\!bi\:n\@s {
     background-image: none    !important;
   }
 }
 @media print {
-  .\!bgi\:0\@p {
+  .\!bi\:0\@p {
     background-image: initial !important;
   }
-  .\!bgi\:i\@p {
+  .\!bi\:i\@p {
     background-image: inherit !important;
   }
-  .\!bgi\:n\@p {
+  .\!bi\:n\@p {
     background-image: none    !important;
   }
 }
