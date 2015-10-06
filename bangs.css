@@ -1598,6 +1598,18 @@
 /*################################*\
     _justify-content.less
 \*################################*/
+.\!j\:0 {
+  -webkit-justify-content: initial !important;
+  -moz-justify-content: initial !important;
+  -ms-justify-content: initial !important;
+  justify-content: initial !important;
+}
+.\!j\:i {
+  -webkit-justify-content: inherit !important;
+  -moz-justify-content: inherit !important;
+  -ms-justify-content: inherit !important;
+  justify-content: inherit !important;
+}
 .\!j\:bt {
   -webkit-justify-content: space-between !important;
   -moz-justify-content: space-between !important;
@@ -1629,6 +1641,18 @@
   justify-content: flex-end !important;
 }
 @media screen {
+  .\!j\:0\@s {
+    -webkit-justify-content: initial !important;
+    -moz-justify-content: initial !important;
+    -ms-justify-content: initial !important;
+    justify-content: initial !important;
+  }
+  .\!j\:i\@s {
+    -webkit-justify-content: inherit !important;
+    -moz-justify-content: inherit !important;
+    -ms-justify-content: inherit !important;
+    justify-content: inherit !important;
+  }
   .\!j\:bt\@s {
     -webkit-justify-content: space-between !important;
     -moz-justify-content: space-between !important;
@@ -1661,6 +1685,18 @@
   }
 }
 @media print {
+  .\!j\:0\@p {
+    -webkit-justify-content: initial !important;
+    -moz-justify-content: initial !important;
+    -ms-justify-content: initial !important;
+    justify-content: initial !important;
+  }
+  .\!j\:i\@p {
+    -webkit-justify-content: inherit !important;
+    -moz-justify-content: inherit !important;
+    -ms-justify-content: inherit !important;
+    justify-content: inherit !important;
+  }
   .\!j\:bt\@p {
     -webkit-justify-content: space-between !important;
     -moz-justify-content: space-between !important;
