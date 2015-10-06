@@ -1114,6 +1114,112 @@
   }
 }
 /*################################*\
+    _float.less
+\*################################*/
+.\!fl\:0 {
+  float: initial !important;
+}
+.\!fl\:i {
+  float: inherit !important;
+}
+.\!fl\:n {
+  float: none    !important;
+}
+.\!fl\:l {
+  float: left    !important;
+}
+.\!fl\:r {
+  float: right   !important;
+}
+.\!cl\:0 {
+  clear: initial !important;
+}
+.\!cl\:i {
+  clear: inherit !important;
+}
+.\!cl\:n {
+  clear: none    !important;
+}
+.\!cl\:l {
+  clear: left    !important;
+}
+.\!cl\:r {
+  clear: right   !important;
+}
+.\!cl\:b {
+  clear: both    !important;
+}
+@media screen {
+  .\!fl\:0\@s {
+    float: initial !important;
+  }
+  .\!fl\:i\@s {
+    float: inherit !important;
+  }
+  .\!fl\:n\@s {
+    float: none    !important;
+  }
+  .\!fl\:l\@s {
+    float: left    !important;
+  }
+  .\!fl\:r\@s {
+    float: right   !important;
+  }
+  .\!cl\:0\@s {
+    clear: initial !important;
+  }
+  .\!cl\:i\@s {
+    clear: inherit !important;
+  }
+  .\!cl\:n\@s {
+    clear: none    !important;
+  }
+  .\!cl\:l\@s {
+    clear: left    !important;
+  }
+  .\!cl\:r\@s {
+    clear: right   !important;
+  }
+  .\!cl\:b\@s {
+    clear: both    !important;
+  }
+}
+@media print {
+  .\!fl\:0\@p {
+    float: initial !important;
+  }
+  .\!fl\:i\@p {
+    float: inherit !important;
+  }
+  .\!fl\:n\@p {
+    float: none    !important;
+  }
+  .\!fl\:l\@p {
+    float: left    !important;
+  }
+  .\!fl\:r\@p {
+    float: right   !important;
+  }
+  .\!cl\:0\@p {
+    clear: initial !important;
+  }
+  .\!cl\:i\@p {
+    clear: inherit !important;
+  }
+  .\!cl\:n\@p {
+    clear: none    !important;
+  }
+  .\!cl\:l\@p {
+    clear: left    !important;
+  }
+  .\!cl\:r\@p {
+    clear: right   !important;
+  }
+  .\!cl\:b\@p {
+    clear: both    !important;
+  }
+}
+/*################################*\
     _vertical-align.less
 \*################################*/
 .\!va\:0 {
