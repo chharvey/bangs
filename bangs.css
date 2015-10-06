@@ -1062,6 +1062,58 @@
   }
 }
 /*################################*\
+    _position.less
+\*################################*/
+.\!ps\:0 {
+  position: initial  !important;
+}
+.\!ps\:i {
+  position: inherit  !important;
+}
+.\!ps\:s {
+  position: static   !important;
+}
+.\!ps\:r {
+  position: relative !important;
+}
+.\!ps\:f {
+  position: fixed    !important;
+}
+@media screen {
+  .\!ps\:0\@s {
+    position: initial  !important;
+  }
+  .\!ps\:i\@s {
+    position: inherit  !important;
+  }
+  .\!ps\:s\@s {
+    position: static   !important;
+  }
+  .\!ps\:r\@s {
+    position: relative !important;
+  }
+  .\!ps\:f\@s {
+    position: fixed    !important;
+  }
+}
+@media print {
+  .\!ps\:0\@p {
+    position: initial  !important;
+  }
+  .\!ps\:i\@p {
+    position: inherit  !important;
+  }
+  .\!ps\:s\@p {
+    position: static   !important;
+  }
+  .\!ps\:r\@p {
+    position: relative !important;
+  }
+  .\!ps\:f\@p {
+    position: fixed    !important;
+  }
+}
+/*################################*\
     _vertical-align.less
 \*################################*/
 .\!va\:0 {

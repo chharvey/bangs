@@ -357,6 +357,29 @@ html
           div(class="!ma:1@p") .!ma:1@p { margin-left: 1rem   !important; margin-right: 1rem   !important; margin-top: 1rem   !important; margin-bottom: 1rem   !important; }
           div(class="!ma:2@p") .!ma:2@p { margin-left: 2rem   !important; margin-right: 2rem   !important; margin-top: 2rem   !important; margin-bottom: 2rem   !important; }
           div(class="!ma:4@p") .!ma:4@p { margin-left: 4rem   !important; margin-right: 4rem   !important; margin-top: 4rem   !important; margin-bottom: 4rem   !important; }
+      section#position
+        h1 _position.less
+        section
+          h1 all media queries
+          div(class="!ps:0") .!ps:0 { position: initial  !important; }
+          div(class="!ps:i") .!ps:i { position: inherit  !important; }
+          div(class="!ps:s") .!ps:s { position: static   !important; }
+          div(class="!ps:r") .!ps:r { position: relative !important; }
+          div(class="!ps:f") .!ps:f { position: fixed    !important; }
+        section
+          h1 @media screen
+          div(class="!ps:0@s") .!ps:0@s { position: initial  !important; }
+          div(class="!ps:i@s") .!ps:i@s { position: inherit  !important; }
+          div(class="!ps:s@s") .!ps:s@s { position: static   !important; }
+          div(class="!ps:r@s") .!ps:r@s { position: relative !important; }
+          div(class="!ps:f@s") .!ps:f@s { position: fixed    !important; }
+        section
+          h1 @media print
+          div(class="!ps:0@p") .!ps:0@p { position: initial  !important; }
+          div(class="!ps:i@p") .!ps:i@p { position: inherit  !important; }
+          div(class="!ps:s@p") .!ps:s@p { position: static   !important; }
+          div(class="!ps:r@p") .!ps:r@p { position: relative !important; }
+          div(class="!ps:f@p") .!ps:f@p { position: fixed    !important; }
       section#justify-content.ss-flexbox
         h1 _justify-content.less
         section
