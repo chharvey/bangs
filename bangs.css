@@ -684,6 +684,12 @@
 .\!pl\:4 {
   padding-left: 4rem    !important;
 }
+.\!pl\:8 {
+  padding-left: 8rem    !important;
+}
+.\!pl\:g {
+  padding-left: 16rem   !important;
+}
 .\!pr\:0 {
   padding-right: initial !important;
 }
@@ -701,6 +707,12 @@
 }
 .\!pr\:4 {
   padding-right: 4rem    !important;
+}
+.\!pr\:8 {
+  padding-right: 8rem    !important;
+}
+.\!pr\:g {
+  padding-right: 16rem   !important;
 }
 .\!pt\:0 {
   padding-top: initial !important;
@@ -720,6 +732,12 @@
 .\!pt\:4 {
   padding-top: 4rem    !important;
 }
+.\!pt\:8 {
+  padding-top: 8rem    !important;
+}
+.\!pt\:g {
+  padding-top: 16rem   !important;
+}
 .\!pb\:0 {
   padding-bottom: initial !important;
 }
@@ -737,6 +755,12 @@
 }
 .\!pb\:4 {
   padding-bottom: 4rem    !important;
+}
+.\!pb\:8 {
+  padding-bottom: 8rem    !important;
+}
+.\!pb\:g {
+  padding-bottom: 16rem   !important;
 }
 .\!px\:0 {
   padding-left: initial !important;
@@ -762,6 +786,14 @@
   padding-left: 4rem    !important;
   padding-right: 4rem    !important;
 }
+.\!px\:8 {
+  padding-left: 8rem    !important;
+  padding-right: 8rem    !important;
+}
+.\!px\:g {
+  padding-left: 16rem   !important;
+  padding-right: 16rem   !important;
+}
 .\!py\:0 {
   padding-top: initial !important;
   padding-bottom: initial !important;
@@ -785,6 +817,14 @@
 .\!py\:4 {
   padding-top: 4rem    !important;
   padding-bottom: 4rem    !important;
+}
+.\!py\:8 {
+  padding-top: 8rem    !important;
+  padding-bottom: 8rem    !important;
+}
+.\!py\:g {
+  padding-top: 16rem   !important;
+  padding-bottom: 16rem   !important;
 }
 .\!pa\:0 {
   padding-left: initial !important;
@@ -822,6 +862,18 @@
   padding-top: 4rem    !important;
   padding-bottom: 4rem    !important;
 }
+.\!pa\:8 {
+  padding-left: 8rem    !important;
+  padding-right: 8rem    !important;
+  padding-top: 8rem    !important;
+  padding-bottom: 8rem    !important;
+}
+.\!pa\:g {
+  padding-left: 16rem   !important;
+  padding-right: 16rem   !important;
+  padding-top: 16rem   !important;
+  padding-bottom: 16rem   !important;
+}
 @media screen {
   .\!pl\:0\@s {
     padding-left: initial !important;
@@ -841,6 +893,12 @@
   .\!pl\:4\@s {
     padding-left: 4rem    !important;
   }
+  .\!pl\:8\@s {
+    padding-left: 8rem    !important;
+  }
+  .\!pl\:g\@s {
+    padding-left: 16rem   !important;
+  }
   .\!pr\:0\@s {
     padding-right: initial !important;
   }
@@ -858,6 +916,12 @@
   }
   .\!pr\:4\@s {
     padding-right: 4rem    !important;
+  }
+  .\!pr\:8\@s {
+    padding-right: 8rem    !important;
+  }
+  .\!pr\:g\@s {
+    padding-right: 16rem   !important;
   }
   .\!pt\:0\@s {
     padding-top: initial !important;
@@ -877,6 +941,12 @@
   .\!pt\:4\@s {
     padding-top: 4rem    !important;
   }
+  .\!pt\:8\@s {
+    padding-top: 8rem    !important;
+  }
+  .\!pt\:g\@s {
+    padding-top: 16rem   !important;
+  }
   .\!pb\:0\@s {
     padding-bottom: initial !important;
   }
@@ -894,6 +964,12 @@
   }
   .\!pb\:4\@s {
     padding-bottom: 4rem    !important;
+  }
+  .\!pb\:8\@s {
+    padding-bottom: 8rem    !important;
+  }
+  .\!pb\:g\@s {
+    padding-bottom: 16rem   !important;
   }
   .\!px\:0\@s {
     padding-left: initial !important;
@@ -919,6 +995,14 @@
     padding-left: 4rem    !important;
     padding-right: 4rem    !important;
   }
+  .\!px\:8\@s {
+    padding-left: 8rem    !important;
+    padding-right: 8rem    !important;
+  }
+  .\!px\:g\@s {
+    padding-left: 16rem   !important;
+    padding-right: 16rem   !important;
+  }
   .\!py\:0\@s {
     padding-top: initial !important;
     padding-bottom: initial !important;
@@ -942,6 +1026,14 @@
   .\!py\:4\@s {
     padding-top: 4rem    !important;
     padding-bottom: 4rem    !important;
+  }
+  .\!py\:8\@s {
+    padding-top: 8rem    !important;
+    padding-bottom: 8rem    !important;
+  }
+  .\!py\:g\@s {
+    padding-top: 16rem   !important;
+    padding-bottom: 16rem   !important;
   }
   .\!pa\:0\@s {
     padding-left: initial !important;
@@ -979,6 +1071,18 @@
     padding-top: 4rem    !important;
     padding-bottom: 4rem    !important;
   }
+  .\!pa\:8\@s {
+    padding-left: 8rem    !important;
+    padding-right: 8rem    !important;
+    padding-top: 8rem    !important;
+    padding-bottom: 8rem    !important;
+  }
+  .\!pa\:g\@s {
+    padding-left: 16rem   !important;
+    padding-right: 16rem   !important;
+    padding-top: 16rem   !important;
+    padding-bottom: 16rem   !important;
+  }
 }
 @media print {
   .\!pl\:0\@p {
@@ -999,6 +1103,12 @@
   .\!pl\:4\@p {
     padding-left: 4rem    !important;
   }
+  .\!pl\:8\@p {
+    padding-left: 8rem    !important;
+  }
+  .\!pl\:g\@p {
+    padding-left: 16rem   !important;
+  }
   .\!pr\:0\@p {
     padding-right: initial !important;
   }
@@ -1016,6 +1126,12 @@
   }
   .\!pr\:4\@p {
     padding-right: 4rem    !important;
+  }
+  .\!pr\:8\@p {
+    padding-right: 8rem    !important;
+  }
+  .\!pr\:g\@p {
+    padding-right: 16rem   !important;
   }
   .\!pt\:0\@p {
     padding-top: initial !important;
@@ -1035,6 +1151,12 @@
   .\!pt\:4\@p {
     padding-top: 4rem    !important;
   }
+  .\!pt\:8\@p {
+    padding-top: 8rem    !important;
+  }
+  .\!pt\:g\@p {
+    padding-top: 16rem   !important;
+  }
   .\!pb\:0\@p {
     padding-bottom: initial !important;
   }
@@ -1052,6 +1174,12 @@
   }
   .\!pb\:4\@p {
     padding-bottom: 4rem    !important;
+  }
+  .\!pb\:8\@p {
+    padding-bottom: 8rem    !important;
+  }
+  .\!pb\:g\@p {
+    padding-bottom: 16rem   !important;
   }
   .\!px\:0\@p {
     padding-left: initial !important;
@@ -1077,6 +1205,14 @@
     padding-left: 4rem    !important;
     padding-right: 4rem    !important;
   }
+  .\!px\:8\@p {
+    padding-left: 8rem    !important;
+    padding-right: 8rem    !important;
+  }
+  .\!px\:g\@p {
+    padding-left: 16rem   !important;
+    padding-right: 16rem   !important;
+  }
   .\!py\:0\@p {
     padding-top: initial !important;
     padding-bottom: initial !important;
@@ -1100,6 +1236,14 @@
   .\!py\:4\@p {
     padding-top: 4rem    !important;
     padding-bottom: 4rem    !important;
+  }
+  .\!py\:8\@p {
+    padding-top: 8rem    !important;
+    padding-bottom: 8rem    !important;
+  }
+  .\!py\:g\@p {
+    padding-top: 16rem   !important;
+    padding-bottom: 16rem   !important;
   }
   .\!pa\:0\@p {
     padding-left: initial !important;
@@ -1136,6 +1280,18 @@
     padding-right: 4rem    !important;
     padding-top: 4rem    !important;
     padding-bottom: 4rem    !important;
+  }
+  .\!pa\:8\@p {
+    padding-left: 8rem    !important;
+    padding-right: 8rem    !important;
+    padding-top: 8rem    !important;
+    padding-bottom: 8rem    !important;
+  }
+  .\!pa\:g\@p {
+    padding-left: 16rem   !important;
+    padding-right: 16rem   !important;
+    padding-top: 16rem   !important;
+    padding-bottom: 16rem   !important;
   }
 }
 /*################################*\
