@@ -25,19 +25,20 @@ html
       }
   body
     main
-      section
+      section#display
         h1 _display.less
         section
           h1 all media queries
-          div(class="!d:0 ") .!d:0  { display: initial      !important; }
-          div(class="!d:i ") .!d:i  { display: inherit      !important; }
-          div(class="!d:n ") .!d:n  { display: none         !important; }
-          div(class="!d:bk") .!d:bk { display: block        !important; }
-          div(class="!d:il") .!d:il { display: inline       !important; }
-          div(class="!d:ib") .!d:ib { display: inline-block !important; }
-          //- div(class="!d:tb") .!d:tb { display: table        !important; }
-          //- div(class="!d:tc") .!d:tc { display: table-cell   !important; }
-          div(class="!d:fx") .!d:fx { display: flex         !important; }
+          div(class="!d:0 ")   .!d:0    { display: initial      !important; }
+          div(class="!d:i ")   .!d:i    { display: inherit      !important; }
+          div(class="!d:n ")   .!d:n    { display: none         !important; }
+          div(class="!d:bk")   .!d:bk   { display: block        !important; }
+          div(class="!d:il")   .!d:il   { display: inline       !important; }
+          div(class="!d:ib")   .!d:ib   { display: inline-block !important; }
+          div(class="!d:fx")   .!d:fx   { display: flex         !important; }
+          div(class="!d:li")   .!d:li   { display: list-item    !important; }
+          //- div(class="!d:tb")   .!d:tb   { display: table        !important; }
+          //- div(class="!d:tc")   .!d:tc   { display: table-cell   !important; }
         section
           h1 @media screen
           div(class="!d:0@s ") .!d:0@s  { display: initial      !important; }
@@ -46,9 +47,10 @@ html
           div(class="!d:bk@s") .!d:bk@s { display: block        !important; }
           div(class="!d:il@s") .!d:il@s { display: inline       !important; }
           div(class="!d:ib@s") .!d:ib@s { display: inline-block !important; }
+          div(class="!d:fx@s") .!d:fx@s { display: flex         !important; }
+          div(class="!d:li@s") .!d:li@s { display: list-item    !important; }
           //- div(class="!d:tb@s") .!d:tb@s { display: table        !important; }
           //- div(class="!d:tc@s") .!d:tc@s { display: table-cell   !important; }
-          div(class="!d:fx@s") .!d:fx@s { display: flex         !important; }
         section
           h1 @media print
           div(class="!d:0@p ") .!d:0@p  { display: initial      !important; }
@@ -57,36 +59,84 @@ html
           div(class="!d:bk@p") .!d:bk@p { display: block        !important; }
           div(class="!d:il@p") .!d:il@p { display: inline       !important; }
           div(class="!d:ib@p") .!d:ib@p { display: inline-block !important; }
+          div(class="!d:fx@p") .!d:fx@p { display: flex         !important; }
+          div(class="!d:li@p") .!d:li@p { display: list-item    !important; }
           //- div(class="!d:tb@p") .!d:tb@p { display: table        !important; }
           //- div(class="!d:tc@p") .!d:tc@p { display: table-cell   !important; }
-          div(class="!d:fx@p") .!d:fx@p { display: flex         !important; }
-      section
+      section#width
         h1 _width.less
         section
           h1 all media queries
-          div(class="!w:1o1") .!w:1o1 { width: 100% !important; }
-          div(class="!w:1o2") .!w:1o2 { width: 50% !important; }
-          div(class="!w:2o2") .!w:2o2 { width: 100% !important; }
-          div(class="!w:1o3") .!w:1o3 { width: 33.33333333% !important; }
-          div(class="!w:2o3") .!w:2o3 { width: 66.66666667% !important; }
-          div(class="!w:3o3") .!w:3o3 { width: 100% !important; }
-          div(class="!w:1o4") .!w:1o4 { width: 25% !important; }
-          div(class="!w:2o4") .!w:2o4 { width: 50% !important; }
-          div(class="!w:3o4") .!w:3o4 { width: 75% !important; }
-          div(class="!w:4o4") .!w:4o4 { width: 100% !important; }
-          div(class="!w:1o5") .!w:1o5 { width: 20% !important; }
-          div(class="!w:2o5") .!w:2o5 { width: 40% !important; }
-          div(class="!w:3o5") .!w:3o5 { width: 60% !important; }
-          div(class="!w:4o5") .!w:4o5 { width: 80% !important; }
-          div(class="!w:5o5") .!w:5o5 { width: 100% !important; }
-          div(class="!w:1o6") .!w:1o6 { width: 16.66666667% !important; }
-          div(class="!w:2o6") .!w:2o6 { width: 33.33333333% !important; }
-          div(class="!w:3o6") .!w:3o6 { width: 50% !important; }
-          div(class="!w:4o6") .!w:4o6 { width: 66.66666667% !important; }
-          div(class="!w:5o6") .!w:5o6 { width: 83.33333333% !important; }
-          div(class="!w:6o6") .!w:6o6 { width: 100% !important; }
+          div(class="!w:0")     .!w:0     { width: initial !important; }
+          div(class="!w:i")     .!w:i     { width: inherit !important; }
+          div(class="!w:a")     .!w:a     { width: auto !important; }
+          div(class="!w:0o1")   .!w:0o1   { width: 0 !important; }
+          div(class="!w:1o1")   .!w:1o1   { width: 100% !important; }
+          div(class="!w:1o2")   .!w:1o2   { width: 50% !important; }
+          div(class="!w:2o2")   .!w:2o2   { width: 100% !important; }
+          div(class="!w:1o3")   .!w:1o3   { width: 33.33333333% !important; }
+          div(class="!w:2o3")   .!w:2o3   { width: 66.66666667% !important; }
+          div(class="!w:3o3")   .!w:3o3   { width: 100% !important; }
+          div(class="!w:1o4")   .!w:1o4   { width: 25% !important; }
+          div(class="!w:2o4")   .!w:2o4   { width: 50% !important; }
+          div(class="!w:3o4")   .!w:3o4   { width: 75% !important; }
+          div(class="!w:4o4")   .!w:4o4   { width: 100% !important; }
+          div(class="!w:1o5")   .!w:1o5   { width: 20% !important; }
+          div(class="!w:2o5")   .!w:2o5   { width: 40% !important; }
+          div(class="!w:3o5")   .!w:3o5   { width: 60% !important; }
+          div(class="!w:4o5")   .!w:4o5   { width: 80% !important; }
+          div(class="!w:5o5")   .!w:5o5   { width: 100% !important; }
+          div(class="!w:1o6")   .!w:1o6   { width: 16.66666667% !important; }
+          div(class="!w:2o6")   .!w:2o6   { width: 33.33333333% !important; }
+          div(class="!w:3o6")   .!w:3o6   { width: 50% !important; }
+          div(class="!w:4o6")   .!w:4o6   { width: 66.66666667% !important; }
+          div(class="!w:5o6")   .!w:5o6   { width: 83.33333333% !important; }
+          div(class="!w:6o6")   .!w:6o6   { width: 100% !important; }
+          div(class="!w:1o8")   .!w:1o8   { width: 12.5% !important; }
+          div(class="!w:2o8")   .!w:2o8   { width: 25% !important; }
+          div(class="!w:3o8")   .!w:3o8   { width: 37.5% !important; }
+          div(class="!w:4o8")   .!w:4o8   { width: 50% !important; }
+          div(class="!w:5o8")   .!w:5o8   { width: 62.5% !important; }
+          div(class="!w:6o8")   .!w:6o8   { width: 75% !important; }
+          div(class="!w:7o8")   .!w:7o8   { width: 87.5% !important; }
+          div(class="!w:8o8")   .!w:8o8   { width: 100% !important; }
+          div(class="!w:1o9")   .!w:1o9   { width: 11.11111111% !important; }
+          div(class="!w:2o9")   .!w:2o9   { width: 22.22222222% !important; }
+          div(class="!w:3o9")   .!w:3o9   { width: 33.33333333% !important; }
+          div(class="!w:4o9")   .!w:4o9   { width: 44.44444444% !important; }
+          div(class="!w:5o9")   .!w:5o9   { width: 55.55555556% !important; }
+          div(class="!w:6o9")   .!w:6o9   { width: 66.66666667% !important; }
+          div(class="!w:7o9")   .!w:7o9   { width: 77.77777778% !important; }
+          div(class="!w:8o9")   .!w:8o9   { width: 88.88888889% !important; }
+          div(class="!w:9o9")   .!w:9o9   { width: 100% !important; }
+          div(class="!w:1oa")   .!w:1oa   { width: 10% !important; }
+          div(class="!w:2oa")   .!w:2oa   { width: 20% !important; }
+          div(class="!w:3oa")   .!w:3oa   { width: 30% !important; }
+          div(class="!w:4oa")   .!w:4oa   { width: 40% !important; }
+          div(class="!w:5oa")   .!w:5oa   { width: 50% !important; }
+          div(class="!w:6oa")   .!w:6oa   { width: 60% !important; }
+          div(class="!w:7oa")   .!w:7oa   { width: 70% !important; }
+          div(class="!w:8oa")   .!w:8oa   { width: 80% !important; }
+          div(class="!w:9oa")   .!w:9oa   { width: 90% !important; }
+          div(class="!w:aoa")   .!w:aoa   { width: 100% !important; }
+          div(class="!w:1oc")   .!w:1oc   { width: 8.33333333% !important; }
+          div(class="!w:2oc")   .!w:2oc   { width: 16.66666667% !important; }
+          div(class="!w:3oc")   .!w:3oc   { width: 25% !important; }
+          div(class="!w:4oc")   .!w:4oc   { width: 33.33333333% !important; }
+          div(class="!w:5oc")   .!w:5oc   { width: 41.66666667% !important; }
+          div(class="!w:6oc")   .!w:6oc   { width: 50% !important; }
+          div(class="!w:7oc")   .!w:7oc   { width: 58.33333333% !important; }
+          div(class="!w:8oc")   .!w:8oc   { width: 66.66666667% !important; }
+          div(class="!w:9oc")   .!w:9oc   { width: 75% !important; }
+          div(class="!w:aoc")   .!w:aoc   { width: 83.33333333% !important; }
+          div(class="!w:boc")   .!w:boc   { width: 91.66666667% !important; }
+          div(class="!w:coc")   .!w:coc   { width: 100% !important; }
         section
           h1 @media screen
+          div(class="!w:0@s  ") .!w:0@s   { width: initial !important; }
+          div(class="!w:i@s  ") .!w:i@s   { width: inherit !important; }
+          div(class="!w:a@s  ") .!w:a@s   { width: auto !important; }
+          div(class="!w:0o1@s") .!w:0o1@s { width: 0 !important; }
           div(class="!w:1o1@s") .!w:1o1@s { width: 100% !important; }
           div(class="!w:1o2@s") .!w:1o2@s { width: 50% !important; }
           div(class="!w:2o2@s") .!w:2o2@s { width: 100% !important; }
@@ -108,8 +158,51 @@ html
           div(class="!w:4o6@s") .!w:4o6@s { width: 66.66666667% !important; }
           div(class="!w:5o6@s") .!w:5o6@s { width: 83.33333333% !important; }
           div(class="!w:6o6@s") .!w:6o6@s { width: 100% !important; }
+          div(class="!w:1o8@s") .!w:1o8@s { width: 12.5% !important; }
+          div(class="!w:2o8@s") .!w:2o8@s { width: 25% !important; }
+          div(class="!w:3o8@s") .!w:3o8@s { width: 37.5% !important; }
+          div(class="!w:4o8@s") .!w:4o8@s { width: 50% !important; }
+          div(class="!w:5o8@s") .!w:5o8@s { width: 62.5% !important; }
+          div(class="!w:6o8@s") .!w:6o8@s { width: 75% !important; }
+          div(class="!w:7o8@s") .!w:7o8@s { width: 87.5% !important; }
+          div(class="!w:8o8@s") .!w:8o8@s { width: 100% !important; }
+          div(class="!w:1o9@s") .!w:1o9@s { width: 11.11111111% !important; }
+          div(class="!w:2o9@s") .!w:2o9@s { width: 22.22222222% !important; }
+          div(class="!w:3o9@s") .!w:3o9@s { width: 33.33333333% !important; }
+          div(class="!w:4o9@s") .!w:4o9@s { width: 44.44444444% !important; }
+          div(class="!w:5o9@s") .!w:5o9@s { width: 55.55555556% !important; }
+          div(class="!w:6o9@s") .!w:6o9@s { width: 66.66666667% !important; }
+          div(class="!w:7o9@s") .!w:7o9@s { width: 77.77777778% !important; }
+          div(class="!w:8o9@s") .!w:8o9@s { width: 88.88888889% !important; }
+          div(class="!w:9o9@s") .!w:9o9@s { width: 100% !important; }
+          div(class="!w:1oa@s") .!w:1oa@s { width: 10% !important; }
+          div(class="!w:2oa@s") .!w:2oa@s { width: 20% !important; }
+          div(class="!w:3oa@s") .!w:3oa@s { width: 30% !important; }
+          div(class="!w:4oa@s") .!w:4oa@s { width: 40% !important; }
+          div(class="!w:5oa@s") .!w:5oa@s { width: 50% !important; }
+          div(class="!w:6oa@s") .!w:6oa@s { width: 60% !important; }
+          div(class="!w:7oa@s") .!w:7oa@s { width: 70% !important; }
+          div(class="!w:8oa@s") .!w:8oa@s { width: 80% !important; }
+          div(class="!w:9oa@s") .!w:9oa@s { width: 90% !important; }
+          div(class="!w:aoa@s") .!w:aoa@s { width: 100% !important; }
+          div(class="!w:1oc@s") .!w:1oc@s { width: 8.33333333% !important; }
+          div(class="!w:2oc@s") .!w:2oc@s { width: 16.66666667% !important; }
+          div(class="!w:3oc@s") .!w:3oc@s { width: 25% !important; }
+          div(class="!w:4oc@s") .!w:4oc@s { width: 33.33333333% !important; }
+          div(class="!w:5oc@s") .!w:5oc@s { width: 41.66666667% !important; }
+          div(class="!w:6oc@s") .!w:6oc@s { width: 50% !important; }
+          div(class="!w:7oc@s") .!w:7oc@s { width: 58.33333333% !important; }
+          div(class="!w:8oc@s") .!w:8oc@s { width: 66.66666667% !important; }
+          div(class="!w:9oc@s") .!w:9oc@s { width: 75% !important; }
+          div(class="!w:aoc@s") .!w:aoc@s { width: 83.33333333% !important; }
+          div(class="!w:boc@s") .!w:boc@s { width: 91.66666667% !important; }
+          div(class="!w:coc@s") .!w:coc@s { width: 100% !important; }
         section
           h1 @media print
+          div(class="!w:0@p  ") .!w:0@p   { width: initial !important; }
+          div(class="!w:i@p  ") .!w:i@p   { width: inherit !important; }
+          div(class="!w:a@p  ") .!w:a@p   { width: auto !important; }
+          div(class="!w:0o1@p") .!w:0o1@p { width: 0 !important; }
           div(class="!w:1o1@p") .!w:1o1@p { width: 100% !important; }
           div(class="!w:1o2@p") .!w:1o2@p { width: 50% !important; }
           div(class="!w:2o2@p") .!w:2o2@p { width: 100% !important; }
@@ -131,243 +224,500 @@ html
           div(class="!w:4o6@p") .!w:4o6@p { width: 66.66666667% !important; }
           div(class="!w:5o6@p") .!w:5o6@p { width: 83.33333333% !important; }
           div(class="!w:6o6@p") .!w:6o6@p { width: 100% !important; }
-      section
+          div(class="!w:1o8@p") .!w:1o8@p { width: 12.5% !important; }
+          div(class="!w:2o8@p") .!w:2o8@p { width: 25% !important; }
+          div(class="!w:3o8@p") .!w:3o8@p { width: 37.5% !important; }
+          div(class="!w:4o8@p") .!w:4o8@p { width: 50% !important; }
+          div(class="!w:5o8@p") .!w:5o8@p { width: 62.5% !important; }
+          div(class="!w:6o8@p") .!w:6o8@p { width: 75% !important; }
+          div(class="!w:7o8@p") .!w:7o8@p { width: 87.5% !important; }
+          div(class="!w:8o8@p") .!w:8o8@p { width: 100% !important; }
+          div(class="!w:1o9@p") .!w:1o9@p { width: 11.11111111% !important; }
+          div(class="!w:2o9@p") .!w:2o9@p { width: 22.22222222% !important; }
+          div(class="!w:3o9@p") .!w:3o9@p { width: 33.33333333% !important; }
+          div(class="!w:4o9@p") .!w:4o9@p { width: 44.44444444% !important; }
+          div(class="!w:5o9@p") .!w:5o9@p { width: 55.55555556% !important; }
+          div(class="!w:6o9@p") .!w:6o9@p { width: 66.66666667% !important; }
+          div(class="!w:7o9@p") .!w:7o9@p { width: 77.77777778% !important; }
+          div(class="!w:8o9@p") .!w:8o9@p { width: 88.88888889% !important; }
+          div(class="!w:9o9@p") .!w:9o9@p { width: 100% !important; }
+          div(class="!w:1oa@p") .!w:1oa@p { width: 10% !important; }
+          div(class="!w:2oa@p") .!w:2oa@p { width: 20% !important; }
+          div(class="!w:3oa@p") .!w:3oa@p { width: 30% !important; }
+          div(class="!w:4oa@p") .!w:4oa@p { width: 40% !important; }
+          div(class="!w:5oa@p") .!w:5oa@p { width: 50% !important; }
+          div(class="!w:6oa@p") .!w:6oa@p { width: 60% !important; }
+          div(class="!w:7oa@p") .!w:7oa@p { width: 70% !important; }
+          div(class="!w:8oa@p") .!w:8oa@p { width: 80% !important; }
+          div(class="!w:9oa@p") .!w:9oa@p { width: 90% !important; }
+          div(class="!w:aoa@p") .!w:aoa@p { width: 100% !important; }
+          div(class="!w:1oc@p") .!w:1oc@p { width: 8.33333333% !important; }
+          div(class="!w:2oc@p") .!w:2oc@p { width: 16.66666667% !important; }
+          div(class="!w:3oc@p") .!w:3oc@p { width: 25% !important; }
+          div(class="!w:4oc@p") .!w:4oc@p { width: 33.33333333% !important; }
+          div(class="!w:5oc@p") .!w:5oc@p { width: 41.66666667% !important; }
+          div(class="!w:6oc@p") .!w:6oc@p { width: 50% !important; }
+          div(class="!w:7oc@p") .!w:7oc@p { width: 58.33333333% !important; }
+          div(class="!w:8oc@p") .!w:8oc@p { width: 66.66666667% !important; }
+          div(class="!w:9oc@p") .!w:9oc@p { width: 75% !important; }
+          div(class="!w:aoc@p") .!w:aoc@p { width: 83.33333333% !important; }
+          div(class="!w:boc@p") .!w:boc@p { width: 91.66666667% !important; }
+          div(class="!w:coc@p") .!w:coc@p { width: 100% !important; }
+      section#padding
         h1 _padding.less
         section
           h1 all media queries
-          div(class="!pl:0") .!pl:0 { padding-left: 0      !important; }
-          div(class="!pl:h") .!pl:h { padding-left: 0.5rem !important; }
-          div(class="!pl:1") .!pl:1 { padding-left: 1rem   !important; }
-          div(class="!pl:2") .!pl:2 { padding-left: 2rem   !important; }
-          div(class="!pl:4") .!pl:4 { padding-left: 4rem   !important; }
-          div(class="!pr:0") .!pr:0 { padding-right: 0      !important; }
-          div(class="!pr:h") .!pr:h { padding-right: 0.5rem !important; }
-          div(class="!pr:1") .!pr:1 { padding-right: 1rem   !important; }
-          div(class="!pr:2") .!pr:2 { padding-right: 2rem   !important; }
-          div(class="!pr:4") .!pr:4 { padding-right: 4rem   !important; }
-          div(class="!pt:0") .!pt:0 { padding-top: 0      !important; }
-          div(class="!pt:h") .!pt:h { padding-top: 0.5rem !important; }
-          div(class="!pt:1") .!pt:1 { padding-top: 1rem   !important; }
-          div(class="!pt:2") .!pt:2 { padding-top: 2rem   !important; }
-          div(class="!pt:4") .!pt:4 { padding-top: 4rem   !important; }
-          div(class="!pb:0") .!pb:0 { padding-bottom: 0      !important; }
-          div(class="!pb:h") .!pb:h { padding-bottom: 0.5rem !important; }
-          div(class="!pb:1") .!pb:1 { padding-bottom: 1rem   !important; }
-          div(class="!pb:2") .!pb:2 { padding-bottom: 2rem   !important; }
-          div(class="!pb:4") .!pb:4 { padding-bottom: 4rem   !important; }
-          div(class="!px:0") .!px:0 { padding-left: 0      !important; padding-right: 0      !important; }
-          div(class="!px:h") .!px:h { padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
-          div(class="!px:1") .!px:1 { padding-left: 1rem   !important; padding-right: 1rem   !important; }
-          div(class="!px:2") .!px:2 { padding-left: 2rem   !important; padding-right: 2rem   !important; }
-          div(class="!px:4") .!px:4 { padding-left: 4rem   !important; padding-right: 4rem   !important; }
-          div(class="!py:0") .!py:0 { padding-top: 0      !important; padding-bottom: 0      !important; }
-          div(class="!py:h") .!py:h { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
-          div(class="!py:1") .!py:1 { padding-top: 1rem   !important; padding-bottom: 1rem   !important; }
-          div(class="!py:2") .!py:2 { padding-top: 2rem   !important; padding-bottom: 2rem   !important; }
-          div(class="!py:4") .!py:4 { padding-top: 4rem   !important; padding-bottom: 4rem   !important; }
-          div(class="!pa:0") .!pa:0 { padding-left: 0      !important; padding-right: 0      !important; padding-top: 0      !important; padding-bottom: 0      !important; }
-          div(class="!pa:h") .!pa:h { padding-left: 0.5rem !important; padding-right: 0.5rem !important; padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
-          div(class="!pa:1") .!pa:1 { padding-left: 1rem   !important; padding-right: 1rem   !important; padding-top: 1rem   !important; padding-bottom: 1rem   !important; }
-          div(class="!pa:2") .!pa:2 { padding-left: 2rem   !important; padding-right: 2rem   !important; padding-top: 2rem   !important; padding-bottom: 2rem   !important; }
-          div(class="!pa:4") .!pa:4 { padding-left: 4rem   !important; padding-right: 4rem   !important; padding-top: 4rem   !important; padding-bottom: 4rem   !important; }
+          div(class="!pl:0")   .!pl:0   { padding-left:   initial !important; }
+          div(class="!pl:i")   .!pl:i   { padding-left:   inherit !important; }
+          div(class="!pl:h")   .!pl:h   { padding-left:   0.5rem  !important; }
+          div(class="!pl:1")   .!pl:1   { padding-left:   1rem    !important; }
+          div(class="!pl:2")   .!pl:2   { padding-left:   2rem    !important; }
+          div(class="!pl:4")   .!pl:4   { padding-left:   4rem    !important; }
+          div(class="!pl:8")   .!pl:8   { padding-left:   8rem    !important; }
+          div(class="!pl:g")   .!pl:g   { padding-left:   16rem   !important; }
+          div(class="!pr:0")   .!pr:0   { padding-right:  initial !important; }
+          div(class="!pr:i")   .!pr:i   { padding-right:  inherit !important; }
+          div(class="!pr:h")   .!pr:h   { padding-right:  0.5rem  !important; }
+          div(class="!pr:1")   .!pr:1   { padding-right:  1rem    !important; }
+          div(class="!pr:2")   .!pr:2   { padding-right:  2rem    !important; }
+          div(class="!pr:4")   .!pr:4   { padding-right:  4rem    !important; }
+          div(class="!pr:8")   .!pr:8   { padding-right:  8rem    !important; }
+          div(class="!pr:g")   .!pr:g   { padding-right:  16rem   !important; }
+          div(class="!pt:0")   .!pt:0   { padding-top:    initial !important; }
+          div(class="!pt:i")   .!pt:i   { padding-top:    inherit !important; }
+          div(class="!pt:h")   .!pt:h   { padding-top:    0.5rem  !important; }
+          div(class="!pt:1")   .!pt:1   { padding-top:    1rem    !important; }
+          div(class="!pt:2")   .!pt:2   { padding-top:    2rem    !important; }
+          div(class="!pt:4")   .!pt:4   { padding-top:    4rem    !important; }
+          div(class="!pt:8")   .!pt:8   { padding-top:    8rem    !important; }
+          div(class="!pt:g")   .!pt:g   { padding-top:    16rem   !important; }
+          div(class="!pb:0")   .!pb:0   { padding-bottom: initial !important; }
+          div(class="!pb:i")   .!pb:i   { padding-bottom: inherit !important; }
+          div(class="!pb:h")   .!pb:h   { padding-bottom: 0.5rem  !important; }
+          div(class="!pb:1")   .!pb:1   { padding-bottom: 1rem    !important; }
+          div(class="!pb:2")   .!pb:2   { padding-bottom: 2rem    !important; }
+          div(class="!pb:4")   .!pb:4   { padding-bottom: 4rem    !important; }
+          div(class="!pb:8")   .!pb:8   { padding-bottom: 8rem    !important; }
+          div(class="!pb:g")   .!pb:g   { padding-bottom: 16rem   !important; }
+          div(class="!px:0")   .!px:0   { padding-left:   initial !important; padding-right:  initial !important; }
+          div(class="!px:i")   .!px:i   { padding-left:   inherit !important; padding-right:  inherit !important; }
+          div(class="!px:h")   .!px:h   { padding-left:   0.5rem  !important; padding-right:  0.5rem  !important; }
+          div(class="!px:1")   .!px:1   { padding-left:   1rem    !important; padding-right:  1rem    !important; }
+          div(class="!px:2")   .!px:2   { padding-left:   2rem    !important; padding-right:  2rem    !important; }
+          div(class="!px:4")   .!px:4   { padding-left:   4rem    !important; padding-right:  4rem    !important; }
+          div(class="!px:8")   .!px:8   { padding-left:   8rem    !important; padding-right:  8rem    !important; }
+          div(class="!px:g")   .!px:g   { padding-left:   16rem   !important; padding-right:  16rem   !important; }
+          div(class="!py:0")   .!py:0   { padding-top:    initial !important; padding-bottom: initial !important; }
+          div(class="!py:i")   .!py:i   { padding-top:    inherit !important; padding-bottom: inherit !important; }
+          div(class="!py:h")   .!py:h   { padding-top:    0.5rem  !important; padding-bottom: 0.5rem  !important; }
+          div(class="!py:1")   .!py:1   { padding-top:    1rem    !important; padding-bottom: 1rem    !important; }
+          div(class="!py:2")   .!py:2   { padding-top:    2rem    !important; padding-bottom: 2rem    !important; }
+          div(class="!py:4")   .!py:4   { padding-top:    4rem    !important; padding-bottom: 4rem    !important; }
+          div(class="!py:8")   .!py:8   { padding-top:    8rem    !important; padding-bottom: 8rem    !important; }
+          div(class="!py:g")   .!py:g   { padding-top:    16rem   !important; padding-bottom: 16rem   !important; }
+          div(class="!pa:0")   .!pa:0   { padding:        initial !important; }
+          div(class="!pa:i")   .!pa:i   { padding:        inherit !important; }
+          div(class="!pa:h")   .!pa:h   { padding:        0.5rem  !important; }
+          div(class="!pa:1")   .!pa:1   { padding:        1rem    !important; }
+          div(class="!pa:2")   .!pa:2   { padding:        2rem    !important; }
+          div(class="!pa:4")   .!pa:4   { padding:        4rem    !important; }
+          div(class="!pa:8")   .!pa:8   { padding:        8rem    !important; }
+          div(class="!pa:g")   .!pa:g   { padding:        16rem   !important; }
         section
           h1 @media screen
-          div(class="!pl:0@s") .!pl:0@s { padding-left: 0      !important; }
-          div(class="!pl:h@s") .!pl:h@s { padding-left: 0.5rem !important; }
-          div(class="!pl:1@s") .!pl:1@s { padding-left: 1rem   !important; }
-          div(class="!pl:2@s") .!pl:2@s { padding-left: 2rem   !important; }
-          div(class="!pl:4@s") .!pl:4@s { padding-left: 4rem   !important; }
-          div(class="!pr:0@s") .!pr:0@s { padding-right: 0      !important; }
-          div(class="!pr:h@s") .!pr:h@s { padding-right: 0.5rem !important; }
-          div(class="!pr:1@s") .!pr:1@s { padding-right: 1rem   !important; }
-          div(class="!pr:2@s") .!pr:2@s { padding-right: 2rem   !important; }
-          div(class="!pr:4@s") .!pr:4@s { padding-right: 4rem   !important; }
-          div(class="!pt:0@s") .!pt:0@s { padding-top: 0      !important; }
-          div(class="!pt:h@s") .!pt:h@s { padding-top: 0.5rem !important; }
-          div(class="!pt:1@s") .!pt:1@s { padding-top: 1rem   !important; }
-          div(class="!pt:2@s") .!pt:2@s { padding-top: 2rem   !important; }
-          div(class="!pt:4@s") .!pt:4@s { padding-top: 4rem   !important; }
-          div(class="!pb:0@s") .!pb:0@s { padding-bottom: 0      !important; }
-          div(class="!pb:h@s") .!pb:h@s { padding-bottom: 0.5rem !important; }
-          div(class="!pb:1@s") .!pb:1@s { padding-bottom: 1rem   !important; }
-          div(class="!pb:2@s") .!pb:2@s { padding-bottom: 2rem   !important; }
-          div(class="!pb:4@s") .!pb:4@s { padding-bottom: 4rem   !important; }
-          div(class="!px:0@s") .!px:0@s { padding-left: 0      !important; padding-right: 0      !important; }
-          div(class="!px:h@s") .!px:h@s { padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
-          div(class="!px:1@s") .!px:1@s { padding-left: 1rem   !important; padding-right: 1rem   !important; }
-          div(class="!px:2@s") .!px:2@s { padding-left: 2rem   !important; padding-right: 2rem   !important; }
-          div(class="!px:4@s") .!px:4@s { padding-left: 4rem   !important; padding-right: 4rem   !important; }
-          div(class="!py:0@s") .!py:0@s { padding-top: 0      !important; padding-bottom: 0      !important; }
-          div(class="!py:h@s") .!py:h@s { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
-          div(class="!py:1@s") .!py:1@s { padding-top: 1rem   !important; padding-bottom: 1rem   !important; }
-          div(class="!py:2@s") .!py:2@s { padding-top: 2rem   !important; padding-bottom: 2rem   !important; }
-          div(class="!py:4@s") .!py:4@s { padding-top: 4rem   !important; padding-bottom: 4rem   !important; }
-          div(class="!pa:0@s") .!pa:0@s { padding-left: 0      !important; padding-right: 0      !important; padding-top: 0      !important; padding-bottom: 0      !important; }
-          div(class="!pa:h@s") .!pa:h@s { padding-left: 0.5rem !important; padding-right: 0.5rem !important; padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
-          div(class="!pa:1@s") .!pa:1@s { padding-left: 1rem   !important; padding-right: 1rem   !important; padding-top: 1rem   !important; padding-bottom: 1rem   !important; }
-          div(class="!pa:2@s") .!pa:2@s { padding-left: 2rem   !important; padding-right: 2rem   !important; padding-top: 2rem   !important; padding-bottom: 2rem   !important; }
-          div(class="!pa:4@s") .!pa:4@s { padding-left: 4rem   !important; padding-right: 4rem   !important; padding-top: 4rem   !important; padding-bottom: 4rem   !important; }
+          div(class="!pl:0@s") .!pl:0@s { padding-left:   initial !important; }
+          div(class="!pl:i@s") .!pl:i@s { padding-left:   inherit !important; }
+          div(class="!pl:h@s") .!pl:h@s { padding-left:   0.5rem  !important; }
+          div(class="!pl:1@s") .!pl:1@s { padding-left:   1rem    !important; }
+          div(class="!pl:2@s") .!pl:2@s { padding-left:   2rem    !important; }
+          div(class="!pl:4@s") .!pl:4@s { padding-left:   4rem    !important; }
+          div(class="!pl:8@s") .!pl:8@s { padding-left:   8rem    !important; }
+          div(class="!pl:g@s") .!pl:g@s { padding-left:   16rem   !important; }
+          div(class="!pr:0@s") .!pr:0@s { padding-right:  initial !important; }
+          div(class="!pr:i@s") .!pr:i@s { padding-right:  inherit !important; }
+          div(class="!pr:h@s") .!pr:h@s { padding-right:  0.5rem  !important; }
+          div(class="!pr:1@s") .!pr:1@s { padding-right:  1rem    !important; }
+          div(class="!pr:2@s") .!pr:2@s { padding-right:  2rem    !important; }
+          div(class="!pr:4@s") .!pr:4@s { padding-right:  4rem    !important; }
+          div(class="!pr:8@s") .!pr:8@s { padding-right:  8rem    !important; }
+          div(class="!pr:g@s") .!pr:g@s { padding-right:  16rem   !important; }
+          div(class="!pt:0@s") .!pt:0@s { padding-top:    initial !important; }
+          div(class="!pt:i@s") .!pt:i@s { padding-top:    inherit !important; }
+          div(class="!pt:h@s") .!pt:h@s { padding-top:    0.5rem  !important; }
+          div(class="!pt:1@s") .!pt:1@s { padding-top:    1rem    !important; }
+          div(class="!pt:2@s") .!pt:2@s { padding-top:    2rem    !important; }
+          div(class="!pt:4@s") .!pt:4@s { padding-top:    4rem    !important; }
+          div(class="!pt:8@s") .!pt:8@s { padding-top:    8rem    !important; }
+          div(class="!pt:g@s") .!pt:g@s { padding-top:    16rem   !important; }
+          div(class="!pb:0@s") .!pb:0@s { padding-bottom: initial !important; }
+          div(class="!pb:i@s") .!pb:i@s { padding-bottom: inherit !important; }
+          div(class="!pb:h@s") .!pb:h@s { padding-bottom: 0.5rem  !important; }
+          div(class="!pb:1@s") .!pb:1@s { padding-bottom: 1rem    !important; }
+          div(class="!pb:2@s") .!pb:2@s { padding-bottom: 2rem    !important; }
+          div(class="!pb:4@s") .!pb:4@s { padding-bottom: 4rem    !important; }
+          div(class="!pb:8@s") .!pb:8@s { padding-bottom: 8rem    !important; }
+          div(class="!pb:g@s") .!pb:g@s { padding-bottom: 16rem   !important; }
+          div(class="!px:0@s") .!px:0@s { padding-left:   initial !important; padding-right:  initial !important; }
+          div(class="!px:0@s") .!px:0@s { padding-left:   inherit !important; padding-right:  inherit !important; }
+          div(class="!px:h@s") .!px:h@s { padding-left:   0.5rem  !important; padding-right:  0.5rem  !important; }
+          div(class="!px:1@s") .!px:1@s { padding-left:   1rem    !important; padding-right:  1rem    !important; }
+          div(class="!px:2@s") .!px:2@s { padding-left:   2rem    !important; padding-right:  2rem    !important; }
+          div(class="!px:4@s") .!px:4@s { padding-left:   4rem    !important; padding-right:  4rem    !important; }
+          div(class="!px:8@s") .!px:8@s { padding-left:   8rem    !important; padding-right:  8rem    !important; }
+          div(class="!px:g@s") .!px:g@s { padding-left:   16rem   !important; padding-right:  16rem   !important; }
+          div(class="!py:0@s") .!py:0@s { padding-top:    initial !important; padding-bottom: initial !important; }
+          div(class="!py:0@s") .!py:0@s { padding-top:    inherit !important; padding-bottom: inherit !important; }
+          div(class="!py:h@s") .!py:h@s { padding-top:    0.5rem  !important; padding-bottom: 0.5rem  !important; }
+          div(class="!py:1@s") .!py:1@s { padding-top:    1rem    !important; padding-bottom: 1rem    !important; }
+          div(class="!py:2@s") .!py:2@s { padding-top:    2rem    !important; padding-bottom: 2rem    !important; }
+          div(class="!py:4@s") .!py:4@s { padding-top:    4rem    !important; padding-bottom: 4rem    !important; }
+          div(class="!py:8@s") .!py:8@s { padding-top:    8rem    !important; padding-bottom: 8rem    !important; }
+          div(class="!py:g@s") .!py:g@s { padding-top:    16rem   !important; padding-bottom: 16rem   !important; }
+          div(class="!pa:0@s") .!pa:0@s { padding:        initial !important; }
+          div(class="!pa:0@s") .!pa:0@s { padding:        inherit !important; }
+          div(class="!pa:h@s") .!pa:h@s { padding:        0.5rem  !important; }
+          div(class="!pa:1@s") .!pa:1@s { padding:        1rem    !important; }
+          div(class="!pa:2@s") .!pa:2@s { padding:        2rem    !important; }
+          div(class="!pa:4@s") .!pa:4@s { padding:        4rem    !important; }
+          div(class="!pa:8@s") .!pa:8@s { padding:        8rem    !important; }
+          div(class="!pa:g@s") .!pa:g@s { padding:        16rem   !important; }
         section
           h1 @media print
-          div(class="!pl:0@p") .!pl:0@p { padding-left: 0      !important; }
-          div(class="!pl:h@p") .!pl:h@p { padding-left: 0.5rem !important; }
-          div(class="!pl:1@p") .!pl:1@p { padding-left: 1rem   !important; }
-          div(class="!pl:2@p") .!pl:2@p { padding-left: 2rem   !important; }
-          div(class="!pl:4@p") .!pl:4@p { padding-left: 4rem   !important; }
-          div(class="!pr:0@p") .!pr:0@p { padding-right: 0      !important; }
-          div(class="!pr:h@p") .!pr:h@p { padding-right: 0.5rem !important; }
-          div(class="!pr:1@p") .!pr:1@p { padding-right: 1rem   !important; }
-          div(class="!pr:2@p") .!pr:2@p { padding-right: 2rem   !important; }
-          div(class="!pr:4@p") .!pr:4@p { padding-right: 4rem   !important; }
-          div(class="!pt:0@p") .!pt:0@p { padding-top: 0      !important; }
-          div(class="!pt:h@p") .!pt:h@p { padding-top: 0.5rem !important; }
-          div(class="!pt:1@p") .!pt:1@p { padding-top: 1rem   !important; }
-          div(class="!pt:2@p") .!pt:2@p { padding-top: 2rem   !important; }
-          div(class="!pt:4@p") .!pt:4@p { padding-top: 4rem   !important; }
-          div(class="!pb:0@p") .!pb:0@p { padding-bottom: 0      !important; }
-          div(class="!pb:h@p") .!pb:h@p { padding-bottom: 0.5rem !important; }
-          div(class="!pb:1@p") .!pb:1@p { padding-bottom: 1rem   !important; }
-          div(class="!pb:2@p") .!pb:2@p { padding-bottom: 2rem   !important; }
-          div(class="!pb:4@p") .!pb:4@p { padding-bottom: 4rem   !important; }
-          div(class="!px:0@p") .!px:0@p { padding-left: 0      !important; padding-right: 0      !important; }
-          div(class="!px:h@p") .!px:h@p { padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
-          div(class="!px:1@p") .!px:1@p { padding-left: 1rem   !important; padding-right: 1rem   !important; }
-          div(class="!px:2@p") .!px:2@p { padding-left: 2rem   !important; padding-right: 2rem   !important; }
-          div(class="!px:4@p") .!px:4@p { padding-left: 4rem   !important; padding-right: 4rem   !important; }
-          div(class="!py:0@p") .!py:0@p { padding-top: 0      !important; padding-bottom: 0      !important; }
-          div(class="!py:h@p") .!py:h@p { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
-          div(class="!py:1@p") .!py:1@p { padding-top: 1rem   !important; padding-bottom: 1rem   !important; }
-          div(class="!py:2@p") .!py:2@p { padding-top: 2rem   !important; padding-bottom: 2rem   !important; }
-          div(class="!py:4@p") .!py:4@p { padding-top: 4rem   !important; padding-bottom: 4rem   !important; }
-          div(class="!pa:0@p") .!pa:0@p { padding-left: 0      !important; padding-right: 0      !important; padding-top: 0      !important; padding-bottom: 0      !important; }
-          div(class="!pa:h@p") .!pa:h@p { padding-left: 0.5rem !important; padding-right: 0.5rem !important; padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
-          div(class="!pa:1@p") .!pa:1@p { padding-left: 1rem   !important; padding-right: 1rem   !important; padding-top: 1rem   !important; padding-bottom: 1rem   !important; }
-          div(class="!pa:2@p") .!pa:2@p { padding-left: 2rem   !important; padding-right: 2rem   !important; padding-top: 2rem   !important; padding-bottom: 2rem   !important; }
-          div(class="!pa:4@p") .!pa:4@p { padding-left: 4rem   !important; padding-right: 4rem   !important; padding-top: 4rem   !important; padding-bottom: 4rem   !important; }
-      section
+          div(class="!pl:0@p") .!pl:0@p { padding-left:   initial !important; }
+          div(class="!pl:i@p") .!pl:i@p { padding-left:   inherit !important; }
+          div(class="!pl:h@p") .!pl:h@p { padding-left:   0.5rem  !important; }
+          div(class="!pl:1@p") .!pl:1@p { padding-left:   1rem    !important; }
+          div(class="!pl:2@p") .!pl:2@p { padding-left:   2rem    !important; }
+          div(class="!pl:4@p") .!pl:4@p { padding-left:   4rem    !important; }
+          div(class="!pl:8@p") .!pl:8@p { padding-left:   8rem    !important; }
+          div(class="!pl:g@p") .!pl:g@p { padding-left:   16rem   !important; }
+          div(class="!pr:0@p") .!pr:0@p { padding-right:  initial !important; }
+          div(class="!pr:i@p") .!pr:i@p { padding-right:  inherit !important; }
+          div(class="!pr:h@p") .!pr:h@p { padding-right:  0.5rem  !important; }
+          div(class="!pr:1@p") .!pr:1@p { padding-right:  1rem    !important; }
+          div(class="!pr:2@p") .!pr:2@p { padding-right:  2rem    !important; }
+          div(class="!pr:4@p") .!pr:4@p { padding-right:  4rem    !important; }
+          div(class="!pr:8@p") .!pr:8@p { padding-right:  8rem    !important; }
+          div(class="!pr:g@p") .!pr:g@p { padding-right:  16rem   !important; }
+          div(class="!pt:0@p") .!pt:0@p { padding-top:    initial !important; }
+          div(class="!pt:i@p") .!pt:i@p { padding-top:    inherit !important; }
+          div(class="!pt:h@p") .!pt:h@p { padding-top:    0.5rem  !important; }
+          div(class="!pt:1@p") .!pt:1@p { padding-top:    1rem    !important; }
+          div(class="!pt:2@p") .!pt:2@p { padding-top:    2rem    !important; }
+          div(class="!pt:4@p") .!pt:4@p { padding-top:    4rem    !important; }
+          div(class="!pt:8@p") .!pt:8@p { padding-top:    8rem    !important; }
+          div(class="!pt:g@p") .!pt:g@p { padding-top:    16rem   !important; }
+          div(class="!pb:0@p") .!pb:0@p { padding-bottom: initial !important; }
+          div(class="!pb:i@p") .!pb:i@p { padding-bottom: inherit !important; }
+          div(class="!pb:h@p") .!pb:h@p { padding-bottom: 0.5rem  !important; }
+          div(class="!pb:1@p") .!pb:1@p { padding-bottom: 1rem    !important; }
+          div(class="!pb:2@p") .!pb:2@p { padding-bottom: 2rem    !important; }
+          div(class="!pb:4@p") .!pb:4@p { padding-bottom: 4rem    !important; }
+          div(class="!pb:8@p") .!pb:8@p { padding-bottom: 8rem    !important; }
+          div(class="!pb:g@p") .!pb:g@p { padding-bottom: 16rem   !important; }
+          div(class="!px:0@p") .!px:0@p { padding-left:   initial !important; padding-right:  initial !important; }
+          div(class="!px:i@p") .!px:i@p { padding-left:   inherit !important; padding-right:  inherit !important; }
+          div(class="!px:h@p") .!px:h@p { padding-left:   0.5rem  !important; padding-right:  0.5rem  !important; }
+          div(class="!px:1@p") .!px:1@p { padding-left:   1rem    !important; padding-right:  1rem    !important; }
+          div(class="!px:2@p") .!px:2@p { padding-left:   2rem    !important; padding-right:  2rem    !important; }
+          div(class="!px:4@p") .!px:4@p { padding-left:   4rem    !important; padding-right:  4rem    !important; }
+          div(class="!px:8@p") .!px:8@p { padding-left:   8rem    !important; padding-right:  8rem    !important; }
+          div(class="!px:g@p") .!px:g@p { padding-left:   16rem   !important; padding-right:  16rem   !important; }
+          div(class="!py:0@p") .!py:0@p { padding-top:    initial !important; padding-bottom: initial !important; }
+          div(class="!py:0@p") .!py:0@p { padding-top:    inherit !important; padding-bottom: inherit !important; }
+          div(class="!py:h@p") .!py:h@p { padding-top:    0.5rem  !important; padding-bottom: 0.5rem  !important; }
+          div(class="!py:1@p") .!py:1@p { padding-top:    1rem    !important; padding-bottom: 1rem    !important; }
+          div(class="!py:2@p") .!py:2@p { padding-top:    2rem    !important; padding-bottom: 2rem    !important; }
+          div(class="!py:4@p") .!py:4@p { padding-top:    4rem    !important; padding-bottom: 4rem    !important; }
+          div(class="!py:8@p") .!py:8@p { padding-top:    8rem    !important; padding-bottom: 8rem    !important; }
+          div(class="!py:g@p") .!py:g@p { padding-top:    16rem   !important; padding-bottom: 16rem   !important; }
+          div(class="!pa:0@p") .!pa:0@p { padding:        initial !important; }
+          div(class="!pa:0@p") .!pa:0@p { padding:        inherit !important; }
+          div(class="!pa:h@p") .!pa:h@p { padding:        0.5rem  !important; }
+          div(class="!pa:1@p") .!pa:1@p { padding:        1rem    !important; }
+          div(class="!pa:2@p") .!pa:2@p { padding:        2rem    !important; }
+          div(class="!pa:4@p") .!pa:4@p { padding:        4rem    !important; }
+          div(class="!pa:8@p") .!pa:8@p { padding:        8rem    !important; }
+          div(class="!pa:g@p") .!pa:g@p { padding:        16rem   !important; }
+      section#margin
         h1 _margin.less
         section
           h1 all media queries
-          div(class="!ml:0") .!ml:0 { margin-left: 0      !important; }
-          div(class="!ml:h") .!ml:h { margin-left: 0.5rem !important; }
-          div(class="!ml:1") .!ml:1 { margin-left: 1rem   !important; }
-          div(class="!ml:2") .!ml:2 { margin-left: 2rem   !important; }
-          div(class="!ml:4") .!ml:4 { margin-left: 4rem   !important; }
-          div(class="!mr:0") .!mr:0 { margin-right: 0      !important; }
-          div(class="!mr:h") .!mr:h { margin-right: 0.5rem !important; }
-          div(class="!mr:1") .!mr:1 { margin-right: 1rem   !important; }
-          div(class="!mr:2") .!mr:2 { margin-right: 2rem   !important; }
-          div(class="!mr:4") .!mr:4 { margin-right: 4rem   !important; }
-          div(class="!mt:0") .!mt:0 { margin-top: 0      !important; }
-          div(class="!mt:h") .!mt:h { margin-top: 0.5rem !important; }
-          div(class="!mt:1") .!mt:1 { margin-top: 1rem   !important; }
-          div(class="!mt:2") .!mt:2 { margin-top: 2rem   !important; }
-          div(class="!mt:4") .!mt:4 { margin-top: 4rem   !important; }
-          div(class="!mb:0") .!mb:0 { margin-bottom: 0      !important; }
-          div(class="!mb:h") .!mb:h { margin-bottom: 0.5rem !important; }
-          div(class="!mb:1") .!mb:1 { margin-bottom: 1rem   !important; }
-          div(class="!mb:2") .!mb:2 { margin-bottom: 2rem   !important; }
-          div(class="!mb:4") .!mb:4 { margin-bottom: 4rem   !important; }
-          div(class="!mx:0") .!mx:0 { margin-left: 0      !important; margin-right: 0      !important; }
-          div(class="!mx:h") .!mx:h { margin-left: 0.5rem !important; margin-right: 0.5rem !important; }
-          div(class="!mx:1") .!mx:1 { margin-left: 1rem   !important; margin-right: 1rem   !important; }
-          div(class="!mx:2") .!mx:2 { margin-left: 2rem   !important; margin-right: 2rem   !important; }
-          div(class="!mx:4") .!mx:4 { margin-left: 4rem   !important; margin-right: 4rem   !important; }
-          div(class="!my:0") .!my:0 { margin-top: 0      !important; margin-bottom: 0      !important; }
-          div(class="!my:h") .!my:h { margin-top: 0.5rem !important; margin-bottom: 0.5rem !important; }
-          div(class="!my:1") .!my:1 { margin-top: 1rem   !important; margin-bottom: 1rem   !important; }
-          div(class="!my:2") .!my:2 { margin-top: 2rem   !important; margin-bottom: 2rem   !important; }
-          div(class="!my:4") .!my:4 { margin-top: 4rem   !important; margin-bottom: 4rem   !important; }
-          div(class="!ma:0") .!ma:0 { margin-left: 0      !important; margin-right: 0      !important; margin-top: 0      !important; margin-bottom: 0      !important; }
-          div(class="!ma:h") .!ma:h { margin-left: 0.5rem !important; margin-right: 0.5rem !important; margin-top: 0.5rem !important; margin-bottom: 0.5rem !important; }
-          div(class="!ma:1") .!ma:1 { margin-left: 1rem   !important; margin-right: 1rem   !important; margin-top: 1rem   !important; margin-bottom: 1rem   !important; }
-          div(class="!ma:2") .!ma:2 { margin-left: 2rem   !important; margin-right: 2rem   !important; margin-top: 2rem   !important; margin-bottom: 2rem   !important; }
-          div(class="!ma:4") .!ma:4 { margin-left: 4rem   !important; margin-right: 4rem   !important; margin-top: 4rem   !important; margin-bottom: 4rem   !important; }
+          div(class="!ml:0")   .!ml:0   { margin-left:   initial !important; }
+          div(class="!ml:i")   .!ml:i   { margin-left:   inherit !important; }
+          div(class="!ml:a")   .!ml:a   { margin-left:   auto    !important; }
+          div(class="!ml:h")   .!ml:h   { margin-left:   0.5rem  !important; }
+          div(class="!ml:1")   .!ml:1   { margin-left:   1rem    !important; }
+          div(class="!ml:2")   .!ml:2   { margin-left:   2rem    !important; }
+          div(class="!ml:4")   .!ml:4   { margin-left:   4rem    !important; }
+          div(class="!ml:8")   .!ml:8   { margin-left:   8rem    !important; }
+          div(class="!ml:g")   .!ml:g   { margin-left:   16rem   !important; }
+          div(class="!mr:0")   .!mr:0   { margin-right:  initial !important; }
+          div(class="!mr:i")   .!mr:i   { margin-right:  inherit !important; }
+          div(class="!mr:a")   .!mr:a   { margin-right:  auto    !important; }
+          div(class="!mr:h")   .!mr:h   { margin-right:  0.5rem  !important; }
+          div(class="!mr:1")   .!mr:1   { margin-right:  1rem    !important; }
+          div(class="!mr:2")   .!mr:2   { margin-right:  2rem    !important; }
+          div(class="!mr:4")   .!mr:4   { margin-right:  4rem    !important; }
+          div(class="!mr:8")   .!mr:8   { margin-right:  8rem    !important; }
+          div(class="!mr:g")   .!mr:g   { margin-right:  16rem   !important; }
+          div(class="!mt:0")   .!mt:0   { margin-top:    initial !important; }
+          div(class="!mt:i")   .!mt:i   { margin-top:    inherit !important; }
+          div(class="!mt:a")   .!mt:a   { margin-top:    auto    !important; }
+          div(class="!mt:h")   .!mt:h   { margin-top:    0.5rem  !important; }
+          div(class="!mt:1")   .!mt:1   { margin-top:    1rem    !important; }
+          div(class="!mt:2")   .!mt:2   { margin-top:    2rem    !important; }
+          div(class="!mt:4")   .!mt:4   { margin-top:    4rem    !important; }
+          div(class="!mt:8")   .!mt:8   { margin-top:    8rem    !important; }
+          div(class="!mt:g")   .!mt:g   { margin-top:    16rem   !important; }
+          div(class="!mb:0")   .!mb:0   { margin-bottom: initial !important; }
+          div(class="!mb:i")   .!mb:i   { margin-bottom: inherit !important; }
+          div(class="!mb:a")   .!mb:a   { margin-bottom: auto    !important; }
+          div(class="!mb:h")   .!mb:h   { margin-bottom: 0.5rem  !important; }
+          div(class="!mb:1")   .!mb:1   { margin-bottom: 1rem    !important; }
+          div(class="!mb:2")   .!mb:2   { margin-bottom: 2rem    !important; }
+          div(class="!mb:4")   .!mb:4   { margin-bottom: 4rem    !important; }
+          div(class="!mb:8")   .!mb:8   { margin-bottom: 8rem    !important; }
+          div(class="!mb:g")   .!mb:g   { margin-bottom: 16rem   !important; }
+          div(class="!mx:0")   .!mx:0   { margin-left:   initial !important; margin-right:  initial !important; }
+          div(class="!mx:i")   .!mx:i   { margin-left:   inherit !important; margin-right:  inherit !important; }
+          div(class="!mx:a")   .!mx:a   { margin-left:   auto    !important; margin-right:  auto    !important; }
+          div(class="!mx:h")   .!mx:h   { margin-left:   0.5rem  !important; margin-right:  0.5rem  !important; }
+          div(class="!mx:1")   .!mx:1   { margin-left:   1rem    !important; margin-right:  1rem    !important; }
+          div(class="!mx:2")   .!mx:2   { margin-left:   2rem    !important; margin-right:  2rem    !important; }
+          div(class="!mx:4")   .!mx:4   { margin-left:   4rem    !important; margin-right:  4rem    !important; }
+          div(class="!mx:8")   .!mx:8   { margin-left:   8rem    !important; margin-right:  8rem    !important; }
+          div(class="!mx:g")   .!mx:g   { margin-left:   16rem   !important; margin-right:  16rem   !important; }
+          div(class="!my:0")   .!my:0   { margin-top:    initial !important; margin-bottom: initial !important; }
+          div(class="!my:i")   .!my:i   { margin-top:    inherit !important; margin-bottom: inherit !important; }
+          div(class="!my:a")   .!my:a   { margin-top:    auto    !important; margin-bottom: auto    !important; }
+          div(class="!my:h")   .!my:h   { margin-top:    0.5rem  !important; margin-bottom: 0.5rem  !important; }
+          div(class="!my:1")   .!my:1   { margin-top:    1rem    !important; margin-bottom: 1rem    !important; }
+          div(class="!my:2")   .!my:2   { margin-top:    2rem    !important; margin-bottom: 2rem    !important; }
+          div(class="!my:4")   .!my:4   { margin-top:    4rem    !important; margin-bottom: 4rem    !important; }
+          div(class="!my:8")   .!my:8   { margin-top:    8rem    !important; margin-bottom: 8rem    !important; }
+          div(class="!my:g")   .!my:g   { margin-top:    16rem   !important; margin-bottom: 16rem   !important; }
+          div(class="!ma:0")   .!ma:0   { margin:        initial !important; }
+          div(class="!ma:i")   .!ma:i   { margin:        inherit !important; }
+          div(class="!ma:a")   .!ma:a   { margin:        auto    !important; }
+          div(class="!ma:h")   .!ma:h   { margin:        0.5rem  !important; }
+          div(class="!ma:1")   .!ma:1   { margin:        1rem    !important; }
+          div(class="!ma:2")   .!ma:2   { margin:        2rem    !important; }
+          div(class="!ma:4")   .!ma:4   { margin:        4rem    !important; }
+          div(class="!ma:8")   .!ma:8   { margin:        8rem    !important; }
+          div(class="!ma:g")   .!ma:g   { margin:        16rem   !important; }
         section
           h1 @media screen
-          div(class="!ml:0@s") .!ml:0@s { margin-left: 0      !important; }
-          div(class="!ml:h@s") .!ml:h@s { margin-left: 0.5rem !important; }
-          div(class="!ml:1@s") .!ml:1@s { margin-left: 1rem   !important; }
-          div(class="!ml:2@s") .!ml:2@s { margin-left: 2rem   !important; }
-          div(class="!ml:4@s") .!ml:4@s { margin-left: 4rem   !important; }
-          div(class="!mr:0@s") .!mr:0@s { margin-right: 0      !important; }
-          div(class="!mr:h@s") .!mr:h@s { margin-right: 0.5rem !important; }
-          div(class="!mr:1@s") .!mr:1@s { margin-right: 1rem   !important; }
-          div(class="!mr:2@s") .!mr:2@s { margin-right: 2rem   !important; }
-          div(class="!mr:4@s") .!mr:4@s { margin-right: 4rem   !important; }
-          div(class="!mt:0@s") .!mt:0@s { margin-top: 0      !important; }
-          div(class="!mt:h@s") .!mt:h@s { margin-top: 0.5rem !important; }
-          div(class="!mt:1@s") .!mt:1@s { margin-top: 1rem   !important; }
-          div(class="!mt:2@s") .!mt:2@s { margin-top: 2rem   !important; }
-          div(class="!mt:4@s") .!mt:4@s { margin-top: 4rem   !important; }
-          div(class="!mb:0@s") .!mb:0@s { margin-bottom: 0      !important; }
-          div(class="!mb:h@s") .!mb:h@s { margin-bottom: 0.5rem !important; }
-          div(class="!mb:1@s") .!mb:1@s { margin-bottom: 1rem   !important; }
-          div(class="!mb:2@s") .!mb:2@s { margin-bottom: 2rem   !important; }
-          div(class="!mb:4@s") .!mb:4@s { margin-bottom: 4rem   !important; }
-          div(class="!mx:0@s") .!mx:0@s { margin-left: 0      !important; margin-right: 0      !important; }
-          div(class="!mx:h@s") .!mx:h@s { margin-left: 0.5rem !important; margin-right: 0.5rem !important; }
-          div(class="!mx:1@s") .!mx:1@s { margin-left: 1rem   !important; margin-right: 1rem   !important; }
-          div(class="!mx:2@s") .!mx:2@s { margin-left: 2rem   !important; margin-right: 2rem   !important; }
-          div(class="!mx:4@s") .!mx:4@s { margin-left: 4rem   !important; margin-right: 4rem   !important; }
-          div(class="!my:0@s") .!my:0@s { margin-top: 0      !important; margin-bottom: 0      !important; }
-          div(class="!my:h@s") .!my:h@s { margin-top: 0.5rem !important; margin-bottom: 0.5rem !important; }
-          div(class="!my:1@s") .!my:1@s { margin-top: 1rem   !important; margin-bottom: 1rem   !important; }
-          div(class="!my:2@s") .!my:2@s { margin-top: 2rem   !important; margin-bottom: 2rem   !important; }
-          div(class="!my:4@s") .!my:4@s { margin-top: 4rem   !important; margin-bottom: 4rem   !important; }
-          div(class="!ma:0@s") .!ma:0@s { margin-left: 0      !important; margin-right: 0      !important; margin-top: 0      !important; margin-bottom: 0      !important; }
-          div(class="!ma:h@s") .!ma:h@s { margin-left: 0.5rem !important; margin-right: 0.5rem !important; margin-top: 0.5rem !important; margin-bottom: 0.5rem !important; }
-          div(class="!ma:1@s") .!ma:1@s { margin-left: 1rem   !important; margin-right: 1rem   !important; margin-top: 1rem   !important; margin-bottom: 1rem   !important; }
-          div(class="!ma:2@s") .!ma:2@s { margin-left: 2rem   !important; margin-right: 2rem   !important; margin-top: 2rem   !important; margin-bottom: 2rem   !important; }
-          div(class="!ma:4@s") .!ma:4@s { margin-left: 4rem   !important; margin-right: 4rem   !important; margin-top: 4rem   !important; margin-bottom: 4rem   !important; }
+          div(class="!ml:0@s") .!ml:0@s { margin-left:   initial !important; }
+          div(class="!ml:i@s") .!ml:i@s { margin-left:   inherit !important; }
+          div(class="!ml:a@s") .!ml:a@s { margin-left:   auto    !important; }
+          div(class="!ml:h@s") .!ml:h@s { margin-left:   0.5rem  !important; }
+          div(class="!ml:1@s") .!ml:1@s { margin-left:   1rem    !important; }
+          div(class="!ml:2@s") .!ml:2@s { margin-left:   2rem    !important; }
+          div(class="!ml:4@s") .!ml:4@s { margin-left:   4rem    !important; }
+          div(class="!ml:8@s") .!ml:8@s { margin-left:   8rem    !important; }
+          div(class="!ml:g@s") .!ml:g@s { margin-left:   16rem   !important; }
+          div(class="!mr:0@s") .!mr:0@s { margin-right:  initial !important; }
+          div(class="!mr:i@s") .!mr:i@s { margin-right:  inherit !important; }
+          div(class="!mr:a@s") .!mr:a@s { margin-right:  auto    !important; }
+          div(class="!mr:h@s") .!mr:h@s { margin-right:  0.5rem  !important; }
+          div(class="!mr:1@s") .!mr:1@s { margin-right:  1rem    !important; }
+          div(class="!mr:2@s") .!mr:2@s { margin-right:  2rem    !important; }
+          div(class="!mr:4@s") .!mr:4@s { margin-right:  4rem    !important; }
+          div(class="!mr:8@s") .!mr:8@s { margin-right:  8rem    !important; }
+          div(class="!mr:g@s") .!mr:g@s { margin-right:  16rem   !important; }
+          div(class="!mt:0@s") .!mt:0@s { margin-top:    initial !important; }
+          div(class="!mt:i@s") .!mt:i@s { margin-top:    inherit !important; }
+          div(class="!mt:a@s") .!mt:a@s { margin-top:    auto    !important; }
+          div(class="!mt:h@s") .!mt:h@s { margin-top:    0.5rem  !important; }
+          div(class="!mt:1@s") .!mt:1@s { margin-top:    1rem    !important; }
+          div(class="!mt:2@s") .!mt:2@s { margin-top:    2rem    !important; }
+          div(class="!mt:4@s") .!mt:4@s { margin-top:    4rem    !important; }
+          div(class="!mt:8@s") .!mt:8@s { margin-top:    8rem    !important; }
+          div(class="!mt:g@s") .!mt:g@s { margin-top:    16rem   !important; }
+          div(class="!mb:0@s") .!mb:0@s { margin-bottom: initial !important; }
+          div(class="!mb:i@s") .!mb:i@s { margin-bottom: inherit !important; }
+          div(class="!mb:a@s") .!mb:a@s { margin-bottom: auto    !important; }
+          div(class="!mb:h@s") .!mb:h@s { margin-bottom: 0.5rem  !important; }
+          div(class="!mb:1@s") .!mb:1@s { margin-bottom: 1rem    !important; }
+          div(class="!mb:2@s") .!mb:2@s { margin-bottom: 2rem    !important; }
+          div(class="!mb:4@s") .!mb:4@s { margin-bottom: 4rem    !important; }
+          div(class="!mb:8@s") .!mb:8@s { margin-bottom: 8rem    !important; }
+          div(class="!mb:g@s") .!mb:g@s { margin-bottom: 16rem   !important; }
+          div(class="!mx:0@s") .!mx:0@s { margin-left:   initial !important; margin-right:  initial !important; }
+          div(class="!mx:i@s") .!mx:i@s { margin-left:   inherit !important; margin-right:  inherit !important; }
+          div(class="!mx:a@s") .!mx:a@s { margin-left:   auto    !important; margin-right:  auto    !important; }
+          div(class="!mx:h@s") .!mx:h@s { margin-left:   0.5rem  !important; margin-right:  0.5rem  !important; }
+          div(class="!mx:1@s") .!mx:1@s { margin-left:   1rem    !important; margin-right:  1rem    !important; }
+          div(class="!mx:2@s") .!mx:2@s { margin-left:   2rem    !important; margin-right:  2rem    !important; }
+          div(class="!mx:4@s") .!mx:4@s { margin-left:   4rem    !important; margin-right:  4rem    !important; }
+          div(class="!mx:8@s") .!mx:8@s { margin-left:   8rem    !important; margin-right:  8rem    !important; }
+          div(class="!mx:g@s") .!mx:g@s { margin-left:   16rem   !important; margin-right:  16rem   !important; }
+          div(class="!my:0@s") .!my:0@s { margin-top:    initial !important; margin-bottom: initial !important; }
+          div(class="!my:i@s") .!my:i@s { margin-top:    inherit !important; margin-bottom: inherit !important; }
+          div(class="!my:a@s") .!my:a@s { margin-top:    auto    !important; margin-bottom: auto    !important; }
+          div(class="!my:h@s") .!my:h@s { margin-top:    0.5rem  !important; margin-bottom: 0.5rem  !important; }
+          div(class="!my:1@s") .!my:1@s { margin-top:    1rem    !important; margin-bottom: 1rem    !important; }
+          div(class="!my:2@s") .!my:2@s { margin-top:    2rem    !important; margin-bottom: 2rem    !important; }
+          div(class="!my:4@s") .!my:4@s { margin-top:    4rem    !important; margin-bottom: 4rem    !important; }
+          div(class="!my:8@s") .!my:8@s { margin-top:    8rem    !important; margin-bottom: 8rem    !important; }
+          div(class="!my:g@s") .!my:g@s { margin-top:    16rem   !important; margin-bottom: 16rem   !important; }
+          div(class="!ma:0@s") .!ma:0@s { margin:        initial !important; }
+          div(class="!ma:i@s") .!ma:i@s { margin:        inherit !important; }
+          div(class="!ma:a@s") .!ma:a@s { margin:        auto    !important; }
+          div(class="!ma:h@s") .!ma:h@s { margin:        0.5rem  !important; }
+          div(class="!ma:1@s") .!ma:1@s { margin:        1rem    !important; }
+          div(class="!ma:2@s") .!ma:2@s { margin:        2rem    !important; }
+          div(class="!ma:4@s") .!ma:4@s { margin:        4rem    !important; }
+          div(class="!ma:8@s") .!ma:8@s { margin:        8rem    !important; }
+          div(class="!ma:g@s") .!ma:g@s { margin:        16rem   !important; }
         section
           h1 @media print
-          div(class="!ml:0@p") .!ml:0@p { margin-left: 0      !important; }
-          div(class="!ml:h@p") .!ml:h@p { margin-left: 0.5rem !important; }
-          div(class="!ml:1@p") .!ml:1@p { margin-left: 1rem   !important; }
-          div(class="!ml:2@p") .!ml:2@p { margin-left: 2rem   !important; }
-          div(class="!ml:4@p") .!ml:4@p { margin-left: 4rem   !important; }
-          div(class="!mr:0@p") .!mr:0@p { margin-right: 0      !important; }
-          div(class="!mr:h@p") .!mr:h@p { margin-right: 0.5rem !important; }
-          div(class="!mr:1@p") .!mr:1@p { margin-right: 1rem   !important; }
-          div(class="!mr:2@p") .!mr:2@p { margin-right: 2rem   !important; }
-          div(class="!mr:4@p") .!mr:4@p { margin-right: 4rem   !important; }
-          div(class="!mt:0@p") .!mt:0@p { margin-top: 0      !important; }
-          div(class="!mt:h@p") .!mt:h@p { margin-top: 0.5rem !important; }
-          div(class="!mt:1@p") .!mt:1@p { margin-top: 1rem   !important; }
-          div(class="!mt:2@p") .!mt:2@p { margin-top: 2rem   !important; }
-          div(class="!mt:4@p") .!mt:4@p { margin-top: 4rem   !important; }
-          div(class="!mb:0@p") .!mb:0@p { margin-bottom: 0      !important; }
-          div(class="!mb:h@p") .!mb:h@p { margin-bottom: 0.5rem !important; }
-          div(class="!mb:1@p") .!mb:1@p { margin-bottom: 1rem   !important; }
-          div(class="!mb:2@p") .!mb:2@p { margin-bottom: 2rem   !important; }
-          div(class="!mb:4@p") .!mb:4@p { margin-bottom: 4rem   !important; }
-          div(class="!mx:0@p") .!mx:0@p { margin-left: 0      !important; margin-right: 0      !important; }
-          div(class="!mx:h@p") .!mx:h@p { margin-left: 0.5rem !important; margin-right: 0.5rem !important; }
-          div(class="!mx:1@p") .!mx:1@p { margin-left: 1rem   !important; margin-right: 1rem   !important; }
-          div(class="!mx:2@p") .!mx:2@p { margin-left: 2rem   !important; margin-right: 2rem   !important; }
-          div(class="!mx:4@p") .!mx:4@p { margin-left: 4rem   !important; margin-right: 4rem   !important; }
-          div(class="!my:0@p") .!my:0@p { margin-top: 0      !important; margin-bottom: 0      !important; }
-          div(class="!my:h@p") .!my:h@p { margin-top: 0.5rem !important; margin-bottom: 0.5rem !important; }
-          div(class="!my:1@p") .!my:1@p { margin-top: 1rem   !important; margin-bottom: 1rem   !important; }
-          div(class="!my:2@p") .!my:2@p { margin-top: 2rem   !important; margin-bottom: 2rem   !important; }
-          div(class="!my:4@p") .!my:4@p { margin-top: 4rem   !important; margin-bottom: 4rem   !important; }
-          div(class="!ma:0@p") .!ma:0@p { margin-left: 0      !important; margin-right: 0      !important; margin-top: 0      !important; margin-bottom: 0      !important; }
-          div(class="!ma:h@p") .!ma:h@p { margin-left: 0.5rem !important; margin-right: 0.5rem !important; margin-top: 0.5rem !important; margin-bottom: 0.5rem !important; }
-          div(class="!ma:1@p") .!ma:1@p { margin-left: 1rem   !important; margin-right: 1rem   !important; margin-top: 1rem   !important; margin-bottom: 1rem   !important; }
-          div(class="!ma:2@p") .!ma:2@p { margin-left: 2rem   !important; margin-right: 2rem   !important; margin-top: 2rem   !important; margin-bottom: 2rem   !important; }
-          div(class="!ma:4@p") .!ma:4@p { margin-left: 4rem   !important; margin-right: 4rem   !important; margin-top: 4rem   !important; margin-bottom: 4rem   !important; }
-      section.ss-flexbox
+          div(class="!ml:0@p") .!ml:0@p { margin-left:   initial !important; }
+          div(class="!ml:i@p") .!ml:i@p { margin-left:   inherit !important; }
+          div(class="!ml:a@p") .!ml:a@p { margin-left:   auto    !important; }
+          div(class="!ml:h@p") .!ml:h@p { margin-left:   0.5rem  !important; }
+          div(class="!ml:1@p") .!ml:1@p { margin-left:   1rem    !important; }
+          div(class="!ml:2@p") .!ml:2@p { margin-left:   2rem    !important; }
+          div(class="!ml:4@p") .!ml:4@p { margin-left:   4rem    !important; }
+          div(class="!ml:8@p") .!ml:8@p { margin-left:   8rem    !important; }
+          div(class="!ml:g@p") .!ml:g@p { margin-left:   16rem   !important; }
+          div(class="!mr:0@p") .!mr:0@p { margin-right:  initial !important; }
+          div(class="!mr:i@p") .!mr:i@p { margin-right:  inherit !important; }
+          div(class="!mr:a@p") .!mr:a@p { margin-right:  auto    !important; }
+          div(class="!mr:h@p") .!mr:h@p { margin-right:  0.5rem  !important; }
+          div(class="!mr:1@p") .!mr:1@p { margin-right:  1rem    !important; }
+          div(class="!mr:2@p") .!mr:2@p { margin-right:  2rem    !important; }
+          div(class="!mr:4@p") .!mr:4@p { margin-right:  4rem    !important; }
+          div(class="!mr:8@p") .!mr:8@p { margin-right:  8rem    !important; }
+          div(class="!mr:g@p") .!mr:g@p { margin-right:  16rem   !important; }
+          div(class="!mt:0@p") .!mt:0@p { margin-top:    initial !important; }
+          div(class="!mt:i@p") .!mt:i@p { margin-top:    inherit !important; }
+          div(class="!mt:a@p") .!mt:a@p { margin-top:    auto    !important; }
+          div(class="!mt:h@p") .!mt:h@p { margin-top:    0.5rem  !important; }
+          div(class="!mt:1@p") .!mt:1@p { margin-top:    1rem    !important; }
+          div(class="!mt:2@p") .!mt:2@p { margin-top:    2rem    !important; }
+          div(class="!mt:4@p") .!mt:4@p { margin-top:    4rem    !important; }
+          div(class="!mt:8@p") .!mt:8@p { margin-top:    8rem    !important; }
+          div(class="!mt:g@p") .!mt:g@p { margin-top:    16rem   !important; }
+          div(class="!mb:0@p") .!mb:0@p { margin-bottom: initial !important; }
+          div(class="!mb:i@p") .!mb:i@p { margin-bottom: inherit !important; }
+          div(class="!mb:a@p") .!mb:a@p { margin-bottom: auto    !important; }
+          div(class="!mb:h@p") .!mb:h@p { margin-bottom: 0.5rem  !important; }
+          div(class="!mb:1@p") .!mb:1@p { margin-bottom: 1rem    !important; }
+          div(class="!mb:2@p") .!mb:2@p { margin-bottom: 2rem    !important; }
+          div(class="!mb:4@p") .!mb:4@p { margin-bottom: 4rem    !important; }
+          div(class="!mb:8@p") .!mb:8@p { margin-bottom: 8rem    !important; }
+          div(class="!mb:g@p") .!mb:g@p { margin-bottom: 16rem   !important; }
+          div(class="!mx:0@p") .!mx:0@p { margin-left:   initial !important; margin-right:  initial !important; }
+          div(class="!mx:i@p") .!mx:i@p { margin-left:   inherit !important; margin-right:  inherit !important; }
+          div(class="!mx:a@p") .!mx:a@p { margin-left:   auto    !important; margin-right:  auto    !important; }
+          div(class="!mx:h@p") .!mx:h@p { margin-left:   0.5rem  !important; margin-right:  0.5rem  !important; }
+          div(class="!mx:1@p") .!mx:1@p { margin-left:   1rem    !important; margin-right:  1rem    !important; }
+          div(class="!mx:2@p") .!mx:2@p { margin-left:   2rem    !important; margin-right:  2rem    !important; }
+          div(class="!mx:4@p") .!mx:4@p { margin-left:   4rem    !important; margin-right:  4rem    !important; }
+          div(class="!mx:8@p") .!mx:8@p { margin-left:   8rem    !important; margin-right:  8rem    !important; }
+          div(class="!mx:g@p") .!mx:g@p { margin-left:   16rem   !important; margin-right:  16rem   !important; }
+          div(class="!my:0@p") .!my:0@p { margin-top:    initial !important; margin-bottom: initial !important; }
+          div(class="!my:i@p") .!my:i@p { margin-top:    inherit !important; margin-bottom: inherit !important; }
+          div(class="!my:a@p") .!my:a@p { margin-top:    auto    !important; margin-bottom: auto    !important; }
+          div(class="!my:h@p") .!my:h@p { margin-top:    0.5rem  !important; margin-bottom: 0.5rem  !important; }
+          div(class="!my:1@p") .!my:1@p { margin-top:    1rem    !important; margin-bottom: 1rem    !important; }
+          div(class="!my:2@p") .!my:2@p { margin-top:    2rem    !important; margin-bottom: 2rem    !important; }
+          div(class="!my:4@p") .!my:4@p { margin-top:    4rem    !important; margin-bottom: 4rem    !important; }
+          div(class="!my:8@p") .!my:8@p { margin-top:    8rem    !important; margin-bottom: 8rem    !important; }
+          div(class="!my:g@p") .!my:g@p { margin-top:    16rem   !important; margin-bottom: 16rem   !important; }
+          div(class="!ma:0@p") .!ma:0@p { margin:        initial !important; }
+          div(class="!ma:i@p") .!ma:i@p { margin:        inherit !important; }
+          div(class="!ma:a@p") .!ma:a@p { margin:        auto    !important; }
+          div(class="!ma:h@p") .!ma:h@p { margin:        0.5rem  !important; }
+          div(class="!ma:1@p") .!ma:1@p { margin:        1rem    !important; }
+          div(class="!ma:2@p") .!ma:2@p { margin:        2rem    !important; }
+          div(class="!ma:4@p") .!ma:4@p { margin:        4rem    !important; }
+          div(class="!ma:8@p") .!ma:8@p { margin:        8rem    !important; }
+          div(class="!ma:g@p") .!ma:g@p { margin:        16rem   !important; }
+      section#position
+        h1 _position.less
+        section
+          h1 all media queries
+          div(class="!ps:0")   .!ps:0   { position: initial  !important; }
+          div(class="!ps:i")   .!ps:i   { position: inherit  !important; }
+          div(class="!ps:s")   .!ps:s   { position: static   !important; }
+          div(class="!ps:r")   .!ps:r   { position: relative !important; }
+          div(class="!ps:f")   .!ps:f   { position: fixed    !important; }
+        section
+          h1 @media screen
+          div(class="!ps:0@s") .!ps:0@s { position: initial  !important; }
+          div(class="!ps:i@s") .!ps:i@s { position: inherit  !important; }
+          div(class="!ps:s@s") .!ps:s@s { position: static   !important; }
+          div(class="!ps:r@s") .!ps:r@s { position: relative !important; }
+          div(class="!ps:f@s") .!ps:f@s { position: fixed    !important; }
+        section
+          h1 @media print
+          div(class="!ps:0@p") .!ps:0@p { position: initial  !important; }
+          div(class="!ps:i@p") .!ps:i@p { position: inherit  !important; }
+          div(class="!ps:s@p") .!ps:s@p { position: static   !important; }
+          div(class="!ps:r@p") .!ps:r@p { position: relative !important; }
+          div(class="!ps:f@p") .!ps:f@p { position: fixed    !important; }
+      section#float
+        h1 _float.less
+        section
+          h1 all media queries
+          div(class="!fl:0")   .!fl:0   { float: initial !important; }
+          div(class="!fl:i")   .!fl:i   { float: inherit !important; }
+          div(class="!fl:n")   .!fl:n   { float: none    !important; }
+          div(class="!fl:l")   .!fl:l   { float: left    !important; }
+          div(class="!fl:r")   .!fl:r   { float: right   !important; }
+
+          div(class="!cl:0")   .!cl:0   { clear: initial !important; }
+          div(class="!cl:i")   .!cl:i   { clear: inherit !important; }
+          div(class="!cl:n")   .!cl:n   { clear: none    !important; }
+          div(class="!cl:l")   .!cl:l   { clear: left    !important; }
+          div(class="!cl:r")   .!cl:r   { clear: right   !important; }
+          div(class="!cl:b")   .!cl:b   { clear: both    !important; }
+        section
+          h1 @media screen
+          div(class="!fl:0@s") .!fl:0@s { float: initial !important; }
+          div(class="!fl:i@s") .!fl:i@s { float: inherit !important; }
+          div(class="!fl:n@s") .!fl:n@s { float: none    !important; }
+          div(class="!fl:l@s") .!fl:l@s { float: left    !important; }
+          div(class="!fl:r@s") .!fl:r@s { float: right   !important; }
+
+          div(class="!cl:0@s") .!cl:0@s { clear: initial !important; }
+          div(class="!cl:i@s") .!cl:i@s { clear: inherit !important; }
+          div(class="!cl:n@s") .!cl:n@s { clear: none    !important; }
+          div(class="!cl:l@s") .!cl:l@s { clear: left    !important; }
+          div(class="!cl:r@s") .!cl:r@s { clear: right   !important; }
+          div(class="!cl:b@s") .!cl:b@s { clear: both    !important; }
+        section
+          h1 @media print
+          div(class="!fl:0@p") .!fl:0@p { float: initial !important; }
+          div(class="!fl:i@p") .!fl:i@p { float: inherit !important; }
+          div(class="!fl:n@p") .!fl:n@p { float: none    !important; }
+          div(class="!fl:l@p") .!fl:l@p { float: left    !important; }
+          div(class="!fl:r@p") .!fl:r@p { float: right   !important; }
+
+          div(class="!cl:0@p") .!cl:0@p { clear: initial !important; }
+          div(class="!cl:i@p") .!cl:i@p { clear: inherit !important; }
+          div(class="!cl:n@p") .!cl:n@p { clear: none    !important; }
+          div(class="!cl:l@p") .!cl:l@p { clear: left    !important; }
+          div(class="!cl:r@p") .!cl:r@p { clear: right   !important; }
+          div(class="!cl:b@p") .!cl:b@p { clear: both    !important; }
+      section#justify-content.ss-flexbox
         h1 _justify-content.less
         section
           h1 all media queries
-          div(class="!j:bt") .!j:bt { justify-content: space-between !important; }
-          div(class="!j:ad") .!j:ad { justify-content: space-around  !important; }
-          div(class="!j:cr") .!j:cr { justify-content: center        !important; }
-          div(class="!j:st") .!j:st { justify-content: flex-start    !important; }
-          div(class="!j:ed") .!j:ed { justify-content: flex-end      !important; }
+          div(class="!j:0 ")   .!j:0    { justify-content: initial       !important; }
+          div(class="!j:i ")   .!j:i    { justify-content: inherit       !important; }
+          div(class="!j:bt")   .!j:bt   { justify-content: space-between !important; }
+          div(class="!j:ad")   .!j:ad   { justify-content: space-around  !important; }
+          div(class="!j:cr")   .!j:cr   { justify-content: center        !important; }
+          div(class="!j:st")   .!j:st   { justify-content: flex-start    !important; }
+          div(class="!j:ed")   .!j:ed   { justify-content: flex-end      !important; }
         section
           h1 @media screen
+          div(class="!j:0@s")  .!j:0@s  { justify-content: initial       !important; }
+          div(class="!j:i@s")  .!j:i@s  { justify-content: inherit       !important; }
           div(class="!j:bt@s") .!j:bt@s { justify-content: space-between !important; }
           div(class="!j:ad@s") .!j:ad@s { justify-content: space-around  !important; }
           div(class="!j:cr@s") .!j:cr@s { justify-content: center        !important; }
@@ -375,75 +725,122 @@ html
           div(class="!j:ed@s") .!j:ed@s { justify-content: flex-end      !important; }
         section
           h1 @media print
+          div(class="!j:0@p")  .!j:0@p  { justify-content: initial       !important; }
+          div(class="!j:i@p")  .!j:i@p  { justify-content: inherit       !important; }
           div(class="!j:bt@p") .!j:bt@p { justify-content: space-between !important; }
           div(class="!j:ad@p") .!j:ad@p { justify-content: space-around  !important; }
           div(class="!j:cr@p") .!j:cr@p { justify-content: center        !important; }
           div(class="!j:st@p") .!j:st@p { justify-content: flex-start    !important; }
           div(class="!j:ed@p") .!j:ed@p { justify-content: flex-end      !important; }
-      section.ss-flexbox
+      section#order.ss-flexbox
         h1 _order.less
         section
           h1 all media queries
-          div(class="!o:0") .!o:0 { order:  0 !important; }
-          div(class="!o:1") .!o:1 { order:  1 !important; }
-          div(class="!o:2") .!o:2 { order:  2 !important; }
-          div(class="!o:3") .!o:3 { order:  3 !important; }
-          div(class="!o:4") .!o:4 { order:  4 !important; }
-          div(class="!o:5") .!o:5 { order:  5 !important; }
-          div(class="!o:6") .!o:6 { order:  6 !important; }
-          div(class="!o:7") .!o:7 { order:  7 !important; }
-          div(class="!o:8") .!o:8 { order:  8 !important; }
-          div(class="!o:9") .!o:9 { order:  9 !important; }
-          div(class="!o:a") .!o:a { order: 10 !important; }
-          div(class="!o:b") .!o:b { order: 11 !important; }
-          div(class="!o:c") .!o:c { order: 12 !important; }
-          div(class="!o:d") .!o:d { order: 13 !important; }
-          div(class="!o:e") .!o:e { order: 14 !important; }
-          div(class="!o:f") .!o:f { order: 15 !important; }
+          div(class="!o:0")    .!o:0    { order: initial !important; }
+          div(class="!o:1")    .!o:1    { order:   1     !important; }
+          div(class="!o:2")    .!o:2    { order:   2     !important; }
+          div(class="!o:3")    .!o:3    { order:   3     !important; }
+          div(class="!o:4")    .!o:4    { order:   4     !important; }
+          div(class="!o:5")    .!o:5    { order:   5     !important; }
+          div(class="!o:6")    .!o:6    { order:   6     !important; }
+          div(class="!o:7")    .!o:7    { order:   7     !important; }
+          div(class="!o:8")    .!o:8    { order:   8     !important; }
+          div(class="!o:9")    .!o:9    { order:   9     !important; }
+          div(class="!o:a")    .!o:a    { order:  10     !important; }
+          div(class="!o:b")    .!o:b    { order:  11     !important; }
+          div(class="!o:c")    .!o:c    { order:  12     !important; }
+          div(class="!o:d")    .!o:d    { order:  13     !important; }
+          div(class="!o:e")    .!o:e    { order:  14     !important; }
+          div(class="!o:f")    .!o:f    { order:  15     !important; }
+          div(class="!o:-1")   .!o:-1   { order:  -1     !important; }
+          div(class="!o:-2")   .!o:-2   { order:  -2     !important; }
+          div(class="!o:-3")   .!o:-3   { order:  -3     !important; }
+          div(class="!o:-4")   .!o:-4   { order:  -4     !important; }
+          div(class="!o:-5")   .!o:-5   { order:  -5     !important; }
+          div(class="!o:-6")   .!o:-6   { order:  -6     !important; }
+          div(class="!o:-7")   .!o:-7   { order:  -7     !important; }
+          div(class="!o:-8")   .!o:-8   { order:  -8     !important; }
+          div(class="!o:-9")   .!o:-9   { order:  -9     !important; }
+          div(class="!o:-a")   .!o:-a   { order: -10     !important; }
+          div(class="!o:-b")   .!o:-b   { order: -11     !important; }
+          div(class="!o:-c")   .!o:-c   { order: -12     !important; }
+          div(class="!o:-d")   .!o:-d   { order: -13     !important; }
+          div(class="!o:-e")   .!o:-e   { order: -14     !important; }
+          div(class="!o:-f")   .!o:-f   { order: -15     !important; }
         section
           h1 @media screen
-          div(class="!o:0@s") .!o:0@s { order:  0 !important; }
-          div(class="!o:1@s") .!o:1@s { order:  1 !important; }
-          div(class="!o:2@s") .!o:2@s { order:  2 !important; }
-          div(class="!o:3@s") .!o:3@s { order:  3 !important; }
-          div(class="!o:4@s") .!o:4@s { order:  4 !important; }
-          div(class="!o:5@s") .!o:5@s { order:  5 !important; }
-          div(class="!o:6@s") .!o:6@s { order:  6 !important; }
-          div(class="!o:7@s") .!o:7@s { order:  7 !important; }
-          div(class="!o:8@s") .!o:8@s { order:  8 !important; }
-          div(class="!o:9@s") .!o:9@s { order:  9 !important; }
-          div(class="!o:a@s") .!o:a@s { order: 10 !important; }
-          div(class="!o:b@s") .!o:b@s { order: 11 !important; }
-          div(class="!o:c@s") .!o:c@s { order: 12 !important; }
-          div(class="!o:d@s") .!o:d@s { order: 13 !important; }
-          div(class="!o:e@s") .!o:e@s { order: 14 !important; }
-          div(class="!o:f@s") .!o:f@s { order: 15 !important; }
+          div(class="!o:0@s ") .!o:0@s  { order: initial !important; }
+          div(class="!o:1@s ") .!o:1@s  { order:   1     !important; }
+          div(class="!o:2@s ") .!o:2@s  { order:   2     !important; }
+          div(class="!o:3@s ") .!o:3@s  { order:   3     !important; }
+          div(class="!o:4@s ") .!o:4@s  { order:   4     !important; }
+          div(class="!o:5@s ") .!o:5@s  { order:   5     !important; }
+          div(class="!o:6@s ") .!o:6@s  { order:   6     !important; }
+          div(class="!o:7@s ") .!o:7@s  { order:   7     !important; }
+          div(class="!o:8@s ") .!o:8@s  { order:   8     !important; }
+          div(class="!o:9@s ") .!o:9@s  { order:   9     !important; }
+          div(class="!o:a@s ") .!o:a@s  { order:  10     !important; }
+          div(class="!o:b@s ") .!o:b@s  { order:  11     !important; }
+          div(class="!o:c@s ") .!o:c@s  { order:  12     !important; }
+          div(class="!o:d@s ") .!o:d@s  { order:  13     !important; }
+          div(class="!o:e@s ") .!o:e@s  { order:  14     !important; }
+          div(class="!o:f@s ") .!o:f@s  { order:  15     !important; }
+          div(class="!o:-1@s") .!o:-1@s { order:  -1     !important; }
+          div(class="!o:-2@s") .!o:-2@s { order:  -2     !important; }
+          div(class="!o:-3@s") .!o:-3@s { order:  -3     !important; }
+          div(class="!o:-4@s") .!o:-4@s { order:  -4     !important; }
+          div(class="!o:-5@s") .!o:-5@s { order:  -5     !important; }
+          div(class="!o:-6@s") .!o:-6@s { order:  -6     !important; }
+          div(class="!o:-7@s") .!o:-7@s { order:  -7     !important; }
+          div(class="!o:-8@s") .!o:-8@s { order:  -8     !important; }
+          div(class="!o:-9@s") .!o:-9@s { order:  -9     !important; }
+          div(class="!o:-a@s") .!o:-a@s { order: -10     !important; }
+          div(class="!o:-b@s") .!o:-b@s { order: -11     !important; }
+          div(class="!o:-c@s") .!o:-c@s { order: -12     !important; }
+          div(class="!o:-d@s") .!o:-d@s { order: -13     !important; }
+          div(class="!o:-e@s") .!o:-e@s { order: -14     !important; }
+          div(class="!o:-f@s") .!o:-f@s { order: -15     !important; }
         section
           h1 @media print
-          div(class="!o:0@p") .!o:0@p { order:  0 !important; }
-          div(class="!o:1@p") .!o:1@p { order:  1 !important; }
-          div(class="!o:2@p") .!o:2@p { order:  2 !important; }
-          div(class="!o:3@p") .!o:3@p { order:  3 !important; }
-          div(class="!o:4@p") .!o:4@p { order:  4 !important; }
-          div(class="!o:5@p") .!o:5@p { order:  5 !important; }
-          div(class="!o:6@p") .!o:6@p { order:  6 !important; }
-          div(class="!o:7@p") .!o:7@p { order:  7 !important; }
-          div(class="!o:8@p") .!o:8@p { order:  8 !important; }
-          div(class="!o:9@p") .!o:9@p { order:  9 !important; }
-          div(class="!o:a@p") .!o:a@p { order: 10 !important; }
-          div(class="!o:b@p") .!o:b@p { order: 11 !important; }
-          div(class="!o:c@p") .!o:c@p { order: 12 !important; }
-          div(class="!o:d@p") .!o:d@p { order: 13 !important; }
-          div(class="!o:e@p") .!o:e@p { order: 14 !important; }
-          div(class="!o:f@p") .!o:f@p { order: 15 !important; }
-      section
+          div(class="!o:0@p ") .!o:0@p  { order: initial !important; }
+          div(class="!o:1@p ") .!o:1@p  { order:   1     !important; }
+          div(class="!o:2@p ") .!o:2@p  { order:   2     !important; }
+          div(class="!o:3@p ") .!o:3@p  { order:   3     !important; }
+          div(class="!o:4@p ") .!o:4@p  { order:   4     !important; }
+          div(class="!o:5@p ") .!o:5@p  { order:   5     !important; }
+          div(class="!o:6@p ") .!o:6@p  { order:   6     !important; }
+          div(class="!o:7@p ") .!o:7@p  { order:   7     !important; }
+          div(class="!o:8@p ") .!o:8@p  { order:   8     !important; }
+          div(class="!o:9@p ") .!o:9@p  { order:   9     !important; }
+          div(class="!o:a@p ") .!o:a@p  { order:  10     !important; }
+          div(class="!o:b@p ") .!o:b@p  { order:  11     !important; }
+          div(class="!o:c@p ") .!o:c@p  { order:  12     !important; }
+          div(class="!o:d@p ") .!o:d@p  { order:  13     !important; }
+          div(class="!o:e@p ") .!o:e@p  { order:  14     !important; }
+          div(class="!o:f@p ") .!o:f@p  { order:  15     !important; }
+          div(class="!o:-1@p") .!o:-1@p { order:  -1     !important; }
+          div(class="!o:-2@p") .!o:-2@p { order:  -2     !important; }
+          div(class="!o:-3@p") .!o:-3@p { order:  -3     !important; }
+          div(class="!o:-4@p") .!o:-4@p { order:  -4     !important; }
+          div(class="!o:-5@p") .!o:-5@p { order:  -5     !important; }
+          div(class="!o:-6@p") .!o:-6@p { order:  -6     !important; }
+          div(class="!o:-7@p") .!o:-7@p { order:  -7     !important; }
+          div(class="!o:-8@p") .!o:-8@p { order:  -8     !important; }
+          div(class="!o:-9@p") .!o:-9@p { order:  -9     !important; }
+          div(class="!o:-a@p") .!o:-a@p { order: -10     !important; }
+          div(class="!o:-b@p") .!o:-b@p { order: -11     !important; }
+          div(class="!o:-c@p") .!o:-c@p { order: -12     !important; }
+          div(class="!o:-d@p") .!o:-d@p { order: -13     !important; }
+          div(class="!o:-e@p") .!o:-e@p { order: -14     !important; }
+          div(class="!o:-f@p") .!o:-f@p { order: -15     !important; }
+      section#font-style
         h1 _font-style.less
         section
           h1 all media queries
-          div(class="!fs:0") .!fs:0 { font-style: initial !important; }
-          div(class="!fs:i") .!fs:i { font-style: inherit !important; }
-          div(class="!fs:n") .!fs:n { font-style: normal  !important; }
-          div(class="!fs:t") .!fs:t { font-style: italic  !important; }
+          div(class="!fs:0")   .!fs:0   { font-style: initial !important; }
+          div(class="!fs:i")   .!fs:i   { font-style: inherit !important; }
+          div(class="!fs:n")   .!fs:n   { font-style: normal  !important; }
+          div(class="!fs:t")   .!fs:t   { font-style: italic  !important; }
         section
           h1 @media screen
           div(class="!fs:0@s") .!fs:0@s { font-style: initial !important; }
@@ -456,14 +853,14 @@ html
           div(class="!fs:i@p") .!fs:i@p { font-style: inherit !important; }
           div(class="!fs:n@p") .!fs:n@p { font-style: normal  !important; }
           div(class="!fs:t@p") .!fs:t@p { font-style: italic  !important; }
-      section
+      section#font-variant
         h1 _font-variant.less
         section
           h1 all media queries
-          div(class="!fv:0") .!fv:0 { font-variant: initial    !important; }
-          div(class="!fv:i") .!fv:i { font-variant: inherit    !important; }
-          div(class="!fv:n") .!fv:n { font-variant: normal     !important; }
-          div(class="!fv:s") .!fv:s { font-variant: small-caps !important; }
+          div(class="!fv:0")   .!fv:0   { font-variant: initial    !important; }
+          div(class="!fv:i")   .!fv:i   { font-variant: inherit    !important; }
+          div(class="!fv:n")   .!fv:n   { font-variant: normal     !important; }
+          div(class="!fv:s")   .!fv:s   { font-variant: small-caps !important; }
         section
           h1 @media screen
           div(class="!fv:0@s") .!fv:0@s { font-variant: initial    !important; }
@@ -476,23 +873,23 @@ html
           div(class="!fv:i@p") .!fv:i@p { font-variant: inherit    !important; }
           div(class="!fv:n@p") .!fv:n@p { font-variant: normal     !important; }
           div(class="!fv:s@p") .!fv:s@p { font-variant: small-caps !important; }
-      section
+      section#font-weight
         h1 _font-weight.less
         section
           h1 all media queries
-          div(class="!fw:0") .!fw:0 { font-weight: initial !important; }
-          div(class="!fw:i") .!fw:i { font-weight: inherit !important; }
-          div(class="!fw:n") .!fw:n { font-weight: normal  !important; }
-          div(class="!fw:b") .!fw:b { font-weight: bold    !important; }
-          div(class="!fw:1") .!fw:1 { font-weight: 100     !important; }
-          div(class="!fw:2") .!fw:2 { font-weight: 200     !important; }
-          div(class="!fw:3") .!fw:3 { font-weight: 300     !important; }
-          div(class="!fw:4") .!fw:4 { font-weight: 400     !important; }
-          div(class="!fw:5") .!fw:5 { font-weight: 500     !important; }
-          div(class="!fw:6") .!fw:6 { font-weight: 600     !important; }
-          div(class="!fw:7") .!fw:7 { font-weight: 700     !important; }
-          div(class="!fw:8") .!fw:8 { font-weight: 800     !important; }
-          div(class="!fw:9") .!fw:9 { font-weight: 900     !important; }
+          div(class="!fw:0")   .!fw:0   { font-weight: initial !important; }
+          div(class="!fw:i")   .!fw:i   { font-weight: inherit !important; }
+          div(class="!fw:n")   .!fw:n   { font-weight: normal  !important; }
+          div(class="!fw:b")   .!fw:b   { font-weight: bold    !important; }
+          div(class="!fw:1")   .!fw:1   { font-weight: 100     !important; }
+          div(class="!fw:2")   .!fw:2   { font-weight: 200     !important; }
+          div(class="!fw:3")   .!fw:3   { font-weight: 300     !important; }
+          div(class="!fw:4")   .!fw:4   { font-weight: 400     !important; }
+          div(class="!fw:5")   .!fw:5   { font-weight: 500     !important; }
+          div(class="!fw:6")   .!fw:6   { font-weight: 600     !important; }
+          div(class="!fw:7")   .!fw:7   { font-weight: 700     !important; }
+          div(class="!fw:8")   .!fw:8   { font-weight: 800     !important; }
+          div(class="!fw:9")   .!fw:9   { font-weight: 900     !important; }
         section
           h1 @media screen
           div(class="!fw:0@s") .!fw:0@s { font-weight: initial !important; }
@@ -523,17 +920,49 @@ html
           div(class="!fw:7@p") .!fw:7@p { font-weight: 700     !important; }
           div(class="!fw:8@p") .!fw:8@p { font-weight: 800     !important; }
           div(class="!fw:9@p") .!fw:9@p { font-weight: 900     !important; }
-      section
+      section#font-size
+        h1 _font-size.less
+        section
+          h1 all media queries
+          div(class="!fz:0 ")   .!fz:0    { font-size: initial  !important; }
+          div(class="!fz:i ")   .!fz:i    { font-size: inherit  !important; }
+          div(class="!fz:h1")   .!fz:h1   { font-size: 2rem     !important; }
+          div(class="!fz:h2")   .!fz:h2   { font-size: 1.5rem   !important; }
+          div(class="!fz:h3")   .!fz:h3   { font-size: 1.25rem  !important; }
+          div(class="!fz:h4")   .!fz:h4   { font-size: 1rem     !important; }
+          div(class="!fz:h5")   .!fz:h5   { font-size: 0.875rem !important; }
+          div(class="!fz:h6")   .!fz:h6   { font-size: 0.75rem  !important; }
+        section
+          h1 @media screen
+          div(class="!fz:0@s ") .!fz:0@s  { font-size: initial  !important; }
+          div(class="!fz:i@s ") .!fz:i@s  { font-size: inherit  !important; }
+          div(class="!fz:h1@s") .!fz:h1@s { font-size: 2rem     !important; }
+          div(class="!fz:h2@s") .!fz:h2@s { font-size: 1.5rem   !important; }
+          div(class="!fz:h3@s") .!fz:h3@s { font-size: 1.25rem  !important; }
+          div(class="!fz:h4@s") .!fz:h4@s { font-size: 1rem     !important; }
+          div(class="!fz:h5@s") .!fz:h5@s { font-size: 0.875rem !important; }
+          div(class="!fz:h6@s") .!fz:h6@s { font-size: 0.75rem  !important; }
+        section
+          h1 @media print
+          div(class="!fz:0@p ") .!fz:0@p  { font-size: initial  !important; }
+          div(class="!fz:i@p ") .!fz:i@p  { font-size: inherit  !important; }
+          div(class="!fz:h1@p") .!fz:h1@p { font-size: 2rem     !important; }
+          div(class="!fz:h2@p") .!fz:h2@p { font-size: 1.5rem   !important; }
+          div(class="!fz:h3@p") .!fz:h3@p { font-size: 1.25rem  !important; }
+          div(class="!fz:h4@p") .!fz:h4@p { font-size: 1rem     !important; }
+          div(class="!fz:h5@p") .!fz:h5@p { font-size: 0.875rem !important; }
+          div(class="!fz:h6@p") .!fz:h6@p { font-size: 0.75rem  !important; }
+      section#font-family
         h1 _font-family.less
         section
           h1 all media queries
-          div(class="!ff:0 ") .!ff:0  { font-family: initial    !important; }
-          div(class="!ff:i ") .!ff:i  { font-family: inherit    !important; }
-          div(class="!ff:ss") .!ff:ss { font-family: sans-serif !important; }
-          div(class="!ff:sf") .!ff:sf { font-family: serif      !important; }
-          div(class="!ff:ms") .!ff:ms { font-family: monospace  !important; }
-          div(class="!ff:fy") .!ff:fy { font-family: fantasy    !important; }
-          div(class="!ff:cs") .!ff:cs { font-family: cursive    !important; }
+          div(class="!ff:0 ")   .!ff:0    { font-family: initial    !important; }
+          div(class="!ff:i ")   .!ff:i    { font-family: inherit    !important; }
+          div(class="!ff:ss")   .!ff:ss   { font-family: sans-serif !important; }
+          div(class="!ff:sf")   .!ff:sf   { font-family: serif      !important; }
+          div(class="!ff:ms")   .!ff:ms   { font-family: monospace  !important; }
+          div(class="!ff:fy")   .!ff:fy   { font-family: fantasy    !important; }
+          div(class="!ff:cs")   .!ff:cs   { font-family: cursive    !important; }
         section
           h1 @media screen
           div(class="!ff:0@s ") .!ff:0@s  { font-family: initial    !important; }
@@ -552,72 +981,211 @@ html
           div(class="!ff:ms@p") .!ff:ms@p { font-family: monospace  !important; }
           div(class="!ff:fy@p") .!ff:fy@p { font-family: fantasy    !important; }
           div(class="!ff:cs@p") .!ff:cs@p { font-family: cursive    !important; }
-      section
-        h1 _text-transform.less
-        section
-          h1 all media queries
-          div(class="!tt:0 ") .!tt:0  { text-transform: initial    !important; }
-          div(class="!tt:i ") .!tt:i  { text-transform: inherit    !important; }
-          div(class="!tt:n ") .!tt:n  { text-transform: none       !important; }
-          div(class="!tt:ca") .!tt:ca { text-transform: capitalize !important; }
-          div(class="!tt:uc") .!tt:uc { text-transform: uppercase  !important; }
-          div(class="!tt:lc") .!tt:lc { text-transform: lowercase  !important; }
-        section
-          h1 @media screen
-          div(class="!tt:0@s ") .!tt:0@s  { text-transform: initial    !important; }
-          div(class="!tt:i@s ") .!tt:i@s  { text-transform: inherit    !important; }
-          div(class="!tt:n@s ") .!tt:n@s  { text-transform: none       !important; }
-          div(class="!tt:ca@s") .!tt:ca@s { text-transform: capitalize !important; }
-          div(class="!tt:uc@s") .!tt:uc@s { text-transform: uppercase  !important; }
-          div(class="!tt:lc@s") .!tt:lc@s { text-transform: lowercase  !important; }
-        section
-          h1 @media print
-          div(class="!tt:0@p ") .!tt:0@p  { text-transform: initial    !important; }
-          div(class="!tt:i@p ") .!tt:i@p  { text-transform: inherit    !important; }
-          div(class="!tt:n@p ") .!tt:n@p  { text-transform: none       !important; }
-          div(class="!tt:ca@p") .!tt:ca@p { text-transform: capitalize !important; }
-          div(class="!tt:uc@p") .!tt:uc@p { text-transform: uppercase  !important; }
-          div(class="!tt:lc@p") .!tt:lc@p { text-transform: lowercase  !important; }
-      section
+      section#text-align
         h1 _text-align.less
         section
           h1 all media queries
-          div(class="!ta:0 ") .!ta:0  { text-align: initial !important; }
-          div(class="!ta:i ") .!ta:i  { text-align: inherit !important; }
-          div(class="!ta:lt") .!ta:lt { text-align: left    !important; }
-          div(class="!ta:rt") .!ta:rt { text-align: right   !important; }
-          div(class="!ta:cr") .!ta:cr { text-align: center  !important; }
-          div(class="!ta:jf") .!ta:jf { text-align: justify !important; }
+          div(class="!ta:0")   .!ta:0   { text-align: initial !important; }
+          div(class="!ta:i")   .!ta:i   { text-align: inherit !important; }
+          div(class="!ta:l")   .!ta:l   { text-align: left    !important; }
+          div(class="!ta:r")   .!ta:r   { text-align: right   !important; }
+          div(class="!ta:c")   .!ta:c   { text-align: center  !important; }
+          div(class="!ta:j")   .!ta:j   { text-align: justify !important; }
         section
           h1 @media screen
-          div(class="!ta:0@s ") .!ta:0@s  { text-align: initial !important; }
-          div(class="!ta:i@s ") .!ta:i@s  { text-align: inherit !important; }
-          div(class="!ta:lt@s") .!ta:lt@s { text-align: left    !important; }
-          div(class="!ta:rt@s") .!ta:rt@s { text-align: right   !important; }
-          div(class="!ta:cr@s") .!ta:cr@s { text-align: center  !important; }
-          div(class="!ta:jf@s") .!ta:jf@s { text-align: justify !important; }
+          div(class="!ta:0@s") .!ta:0@s { text-align: initial !important; }
+          div(class="!ta:i@s") .!ta:i@s { text-align: inherit !important; }
+          div(class="!ta:l@s") .!ta:l@s { text-align: left    !important; }
+          div(class="!ta:r@s") .!ta:r@s { text-align: right   !important; }
+          div(class="!ta:c@s") .!ta:c@s { text-align: center  !important; }
+          div(class="!ta:j@s") .!ta:j@s { text-align: justify !important; }
         section
           h1 @media print
-          div(class="!ta:0@p ") .!ta:0@p  { text-align: initial !important; }
-          div(class="!ta:i@p ") .!ta:i@p  { text-align: inherit !important; }
-          div(class="!ta:lt@p") .!ta:lt@p { text-align: left    !important; }
-          div(class="!ta:rt@p") .!ta:rt@p { text-align: right   !important; }
-          div(class="!ta:cr@p") .!ta:cr@p { text-align: center  !important; }
-          div(class="!ta:jf@p") .!ta:jf@p { text-align: justify !important; }
-      section
+          div(class="!ta:0@p") .!ta:0@p { text-align: initial !important; }
+          div(class="!ta:i@p") .!ta:i@p { text-align: inherit !important; }
+          div(class="!ta:l@p") .!ta:l@p { text-align: left    !important; }
+          div(class="!ta:r@p") .!ta:r@p { text-align: right   !important; }
+          div(class="!ta:c@p") .!ta:c@p { text-align: center  !important; }
+          div(class="!ta:j@p") .!ta:j@p { text-align: justify !important; }
+      section#vertical-align
+        h1 _vertical-align.less
+        section
+          h1 all media queries
+          div(class="!va:0 ")   .!va:0    { vertical-align: initial     !important; }
+          div(class="!va:i ")   .!va:i    { vertical-align: inherit     !important; }
+          div(class="!va:a ")   .!va:a    { vertical-align: baseline    !important; }
+          div(class="!va:b ")   .!va:b    { vertical-align: bottom      !important; }
+          div(class="!va:m ")   .!va:m    { vertical-align: middle      !important; }
+          div(class="!va:t ")   .!va:t    { vertical-align: top         !important; }
+          div(class="!va:tb")   .!va:tb   { vertical-align: text-bottom !important; }
+          div(class="!va:tt")   .!va:tt   { vertical-align: text-top    !important; }
+          div(class="!va:sb")   .!va:sb   { vertical-align: sub         !important; }
+          div(class="!va:st")   .!va:st   { vertical-align: super       !important; }
+        section
+          h1 @media screen
+          div(class="!va:0@s ") .!va:0@s  { vertical-align: initial     !important; }
+          div(class="!va:i@s ") .!va:i@s  { vertical-align: inherit     !important; }
+          div(class="!va:a@s ") .!va:a@s  { vertical-align: baseline    !important; }
+          div(class="!va:b@s ") .!va:b@s  { vertical-align: bottom      !important; }
+          div(class="!va:m@s ") .!va:m@s  { vertical-align: middle      !important; }
+          div(class="!va:t@s ") .!va:t@s  { vertical-align: top         !important; }
+          div(class="!va:tb@s") .!va:tb@s { vertical-align: text-bottom !important; }
+          div(class="!va:tt@s") .!va:tt@s { vertical-align: text-top    !important; }
+          div(class="!va:sb@s") .!va:sb@s { vertical-align: sub         !important; }
+          div(class="!va:st@s") .!va:st@s { vertical-align: super       !important; }
+        section
+          h1 @media print
+          div(class="!va:0@p ") .!va:0@p  { vertical-align: initial     !important; }
+          div(class="!va:i@p ") .!va:i@p  { vertical-align: inherit     !important; }
+          div(class="!va:a@p ") .!va:a@p  { vertical-align: baseline    !important; }
+          div(class="!va:b@p ") .!va:b@p  { vertical-align: bottom      !important; }
+          div(class="!va:m@p ") .!va:m@p  { vertical-align: middle      !important; }
+          div(class="!va:t@p ") .!va:t@p  { vertical-align: top         !important; }
+          div(class="!va:tb@p") .!va:tb@p { vertical-align: text-bottom !important; }
+          div(class="!va:tt@p") .!va:tt@p { vertical-align: text-top    !important; }
+          div(class="!va:sb@p") .!va:sb@p { vertical-align: sub         !important; }
+          div(class="!va:st@p") .!va:st@p { vertical-align: super       !important; }
+      section#white-space
+        h1 _white-space.less
+        section
+          h1 all media queries
+          div(class="!ws:0 ")   .!ws:0    { white-space: initial  !important; }
+          div(class="!ws:i ")   .!ws:i    { white-space: inherit  !important; }
+          div(class="!ws:n ")   .!ws:n    { white-space: normal   !important; }
+          div(class="!ws:nw")   .!ws:nw   { white-space: nowrap   !important; }
+          div(class="!ws:pr")   .!ws:pr   { white-space: pre      !important; }
+          div(class="!ws:pw")   .!ws:pw   { white-space: pre-wrap !important; }
+          div(class="!ws:pl")   .!ws:pl   { white-space: pre-line !important; }
+        section
+          h1 @media screen
+          div(class="!ws:0@s ") .!ws:0@s  { white-space: initial  !important; }
+          div(class="!ws:i@s ") .!ws:i@s  { white-space: inherit  !important; }
+          div(class="!ws:n@s ") .!ws:n@s  { white-space: normal   !important; }
+          div(class="!ws:nw@s") .!ws:nw@s { white-space: nowrap   !important; }
+          div(class="!ws:pr@s") .!ws:pr@s { white-space: pre      !important; }
+          div(class="!ws:pw@s") .!ws:pw@s { white-space: pre-wrap !important; }
+          div(class="!ws:pl@s") .!ws:pl@s { white-space: pre-line !important; }
+        section
+          h1 @media print
+          div(class="!ws:0@p ") .!ws:0@p  { white-space: initial  !important; }
+          div(class="!ws:i@p ") .!ws:i@p  { white-space: inherit  !important; }
+          div(class="!ws:n@p ") .!ws:n@p  { white-space: normal   !important; }
+          div(class="!ws:nw@p") .!ws:nw@p { white-space: nowrap   !important; }
+          div(class="!ws:pr@p") .!ws:pr@p { white-space: pre      !important; }
+          div(class="!ws:pw@p") .!ws:pw@p { white-space: pre-wrap !important; }
+          div(class="!ws:pl@p") .!ws:pl@p { white-space: pre-line !important; }
+      section#page-break
+        h1 _page-break.less
+        p.
+          #[strong Note:]
+          The #[code page-break-before] and #[code page-break-after] properties are only relevant
+          when printing, so all media query classes have been left out.
+        section
+          h1 all media queries
+          div(class="!pbb:0") .!pbb:0 { page-break-before: initial !important; }
+          div(class="!pbb:i") .!pbb:i { page-break-before: inherit !important; }
+          div(class="!pbb:a") .!pbb:a { page-break-before: auto    !important; }
+          div(class="!pbb:t") .!pbb:t { page-break-before: always  !important; }
+          div(class="!pbb:f") .!pbb:f { page-break-before: avoid   !important; }
+        section
+          h1 all media queries
+          div(class="!pba:0") .!pba:0 { page-break-after: initial !important; }
+          div(class="!pba:i") .!pba:i { page-break-after: inherit !important; }
+          div(class="!pba:a") .!pba:a { page-break-after: auto    !important; }
+          div(class="!pba:t") .!pba:t { page-break-after: always  !important; }
+          div(class="!pba:f") .!pba:f { page-break-after: avoid   !important; }
+      section#text-transform
+        h1 _text-transform.less
+        section
+          h1 all media queries
+          div(class="!tt:0")   .!tt:0   { text-transform: initial    !important; }
+          div(class="!tt:i")   .!tt:i   { text-transform: inherit    !important; }
+          div(class="!tt:n")   .!tt:n   { text-transform: none       !important; }
+          div(class="!tt:c")   .!tt:c   { text-transform: capitalize !important; }
+          div(class="!tt:u")   .!tt:u   { text-transform: uppercase  !important; }
+          div(class="!tt:l")   .!tt:l   { text-transform: lowercase  !important; }
+        section
+          h1 @media screen
+          div(class="!tt:0@s") .!tt:0@s { text-transform: initial    !important; }
+          div(class="!tt:i@s") .!tt:i@s { text-transform: inherit    !important; }
+          div(class="!tt:n@s") .!tt:n@s { text-transform: none       !important; }
+          div(class="!tt:c@s") .!tt:c@s { text-transform: capitalize !important; }
+          div(class="!tt:u@s") .!tt:u@s { text-transform: uppercase  !important; }
+          div(class="!tt:l@s") .!tt:l@s { text-transform: lowercase  !important; }
+        section
+          h1 @media print
+          div(class="!tt:0@p") .!tt:0@p { text-transform: initial    !important; }
+          div(class="!tt:i@p") .!tt:i@p { text-transform: inherit    !important; }
+          div(class="!tt:n@p") .!tt:n@p { text-transform: none       !important; }
+          div(class="!tt:c@p") .!tt:c@p { text-transform: capitalize !important; }
+          div(class="!tt:u@p") .!tt:u@p { text-transform: uppercase  !important; }
+          div(class="!tt:l@p") .!tt:l@p { text-transform: lowercase  !important; }
+      section#text-rendering
+        h1 _text-rendering.less
+        section
+          h1 all media queries
+          div(class="!tr:0")   .!tr:0   { text-rendering: initial            !important; }
+          div(class="!tr:i")   .!tr:i   { text-rendering: inherit            !important; }
+          div(class="!tr:a")   .!tr:a   { text-rendering: auto               !important; }
+          div(class="!tr:s")   .!tr:s   { text-rendering: optimizeSpeed      !important; }
+          div(class="!tr:l")   .!tr:l   { text-rendering: optimizeLegibility !important; }
+          div(class="!tr:g")   .!tr:g   { text-rendering: geometricPrecision !important; }
+        section
+          h1 @media screen
+          div(class="!tr:0@s") .!tr:0@s { text-rendering: initial            !important; }
+          div(class="!tr:i@s") .!tr:i@s { text-rendering: inherit            !important; }
+          div(class="!tr:a@s") .!tr:a@s { text-rendering: auto               !important; }
+          div(class="!tr:s@s") .!tr:s@s { text-rendering: optimizeSpeed      !important; }
+          div(class="!tr:l@s") .!tr:l@s { text-rendering: optimizeLegibility !important; }
+          div(class="!tr:g@s") .!tr:g@s { text-rendering: geometricPrecision !important; }
+        section
+          h1 @media print
+          div(class="!tr:0@p") .!tr:0@p { text-rendering: initial            !important; }
+          div(class="!tr:i@p") .!tr:i@p { text-rendering: inherit            !important; }
+          div(class="!tr:a@p") .!tr:a@p { text-rendering: auto               !important; }
+          div(class="!tr:s@p") .!tr:s@p { text-rendering: optimizeSpeed      !important; }
+          div(class="!tr:l@p") .!tr:l@p { text-rendering: optimizeLegibility !important; }
+          div(class="!tr:g@p") .!tr:g@p { text-rendering: geometricPrecision !important; }
+      section#text-decoration
+        h1 _text-decoration.less
+        section
+          h1 all media queries
+          div(class="!td:0")   .!td:0   { text-decoration: initial      !important; }
+          div(class="!td:i")   .!td:i   { text-decoration: inherit      !important; }
+          div(class="!td:n")   .!td:n   { text-decoration: none         !important; }
+          div(class="!td:u")   .!td:u   { text-decoration: underline    !important; }
+          div(class="!td:o")   .!td:o   { text-decoration: overline     !important; }
+          div(class="!td:s")   .!td:s   { text-decoration: line-through !important; }
+        section
+          h1 @media screen
+          div(class="!td:0@s") .!td:0@s { text-decoration: initial      !important; }
+          div(class="!td:i@s") .!td:i@s { text-decoration: inherit      !important; }
+          div(class="!td:n@s") .!td:n@s { text-decoration: none         !important; }
+          div(class="!td:u@s") .!td:u@s { text-decoration: underline    !important; }
+          div(class="!td:o@s") .!td:o@s { text-decoration: overline     !important; }
+          div(class="!td:s@s") .!td:s@s { text-decoration: line-through !important; }
+        section
+          h1 @media print
+          div(class="!td:0@p") .!td:0@p { text-decoration: initial      !important; }
+          div(class="!td:i@p") .!td:i@p { text-decoration: inherit      !important; }
+          div(class="!td:n@p") .!td:n@p { text-decoration: none         !important; }
+          div(class="!td:u@p") .!td:u@p { text-decoration: underline    !important; }
+          div(class="!td:o@p") .!td:o@p { text-decoration: overline     !important; }
+          div(class="!td:s@p") .!td:s@p { text-decoration: line-through !important; }
+      section#list-style-type
         h1 _list-style-type.less
         section
           h1 all media queries
           ul
-            li(class="!lst:0 ") .!lst:0  { list-style-type: initial              !important; }
-            li(class="!lst:i ") .!lst:i  { list-style-type: inherit              !important; }
-            li(class="!lst:dz") .!lst:dz { list-style-type: decimal-leading-zero !important; }
-            li(class="!lst:ur") .!lst:ur { list-style-type: upper-roman          !important; }
-            li(class="!lst:ua") .!lst:ua { list-style-type: upper-alpha          !important; }
-            li(class="!lst:dc") .!lst:dc { list-style-type: decimal              !important; }
-            li(class="!lst:la") .!lst:la { list-style-type: lower-alpha          !important; }
-            li(class="!lst:lr") .!lst:lr { list-style-type: lower-roman          !important; }
-            li(class="!lst:lg") .!lst:lg { list-style-type: lower-greek          !important; }
+            li(class="!lst:0 ")   .!lst:0    { list-style-type: initial              !important; }
+            li(class="!lst:i ")   .!lst:i    { list-style-type: inherit              !important; }
+            li(class="!lst:dz")   .!lst:dz   { list-style-type: decimal-leading-zero !important; }
+            li(class="!lst:ur")   .!lst:ur   { list-style-type: upper-roman          !important; }
+            li(class="!lst:ua")   .!lst:ua   { list-style-type: upper-alpha          !important; }
+            li(class="!lst:dc")   .!lst:dc   { list-style-type: decimal              !important; }
+            li(class="!lst:la")   .!lst:la   { list-style-type: lower-alpha          !important; }
+            li(class="!lst:lr")   .!lst:lr   { list-style-type: lower-roman          !important; }
+            li(class="!lst:lg")   .!lst:lg   { list-style-type: lower-greek          !important; }
         section
           h1 @media screen
           ul
@@ -642,15 +1210,15 @@ html
             li(class="!lst:la@p") .!lst:la@p { list-style-type: lower-alpha          !important; }
             li(class="!lst:lr@p") .!lst:lr@p { list-style-type: lower-roman          !important; }
             li(class="!lst:lg@p") .!lst:lg@p { list-style-type: lower-greek          !important; }
-      section
+      section#list-style-position
         h1 _list-style-position.less
         section
           h1 all media queries
           ul
-            li(class="!lsp:0 ") .!lsp:0  { list-style-position: initial !important; }
-            li(class="!lsp:i ") .!lsp:i  { list-style-position: inherit !important; }
-            li(class="!lsp:os") .!lsp:os { list-style-position: outside !important; }
-            li(class="!lsp:is") .!lsp:is { list-style-position: inside  !important; }
+            li(class="!lsp:0 ")   .!lsp:0    { list-style-position: initial !important; }
+            li(class="!lsp:i ")   .!lsp:i    { list-style-position: inherit !important; }
+            li(class="!lsp:os")   .!lsp:os   { list-style-position: outside !important; }
+            li(class="!lsp:is")   .!lsp:is   { list-style-position: inside  !important; }
         section
           h1 @media screen
           ul
@@ -665,14 +1233,14 @@ html
             li(class="!lsp:i@p ") .!lsp:i@p  { list-style-position: inherit !important; }
             li(class="!lsp:os@p") .!lsp:os@p { list-style-position: outside !important; }
             li(class="!lsp:is@p") .!lsp:is@p { list-style-position: inside  !important; }
-      section
+      section#list-style-image
         h1 _list-style-image.less
         section
           h1 all media queries
           ul
-            li(class="!lsi:0") .!lsi:0 { list-style-image: initial !important; }
-            li(class="!lsi:i") .!lsi:i { list-style-image: inherit !important; }
-            li(class="!lsi:n") .!lsi:n { list-style-image: none    !important; }
+            li(class="!lsi:0")   .!lsi:0   { list-style-image: initial !important; }
+            li(class="!lsi:i")   .!lsi:i   { list-style-image: inherit !important; }
+            li(class="!lsi:n")   .!lsi:n   { list-style-image: none    !important; }
         section
           h1 @media screen
           ul
@@ -685,40 +1253,83 @@ html
             li(class="!lsi:0@p") .!lsi:0@p { list-style-image: initial !important; }
             li(class="!lsi:i@p") .!lsi:i@p { list-style-image: inherit !important; }
             li(class="!lsi:n@p") .!lsi:n@p { list-style-image: none    !important; }
-      section
+      section#color
+        h1 _color.less
+        section
+          h1 all media queries
+          div(class="!c:0")   .!c:0   { color: initial      !important; }
+          div(class="!c:i")   .!c:i   { color: inherit      !important; }
+          div(class="!c:t")   .!c:t   { color: transparent  !important; }
+          div(class="!c:c")   .!c:c   { color: currentColor !important; }
+        section
+          h1 @media screen
+          div(class="!c:0@s") .!c:0@s { color: initial      !important; }
+          div(class="!c:i@s") .!c:i@s { color: inherit      !important; }
+          div(class="!c:t@s") .!c:t@s { color: transparent  !important; }
+          div(class="!c:c@s") .!c:c@s { color: currentColor !important; }
+        section
+          h1 @media print
+          div(class="!c:0@p") .!c:0@p { color: initial      !important; }
+          div(class="!c:i@p") .!c:i@p { color: inherit      !important; }
+          div(class="!c:t@p") .!c:t@p { color: transparent  !important; }
+          div(class="!c:c@p") .!c:c@p { color: currentColor !important; }
+      section#background-color
         h1 _background-color.less
         section
           h1 all media queries
-          div(class="!bgc:0") .!bgc:0 { background-color: initial      !important; }
-          div(class="!bgc:i") .!bgc:i { background-color: inherit      !important; }
-          div(class="!bgc:t") .!bgc:t { background-color: transparent  !important; }
-          div(class="!bgc:c") .!bgc:c { background-color: currentColor !important; }
+          div(class="!bc:0")   .!bc:0   { background-color: initial      !important; }
+          div(class="!bc:i")   .!bc:i   { background-color: inherit      !important; }
+          div(class="!bc:t")   .!bc:t   { background-color: transparent  !important; }
+          div(class="!bc:c")   .!bc:c   { background-color: currentColor !important; }
         section
           h1 @media screen
-          div(class="!bgc:0@s") .!bgc:0@s { background-color: initial      !important; }
-          div(class="!bgc:i@s") .!bgc:i@s { background-color: inherit      !important; }
-          div(class="!bgc:t@s") .!bgc:t@s { background-color: transparent  !important; }
-          div(class="!bgc:c@s") .!bgc:c@s { background-color: currentColor !important; }
+          div(class="!bc:0@s") .!bc:0@s { background-color: initial      !important; }
+          div(class="!bc:i@s") .!bc:i@s { background-color: inherit      !important; }
+          div(class="!bc:t@s") .!bc:t@s { background-color: transparent  !important; }
+          div(class="!bc:c@s") .!bc:c@s { background-color: currentColor !important; }
         section
           h1 @media print
-          div(class="!bgc:0@p") .!bgc:0@p { background-color: initial      !important; }
-          div(class="!bgc:i@p") .!bgc:i@p { background-color: inherit      !important; }
-          div(class="!bgc:t@p") .!bgc:t@p { background-color: transparent  !important; }
-          div(class="!bgc:c@p") .!bgc:c@p { background-color: currentColor !important; }
-      section
+          div(class="!bc:0@p") .!bc:0@p { background-color: initial      !important; }
+          div(class="!bc:i@p") .!bc:i@p { background-color: inherit      !important; }
+          div(class="!bc:t@p") .!bc:t@p { background-color: transparent  !important; }
+          div(class="!bc:c@p") .!bc:c@p { background-color: currentColor !important; }
+      section#background-image
         h1 _background-image.less
         section
           h1 all media queries
-          div(class="!bgi:0") .!bgi:0 { background-image: initial !important; }
-          div(class="!bgi:i") .!bgi:i { background-image: inherit !important; }
-          div(class="!bgi:n") .!bgi:n { background-image: none    !important; }
+          div(class="!bi:0")   .!bi:0   { background-image: initial !important; }
+          div(class="!bi:i")   .!bi:i   { background-image: inherit !important; }
+          div(class="!bi:n")   .!bi:n   { background-image: none    !important; }
         section
           h1 @media screen
-          div(class="!bgi:0@s") .!bgi:0@s { background-image: initial !important; }
-          div(class="!bgi:i@s") .!bgi:i@s { background-image: inherit !important; }
-          div(class="!bgi:n@s") .!bgi:n@s { background-image: none    !important; }
+          div(class="!bi:0@s") .!bi:0@s { background-image: initial !important; }
+          div(class="!bi:i@s") .!bi:i@s { background-image: inherit !important; }
+          div(class="!bi:n@s") .!bi:n@s { background-image: none    !important; }
         section
           h1 @media print
-          div(class="!bgi:0@p") .!bgi:0@p { background-image: initial !important; }
-          div(class="!bgi:i@p") .!bgi:i@p { background-image: inherit !important; }
-          div(class="!bgi:n@p") .!bgi:n@p { background-image: none    !important; }
+          div(class="!bi:0@p") .!bi:0@p { background-image: initial !important; }
+          div(class="!bi:i@p") .!bi:i@p { background-image: inherit !important; }
+          div(class="!bi:n@p") .!bi:n@p { background-image: none    !important; }
+      section#visibility
+        h1 _visibility.less
+        section
+          h1 all media queries
+          div(class="!v:0")   .!v:0   { visibility: initial  !important; }
+          div(class="!v:i")   .!v:i   { visibility: inherit  !important; }
+          div(class="!v:v")   .!v:v   { visibility: visible  !important; }
+          div(class="!v:h")   .!v:h   { visibility: hidden   !important; }
+          div(class="!v:c")   .!v:c   { visibility: collapse !important; }
+        section
+          h1 @media screen
+          div(class="!v:0@s") .!v:0@s { visibility: initial  !important; }
+          div(class="!v:i@s") .!v:i@s { visibility: inherit  !important; }
+          div(class="!v:v@s") .!v:v@s { visibility: visible  !important; }
+          div(class="!v:h@s") .!v:h@s { visibility: hidden   !important; }
+          div(class="!v:c@s") .!v:c@s { visibility: collapse !important; }
+        section
+          h1 @media print
+          div(class="!v:0@p") .!v:0@p { visibility: initial  !important; }
+          div(class="!v:i@p") .!v:i@p { visibility: inherit  !important; }
+          div(class="!v:v@p") .!v:v@p { visibility: visible  !important; }
+          div(class="!v:h@p") .!v:h@p { visibility: hidden   !important; }
+          div(class="!v:c@p") .!v:c@p { visibility: collapse !important; }

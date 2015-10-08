@@ -1,0 +1,50 @@
+
+/*################################*\
+    _visibility.less
+\*################################*/
+
+// Sets whether an element is visible or hidden the color of background.
+//
+// !v  =  visibility
+//
+// :0  =  initial
+// :i  =  inherit
+// :v  =  visible
+// :h  =  hidden
+// :c  =  collapse
+//
+// @s  =  screen
+// @p  =  print
+//
+// ^initial
+// : `visible`
+// ^inherited
+// : true
+// ^url
+// : https://developer.mozilla.org/en-US/docs/Web/CSS/visibility
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2015-10-05
+
+.\!v\:0 { visibility: initial  !important; }
+.\!v\:i { visibility: inherit  !important; }
+.\!v\:v { visibility: visible  !important; }
+.\!v\:h { visibility: hidden   !important; }
+.\!v\:c { visibility: collapse !important; }
+
+@media screen {
+  .\!v\:0\@s { .\!v\:0; }
+  .\!v\:i\@s { .\!v\:i; }
+  .\!v\:v\@s { .\!v\:v; }
+  .\!v\:h\@s { .\!v\:h; }
+  .\!v\:c\@s { .\!v\:c; }
+}
+
+@media print {
+  .\!v\:0\@p { .\!v\:0; }
+  .\!v\:i\@p { .\!v\:i; }
+  .\!v\:v\@p { .\!v\:v; }
+  .\!v\:h\@p { .\!v\:h; }
+  .\!v\:c\@p { .\!v\:c; }
+}
