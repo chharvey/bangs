@@ -827,52 +827,28 @@
   padding-bottom: 16rem   !important;
 }
 .\!pa\:0 {
-  padding-left: initial !important;
-  padding-right: initial !important;
-  padding-top: initial !important;
-  padding-bottom: initial !important;
+  padding: initial !important;
 }
 .\!pa\:i {
-  padding-left: inherit !important;
-  padding-right: inherit !important;
-  padding-top: inherit !important;
-  padding-bottom: inherit !important;
+  padding: inherit !important;
 }
 .\!pa\:h {
-  padding-left: 0.5rem  !important;
-  padding-right: 0.5rem  !important;
-  padding-top: 0.5rem  !important;
-  padding-bottom: 0.5rem  !important;
+  padding: 0.5rem  !important;
 }
 .\!pa\:1 {
-  padding-left: 1rem    !important;
-  padding-right: 1rem    !important;
-  padding-top: 1rem    !important;
-  padding-bottom: 1rem    !important;
+  padding: 1rem    !important;
 }
 .\!pa\:2 {
-  padding-left: 2rem    !important;
-  padding-right: 2rem    !important;
-  padding-top: 2rem    !important;
-  padding-bottom: 2rem    !important;
+  padding: 2rem    !important;
 }
 .\!pa\:4 {
-  padding-left: 4rem    !important;
-  padding-right: 4rem    !important;
-  padding-top: 4rem    !important;
-  padding-bottom: 4rem    !important;
+  padding: 4rem    !important;
 }
 .\!pa\:8 {
-  padding-left: 8rem    !important;
-  padding-right: 8rem    !important;
-  padding-top: 8rem    !important;
-  padding-bottom: 8rem    !important;
+  padding: 8rem    !important;
 }
 .\!pa\:g {
-  padding-left: 16rem   !important;
-  padding-right: 16rem   !important;
-  padding-top: 16rem   !important;
-  padding-bottom: 16rem   !important;
+  padding: 16rem   !important;
 }
 @media screen {
   .\!pl\:0\@s {
@@ -1036,52 +1012,28 @@
     padding-bottom: 16rem   !important;
   }
   .\!pa\:0\@s {
-    padding-left: initial !important;
-    padding-right: initial !important;
-    padding-top: initial !important;
-    padding-bottom: initial !important;
+    padding: initial !important;
   }
   .\!pa\:i\@s {
-    padding-left: inherit !important;
-    padding-right: inherit !important;
-    padding-top: inherit !important;
-    padding-bottom: inherit !important;
+    padding: inherit !important;
   }
   .\!pa\:h\@s {
-    padding-left: 0.5rem  !important;
-    padding-right: 0.5rem  !important;
-    padding-top: 0.5rem  !important;
-    padding-bottom: 0.5rem  !important;
+    padding: 0.5rem  !important;
   }
   .\!pa\:1\@s {
-    padding-left: 1rem    !important;
-    padding-right: 1rem    !important;
-    padding-top: 1rem    !important;
-    padding-bottom: 1rem    !important;
+    padding: 1rem    !important;
   }
   .\!pa\:2\@s {
-    padding-left: 2rem    !important;
-    padding-right: 2rem    !important;
-    padding-top: 2rem    !important;
-    padding-bottom: 2rem    !important;
+    padding: 2rem    !important;
   }
   .\!pa\:4\@s {
-    padding-left: 4rem    !important;
-    padding-right: 4rem    !important;
-    padding-top: 4rem    !important;
-    padding-bottom: 4rem    !important;
+    padding: 4rem    !important;
   }
   .\!pa\:8\@s {
-    padding-left: 8rem    !important;
-    padding-right: 8rem    !important;
-    padding-top: 8rem    !important;
-    padding-bottom: 8rem    !important;
+    padding: 8rem    !important;
   }
   .\!pa\:g\@s {
-    padding-left: 16rem   !important;
-    padding-right: 16rem   !important;
-    padding-top: 16rem   !important;
-    padding-bottom: 16rem   !important;
+    padding: 16rem   !important;
   }
 }
 @media print {
@@ -1246,52 +1198,28 @@
     padding-bottom: 16rem   !important;
   }
   .\!pa\:0\@p {
-    padding-left: initial !important;
-    padding-right: initial !important;
-    padding-top: initial !important;
-    padding-bottom: initial !important;
+    padding: initial !important;
   }
   .\!pa\:i\@p {
-    padding-left: inherit !important;
-    padding-right: inherit !important;
-    padding-top: inherit !important;
-    padding-bottom: inherit !important;
+    padding: inherit !important;
   }
   .\!pa\:h\@p {
-    padding-left: 0.5rem  !important;
-    padding-right: 0.5rem  !important;
-    padding-top: 0.5rem  !important;
-    padding-bottom: 0.5rem  !important;
+    padding: 0.5rem  !important;
   }
   .\!pa\:1\@p {
-    padding-left: 1rem    !important;
-    padding-right: 1rem    !important;
-    padding-top: 1rem    !important;
-    padding-bottom: 1rem    !important;
+    padding: 1rem    !important;
   }
   .\!pa\:2\@p {
-    padding-left: 2rem    !important;
-    padding-right: 2rem    !important;
-    padding-top: 2rem    !important;
-    padding-bottom: 2rem    !important;
+    padding: 2rem    !important;
   }
   .\!pa\:4\@p {
-    padding-left: 4rem    !important;
-    padding-right: 4rem    !important;
-    padding-top: 4rem    !important;
-    padding-bottom: 4rem    !important;
+    padding: 4rem    !important;
   }
   .\!pa\:8\@p {
-    padding-left: 8rem    !important;
-    padding-right: 8rem    !important;
-    padding-top: 8rem    !important;
-    padding-bottom: 8rem    !important;
+    padding: 8rem    !important;
   }
   .\!pa\:g\@p {
-    padding-left: 16rem   !important;
-    padding-right: 16rem   !important;
-    padding-top: 16rem   !important;
-    padding-bottom: 16rem   !important;
+    padding: 16rem   !important;
   }
 }
 /*################################*\
@@ -1478,58 +1406,31 @@
   margin-bottom: 16rem   !important;
 }
 .\!ma\:0 {
-  margin-left: initial !important;
-  margin-right: initial !important;
-  margin-top: initial !important;
-  margin-bottom: initial !important;
+  margin: initial !important;
 }
 .\!ma\:i {
-  margin-left: inherit !important;
-  margin-right: inherit !important;
-  margin-top: inherit !important;
-  margin-bottom: inherit !important;
+  margin: inherit !important;
 }
 .\!ma\:a {
-  margin-left: auto    !important;
-  margin-right: auto    !important;
-  margin-top: auto    !important;
-  margin-bottom: auto    !important;
+  margin: auto    !important;
 }
 .\!ma\:h {
-  margin-left: 0.5rem  !important;
-  margin-right: 0.5rem  !important;
-  margin-top: 0.5rem  !important;
-  margin-bottom: 0.5rem  !important;
+  margin: 0.5rem  !important;
 }
 .\!ma\:1 {
-  margin-left: 1rem    !important;
-  margin-right: 1rem    !important;
-  margin-top: 1rem    !important;
-  margin-bottom: 1rem    !important;
+  margin: 1rem    !important;
 }
 .\!ma\:2 {
-  margin-left: 2rem    !important;
-  margin-right: 2rem    !important;
-  margin-top: 2rem    !important;
-  margin-bottom: 2rem    !important;
+  margin: 2rem    !important;
 }
 .\!ma\:4 {
-  margin-left: 4rem    !important;
-  margin-right: 4rem    !important;
-  margin-top: 4rem    !important;
-  margin-bottom: 4rem    !important;
+  margin: 4rem    !important;
 }
 .\!ma\:8 {
-  margin-left: 8rem    !important;
-  margin-right: 8rem    !important;
-  margin-top: 8rem    !important;
-  margin-bottom: 8rem    !important;
+  margin: 8rem    !important;
 }
 .\!ma\:g {
-  margin-left: 16rem   !important;
-  margin-right: 16rem   !important;
-  margin-top: 16rem   !important;
-  margin-bottom: 16rem   !important;
+  margin: 16rem   !important;
 }
 @media screen {
   .\!ml\:0\@s {
@@ -1713,58 +1614,31 @@
     margin-bottom: 16rem   !important;
   }
   .\!ma\:0\@s {
-    margin-left: initial !important;
-    margin-right: initial !important;
-    margin-top: initial !important;
-    margin-bottom: initial !important;
+    margin: initial !important;
   }
   .\!ma\:i\@s {
-    margin-left: inherit !important;
-    margin-right: inherit !important;
-    margin-top: inherit !important;
-    margin-bottom: inherit !important;
+    margin: inherit !important;
   }
   .\!ma\:a\@s {
-    margin-left: auto    !important;
-    margin-right: auto    !important;
-    margin-top: auto    !important;
-    margin-bottom: auto    !important;
+    margin: auto    !important;
   }
   .\!ma\:h\@s {
-    margin-left: 0.5rem  !important;
-    margin-right: 0.5rem  !important;
-    margin-top: 0.5rem  !important;
-    margin-bottom: 0.5rem  !important;
+    margin: 0.5rem  !important;
   }
   .\!ma\:1\@s {
-    margin-left: 1rem    !important;
-    margin-right: 1rem    !important;
-    margin-top: 1rem    !important;
-    margin-bottom: 1rem    !important;
+    margin: 1rem    !important;
   }
   .\!ma\:2\@s {
-    margin-left: 2rem    !important;
-    margin-right: 2rem    !important;
-    margin-top: 2rem    !important;
-    margin-bottom: 2rem    !important;
+    margin: 2rem    !important;
   }
   .\!ma\:4\@s {
-    margin-left: 4rem    !important;
-    margin-right: 4rem    !important;
-    margin-top: 4rem    !important;
-    margin-bottom: 4rem    !important;
+    margin: 4rem    !important;
   }
   .\!ma\:8\@s {
-    margin-left: 8rem    !important;
-    margin-right: 8rem    !important;
-    margin-top: 8rem    !important;
-    margin-bottom: 8rem    !important;
+    margin: 8rem    !important;
   }
   .\!ma\:g\@s {
-    margin-left: 16rem   !important;
-    margin-right: 16rem   !important;
-    margin-top: 16rem   !important;
-    margin-bottom: 16rem   !important;
+    margin: 16rem   !important;
   }
 }
 @media print {
@@ -1949,58 +1823,31 @@
     margin-bottom: 16rem   !important;
   }
   .\!ma\:0\@p {
-    margin-left: initial !important;
-    margin-right: initial !important;
-    margin-top: initial !important;
-    margin-bottom: initial !important;
+    margin: initial !important;
   }
   .\!ma\:i\@p {
-    margin-left: inherit !important;
-    margin-right: inherit !important;
-    margin-top: inherit !important;
-    margin-bottom: inherit !important;
+    margin: inherit !important;
   }
   .\!ma\:a\@p {
-    margin-left: auto    !important;
-    margin-right: auto    !important;
-    margin-top: auto    !important;
-    margin-bottom: auto    !important;
+    margin: auto    !important;
   }
   .\!ma\:h\@p {
-    margin-left: 0.5rem  !important;
-    margin-right: 0.5rem  !important;
-    margin-top: 0.5rem  !important;
-    margin-bottom: 0.5rem  !important;
+    margin: 0.5rem  !important;
   }
   .\!ma\:1\@p {
-    margin-left: 1rem    !important;
-    margin-right: 1rem    !important;
-    margin-top: 1rem    !important;
-    margin-bottom: 1rem    !important;
+    margin: 1rem    !important;
   }
   .\!ma\:2\@p {
-    margin-left: 2rem    !important;
-    margin-right: 2rem    !important;
-    margin-top: 2rem    !important;
-    margin-bottom: 2rem    !important;
+    margin: 2rem    !important;
   }
   .\!ma\:4\@p {
-    margin-left: 4rem    !important;
-    margin-right: 4rem    !important;
-    margin-top: 4rem    !important;
-    margin-bottom: 4rem    !important;
+    margin: 4rem    !important;
   }
   .\!ma\:8\@p {
-    margin-left: 8rem    !important;
-    margin-right: 8rem    !important;
-    margin-top: 8rem    !important;
-    margin-bottom: 8rem    !important;
+    margin: 8rem    !important;
   }
   .\!ma\:g\@p {
-    margin-left: 16rem   !important;
-    margin-right: 16rem   !important;
-    margin-top: 16rem   !important;
-    margin-bottom: 16rem   !important;
+    margin: 16rem   !important;
   }
 }
 /*################################*\
