@@ -3620,6 +3620,30 @@
     text-decoration: line-through !important;
   }
 }
+.\!td\:0\^:hover,
+.\!td\:0\^:focus {
+  text-decoration: initial      !important;
+}
+.\!td\:i\^:hover,
+.\!td\:i\^:focus {
+  text-decoration: inherit      !important;
+}
+.\!td\:n\^:hover,
+.\!td\:n\^:focus {
+  text-decoration: none         !important;
+}
+.\!td\:u\^:hover,
+.\!td\:u\^:focus {
+  text-decoration: underline    !important;
+}
+.\!td\:o\^:hover,
+.\!td\:o\^:focus {
+  text-decoration: overline     !important;
+}
+.\!td\:s\^:hover,
+.\!td\:s\^:focus {
+  text-decoration: line-through !important;
+}
 /*################################*\
     _list-style-type.less
 \*################################*/
