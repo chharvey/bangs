@@ -1318,6 +1318,12 @@
 .\!ml\:4 {
   margin-left: 4rem    !important;
 }
+.\!ml\:8 {
+  margin-left: 8rem    !important;
+}
+.\!ml\:g {
+  margin-left: 16rem   !important;
+}
 .\!mr\:0 {
   margin-right: initial !important;
 }
@@ -1338,6 +1344,12 @@
 }
 .\!mr\:4 {
   margin-right: 4rem    !important;
+}
+.\!mr\:8 {
+  margin-right: 8rem    !important;
+}
+.\!mr\:g {
+  margin-right: 16rem   !important;
 }
 .\!mt\:0 {
   margin-top: initial !important;
@@ -1360,6 +1372,12 @@
 .\!mt\:4 {
   margin-top: 4rem    !important;
 }
+.\!mt\:8 {
+  margin-top: 8rem    !important;
+}
+.\!mt\:g {
+  margin-top: 16rem   !important;
+}
 .\!mb\:0 {
   margin-bottom: initial !important;
 }
@@ -1380,6 +1398,12 @@
 }
 .\!mb\:4 {
   margin-bottom: 4rem    !important;
+}
+.\!mb\:8 {
+  margin-bottom: 8rem    !important;
+}
+.\!mb\:g {
+  margin-bottom: 16rem   !important;
 }
 .\!mx\:0 {
   margin-left: initial !important;
@@ -1409,6 +1433,14 @@
   margin-left: 4rem    !important;
   margin-right: 4rem    !important;
 }
+.\!mx\:8 {
+  margin-left: 8rem    !important;
+  margin-right: 8rem    !important;
+}
+.\!mx\:g {
+  margin-left: 16rem   !important;
+  margin-right: 16rem   !important;
+}
 .\!my\:0 {
   margin-top: initial !important;
   margin-bottom: initial !important;
@@ -1436,6 +1468,14 @@
 .\!my\:4 {
   margin-top: 4rem    !important;
   margin-bottom: 4rem    !important;
+}
+.\!my\:8 {
+  margin-top: 8rem    !important;
+  margin-bottom: 8rem    !important;
+}
+.\!my\:g {
+  margin-top: 16rem   !important;
+  margin-bottom: 16rem   !important;
 }
 .\!ma\:0 {
   margin-left: initial !important;
@@ -1479,6 +1519,18 @@
   margin-top: 4rem    !important;
   margin-bottom: 4rem    !important;
 }
+.\!ma\:8 {
+  margin-left: 8rem    !important;
+  margin-right: 8rem    !important;
+  margin-top: 8rem    !important;
+  margin-bottom: 8rem    !important;
+}
+.\!ma\:g {
+  margin-left: 16rem   !important;
+  margin-right: 16rem   !important;
+  margin-top: 16rem   !important;
+  margin-bottom: 16rem   !important;
+}
 @media screen {
   .\!ml\:0\@s {
     margin-left: initial !important;
@@ -1501,6 +1553,12 @@
   .\!ml\:4\@s {
     margin-left: 4rem    !important;
   }
+  .\!ml\:8\@s {
+    margin-left: 8rem    !important;
+  }
+  .\!ml\:g\@s {
+    margin-left: 16rem   !important;
+  }
   .\!mr\:0\@s {
     margin-right: initial !important;
   }
@@ -1521,6 +1579,12 @@
   }
   .\!mr\:4\@s {
     margin-right: 4rem    !important;
+  }
+  .\!mr\:8\@s {
+    margin-right: 8rem    !important;
+  }
+  .\!mr\:g\@s {
+    margin-right: 16rem   !important;
   }
   .\!mt\:0\@s {
     margin-top: initial !important;
@@ -1543,6 +1607,12 @@
   .\!mt\:4\@s {
     margin-top: 4rem    !important;
   }
+  .\!mt\:8\@s {
+    margin-top: 8rem    !important;
+  }
+  .\!mt\:g\@s {
+    margin-top: 16rem   !important;
+  }
   .\!mb\:0\@s {
     margin-bottom: initial !important;
   }
@@ -1563,6 +1633,12 @@
   }
   .\!mb\:4\@s {
     margin-bottom: 4rem    !important;
+  }
+  .\!mb\:8\@s {
+    margin-bottom: 8rem    !important;
+  }
+  .\!mb\:g\@s {
+    margin-bottom: 16rem   !important;
   }
   .\!mx\:0\@s {
     margin-left: initial !important;
@@ -1592,6 +1668,14 @@
     margin-left: 4rem    !important;
     margin-right: 4rem    !important;
   }
+  .\!mx\:8\@s {
+    margin-left: 8rem    !important;
+    margin-right: 8rem    !important;
+  }
+  .\!mx\:g\@s {
+    margin-left: 16rem   !important;
+    margin-right: 16rem   !important;
+  }
   .\!my\:0\@s {
     margin-top: initial !important;
     margin-bottom: initial !important;
@@ -1619,6 +1703,14 @@
   .\!my\:4\@s {
     margin-top: 4rem    !important;
     margin-bottom: 4rem    !important;
+  }
+  .\!my\:8\@s {
+    margin-top: 8rem    !important;
+    margin-bottom: 8rem    !important;
+  }
+  .\!my\:g\@s {
+    margin-top: 16rem   !important;
+    margin-bottom: 16rem   !important;
   }
   .\!ma\:0\@s {
     margin-left: initial !important;
@@ -1662,6 +1754,18 @@
     margin-top: 4rem    !important;
     margin-bottom: 4rem    !important;
   }
+  .\!ma\:8\@s {
+    margin-left: 8rem    !important;
+    margin-right: 8rem    !important;
+    margin-top: 8rem    !important;
+    margin-bottom: 8rem    !important;
+  }
+  .\!ma\:g\@s {
+    margin-left: 16rem   !important;
+    margin-right: 16rem   !important;
+    margin-top: 16rem   !important;
+    margin-bottom: 16rem   !important;
+  }
 }
 @media print {
   .\!ml\:0\@p {
@@ -1685,6 +1789,12 @@
   .\!ml\:4\@p {
     margin-left: 4rem    !important;
   }
+  .\!ml\:8\@p {
+    margin-left: 8rem    !important;
+  }
+  .\!ml\:g\@p {
+    margin-left: 16rem   !important;
+  }
   .\!mr\:0\@p {
     margin-right: initial !important;
   }
@@ -1705,6 +1815,12 @@
   }
   .\!mr\:4\@p {
     margin-right: 4rem    !important;
+  }
+  .\!mr\:8\@p {
+    margin-right: 8rem    !important;
+  }
+  .\!mr\:g\@p {
+    margin-right: 16rem   !important;
   }
   .\!mt\:0\@p {
     margin-top: initial !important;
@@ -1727,6 +1843,12 @@
   .\!mt\:4\@p {
     margin-top: 4rem    !important;
   }
+  .\!mt\:8\@p {
+    margin-top: 8rem    !important;
+  }
+  .\!mt\:g\@p {
+    margin-top: 16rem   !important;
+  }
   .\!mb\:0\@p {
     margin-bottom: initial !important;
   }
@@ -1747,6 +1869,12 @@
   }
   .\!mb\:4\@p {
     margin-bottom: 4rem    !important;
+  }
+  .\!mb\:8\@p {
+    margin-bottom: 8rem    !important;
+  }
+  .\!mb\:g\@p {
+    margin-bottom: 16rem   !important;
   }
   .\!mx\:0\@p {
     margin-left: initial !important;
@@ -1776,6 +1904,14 @@
     margin-left: 4rem    !important;
     margin-right: 4rem    !important;
   }
+  .\!mx\:8\@p {
+    margin-left: 8rem    !important;
+    margin-right: 8rem    !important;
+  }
+  .\!mx\:g\@p {
+    margin-left: 16rem   !important;
+    margin-right: 16rem   !important;
+  }
   .\!my\:0\@p {
     margin-top: initial !important;
     margin-bottom: initial !important;
@@ -1803,6 +1939,14 @@
   .\!my\:4\@p {
     margin-top: 4rem    !important;
     margin-bottom: 4rem    !important;
+  }
+  .\!my\:8\@p {
+    margin-top: 8rem    !important;
+    margin-bottom: 8rem    !important;
+  }
+  .\!my\:g\@p {
+    margin-top: 16rem   !important;
+    margin-bottom: 16rem   !important;
   }
   .\!ma\:0\@p {
     margin-left: initial !important;
@@ -1845,6 +1989,18 @@
     margin-right: 4rem    !important;
     margin-top: 4rem    !important;
     margin-bottom: 4rem    !important;
+  }
+  .\!ma\:8\@p {
+    margin-left: 8rem    !important;
+    margin-right: 8rem    !important;
+    margin-top: 8rem    !important;
+    margin-bottom: 8rem    !important;
+  }
+  .\!ma\:g\@p {
+    margin-left: 16rem   !important;
+    margin-right: 16rem   !important;
+    margin-top: 16rem   !important;
+    margin-bottom: 16rem   !important;
   }
 }
 /*################################*\
