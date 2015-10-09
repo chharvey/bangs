@@ -2939,6 +2939,22 @@
     font-style: italic  !important;
   }
 }
+.\!fs\:0\^:hover,
+.\!fs\:0\^:focus {
+  font-style: initial !important;
+}
+.\!fs\:i\^:hover,
+.\!fs\:i\^:focus {
+  font-style: inherit !important;
+}
+.\!fs\:n\^:hover,
+.\!fs\:n\^:focus {
+  font-style: normal  !important;
+}
+.\!fs\:t\^:hover,
+.\!fs\:t\^:focus {
+  font-style: italic  !important;
+}
 /*################################*\
     _font-variant.less
 \*################################*/
@@ -2981,6 +2997,22 @@
   .\!fv\:s\@p {
     font-variant: small-caps !important;
   }
+}
+.\!fv\:0\^:hover,
+.\!fv\:0\^:focus {
+  font-variant: initial    !important;
+}
+.\!fv\:i\^:hover,
+.\!fv\:i\^:focus {
+  font-variant: inherit    !important;
+}
+.\!fv\:n\^:hover,
+.\!fv\:n\^:focus {
+  font-variant: normal     !important;
+}
+.\!fv\:s\^:hover,
+.\!fv\:s\^:focus {
+  font-variant: small-caps !important;
 }
 /*################################*\
     _font-weight.less
@@ -3105,6 +3137,58 @@
   .\!fw\:9\@p {
     font-weight: 900     !important;
   }
+}
+.\!fw\:0\^:hover,
+.\!fw\:0\^:focus {
+  font-weight: initial !important;
+}
+.\!fw\:i\^:hover,
+.\!fw\:i\^:focus {
+  font-weight: inherit !important;
+}
+.\!fw\:n\^:hover,
+.\!fw\:n\^:focus {
+  font-weight: normal  !important;
+}
+.\!fw\:b\^:hover,
+.\!fw\:b\^:focus {
+  font-weight: bold    !important;
+}
+.\!fw\:1\^:hover,
+.\!fw\:1\^:focus {
+  font-weight: 100     !important;
+}
+.\!fw\:2\^:hover,
+.\!fw\:2\^:focus {
+  font-weight: 200     !important;
+}
+.\!fw\:3\^:hover,
+.\!fw\:3\^:focus {
+  font-weight: 300     !important;
+}
+.\!fw\:4\^:hover,
+.\!fw\:4\^:focus {
+  font-weight: 400     !important;
+}
+.\!fw\:5\^:hover,
+.\!fw\:5\^:focus {
+  font-weight: 500     !important;
+}
+.\!fw\:6\^:hover,
+.\!fw\:6\^:focus {
+  font-weight: 600     !important;
+}
+.\!fw\:7\^:hover,
+.\!fw\:7\^:focus {
+  font-weight: 700     !important;
+}
+.\!fw\:8\^:hover,
+.\!fw\:8\^:focus {
+  font-weight: 800     !important;
+}
+.\!fw\:9\^:hover,
+.\!fw\:9\^:focus {
+  font-weight: 900     !important;
 }
 /*################################*\
     _font-size.less

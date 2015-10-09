@@ -14,6 +14,7 @@
 //
 // @s  =  screen
 // @p  =  print
+// ^   =  hover / focus
 //
 // ^initial
 // : `normal`
@@ -44,3 +45,8 @@
   .\!fv\:n\@p { .\!fv\:n; }
   .\!fv\:s\@p { .\!fv\:s; }
 }
+
+.\!fv\:0\^ { &:hover, &:focus { .\!fv\:0; } }
+.\!fv\:i\^ { &:hover, &:focus { .\!fv\:i; } }
+.\!fv\:n\^ { &:hover, &:focus { .\!fv\:n; } }
+.\!fv\:s\^ { &:hover, &:focus { .\!fv\:s; } }
