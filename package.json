@@ -25,6 +25,6 @@
   "homepage": "https://github.com/chharvey/bangs#readme",
   "devDependencies": {
     "lessc-each": "^1.0.1",
-    "xmeter": "^2.2.0"
+    "xmeter": "^2.3.0"
   }
 }
