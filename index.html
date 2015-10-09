@@ -4,7 +4,8 @@
     <title>Bangs</title>
     <meta charset="utf-8">
     <meta name="author" content="Chris Harvey">
-    <meta name="description" content="Bangs are single-responsibility CSS class selectors with exactly one property and marked with !important.">
+    <meta name="description" content="Bangs are unopinionated, single-responsibility CSS class selectors with one property and marked with !important.">
+    <link rel="stylesheet" href="node_modules/xmeter/xmeter.css">
     <link rel="stylesheet" href="bangs.css">
     <style>
       [class^='!'] {
@@ -17,7 +18,7 @@
       }
       .ss-flexbox::before {
         display: block;
-        content: 'Flexbox properties still in draft mode.';
+        content: 'Flexbox properties still in draft status.';
         font-weight: 900;
         font-size: 1.5em;
         line-height: 1;
@@ -27,10 +28,12 @@
   </head>
   <body>
     <main>
+      <h1>Bangs!</h1>
+      <p>Unopinionated, single-responsibility CSS class selectors with exactly one property and marked with !important.</p>
       <section id="display">
-        <h1>_display.less</h1>
+        <h2>_display.less</h2>
         <section>
-          <h1>all media queries</h1>
+          <h3>all media queries</h3>
           <div class="!d:0 ">  .!d:0    { display: initial      !important; }</div>
           <div class="!d:i ">  .!d:i    { display: inherit      !important; }</div>
           <div class="!d:n ">  .!d:n    { display: none         !important; }</div>
@@ -41,7 +44,7 @@
           <div class="!d:li">  .!d:li   { display: list-item    !important; }</div>
         </section>
         <section>
-          <h1>@media screen</h1>
+          <h3>@media screen</h3>
           <div class="!d:0@s ">.!d:0@s  { display: initial      !important; }</div>
           <div class="!d:i@s ">.!d:i@s  { display: inherit      !important; }</div>
           <div class="!d:n@s ">.!d:n@s  { display: none         !important; }</div>
@@ -52,7 +55,7 @@
           <div class="!d:li@s">.!d:li@s { display: list-item    !important; }</div>
         </section>
         <section>
-          <h1>@media print</h1>
+          <h3>@media print</h3>
           <div class="!d:0@p ">.!d:0@p  { display: initial      !important; }</div>
           <div class="!d:i@p ">.!d:i@p  { display: inherit      !important; }</div>
           <div class="!d:n@p ">.!d:n@p  { display: none         !important; }</div>
@@ -64,9 +67,9 @@
         </section>
       </section>
       <section id="width">
-        <h1>_width.less</h1>
+        <h2>_width.less</h2>
         <section>
-          <h1>all media queries</h1>
+          <h3>all media queries</h3>
           <div class="!w:0">    .!w:0     { width: initial !important; }</div>
           <div class="!w:i">    .!w:i     { width: inherit !important; }</div>
           <div class="!w:a">    .!w:a     { width: auto !important; }</div>
@@ -133,7 +136,7 @@
           <div class="!w:coc">  .!w:coc   { width: 100% !important; }</div>
         </section>
         <section>
-          <h1>@media screen</h1>
+          <h3>@media screen</h3>
           <div class="!w:0@s  ">.!w:0@s   { width: initial !important; }</div>
           <div class="!w:i@s  ">.!w:i@s   { width: inherit !important; }</div>
           <div class="!w:a@s  ">.!w:a@s   { width: auto !important; }</div>
@@ -200,7 +203,7 @@
           <div class="!w:coc@s">.!w:coc@s { width: 100% !important; }</div>
         </section>
         <section>
-          <h1>@media print</h1>
+          <h3>@media print</h3>
           <div class="!w:0@p  ">.!w:0@p   { width: initial !important; }</div>
           <div class="!w:i@p  ">.!w:i@p   { width: inherit !important; }</div>
           <div class="!w:a@p  ">.!w:a@p   { width: auto !important; }</div>
@@ -268,9 +271,9 @@
         </section>
       </section>
       <section id="padding">
-        <h1>_padding.less</h1>
+        <h2>_padding.less</h2>
         <section>
-          <h1>all media queries</h1>
+          <h3>all media queries</h3>
           <div class="!pl:0">  .!pl:0   { padding-left:   initial !important; }</div>
           <div class="!pl:i">  .!pl:i   { padding-left:   inherit !important; }</div>
           <div class="!pl:h">  .!pl:h   { padding-left:   0.5rem  !important; }</div>
@@ -329,7 +332,7 @@
           <div class="!pa:g">  .!pa:g   { padding:        16rem   !important; }</div>
         </section>
         <section>
-          <h1>@media screen</h1>
+          <h3>@media screen</h3>
           <div class="!pl:0@s">.!pl:0@s { padding-left:   initial !important; }</div>
           <div class="!pl:i@s">.!pl:i@s { padding-left:   inherit !important; }</div>
           <div class="!pl:h@s">.!pl:h@s { padding-left:   0.5rem  !important; }</div>
@@ -388,7 +391,7 @@
           <div class="!pa:g@s">.!pa:g@s { padding:        16rem   !important; }</div>
         </section>
         <section>
-          <h1>@media print</h1>
+          <h3>@media print</h3>
           <div class="!pl:0@p">.!pl:0@p { padding-left:   initial !important; }</div>
           <div class="!pl:i@p">.!pl:i@p { padding-left:   inherit !important; }</div>
           <div class="!pl:h@p">.!pl:h@p { padding-left:   0.5rem  !important; }</div>
@@ -448,9 +451,9 @@
         </section>
       </section>
       <section id="margin">
-        <h1>_margin.less</h1>
+        <h2>_margin.less</h2>
         <section>
-          <h1>all media queries</h1>
+          <h3>all media queries</h3>
           <div class="!ml:0">  .!ml:0   { margin-left:   initial !important; }</div>
           <div class="!ml:i">  .!ml:i   { margin-left:   inherit !important; }</div>
           <div class="!ml:a">  .!ml:a   { margin-left:   auto    !important; }</div>
@@ -516,7 +519,7 @@
           <div class="!ma:g">  .!ma:g   { margin:        16rem   !important; }</div>
         </section>
         <section>
-          <h1>@media screen</h1>
+          <h3>@media screen</h3>
           <div class="!ml:0@s">.!ml:0@s { margin-left:   initial !important; }</div>
           <div class="!ml:i@s">.!ml:i@s { margin-left:   inherit !important; }</div>
           <div class="!ml:a@s">.!ml:a@s { margin-left:   auto    !important; }</div>
@@ -582,7 +585,7 @@
           <div class="!ma:g@s">.!ma:g@s { margin:        16rem   !important; }</div>
         </section>
         <section>
-          <h1>@media print</h1>
+          <h3>@media print</h3>
           <div class="!ml:0@p">.!ml:0@p { margin-left:   initial !important; }</div>
           <div class="!ml:i@p">.!ml:i@p { margin-left:   inherit !important; }</div>
           <div class="!ml:a@p">.!ml:a@p { margin-left:   auto    !important; }</div>
@@ -649,9 +652,9 @@
         </section>
       </section>
       <section id="position">
-        <h1>_position.less</h1>
+        <h2>_position.less</h2>
         <section>
-          <h1>all media queries</h1>
+          <h3>all media queries</h3>
           <div class="!ps:0">  .!ps:0   { position: initial  !important; }</div>
           <div class="!ps:i">  .!ps:i   { position: inherit  !important; }</div>
           <div class="!ps:s">  .!ps:s   { position: static   !important; }</div>
@@ -659,7 +662,7 @@
           <div class="!ps:f">  .!ps:f   { position: fixed    !important; }</div>
         </section>
         <section>
-          <h1>@media screen</h1>
+          <h3>@media screen</h3>
           <div class="!ps:0@s">.!ps:0@s { position: initial  !important; }</div>
           <div class="!ps:i@s">.!ps:i@s { position: inherit  !important; }</div>
           <div class="!ps:s@s">.!ps:s@s { position: static   !important; }</div>
@@ -667,7 +670,7 @@
           <div class="!ps:f@s">.!ps:f@s { position: fixed    !important; }</div>
         </section>
         <section>
-          <h1>@media print</h1>
+          <h3>@media print</h3>
           <div class="!ps:0@p">.!ps:0@p { position: initial  !important; }</div>
           <div class="!ps:i@p">.!ps:i@p { position: inherit  !important; }</div>
           <div class="!ps:s@p">.!ps:s@p { position: static   !important; }</div>
@@ -676,9 +679,9 @@
         </section>
       </section>
       <section id="float">
-        <h1>_float.less</h1>
+        <h2>_float.less</h2>
         <section>
-          <h1>all media queries</h1>
+          <h3>all media queries</h3>
           <div class="!fl:0">  .!fl:0   { float: initial !important; }</div>
           <div class="!fl:i">  .!fl:i   { float: inherit !important; }</div>
           <div class="!fl:n">  .!fl:n   { float: none    !important; }</div>
@@ -692,7 +695,7 @@
           <div class="!cl:b">  .!cl:b   { clear: both    !important; }</div>
         </section>
         <section>
-          <h1>@media screen</h1>
+          <h3>@media screen</h3>
           <div class="!fl:0@s">.!fl:0@s { float: initial !important; }</div>
           <div class="!fl:i@s">.!fl:i@s { float: inherit !important; }</div>
           <div class="!fl:n@s">.!fl:n@s { float: none    !important; }</div>
@@ -706,7 +709,7 @@
           <div class="!cl:b@s">.!cl:b@s { clear: both    !important; }</div>
         </section>
         <section>
-          <h1>@media print</h1>
+          <h3>@media print</h3>
           <div class="!fl:0@p">.!fl:0@p { float: initial !important; }</div>
           <div class="!fl:i@p">.!fl:i@p { float: inherit !important; }</div>
           <div class="!fl:n@p">.!fl:n@p { float: none    !important; }</div>
@@ -721,9 +724,9 @@
         </section>
       </section>
       <section id="justify-content" class="ss-flexbox">
-        <h1>_justify-content.less</h1>
+        <h2>_justify-content.less</h2>
         <section>
-          <h1>all media queries</h1>
+          <h3>all media queries</h3>
           <div class="!j:0 ">  .!j:0    { justify-content: initial       !important; }</div>
           <div class="!j:i ">  .!j:i    { justify-content: inherit       !important; }</div>
           <div class="!j:bt">  .!j:bt   { justify-content: space-between !important; }</div>
@@ -733,7 +736,7 @@
           <div class="!j:ed">  .!j:ed   { justify-content: flex-end      !important; }</div>
         </section>
         <section>
-          <h1>@media screen</h1>
+          <h3>@media screen</h3>
           <div class="!j:0@s"> .!j:0@s  { justify-content: initial       !important; }</div>
           <div class="!j:i@s"> .!j:i@s  { justify-content: inherit       !important; }</div>
           <div class="!j:bt@s">.!j:bt@s { justify-content: space-between !important; }</div>
@@ -743,7 +746,7 @@
           <div class="!j:ed@s">.!j:ed@s { justify-content: flex-end      !important; }</div>
         </section>
         <section>
-          <h1>@media print</h1>
+          <h3>@media print</h3>
           <div class="!j:0@p"> .!j:0@p  { justify-content: initial       !important; }</div>
           <div class="!j:i@p"> .!j:i@p  { justify-content: inherit       !important; }</div>
           <div class="!j:bt@p">.!j:bt@p { justify-content: space-between !important; }</div>
@@ -754,9 +757,9 @@
         </section>
       </section>
       <section id="order" class="ss-flexbox">
-        <h1>_order.less</h1>
+        <h2>_order.less</h2>
         <section>
-          <h1>all media queries</h1>
+          <h3>all media queries</h3>
           <div class="!o:0">   .!o:0    { order: initial !important; }</div>
           <div class="!o:1">   .!o:1    { order:   1     !important; }</div>
           <div class="!o:2">   .!o:2    { order:   2     !important; }</div>
@@ -790,7 +793,7 @@
           <div class="!o:-f">  .!o:-f   { order: -15     !important; }</div>
         </section>
         <section>
-          <h1>@media screen</h1>
+          <h3>@media screen</h3>
           <div class="!o:0@s ">.!o:0@s  { order: initial !important; }</div>
           <div class="!o:1@s ">.!o:1@s  { order:   1     !important; }</div>
           <div class="!o:2@s ">.!o:2@s  { order:   2     !important; }</div>
@@ -824,7 +827,7 @@
           <div class="!o:-f@s">.!o:-f@s { order: -15     !important; }</div>
         </section>
         <section>
-          <h1>@media print</h1>
+          <h3>@media print</h3>
           <div class="!o:0@p ">.!o:0@p  { order: initial !important; }</div>
           <div class="!o:1@p ">.!o:1@p  { order:   1     !important; }</div>
           <div class="!o:2@p ">.!o:2@p  { order:   2     !important; }</div>
@@ -859,30 +862,30 @@
         </section>
       </section>
       <section id="font-style">
-        <h1>_font-style.less</h1>
+        <h2>_font-style.less</h2>
         <section>
-          <h1>all media queries</h1>
+          <h3>all media queries</h3>
           <div class="!fs:0">  .!fs:0   { font-style: initial !important; }</div>
           <div class="!fs:i">  .!fs:i   { font-style: inherit !important; }</div>
           <div class="!fs:n">  .!fs:n   { font-style: normal  !important; }</div>
           <div class="!fs:t">  .!fs:t   { font-style: italic  !important; }</div>
         </section>
         <section>
-          <h1>@media screen</h1>
+          <h3>@media screen</h3>
           <div class="!fs:0@s">.!fs:0@s { font-style: initial !important; }</div>
           <div class="!fs:i@s">.!fs:i@s { font-style: inherit !important; }</div>
           <div class="!fs:n@s">.!fs:n@s { font-style: normal  !important; }</div>
           <div class="!fs:t@s">.!fs:t@s { font-style: italic  !important; }</div>
         </section>
         <section>
-          <h1>@media print</h1>
+          <h3>@media print</h3>
           <div class="!fs:0@p">.!fs:0@p { font-style: initial !important; }</div>
           <div class="!fs:i@p">.!fs:i@p { font-style: inherit !important; }</div>
           <div class="!fs:n@p">.!fs:n@p { font-style: normal  !important; }</div>
           <div class="!fs:t@p">.!fs:t@p { font-style: italic  !important; }</div>
         </section>
         <section>
-          <h1>pseudo-classes :hover and :focus</h1>
+          <h3>pseudo-classes :hover and :focus</h3>
           <div class="!fs:0^"> .!fs:0^  { font-style: initial !important; }</div>
           <div class="!fs:i^"> .!fs:i^  { font-style: inherit !important; }</div>
           <div class="!fs:n^"> .!fs:n^  { font-style: normal  !important; }</div>
@@ -890,30 +893,30 @@
         </section>
       </section>
       <section id="font-variant">
-        <h1>_font-variant.less</h1>
+        <h2>_font-variant.less</h2>
         <section>
-          <h1>all media queries</h1>
+          <h3>all media queries</h3>
           <div class="!fv:0">  .!fv:0   { font-variant: initial    !important; }</div>
           <div class="!fv:i">  .!fv:i   { font-variant: inherit    !important; }</div>
           <div class="!fv:n">  .!fv:n   { font-variant: normal     !important; }</div>
           <div class="!fv:s">  .!fv:s   { font-variant: small-caps !important; }</div>
         </section>
         <section>
-          <h1>@media screen</h1>
+          <h3>@media screen</h3>
           <div class="!fv:0@s">.!fv:0@s { font-variant: initial    !important; }</div>
           <div class="!fv:i@s">.!fv:i@s { font-variant: inherit    !important; }</div>
           <div class="!fv:n@s">.!fv:n@s { font-variant: normal     !important; }</div>
           <div class="!fv:s@s">.!fv:s@s { font-variant: small-caps !important; }</div>
         </section>
         <section>
-          <h1>@media print</h1>
+          <h3>@media print</h3>
           <div class="!fv:0@p">.!fv:0@p { font-variant: initial    !important; }</div>
           <div class="!fv:i@p">.!fv:i@p { font-variant: inherit    !important; }</div>
           <div class="!fv:n@p">.!fv:n@p { font-variant: normal     !important; }</div>
           <div class="!fv:s@p">.!fv:s@p { font-variant: small-caps !important; }</div>
         </section>
         <section>
-          <h1>pseudo-classes :hover and :focus</h1>
+          <h3>pseudo-classes :hover and :focus</h3>
           <div class="!fv:0^"> .!fv:0^  { font-variant: initial    !important; }</div>
           <div class="!fv:i^"> .!fv:i^  { font-variant: inherit    !important; }</div>
           <div class="!fv:n^"> .!fv:n^  { font-variant: normal     !important; }</div>
@@ -921,9 +924,9 @@
         </section>
       </section>
       <section id="font-weight">
-        <h1>_font-weight.less</h1>
+        <h2>_font-weight.less</h2>
         <section>
-          <h1>all media queries</h1>
+          <h3>all media queries</h3>
           <div class="!fw:0">  .!fw:0   { font-weight: initial !important; }</div>
           <div class="!fw:i">  .!fw:i   { font-weight: inherit !important; }</div>
           <div class="!fw:n">  .!fw:n   { font-weight: normal  !important; }</div>
@@ -939,7 +942,7 @@
           <div class="!fw:9">  .!fw:9   { font-weight: 900     !important; }</div>
         </section>
         <section>
-          <h1>@media screen</h1>
+          <h3>@media screen</h3>
           <div class="!fw:0@s">.!fw:0@s { font-weight: initial !important; }</div>
           <div class="!fw:i@s">.!fw:i@s { font-weight: inherit !important; }</div>
           <div class="!fw:n@s">.!fw:n@s { font-weight: normal  !important; }</div>
@@ -955,7 +958,7 @@
           <div class="!fw:9@s">.!fw:9@s { font-weight: 900     !important; }</div>
         </section>
         <section>
-          <h1>@media print</h1>
+          <h3>@media print</h3>
           <div class="!fw:0@p">.!fw:0@p { font-weight: initial !important; }</div>
           <div class="!fw:i@p">.!fw:i@p { font-weight: inherit !important; }</div>
           <div class="!fw:n@p">.!fw:n@p { font-weight: normal  !important; }</div>
@@ -971,7 +974,7 @@
           <div class="!fw:9@p">.!fw:9@p { font-weight: 900     !important; }</div>
         </section>
         <section>
-          <h1>pseudo-classes :hover and :focus</h1>
+          <h3>pseudo-classes :hover and :focus</h3>
           <div class="!fw:0^"> .!fw:0^  { font-weight: initial !important; }</div>
           <div class="!fw:i^"> .!fw:i^  { font-weight: inherit !important; }</div>
           <div class="!fw:n^"> .!fw:n^  { font-weight: normal  !important; }</div>
@@ -988,9 +991,9 @@
         </section>
       </section>
       <section id="font-size">
-        <h1>_font-size.less</h1>
+        <h2>_font-size.less</h2>
         <section>
-          <h1>all media queries</h1>
+          <h3>all media queries</h3>
           <div class="!fz:0 ">  .!fz:0    { font-size: initial  !important; }</div>
           <div class="!fz:i ">  .!fz:i    { font-size: inherit  !important; }</div>
           <div class="!fz:h1">  .!fz:h1   { font-size: 2rem     !important; }</div>
@@ -1001,7 +1004,7 @@
           <div class="!fz:h6">  .!fz:h6   { font-size: 0.75rem  !important; }</div>
         </section>
         <section>
-          <h1>@media screen</h1>
+          <h3>@media screen</h3>
           <div class="!fz:0@s ">.!fz:0@s  { font-size: initial  !important; }</div>
           <div class="!fz:i@s ">.!fz:i@s  { font-size: inherit  !important; }</div>
           <div class="!fz:h1@s">.!fz:h1@s { font-size: 2rem     !important; }</div>
@@ -1012,7 +1015,7 @@
           <div class="!fz:h6@s">.!fz:h6@s { font-size: 0.75rem  !important; }</div>
         </section>
         <section>
-          <h1>@media print</h1>
+          <h3>@media print</h3>
           <div class="!fz:0@p ">.!fz:0@p  { font-size: initial  !important; }</div>
           <div class="!fz:i@p ">.!fz:i@p  { font-size: inherit  !important; }</div>
           <div class="!fz:h1@p">.!fz:h1@p { font-size: 2rem     !important; }</div>
@@ -1024,9 +1027,9 @@
         </section>
       </section>
       <section id="font-family">
-        <h1>_font-family.less</h1>
+        <h2>_font-family.less</h2>
         <section>
-          <h1>all media queries</h1>
+          <h3>all media queries</h3>
           <div class="!ff:0 ">  .!ff:0    { font-family: initial    !important; }</div>
           <div class="!ff:i ">  .!ff:i    { font-family: inherit    !important; }</div>
           <div class="!ff:ss">  .!ff:ss   { font-family: sans-serif !important; }</div>
@@ -1036,7 +1039,7 @@
           <div class="!ff:cs">  .!ff:cs   { font-family: cursive    !important; }</div>
         </section>
         <section>
-          <h1>@media screen</h1>
+          <h3>@media screen</h3>
           <div class="!ff:0@s ">.!ff:0@s  { font-family: initial    !important; }</div>
           <div class="!ff:i@s ">.!ff:i@s  { font-family: inherit    !important; }</div>
           <div class="!ff:ss@s">.!ff:ss@s { font-family: sans-serif !important; }</div>
@@ -1046,7 +1049,7 @@
           <div class="!ff:cs@s">.!ff:cs@s { font-family: cursive    !important; }</div>
         </section>
         <section>
-          <h1>@media print</h1>
+          <h3>@media print</h3>
           <div class="!ff:0@p ">.!ff:0@p  { font-family: initial    !important; }</div>
           <div class="!ff:i@p ">.!ff:i@p  { font-family: inherit    !important; }</div>
           <div class="!ff:ss@p">.!ff:ss@p { font-family: sans-serif !important; }</div>
@@ -1057,9 +1060,9 @@
         </section>
       </section>
       <section id="text-align">
-        <h1>_text-align.less</h1>
+        <h2>_text-align.less</h2>
         <section>
-          <h1>all media queries</h1>
+          <h3>all media queries</h3>
           <div class="!ta:0">  .!ta:0   { text-align: initial !important; }</div>
           <div class="!ta:i">  .!ta:i   { text-align: inherit !important; }</div>
           <div class="!ta:l">  .!ta:l   { text-align: left    !important; }</div>
@@ -1068,7 +1071,7 @@
           <div class="!ta:j">  .!ta:j   { text-align: justify !important; }</div>
         </section>
         <section>
-          <h1>@media screen</h1>
+          <h3>@media screen</h3>
           <div class="!ta:0@s">.!ta:0@s { text-align: initial !important; }</div>
           <div class="!ta:i@s">.!ta:i@s { text-align: inherit !important; }</div>
           <div class="!ta:l@s">.!ta:l@s { text-align: left    !important; }</div>
@@ -1077,7 +1080,7 @@
           <div class="!ta:j@s">.!ta:j@s { text-align: justify !important; }</div>
         </section>
         <section>
-          <h1>@media print</h1>
+          <h3>@media print</h3>
           <div class="!ta:0@p">.!ta:0@p { text-align: initial !important; }</div>
           <div class="!ta:i@p">.!ta:i@p { text-align: inherit !important; }</div>
           <div class="!ta:l@p">.!ta:l@p { text-align: left    !important; }</div>
@@ -1087,9 +1090,9 @@
         </section>
       </section>
       <section id="vertical-align">
-        <h1>_vertical-align.less</h1>
+        <h2>_vertical-align.less</h2>
         <section>
-          <h1>all media queries</h1>
+          <h3>all media queries</h3>
           <div class="!va:0 ">  .!va:0    { vertical-align: initial     !important; }</div>
           <div class="!va:i ">  .!va:i    { vertical-align: inherit     !important; }</div>
           <div class="!va:a ">  .!va:a    { vertical-align: baseline    !important; }</div>
@@ -1102,7 +1105,7 @@
           <div class="!va:st">  .!va:st   { vertical-align: super       !important; }</div>
         </section>
         <section>
-          <h1>@media screen</h1>
+          <h3>@media screen</h3>
           <div class="!va:0@s ">.!va:0@s  { vertical-align: initial     !important; }</div>
           <div class="!va:i@s ">.!va:i@s  { vertical-align: inherit     !important; }</div>
           <div class="!va:a@s ">.!va:a@s  { vertical-align: baseline    !important; }</div>
@@ -1115,7 +1118,7 @@
           <div class="!va:st@s">.!va:st@s { vertical-align: super       !important; }</div>
         </section>
         <section>
-          <h1>@media print</h1>
+          <h3>@media print</h3>
           <div class="!va:0@p ">.!va:0@p  { vertical-align: initial     !important; }</div>
           <div class="!va:i@p ">.!va:i@p  { vertical-align: inherit     !important; }</div>
           <div class="!va:a@p ">.!va:a@p  { vertical-align: baseline    !important; }</div>
@@ -1129,9 +1132,9 @@
         </section>
       </section>
       <section id="white-space">
-        <h1>_white-space.less</h1>
+        <h2>_white-space.less</h2>
         <section>
-          <h1>all media queries</h1>
+          <h3>all media queries</h3>
           <div class="!ws:0 ">  .!ws:0    { white-space: initial  !important; }</div>
           <div class="!ws:i ">  .!ws:i    { white-space: inherit  !important; }</div>
           <div class="!ws:n ">  .!ws:n    { white-space: normal   !important; }</div>
@@ -1141,7 +1144,7 @@
           <div class="!ws:pl">  .!ws:pl   { white-space: pre-line !important; }</div>
         </section>
         <section>
-          <h1>@media screen</h1>
+          <h3>@media screen</h3>
           <div class="!ws:0@s ">.!ws:0@s  { white-space: initial  !important; }</div>
           <div class="!ws:i@s ">.!ws:i@s  { white-space: inherit  !important; }</div>
           <div class="!ws:n@s ">.!ws:n@s  { white-space: normal   !important; }</div>
@@ -1151,7 +1154,7 @@
           <div class="!ws:pl@s">.!ws:pl@s { white-space: pre-line !important; }</div>
         </section>
         <section>
-          <h1>@media print</h1>
+          <h3>@media print</h3>
           <div class="!ws:0@p ">.!ws:0@p  { white-space: initial  !important; }</div>
           <div class="!ws:i@p ">.!ws:i@p  { white-space: inherit  !important; }</div>
           <div class="!ws:n@p ">.!ws:n@p  { white-space: normal   !important; }</div>
@@ -1162,13 +1165,13 @@
         </section>
       </section>
       <section id="page-break">
-        <h1>_page-break.less</h1>
+        <h2>_page-break.less</h2>
         <p><strong>Note:</strong>
           The <code>page-break-before</code> and <code>page-break-after</code> properties are only relevant
           when printing, so all media query classes have been left out.
         </p>
         <section>
-          <h1>all media queries</h1>
+          <h3>all media queries</h3>
           <div class="!pbb:0">.!pbb:0 { page-break-before: initial !important; }</div>
           <div class="!pbb:i">.!pbb:i { page-break-before: inherit !important; }</div>
           <div class="!pbb:a">.!pbb:a { page-break-before: auto    !important; }</div>
@@ -1176,7 +1179,7 @@
           <div class="!pbb:f">.!pbb:f { page-break-before: avoid   !important; }</div>
         </section>
         <section>
-          <h1>all media queries</h1>
+          <h3>all media queries</h3>
           <div class="!pba:0">.!pba:0 { page-break-after: initial !important; }</div>
           <div class="!pba:i">.!pba:i { page-break-after: inherit !important; }</div>
           <div class="!pba:a">.!pba:a { page-break-after: auto    !important; }</div>
@@ -1185,9 +1188,9 @@
         </section>
       </section>
       <section id="text-rendering">
-        <h1>_text-rendering.less</h1>
+        <h2>_text-rendering.less</h2>
         <section>
-          <h1>all media queries</h1>
+          <h3>all media queries</h3>
           <div class="!tr:0">  .!tr:0   { text-rendering: initial            !important; }</div>
           <div class="!tr:i">  .!tr:i   { text-rendering: inherit            !important; }</div>
           <div class="!tr:a">  .!tr:a   { text-rendering: auto               !important; }</div>
@@ -1196,7 +1199,7 @@
           <div class="!tr:g">  .!tr:g   { text-rendering: geometricPrecision !important; }</div>
         </section>
         <section>
-          <h1>@media screen</h1>
+          <h3>@media screen</h3>
           <div class="!tr:0@s">.!tr:0@s { text-rendering: initial            !important; }</div>
           <div class="!tr:i@s">.!tr:i@s { text-rendering: inherit            !important; }</div>
           <div class="!tr:a@s">.!tr:a@s { text-rendering: auto               !important; }</div>
@@ -1205,7 +1208,7 @@
           <div class="!tr:g@s">.!tr:g@s { text-rendering: geometricPrecision !important; }</div>
         </section>
         <section>
-          <h1>@media print</h1>
+          <h3>@media print</h3>
           <div class="!tr:0@p">.!tr:0@p { text-rendering: initial            !important; }</div>
           <div class="!tr:i@p">.!tr:i@p { text-rendering: inherit            !important; }</div>
           <div class="!tr:a@p">.!tr:a@p { text-rendering: auto               !important; }</div>
@@ -1215,9 +1218,9 @@
         </section>
       </section>
       <section id="text-transform">
-        <h1>_text-transform.less</h1>
+        <h2>_text-transform.less</h2>
         <section>
-          <h1>all media queries</h1>
+          <h3>all media queries</h3>
           <div class="!tt:0">  .!tt:0   { text-transform: initial    !important; }</div>
           <div class="!tt:i">  .!tt:i   { text-transform: inherit    !important; }</div>
           <div class="!tt:n">  .!tt:n   { text-transform: none       !important; }</div>
@@ -1226,7 +1229,7 @@
           <div class="!tt:l">  .!tt:l   { text-transform: lowercase  !important; }</div>
         </section>
         <section>
-          <h1>@media screen</h1>
+          <h3>@media screen</h3>
           <div class="!tt:0@s">.!tt:0@s { text-transform: initial    !important; }</div>
           <div class="!tt:i@s">.!tt:i@s { text-transform: inherit    !important; }</div>
           <div class="!tt:n@s">.!tt:n@s { text-transform: none       !important; }</div>
@@ -1235,7 +1238,7 @@
           <div class="!tt:l@s">.!tt:l@s { text-transform: lowercase  !important; }</div>
         </section>
         <section>
-          <h1>@media print</h1>
+          <h3>@media print</h3>
           <div class="!tt:0@p">.!tt:0@p { text-transform: initial    !important; }</div>
           <div class="!tt:i@p">.!tt:i@p { text-transform: inherit    !important; }</div>
           <div class="!tt:n@p">.!tt:n@p { text-transform: none       !important; }</div>
@@ -1244,7 +1247,7 @@
           <div class="!tt:l@p">.!tt:l@p { text-transform: lowercase  !important; }</div>
         </section>
         <section>
-          <h1>pseudo-classes :hover and :focus</h1>
+          <h3>pseudo-classes :hover and :focus</h3>
           <div class="!tt:0^"> .!tt:0^  { text-transform: initial    !important; }</div>
           <div class="!tt:i^"> .!tt:i^  { text-transform: inherit    !important; }</div>
           <div class="!tt:n^"> .!tt:n^  { text-transform: none       !important; }</div>
@@ -1254,9 +1257,9 @@
         </section>
       </section>
       <section id="text-decoration">
-        <h1>_text-decoration.less</h1>
+        <h2>_text-decoration.less</h2>
         <section>
-          <h1>all media queries</h1>
+          <h3>all media queries</h3>
           <div class="!td:0">  .!td:0   { text-decoration: initial      !important; }</div>
           <div class="!td:i">  .!td:i   { text-decoration: inherit      !important; }</div>
           <div class="!td:n">  .!td:n   { text-decoration: none         !important; }</div>
@@ -1265,7 +1268,7 @@
           <div class="!td:s">  .!td:s   { text-decoration: line-through !important; }</div>
         </section>
         <section>
-          <h1>@media screen</h1>
+          <h3>@media screen</h3>
           <div class="!td:0@s">.!td:0@s { text-decoration: initial      !important; }</div>
           <div class="!td:i@s">.!td:i@s { text-decoration: inherit      !important; }</div>
           <div class="!td:n@s">.!td:n@s { text-decoration: none         !important; }</div>
@@ -1274,7 +1277,7 @@
           <div class="!td:s@s">.!td:s@s { text-decoration: line-through !important; }</div>
         </section>
         <section>
-          <h1>@media print</h1>
+          <h3>@media print</h3>
           <div class="!td:0@p">.!td:0@p { text-decoration: initial      !important; }</div>
           <div class="!td:i@p">.!td:i@p { text-decoration: inherit      !important; }</div>
           <div class="!td:n@p">.!td:n@p { text-decoration: none         !important; }</div>
@@ -1283,7 +1286,7 @@
           <div class="!td:s@p">.!td:s@p { text-decoration: line-through !important; }</div>
         </section>
         <section>
-          <h1>pseudo-classes :hover and :focus</h1>
+          <h3>pseudo-classes :hover and :focus</h3>
           <div class="!td:0^"> .!td:0^  { text-decoration: initial      !important; }</div>
           <div class="!td:i^"> .!td:i^  { text-decoration: inherit      !important; }</div>
           <div class="!td:n^"> .!td:n^  { text-decoration: none         !important; }</div>
@@ -1293,9 +1296,9 @@
         </section>
       </section>
       <section id="list-style-type">
-        <h1>_list-style-type.less</h1>
+        <h2>_list-style-type.less</h2>
         <section>
-          <h1>all media queries</h1>
+          <h3>all media queries</h3>
           <ul>
             <li class="!lst:0 ">  .!lst:0    { list-style-type: initial              !important; }</li>
             <li class="!lst:i ">  .!lst:i    { list-style-type: inherit              !important; }</li>
@@ -1309,7 +1312,7 @@
           </ul>
         </section>
         <section>
-          <h1>@media screen</h1>
+          <h3>@media screen</h3>
           <ul>
             <li class="!lst:0@s ">.!lst:0@s  { list-style-type: initial              !important; }</li>
             <li class="!lst:i@s ">.!lst:i@s  { list-style-type: inherit              !important; }</li>
@@ -1323,7 +1326,7 @@
           </ul>
         </section>
         <section>
-          <h1>@media print</h1>
+          <h3>@media print</h3>
           <ul>
             <li class="!lst:0@p ">.!lst:0@p  { list-style-type: initial              !important; }</li>
             <li class="!lst:i@p ">.!lst:i@p  { list-style-type: inherit              !important; }</li>
@@ -1338,9 +1341,9 @@
         </section>
       </section>
       <section id="list-style-position">
-        <h1>_list-style-position.less</h1>
+        <h2>_list-style-position.less</h2>
         <section>
-          <h1>all media queries</h1>
+          <h3>all media queries</h3>
           <ul>
             <li class="!lsp:0 ">  .!lsp:0    { list-style-position: initial !important; }</li>
             <li class="!lsp:i ">  .!lsp:i    { list-style-position: inherit !important; }</li>
@@ -1349,7 +1352,7 @@
           </ul>
         </section>
         <section>
-          <h1>@media screen</h1>
+          <h3>@media screen</h3>
           <ul>
             <li class="!lsp:0@s ">.!lsp:0@s  { list-style-position: initial !important; }</li>
             <li class="!lsp:i@s ">.!lsp:i@s  { list-style-position: inherit !important; }</li>
@@ -1358,7 +1361,7 @@
           </ul>
         </section>
         <section>
-          <h1>@media print</h1>
+          <h3>@media print</h3>
           <ul>
             <li class="!lsp:0@p ">.!lsp:0@p  { list-style-position: initial !important; }</li>
             <li class="!lsp:i@p ">.!lsp:i@p  { list-style-position: inherit !important; }</li>
@@ -1368,9 +1371,9 @@
         </section>
       </section>
       <section id="list-style-image">
-        <h1>_list-style-image.less</h1>
+        <h2>_list-style-image.less</h2>
         <section>
-          <h1>all media queries</h1>
+          <h3>all media queries</h3>
           <ul>
             <li class="!lsi:0">  .!lsi:0   { list-style-image: initial !important; }</li>
             <li class="!lsi:i">  .!lsi:i   { list-style-image: inherit !important; }</li>
@@ -1378,7 +1381,7 @@
           </ul>
         </section>
         <section>
-          <h1>@media screen</h1>
+          <h3>@media screen</h3>
           <ul>
             <li class="!lsi:0@s">.!lsi:0@s { list-style-image: initial !important; }</li>
             <li class="!lsi:i@s">.!lsi:i@s { list-style-image: inherit !important; }</li>
@@ -1386,7 +1389,7 @@
           </ul>
         </section>
         <section>
-          <h1>@media print</h1>
+          <h3>@media print</h3>
           <ul>
             <li class="!lsi:0@p">.!lsi:0@p { list-style-image: initial !important; }</li>
             <li class="!lsi:i@p">.!lsi:i@p { list-style-image: inherit !important; }</li>
@@ -1395,23 +1398,23 @@
         </section>
       </section>
       <section id="color">
-        <h1>_color.less</h1>
+        <h2>_color.less</h2>
         <section>
-          <h1>all media queries</h1>
+          <h3>all media queries</h3>
           <div class="!c:0">  .!c:0   { color: initial      !important; }</div>
           <div class="!c:i">  .!c:i   { color: inherit      !important; }</div>
           <div class="!c:t">  .!c:t   { color: transparent  !important; }</div>
           <div class="!c:c">  .!c:c   { color: currentColor !important; }</div>
         </section>
         <section>
-          <h1>@media screen</h1>
+          <h3>@media screen</h3>
           <div class="!c:0@s">.!c:0@s { color: initial      !important; }</div>
           <div class="!c:i@s">.!c:i@s { color: inherit      !important; }</div>
           <div class="!c:t@s">.!c:t@s { color: transparent  !important; }</div>
           <div class="!c:c@s">.!c:c@s { color: currentColor !important; }</div>
         </section>
         <section>
-          <h1>@media print</h1>
+          <h3>@media print</h3>
           <div class="!c:0@p">.!c:0@p { color: initial      !important; }</div>
           <div class="!c:i@p">.!c:i@p { color: inherit      !important; }</div>
           <div class="!c:t@p">.!c:t@p { color: transparent  !important; }</div>
@@ -1419,23 +1422,23 @@
         </section>
       </section>
       <section id="background-color">
-        <h1>_background-color.less</h1>
+        <h2>_background-color.less</h2>
         <section>
-          <h1>all media queries</h1>
+          <h3>all media queries</h3>
           <div class="!bc:0">  .!bc:0   { background-color: initial      !important; }</div>
           <div class="!bc:i">  .!bc:i   { background-color: inherit      !important; }</div>
           <div class="!bc:t">  .!bc:t   { background-color: transparent  !important; }</div>
           <div class="!bc:c">  .!bc:c   { background-color: currentColor !important; }</div>
         </section>
         <section>
-          <h1>@media screen</h1>
+          <h3>@media screen</h3>
           <div class="!bc:0@s">.!bc:0@s { background-color: initial      !important; }</div>
           <div class="!bc:i@s">.!bc:i@s { background-color: inherit      !important; }</div>
           <div class="!bc:t@s">.!bc:t@s { background-color: transparent  !important; }</div>
           <div class="!bc:c@s">.!bc:c@s { background-color: currentColor !important; }</div>
         </section>
         <section>
-          <h1>@media print</h1>
+          <h3>@media print</h3>
           <div class="!bc:0@p">.!bc:0@p { background-color: initial      !important; }</div>
           <div class="!bc:i@p">.!bc:i@p { background-color: inherit      !important; }</div>
           <div class="!bc:t@p">.!bc:t@p { background-color: transparent  !important; }</div>
@@ -1443,30 +1446,30 @@
         </section>
       </section>
       <section id="background-image">
-        <h1>_background-image.less</h1>
+        <h2>_background-image.less</h2>
         <section>
-          <h1>all media queries</h1>
+          <h3>all media queries</h3>
           <div class="!bi:0">  .!bi:0   { background-image: initial !important; }</div>
           <div class="!bi:i">  .!bi:i   { background-image: inherit !important; }</div>
           <div class="!bi:n">  .!bi:n   { background-image: none    !important; }</div>
         </section>
         <section>
-          <h1>@media screen</h1>
+          <h3>@media screen</h3>
           <div class="!bi:0@s">.!bi:0@s { background-image: initial !important; }</div>
           <div class="!bi:i@s">.!bi:i@s { background-image: inherit !important; }</div>
           <div class="!bi:n@s">.!bi:n@s { background-image: none    !important; }</div>
         </section>
         <section>
-          <h1>@media print</h1>
+          <h3>@media print</h3>
           <div class="!bi:0@p">.!bi:0@p { background-image: initial !important; }</div>
           <div class="!bi:i@p">.!bi:i@p { background-image: inherit !important; }</div>
           <div class="!bi:n@p">.!bi:n@p { background-image: none    !important; }</div>
         </section>
       </section>
       <section id="visibility">
-        <h1>_visibility.less</h1>
+        <h2>_visibility.less</h2>
         <section>
-          <h1>all media queries</h1>
+          <h3>all media queries</h3>
           <div class="!v:0">  .!v:0   { visibility: initial  !important; }</div>
           <div class="!v:i">  .!v:i   { visibility: inherit  !important; }</div>
           <div class="!v:v">  .!v:v   { visibility: visible  !important; }</div>
@@ -1474,7 +1477,7 @@
           <div class="!v:c">  .!v:c   { visibility: collapse !important; }</div>
         </section>
         <section>
-          <h1>@media screen</h1>
+          <h3>@media screen</h3>
           <div class="!v:0@s">.!v:0@s { visibility: initial  !important; }</div>
           <div class="!v:i@s">.!v:i@s { visibility: inherit  !important; }</div>
           <div class="!v:v@s">.!v:v@s { visibility: visible  !important; }</div>
@@ -1482,7 +1485,7 @@
           <div class="!v:c@s">.!v:c@s { visibility: collapse !important; }</div>
         </section>
         <section>
-          <h1>@media print</h1>
+          <h3>@media print</h3>
           <div class="!v:0@p">.!v:0@p { visibility: initial  !important; }</div>
           <div class="!v:i@p">.!v:i@p { visibility: inherit  !important; }</div>
           <div class="!v:v@p">.!v:v@p { visibility: visible  !important; }</div>

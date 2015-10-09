@@ -4,7 +4,8 @@ html
     title Bangs
     meta(charset="utf-8")
     meta(name="author", content="Chris Harvey")
-    meta(name="description", content="Bangs are single-responsibility CSS class selectors with exactly one property and marked with !important.")
+    meta(name="description", content="Bangs are unopinionated, single-responsibility CSS class selectors with one property and marked with !important.")
+    link(rel="stylesheet", href="node_modules/xmeter/xmeter.css")
     link(rel="stylesheet", href="bangs.css")
     style.
       [class^='!'] {
@@ -17,7 +18,7 @@ html
       }
       .ss-flexbox::before {
         display: block;
-        content: 'Flexbox properties still in draft mode.';
+        content: 'Flexbox properties still in draft status.';
         font-weight: 900;
         font-size: 1.5em;
         line-height: 1;
@@ -25,10 +26,12 @@ html
       }
   body
     main
+      h1 Bangs!
+      p Unopinionated, single-responsibility CSS class selectors with exactly one property and marked with !important.
       section#display
-        h1 _display.less
+        h2 _display.less
         section
-          h1 all media queries
+          h3 all media queries
           div(class="!d:0 ")   .!d:0    { display: initial      !important; }
           div(class="!d:i ")   .!d:i    { display: inherit      !important; }
           div(class="!d:n ")   .!d:n    { display: none         !important; }
@@ -40,7 +43,7 @@ html
           //- div(class="!d:tb")   .!d:tb   { display: table        !important; }
           //- div(class="!d:tc")   .!d:tc   { display: table-cell   !important; }
         section
-          h1 @media screen
+          h3 @media screen
           div(class="!d:0@s ") .!d:0@s  { display: initial      !important; }
           div(class="!d:i@s ") .!d:i@s  { display: inherit      !important; }
           div(class="!d:n@s ") .!d:n@s  { display: none         !important; }
@@ -52,7 +55,7 @@ html
           //- div(class="!d:tb@s") .!d:tb@s { display: table        !important; }
           //- div(class="!d:tc@s") .!d:tc@s { display: table-cell   !important; }
         section
-          h1 @media print
+          h3 @media print
           div(class="!d:0@p ") .!d:0@p  { display: initial      !important; }
           div(class="!d:i@p ") .!d:i@p  { display: inherit      !important; }
           div(class="!d:n@p ") .!d:n@p  { display: none         !important; }
@@ -64,9 +67,9 @@ html
           //- div(class="!d:tb@p") .!d:tb@p { display: table        !important; }
           //- div(class="!d:tc@p") .!d:tc@p { display: table-cell   !important; }
       section#width
-        h1 _width.less
+        h2 _width.less
         section
-          h1 all media queries
+          h3 all media queries
           div(class="!w:0")     .!w:0     { width: initial !important; }
           div(class="!w:i")     .!w:i     { width: inherit !important; }
           div(class="!w:a")     .!w:a     { width: auto !important; }
@@ -132,7 +135,7 @@ html
           div(class="!w:boc")   .!w:boc   { width: 91.66666667% !important; }
           div(class="!w:coc")   .!w:coc   { width: 100% !important; }
         section
-          h1 @media screen
+          h3 @media screen
           div(class="!w:0@s  ") .!w:0@s   { width: initial !important; }
           div(class="!w:i@s  ") .!w:i@s   { width: inherit !important; }
           div(class="!w:a@s  ") .!w:a@s   { width: auto !important; }
@@ -198,7 +201,7 @@ html
           div(class="!w:boc@s") .!w:boc@s { width: 91.66666667% !important; }
           div(class="!w:coc@s") .!w:coc@s { width: 100% !important; }
         section
-          h1 @media print
+          h3 @media print
           div(class="!w:0@p  ") .!w:0@p   { width: initial !important; }
           div(class="!w:i@p  ") .!w:i@p   { width: inherit !important; }
           div(class="!w:a@p  ") .!w:a@p   { width: auto !important; }
@@ -264,9 +267,9 @@ html
           div(class="!w:boc@p") .!w:boc@p { width: 91.66666667% !important; }
           div(class="!w:coc@p") .!w:coc@p { width: 100% !important; }
       section#padding
-        h1 _padding.less
+        h2 _padding.less
         section
-          h1 all media queries
+          h3 all media queries
           div(class="!pl:0")   .!pl:0   { padding-left:   initial !important; }
           div(class="!pl:i")   .!pl:i   { padding-left:   inherit !important; }
           div(class="!pl:h")   .!pl:h   { padding-left:   0.5rem  !important; }
@@ -324,7 +327,7 @@ html
           div(class="!pa:8")   .!pa:8   { padding:        8rem    !important; }
           div(class="!pa:g")   .!pa:g   { padding:        16rem   !important; }
         section
-          h1 @media screen
+          h3 @media screen
           div(class="!pl:0@s") .!pl:0@s { padding-left:   initial !important; }
           div(class="!pl:i@s") .!pl:i@s { padding-left:   inherit !important; }
           div(class="!pl:h@s") .!pl:h@s { padding-left:   0.5rem  !important; }
@@ -382,7 +385,7 @@ html
           div(class="!pa:8@s") .!pa:8@s { padding:        8rem    !important; }
           div(class="!pa:g@s") .!pa:g@s { padding:        16rem   !important; }
         section
-          h1 @media print
+          h3 @media print
           div(class="!pl:0@p") .!pl:0@p { padding-left:   initial !important; }
           div(class="!pl:i@p") .!pl:i@p { padding-left:   inherit !important; }
           div(class="!pl:h@p") .!pl:h@p { padding-left:   0.5rem  !important; }
@@ -440,9 +443,9 @@ html
           div(class="!pa:8@p") .!pa:8@p { padding:        8rem    !important; }
           div(class="!pa:g@p") .!pa:g@p { padding:        16rem   !important; }
       section#margin
-        h1 _margin.less
+        h2 _margin.less
         section
-          h1 all media queries
+          h3 all media queries
           div(class="!ml:0")   .!ml:0   { margin-left:   initial !important; }
           div(class="!ml:i")   .!ml:i   { margin-left:   inherit !important; }
           div(class="!ml:a")   .!ml:a   { margin-left:   auto    !important; }
@@ -507,7 +510,7 @@ html
           div(class="!ma:8")   .!ma:8   { margin:        8rem    !important; }
           div(class="!ma:g")   .!ma:g   { margin:        16rem   !important; }
         section
-          h1 @media screen
+          h3 @media screen
           div(class="!ml:0@s") .!ml:0@s { margin-left:   initial !important; }
           div(class="!ml:i@s") .!ml:i@s { margin-left:   inherit !important; }
           div(class="!ml:a@s") .!ml:a@s { margin-left:   auto    !important; }
@@ -572,7 +575,7 @@ html
           div(class="!ma:8@s") .!ma:8@s { margin:        8rem    !important; }
           div(class="!ma:g@s") .!ma:g@s { margin:        16rem   !important; }
         section
-          h1 @media print
+          h3 @media print
           div(class="!ml:0@p") .!ml:0@p { margin-left:   initial !important; }
           div(class="!ml:i@p") .!ml:i@p { margin-left:   inherit !important; }
           div(class="!ml:a@p") .!ml:a@p { margin-left:   auto    !important; }
@@ -637,32 +640,32 @@ html
           div(class="!ma:8@p") .!ma:8@p { margin:        8rem    !important; }
           div(class="!ma:g@p") .!ma:g@p { margin:        16rem   !important; }
       section#position
-        h1 _position.less
+        h2 _position.less
         section
-          h1 all media queries
+          h3 all media queries
           div(class="!ps:0")   .!ps:0   { position: initial  !important; }
           div(class="!ps:i")   .!ps:i   { position: inherit  !important; }
           div(class="!ps:s")   .!ps:s   { position: static   !important; }
           div(class="!ps:r")   .!ps:r   { position: relative !important; }
           div(class="!ps:f")   .!ps:f   { position: fixed    !important; }
         section
-          h1 @media screen
+          h3 @media screen
           div(class="!ps:0@s") .!ps:0@s { position: initial  !important; }
           div(class="!ps:i@s") .!ps:i@s { position: inherit  !important; }
           div(class="!ps:s@s") .!ps:s@s { position: static   !important; }
           div(class="!ps:r@s") .!ps:r@s { position: relative !important; }
           div(class="!ps:f@s") .!ps:f@s { position: fixed    !important; }
         section
-          h1 @media print
+          h3 @media print
           div(class="!ps:0@p") .!ps:0@p { position: initial  !important; }
           div(class="!ps:i@p") .!ps:i@p { position: inherit  !important; }
           div(class="!ps:s@p") .!ps:s@p { position: static   !important; }
           div(class="!ps:r@p") .!ps:r@p { position: relative !important; }
           div(class="!ps:f@p") .!ps:f@p { position: fixed    !important; }
       section#float
-        h1 _float.less
+        h2 _float.less
         section
-          h1 all media queries
+          h3 all media queries
           div(class="!fl:0")   .!fl:0   { float: initial !important; }
           div(class="!fl:i")   .!fl:i   { float: inherit !important; }
           div(class="!fl:n")   .!fl:n   { float: none    !important; }
@@ -676,7 +679,7 @@ html
           div(class="!cl:r")   .!cl:r   { clear: right   !important; }
           div(class="!cl:b")   .!cl:b   { clear: both    !important; }
         section
-          h1 @media screen
+          h3 @media screen
           div(class="!fl:0@s") .!fl:0@s { float: initial !important; }
           div(class="!fl:i@s") .!fl:i@s { float: inherit !important; }
           div(class="!fl:n@s") .!fl:n@s { float: none    !important; }
@@ -690,7 +693,7 @@ html
           div(class="!cl:r@s") .!cl:r@s { clear: right   !important; }
           div(class="!cl:b@s") .!cl:b@s { clear: both    !important; }
         section
-          h1 @media print
+          h3 @media print
           div(class="!fl:0@p") .!fl:0@p { float: initial !important; }
           div(class="!fl:i@p") .!fl:i@p { float: inherit !important; }
           div(class="!fl:n@p") .!fl:n@p { float: none    !important; }
@@ -704,9 +707,9 @@ html
           div(class="!cl:r@p") .!cl:r@p { clear: right   !important; }
           div(class="!cl:b@p") .!cl:b@p { clear: both    !important; }
       section#justify-content.ss-flexbox
-        h1 _justify-content.less
+        h2 _justify-content.less
         section
-          h1 all media queries
+          h3 all media queries
           div(class="!j:0 ")   .!j:0    { justify-content: initial       !important; }
           div(class="!j:i ")   .!j:i    { justify-content: inherit       !important; }
           div(class="!j:bt")   .!j:bt   { justify-content: space-between !important; }
@@ -715,7 +718,7 @@ html
           div(class="!j:st")   .!j:st   { justify-content: flex-start    !important; }
           div(class="!j:ed")   .!j:ed   { justify-content: flex-end      !important; }
         section
-          h1 @media screen
+          h3 @media screen
           div(class="!j:0@s")  .!j:0@s  { justify-content: initial       !important; }
           div(class="!j:i@s")  .!j:i@s  { justify-content: inherit       !important; }
           div(class="!j:bt@s") .!j:bt@s { justify-content: space-between !important; }
@@ -724,7 +727,7 @@ html
           div(class="!j:st@s") .!j:st@s { justify-content: flex-start    !important; }
           div(class="!j:ed@s") .!j:ed@s { justify-content: flex-end      !important; }
         section
-          h1 @media print
+          h3 @media print
           div(class="!j:0@p")  .!j:0@p  { justify-content: initial       !important; }
           div(class="!j:i@p")  .!j:i@p  { justify-content: inherit       !important; }
           div(class="!j:bt@p") .!j:bt@p { justify-content: space-between !important; }
@@ -733,9 +736,9 @@ html
           div(class="!j:st@p") .!j:st@p { justify-content: flex-start    !important; }
           div(class="!j:ed@p") .!j:ed@p { justify-content: flex-end      !important; }
       section#order.ss-flexbox
-        h1 _order.less
+        h2 _order.less
         section
-          h1 all media queries
+          h3 all media queries
           div(class="!o:0")    .!o:0    { order: initial !important; }
           div(class="!o:1")    .!o:1    { order:   1     !important; }
           div(class="!o:2")    .!o:2    { order:   2     !important; }
@@ -768,7 +771,7 @@ html
           div(class="!o:-e")   .!o:-e   { order: -14     !important; }
           div(class="!o:-f")   .!o:-f   { order: -15     !important; }
         section
-          h1 @media screen
+          h3 @media screen
           div(class="!o:0@s ") .!o:0@s  { order: initial !important; }
           div(class="!o:1@s ") .!o:1@s  { order:   1     !important; }
           div(class="!o:2@s ") .!o:2@s  { order:   2     !important; }
@@ -801,7 +804,7 @@ html
           div(class="!o:-e@s") .!o:-e@s { order: -14     !important; }
           div(class="!o:-f@s") .!o:-f@s { order: -15     !important; }
         section
-          h1 @media print
+          h3 @media print
           div(class="!o:0@p ") .!o:0@p  { order: initial !important; }
           div(class="!o:1@p ") .!o:1@p  { order:   1     !important; }
           div(class="!o:2@p ") .!o:2@p  { order:   2     !important; }
@@ -834,61 +837,61 @@ html
           div(class="!o:-e@p") .!o:-e@p { order: -14     !important; }
           div(class="!o:-f@p") .!o:-f@p { order: -15     !important; }
       section#font-style
-        h1 _font-style.less
+        h2 _font-style.less
         section
-          h1 all media queries
+          h3 all media queries
           div(class="!fs:0")   .!fs:0   { font-style: initial !important; }
           div(class="!fs:i")   .!fs:i   { font-style: inherit !important; }
           div(class="!fs:n")   .!fs:n   { font-style: normal  !important; }
           div(class="!fs:t")   .!fs:t   { font-style: italic  !important; }
         section
-          h1 @media screen
+          h3 @media screen
           div(class="!fs:0@s") .!fs:0@s { font-style: initial !important; }
           div(class="!fs:i@s") .!fs:i@s { font-style: inherit !important; }
           div(class="!fs:n@s") .!fs:n@s { font-style: normal  !important; }
           div(class="!fs:t@s") .!fs:t@s { font-style: italic  !important; }
         section
-          h1 @media print
+          h3 @media print
           div(class="!fs:0@p") .!fs:0@p { font-style: initial !important; }
           div(class="!fs:i@p") .!fs:i@p { font-style: inherit !important; }
           div(class="!fs:n@p") .!fs:n@p { font-style: normal  !important; }
           div(class="!fs:t@p") .!fs:t@p { font-style: italic  !important; }
         section
-          h1 pseudo-classes :hover and :focus
+          h3 pseudo-classes :hover and :focus
           div(class="!fs:0^")  .!fs:0^  { font-style: initial !important; }
           div(class="!fs:i^")  .!fs:i^  { font-style: inherit !important; }
           div(class="!fs:n^")  .!fs:n^  { font-style: normal  !important; }
           div(class="!fs:t^")  .!fs:t^  { font-style: italic  !important; }
       section#font-variant
-        h1 _font-variant.less
+        h2 _font-variant.less
         section
-          h1 all media queries
+          h3 all media queries
           div(class="!fv:0")   .!fv:0   { font-variant: initial    !important; }
           div(class="!fv:i")   .!fv:i   { font-variant: inherit    !important; }
           div(class="!fv:n")   .!fv:n   { font-variant: normal     !important; }
           div(class="!fv:s")   .!fv:s   { font-variant: small-caps !important; }
         section
-          h1 @media screen
+          h3 @media screen
           div(class="!fv:0@s") .!fv:0@s { font-variant: initial    !important; }
           div(class="!fv:i@s") .!fv:i@s { font-variant: inherit    !important; }
           div(class="!fv:n@s") .!fv:n@s { font-variant: normal     !important; }
           div(class="!fv:s@s") .!fv:s@s { font-variant: small-caps !important; }
         section
-          h1 @media print
+          h3 @media print
           div(class="!fv:0@p") .!fv:0@p { font-variant: initial    !important; }
           div(class="!fv:i@p") .!fv:i@p { font-variant: inherit    !important; }
           div(class="!fv:n@p") .!fv:n@p { font-variant: normal     !important; }
           div(class="!fv:s@p") .!fv:s@p { font-variant: small-caps !important; }
         section
-          h1 pseudo-classes :hover and :focus
+          h3 pseudo-classes :hover and :focus
           div(class="!fv:0^")  .!fv:0^  { font-variant: initial    !important; }
           div(class="!fv:i^")  .!fv:i^  { font-variant: inherit    !important; }
           div(class="!fv:n^")  .!fv:n^  { font-variant: normal     !important; }
           div(class="!fv:s^")  .!fv:s^  { font-variant: small-caps !important; }
       section#font-weight
-        h1 _font-weight.less
+        h2 _font-weight.less
         section
-          h1 all media queries
+          h3 all media queries
           div(class="!fw:0")   .!fw:0   { font-weight: initial !important; }
           div(class="!fw:i")   .!fw:i   { font-weight: inherit !important; }
           div(class="!fw:n")   .!fw:n   { font-weight: normal  !important; }
@@ -903,7 +906,7 @@ html
           div(class="!fw:8")   .!fw:8   { font-weight: 800     !important; }
           div(class="!fw:9")   .!fw:9   { font-weight: 900     !important; }
         section
-          h1 @media screen
+          h3 @media screen
           div(class="!fw:0@s") .!fw:0@s { font-weight: initial !important; }
           div(class="!fw:i@s") .!fw:i@s { font-weight: inherit !important; }
           div(class="!fw:n@s") .!fw:n@s { font-weight: normal  !important; }
@@ -918,7 +921,7 @@ html
           div(class="!fw:8@s") .!fw:8@s { font-weight: 800     !important; }
           div(class="!fw:9@s") .!fw:9@s { font-weight: 900     !important; }
         section
-          h1 @media print
+          h3 @media print
           div(class="!fw:0@p") .!fw:0@p { font-weight: initial !important; }
           div(class="!fw:i@p") .!fw:i@p { font-weight: inherit !important; }
           div(class="!fw:n@p") .!fw:n@p { font-weight: normal  !important; }
@@ -933,7 +936,7 @@ html
           div(class="!fw:8@p") .!fw:8@p { font-weight: 800     !important; }
           div(class="!fw:9@p") .!fw:9@p { font-weight: 900     !important; }
         section
-          h1 pseudo-classes :hover and :focus
+          h3 pseudo-classes :hover and :focus
           div(class="!fw:0^")  .!fw:0^  { font-weight: initial !important; }
           div(class="!fw:i^")  .!fw:i^  { font-weight: inherit !important; }
           div(class="!fw:n^")  .!fw:n^  { font-weight: normal  !important; }
@@ -948,9 +951,9 @@ html
           div(class="!fw:8^")  .!fw:8^  { font-weight: 800     !important; }
           div(class="!fw:9^")  .!fw:9^  { font-weight: 900     !important; }
       section#font-size
-        h1 _font-size.less
+        h2 _font-size.less
         section
-          h1 all media queries
+          h3 all media queries
           div(class="!fz:0 ")   .!fz:0    { font-size: initial  !important; }
           div(class="!fz:i ")   .!fz:i    { font-size: inherit  !important; }
           div(class="!fz:h1")   .!fz:h1   { font-size: 2rem     !important; }
@@ -960,7 +963,7 @@ html
           div(class="!fz:h5")   .!fz:h5   { font-size: 0.875rem !important; }
           div(class="!fz:h6")   .!fz:h6   { font-size: 0.75rem  !important; }
         section
-          h1 @media screen
+          h3 @media screen
           div(class="!fz:0@s ") .!fz:0@s  { font-size: initial  !important; }
           div(class="!fz:i@s ") .!fz:i@s  { font-size: inherit  !important; }
           div(class="!fz:h1@s") .!fz:h1@s { font-size: 2rem     !important; }
@@ -970,7 +973,7 @@ html
           div(class="!fz:h5@s") .!fz:h5@s { font-size: 0.875rem !important; }
           div(class="!fz:h6@s") .!fz:h6@s { font-size: 0.75rem  !important; }
         section
-          h1 @media print
+          h3 @media print
           div(class="!fz:0@p ") .!fz:0@p  { font-size: initial  !important; }
           div(class="!fz:i@p ") .!fz:i@p  { font-size: inherit  !important; }
           div(class="!fz:h1@p") .!fz:h1@p { font-size: 2rem     !important; }
@@ -980,9 +983,9 @@ html
           div(class="!fz:h5@p") .!fz:h5@p { font-size: 0.875rem !important; }
           div(class="!fz:h6@p") .!fz:h6@p { font-size: 0.75rem  !important; }
       section#font-family
-        h1 _font-family.less
+        h2 _font-family.less
         section
-          h1 all media queries
+          h3 all media queries
           div(class="!ff:0 ")   .!ff:0    { font-family: initial    !important; }
           div(class="!ff:i ")   .!ff:i    { font-family: inherit    !important; }
           div(class="!ff:ss")   .!ff:ss   { font-family: sans-serif !important; }
@@ -991,7 +994,7 @@ html
           div(class="!ff:fy")   .!ff:fy   { font-family: fantasy    !important; }
           div(class="!ff:cs")   .!ff:cs   { font-family: cursive    !important; }
         section
-          h1 @media screen
+          h3 @media screen
           div(class="!ff:0@s ") .!ff:0@s  { font-family: initial    !important; }
           div(class="!ff:i@s ") .!ff:i@s  { font-family: inherit    !important; }
           div(class="!ff:ss@s") .!ff:ss@s { font-family: sans-serif !important; }
@@ -1000,7 +1003,7 @@ html
           div(class="!ff:fy@s") .!ff:fy@s { font-family: fantasy    !important; }
           div(class="!ff:cs@s") .!ff:cs@s { font-family: cursive    !important; }
         section
-          h1 @media print
+          h3 @media print
           div(class="!ff:0@p ") .!ff:0@p  { font-family: initial    !important; }
           div(class="!ff:i@p ") .!ff:i@p  { font-family: inherit    !important; }
           div(class="!ff:ss@p") .!ff:ss@p { font-family: sans-serif !important; }
@@ -1009,9 +1012,9 @@ html
           div(class="!ff:fy@p") .!ff:fy@p { font-family: fantasy    !important; }
           div(class="!ff:cs@p") .!ff:cs@p { font-family: cursive    !important; }
       section#text-align
-        h1 _text-align.less
+        h2 _text-align.less
         section
-          h1 all media queries
+          h3 all media queries
           div(class="!ta:0")   .!ta:0   { text-align: initial !important; }
           div(class="!ta:i")   .!ta:i   { text-align: inherit !important; }
           div(class="!ta:l")   .!ta:l   { text-align: left    !important; }
@@ -1019,7 +1022,7 @@ html
           div(class="!ta:c")   .!ta:c   { text-align: center  !important; }
           div(class="!ta:j")   .!ta:j   { text-align: justify !important; }
         section
-          h1 @media screen
+          h3 @media screen
           div(class="!ta:0@s") .!ta:0@s { text-align: initial !important; }
           div(class="!ta:i@s") .!ta:i@s { text-align: inherit !important; }
           div(class="!ta:l@s") .!ta:l@s { text-align: left    !important; }
@@ -1027,7 +1030,7 @@ html
           div(class="!ta:c@s") .!ta:c@s { text-align: center  !important; }
           div(class="!ta:j@s") .!ta:j@s { text-align: justify !important; }
         section
-          h1 @media print
+          h3 @media print
           div(class="!ta:0@p") .!ta:0@p { text-align: initial !important; }
           div(class="!ta:i@p") .!ta:i@p { text-align: inherit !important; }
           div(class="!ta:l@p") .!ta:l@p { text-align: left    !important; }
@@ -1035,9 +1038,9 @@ html
           div(class="!ta:c@p") .!ta:c@p { text-align: center  !important; }
           div(class="!ta:j@p") .!ta:j@p { text-align: justify !important; }
       section#vertical-align
-        h1 _vertical-align.less
+        h2 _vertical-align.less
         section
-          h1 all media queries
+          h3 all media queries
           div(class="!va:0 ")   .!va:0    { vertical-align: initial     !important; }
           div(class="!va:i ")   .!va:i    { vertical-align: inherit     !important; }
           div(class="!va:a ")   .!va:a    { vertical-align: baseline    !important; }
@@ -1049,7 +1052,7 @@ html
           div(class="!va:sb")   .!va:sb   { vertical-align: sub         !important; }
           div(class="!va:st")   .!va:st   { vertical-align: super       !important; }
         section
-          h1 @media screen
+          h3 @media screen
           div(class="!va:0@s ") .!va:0@s  { vertical-align: initial     !important; }
           div(class="!va:i@s ") .!va:i@s  { vertical-align: inherit     !important; }
           div(class="!va:a@s ") .!va:a@s  { vertical-align: baseline    !important; }
@@ -1061,7 +1064,7 @@ html
           div(class="!va:sb@s") .!va:sb@s { vertical-align: sub         !important; }
           div(class="!va:st@s") .!va:st@s { vertical-align: super       !important; }
         section
-          h1 @media print
+          h3 @media print
           div(class="!va:0@p ") .!va:0@p  { vertical-align: initial     !important; }
           div(class="!va:i@p ") .!va:i@p  { vertical-align: inherit     !important; }
           div(class="!va:a@p ") .!va:a@p  { vertical-align: baseline    !important; }
@@ -1073,9 +1076,9 @@ html
           div(class="!va:sb@p") .!va:sb@p { vertical-align: sub         !important; }
           div(class="!va:st@p") .!va:st@p { vertical-align: super       !important; }
       section#white-space
-        h1 _white-space.less
+        h2 _white-space.less
         section
-          h1 all media queries
+          h3 all media queries
           div(class="!ws:0 ")   .!ws:0    { white-space: initial  !important; }
           div(class="!ws:i ")   .!ws:i    { white-space: inherit  !important; }
           div(class="!ws:n ")   .!ws:n    { white-space: normal   !important; }
@@ -1084,7 +1087,7 @@ html
           div(class="!ws:pw")   .!ws:pw   { white-space: pre-wrap !important; }
           div(class="!ws:pl")   .!ws:pl   { white-space: pre-line !important; }
         section
-          h1 @media screen
+          h3 @media screen
           div(class="!ws:0@s ") .!ws:0@s  { white-space: initial  !important; }
           div(class="!ws:i@s ") .!ws:i@s  { white-space: inherit  !important; }
           div(class="!ws:n@s ") .!ws:n@s  { white-space: normal   !important; }
@@ -1093,7 +1096,7 @@ html
           div(class="!ws:pw@s") .!ws:pw@s { white-space: pre-wrap !important; }
           div(class="!ws:pl@s") .!ws:pl@s { white-space: pre-line !important; }
         section
-          h1 @media print
+          h3 @media print
           div(class="!ws:0@p ") .!ws:0@p  { white-space: initial  !important; }
           div(class="!ws:i@p ") .!ws:i@p  { white-space: inherit  !important; }
           div(class="!ws:n@p ") .!ws:n@p  { white-space: normal   !important; }
@@ -1102,29 +1105,29 @@ html
           div(class="!ws:pw@p") .!ws:pw@p { white-space: pre-wrap !important; }
           div(class="!ws:pl@p") .!ws:pl@p { white-space: pre-line !important; }
       section#page-break
-        h1 _page-break.less
+        h2 _page-break.less
         p.
           #[strong Note:]
           The #[code page-break-before] and #[code page-break-after] properties are only relevant
           when printing, so all media query classes have been left out.
         section
-          h1 all media queries
+          h3 all media queries
           div(class="!pbb:0") .!pbb:0 { page-break-before: initial !important; }
           div(class="!pbb:i") .!pbb:i { page-break-before: inherit !important; }
           div(class="!pbb:a") .!pbb:a { page-break-before: auto    !important; }
           div(class="!pbb:t") .!pbb:t { page-break-before: always  !important; }
           div(class="!pbb:f") .!pbb:f { page-break-before: avoid   !important; }
         section
-          h1 all media queries
+          h3 all media queries
           div(class="!pba:0") .!pba:0 { page-break-after: initial !important; }
           div(class="!pba:i") .!pba:i { page-break-after: inherit !important; }
           div(class="!pba:a") .!pba:a { page-break-after: auto    !important; }
           div(class="!pba:t") .!pba:t { page-break-after: always  !important; }
           div(class="!pba:f") .!pba:f { page-break-after: avoid   !important; }
       section#text-rendering
-        h1 _text-rendering.less
+        h2 _text-rendering.less
         section
-          h1 all media queries
+          h3 all media queries
           div(class="!tr:0")   .!tr:0   { text-rendering: initial            !important; }
           div(class="!tr:i")   .!tr:i   { text-rendering: inherit            !important; }
           div(class="!tr:a")   .!tr:a   { text-rendering: auto               !important; }
@@ -1132,7 +1135,7 @@ html
           div(class="!tr:l")   .!tr:l   { text-rendering: optimizeLegibility !important; }
           div(class="!tr:g")   .!tr:g   { text-rendering: geometricPrecision !important; }
         section
-          h1 @media screen
+          h3 @media screen
           div(class="!tr:0@s") .!tr:0@s { text-rendering: initial            !important; }
           div(class="!tr:i@s") .!tr:i@s { text-rendering: inherit            !important; }
           div(class="!tr:a@s") .!tr:a@s { text-rendering: auto               !important; }
@@ -1140,7 +1143,7 @@ html
           div(class="!tr:l@s") .!tr:l@s { text-rendering: optimizeLegibility !important; }
           div(class="!tr:g@s") .!tr:g@s { text-rendering: geometricPrecision !important; }
         section
-          h1 @media print
+          h3 @media print
           div(class="!tr:0@p") .!tr:0@p { text-rendering: initial            !important; }
           div(class="!tr:i@p") .!tr:i@p { text-rendering: inherit            !important; }
           div(class="!tr:a@p") .!tr:a@p { text-rendering: auto               !important; }
@@ -1148,9 +1151,9 @@ html
           div(class="!tr:l@p") .!tr:l@p { text-rendering: optimizeLegibility !important; }
           div(class="!tr:g@p") .!tr:g@p { text-rendering: geometricPrecision !important; }
       section#text-transform
-        h1 _text-transform.less
+        h2 _text-transform.less
         section
-          h1 all media queries
+          h3 all media queries
           div(class="!tt:0")   .!tt:0   { text-transform: initial    !important; }
           div(class="!tt:i")   .!tt:i   { text-transform: inherit    !important; }
           div(class="!tt:n")   .!tt:n   { text-transform: none       !important; }
@@ -1158,7 +1161,7 @@ html
           div(class="!tt:u")   .!tt:u   { text-transform: uppercase  !important; }
           div(class="!tt:l")   .!tt:l   { text-transform: lowercase  !important; }
         section
-          h1 @media screen
+          h3 @media screen
           div(class="!tt:0@s") .!tt:0@s { text-transform: initial    !important; }
           div(class="!tt:i@s") .!tt:i@s { text-transform: inherit    !important; }
           div(class="!tt:n@s") .!tt:n@s { text-transform: none       !important; }
@@ -1166,7 +1169,7 @@ html
           div(class="!tt:u@s") .!tt:u@s { text-transform: uppercase  !important; }
           div(class="!tt:l@s") .!tt:l@s { text-transform: lowercase  !important; }
         section
-          h1 @media print
+          h3 @media print
           div(class="!tt:0@p") .!tt:0@p { text-transform: initial    !important; }
           div(class="!tt:i@p") .!tt:i@p { text-transform: inherit    !important; }
           div(class="!tt:n@p") .!tt:n@p { text-transform: none       !important; }
@@ -1174,7 +1177,7 @@ html
           div(class="!tt:u@p") .!tt:u@p { text-transform: uppercase  !important; }
           div(class="!tt:l@p") .!tt:l@p { text-transform: lowercase  !important; }
         section
-          h1 pseudo-classes :hover and :focus
+          h3 pseudo-classes :hover and :focus
           div(class="!tt:0^")  .!tt:0^  { text-transform: initial    !important; }
           div(class="!tt:i^")  .!tt:i^  { text-transform: inherit    !important; }
           div(class="!tt:n^")  .!tt:n^  { text-transform: none       !important; }
@@ -1182,9 +1185,9 @@ html
           div(class="!tt:u^")  .!tt:u^  { text-transform: uppercase  !important; }
           div(class="!tt:l^")  .!tt:l^  { text-transform: lowercase  !important; }
       section#text-decoration
-        h1 _text-decoration.less
+        h2 _text-decoration.less
         section
-          h1 all media queries
+          h3 all media queries
           div(class="!td:0")   .!td:0   { text-decoration: initial      !important; }
           div(class="!td:i")   .!td:i   { text-decoration: inherit      !important; }
           div(class="!td:n")   .!td:n   { text-decoration: none         !important; }
@@ -1192,7 +1195,7 @@ html
           div(class="!td:o")   .!td:o   { text-decoration: overline     !important; }
           div(class="!td:s")   .!td:s   { text-decoration: line-through !important; }
         section
-          h1 @media screen
+          h3 @media screen
           div(class="!td:0@s") .!td:0@s { text-decoration: initial      !important; }
           div(class="!td:i@s") .!td:i@s { text-decoration: inherit      !important; }
           div(class="!td:n@s") .!td:n@s { text-decoration: none         !important; }
@@ -1200,7 +1203,7 @@ html
           div(class="!td:o@s") .!td:o@s { text-decoration: overline     !important; }
           div(class="!td:s@s") .!td:s@s { text-decoration: line-through !important; }
         section
-          h1 @media print
+          h3 @media print
           div(class="!td:0@p") .!td:0@p { text-decoration: initial      !important; }
           div(class="!td:i@p") .!td:i@p { text-decoration: inherit      !important; }
           div(class="!td:n@p") .!td:n@p { text-decoration: none         !important; }
@@ -1208,7 +1211,7 @@ html
           div(class="!td:o@p") .!td:o@p { text-decoration: overline     !important; }
           div(class="!td:s@p") .!td:s@p { text-decoration: line-through !important; }
         section
-          h1 pseudo-classes :hover and :focus
+          h3 pseudo-classes :hover and :focus
           div(class="!td:0^")  .!td:0^  { text-decoration: initial      !important; }
           div(class="!td:i^")  .!td:i^  { text-decoration: inherit      !important; }
           div(class="!td:n^")  .!td:n^  { text-decoration: none         !important; }
@@ -1216,9 +1219,9 @@ html
           div(class="!td:o^")  .!td:o^  { text-decoration: overline     !important; }
           div(class="!td:s^")  .!td:s^  { text-decoration: line-through !important; }
       section#list-style-type
-        h1 _list-style-type.less
+        h2 _list-style-type.less
         section
-          h1 all media queries
+          h3 all media queries
           ul
             li(class="!lst:0 ")   .!lst:0    { list-style-type: initial              !important; }
             li(class="!lst:i ")   .!lst:i    { list-style-type: inherit              !important; }
@@ -1230,7 +1233,7 @@ html
             li(class="!lst:lr")   .!lst:lr   { list-style-type: lower-roman          !important; }
             li(class="!lst:lg")   .!lst:lg   { list-style-type: lower-greek          !important; }
         section
-          h1 @media screen
+          h3 @media screen
           ul
             li(class="!lst:0@s ") .!lst:0@s  { list-style-type: initial              !important; }
             li(class="!lst:i@s ") .!lst:i@s  { list-style-type: inherit              !important; }
@@ -1242,7 +1245,7 @@ html
             li(class="!lst:lr@s") .!lst:lr@s { list-style-type: lower-roman          !important; }
             li(class="!lst:lg@s") .!lst:lg@s { list-style-type: lower-greek          !important; }
         section
-          h1 @media print
+          h3 @media print
           ul
             li(class="!lst:0@p ") .!lst:0@p  { list-style-type: initial              !important; }
             li(class="!lst:i@p ") .!lst:i@p  { list-style-type: inherit              !important; }
@@ -1254,130 +1257,130 @@ html
             li(class="!lst:lr@p") .!lst:lr@p { list-style-type: lower-roman          !important; }
             li(class="!lst:lg@p") .!lst:lg@p { list-style-type: lower-greek          !important; }
       section#list-style-position
-        h1 _list-style-position.less
+        h2 _list-style-position.less
         section
-          h1 all media queries
+          h3 all media queries
           ul
             li(class="!lsp:0 ")   .!lsp:0    { list-style-position: initial !important; }
             li(class="!lsp:i ")   .!lsp:i    { list-style-position: inherit !important; }
             li(class="!lsp:os")   .!lsp:os   { list-style-position: outside !important; }
             li(class="!lsp:is")   .!lsp:is   { list-style-position: inside  !important; }
         section
-          h1 @media screen
+          h3 @media screen
           ul
             li(class="!lsp:0@s ") .!lsp:0@s  { list-style-position: initial !important; }
             li(class="!lsp:i@s ") .!lsp:i@s  { list-style-position: inherit !important; }
             li(class="!lsp:os@s") .!lsp:os@s { list-style-position: outside !important; }
             li(class="!lsp:is@s") .!lsp:is@s { list-style-position: inside  !important; }
         section
-          h1 @media print
+          h3 @media print
           ul
             li(class="!lsp:0@p ") .!lsp:0@p  { list-style-position: initial !important; }
             li(class="!lsp:i@p ") .!lsp:i@p  { list-style-position: inherit !important; }
             li(class="!lsp:os@p") .!lsp:os@p { list-style-position: outside !important; }
             li(class="!lsp:is@p") .!lsp:is@p { list-style-position: inside  !important; }
       section#list-style-image
-        h1 _list-style-image.less
+        h2 _list-style-image.less
         section
-          h1 all media queries
+          h3 all media queries
           ul
             li(class="!lsi:0")   .!lsi:0   { list-style-image: initial !important; }
             li(class="!lsi:i")   .!lsi:i   { list-style-image: inherit !important; }
             li(class="!lsi:n")   .!lsi:n   { list-style-image: none    !important; }
         section
-          h1 @media screen
+          h3 @media screen
           ul
             li(class="!lsi:0@s") .!lsi:0@s { list-style-image: initial !important; }
             li(class="!lsi:i@s") .!lsi:i@s { list-style-image: inherit !important; }
             li(class="!lsi:n@s") .!lsi:n@s { list-style-image: none    !important; }
         section
-          h1 @media print
+          h3 @media print
           ul
             li(class="!lsi:0@p") .!lsi:0@p { list-style-image: initial !important; }
             li(class="!lsi:i@p") .!lsi:i@p { list-style-image: inherit !important; }
             li(class="!lsi:n@p") .!lsi:n@p { list-style-image: none    !important; }
       section#color
-        h1 _color.less
+        h2 _color.less
         section
-          h1 all media queries
+          h3 all media queries
           div(class="!c:0")   .!c:0   { color: initial      !important; }
           div(class="!c:i")   .!c:i   { color: inherit      !important; }
           div(class="!c:t")   .!c:t   { color: transparent  !important; }
           div(class="!c:c")   .!c:c   { color: currentColor !important; }
         section
-          h1 @media screen
+          h3 @media screen
           div(class="!c:0@s") .!c:0@s { color: initial      !important; }
           div(class="!c:i@s") .!c:i@s { color: inherit      !important; }
           div(class="!c:t@s") .!c:t@s { color: transparent  !important; }
           div(class="!c:c@s") .!c:c@s { color: currentColor !important; }
         section
-          h1 @media print
+          h3 @media print
           div(class="!c:0@p") .!c:0@p { color: initial      !important; }
           div(class="!c:i@p") .!c:i@p { color: inherit      !important; }
           div(class="!c:t@p") .!c:t@p { color: transparent  !important; }
           div(class="!c:c@p") .!c:c@p { color: currentColor !important; }
       section#background-color
-        h1 _background-color.less
+        h2 _background-color.less
         section
-          h1 all media queries
+          h3 all media queries
           div(class="!bc:0")   .!bc:0   { background-color: initial      !important; }
           div(class="!bc:i")   .!bc:i   { background-color: inherit      !important; }
           div(class="!bc:t")   .!bc:t   { background-color: transparent  !important; }
           div(class="!bc:c")   .!bc:c   { background-color: currentColor !important; }
         section
-          h1 @media screen
+          h3 @media screen
           div(class="!bc:0@s") .!bc:0@s { background-color: initial      !important; }
           div(class="!bc:i@s") .!bc:i@s { background-color: inherit      !important; }
           div(class="!bc:t@s") .!bc:t@s { background-color: transparent  !important; }
           div(class="!bc:c@s") .!bc:c@s { background-color: currentColor !important; }
         section
-          h1 @media print
+          h3 @media print
           div(class="!bc:0@p") .!bc:0@p { background-color: initial      !important; }
           div(class="!bc:i@p") .!bc:i@p { background-color: inherit      !important; }
           div(class="!bc:t@p") .!bc:t@p { background-color: transparent  !important; }
           div(class="!bc:c@p") .!bc:c@p { background-color: currentColor !important; }
       section#background-image
-        h1 _background-image.less
+        h2 _background-image.less
         section
-          h1 all media queries
+          h3 all media queries
           div(class="!bi:0")   .!bi:0   { background-image: initial !important; }
           div(class="!bi:i")   .!bi:i   { background-image: inherit !important; }
           div(class="!bi:n")   .!bi:n   { background-image: none    !important; }
         section
-          h1 @media screen
+          h3 @media screen
           div(class="!bi:0@s") .!bi:0@s { background-image: initial !important; }
           div(class="!bi:i@s") .!bi:i@s { background-image: inherit !important; }
           div(class="!bi:n@s") .!bi:n@s { background-image: none    !important; }
         section
-          h1 @media print
+          h3 @media print
           div(class="!bi:0@p") .!bi:0@p { background-image: initial !important; }
           div(class="!bi:i@p") .!bi:i@p { background-image: inherit !important; }
           div(class="!bi:n@p") .!bi:n@p { background-image: none    !important; }
       section#visibility
-        h1 _visibility.less
+        h2 _visibility.less
         section
-          h1 all media queries
+          h3 all media queries
           div(class="!v:0")   .!v:0   { visibility: initial  !important; }
           div(class="!v:i")   .!v:i   { visibility: inherit  !important; }
           div(class="!v:v")   .!v:v   { visibility: visible  !important; }
           div(class="!v:h")   .!v:h   { visibility: hidden   !important; }
           div(class="!v:c")   .!v:c   { visibility: collapse !important; }
         section
-          h1 @media screen
+          h3 @media screen
           div(class="!v:0@s") .!v:0@s { visibility: initial  !important; }
           div(class="!v:i@s") .!v:i@s { visibility: inherit  !important; }
           div(class="!v:v@s") .!v:v@s { visibility: visible  !important; }
           div(class="!v:h@s") .!v:h@s { visibility: hidden   !important; }
           div(class="!v:c@s") .!v:c@s { visibility: collapse !important; }
         section
-          h1 @media print
+          h3 @media print
           div(class="!v:0@p") .!v:0@p { visibility: initial  !important; }
           div(class="!v:i@p") .!v:i@p { visibility: inherit  !important; }
           div(class="!v:v@p") .!v:v@p { visibility: visible  !important; }
           div(class="!v:h@p") .!v:h@p { visibility: hidden   !important; }
           div(class="!v:c@p") .!v:c@p { visibility: collapse !important; }
         //- section
-        //-   h1 pseudo-classes :hover and :focus
+        //-   h3 pseudo-classes :hover and :focus
         //-   div(class="!v:0^")  .!v:0^  { visibility: initial  !important; }
         //-   div(class="!v:i^")  .!v:i^  { visibility: inherit  !important; }
         //-   div(class="!v:v^")  .!v:v^  { visibility: visible  !important; }
