@@ -4,6 +4,39 @@
 \*################################*/
 @import (reference) url('../node_modules/xmeter/src/__tool.fallback.flexbox.less');
 
+// Defines how the browser distributes space
+// between and around flex items
+// along the main-axis of their container.
+// Note that this utility must be a child of a flexbox
+// (an item with `display: flex;`)
+// in order to mean anything.
+//
+// !j  =  justify-content
+//
+// :0   =  initial
+// :i   =  inherit
+// :bt  =  space-between
+// :ad  =  space-around
+// :cr  =  center
+// :st  =  flex-start
+// :ed  =  flex-end
+//
+// @s  =  screen
+// @p  =  print
+//
+// ^initial
+// : `flex-start`
+// ^inherited
+// : false
+// ^url
+// : https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2015-10-02
+
+.\!j\:0  { #XMETER .justify-content(initial)       !important; }
+.\!j\:i  { #XMETER .justify-content(inherit)       !important; }
 .\!j\:bt { #XMETER .justify-content(space-between) !important; }
 .\!j\:ad { #XMETER .justify-content(space-around)  !important; }
 .\!j\:cr { #XMETER .justify-content(center)        !important; }
@@ -11,6 +44,8 @@
 .\!j\:ed { #XMETER .justify-content(flex-end)      !important; }
 
 @media screen {
+  .\!j\:0\@s  { .\!j\:0 ; }
+  .\!j\:i\@s  { .\!j\:i ; }
   .\!j\:bt\@s { .\!j\:bt; }
   .\!j\:ad\@s { .\!j\:ad; }
   .\!j\:cr\@s { .\!j\:cr; }
@@ -19,6 +54,8 @@
 }
 
 @media print {
+  .\!j\:0\@p  { .\!j\:0 ; }
+  .\!j\:i\@p  { .\!j\:i ; }
   .\!j\:bt\@p { .\!j\:bt; }
   .\!j\:ad\@p { .\!j\:ad; }
   .\!j\:cr\@p { .\!j\:cr; }

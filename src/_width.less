@@ -4,29 +4,170 @@
 \*################################*/
 @import (reference) url('../node_modules/xmeter/src/__settings.less');
 
-.\!w\:1o1 { #XMETER .CONSTS(); width: @1o1 !important; }
-.\!w\:1o2 { #XMETER .CONSTS(); width: @1o2 !important; }
-.\!w\:2o2 { #XMETER .CONSTS(); width: @2o2 !important; }
-.\!w\:1o3 { #XMETER .CONSTS(); width: @1o3 !important; }
-.\!w\:2o3 { #XMETER .CONSTS(); width: @2o3 !important; }
-.\!w\:3o3 { #XMETER .CONSTS(); width: @3o3 !important; }
-.\!w\:1o4 { #XMETER .CONSTS(); width: @1o4 !important; }
-.\!w\:2o4 { #XMETER .CONSTS(); width: @2o4 !important; }
-.\!w\:3o4 { #XMETER .CONSTS(); width: @3o4 !important; }
-.\!w\:4o4 { #XMETER .CONSTS(); width: @4o4 !important; }
-.\!w\:1o5 { #XMETER .CONSTS(); width: @1o5 !important; }
-.\!w\:2o5 { #XMETER .CONSTS(); width: @2o5 !important; }
-.\!w\:3o5 { #XMETER .CONSTS(); width: @3o5 !important; }
-.\!w\:4o5 { #XMETER .CONSTS(); width: @4o5 !important; }
-.\!w\:5o5 { #XMETER .CONSTS(); width: @5o5 !important; }
-.\!w\:1o6 { #XMETER .CONSTS(); width: @1o6 !important; }
-.\!w\:2o6 { #XMETER .CONSTS(); width: @2o6 !important; }
-.\!w\:3o6 { #XMETER .CONSTS(); width: @3o6 !important; }
-.\!w\:4o6 { #XMETER .CONSTS(); width: @4o6 !important; }
-.\!w\:5o6 { #XMETER .CONSTS(); width: @5o6 !important; }
-.\!w\:6o6 { #XMETER .CONSTS(); width: @6o6 !important; }
+// Sets the width of a block.
+//
+// !w  =  width
+//
+// :0  =  initial (not 0)
+// :i  =  inherit
+// :a  =  auto
+//
+// # In order by denominator
+// NOTE only unique classes are listed.
+// See code for all classes.
+//
+// :0o1  =  0 (not a percentage)
+// :1o1  =  100%
+// :1o2  =  50%
+// :1o3  =  33.3%
+// :2o3  =  66.7%
+// :1o4  =  25%
+// :3o4  =  75%
+// :1o5  =  20%
+// :2o5  =  40%
+// :3o5  =  60%
+// :4o5  =  80%
+// :1o6  =  16.7%
+// :5o6  =  83.3%
+// :1o8  =  12.5%
+// :3o8  =  37.5%
+// :5o8  =  62.5%
+// :7o8  =  87.5%
+// :1o9  =  11.1%
+// :2o9  =  22.2%
+// :4o9  =  44.4%
+// :5o9  =  55.6%
+// :7o9  =  77.8%
+// :8o9  =  88.9%
+// :1oa  =  10%
+// :3oa  =  30%
+// :7oa  =  70%
+// :9oa  =  90%
+// :1oc  =  8.3%
+// :5oc  =  41.7%
+// :7oc  =  58.3%
+// :boc  =  91.7%
+//
+// # In increasing order
+// NOTE only unique classes are listed.
+// See code for all classes.
+//
+// :0o1  =  0 (not a percentage)
+// :1oc  =  8.3%
+// :1oa  =  10%
+// :1o9  =  11.1%
+// :1o8  =  12.5%
+// :1o6  =  16.7%
+// :1o5  =  20%
+// :2o9  =  22.2%
+// :1o4  =  25%
+// :3oa  =  30%
+// :1o3  =  33.3%
+// :3o8  =  37.5%
+// :2o5  =  40%
+// :5oc  =  41.7%
+// :4o9  =  44.4%
+// :1o2  =  50%
+// :5o9  =  55.6%
+// :7oc  =  58.3%
+// :3o5  =  60%
+// :5o8  =  62.5%
+// :2o3  =  66.7%
+// :7oa  =  70%
+// :3o4  =  75%
+// :7o9  =  77.8%
+// :4o5  =  80%
+// :5o6  =  83.3%
+// :7o8  =  87.5%
+// :8o9  =  88.9%
+// :9oa  =  90%
+// :boc  =  91.7%
+// :1o1  =  100%
+//
+// @s  =  screen
+// @p  =  print
+//
+// ^initial
+// : `auto`
+// ^inherited
+// : false
+// ^url
+// : https://developer.mozilla.org/en-US/docs/Web/CSS/width
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2015-08-08
+
+.\!w\:0 { width: initial !important; }
+.\!w\:i { width: inherit !important; }
+.\!w\:a { width: auto    !important; }
+.\!w\:0o1  {                    width: 0      !important; }
+.\!w\:1o1  { #XMETER .CONSTS(); width: @1o1   !important; }
+.\!w\:1o2  { #XMETER .CONSTS(); width: @1o2   !important; }
+.\!w\:2o2  { #XMETER .CONSTS(); width: @2o2   !important; }
+.\!w\:1o3  { #XMETER .CONSTS(); width: @1o3   !important; }
+.\!w\:2o3  { #XMETER .CONSTS(); width: @2o3   !important; }
+.\!w\:3o3  { #XMETER .CONSTS(); width: @3o3   !important; }
+.\!w\:1o4  { #XMETER .CONSTS(); width: @1o4   !important; }
+.\!w\:2o4  { #XMETER .CONSTS(); width: @2o4   !important; }
+.\!w\:3o4  { #XMETER .CONSTS(); width: @3o4   !important; }
+.\!w\:4o4  { #XMETER .CONSTS(); width: @4o4   !important; }
+.\!w\:1o5  { #XMETER .CONSTS(); width: @1o5   !important; }
+.\!w\:2o5  { #XMETER .CONSTS(); width: @2o5   !important; }
+.\!w\:3o5  { #XMETER .CONSTS(); width: @3o5   !important; }
+.\!w\:4o5  { #XMETER .CONSTS(); width: @4o5   !important; }
+.\!w\:5o5  { #XMETER .CONSTS(); width: @5o5   !important; }
+.\!w\:1o6  { #XMETER .CONSTS(); width: @1o6   !important; }
+.\!w\:2o6  { #XMETER .CONSTS(); width: @2o6   !important; }
+.\!w\:3o6  { #XMETER .CONSTS(); width: @3o6   !important; }
+.\!w\:4o6  { #XMETER .CONSTS(); width: @4o6   !important; }
+.\!w\:5o6  { #XMETER .CONSTS(); width: @5o6   !important; }
+.\!w\:6o6  { #XMETER .CONSTS(); width: @6o6   !important; }
+.\!w\:1o8  { #XMETER .CONSTS(); width: @1o8   !important; }
+.\!w\:2o8  { #XMETER .CONSTS(); width: @2o8   !important; }
+.\!w\:3o8  { #XMETER .CONSTS(); width: @3o8   !important; }
+.\!w\:4o8  { #XMETER .CONSTS(); width: @4o8   !important; }
+.\!w\:5o8  { #XMETER .CONSTS(); width: @5o8   !important; }
+.\!w\:6o8  { #XMETER .CONSTS(); width: @6o8   !important; }
+.\!w\:7o8  { #XMETER .CONSTS(); width: @7o8   !important; }
+.\!w\:8o8  { #XMETER .CONSTS(); width: @8o8   !important; }
+.\!w\:1o9  { #XMETER .CONSTS(); width: @1o9   !important; }
+.\!w\:2o9  { #XMETER .CONSTS(); width: @2o9   !important; }
+.\!w\:3o9  { #XMETER .CONSTS(); width: @3o9   !important; }
+.\!w\:4o9  { #XMETER .CONSTS(); width: @4o9   !important; }
+.\!w\:5o9  { #XMETER .CONSTS(); width: @5o9   !important; }
+.\!w\:6o9  { #XMETER .CONSTS(); width: @6o9   !important; }
+.\!w\:7o9  { #XMETER .CONSTS(); width: @7o9   !important; }
+.\!w\:8o9  { #XMETER .CONSTS(); width: @8o9   !important; }
+.\!w\:9o9  { #XMETER .CONSTS(); width: @9o9   !important; }
+.\!w\:1oa  { #XMETER .CONSTS(); width: @1o10  !important; }
+.\!w\:2oa  { #XMETER .CONSTS(); width: @2o10  !important; }
+.\!w\:3oa  { #XMETER .CONSTS(); width: @3o10  !important; }
+.\!w\:4oa  { #XMETER .CONSTS(); width: @4o10  !important; }
+.\!w\:5oa  { #XMETER .CONSTS(); width: @5o10  !important; }
+.\!w\:6oa  { #XMETER .CONSTS(); width: @6o10  !important; }
+.\!w\:7oa  { #XMETER .CONSTS(); width: @7o10  !important; }
+.\!w\:8oa  { #XMETER .CONSTS(); width: @8o10  !important; }
+.\!w\:9oa  { #XMETER .CONSTS(); width: @9o10  !important; }
+.\!w\:aoa  { #XMETER .CONSTS(); width: @10o10 !important; }
+.\!w\:1oc  { #XMETER .CONSTS(); width: @1o12  !important; }
+.\!w\:2oc  { #XMETER .CONSTS(); width: @2o12  !important; }
+.\!w\:3oc  { #XMETER .CONSTS(); width: @3o12  !important; }
+.\!w\:4oc  { #XMETER .CONSTS(); width: @4o12  !important; }
+.\!w\:5oc  { #XMETER .CONSTS(); width: @5o12  !important; }
+.\!w\:6oc  { #XMETER .CONSTS(); width: @6o12  !important; }
+.\!w\:7oc  { #XMETER .CONSTS(); width: @7o12  !important; }
+.\!w\:8oc  { #XMETER .CONSTS(); width: @8o12  !important; }
+.\!w\:9oc  { #XMETER .CONSTS(); width: @9o12  !important; }
+.\!w\:aoc  { #XMETER .CONSTS(); width: @10o12 !important; }
+.\!w\:boc  { #XMETER .CONSTS(); width: @11o12 !important; }
+.\!w\:coc  { #XMETER .CONSTS(); width: @12o12 !important; }
 
 @media screen {
+  .\!w\:0\@s { .\!w\:0; }
+  .\!w\:i\@s { .\!w\:i; }
+  .\!w\:a\@s { .\!w\:a; }
+  .\!w\:0o1\@s { .\!w\:0o1; }
   .\!w\:1o1\@s { .\!w\:1o1; }
   .\!w\:1o2\@s { .\!w\:1o2; }
   .\!w\:2o2\@s { .\!w\:2o2; }
@@ -48,9 +189,52 @@
   .\!w\:4o6\@s { .\!w\:4o6; }
   .\!w\:5o6\@s { .\!w\:5o6; }
   .\!w\:6o6\@s { .\!w\:6o6; }
+  .\!w\:1o8\@s { .\!w\:1o8; }
+  .\!w\:2o8\@s { .\!w\:2o8; }
+  .\!w\:3o8\@s { .\!w\:3o8; }
+  .\!w\:4o8\@s { .\!w\:4o8; }
+  .\!w\:5o8\@s { .\!w\:5o8; }
+  .\!w\:6o8\@s { .\!w\:6o8; }
+  .\!w\:7o8\@s { .\!w\:7o8; }
+  .\!w\:8o8\@s { .\!w\:8o8; }
+  .\!w\:1o9\@s { .\!w\:1o9; }
+  .\!w\:2o9\@s { .\!w\:2o9; }
+  .\!w\:3o9\@s { .\!w\:3o9; }
+  .\!w\:4o9\@s { .\!w\:4o9; }
+  .\!w\:5o9\@s { .\!w\:5o9; }
+  .\!w\:6o9\@s { .\!w\:6o9; }
+  .\!w\:7o9\@s { .\!w\:7o9; }
+  .\!w\:8o9\@s { .\!w\:8o9; }
+  .\!w\:9o9\@s { .\!w\:9o9; }
+  .\!w\:1oa\@s { .\!w\:1oa; }
+  .\!w\:2oa\@s { .\!w\:2oa; }
+  .\!w\:3oa\@s { .\!w\:3oa; }
+  .\!w\:4oa\@s { .\!w\:4oa; }
+  .\!w\:5oa\@s { .\!w\:5oa; }
+  .\!w\:6oa\@s { .\!w\:6oa; }
+  .\!w\:7oa\@s { .\!w\:7oa; }
+  .\!w\:8oa\@s { .\!w\:8oa; }
+  .\!w\:9oa\@s { .\!w\:9oa; }
+  .\!w\:aoa\@s { .\!w\:aoa; }
+  .\!w\:1oc\@s { .\!w\:1oc; }
+  .\!w\:2oc\@s { .\!w\:2oc; }
+  .\!w\:3oc\@s { .\!w\:3oc; }
+  .\!w\:4oc\@s { .\!w\:4oc; }
+  .\!w\:5oc\@s { .\!w\:5oc; }
+  .\!w\:6oc\@s { .\!w\:6oc; }
+  .\!w\:7oc\@s { .\!w\:7oc; }
+  .\!w\:8oc\@s { .\!w\:8oc; }
+  .\!w\:9oc\@s { .\!w\:9oc; }
+  .\!w\:aoc\@s { .\!w\:aoc; }
+  .\!w\:boc\@s { .\!w\:boc; }
+  .\!w\:coc\@s { .\!w\:coc; }
 }
 
 @media print {
+  .\!w\:0\@p { .\!w\:0; }
+  .\!w\:i\@p { .\!w\:i; }
+  .\!w\:a\@p { .\!w\:a; }
+  .\!w\:0o1\@p { .\!w\:0o1; }
   .\!w\:1o1\@p { .\!w\:1o1; }
   .\!w\:1o2\@p { .\!w\:1o2; }
   .\!w\:2o2\@p { .\!w\:2o2; }
@@ -72,4 +256,43 @@
   .\!w\:4o6\@p { .\!w\:4o6; }
   .\!w\:5o6\@p { .\!w\:5o6; }
   .\!w\:6o6\@p { .\!w\:6o6; }
+  .\!w\:1o8\@p { .\!w\:1o8; }
+  .\!w\:2o8\@p { .\!w\:2o8; }
+  .\!w\:3o8\@p { .\!w\:3o8; }
+  .\!w\:4o8\@p { .\!w\:4o8; }
+  .\!w\:5o8\@p { .\!w\:5o8; }
+  .\!w\:6o8\@p { .\!w\:6o8; }
+  .\!w\:7o8\@p { .\!w\:7o8; }
+  .\!w\:8o8\@p { .\!w\:8o8; }
+  .\!w\:1o9\@p { .\!w\:1o9; }
+  .\!w\:2o9\@p { .\!w\:2o9; }
+  .\!w\:3o9\@p { .\!w\:3o9; }
+  .\!w\:4o9\@p { .\!w\:4o9; }
+  .\!w\:5o9\@p { .\!w\:5o9; }
+  .\!w\:6o9\@p { .\!w\:6o9; }
+  .\!w\:7o9\@p { .\!w\:7o9; }
+  .\!w\:8o9\@p { .\!w\:8o9; }
+  .\!w\:9o9\@p { .\!w\:9o9; }
+  .\!w\:1oa\@p { .\!w\:1oa; }
+  .\!w\:2oa\@p { .\!w\:2oa; }
+  .\!w\:3oa\@p { .\!w\:3oa; }
+  .\!w\:4oa\@p { .\!w\:4oa; }
+  .\!w\:5oa\@p { .\!w\:5oa; }
+  .\!w\:6oa\@p { .\!w\:6oa; }
+  .\!w\:7oa\@p { .\!w\:7oa; }
+  .\!w\:8oa\@p { .\!w\:8oa; }
+  .\!w\:9oa\@p { .\!w\:9oa; }
+  .\!w\:aoa\@p { .\!w\:aoa; }
+  .\!w\:1oc\@p { .\!w\:1oc; }
+  .\!w\:2oc\@p { .\!w\:2oc; }
+  .\!w\:3oc\@p { .\!w\:3oc; }
+  .\!w\:4oc\@p { .\!w\:4oc; }
+  .\!w\:5oc\@p { .\!w\:5oc; }
+  .\!w\:6oc\@p { .\!w\:6oc; }
+  .\!w\:7oc\@p { .\!w\:7oc; }
+  .\!w\:8oc\@p { .\!w\:8oc; }
+  .\!w\:9oc\@p { .\!w\:9oc; }
+  .\!w\:aoc\@p { .\!w\:aoc; }
+  .\!w\:boc\@p { .\!w\:boc; }
+  .\!w\:coc\@p { .\!w\:coc; }
 }
