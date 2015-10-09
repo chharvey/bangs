@@ -16,6 +16,7 @@
 //
 // @s  =  screen
 // @p  =  print
+// ^   =  hover / focus
 //
 // ^initial
 // : `none`
@@ -52,3 +53,10 @@
   .\!tt\:u\@p { .\!tt\:u; }
   .\!tt\:l\@p { .\!tt\:l; }
 }
+
+.\!tt\:0\^ { &:hover, &:focus { .\!tt\:0; } }
+.\!tt\:i\^ { &:hover, &:focus { .\!tt\:i; } }
+.\!tt\:n\^ { &:hover, &:focus { .\!tt\:n; } }
+.\!tt\:c\^ { &:hover, &:focus { .\!tt\:c; } }
+.\!tt\:u\^ { &:hover, &:focus { .\!tt\:u; } }
+.\!tt\:l\^ { &:hover, &:focus { .\!tt\:l; } }

@@ -3559,6 +3559,30 @@
     text-transform: lowercase  !important;
   }
 }
+.\!tt\:0\^:hover,
+.\!tt\:0\^:focus {
+  text-transform: initial    !important;
+}
+.\!tt\:i\^:hover,
+.\!tt\:i\^:focus {
+  text-transform: inherit    !important;
+}
+.\!tt\:n\^:hover,
+.\!tt\:n\^:focus {
+  text-transform: none       !important;
+}
+.\!tt\:c\^:hover,
+.\!tt\:c\^:focus {
+  text-transform: capitalize !important;
+}
+.\!tt\:u\^:hover,
+.\!tt\:u\^:focus {
+  text-transform: uppercase  !important;
+}
+.\!tt\:l\^:hover,
+.\!tt\:l\^:focus {
+  text-transform: lowercase  !important;
+}
 /*################################*\
     _text-decoration.less
 \*################################*/
