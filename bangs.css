@@ -3438,67 +3438,6 @@
   page-break-after: avoid   !important;
 }
 /*################################*\
-    _text-transform.less
-\*################################*/
-.\!tt\:0 {
-  text-transform: initial    !important;
-}
-.\!tt\:i {
-  text-transform: inherit    !important;
-}
-.\!tt\:n {
-  text-transform: none       !important;
-}
-.\!tt\:c {
-  text-transform: capitalize !important;
-}
-.\!tt\:u {
-  text-transform: uppercase  !important;
-}
-.\!tt\:l {
-  text-transform: lowercase  !important;
-}
-@media screen {
-  .\!tt\:0\@s {
-    text-transform: initial    !important;
-  }
-  .\!tt\:i\@s {
-    text-transform: inherit    !important;
-  }
-  .\!tt\:n\@s {
-    text-transform: none       !important;
-  }
-  .\!tt\:c\@s {
-    text-transform: capitalize !important;
-  }
-  .\!tt\:u\@s {
-    text-transform: uppercase  !important;
-  }
-  .\!tt\:l\@s {
-    text-transform: lowercase  !important;
-  }
-}
-@media print {
-  .\!tt\:0\@p {
-    text-transform: initial    !important;
-  }
-  .\!tt\:i\@p {
-    text-transform: inherit    !important;
-  }
-  .\!tt\:n\@p {
-    text-transform: none       !important;
-  }
-  .\!tt\:c\@p {
-    text-transform: capitalize !important;
-  }
-  .\!tt\:u\@p {
-    text-transform: uppercase  !important;
-  }
-  .\!tt\:l\@p {
-    text-transform: lowercase  !important;
-  }
-}
-/*################################*\
     _text-rendering.less
 \*################################*/
 .\!tr\:0 {
@@ -3557,6 +3496,67 @@
   }
   .\!tr\:g\@p {
     text-rendering: geometricPrecision !important;
+  }
+}
+/*################################*\
+    _text-transform.less
+\*################################*/
+.\!tt\:0 {
+  text-transform: initial    !important;
+}
+.\!tt\:i {
+  text-transform: inherit    !important;
+}
+.\!tt\:n {
+  text-transform: none       !important;
+}
+.\!tt\:c {
+  text-transform: capitalize !important;
+}
+.\!tt\:u {
+  text-transform: uppercase  !important;
+}
+.\!tt\:l {
+  text-transform: lowercase  !important;
+}
+@media screen {
+  .\!tt\:0\@s {
+    text-transform: initial    !important;
+  }
+  .\!tt\:i\@s {
+    text-transform: inherit    !important;
+  }
+  .\!tt\:n\@s {
+    text-transform: none       !important;
+  }
+  .\!tt\:c\@s {
+    text-transform: capitalize !important;
+  }
+  .\!tt\:u\@s {
+    text-transform: uppercase  !important;
+  }
+  .\!tt\:l\@s {
+    text-transform: lowercase  !important;
+  }
+}
+@media print {
+  .\!tt\:0\@p {
+    text-transform: initial    !important;
+  }
+  .\!tt\:i\@p {
+    text-transform: inherit    !important;
+  }
+  .\!tt\:n\@p {
+    text-transform: none       !important;
+  }
+  .\!tt\:c\@p {
+    text-transform: capitalize !important;
+  }
+  .\!tt\:u\@p {
+    text-transform: uppercase  !important;
+  }
+  .\!tt\:l\@p {
+    text-transform: lowercase  !important;
   }
 }
 /*################################*\
