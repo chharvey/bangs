@@ -1,0 +1,22 @@
+body {
+  font-family: sans-serif;
+}
+code {
+  font-size: inherit;
+}
+[class^='!'] {
+  background-color: rgba(0, 0, 0, 0.1);
+  outline: 1px solid rgba(0, 0, 0, 0.1);
+}
+.ss-flexbox {
+  opacity: 0.25;
+  color: red;
+}
+.ss-flexbox::before {
+  display: block;
+  content: 'Flexbox properties still in draft status.';
+  font-weight: 900;
+  font-size: 1.5em;
+  line-height: 1;
+  text-align: center;
+}
