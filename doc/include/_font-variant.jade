@@ -1,0 +1,26 @@
+section#font-variant
+  h2 _font-variant.less
+  section
+    h3 all media queries
+    div(class="!fv:0")   .!fv:0   { font-variant: initial    !important; }
+    div(class="!fv:i")   .!fv:i   { font-variant: inherit    !important; }
+    div(class="!fv:n")   .!fv:n   { font-variant: normal     !important; }
+    div(class="!fv:s")   .!fv:s   { font-variant: small-caps !important; }
+  section
+    h3 @media screen
+    div(class="!fv:0@s") .!fv:0@s { font-variant: initial    !important; }
+    div(class="!fv:i@s") .!fv:i@s { font-variant: inherit    !important; }
+    div(class="!fv:n@s") .!fv:n@s { font-variant: normal     !important; }
+    div(class="!fv:s@s") .!fv:s@s { font-variant: small-caps !important; }
+  section
+    h3 @media print
+    div(class="!fv:0@p") .!fv:0@p { font-variant: initial    !important; }
+    div(class="!fv:i@p") .!fv:i@p { font-variant: inherit    !important; }
+    div(class="!fv:n@p") .!fv:n@p { font-variant: normal     !important; }
+    div(class="!fv:s@p") .!fv:s@p { font-variant: small-caps !important; }
+  section
+    h3 pseudo-classes :hover and :focus
+    div(class="!fv:0^")  .!fv:0^  { font-variant: initial    !important; }
+    div(class="!fv:i^")  .!fv:i^  { font-variant: inherit    !important; }
+    div(class="!fv:n^")  .!fv:n^  { font-variant: normal     !important; }
+    div(class="!fv:s^")  .!fv:s^  { font-variant: small-caps !important; }

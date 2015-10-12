@@ -1,0 +1,26 @@
+section#font-style
+  h2 _font-style.less
+  section
+    h3 all media queries
+    div(class="!fs:0")   .!fs:0   { font-style: initial !important; }
+    div(class="!fs:i")   .!fs:i   { font-style: inherit !important; }
+    div(class="!fs:n")   .!fs:n   { font-style: normal  !important; }
+    div(class="!fs:t")   .!fs:t   { font-style: italic  !important; }
+  section
+    h3 @media screen
+    div(class="!fs:0@s") .!fs:0@s { font-style: initial !important; }
+    div(class="!fs:i@s") .!fs:i@s { font-style: inherit !important; }
+    div(class="!fs:n@s") .!fs:n@s { font-style: normal  !important; }
+    div(class="!fs:t@s") .!fs:t@s { font-style: italic  !important; }
+  section
+    h3 @media print
+    div(class="!fs:0@p") .!fs:0@p { font-style: initial !important; }
+    div(class="!fs:i@p") .!fs:i@p { font-style: inherit !important; }
+    div(class="!fs:n@p") .!fs:n@p { font-style: normal  !important; }
+    div(class="!fs:t@p") .!fs:t@p { font-style: italic  !important; }
+  section
+    h3 pseudo-classes :hover and :focus
+    div(class="!fs:0^")  .!fs:0^  { font-style: initial !important; }
+    div(class="!fs:i^")  .!fs:i^  { font-style: inherit !important; }
+    div(class="!fs:n^")  .!fs:n^  { font-style: normal  !important; }
+    div(class="!fs:t^")  .!fs:t^  { font-style: italic  !important; }
