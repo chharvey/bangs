@@ -1,0 +1,20 @@
+section#list-style-image
+  h2 _list-style-image.less
+  section
+    h3 all media queries
+    ul
+      li(class="!lsi:0")   .!lsi:0   { list-style-image: initial !important; }
+      li(class="!lsi:i")   .!lsi:i   { list-style-image: inherit !important; }
+      li(class="!lsi:n")   .!lsi:n   { list-style-image: none    !important; }
+  section
+    h3 @media screen
+    ul
+      li(class="!lsi:0@s") .!lsi:0@s { list-style-image: initial !important; }
+      li(class="!lsi:i@s") .!lsi:i@s { list-style-image: inherit !important; }
+      li(class="!lsi:n@s") .!lsi:n@s { list-style-image: none    !important; }
+  section
+    h3 @media print
+    ul
+      li(class="!lsi:0@p") .!lsi:0@p { list-style-image: initial !important; }
+      li(class="!lsi:i@p") .!lsi:i@p { list-style-image: inherit !important; }
+      li(class="!lsi:n@p") .!lsi:n@p { list-style-image: none    !important; }

@@ -1,0 +1,20 @@
+section#background-color
+  h2 _background-color.less
+  section
+    h3 all media queries
+    div(class="!bc:0")   .!bc:0   { background-color: initial      !important; }
+    div(class="!bc:i")   .!bc:i   { background-color: inherit      !important; }
+    div(class="!bc:t")   .!bc:t   { background-color: transparent  !important; }
+    div(class="!bc:c")   .!bc:c   { background-color: currentColor !important; }
+  section
+    h3 @media screen
+    div(class="!bc:0@s") .!bc:0@s { background-color: initial      !important; }
+    div(class="!bc:i@s") .!bc:i@s { background-color: inherit      !important; }
+    div(class="!bc:t@s") .!bc:t@s { background-color: transparent  !important; }
+    div(class="!bc:c@s") .!bc:c@s { background-color: currentColor !important; }
+  section
+    h3 @media print
+    div(class="!bc:0@p") .!bc:0@p { background-color: initial      !important; }
+    div(class="!bc:i@p") .!bc:i@p { background-color: inherit      !important; }
+    div(class="!bc:t@p") .!bc:t@p { background-color: transparent  !important; }
+    div(class="!bc:c@p") .!bc:c@p { background-color: currentColor !important; }
