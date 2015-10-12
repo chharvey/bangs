@@ -1,11 +1,11 @@
 {
   "name": "bangs",
-  "version": "0.2.2",
-  "description": "Bangs are unopinionated, single-responsibility CSS class selectors with exactly one property and marked with !important.",
+  "version": "0.3.1",
+  "description": "Bangs are unopinionated, single-responsibility CSS class selectors with one property and marked with !important.",
   "main": "bangs.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lessc:all": "lessc-each  ./src/  ./build/  ;  lessc  ./bangs.less  ./bangs.css",
+    "lessc:all": "lessc-each ./src/ ./build/  ;  lessc ./bangs.less ./bangs.css ; lessc ./doc/styles/index.less ./doc/styles/index.css",
     "minify": "cleancss ./bangs.css -o ./bangs.min.css",
     "jade:index": "jade --pretty index.jade index.html",
     "build": "npm run lessc:all  ;  npm run minify  ;  npm run jade:index"
@@ -27,6 +27,6 @@
   "devDependencies": {
     "clean-css": "^3.4.5",
     "lessc-each": "^1.0.1",
-    "xmeter": "^2.2.0"
+    "xmeter": "^2.3.0"
   }
 }

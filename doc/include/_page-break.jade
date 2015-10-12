@@ -1,0 +1,20 @@
+section#page-break
+  h2 _page-break.less
+  p.
+    #[strong Note:]
+    The #[code page-break-before] and #[code page-break-after] properties are only relevant
+    when printing, so all media query classes have been left out.
+  section
+    h3 all media queries
+    div(class="!pbb:0") .!pbb:0 { page-break-before: initial !important; }
+    div(class="!pbb:i") .!pbb:i { page-break-before: inherit !important; }
+    div(class="!pbb:a") .!pbb:a { page-break-before: auto    !important; }
+    div(class="!pbb:t") .!pbb:t { page-break-before: always  !important; }
+    div(class="!pbb:f") .!pbb:f { page-break-before: avoid   !important; }
+  section
+    h3 all media queries
+    div(class="!pba:0") .!pba:0 { page-break-after: initial !important; }
+    div(class="!pba:i") .!pba:i { page-break-after: inherit !important; }
+    div(class="!pba:a") .!pba:a { page-break-after: auto    !important; }
+    div(class="!pba:t") .!pba:t { page-break-after: always  !important; }
+    div(class="!pba:f") .!pba:f { page-break-after: avoid   !important; }
