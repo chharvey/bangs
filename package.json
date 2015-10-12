@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lessc:all": "lessc-each ./src/ ./build/  ;  lessc ./bangs.less ./bangs.css ; lessc ./doc/styles/index.less ./doc/styles/index.css",
-    "jade:all": "jade --pretty index.jade index.html",
-    "compile": "npm run lessc:all  ;  npm run jade:all"
+    "minify": "cleancss ./bangs.css -o ./bangs.min.css",
+    "jade:index": "jade --pretty index.jade index.html",
+    "build": "npm run lessc:all  ;  npm run minify  ;  npm run jade:index"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
   },
   "homepage": "https://github.com/chharvey/bangs#readme",
   "devDependencies": {
+    "clean-css": "^3.4.5",
     "lessc-each": "^1.0.1",
     "xmeter": "^2.3.0"
   }
