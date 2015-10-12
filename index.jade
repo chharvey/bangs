@@ -18,143 +18,15 @@ html
       include ./doc/include/_margin.jade
       include ./doc/include/_position.jade
       include ./doc/include/_float.jade
-      section#justify-content.ss-flexbox
-        h2 _justify-content.less
-        section
-          h3 all media queries
-          div(class="!j:0 ")   .!j:0    { justify-content: initial       !important; }
-          div(class="!j:i ")   .!j:i    { justify-content: inherit       !important; }
-          div(class="!j:bt")   .!j:bt   { justify-content: space-between !important; }
-          div(class="!j:ad")   .!j:ad   { justify-content: space-around  !important; }
-          div(class="!j:cr")   .!j:cr   { justify-content: center        !important; }
-          div(class="!j:st")   .!j:st   { justify-content: flex-start    !important; }
-          div(class="!j:ed")   .!j:ed   { justify-content: flex-end      !important; }
-        section
-          h3 @media screen
-          div(class="!j:0@s")  .!j:0@s  { justify-content: initial       !important; }
-          div(class="!j:i@s")  .!j:i@s  { justify-content: inherit       !important; }
-          div(class="!j:bt@s") .!j:bt@s { justify-content: space-between !important; }
-          div(class="!j:ad@s") .!j:ad@s { justify-content: space-around  !important; }
-          div(class="!j:cr@s") .!j:cr@s { justify-content: center        !important; }
-          div(class="!j:st@s") .!j:st@s { justify-content: flex-start    !important; }
-          div(class="!j:ed@s") .!j:ed@s { justify-content: flex-end      !important; }
-        section
-          h3 @media print
-          div(class="!j:0@p")  .!j:0@p  { justify-content: initial       !important; }
-          div(class="!j:i@p")  .!j:i@p  { justify-content: inherit       !important; }
-          div(class="!j:bt@p") .!j:bt@p { justify-content: space-between !important; }
-          div(class="!j:ad@p") .!j:ad@p { justify-content: space-around  !important; }
-          div(class="!j:cr@p") .!j:cr@p { justify-content: center        !important; }
-          div(class="!j:st@p") .!j:st@p { justify-content: flex-start    !important; }
-          div(class="!j:ed@p") .!j:ed@p { justify-content: flex-end      !important; }
-      section#order.ss-flexbox
-        h2 _order.less
-        section
-          h3 all media queries
-          div(class="!o:0")    .!o:0    { order: initial !important; }
-          div(class="!o:1")    .!o:1    { order:   1     !important; }
-          div(class="!o:2")    .!o:2    { order:   2     !important; }
-          div(class="!o:3")    .!o:3    { order:   3     !important; }
-          div(class="!o:4")    .!o:4    { order:   4     !important; }
-          div(class="!o:5")    .!o:5    { order:   5     !important; }
-          div(class="!o:6")    .!o:6    { order:   6     !important; }
-          div(class="!o:7")    .!o:7    { order:   7     !important; }
-          div(class="!o:8")    .!o:8    { order:   8     !important; }
-          div(class="!o:9")    .!o:9    { order:   9     !important; }
-          div(class="!o:a")    .!o:a    { order:  10     !important; }
-          div(class="!o:b")    .!o:b    { order:  11     !important; }
-          div(class="!o:c")    .!o:c    { order:  12     !important; }
-          div(class="!o:d")    .!o:d    { order:  13     !important; }
-          div(class="!o:e")    .!o:e    { order:  14     !important; }
-          div(class="!o:f")    .!o:f    { order:  15     !important; }
-          div(class="!o:-1")   .!o:-1   { order:  -1     !important; }
-          div(class="!o:-2")   .!o:-2   { order:  -2     !important; }
-          div(class="!o:-3")   .!o:-3   { order:  -3     !important; }
-          div(class="!o:-4")   .!o:-4   { order:  -4     !important; }
-          div(class="!o:-5")   .!o:-5   { order:  -5     !important; }
-          div(class="!o:-6")   .!o:-6   { order:  -6     !important; }
-          div(class="!o:-7")   .!o:-7   { order:  -7     !important; }
-          div(class="!o:-8")   .!o:-8   { order:  -8     !important; }
-          div(class="!o:-9")   .!o:-9   { order:  -9     !important; }
-          div(class="!o:-a")   .!o:-a   { order: -10     !important; }
-          div(class="!o:-b")   .!o:-b   { order: -11     !important; }
-          div(class="!o:-c")   .!o:-c   { order: -12     !important; }
-          div(class="!o:-d")   .!o:-d   { order: -13     !important; }
-          div(class="!o:-e")   .!o:-e   { order: -14     !important; }
-          div(class="!o:-f")   .!o:-f   { order: -15     !important; }
-        section
-          h3 @media screen
-          div(class="!o:0@s ") .!o:0@s  { order: initial !important; }
-          div(class="!o:1@s ") .!o:1@s  { order:   1     !important; }
-          div(class="!o:2@s ") .!o:2@s  { order:   2     !important; }
-          div(class="!o:3@s ") .!o:3@s  { order:   3     !important; }
-          div(class="!o:4@s ") .!o:4@s  { order:   4     !important; }
-          div(class="!o:5@s ") .!o:5@s  { order:   5     !important; }
-          div(class="!o:6@s ") .!o:6@s  { order:   6     !important; }
-          div(class="!o:7@s ") .!o:7@s  { order:   7     !important; }
-          div(class="!o:8@s ") .!o:8@s  { order:   8     !important; }
-          div(class="!o:9@s ") .!o:9@s  { order:   9     !important; }
-          div(class="!o:a@s ") .!o:a@s  { order:  10     !important; }
-          div(class="!o:b@s ") .!o:b@s  { order:  11     !important; }
-          div(class="!o:c@s ") .!o:c@s  { order:  12     !important; }
-          div(class="!o:d@s ") .!o:d@s  { order:  13     !important; }
-          div(class="!o:e@s ") .!o:e@s  { order:  14     !important; }
-          div(class="!o:f@s ") .!o:f@s  { order:  15     !important; }
-          div(class="!o:-1@s") .!o:-1@s { order:  -1     !important; }
-          div(class="!o:-2@s") .!o:-2@s { order:  -2     !important; }
-          div(class="!o:-3@s") .!o:-3@s { order:  -3     !important; }
-          div(class="!o:-4@s") .!o:-4@s { order:  -4     !important; }
-          div(class="!o:-5@s") .!o:-5@s { order:  -5     !important; }
-          div(class="!o:-6@s") .!o:-6@s { order:  -6     !important; }
-          div(class="!o:-7@s") .!o:-7@s { order:  -7     !important; }
-          div(class="!o:-8@s") .!o:-8@s { order:  -8     !important; }
-          div(class="!o:-9@s") .!o:-9@s { order:  -9     !important; }
-          div(class="!o:-a@s") .!o:-a@s { order: -10     !important; }
-          div(class="!o:-b@s") .!o:-b@s { order: -11     !important; }
-          div(class="!o:-c@s") .!o:-c@s { order: -12     !important; }
-          div(class="!o:-d@s") .!o:-d@s { order: -13     !important; }
-          div(class="!o:-e@s") .!o:-e@s { order: -14     !important; }
-          div(class="!o:-f@s") .!o:-f@s { order: -15     !important; }
-        section
-          h3 @media print
-          div(class="!o:0@p ") .!o:0@p  { order: initial !important; }
-          div(class="!o:1@p ") .!o:1@p  { order:   1     !important; }
-          div(class="!o:2@p ") .!o:2@p  { order:   2     !important; }
-          div(class="!o:3@p ") .!o:3@p  { order:   3     !important; }
-          div(class="!o:4@p ") .!o:4@p  { order:   4     !important; }
-          div(class="!o:5@p ") .!o:5@p  { order:   5     !important; }
-          div(class="!o:6@p ") .!o:6@p  { order:   6     !important; }
-          div(class="!o:7@p ") .!o:7@p  { order:   7     !important; }
-          div(class="!o:8@p ") .!o:8@p  { order:   8     !important; }
-          div(class="!o:9@p ") .!o:9@p  { order:   9     !important; }
-          div(class="!o:a@p ") .!o:a@p  { order:  10     !important; }
-          div(class="!o:b@p ") .!o:b@p  { order:  11     !important; }
-          div(class="!o:c@p ") .!o:c@p  { order:  12     !important; }
-          div(class="!o:d@p ") .!o:d@p  { order:  13     !important; }
-          div(class="!o:e@p ") .!o:e@p  { order:  14     !important; }
-          div(class="!o:f@p ") .!o:f@p  { order:  15     !important; }
-          div(class="!o:-1@p") .!o:-1@p { order:  -1     !important; }
-          div(class="!o:-2@p") .!o:-2@p { order:  -2     !important; }
-          div(class="!o:-3@p") .!o:-3@p { order:  -3     !important; }
-          div(class="!o:-4@p") .!o:-4@p { order:  -4     !important; }
-          div(class="!o:-5@p") .!o:-5@p { order:  -5     !important; }
-          div(class="!o:-6@p") .!o:-6@p { order:  -6     !important; }
-          div(class="!o:-7@p") .!o:-7@p { order:  -7     !important; }
-          div(class="!o:-8@p") .!o:-8@p { order:  -8     !important; }
-          div(class="!o:-9@p") .!o:-9@p { order:  -9     !important; }
-          div(class="!o:-a@p") .!o:-a@p { order: -10     !important; }
-          div(class="!o:-b@p") .!o:-b@p { order: -11     !important; }
-          div(class="!o:-c@p") .!o:-c@p { order: -12     !important; }
-          div(class="!o:-d@p") .!o:-d@p { order: -13     !important; }
-          div(class="!o:-e@p") .!o:-e@p { order: -14     !important; }
-          div(class="!o:-f@p") .!o:-f@p { order: -15     !important; }
+      include ./doc/include/_vertical-align.jade
+      include ./doc/include/_justify-content.jade
+      include ./doc/include/_order.jade
       include ./doc/include/_font-style.jade
       include ./doc/include/_font-variant.jade
       include ./doc/include/_font-weight.jade
       include ./doc/include/_font-size.jade
       include ./doc/include/_font-family.jade
       include ./doc/include/_text-align.jade
-      include ./doc/include/_vertical-align.jade
       include ./doc/include/_white-space.jade
       include ./doc/include/_page-break.jade
       include ./doc/include/_text-rendering.jade
