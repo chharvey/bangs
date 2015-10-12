@@ -1,8 +1,28 @@
+html {
+  font-size: 16px;
+}
 body {
   font-family: sans-serif;
+  color: #657b83;
+  background-color: #fdf6e3;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #586e75;
 }
 code {
   font-size: inherit;
+}
+.c-Title {
+  color: #dc322f;
+}
+.c-Lede {
+  font-weight: 700;
+  color: #6c71c4;
 }
 [class^='!'] {
   background-color: rgba(0, 0, 0, 0.1);

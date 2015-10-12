@@ -1,12 +1,55 @@
 
+    @chh_color_solarized_base03:  #002b36;
+    @chh_color_solarized_base02:  #073642;
+    @chh_color_solarized_base01:  #586e75;
+    @chh_color_solarized_base00:  #657b83;
+    @chh_color_solarized_base0:   #839496;
+    @chh_color_solarized_base1:   #93a1a1;
+    @chh_color_solarized_base2:   #eee8d5;
+    @chh_color_solarized_base3:   #fdf6e3;
+
+    @chh_color_solarized_red:     #dc322f;
+    @chh_color_solarized_orange:  #cb4b16;
+    @chh_color_solarized_yellow:  #b58900;
+    @chh_color_solarized_green:   #859900;
+    @chh_color_solarized_cyan:    #2aa198;
+    @chh_color_solarized_blue:    #268bd2;
+    @chh_color_solarized_violet:  #6c71c4;
+    @chh_color_solarized_magenta: #d33682;
+
+    @chh_color_sol_lite_bg:   @chh_color_solarized_base3;
+    @chh_color_sol_lite_brdr: @chh_color_solarized_base2;
+    @chh_color_sol_lite_txt:  @chh_color_solarized_base00;
+    @chh_color_sol_lite_comm: @chh_color_solarized_base1;
+    @chh_color_sol_lite_emph: @chh_color_solarized_base01;
+
+html {
+  font-size: 16px; // FIXME bug in xmeter@v2.3.0
+}
 
 body {
   font-family: sans-serif;
+  color: @chh_color_sol_lite_txt;
+  background-color: @chh_color_sol_lite_bg;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: @chh_color_sol_lite_emph;
 }
 
 code {
   font-size: inherit;
 }
+
+.c-Title {
+  color: @chh_color_solarized_red;
+}
+
+.c-Lede {
+  font-weight: 700;
+  color: @chh_color_solarized_violet;
+}
+
 
 // any bang
 [class^='!'] {
