@@ -15,11 +15,11 @@
 //
 // :0   =  initial
 // :i   =  inherit
-// :bt  =  space-between
-// :ad  =  space-around
-// :cr  =  center
 // :st  =  flex-start
 // :ed  =  flex-end
+// :cr  =  center
+// :bt  =  space-between
+// :ad  =  space-around
 //
 // @s  =  screen
 // @p  =  print
@@ -37,28 +37,28 @@
 
 .\!j\:0  { #XMETER .flex-justify-content(initial)       !important; }
 .\!j\:i  { #XMETER .flex-justify-content(inherit)       !important; }
-.\!j\:bt { #XMETER .flex-justify-content(space-between) !important; }
-.\!j\:ad { #XMETER .flex-justify-content(space-around)  !important; }
-.\!j\:cr { #XMETER .flex-justify-content(center)        !important; }
 .\!j\:st { #XMETER .flex-justify-content(flex-start)    !important; }
 .\!j\:ed { #XMETER .flex-justify-content(flex-end)      !important; }
+.\!j\:cr { #XMETER .flex-justify-content(center)        !important; }
+.\!j\:bt { #XMETER .flex-justify-content(space-between) !important; }
+.\!j\:ad { #XMETER .flex-justify-content(space-around)  !important; }
 
 @media screen {
   .\!j\:0\@s  { .\!j\:0 ; }
   .\!j\:i\@s  { .\!j\:i ; }
-  .\!j\:bt\@s { .\!j\:bt; }
-  .\!j\:ad\@s { .\!j\:ad; }
-  .\!j\:cr\@s { .\!j\:cr; }
   .\!j\:st\@s { .\!j\:st; }
   .\!j\:ed\@s { .\!j\:ed; }
+  .\!j\:cr\@s { .\!j\:cr; }
+  .\!j\:bt\@s { .\!j\:bt; }
+  .\!j\:ad\@s { .\!j\:ad; }
 }
 
 @media print {
   .\!j\:0\@p  { .\!j\:0 ; }
   .\!j\:i\@p  { .\!j\:i ; }
-  .\!j\:bt\@p { .\!j\:bt; }
-  .\!j\:ad\@p { .\!j\:ad; }
-  .\!j\:cr\@p { .\!j\:cr; }
   .\!j\:st\@p { .\!j\:st; }
   .\!j\:ed\@p { .\!j\:ed; }
+  .\!j\:cr\@p { .\!j\:cr; }
+  .\!j\:bt\@p { .\!j\:bt; }
+  .\!j\:ad\@p { .\!j\:ad; }
 }
