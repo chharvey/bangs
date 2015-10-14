@@ -4640,6 +4640,280 @@
 }
 
 /*################################*\
+    _background-size.less
+\*################################*/
+.\!bz\:0 {
+  background-size: initial !important;
+}
+.\!bz\:i {
+  background-size: inherit !important;
+}
+.\!bz\:a {
+  background-size: auto    !important;
+}
+.\!bz\:s {
+  background-size: contain !important;
+}
+.\!bz\:l {
+  background-size: cover   !important;
+}
+@media screen {
+  .\!bz\:0\@s {
+    background-size: initial !important;
+  }
+  .\!bz\:i\@s {
+    background-size: inherit !important;
+  }
+  .\!bz\:a\@s {
+    background-size: auto    !important;
+  }
+  .\!bz\:s\@s {
+    background-size: contain !important;
+  }
+  .\!bz\:l\@s {
+    background-size: cover   !important;
+  }
+}
+@media print {
+  .\!bz\:0\@p {
+    background-size: initial !important;
+  }
+  .\!bz\:i\@p {
+    background-size: inherit !important;
+  }
+  .\!bz\:a\@p {
+    background-size: auto    !important;
+  }
+  .\!bz\:s\@p {
+    background-size: contain !important;
+  }
+  .\!bz\:l\@p {
+    background-size: cover   !important;
+  }
+}
+
+/*################################*\
+    _background-repeat.less
+\*################################*/
+.\!br\:0 {
+  background-repeat: initial   !important;
+}
+.\!br\:i {
+  background-repeat: inherit   !important;
+}
+.\!br\:n {
+  background-repeat: no-repeat !important;
+}
+.\!br\:a {
+  background-repeat: repeat    !important;
+}
+.\!br\:x {
+  background-repeat: repeat-x !important;
+}
+.\!br\:y {
+  background-repeat: repeat-y !important;
+}
+@media screen {
+  .\!br\:0\@s {
+    background-repeat: initial   !important;
+  }
+  .\!br\:i\@s {
+    background-repeat: inherit   !important;
+  }
+  .\!br\:n\@s {
+    background-repeat: no-repeat !important;
+  }
+  .\!br\:a\@s {
+    background-repeat: repeat    !important;
+  }
+  .\!br\:x\@s {
+    background-repeat: repeat-x !important;
+  }
+  .\!br\:y\@s {
+    background-repeat: repeat-y !important;
+  }
+}
+@media print {
+  .\!br\:0\@p {
+    background-repeat: initial   !important;
+  }
+  .\!br\:i\@p {
+    background-repeat: inherit   !important;
+  }
+  .\!br\:n\@p {
+    background-repeat: no-repeat !important;
+  }
+  .\!br\:a\@p {
+    background-repeat: repeat    !important;
+  }
+  .\!br\:x\@p {
+    background-repeat: repeat-x !important;
+  }
+  .\!br\:y\@p {
+    background-repeat: repeat-y !important;
+  }
+}
+
+/*################################*\
+    _background-attachment.less
+\*################################*/
+.\!ba\:0 {
+  background-attachment: initial !important;
+}
+.\!ba\:i {
+  background-attachment: inherit !important;
+}
+.\!ba\:f {
+  background-attachment: fixed   !important;
+}
+.\!ba\:s {
+  background-attachment: scroll  !important;
+}
+.\!ba\:l {
+  background-attachment: local   !important;
+}
+@media screen {
+  .\!ba\:0\@s {
+    background-attachment: initial !important;
+  }
+  .\!ba\:i\@s {
+    background-attachment: inherit !important;
+  }
+  .\!ba\:f\@s {
+    background-attachment: fixed   !important;
+  }
+  .\!ba\:s\@s {
+    background-attachment: scroll  !important;
+  }
+  .\!ba\:l\@s {
+    background-attachment: local   !important;
+  }
+}
+@media print {
+  .\!ba\:0\@p {
+    background-attachment: initial !important;
+  }
+  .\!ba\:i\@p {
+    background-attachment: inherit !important;
+  }
+  .\!ba\:f\@p {
+    background-attachment: fixed   !important;
+  }
+  .\!ba\:s\@p {
+    background-attachment: scroll  !important;
+  }
+  .\!ba\:l\@p {
+    background-attachment: local   !important;
+  }
+}
+
+/*################################*\
+    _background-origin.less
+\*################################*/
+.\!bo\:0 {
+  background-origin: initial     !important;
+}
+.\!bo\:i {
+  background-origin: inherit     !important;
+}
+.\!bo\:c {
+  background-origin: content-box !important;
+}
+.\!bo\:p {
+  background-origin: padding-box !important;
+}
+.\!bo\:b {
+  background-origin: border-box !important;
+}
+@media screen {
+  .\!bo\:0\@s {
+    background-origin: initial     !important;
+  }
+  .\!bo\:i\@s {
+    background-origin: inherit     !important;
+  }
+  .\!bo\:c\@s {
+    background-origin: content-box !important;
+  }
+  .\!bo\:p\@s {
+    background-origin: padding-box !important;
+  }
+  .\!bo\:b\@s {
+    background-origin: border-box !important;
+  }
+}
+@media print {
+  .\!bo\:0\@p {
+    background-origin: initial     !important;
+  }
+  .\!bo\:i\@p {
+    background-origin: inherit     !important;
+  }
+  .\!bo\:c\@p {
+    background-origin: content-box !important;
+  }
+  .\!bo\:p\@p {
+    background-origin: padding-box !important;
+  }
+  .\!bo\:b\@p {
+    background-origin: border-box !important;
+  }
+}
+
+/*################################*\
+    _background-clip.less
+\*################################*/
+.\!bx\:0 {
+  background-clip: initial     !important;
+}
+.\!bx\:i {
+  background-clip: inherit     !important;
+}
+.\!bx\:c {
+  background-clip: content-box !important;
+}
+.\!bx\:p {
+  background-clip: padding-box !important;
+}
+.\!bx\:b {
+  background-clip: border-box !important;
+}
+@media screen {
+  .\!bx\:0\@s {
+    background-clip: initial     !important;
+  }
+  .\!bx\:i\@s {
+    background-clip: inherit     !important;
+  }
+  .\!bx\:c\@s {
+    background-clip: content-box !important;
+  }
+  .\!bx\:p\@s {
+    background-clip: padding-box !important;
+  }
+  .\!bx\:b\@s {
+    background-clip: border-box !important;
+  }
+}
+@media print {
+  .\!bx\:0\@p {
+    background-clip: initial     !important;
+  }
+  .\!bx\:i\@p {
+    background-clip: inherit     !important;
+  }
+  .\!bx\:c\@p {
+    background-clip: content-box !important;
+  }
+  .\!bx\:p\@p {
+    background-clip: padding-box !important;
+  }
+  .\!bx\:b\@p {
+    background-clip: border-box !important;
+  }
+}
+
+/*################################*\
     _visibility.less
 \*################################*/
 .\!v\:0 {
