@@ -2,7 +2,8 @@
 /*################################*\
     _font-size.less
 \*################################*/
-@import (reference) url('../node_modules/xmeter/src/_base.sections.less');
+@import (reference) url('../node_modules/xmeter/src/__settings.less');
+@import (reference) url('../node_modules/xmeter/src/_base.sections.less'); // TODO remove this line on npm install xmeter@v3.0.0
 
 // Sets the font size.
 // The bangs used for font size correspond to heading sizes.
@@ -34,14 +35,14 @@
 // ^updated
 // : 2015-10-04
 
-.\!fz\:0  { font-size: initial                !important; }
-.\!fz\:i  { font-size: inherit                !important; }
-.\!fz\:h1 { font-size: (@h1_font_size * 16px) !important; font-size: (@h1_font_size * 1rem) !important; }
-.\!fz\:h2 { font-size: (@h2_font_size * 16px) !important; font-size: (@h2_font_size * 1rem) !important; }
-.\!fz\:h3 { font-size: (@h3_font_size * 16px) !important; font-size: (@h3_font_size * 1rem) !important; }
-.\!fz\:h4 { font-size: (@h4_font_size * 16px) !important; font-size: (@h4_font_size * 1rem) !important; }
-.\!fz\:h5 { font-size: (@h5_font_size * 16px) !important; font-size: (@h5_font_size * 1rem) !important; }
-.\!fz\:h6 { font-size: (@h6_font_size * 16px) !important; font-size: (@h6_font_size * 1rem) !important; }
+.\!fz\:0  {                  font-size: initial                !important; }
+.\!fz\:i  {                  font-size: inherit                !important; }
+.\!fz\:h1 { #XMETER .VARS(); font-size: (@h1_font_size * 16px) !important; font-size: (@h1_font_size * 1rem) !important; }
+.\!fz\:h2 { #XMETER .VARS(); font-size: (@h2_font_size * 16px) !important; font-size: (@h2_font_size * 1rem) !important; }
+.\!fz\:h3 { #XMETER .VARS(); font-size: (@h3_font_size * 16px) !important; font-size: (@h3_font_size * 1rem) !important; }
+.\!fz\:h4 { #XMETER .VARS(); font-size: (@h4_font_size * 16px) !important; font-size: (@h4_font_size * 1rem) !important; }
+.\!fz\:h5 { #XMETER .VARS(); font-size: (@h5_font_size * 16px) !important; font-size: (@h5_font_size * 1rem) !important; }
+.\!fz\:h6 { #XMETER .VARS(); font-size: (@h6_font_size * 16px) !important; font-size: (@h6_font_size * 1rem) !important; }
 
 @media screen {
   .\!fz\:0\@s  { .\!fz\:0 ; }
