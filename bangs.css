@@ -82,6 +82,50 @@
 }
 
 /*################################*\
+    _box-sizing.less
+\*################################*/
+.\!b\:0 {
+  box-sizing: initial     !important;
+}
+.\!b\:i {
+  box-sizing: inherit     !important;
+}
+.\!b\:c {
+  box-sizing: content-box !important;
+}
+.\!b\:b {
+  box-sizing: border-box !important;
+}
+@media screen {
+  .\!b\:0\@s {
+    box-sizing: initial     !important;
+  }
+  .\!b\:i\@s {
+    box-sizing: inherit     !important;
+  }
+  .\!b\:c\@s {
+    box-sizing: content-box !important;
+  }
+  .\!b\:b\@s {
+    box-sizing: border-box !important;
+  }
+}
+@media print {
+  .\!b\:0\@p {
+    box-sizing: initial     !important;
+  }
+  .\!b\:i\@p {
+    box-sizing: inherit     !important;
+  }
+  .\!b\:c\@p {
+    box-sizing: content-box !important;
+  }
+  .\!b\:b\@p {
+    box-sizing: border-box !important;
+  }
+}
+
+/*################################*\
     _width.less
 \*################################*/
 .\!w\:0 {

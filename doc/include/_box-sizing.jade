@@ -1,0 +1,20 @@
+section#box-sizing
+  h2 _box-sizing.less
+  section
+    h3 all media queries
+    div(class="!b:0")   .!b:0   { box-sizing: initial     !important; }
+    div(class="!b:i")   .!b:i   { box-sizing: inherit     !important; }
+    div(class="!b:c")   .!b:c   { box-sizing: content-box !important; }
+    div(class="!b:b")   .!b:b   { box-sizing: border-box  !important; }
+  section
+    h3 @media screen
+    div(class="!b:0@s") .!b:0@s { box-sizing: initial     !important; }
+    div(class="!b:i@s") .!b:i@s { box-sizing: inherit     !important; }
+    div(class="!b:c@s") .!b:c@s { box-sizing: content-box !important; }
+    div(class="!b:b@s") .!b:b@s { box-sizing: border-box  !important; }
+  section
+    h3 @media print
+    div(class="!b:0@p") .!b:0@p { box-sizing: initial     !important; }
+    div(class="!b:i@p") .!b:i@p { box-sizing: inherit     !important; }
+    div(class="!b:c@p") .!b:c@p { box-sizing: content-box !important; }
+    div(class="!b:b@p") .!b:b@p { box-sizing: border-box  !important; }
