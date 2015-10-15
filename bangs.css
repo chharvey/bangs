@@ -3728,6 +3728,62 @@
 }
 
 /*################################*\
+    _overflow-wrap.less
+\*################################*/
+.\!ww\:0 {
+  word-wrap: initial    !important;
+  overflow-wrap: initial    !important;
+}
+.\!ww\:i {
+  word-wrap: inherit    !important;
+  overflow-wrap: inherit    !important;
+}
+.\!ww\:n {
+  word-wrap: normal     !important;
+  overflow-wrap: normal     !important;
+}
+.\!ww\:b {
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+}
+@media screen {
+  .\!ww\:0\@s {
+    word-wrap: initial    !important;
+    overflow-wrap: initial    !important;
+  }
+  .\!ww\:i\@s {
+    word-wrap: inherit    !important;
+    overflow-wrap: inherit    !important;
+  }
+  .\!ww\:n\@s {
+    word-wrap: normal     !important;
+    overflow-wrap: normal     !important;
+  }
+  .\!ww\:b\@s {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+}
+@media print {
+  .\!ww\:0\@p {
+    word-wrap: initial    !important;
+    overflow-wrap: initial    !important;
+  }
+  .\!ww\:i\@p {
+    word-wrap: inherit    !important;
+    overflow-wrap: inherit    !important;
+  }
+  .\!ww\:n\@p {
+    word-wrap: normal     !important;
+    overflow-wrap: normal     !important;
+  }
+  .\!ww\:b\@p {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+}
+
+/*################################*\
     _page-break.less
 \*################################*/
 .\!pbb\:0 {
