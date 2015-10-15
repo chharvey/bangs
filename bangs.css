@@ -3279,6 +3279,10 @@
   font-size: 12px !important;
   font-size: 0.75rem !important;
 }
+.\!fz\:h7 {
+  font-size: 8px !important;
+  font-size: 0.5rem !important;
+}
 @media screen {
   .\!fz\:0\@s {
     font-size: initial                !important;
@@ -3309,6 +3313,10 @@
   .\!fz\:h6\@s {
     font-size: 12px !important;
     font-size: 0.75rem !important;
+  }
+  .\!fz\:h7\@s {
+    font-size: 8px !important;
+    font-size: 0.5rem !important;
   }
 }
 @media print {
@@ -3341,6 +3349,10 @@
   .\!fz\:h6\@p {
     font-size: 12px !important;
     font-size: 0.75rem !important;
+  }
+  .\!fz\:h7\@p {
+    font-size: 8px !important;
+    font-size: 0.5rem !important;
   }
 }
 
