@@ -4521,6 +4521,79 @@
 }
 
 /*################################*\
+    _opacity.less
+\*################################*/
+.\!o\:0 {
+  opacity: initial !important;
+}
+.\!o\:i {
+  opacity: inherit !important;
+}
+.\!o\:z {
+  opacity: 0.0     !important;
+}
+.\!o\:h {
+  opacity: 0.5     !important;
+}
+.\!o\:1 {
+  opacity: 1.0     !important;
+}
+@media screen {
+  .\!o\:0\@s {
+    opacity: initial !important;
+  }
+  .\!o\:i\@s {
+    opacity: inherit !important;
+  }
+  .\!o\:z\@s {
+    opacity: 0.0     !important;
+  }
+  .\!o\:h\@s {
+    opacity: 0.5     !important;
+  }
+  .\!o\:1\@s {
+    opacity: 1.0     !important;
+  }
+}
+@media print {
+  .\!o\:0\@p {
+    opacity: initial !important;
+  }
+  .\!o\:i\@p {
+    opacity: inherit !important;
+  }
+  .\!o\:z\@p {
+    opacity: 0.0     !important;
+  }
+  .\!o\:h\@p {
+    opacity: 0.5     !important;
+  }
+  .\!o\:1\@p {
+    opacity: 1.0     !important;
+  }
+}
+.\!o\:0\^:hover,
+.\!o\:0\^:focus {
+  opacity: initial !important;
+}
+.\!o\:i\^:hover,
+.\!o\:i\^:focus {
+  opacity: inherit !important;
+}
+.\!o\:z\^:hover,
+.\!o\:z\^:focus {
+  opacity: 0.0     !important;
+}
+.\!o\:h\^:hover,
+.\!o\:h\^:focus {
+  opacity: 0.5     !important;
+}
+.\!o\:1\^:hover,
+.\!o\:1\^:focus {
+  opacity: 1.0     !important;
+}
+
+/*################################*\
     _visibility.less
 \*################################*/
 .\!v\:0 {

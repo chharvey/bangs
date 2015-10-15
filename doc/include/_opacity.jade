@@ -1,0 +1,30 @@
+section#opacity
+  h2 _opacity.less
+  section
+    h3 all media queries
+    div(class="!o:0")   .!o:0   { opacity: initial !important; }
+    div(class="!o:i")   .!o:i   { opacity: inherit !important; }
+    div(class="!o:z")   .!o:z   { opacity: 0.0     !important; }
+    div(class="!o:h")   .!o:h   { opacity: 0.5     !important; }
+    div(class="!o:1")   .!o:1   { opacity: 1.0     !important; }
+  section
+    h3 @media screen
+    div(class="!o:0@s") .!o:0@s { opacity: initial !important; }
+    div(class="!o:i@s") .!o:i@s { opacity: inherit !important; }
+    div(class="!o:z@s") .!o:z@s { opacity: 0.0     !important; }
+    div(class="!o:h@s") .!o:h@s { opacity: 0.5     !important; }
+    div(class="!o:1@s") .!o:1@s { opacity: 1.0     !important; }
+  section
+    h3 @media print
+    div(class="!o:0@p") .!o:0@p { opacity: initial !important; }
+    div(class="!o:i@p") .!o:i@p { opacity: inherit !important; }
+    div(class="!o:z@p") .!o:z@p { opacity: 0.0     !important; }
+    div(class="!o:h@p") .!o:h@p { opacity: 0.5     !important; }
+    div(class="!o:1@p") .!o:1@p { opacity: 1.0     !important; }
+  section
+    h3 pseudo-classes :hover and :focus
+    div(class="!o:0^")  .!o:0^  { opacity: initial !important; }
+    div(class="!o:i^")  .!o:i^  { opacity: inherit !important; }
+    div(class="!o:z^")  .!o:z^  { opacity: 0.0     !important; }
+    div(class="!o:h^")  .!o:h^  { opacity: 0.5     !important; }
+    div(class="!o:1^")  .!o:1^  { opacity: 1.0     !important; }
