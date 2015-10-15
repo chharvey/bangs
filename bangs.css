@@ -3416,6 +3416,50 @@
 }
 
 /*################################*\
+    _line-height.less
+\*################################*/
+.\!lh\:0 {
+  line-height: initial !important;
+}
+.\!lh\:i {
+  line-height: inherit !important;
+}
+.\!lh\:n {
+  line-height: normal  !important;
+}
+.\!lh\:z {
+  line-height: 0       !important;
+}
+@media screen {
+  .\!lh\:0\@s {
+    line-height: initial !important;
+  }
+  .\!lh\:i\@s {
+    line-height: inherit !important;
+  }
+  .\!lh\:n\@s {
+    line-height: normal  !important;
+  }
+  .\!lh\:z\@s {
+    line-height: 0       !important;
+  }
+}
+@media print {
+  .\!lh\:0\@p {
+    line-height: initial !important;
+  }
+  .\!lh\:i\@p {
+    line-height: inherit !important;
+  }
+  .\!lh\:n\@p {
+    line-height: normal  !important;
+  }
+  .\!lh\:z\@p {
+    line-height: 0       !important;
+  }
+}
+
+/*################################*\
     _text-align.less
 \*################################*/
 .\!ta\:0 {
