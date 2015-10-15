@@ -22,8 +22,8 @@ code {
   color: #6c71c4;
 }
 [class^='!'] {
-  background-color: rgba(0, 0, 0, 0.1);
-  outline: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #eee8d5;
+  outline: 1px solid rgba(147, 161, 161, 0.5);
 }
 .ss-flexbox {
   opacity: 0.25;

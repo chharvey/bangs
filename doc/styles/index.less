@@ -36,8 +36,8 @@ code {
   // FIXME this only selects elements whose `class` attribute *starts* with `!`, not necessarily
   // any element who may have a class starting with `!`.
   // For example this selector will not match `<div class="abc !bc:t"></div>`
-  background-color: rgba(0,0,0, 0.1);
-  outline: 1px solid rgba(0,0,0, 0.1);
+  background-color: @solar_base2;
+  outline: 1px solid fadeout(@color_comm, 50%);
 }
 
 // flexbox demos
