@@ -1,34 +1,28 @@
 
 /*################################*\
-    _flex-direction.less
+    _flex-wrap.less
 \*################################*/
 @import (reference) url('../node_modules/xmeter/src/__tool.fallback.flexbox.less');
 
-// Defines how the browser distributes space
-// between and around flex items
-// along the main-axis of their container.
-// NOTE that this utility must be a child of a flexbox
-// (an item with `display: flex;`)
-// in order to mean anything.
+// Determines whether boxes wrap to the next row or column.
 //
-// !xj  =  flex-direction
+// !xw  =  flex-wrap
 //
-// :0   =  initial
-// :i   =  inherit
-// :r   =  row
-// :c   =  column
-// :rr  =  row-reverse
-// :cr  =  column-reverse
+// :0  =  initial
+// :i  =  inherit
+// :n  =  nowrap
+// :w  =  wrap
+// :r  =  wrap-reverse
 //
 // @s  =  screen
 // @p  =  print
 //
 // ^initial
-// : `row`
+// : `nowrap`
 // ^inherited
 // : false
 // ^url
-// : https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction
+// : https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap
 // ^author
 // : Chris Harvey
 // ^updated

@@ -1,34 +1,31 @@
 
 /*################################*\
-    _flex-direction.less
+    _align-items.less
 \*################################*/
 @import (reference) url('../node_modules/xmeter/src/__tool.fallback.flexbox.less');
 
-// Defines how the browser distributes space
-// between and around flex items
-// along the main-axis of their container.
-// NOTE that this utility must be a child of a flexbox
-// (an item with `display: flex;`)
-// in order to mean anything.
+// Defines default behavior for aligining flex items along cross axis
+// (align vertically for `flex-direction: row` or horizontally for `flex-direction: column`)
 //
-// !xj  =  flex-direction
+// !xi  =  align-items
 //
 // :0   =  initial
 // :i   =  inherit
-// :r   =  row
-// :c   =  column
-// :rr  =  row-reverse
-// :cr  =  column-reverse
+// :s   =  stretch
+// :xs  =  flex-start
+// :xe  =  flex-end
+// :c   =  center
+// :b   =  baseline
 //
 // @s  =  screen
 // @p  =  print
 //
 // ^initial
-// : `row`
+// : `stretch`
 // ^inherited
 // : false
 // ^url
-// : https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction
+// : https://developer.mozilla.org/en-US/docs/Web/CSS/align-items
 // ^author
 // : Chris Harvey
 // ^updated
