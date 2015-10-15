@@ -4808,6 +4808,50 @@
 }
 
 /*################################*\
+    _text-overflow.less
+\*################################*/
+.\!to\:0 {
+  text-overflow: initial  !important;
+}
+.\!to\:i {
+  text-overflow: inherit  !important;
+}
+.\!to\:c {
+  text-overflow: clip     !important;
+}
+.\!to\:e {
+  text-overflow: ellipsis !important;
+}
+@media screen {
+  .\!to\:0\@s {
+    text-overflow: initial  !important;
+  }
+  .\!to\:i\@s {
+    text-overflow: inherit  !important;
+  }
+  .\!to\:c\@s {
+    text-overflow: clip     !important;
+  }
+  .\!to\:e\@s {
+    text-overflow: ellipsis !important;
+  }
+}
+@media print {
+  .\!to\:0\@p {
+    text-overflow: initial  !important;
+  }
+  .\!to\:i\@p {
+    text-overflow: inherit  !important;
+  }
+  .\!to\:c\@p {
+    text-overflow: clip     !important;
+  }
+  .\!to\:e\@p {
+    text-overflow: ellipsis !important;
+  }
+}
+
+/*################################*\
     _list-style-type.less
 \*################################*/
 .\!lst\:0 {
