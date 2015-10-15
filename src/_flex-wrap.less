@@ -1,0 +1,60 @@
+
+/*################################*\
+    _flex-direction.less
+\*################################*/
+@import (reference) url('../node_modules/xmeter/src/__tool.fallback.flexbox.less');
+
+// Defines how the browser distributes space
+// between and around flex items
+// along the main-axis of their container.
+// NOTE that this utility must be a child of a flexbox
+// (an item with `display: flex;`)
+// in order to mean anything.
+//
+// !xj  =  flex-direction
+//
+// :0   =  initial
+// :i   =  inherit
+// :r   =  row
+// :c   =  column
+// :rr  =  row-reverse
+// :cr  =  column-reverse
+//
+// @s  =  screen
+// @p  =  print
+//
+// ^initial
+// : `row`
+// ^inherited
+// : false
+// ^url
+// : https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2015-10-15
+
+.\!xd\:0  { #XMETER .flex-direction(initial)        !important; }
+.\!xd\:i  { #XMETER .flex-direction(inherit)        !important; }
+.\!xd\:r  { #XMETER .flex-direction(row)            !important; }
+.\!xd\:c  { #XMETER .flex-direction(column)         !important; }
+.\!xd\:rr { #XMETER .flex-direction(row-reverse)    !important; }
+.\!xd\:cr { #XMETER .flex-direction(column-reverse) !important; }
+
+@media screen {
+  .\!xj\:0\@s  { .\!xj\:0 ; }
+  .\!xj\:i\@s  { .\!xj\:i ; }
+  .\!xj\:r\@s  { .\!xj\:r ; }
+  .\!xj\:c\@s  { .\!xj\:c ; }
+  .\!xj\:rr\@s { .\!xj\:rr; }
+  .\!xj\:cr\@s { .\!xj\:cr; }
+}
+
+@media print {
+  .\!xj\:0\@p  { .\!xj\:0 ; }
+  .\!xj\:i\@p  { .\!xj\:i ; }
+  .\!xj\:r\@p  { .\!xj\:r ; }
+  .\!xj\:c\@p  { .\!xj\:c ; }
+  .\!xj\:rr\@p { .\!xj\:rr; }
+  .\!xj\:cr\@p { .\!xj\:cr; }
+}
