@@ -32,27 +32,33 @@
 // ^updated
 // : 2015-10-15
 
-.\!xd\:0  { #XMETER .flex-direction(initial)        !important; }
-.\!xd\:i  { #XMETER .flex-direction(inherit)        !important; }
-.\!xd\:r  { #XMETER .flex-direction(row)            !important; }
-.\!xd\:c  { #XMETER .flex-direction(column)         !important; }
-.\!xd\:rr { #XMETER .flex-direction(row-reverse)    !important; }
-.\!xd\:cr { #XMETER .flex-direction(column-reverse) !important; }
+.\!xs\:0  { #XMETER .flex-align-self(initial)    !important; }
+.\!xs\:i  { #XMETER .flex-align-self(inherit)    !important; }
+.\!xs\:a  { #XMETER .flex-align-self(auto)       !important; }
+.\!xs\:s  { #XMETER .flex-align-self(stretch)    !important; }
+.\!xs\:xs { #XMETER .flex-align-self(flex-start) !important; }
+.\!xs\:xe { #XMETER .flex-align-self(flex-end)   !important; }
+.\!xs\:c  { #XMETER .flex-align-self(center)     !important; }
+.\!xs\:b  { #XMETER .flex-align-self(baseline)   !important; }
 
 @media screen {
-  .\!xj\:0\@s  { .\!xj\:0 ; }
-  .\!xj\:i\@s  { .\!xj\:i ; }
-  .\!xj\:r\@s  { .\!xj\:r ; }
-  .\!xj\:c\@s  { .\!xj\:c ; }
-  .\!xj\:rr\@s { .\!xj\:rr; }
-  .\!xj\:cr\@s { .\!xj\:cr; }
+  .\!xs\:0\@s  { .\!xs\:0 ; }
+  .\!xs\:i\@s  { .\!xs\:i ; }
+  .\!xs\:a\@p  { .\!xs\:a ; }
+  .\!xs\:s\@s  { .\!xs\:s ; }
+  .\!xs\:xs\@s { .\!xs\:xs; }
+  .\!xs\:xe\@s { .\!xs\:xe; }
+  .\!xs\:c\@s  { .\!xs\:c ; }
+  .\!xs\:b\@s  { .\!xs\:b ; }
 }
 
 @media print {
-  .\!xj\:0\@p  { .\!xj\:0 ; }
-  .\!xj\:i\@p  { .\!xj\:i ; }
-  .\!xj\:r\@p  { .\!xj\:r ; }
-  .\!xj\:c\@p  { .\!xj\:c ; }
-  .\!xj\:rr\@p { .\!xj\:rr; }
-  .\!xj\:cr\@p { .\!xj\:cr; }
+  .\!xs\:0\@p  { .\!xs\:0 ; }
+  .\!xs\:i\@p  { .\!xs\:i ; }
+  .\!xs\:a\@p  { .\!xs\:a ; }
+  .\!xs\:s\@p  { .\!xs\:s ; }
+  .\!xs\:xs\@p { .\!xs\:xs; }
+  .\!xs\:xe\@p { .\!xs\:xe; }
+  .\!xs\:c\@p  { .\!xs\:c ; }
+  .\!xs\:b\@p  { .\!xs\:b ; }
 }
