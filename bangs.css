@@ -4459,6 +4459,68 @@
 }
 
 /*################################*\
+    _overflow.less
+\*################################*/
+.\!of\:0 {
+  overflow: initial !important;
+}
+.\!of\:i {
+  overflow: inherit !important;
+}
+.\!of\:a {
+  overflow: auto    !important;
+}
+.\!of\:v {
+  overflow: visible !important;
+}
+.\!of\:h {
+  overflow: hidden  !important;
+}
+.\!of\:s {
+  overflow: scroll  !important;
+}
+@media screen {
+  .\!of\:0\@s {
+    overflow: initial !important;
+  }
+  .\!of\:i\@s {
+    overflow: inherit !important;
+  }
+  .\!of\:a\@s {
+    overflow: auto    !important;
+  }
+  .\!of\:v\@s {
+    overflow: visible !important;
+  }
+  .\!of\:h\@s {
+    overflow: hidden  !important;
+  }
+  .\!of\:s\@s {
+    overflow: scroll  !important;
+  }
+}
+@media print {
+  .\!of\:0\@p {
+    overflow: initial !important;
+  }
+  .\!of\:i\@p {
+    overflow: inherit !important;
+  }
+  .\!of\:a\@p {
+    overflow: auto    !important;
+  }
+  .\!of\:v\@p {
+    overflow: visible !important;
+  }
+  .\!of\:h\@p {
+    overflow: hidden  !important;
+  }
+  .\!of\:s\@p {
+    overflow: scroll  !important;
+  }
+}
+
+/*################################*\
     _visibility.less
 \*################################*/
 .\!v\:0 {
