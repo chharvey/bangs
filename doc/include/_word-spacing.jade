@@ -1,0 +1,20 @@
+section#word-spacing
+  h2 _word-spacing.less
+  section
+    h3 all media queries
+    div(class="!ws:0")   .!ws:0   { word-spacing: initial !important; }
+    div(class="!ws:i")   .!ws:i   { word-spacing: inherit !important; }
+    div(class="!ws:n")   .!ws:n   { word-spacing: normal  !important; }
+    div(class="!ws:z")   .!ws:z   { word-spacing: 0       !important; }
+  section
+    h3 @media screen
+    div(class="!ws:0@s") .!ws:0@s { word-spacing: initial !important; }
+    div(class="!ws:i@s") .!ws:i@s { word-spacing: inherit !important; }
+    div(class="!ws:n@s") .!ws:n@s { word-spacing: normal  !important; }
+    div(class="!ws:z@s") .!ws:z@s { word-spacing: 0       !important; }
+  section
+    h3 @media print
+    div(class="!ws:0@p") .!ws:0@p { word-spacing: initial !important; }
+    div(class="!ws:i@p") .!ws:i@p { word-spacing: inherit !important; }
+    div(class="!ws:n@p") .!ws:n@p { word-spacing: normal  !important; }
+    div(class="!ws:z@p") .!ws:z@p { word-spacing: 0       !important; }

@@ -3516,6 +3516,50 @@
 }
 
 /*################################*\
+    _word-spacing.less
+\*################################*/
+.\!ws\:0 {
+  word-spacing: initial !important;
+}
+.\!ws\:i {
+  word-spacing: inherit !important;
+}
+.\!ws\:n {
+  word-spacing: normal  !important;
+}
+.\!ws\:z {
+  word-spacing: 0       !important;
+}
+@media screen {
+  .\!ws\:0\@s {
+    word-spacing: initial !important;
+  }
+  .\!ws\:i\@s {
+    word-spacing: inherit !important;
+  }
+  .\!ws\:n\@s {
+    word-spacing: normal  !important;
+  }
+  .\!ws\:z\@s {
+    word-spacing: 0       !important;
+  }
+}
+@media print {
+  .\!ws\:0\@p {
+    word-spacing: initial !important;
+  }
+  .\!ws\:i\@p {
+    word-spacing: inherit !important;
+  }
+  .\!ws\:n\@p {
+    word-spacing: normal  !important;
+  }
+  .\!ws\:z\@p {
+    word-spacing: 0       !important;
+  }
+}
+
+/*################################*\
     _text-align.less
 \*################################*/
 .\!ta\:0 {
