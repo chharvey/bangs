@@ -3622,6 +3622,41 @@
 }
 
 /*################################*\
+    _text-indent.less
+\*################################*/
+.\!ti\:0 {
+  text-indent: initial !important;
+}
+.\!ti\:i {
+  text-indent: inherit !important;
+}
+.\!ti\:z {
+  text-indent: 0       !important;
+}
+@media screen {
+  .\!ti\:0\@s {
+    text-indent: initial !important;
+  }
+  .\!ti\:i\@s {
+    text-indent: inherit !important;
+  }
+  .\!ti\:z\@s {
+    text-indent: 0       !important;
+  }
+}
+@media print {
+  .\!ti\:0\@p {
+    text-indent: initial !important;
+  }
+  .\!ti\:i\@p {
+    text-indent: inherit !important;
+  }
+  .\!ti\:z\@p {
+    text-indent: 0       !important;
+  }
+}
+
+/*################################*\
     _white-space.less
 \*################################*/
 .\!sp\:0 {
