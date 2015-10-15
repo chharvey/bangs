@@ -3624,70 +3624,70 @@
 /*################################*\
     _white-space.less
 \*################################*/
-.\!ws\:0 {
+.\!sp\:0 {
   white-space: initial  !important;
 }
-.\!ws\:i {
+.\!sp\:i {
   white-space: inherit  !important;
 }
-.\!ws\:n {
+.\!sp\:n {
   white-space: normal   !important;
 }
-.\!ws\:nw {
+.\!sp\:nw {
   white-space: nowrap   !important;
 }
-.\!ws\:pr {
+.\!sp\:pr {
   white-space: pre      !important;
 }
-.\!ws\:pw {
+.\!sp\:pw {
   white-space: pre-wrap !important;
 }
-.\!ws\:pl {
+.\!sp\:pl {
   white-space: pre-line !important;
 }
 @media screen {
-  .\!ws\:0\@s {
+  .\!sp\:0\@s {
     white-space: initial  !important;
   }
-  .\!ws\:i\@s {
+  .\!sp\:i\@s {
     white-space: inherit  !important;
   }
-  .\!ws\:n\@s {
+  .\!sp\:n\@s {
     white-space: normal   !important;
   }
-  .\!ws\:nw\@s {
+  .\!sp\:nw\@s {
     white-space: nowrap   !important;
   }
-  .\!ws\:pr\@s {
+  .\!sp\:pr\@s {
     white-space: pre      !important;
   }
-  .\!ws\:pw\@s {
+  .\!sp\:pw\@s {
     white-space: pre-wrap !important;
   }
-  .\!ws\:pl\@s {
+  .\!sp\:pl\@s {
     white-space: pre-line !important;
   }
 }
 @media print {
-  .\!ws\:0\@p {
+  .\!sp\:0\@p {
     white-space: initial  !important;
   }
-  .\!ws\:i\@p {
+  .\!sp\:i\@p {
     white-space: inherit  !important;
   }
-  .\!ws\:n\@p {
+  .\!sp\:n\@p {
     white-space: normal   !important;
   }
-  .\!ws\:nw\@p {
+  .\!sp\:nw\@p {
     white-space: nowrap   !important;
   }
-  .\!ws\:pr\@p {
+  .\!sp\:pr\@p {
     white-space: pre      !important;
   }
-  .\!ws\:pw\@p {
+  .\!sp\:pw\@p {
     white-space: pre-wrap !important;
   }
-  .\!ws\:pl\@p {
+  .\!sp\:pl\@p {
     white-space: pre-line !important;
   }
 }
