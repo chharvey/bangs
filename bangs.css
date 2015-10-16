@@ -1153,6 +1153,20 @@
   -webkit-order: initial !important;
   order: initial !important;
 }
+.\!xo\:i {
+  -webkit-box-ordinal-group: inherit !important;
+  -moz-box-ordinal-group: inherit !important;
+  -ms-flex-order: inherit !important;
+  -webkit-order: inherit !important;
+  order: inherit !important;
+}
+.\!xo\:z {
+  -webkit-box-ordinal-group: 0 !important;
+  -moz-box-ordinal-group: 0 !important;
+  -ms-flex-order: 0 !important;
+  -webkit-order: 0 !important;
+  order: 0 !important;
+}
 .\!xo\:1 {
   -webkit-box-ordinal-group: 1 !important;
   -moz-box-ordinal-group: 1 !important;
@@ -1370,6 +1384,20 @@
     -ms-flex-order: initial !important;
     -webkit-order: initial !important;
     order: initial !important;
+  }
+  .\!xo\:i\@s {
+    -webkit-box-ordinal-group: inherit !important;
+    -moz-box-ordinal-group: inherit !important;
+    -ms-flex-order: inherit !important;
+    -webkit-order: inherit !important;
+    order: inherit !important;
+  }
+  .\!xo\:z\@s {
+    -webkit-box-ordinal-group: 0 !important;
+    -moz-box-ordinal-group: 0 !important;
+    -ms-flex-order: 0 !important;
+    -webkit-order: 0 !important;
+    order: 0 !important;
   }
   .\!xo\:1\@s {
     -webkit-box-ordinal-group: 1 !important;
@@ -1589,6 +1617,20 @@
     -ms-flex-order: initial !important;
     -webkit-order: initial !important;
     order: initial !important;
+  }
+  .\!xo\:i\@p {
+    -webkit-box-ordinal-group: inherit !important;
+    -moz-box-ordinal-group: inherit !important;
+    -ms-flex-order: inherit !important;
+    -webkit-order: inherit !important;
+    order: inherit !important;
+  }
+  .\!xo\:z\@p {
+    -webkit-box-ordinal-group: 0 !important;
+    -moz-box-ordinal-group: 0 !important;
+    -ms-flex-order: 0 !important;
+    -webkit-order: 0 !important;
+    order: 0 !important;
   }
   .\!xo\:1\@p {
     -webkit-box-ordinal-group: 1 !important;

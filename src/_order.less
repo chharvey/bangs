@@ -13,6 +13,7 @@
 //
 // :0   =  initial (also 0)
 // :i   =  inherit
+// :z   =  0
 // :1   =  1
 // :2   =  2
 // :3   =  3
@@ -59,6 +60,8 @@
 // : 2015-10-14
 
 .\!xo\:0  { #XMETER .flex-order(initial) !important; }
+.\!xo\:i  { #XMETER .flex-order(inherit) !important; }
+.\!xo\:z  { #XMETER .flex-order(0)       !important; }
 .\!xo\:1  { #XMETER .flex-order(1)       !important; }
 .\!xo\:2  { #XMETER .flex-order(2)       !important; }
 .\!xo\:3  { #XMETER .flex-order(3)       !important; }
@@ -92,6 +95,8 @@
 
 @media screen {
   .\!xo\:0\@s  { .\!xo\:0 ; }
+  .\!xo\:i\@s  { .\!xo\:i ; }
+  .\!xo\:z\@s  { .\!xo\:z ; }
   .\!xo\:1\@s  { .\!xo\:1 ; }
   .\!xo\:2\@s  { .\!xo\:2 ; }
   .\!xo\:3\@s  { .\!xo\:3 ; }
@@ -126,6 +131,8 @@
 
 @media print {
   .\!xo\:0\@p  { .\!xo\:0 ; }
+  .\!xo\:i\@p  { .\!xo\:i ; }
+  .\!xo\:z\@p  { .\!xo\:z ; }
   .\!xo\:1\@p  { .\!xo\:1 ; }
   .\!xo\:2\@p  { .\!xo\:2 ; }
   .\!xo\:3\@p  { .\!xo\:3 ; }
