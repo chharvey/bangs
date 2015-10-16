@@ -1,0 +1,20 @@
+section#line-height
+  h2 _line-height.less
+  section
+    h3 all media queries
+    div(class="!lh:0")   .!lh:0   { line-height: initial !important; }
+    div(class="!lh:i")   .!lh:i   { line-height: inherit !important; }
+    div(class="!lh:n")   .!lh:n   { line-height: normal  !important; }
+    div(class="!lh:z")   .!lh:z   { line-height: 0       !important; }
+  section
+    h3 @media screen
+    div(class="!lh:0@s") .!lh:0@s { line-height: initial !important; }
+    div(class="!lh:i@s") .!lh:i@s { line-height: inherit !important; }
+    div(class="!lh:n@s") .!lh:n@s { line-height: normal  !important; }
+    div(class="!lh:z@s") .!lh:z@s { line-height: 0       !important; }
+  section
+    h3 @media print
+    div(class="!lh:0@p") .!lh:0@p { line-height: initial !important; }
+    div(class="!lh:i@p") .!lh:i@p { line-height: inherit !important; }
+    div(class="!lh:n@p") .!lh:n@p { line-height: normal  !important; }
+    div(class="!lh:z@p") .!lh:z@p { line-height: 0       !important; }
