@@ -242,6 +242,176 @@
 }
 
 /*################################*\
+    _z-index.less
+\*################################*/
+.\!z\:0 {
+  z-index: initial !important;
+}
+.\!z\:i {
+  z-index: inherit !important;
+}
+.\!z\:a {
+  z-index: auto    !important;
+}
+.\!z\:z {
+  z-index: 0       !important;
+}
+.\!z\:1 {
+  z-index: 1       !important;
+}
+.\!z\:2 {
+  z-index: 2       !important;
+}
+.\!z\:3 {
+  z-index: 3       !important;
+}
+.\!z\:4 {
+  z-index: 4       !important;
+}
+.\!z\:5 {
+  z-index: 5       !important;
+}
+.\!z\:6 {
+  z-index: 6       !important;
+}
+.\!z\:7 {
+  z-index: 7       !important;
+}
+.\!z\:-1 {
+  z-index: -1 !important;
+}
+.\!z\:-2 {
+  z-index: -2 !important;
+}
+.\!z\:-3 {
+  z-index: -3 !important;
+}
+.\!z\:-4 {
+  z-index: -4 !important;
+}
+.\!z\:-5 {
+  z-index: -5 !important;
+}
+.\!z\:-6 {
+  z-index: -6 !important;
+}
+.\!z\:-7 {
+  z-index: -7 !important;
+}
+@media screen {
+  .\!z\:0\@s {
+    z-index: initial !important;
+  }
+  .\!z\:i\@s {
+    z-index: inherit !important;
+  }
+  .\!z\:a\@s {
+    z-index: auto    !important;
+  }
+  .\!z\:z\@s {
+    z-index: 0       !important;
+  }
+  .\!z\:1\@s {
+    z-index: 1       !important;
+  }
+  .\!z\:2\@s {
+    z-index: 2       !important;
+  }
+  .\!z\:3\@s {
+    z-index: 3       !important;
+  }
+  .\!z\:4\@s {
+    z-index: 4       !important;
+  }
+  .\!z\:5\@s {
+    z-index: 5       !important;
+  }
+  .\!z\:6\@s {
+    z-index: 6       !important;
+  }
+  .\!z\:7\@s {
+    z-index: 7       !important;
+  }
+  .\!z\:-1\@s {
+    z-index: -1 !important;
+  }
+  .\!z\:-2\@s {
+    z-index: -2 !important;
+  }
+  .\!z\:-3\@s {
+    z-index: -3 !important;
+  }
+  .\!z\:-4\@s {
+    z-index: -4 !important;
+  }
+  .\!z\:-5\@s {
+    z-index: -5 !important;
+  }
+  .\!z\:-6\@s {
+    z-index: -6 !important;
+  }
+  .\!z\:-7\@s {
+    z-index: -7 !important;
+  }
+}
+@media print {
+  .\!z\:0\@p {
+    z-index: initial !important;
+  }
+  .\!z\:i\@p {
+    z-index: inherit !important;
+  }
+  .\!z\:a\@p {
+    z-index: auto    !important;
+  }
+  .\!z\:z\@p {
+    z-index: 0       !important;
+  }
+  .\!z\:1\@p {
+    z-index: 1       !important;
+  }
+  .\!z\:2\@p {
+    z-index: 2       !important;
+  }
+  .\!z\:3\@p {
+    z-index: 3       !important;
+  }
+  .\!z\:4\@p {
+    z-index: 4       !important;
+  }
+  .\!z\:5\@p {
+    z-index: 5       !important;
+  }
+  .\!z\:6\@p {
+    z-index: 6       !important;
+  }
+  .\!z\:7\@p {
+    z-index: 7       !important;
+  }
+  .\!z\:-1\@p {
+    z-index: -1 !important;
+  }
+  .\!z\:-2\@p {
+    z-index: -2 !important;
+  }
+  .\!z\:-3\@p {
+    z-index: -3 !important;
+  }
+  .\!z\:-4\@p {
+    z-index: -4 !important;
+  }
+  .\!z\:-5\@p {
+    z-index: -5 !important;
+  }
+  .\!z\:-6\@p {
+    z-index: -6 !important;
+  }
+  .\!z\:-7\@p {
+    z-index: -7 !important;
+  }
+}
+
+/*################################*\
     _vertical-align.less
 \*################################*/
 .\!va\:0 {
