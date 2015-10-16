@@ -2,10 +2,12 @@ section#background-color
   h2 _background-color.less
   section
     h3 all media queries
-    div(class="!bc:0")     .!bc:0     { background-color: initial      !important; }
-    div(class="!bc:i")     .!bc:i     { background-color: inherit      !important; }
-    div(class="!bc:t")     .!bc:t     { background-color: transparent  !important; }
-    div(class="!bc:c")     .!bc:c     { background-color: currentColor !important; }
+    div(class="!bc:0  ")   .!bc:0     { background-color: initial      !important; }
+    div(class="!bc:i  ")   .!bc:i     { background-color: inherit      !important; }
+    div(class="!bc:t  ")   .!bc:t     { background-color: transparent  !important; }
+    div(class="!bc:c  ")   .!bc:c     { background-color: currentColor !important; }
+    div(class="!bc:b  ")   .!bc:b     { background-color: #000000      !important; } /* black */
+    div(class="!bc:w  ")   .!bc:w     { background-color: #ffffff      !important; } /* white */
     div(class="!bc:s03")   .!bc:s03   { background-color: #002b36      !important; } /* solarized base03  */
     div(class="!bc:s02")   .!bc:s02   { background-color: #073642      !important; } /* solarized base02  */
     div(class="!bc:s01")   .!bc:s01   { background-color: #586e75      !important; } /* solarized base01  */
@@ -40,10 +42,12 @@ section#background-color
     div(class="!bc:lg ")   .!bc:lg    { background-color: #2cc97d      !important; } /* lunarized green   */
   section
     h3 @media screen
-    div(class="!bc:0@s")   .!bc:0@s   { background-color: initial      !important; }
-    div(class="!bc:i@s")   .!bc:i@s   { background-color: inherit      !important; }
-    div(class="!bc:t@s")   .!bc:t@s   { background-color: transparent  !important; }
-    div(class="!bc:c@s")   .!bc:c@s   { background-color: currentColor !important; }
+    div(class="!bc:0@s  ") .!bc:0@s   { background-color: initial      !important; }
+    div(class="!bc:i@s  ") .!bc:i@s   { background-color: inherit      !important; }
+    div(class="!bc:t@s  ") .!bc:t@s   { background-color: transparent  !important; }
+    div(class="!bc:c@s  ") .!bc:c@s   { background-color: currentColor !important; }
+    div(class="!bc:b@s  ") .!bc:b@s   { background-color: #000000      !important; } /* black */
+    div(class="!bc:w@s  ") .!bc:w@s   { background-color: #ffffff      !important; } /* white */
     div(class="!bc:s03@s") .!bc:s03@s { background-color: #002b36      !important; } /* solarized base03  */
     div(class="!bc:s02@s") .!bc:s02@s { background-color: #073642      !important; } /* solarized base02  */
     div(class="!bc:s01@s") .!bc:s01@s { background-color: #586e75      !important; } /* solarized base01  */
@@ -78,10 +82,12 @@ section#background-color
     div(class="!bc:lg@s ") .!bc:lg@s  { background-color: #2cc97d      !important; } /* lunarized green   */
   section
     h3 @media print
-    div(class="!bc:0@p")   .!bc:0@p   { background-color: initial      !important; }
-    div(class="!bc:i@p")   .!bc:i@p   { background-color: inherit      !important; }
-    div(class="!bc:t@p")   .!bc:t@p   { background-color: transparent  !important; }
-    div(class="!bc:c@p")   .!bc:c@p   { background-color: currentColor !important; }
+    div(class="!bc:0@p  ") .!bc:0@p   { background-color: initial      !important; }
+    div(class="!bc:i@p  ") .!bc:i@p   { background-color: inherit      !important; }
+    div(class="!bc:t@p  ") .!bc:t@p   { background-color: transparent  !important; }
+    div(class="!bc:c@p  ") .!bc:c@p   { background-color: currentColor !important; }
+    div(class="!bc:b@p  ") .!bc:b@p   { background-color: #000000      !important; } /* black */
+    div(class="!bc:w@p  ") .!bc:w@p   { background-color: #ffffff      !important; } /* white */
     div(class="!bc:s03@p") .!bc:s03@p { background-color: #002b36      !important; } /* solarized base03  */
     div(class="!bc:s02@p") .!bc:s02@p { background-color: #073642      !important; } /* solarized base02  */
     div(class="!bc:s01@p") .!bc:s01@p { background-color: #586e75      !important; } /* solarized base01  */
@@ -114,3 +120,11 @@ section#background-color
     div(class="!bc:lo@p ") .!bc:lo@p  { background-color: #d9742d      !important; } /* lunarized orange  */
     div(class="!bc:ly@p ") .!bc:ly@p  { background-color: #938e3b      !important; } /* lunarized yellow  */
     div(class="!bc:lg@p ") .!bc:lg@p  { background-color: #2cc97d      !important; } /* lunarized green   */
+  section
+    h3 pseudo-classes :hover and :focus
+    div(class="!bc:0^")    .!bc:0^    { background-color: initial      !important; }
+    div(class="!bc:i^")    .!bc:i^    { background-color: inherit      !important; }
+    div(class="!bc:t^")    .!bc:t^    { background-color: transparent  !important; }
+    div(class="!bc:c^")    .!bc:c^    { background-color: currentColor !important; }
+    div(class="!bc:b^")    .!bc:t^    { background-color: #000000      !important; }
+    div(class="!bc:w^")    .!bc:c^    { background-color: #ffffff      !important; }

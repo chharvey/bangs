@@ -57,6 +57,7 @@
           <div class="!ps:i">  .!ps:i   { position: inherit  !important; }</div>
           <div class="!ps:s">  .!ps:s   { position: static   !important; }</div>
           <div class="!ps:r">  .!ps:r   { position: relative !important; }</div>
+          <div class="!ps:a">  .!ps:a   { position: absolute !important; }</div>
           <div class="!ps:f">  .!ps:f   { position: fixed    !important; }</div>
         </section>
         <section>
@@ -65,6 +66,7 @@
           <div class="!ps:i@s">.!ps:i@s { position: inherit  !important; }</div>
           <div class="!ps:s@s">.!ps:s@s { position: static   !important; }</div>
           <div class="!ps:r@s">.!ps:r@s { position: relative !important; }</div>
+          <div class="!ps:a@s">.!ps:a@s { position: absolute !important; }</div>
           <div class="!ps:f@s">.!ps:f@s { position: fixed    !important; }</div>
         </section>
         <section>
@@ -73,6 +75,7 @@
           <div class="!ps:i@p">.!ps:i@p { position: inherit  !important; }</div>
           <div class="!ps:s@p">.!ps:s@p { position: static   !important; }</div>
           <div class="!ps:r@p">.!ps:r@p { position: relative !important; }</div>
+          <div class="!ps:a@p">.!ps:a@p { position: absolute !important; }</div>
           <div class="!ps:f@p">.!ps:f@p { position: fixed    !important; }</div>
         </section>
       </section>
@@ -119,6 +122,72 @@
           <div class="!cl:l@p">.!cl:l@p { clear: left    !important; }</div>
           <div class="!cl:r@p">.!cl:r@p { clear: right   !important; }</div>
           <div class="!cl:b@p">.!cl:b@p { clear: both    !important; }</div>
+        </section>
+      </section>
+      <section id="z-index">
+        <h2>_z-index.less</h2>
+        <section>
+          <h3>all media queries</h3>
+          <div class="!z:0 ">  .!z:0    { z-index: initial !important;}</div>
+          <div class="!z:i ">  .!z:i    { z-index: inherit !important;}</div>
+          <div class="!z:a ">  .!z:a    { z-index: auto    !important;}</div>
+          <div class="!z:z ">  .!z:z    { z-index:  0      !important;}</div>
+          <div class="!z:1 ">  .!z:1    { z-index:  1      !important;}</div>
+          <div class="!z:2 ">  .!z:2    { z-index:  2      !important;}</div>
+          <div class="!z:3 ">  .!z:3    { z-index:  3      !important;}</div>
+          <div class="!z:4 ">  .!z:4    { z-index:  4      !important;}</div>
+          <div class="!z:5 ">  .!z:5    { z-index:  5      !important;}</div>
+          <div class="!z:6 ">  .!z:6    { z-index:  6      !important;}</div>
+          <div class="!z:7 ">  .!z:7    { z-index:  7      !important;}</div>
+          <div class="!z:-1">  .!z:-1   { z-index: -1      !important;}</div>
+          <div class="!z:-2">  .!z:-2   { z-index: -2      !important;}</div>
+          <div class="!z:-3">  .!z:-3   { z-index: -3      !important;}</div>
+          <div class="!z:-4">  .!z:-4   { z-index: -4      !important;}</div>
+          <div class="!z:-5">  .!z:-5   { z-index: -5      !important;}</div>
+          <div class="!z:-6">  .!z:-6   { z-index: -6      !important;}</div>
+          <div class="!z:-7">  .!z:-7   { z-index: -7      !important;}</div>
+        </section>
+        <section>
+          <h3>@media screen</h3>
+          <div class="!z:0@s"> .!z:0@s  { z-index: initial !important;}</div>
+          <div class="!z:i@s"> .!z:i@s  { z-index: inherit !important;}</div>
+          <div class="!z:a@s"> .!z:a@s  { z-index: auto    !important;}</div>
+          <div class="!z:z@s"> .!z:z@s  { z-index:  0      !important;}</div>
+          <div class="!z:1@s"> .!z:1@s  { z-index:  1      !important;}</div>
+          <div class="!z:2@s"> .!z:2@s  { z-index:  2      !important;}</div>
+          <div class="!z:3@s"> .!z:3@s  { z-index:  3      !important;}</div>
+          <div class="!z:4@s"> .!z:4@s  { z-index:  4      !important;}</div>
+          <div class="!z:5@s"> .!z:5@s  { z-index:  5      !important;}</div>
+          <div class="!z:6@s"> .!z:6@s  { z-index:  6      !important;}</div>
+          <div class="!z:7@s"> .!z:7@s  { z-index:  7      !important;}</div>
+          <div class="!z:-1@s">.!z:-1@s { z-index: -1      !important;}</div>
+          <div class="!z:-2@s">.!z:-2@s { z-index: -2      !important;}</div>
+          <div class="!z:-3@s">.!z:-3@s { z-index: -3      !important;}</div>
+          <div class="!z:-4@s">.!z:-4@s { z-index: -4      !important;}</div>
+          <div class="!z:-5@s">.!z:-5@s { z-index: -5      !important;}</div>
+          <div class="!z:-6@s">.!z:-6@s { z-index: -6      !important;}</div>
+          <div class="!z:-7@s">.!z:-7@s { z-index: -7      !important;}</div>
+        </section>
+        <section>
+          <h3>@media print</h3>
+          <div class="!z:0@p"> .!z:0@p  { z-index: initial !important;}</div>
+          <div class="!z:i@p"> .!z:i@p  { z-index: inherit !important;}</div>
+          <div class="!z:a@p"> .!z:a@p  { z-index: auto    !important;}</div>
+          <div class="!z:z@p"> .!z:z@p  { z-index:  0      !important;}</div>
+          <div class="!z:1@p"> .!z:1@p  { z-index:  1      !important;}</div>
+          <div class="!z:2@p"> .!z:2@p  { z-index:  2      !important;}</div>
+          <div class="!z:3@p"> .!z:3@p  { z-index:  3      !important;}</div>
+          <div class="!z:4@p"> .!z:4@p  { z-index:  4      !important;}</div>
+          <div class="!z:5@p"> .!z:5@p  { z-index:  5      !important;}</div>
+          <div class="!z:6@p"> .!z:6@p  { z-index:  6      !important;}</div>
+          <div class="!z:7@p"> .!z:7@p  { z-index:  7      !important;}</div>
+          <div class="!z:-1@p">.!z:-1@p { z-index: -1      !important;}</div>
+          <div class="!z:-2@p">.!z:-2@p { z-index: -2      !important;}</div>
+          <div class="!z:-3@p">.!z:-3@p { z-index: -3      !important;}</div>
+          <div class="!z:-4@p">.!z:-4@p { z-index: -4      !important;}</div>
+          <div class="!z:-5@p">.!z:-5@p { z-index: -5      !important;}</div>
+          <div class="!z:-6@p">.!z:-6@p { z-index: -6      !important;}</div>
+          <div class="!z:-7@p">.!z:-7@p { z-index: -7      !important;}</div>
         </section>
       </section>
       <section id="vertical-align">
@@ -327,6 +396,8 @@
         <section>
           <h3>all media queries</h3>
           <div class="!xo:0">   .!xo:0    { order: initial !important; }</div>
+          <div class="!xo:i">   .!xo:i    { order: inherit !important; }</div>
+          <div class="!xo:z">   .!xo:z    { order:   0     !important; }</div>
           <div class="!xo:1">   .!xo:1    { order:   1     !important; }</div>
           <div class="!xo:2">   .!xo:2    { order:   2     !important; }</div>
           <div class="!xo:3">   .!xo:3    { order:   3     !important; }</div>
@@ -361,6 +432,8 @@
         <section>
           <h3>@media screen</h3>
           <div class="!xo:0@s ">.!xo:0@s  { order: initial !important; }</div>
+          <div class="!xo:i@s ">.!xo:i@s  { order: inherit !important; }</div>
+          <div class="!xo:z@s ">.!xo:z@s  { order:   0     !important; }</div>
           <div class="!xo:1@s ">.!xo:1@s  { order:   1     !important; }</div>
           <div class="!xo:2@s ">.!xo:2@s  { order:   2     !important; }</div>
           <div class="!xo:3@s ">.!xo:3@s  { order:   3     !important; }</div>
@@ -395,6 +468,8 @@
         <section>
           <h3>@media print</h3>
           <div class="!xo:0@p ">.!xo:0@p  { order: initial !important; }</div>
+          <div class="!xo:i@p ">.!xo:i@p  { order: inherit !important; }</div>
+          <div class="!xo:z@p ">.!xo:z@p  { order:   0     !important; }</div>
           <div class="!xo:1@p ">.!xo:1@p  { order:   1     !important; }</div>
           <div class="!xo:2@p ">.!xo:2@p  { order:   2     !important; }</div>
           <div class="!xo:3@p ">.!xo:3@p  { order:   3     !important; }</div>
@@ -1639,10 +1714,12 @@
         <h2>_background-color.less</h2>
         <section>
           <h3>all media queries</h3>
-          <div class="!bc:0">    .!bc:0     { background-color: initial      !important; }</div>
-          <div class="!bc:i">    .!bc:i     { background-color: inherit      !important; }</div>
-          <div class="!bc:t">    .!bc:t     { background-color: transparent  !important; }</div>
-          <div class="!bc:c">    .!bc:c     { background-color: currentColor !important; }</div>
+          <div class="!bc:0  ">  .!bc:0     { background-color: initial      !important; }</div>
+          <div class="!bc:i  ">  .!bc:i     { background-color: inherit      !important; }</div>
+          <div class="!bc:t  ">  .!bc:t     { background-color: transparent  !important; }</div>
+          <div class="!bc:c  ">  .!bc:c     { background-color: currentColor !important; }</div>
+          <div class="!bc:b  ">  .!bc:b     { background-color: #000000      !important; } /* black */</div>
+          <div class="!bc:w  ">  .!bc:w     { background-color: #ffffff      !important; } /* white */</div>
           <div class="!bc:s03">  .!bc:s03   { background-color: #002b36      !important; } /* solarized base03  */</div>
           <div class="!bc:s02">  .!bc:s02   { background-color: #073642      !important; } /* solarized base02  */</div>
           <div class="!bc:s01">  .!bc:s01   { background-color: #586e75      !important; } /* solarized base01  */</div>
@@ -1678,10 +1755,12 @@
         </section>
         <section>
           <h3>@media screen</h3>
-          <div class="!bc:0@s">  .!bc:0@s   { background-color: initial      !important; }</div>
-          <div class="!bc:i@s">  .!bc:i@s   { background-color: inherit      !important; }</div>
-          <div class="!bc:t@s">  .!bc:t@s   { background-color: transparent  !important; }</div>
-          <div class="!bc:c@s">  .!bc:c@s   { background-color: currentColor !important; }</div>
+          <div class="!bc:0@s  ">.!bc:0@s   { background-color: initial      !important; }</div>
+          <div class="!bc:i@s  ">.!bc:i@s   { background-color: inherit      !important; }</div>
+          <div class="!bc:t@s  ">.!bc:t@s   { background-color: transparent  !important; }</div>
+          <div class="!bc:c@s  ">.!bc:c@s   { background-color: currentColor !important; }</div>
+          <div class="!bc:b@s  ">.!bc:b@s   { background-color: #000000      !important; } /* black */</div>
+          <div class="!bc:w@s  ">.!bc:w@s   { background-color: #ffffff      !important; } /* white */</div>
           <div class="!bc:s03@s">.!bc:s03@s { background-color: #002b36      !important; } /* solarized base03  */</div>
           <div class="!bc:s02@s">.!bc:s02@s { background-color: #073642      !important; } /* solarized base02  */</div>
           <div class="!bc:s01@s">.!bc:s01@s { background-color: #586e75      !important; } /* solarized base01  */</div>
@@ -1717,10 +1796,12 @@
         </section>
         <section>
           <h3>@media print</h3>
-          <div class="!bc:0@p">  .!bc:0@p   { background-color: initial      !important; }</div>
-          <div class="!bc:i@p">  .!bc:i@p   { background-color: inherit      !important; }</div>
-          <div class="!bc:t@p">  .!bc:t@p   { background-color: transparent  !important; }</div>
-          <div class="!bc:c@p">  .!bc:c@p   { background-color: currentColor !important; }</div>
+          <div class="!bc:0@p  ">.!bc:0@p   { background-color: initial      !important; }</div>
+          <div class="!bc:i@p  ">.!bc:i@p   { background-color: inherit      !important; }</div>
+          <div class="!bc:t@p  ">.!bc:t@p   { background-color: transparent  !important; }</div>
+          <div class="!bc:c@p  ">.!bc:c@p   { background-color: currentColor !important; }</div>
+          <div class="!bc:b@p  ">.!bc:b@p   { background-color: #000000      !important; } /* black */</div>
+          <div class="!bc:w@p  ">.!bc:w@p   { background-color: #ffffff      !important; } /* white */</div>
           <div class="!bc:s03@p">.!bc:s03@p { background-color: #002b36      !important; } /* solarized base03  */</div>
           <div class="!bc:s02@p">.!bc:s02@p { background-color: #073642      !important; } /* solarized base02  */</div>
           <div class="!bc:s01@p">.!bc:s01@p { background-color: #586e75      !important; } /* solarized base01  */</div>
@@ -1753,6 +1834,15 @@
           <div class="!bc:lo@p ">.!bc:lo@p  { background-color: #d9742d      !important; } /* lunarized orange  */</div>
           <div class="!bc:ly@p ">.!bc:ly@p  { background-color: #938e3b      !important; } /* lunarized yellow  */</div>
           <div class="!bc:lg@p ">.!bc:lg@p  { background-color: #2cc97d      !important; } /* lunarized green   */</div>
+        </section>
+        <section>
+          <h3>pseudo-classes :hover and :focus</h3>
+          <div class="!bc:0^">   .!bc:0^    { background-color: initial      !important; }</div>
+          <div class="!bc:i^">   .!bc:i^    { background-color: inherit      !important; }</div>
+          <div class="!bc:t^">   .!bc:t^    { background-color: transparent  !important; }</div>
+          <div class="!bc:c^">   .!bc:c^    { background-color: currentColor !important; }</div>
+          <div class="!bc:b^">   .!bc:t^    { background-color: #000000      !important; }</div>
+          <div class="!bc:w^">   .!bc:c^    { background-color: #ffffff      !important; }</div>
         </section>
       </section>
       <section id="overflow">
@@ -1985,6 +2075,7 @@
           <h3>all media queries</h3>
           <div class="!d:li !lst:0 ">  .!lst:0    { list-style-type: initial              !important; }</div>
           <div class="!d:li !lst:i ">  .!lst:i    { list-style-type: inherit              !important; }</div>
+          <div class="!d:li !lst:n ">  .!lst:n    { list-style-type: none                 !important; }</div>
           <div class="!d:li !lst:dz">  .!lst:dz   { list-style-type: decimal-leading-zero !important; }</div>
           <div class="!d:li !lst:ur">  .!lst:ur   { list-style-type: upper-roman          !important; }</div>
           <div class="!d:li !lst:ua">  .!lst:ua   { list-style-type: upper-alpha          !important; }</div>
@@ -1997,6 +2088,7 @@
           <h3>@media screen</h3>
           <div class="!d:li !lst:0@s ">.!lst:0@s  { list-style-type: initial              !important; }</div>
           <div class="!d:li !lst:i@s ">.!lst:i@s  { list-style-type: inherit              !important; }</div>
+          <div class="!d:li !lst:n@s ">.!lst:n@s  { list-style-type: none                 !important; }</div>
           <div class="!d:li !lst:dz@s">.!lst:dz@s { list-style-type: decimal-leading-zero !important; }</div>
           <div class="!d:li !lst:ur@s">.!lst:ur@s { list-style-type: upper-roman          !important; }</div>
           <div class="!d:li !lst:ua@s">.!lst:ua@s { list-style-type: upper-alpha          !important; }</div>
@@ -2009,6 +2101,7 @@
           <h3>@media print</h3>
           <div class="!d:li !lst:0@p ">.!lst:0@p  { list-style-type: initial              !important; }</div>
           <div class="!d:li !lst:i@p ">.!lst:i@p  { list-style-type: inherit              !important; }</div>
+          <div class="!d:li !lst:n@p ">.!lst:n@p  { list-style-type: none                 !important; }</div>
           <div class="!d:li !lst:dz@p">.!lst:dz@p { list-style-type: decimal-leading-zero !important; }</div>
           <div class="!d:li !lst:ur@p">.!lst:ur@p { list-style-type: upper-roman          !important; }</div>
           <div class="!d:li !lst:ua@p">.!lst:ua@p { list-style-type: upper-alpha          !important; }</div>
@@ -2067,10 +2160,12 @@
         <h2>_color.less</h2>
         <section>
           <h3>all media queries</h3>
-          <div class="!c:0">    .!c:0     { color: initial      !important; }</div>
-          <div class="!c:i">    .!c:i     { color: inherit      !important; }</div>
-          <div class="!c:t">    .!c:t     { color: transparent  !important; }</div>
-          <div class="!c:c">    .!c:c     { color: currentColor !important; }</div>
+          <div class="!c:0  ">  .!c:0     { color: initial      !important; }</div>
+          <div class="!c:i  ">  .!c:i     { color: inherit      !important; }</div>
+          <div class="!c:t  ">  .!c:t     { color: transparent  !important; }</div>
+          <div class="!c:c  ">  .!c:c     { color: currentColor !important; }</div>
+          <div class="!c:b  ">  .!c:b     { color: #000000      !important; } /* black */</div>
+          <div class="!c:w  ">  .!c:w     { color: #ffffff      !important; } /* white */</div>
           <div class="!c:s03">  .!c:s03   { color: #002b36      !important; } /* solarized base03  */</div>
           <div class="!c:s02">  .!c:s02   { color: #073642      !important; } /* solarized base02  */</div>
           <div class="!c:s01">  .!c:s01   { color: #586e75      !important; } /* solarized base01  */</div>
@@ -2106,10 +2201,12 @@
         </section>
         <section>
           <h3>@media screen</h3>
-          <div class="!c:0@s">  .!c:0@s   { color: initial      !important; }</div>
-          <div class="!c:i@s">  .!c:i@s   { color: inherit      !important; }</div>
-          <div class="!c:t@s">  .!c:t@s   { color: transparent  !important; }</div>
-          <div class="!c:c@s">  .!c:c@s   { color: currentColor !important; }</div>
+          <div class="!c:0@s  ">.!c:0@s   { color: initial      !important; }</div>
+          <div class="!c:i@s  ">.!c:i@s   { color: inherit      !important; }</div>
+          <div class="!c:t@s  ">.!c:t@s   { color: transparent  !important; }</div>
+          <div class="!c:c@s  ">.!c:c@s   { color: currentColor !important; }</div>
+          <div class="!c:b@s  ">.!c:b@s   { color: #000000      !important; } /* black */</div>
+          <div class="!c:w@s  ">.!c:w@s   { color: #ffffff      !important; } /* white */</div>
           <div class="!c:s03@s">.!c:s03@s { color: #002b36      !important; } /* solarized base03  */</div>
           <div class="!c:s02@s">.!c:s02@s { color: #073642      !important; } /* solarized base02  */</div>
           <div class="!c:s01@s">.!c:s01@s { color: #586e75      !important; } /* solarized base01  */</div>
@@ -2145,10 +2242,12 @@
         </section>
         <section>
           <h3>@media print</h3>
-          <div class="!c:0@p">  .!c:0@p   { color: initial      !important; }</div>
-          <div class="!c:i@p">  .!c:i@p   { color: inherit      !important; }</div>
-          <div class="!c:t@p">  .!c:t@p   { color: transparent  !important; }</div>
-          <div class="!c:c@p">  .!c:c@p   { color: currentColor !important; }</div>
+          <div class="!c:0@p  ">.!c:0@p   { color: initial      !important; }</div>
+          <div class="!c:i@p  ">.!c:i@p   { color: inherit      !important; }</div>
+          <div class="!c:t@p  ">.!c:t@p   { color: transparent  !important; }</div>
+          <div class="!c:c@p  ">.!c:c@p   { color: currentColor !important; }</div>
+          <div class="!c:b@p  ">.!c:b@p   { color: #000000      !important; } /* black */</div>
+          <div class="!c:w@p  ">.!c:w@p   { color: #ffffff      !important; } /* white */</div>
           <div class="!c:s03@p">.!c:s03@p { color: #002b36      !important; } /* solarized base03  */</div>
           <div class="!c:s02@p">.!c:s02@p { color: #073642      !important; } /* solarized base02  */</div>
           <div class="!c:s01@p">.!c:s01@p { color: #586e75      !important; } /* solarized base01  */</div>
@@ -2181,6 +2280,15 @@
           <div class="!c:lo@p ">.!c:lo@p  { color: #d9742d      !important; } /* lunarized orange  */</div>
           <div class="!c:ly@p ">.!c:ly@p  { color: #938e3b      !important; } /* lunarized yellow  */</div>
           <div class="!c:lg@p ">.!c:lg@p  { color: #2cc97d      !important; } /* lunarized green   */</div>
+        </section>
+        <section>
+          <h3>pseudo-classes :hover and :focus</h3>
+          <div class="!c:0^">   .!c:0^    { color: initial      !important; }</div>
+          <div class="!c:i^">   .!c:i^    { color: inherit      !important; }</div>
+          <div class="!c:t^">   .!c:t^    { color: transparent  !important; }</div>
+          <div class="!c:c^">   .!c:c^    { color: currentColor !important; }</div>
+          <div class="!c:b^">   .!c:t^    { color: #000000      !important; }</div>
+          <div class="!c:w^">   .!c:c^    { color: #ffffff      !important; }</div>
         </section>
       </section>
     </main>
