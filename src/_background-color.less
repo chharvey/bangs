@@ -13,6 +13,43 @@
 // :t  =  transparent
 // :c  =  currentColor
 //
+// :b  =  #000000
+// :w  =  #ffffff
+//
+// :s03  =  solarized base 03
+// :s02  =  solarized base 02
+// :s01  =  solarized base 01
+// :s00  =  solarized base 00
+// :s0   =  solarized base 0
+// :s1   =  solarized base 1
+// :s2   =  solarized base 2
+// :s3   =  solarized base 3
+// :sr   =  solarized red
+// :so   =  solarized orange
+// :sy   =  solarized yellow
+// :sg   =  solarized green
+// :sc   =  solarized cyan
+// :sb   =  solarized blue
+// :sv   =  solarized violet
+// :sm   =  solarized magenta
+//
+// :l03  =  lunarized base 03
+// :l02  =  lunarized base 02
+// :l01  =  lunarized base 01
+// :l00  =  lunarized base 00
+// :l0   =  lunarized base 0
+// :l1   =  lunarized base 1
+// :l2   =  lunarized base 2
+// :l3   =  lunarized base 3
+// :lc   =  lunarized cyan
+// :lb   =  lunarized blue
+// :li   =  lunarized indigo
+// :lv   =  lunarized violet
+// :lr   =  lunarized red
+// :lo   =  lunarized orange
+// :ly   =  lunarized yellow
+// :lg   =  lunarized green
+//
 // @s  =  screen
 // @p  =  print
 //
@@ -25,12 +62,15 @@
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2015-10-02
+// : 2015-10-16
 
 .\!bc\:0 { background-color: initial      !important; }
 .\!bc\:i { background-color: inherit      !important; }
 .\!bc\:t { background-color: transparent  !important; }
 .\!bc\:c { background-color: currentColor !important; }
+
+.\!bc\:b { background-color: #000000 !important; }
+.\!bc\:w { background-color: #ffffff !important; }
 
 .\!bc\:s03 { #XMETER .CONSTS(); background-color: @solar_base03  !important; }
 .\!bc\:s02 { #XMETER .CONSTS(); background-color: @solar_base02  !important; }
@@ -72,6 +112,9 @@
   .\!bc\:t\@s { .\!bc\:t; }
   .\!bc\:c\@s { .\!bc\:c; }
 
+  .\!bc\:b\@s { .\!bc\:b; }
+  .\!bc\:w\@s { .\!bc\:w; }
+
   .\!bc\:s03\@s { .\!bc\:s03; }
   .\!bc\:s02\@s { .\!bc\:s02; }
   .\!bc\:s01\@s { .\!bc\:s01; }
@@ -112,6 +155,9 @@
   .\!bc\:i\@p { .\!bc\:i; }
   .\!bc\:t\@p { .\!bc\:t; }
   .\!bc\:c\@p { .\!bc\:c; }
+
+  .\!bc\:b\@p { .\!bc\:b; }
+  .\!bc\:w\@p { .\!bc\:w; }
 
   .\!bc\:s03\@p { .\!bc\:s03; }
   .\!bc\:s02\@p { .\!bc\:s02; }
