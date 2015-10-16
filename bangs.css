@@ -108,6 +108,9 @@
 .\!ps\:r {
   position: relative !important;
 }
+.\!ps\:a {
+  position: absolute !important;
+}
 .\!ps\:f {
   position: fixed    !important;
 }
@@ -123,6 +126,9 @@
   }
   .\!ps\:r\@s {
     position: relative !important;
+  }
+  .\!ps\:a\@s {
+    position: absolute !important;
   }
   .\!ps\:f\@s {
     position: fixed    !important;
@@ -140,6 +146,9 @@
   }
   .\!ps\:r\@p {
     position: relative !important;
+  }
+  .\!ps\:a\@p {
+    position: absolute !important;
   }
   .\!ps\:f\@p {
     position: fixed    !important;
