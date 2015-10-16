@@ -5839,6 +5839,9 @@
 .\!lst\:i {
   list-style-type: inherit              !important;
 }
+.\!lst\:n {
+  list-style-type: none                 !important;
+}
 .\!lst\:dz {
   list-style-type: decimal-leading-zero !important;
 }
@@ -5866,6 +5869,9 @@
   }
   .\!lst\:i\@s {
     list-style-type: inherit              !important;
+  }
+  .\!lst\:n\@s {
+    list-style-type: none                 !important;
   }
   .\!lst\:dz\@s {
     list-style-type: decimal-leading-zero !important;
@@ -5895,6 +5901,9 @@
   }
   .\!lst\:i\@p {
     list-style-type: inherit              !important;
+  }
+  .\!lst\:n\@p {
+    list-style-type: none                 !important;
   }
   .\!lst\:dz\@p {
     list-style-type: decimal-leading-zero !important;
