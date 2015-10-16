@@ -23,7 +23,11 @@
   display: inline-block !important;
 }
 .\!d\:fx {
-  display: flex         !important;
+  display: -webkit-box !important;
+  display: -moz-box !important;
+  display: -ms-flexbox !important;
+  display: -webkit-flex !important;
+  display: flex !important;
 }
 .\!d\:li {
   display: list-item !important;
@@ -48,7 +52,11 @@
     display: inline-block !important;
   }
   .\!d\:fx\@s {
-    display: flex         !important;
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important;
   }
   .\!d\:li\@s {
     display: list-item !important;
@@ -74,7 +82,11 @@
     display: inline-block !important;
   }
   .\!d\:fx\@p {
-    display: flex         !important;
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important;
   }
   .\!d\:li\@p {
     display: list-item !important;
