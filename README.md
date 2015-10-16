@@ -41,15 +41,15 @@ The syntax of a bang classame goes like this:
 See each source file for specific abbreviations.
 
 ### Constants
-In the classname syntax, there exist certain constants to promote predicability.
+In the classname syntax, there exist certain constants to promote predicability and readability.
 For all properties,
 
 - a value of `:i` stands for `inherit`
-- a value of `:0` stands for `initial` or `0`
-  (in the case of conflict, `:0` stands for `initial`,
-  and another abbreviation is assigned to the value `0`)
+- a value of `:0` stands for `initial` or `0`<sup>&lowast;</sup>
 - a value of `:n` stands for `normal` or `none`, if applicable
 - a value of `:a` stands for `auto`, if applicable
+
+<i><sup>&lowast;</sup>There are some cases of conflict, that is, `initial` maps to a numeric value not equal to `0`. In these cases, `:0` stands for `initial`, and another abbreviation, such as `:z`, is assigned the value `0`.</i>
 
 ## Usage
 
