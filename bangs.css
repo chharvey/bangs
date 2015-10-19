@@ -2073,8 +2073,8 @@
 .\!w\:a {
   width: auto    !important;
 }
-.\!w\:0o1 {
-  width: 0      !important;
+.\!w\:z {
+  width: 0       !important;
 }
 .\!w\:1o1,
 .\!w\:2o2,
@@ -2206,8 +2206,8 @@
   .\!w\:a\@s {
     width: auto    !important;
   }
-  .\!w\:0o1\@s {
-    width: 0      !important;
+  .\!w\:z\@s {
+    width: 0       !important;
   }
   .\!w\:1o1\@s,
   .\!w\:2o2\@s,
@@ -2340,8 +2340,8 @@
   .\!w\:a\@p {
     width: auto    !important;
   }
-  .\!w\:0o1\@p {
-    width: 0      !important;
+  .\!w\:z\@p {
+    width: 0       !important;
   }
   .\!w\:1o1\@p,
   .\!w\:2o2\@p,

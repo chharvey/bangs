@@ -11,12 +11,13 @@
 // :0  =  initial (not 0)
 // :i  =  inherit
 // :a  =  auto
+// :z  =  0
 //
 // # In order by denominator
 // NOTE only unique classes are listed.
 // See code for all classes.
 //
-// :0o1  =  0 (not a percentage)
+// :z    =  0 (not a percentage)
 // :1o1  =  100%
 // :1o2  =  50%
 // :1o3  =  33.3%
@@ -52,7 +53,7 @@
 // NOTE only unique classes are listed.
 // See code for all classes.
 //
-// :0o1  =  0 (not a percentage)
+// :z    =  0 (not a percentage)
 // :1oc  =  8.3%
 // :1oa  =  10%
 // :1o9  =  11.1%
@@ -101,8 +102,7 @@
 .\!w\:0 { width: initial !important; }
 .\!w\:i { width: inherit !important; }
 .\!w\:a { width: auto    !important; }
-
-.\!w\:0o1 {                    width: 0      !important; }
+.\!w\:z { width: 0       !important; }
 
 .\!w\:1o1, // { #XMETER .CONSTS(); width: @1o1   !important; }
 .\!w\:2o2, // { #XMETER .CONSTS(); width: @2o2   !important; }
@@ -181,8 +181,7 @@
   .\!w\:0\@s { .\!w\:0; }
   .\!w\:i\@s { .\!w\:i; }
   .\!w\:a\@s { .\!w\:a; }
-
-  .\!w\:0o1\@s { .\!w\:0o1; }
+  .\!w\:z\@s { .\!w\:z; }
 
   .\!w\:1o1\@s, // { .\!w\:1o1; }
   .\!w\:2o2\@s, // { .\!w\:2o2; }
@@ -262,8 +261,7 @@
   .\!w\:0\@p { .\!w\:0; }
   .\!w\:i\@p { .\!w\:i; }
   .\!w\:a\@p { .\!w\:a; }
-
-  .\!w\:0o1\@p { .\!w\:0o1; }
+  .\!w\:z\@p { .\!w\:z; }
 
   .\!w\:1o1\@p, // { .\!w\:1o1; }
   .\!w\:2o2\@p, // { .\!w\:2o2; }
