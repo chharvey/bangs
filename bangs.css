@@ -2029,42 +2029,66 @@
     _box-sizing.less
 \*################################*/
 .\!b\:0 {
-  box-sizing: initial     !important;
+  -webkit-box-sizing: initial !important;
+  -moz-box-sizing: initial !important;
+  box-sizing: initial !important;
 }
 .\!b\:i {
-  box-sizing: inherit     !important;
+  -webkit-box-sizing: inherit !important;
+  -moz-box-sizing: inherit !important;
+  box-sizing: inherit !important;
 }
 .\!b\:c {
+  -webkit-box-sizing: content-box !important;
+  -moz-box-sizing: content-box !important;
   box-sizing: content-box !important;
 }
 .\!b\:b {
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
   box-sizing: border-box !important;
 }
 @media screen {
   .\!b\:0\@s {
-    box-sizing: initial     !important;
+    -webkit-box-sizing: initial !important;
+    -moz-box-sizing: initial !important;
+    box-sizing: initial !important;
   }
   .\!b\:i\@s {
-    box-sizing: inherit     !important;
+    -webkit-box-sizing: inherit !important;
+    -moz-box-sizing: inherit !important;
+    box-sizing: inherit !important;
   }
   .\!b\:c\@s {
+    -webkit-box-sizing: content-box !important;
+    -moz-box-sizing: content-box !important;
     box-sizing: content-box !important;
   }
   .\!b\:b\@s {
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
     box-sizing: border-box !important;
   }
 }
 @media print {
   .\!b\:0\@p {
-    box-sizing: initial     !important;
+    -webkit-box-sizing: initial !important;
+    -moz-box-sizing: initial !important;
+    box-sizing: initial !important;
   }
   .\!b\:i\@p {
-    box-sizing: inherit     !important;
+    -webkit-box-sizing: inherit !important;
+    -moz-box-sizing: inherit !important;
+    box-sizing: inherit !important;
   }
   .\!b\:c\@p {
+    -webkit-box-sizing: content-box !important;
+    -moz-box-sizing: content-box !important;
     box-sizing: content-box !important;
   }
   .\!b\:b\@p {
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
     box-sizing: border-box !important;
   }
 }
