@@ -2083,39 +2083,30 @@
 .\!w\:5o5,
 .\!w\:6o6,
 .\!w\:8o8,
-.\!w\:9o9,
-.\!w\:10o10,
-.\!w\:12o12 {
+.\!w\:10o10 {
   width: 100% !important;
 }
 .\!w\:1o2,
 .\!w\:2o4,
 .\!w\:3o6,
 .\!w\:4o8,
-.\!w\:5o10,
-.\!w\:6o12 {
+.\!w\:5o10 {
   width: 50% !important;
 }
 .\!w\:1o3,
-.\!w\:2o6,
-.\!w\:3o9,
-.\!w\:4o12 {
+.\!w\:2o6 {
   width: 33.33333333% !important;
 }
 .\!w\:2o3,
-.\!w\:4o6,
-.\!w\:6o9,
-.\!w\:8o12 {
+.\!w\:4o6 {
   width: 66.66666667% !important;
 }
 .\!w\:1o4,
-.\!w\:2o8,
-.\!w\:3o12 {
+.\!w\:2o8 {
   width: 25% !important;
 }
 .\!w\:3o4,
-.\!w\:6o8,
-.\!w\:9o12 {
+.\!w\:6o8 {
   width: 75% !important;
 }
 .\!w\:1o5,
@@ -2134,12 +2125,10 @@
 .\!w\:8o10 {
   width: 80% !important;
 }
-.\!w\:1o6,
-.\!w\:2o12 {
+.\!w\:1o6 {
   width: 16.66666667% !important;
 }
-.\!w\:5o6,
-.\!w\:10o12 {
+.\!w\:5o6 {
   width: 83.33333333% !important;
 }
 .\!w\:1o8 {
@@ -2154,24 +2143,6 @@
 .\!w\:7o8 {
   width: 87.5% !important;
 }
-.\!w\:1o9 {
-  width: 11.11111111% !important;
-}
-.\!w\:2o9 {
-  width: 22.22222222% !important;
-}
-.\!w\:4o9 {
-  width: 44.44444444% !important;
-}
-.\!w\:5o9 {
-  width: 55.55555556% !important;
-}
-.\!w\:7o9 {
-  width: 77.77777778% !important;
-}
-.\!w\:8o9 {
-  width: 88.88888889% !important;
-}
 .\!w\:1o10 {
   width: 10% !important;
 }
@@ -2183,18 +2154,6 @@
 }
 .\!w\:9o10 {
   width: 90% !important;
-}
-.\!w\:1o12 {
-  width: 8.33333333% !important;
-}
-.\!w\:5o12 {
-  width: 41.66666667% !important;
-}
-.\!w\:7o12 {
-  width: 58.33333333% !important;
-}
-.\!w\:11o12 {
-  width: 91.66666667% !important;
 }
 @media screen {
   .\!w\:0\@s {
@@ -2216,39 +2175,30 @@
   .\!w\:5o5\@s,
   .\!w\:6o6\@s,
   .\!w\:8o8\@s,
-  .\!w\:9o9\@s,
-  .\!w\:10o10\@s,
-  .\!w\:12o12\@s {
+  .\!w\:10o10\@s {
     width: 100% !important;
   }
   .\!w\:1o2\@s,
   .\!w\:2o4\@s,
   .\!w\:3o6\@s,
   .\!w\:4o8\@s,
-  .\!w\:5o10\@s,
-  .\!w\:6o12\@s {
+  .\!w\:5o10\@s {
     width: 50% !important;
   }
   .\!w\:1o3\@s,
-  .\!w\:2o6\@s,
-  .\!w\:3o9\@s,
-  .\!w\:4o12\@s {
+  .\!w\:2o6\@s {
     width: 33.33333333% !important;
   }
   .\!w\:2o3\@s,
-  .\!w\:4o6\@s,
-  .\!w\:6o9\@s,
-  .\!w\:8o12\@s {
+  .\!w\:4o6\@s {
     width: 66.66666667% !important;
   }
   .\!w\:1o4\@s,
-  .\!w\:2o8\@s,
-  .\!w\:3o12\@s {
+  .\!w\:2o8\@s {
     width: 25% !important;
   }
   .\!w\:3o4\@s,
-  .\!w\:6o8\@s,
-  .\!w\:9o12\@s {
+  .\!w\:6o8\@s {
     width: 75% !important;
   }
   .\!w\:1o5\@s,
@@ -2267,12 +2217,10 @@
   .\!w\:8o10\@s {
     width: 80% !important;
   }
-  .\!w\:1o6\@s,
-  .\!w\:2o12\@s {
+  .\!w\:1o6\@s {
     width: 16.66666667% !important;
   }
-  .\!w\:5o6\@s,
-  .\!w\:10o12\@s {
+  .\!w\:5o6\@s {
     width: 83.33333333% !important;
   }
   .\!w\:1o8\@s {
@@ -2287,24 +2235,6 @@
   .\!w\:7o8\@s {
     width: 87.5% !important;
   }
-  .\!w\:1o9\@s {
-    width: 11.11111111% !important;
-  }
-  .\!w\:2o9\@s {
-    width: 22.22222222% !important;
-  }
-  .\!w\:4o9\@s {
-    width: 44.44444444% !important;
-  }
-  .\!w\:5o9\@s {
-    width: 55.55555556% !important;
-  }
-  .\!w\:7o9\@s {
-    width: 77.77777778% !important;
-  }
-  .\!w\:8o9\@s {
-    width: 88.88888889% !important;
-  }
   .\!w\:1o10\@s {
     width: 10% !important;
   }
@@ -2316,18 +2246,6 @@
   }
   .\!w\:9o10\@s {
     width: 90% !important;
-  }
-  .\!w\:1o12\@s {
-    width: 8.33333333% !important;
-  }
-  .\!w\:5o12\@s {
-    width: 41.66666667% !important;
-  }
-  .\!w\:7o12\@s {
-    width: 58.33333333% !important;
-  }
-  .\!w\:11o12\@s {
-    width: 91.66666667% !important;
   }
 }
 @media print {
@@ -2350,39 +2268,30 @@
   .\!w\:5o5\@p,
   .\!w\:6o6\@p,
   .\!w\:8o8\@p,
-  .\!w\:9o9\@p,
-  .\!w\:10o10\@p,
-  .\!w\:12o12\@p {
+  .\!w\:10o10\@p {
     width: 100% !important;
   }
   .\!w\:1o2\@p,
   .\!w\:2o4\@p,
   .\!w\:3o6\@p,
   .\!w\:4o8\@p,
-  .\!w\:5o10\@p,
-  .\!w\:6o12\@p {
+  .\!w\:5o10\@p {
     width: 50% !important;
   }
   .\!w\:1o3\@p,
-  .\!w\:2o6\@p,
-  .\!w\:3o9\@p,
-  .\!w\:4o12\@p {
+  .\!w\:2o6\@p {
     width: 33.33333333% !important;
   }
   .\!w\:2o3\@p,
-  .\!w\:4o6\@p,
-  .\!w\:6o9\@p,
-  .\!w\:8o12\@p {
+  .\!w\:4o6\@p {
     width: 66.66666667% !important;
   }
   .\!w\:1o4\@p,
-  .\!w\:2o8\@p,
-  .\!w\:3o12\@p {
+  .\!w\:2o8\@p {
     width: 25% !important;
   }
   .\!w\:3o4\@p,
-  .\!w\:6o8\@p,
-  .\!w\:9o12\@p {
+  .\!w\:6o8\@p {
     width: 75% !important;
   }
   .\!w\:1o5\@p,
@@ -2401,12 +2310,10 @@
   .\!w\:8o10\@p {
     width: 80% !important;
   }
-  .\!w\:1o6\@p,
-  .\!w\:2o12\@p {
+  .\!w\:1o6\@p {
     width: 16.66666667% !important;
   }
-  .\!w\:5o6\@p,
-  .\!w\:10o12\@p {
+  .\!w\:5o6\@p {
     width: 83.33333333% !important;
   }
   .\!w\:1o8\@p {
@@ -2421,24 +2328,6 @@
   .\!w\:7o8\@p {
     width: 87.5% !important;
   }
-  .\!w\:1o9\@p {
-    width: 11.11111111% !important;
-  }
-  .\!w\:2o9\@p {
-    width: 22.22222222% !important;
-  }
-  .\!w\:4o9\@p {
-    width: 44.44444444% !important;
-  }
-  .\!w\:5o9\@p {
-    width: 55.55555556% !important;
-  }
-  .\!w\:7o9\@p {
-    width: 77.77777778% !important;
-  }
-  .\!w\:8o9\@p {
-    width: 88.88888889% !important;
-  }
   .\!w\:1o10\@p {
     width: 10% !important;
   }
@@ -2450,18 +2339,6 @@
   }
   .\!w\:9o10\@p {
     width: 90% !important;
-  }
-  .\!w\:1o12\@p {
-    width: 8.33333333% !important;
-  }
-  .\!w\:5o12\@p {
-    width: 41.66666667% !important;
-  }
-  .\!w\:7o12\@p {
-    width: 58.33333333% !important;
-  }
-  .\!w\:11o12\@p {
-    width: 91.66666667% !important;
   }
 }
 
