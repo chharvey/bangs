@@ -3,23 +3,21 @@
     _float.less
 \*################################*/
 
-// Sets the type of box rendered.
+// Floats the box in content.
 //
 // !fl  =  float
-// !cl  =  clear
 //
 // :0  =  initial
 // :i  =  inherit
 // :n  =  none
 // :l  =  left
 // :r  =  right
-// :b  =  both
 //
 // @s  =  screen
 // @p  =  print
 //
 // ^initial
-// : `static`
+// : `none`
 // ^inherited
 // : false
 // ^url
@@ -35,26 +33,12 @@
 .\!fl\:l { float: left    !important; }
 .\!fl\:r { float: right   !important; }
 
-.\!cl\:0 { clear: initial !important; }
-.\!cl\:i { clear: inherit !important; }
-.\!cl\:n { clear: none    !important; }
-.\!cl\:l { clear: left    !important; }
-.\!cl\:r { clear: right   !important; }
-.\!cl\:b { clear: both    !important; }
-
 @media screen {
   .\!fl\:0\@s { .\!fl\:0; }
   .\!fl\:i\@s { .\!fl\:i; }
   .\!fl\:n\@s { .\!fl\:n; }
   .\!fl\:l\@s { .\!fl\:l; }
   .\!fl\:r\@s { .\!fl\:r; }
-
-  .\!cl\:0\@s { .\!cl\:0; }
-  .\!cl\:i\@s { .\!cl\:i; }
-  .\!cl\:n\@s { .\!cl\:n; }
-  .\!cl\:l\@s { .\!cl\:l; }
-  .\!cl\:r\@s { .\!cl\:r; }
-  .\!cl\:b\@s { .\!cl\:b; }
 }
 
 @media print {
@@ -63,11 +47,4 @@
   .\!fl\:n\@p { .\!fl\:n; }
   .\!fl\:l\@p { .\!fl\:l; }
   .\!fl\:r\@p { .\!fl\:r; }
-
-  .\!cl\:0\@p { .\!cl\:0; }
-  .\!cl\:i\@p { .\!cl\:i; }
-  .\!cl\:n\@p { .\!cl\:n; }
-  .\!cl\:l\@p { .\!cl\:l; }
-  .\!cl\:r\@p { .\!cl\:r; }
-  .\!cl\:b\@p { .\!cl\:b; }
 }

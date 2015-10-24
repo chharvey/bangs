@@ -3,7 +3,7 @@
     _position.less
 \*################################*/
 
-// Sets the type of box rendered.
+// Sets the position of box rendered.
 //
 // !ps  =  position
 //
@@ -31,6 +31,7 @@
 .\!ps\:i { position: inherit  !important; }
 .\!ps\:s { position: static   !important; }
 .\!ps\:r { position: relative !important; }
+.\!ps\:a { position: absolute !important; }
 .\!ps\:f { position: fixed    !important; }
 
 @media screen {
@@ -38,6 +39,7 @@
   .\!ps\:i\@s { .\!ps\:i; }
   .\!ps\:s\@s { .\!ps\:s; }
   .\!ps\:r\@s { .\!ps\:r; }
+  .\!ps\:a\@s { .\!ps\:a; }
   .\!ps\:f\@s { .\!ps\:f; }
 }
 
@@ -46,5 +48,6 @@
   .\!ps\:i\@p { .\!ps\:i; }
   .\!ps\:s\@p { .\!ps\:s; }
   .\!ps\:r\@p { .\!ps\:r; }
+  .\!ps\:a\@p { .\!ps\:a; }
   .\!ps\:f\@p { .\!ps\:f; }
 }

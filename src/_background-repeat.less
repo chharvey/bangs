@@ -1,0 +1,55 @@
+
+/*################################*\
+    _background-repeat.less
+\*################################*/
+
+// Defines how the background image repeats.
+// NOTE the `space` and `round` values are not widely supported yet so they are left out for now.
+//
+// !br  =  background-repeat
+//
+// :0  =  initial
+// :i  =  inherit
+// :n  =  no-repeat (no-repeat no-repeat)
+// :a  =  repeat    (repeat    repeat)
+// :x  =  repeat-x  (repeat    no-repeat)
+// :y  =  repeat-y  (no-repeat repeat)
+//
+// @s  =  screen
+// @p  =  print
+//
+// ^initial
+// : `repeat`
+// ^inherited
+// : false
+// ^url
+// : https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2015-10-14
+
+.\!br\:0 { background-repeat: initial   !important; }
+.\!br\:i { background-repeat: inherit   !important; }
+.\!br\:n { background-repeat: no-repeat !important; }
+.\!br\:a { background-repeat: repeat    !important; }
+.\!br\:x { background-repeat: repeat-x  !important; }
+.\!br\:y { background-repeat: repeat-y  !important; }
+
+@media screen {
+  .\!br\:0\@s { .\!br\:0; }
+  .\!br\:i\@s { .\!br\:i; }
+  .\!br\:n\@s { .\!br\:n; }
+  .\!br\:a\@s { .\!br\:a; }
+  .\!br\:x\@s { .\!br\:x; }
+  .\!br\:y\@s { .\!br\:y; }
+}
+
+@media print {
+  .\!br\:0\@p { .\!br\:0; }
+  .\!br\:i\@p { .\!br\:i; }
+  .\!br\:n\@p { .\!br\:n; }
+  .\!br\:a\@p { .\!br\:a; }
+  .\!br\:x\@p { .\!br\:x; }
+  .\!br\:y\@p { .\!br\:y; }
+}

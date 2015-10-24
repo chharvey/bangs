@@ -1,51 +1,82 @@
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     bangs.less
+    Version: 0.4.0
+    Licence: MIT
+    Repo   : https://github.com/chharvey/bangs.git
+    Home   : https://chharvey.github.io/bangs/
+    Author : https://chharvey.github.io/
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 
 // # LAYOUT
-@import url('src/_display.less');
-@import url('src/_width.less');
-@import url('src/_padding.less');
-@import url('src/_margin.less');
-@import url('src/_position.less');
-@import url('src/_float.less');
-@import url('src/_vertical-align.less');
+@import (inline) url('build/_display.css');
+@import (inline) url('build/_position.css');
+@import (inline) url('build/_float.css');
+@import (inline) url('build/_clear.css');
+@import (inline) url('build/_z-index.css');
+@import (inline) url('build/_vertical-align.css');
 
-// ## Flexbox
-@import url('src/_justify-content.less');
-@import url('src/_order.less');
+@import (inline) url('build/_flex-direction.css');
+@import (inline) url('build/_flex-wrap.css');
+@import (inline) url('build/_justify-content.css');
+@import (inline) url('build/_align-content.css');
+@import (inline) url('build/_align-items.css');
+@import (inline) url('build/_order.css');
+@import (inline) url('build/_align-self.css');
 
 
-// # TYPOGRAPHY
+// # BOX STRUCTURE
+@import (inline) url('build/_box-sizing.css');
+@import (inline) url('build/_width.css');
+@import (inline) url('build/_padding.css');
+@import (inline) url('build/_margin.css');
 
-// ## Font
-@import url('src/_font-style.less');
-@import url('src/_font-variant.less');
-@import url('src/_font-weight.less');
-@import url('src/_font-size.less');
-@import url('src/_font-family.less');
 
-// ## Text Structure
-@import url('src/_text-align.less');
-@import url('src/_white-space.less');
-@import url('src/_page-break.less');
+// # TEXT STRUCTURE
+@import (inline) url('build/_font-style.css');
+@import (inline) url('build/_font-variant.css');
+@import (inline) url('build/_font-weight.css');
+@import (inline) url('build/_font-size.css');
+@import (inline) url('build/_font-family.css');
+@import (inline) url('build/_line-height.css');
 
-// # COSMETICS
+@import (inline) url('build/_letter-spacing.css');
+@import (inline) url('build/_word-spacing.css');
+@import (inline) url('build/_text-align.css');
+@import (inline) url('build/_text-indent.css');
+@import (inline) url('build/_white-space.css');
+@import (inline) url('build/_overflow-wrap.css');
+@import (inline) url('build/_page-break.css');
 
-// ## Text Style
-@import url('src/_text-rendering.less');
-@import url('src/_text-transform.less');
-@import url('src/_text-decoration.less');
 
-// ## List Style
-@import url('src/_list-style-type.less');
-@import url('src/_list-style-position.less');
-@import url('src/_list-style-image.less');
+// # BOX COSMETICS
+@import (inline) url('build/_background-color.css');
+@import (inline) url('build/_background-image.css');
+@import (inline) url('build/_background-image.css');
+@import (inline) url('build/_background-size.css');
+@import (inline) url('build/_background-repeat.css');
+@import (inline) url('build/_background-attachment.css');
+@import (inline) url('build/_background-origin.css');
+@import (inline) url('build/_background-clip.css');
+@import (inline) url('build/_background-color.css');
 
-// ## Cosmetics
-@import url('src/_color.less');
-@import url('src/_background-color.less');
-@import url('src/_background-image.less');
-@import url('src/_visibility.less');
+@import (inline) url('build/_overflow.css');
+@import (inline) url('build/_opacity.css');
+@import (inline) url('build/_visibility.css');
+
+
+// # TEXT COSMETICS
+@import (inline) url('build/_text-rendering.css');
+@import (inline) url('build/_text-transform.css');
+@import (inline) url('build/_text-decoration.css');
+@import (inline) url('build/_text-overflow.css');
+
+@import (inline) url('build/_list-style-type.css');
+@import (inline) url('build/_list-style-position.css');
+@import (inline) url('build/_list-style-image.css');
+
+@import (inline) url('build/_color.css');
+
+
+// # OTHER

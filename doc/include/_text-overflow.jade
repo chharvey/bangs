@@ -1,0 +1,20 @@
+section#text-overflow
+  h2 _text-overflow.less
+  section
+    h3 all media queries
+    div(class="!to:0")   .!to:0   { text-overflow: initial  !important; }
+    div(class="!to:i")   .!to:i   { text-overflow: inherit  !important; }
+    div(class="!to:c")   .!to:c   { text-overflow: clip     !important; }
+    div(class="!to:e")   .!to:e   { text-overflow: ellipsis !important; }
+  section
+    h3 @media screen
+    div(class="!to:0@s") .!to:0@s { text-overflow: initial  !important; }
+    div(class="!to:i@s") .!to:i@s { text-overflow: inherit  !important; }
+    div(class="!to:c@s") .!to:c@s { text-overflow: clip     !important; }
+    div(class="!to:e@s") .!to:e@s { text-overflow: ellipsis !important; }
+  section
+    h3 @media print
+    div(class="!to:0@p") .!to:0@p { text-overflow: initial  !important; }
+    div(class="!to:i@p") .!to:i@p { text-overflow: inherit  !important; }
+    div(class="!to:c@p") .!to:c@p { text-overflow: clip     !important; }
+    div(class="!to:e@p") .!to:e@p { text-overflow: ellipsis !important; }

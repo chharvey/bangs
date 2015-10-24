@@ -2,21 +2,28 @@
 /*################################*\
     _display.less
 \*################################*/
+@import (reference) url('../node_modules/xmeter/src/__tool.fallback.flexbox.less');
 
 // Sets the type of box rendered.
 //
 // !d  =  display
 //
-// :0   =  initial
-// :i   =  inherit
-// :n   =  none
-// :bk  =  block
-// :il  =  inline
-// :ib  =  inline-block
-// :fx  =  flex
-// :tb  =  table
-// :tc  =  table-cell
-// :li  =  list-item
+// :0    =  initial
+// :i    =  inherit
+// :n    =  none
+// :bk   =  block
+// :il   =  inline
+// :ib   =  inline-block
+// :fx   =  flex
+// :li   =  list-item
+// :tb   =  table
+// :tr   =  table-row
+// :tl   =  table-column
+// :tc   =  table-cell
+// :trg  =  table-row-group
+// :thg  =  table-header-group
+// :tfg  =  table-footer-group
+// :tlg  =  table-column-group
 //
 // @s  =  screen
 // @p  =  print
@@ -38,10 +45,8 @@
 .\!d\:bk { display: block        !important; }
 .\!d\:il { display: inline       !important; }
 .\!d\:ib { display: inline-block !important; }
-.\!d\:fx { display: flex         !important; } // CHANGED: Use #XMETER .flexbox() insead
+.\!d\:fx { #XMETER .flexbox()    !important; }
 .\!d\:li { display: list-item    !important; }
-// .\!d\:tb { display: table        !important; }
-// .\!d\:tc { display: table-cell   !important; }
 
 @media screen {
   .\!d\:0\@s  { .\!d\:0 ; }
@@ -52,8 +57,6 @@
   .\!d\:ib\@s { .\!d\:ib; }
   .\!d\:fx\@s { .\!d\:fx; }
   .\!d\:li\@s { .\!d\:li; }
-  // .\!d\:tb\@s { .\!d\:tb; }
-  // .\!d\:tc\@s { .\!d\:tc; }
 }
 
 @media print {
@@ -65,6 +68,4 @@
   .\!d\:ib\@p { .\!d\:ib; }
   .\!d\:fx\@p { .\!d\:fx; }
   .\!d\:li\@p { .\!d\:li; }
-  // .\!d\:tb\@p { .\!d\:tb; }
-  // .\!d\:tc\@p { .\!d\:tc; }
 }

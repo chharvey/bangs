@@ -1,0 +1,23 @@
+section#background-attachment
+  h2 _background-attachment.less
+  section
+    h3 all media queries
+    div(class="!ba:0")   .!ba:0   { background-attachment: initial !important; }
+    div(class="!ba:i")   .!ba:i   { background-attachment: inherit !important; }
+    div(class="!ba:f")   .!ba:f   { background-attachment: fixed   !important; }
+    div(class="!ba:s")   .!ba:s   { background-attachment: scroll  !important; }
+    div(class="!ba:l")   .!ba:l   { background-attachment: local   !important; }
+  section
+    h3 @media screen
+    div(class="!ba:0@s") .!ba:0@s { background-attachment: initial !important; }
+    div(class="!ba:i@s") .!ba:i@s { background-attachment: inherit !important; }
+    div(class="!ba:f@s") .!ba:f@s { background-attachment: fixed   !important; }
+    div(class="!ba:s@s") .!ba:s@s { background-attachment: scroll  !important; }
+    div(class="!ba:l@s") .!ba:l@s { background-attachment: local   !important; }
+  section
+    h3 @media print
+    div(class="!ba:0@p") .!ba:0@p { background-attachment: initial !important; }
+    div(class="!ba:i@p") .!ba:i@p { background-attachment: inherit !important; }
+    div(class="!ba:f@p") .!ba:f@p { background-attachment: fixed   !important; }
+    div(class="!ba:s@p") .!ba:s@p { background-attachment: scroll  !important; }
+    div(class="!ba:l@p") .!ba:l@p { background-attachment: local   !important; }

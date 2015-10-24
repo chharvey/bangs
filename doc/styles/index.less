@@ -1,0 +1,53 @@
+@import (reference) url('../../node_modules/xmeter/src/__settings.less');
+
+#XMETER .CONSTS();
+@color_bg:   @solar_base3;
+@color_brdr: @solar_base2;
+@color_txt:  @solar_base00;
+@color_comm: @solar_base1;
+@color_emph: @solar_base01;
+
+body {
+  color: @color_txt;
+  background-color: @color_bg;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: @color_emph;
+}
+
+code {
+  font-size: inherit;
+  color: @solar_green;
+}
+
+.c-Title {
+  color: @solar_red;
+}
+
+.c-Lede {
+  font-weight: 700;
+  color: @solar_violet;
+}
+
+
+// selects an element with any class containing `!`
+// thus will even select non-bang classes, such as `class="abcd!efgh"`
+[class*='!'] {
+  background-color: @solar_base2;
+  outline: 1px solid fadeout(@color_comm, 50%);
+}
+
+// flexbox demos
+.ss-flexbox {
+  opacity: 0.25;
+  color: red;
+  &::before {
+    display: block;
+    content: 'Flexbox properties still in draft status.';
+    font-weight: 900;
+    font-size: 1.5em;
+    line-height: 1;
+    text-align: center;
+  }
+}
