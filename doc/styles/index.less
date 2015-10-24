@@ -31,11 +31,9 @@ code {
 }
 
 
-// any bang
-[class^='!'] {
-  // FIXME this only selects elements whose `class` attribute *starts* with `!`, not necessarily
-  // any element who may have a class starting with `!`.
-  // For example this selector will not match `<div class="abc !bc:t"></div>`
+// selects an element with any class containing `!`
+// thus will even select non-bang classes, such as `class="abcd!efgh"`
+[class*='!'] {
   background-color: @solar_base2;
   outline: 1px solid fadeout(@color_comm, 50%);
 }

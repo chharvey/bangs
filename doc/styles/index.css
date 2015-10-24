@@ -21,7 +21,7 @@ code {
   font-weight: 700;
   color: #6c71c4;
 }
-[class^='!'] {
+[class*='!'] {
   background-color: #eee8d5;
   outline: 1px solid rgba(147, 161, 161, 0.5);
 }

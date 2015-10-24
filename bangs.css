@@ -1,5 +1,10 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     bangs.less
+    Version: 0.4.0
+    Licence: MIT
+    Repo   : https://github.com/chharvey/bangs.git
+    Home   : https://chharvey.github.io/bangs/
+    Author : https://chharvey.github.io/
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*################################*\
     _display.less
@@ -173,6 +178,44 @@
 .\!fl\:r {
   float: right   !important;
 }
+@media screen {
+  .\!fl\:0\@s {
+    float: initial !important;
+  }
+  .\!fl\:i\@s {
+    float: inherit !important;
+  }
+  .\!fl\:n\@s {
+    float: none    !important;
+  }
+  .\!fl\:l\@s {
+    float: left    !important;
+  }
+  .\!fl\:r\@s {
+    float: right   !important;
+  }
+}
+@media print {
+  .\!fl\:0\@p {
+    float: initial !important;
+  }
+  .\!fl\:i\@p {
+    float: inherit !important;
+  }
+  .\!fl\:n\@p {
+    float: none    !important;
+  }
+  .\!fl\:l\@p {
+    float: left    !important;
+  }
+  .\!fl\:r\@p {
+    float: right   !important;
+  }
+}
+
+/*################################*\
+    _clear.less
+\*################################*/
 .\!cl\:0 {
   clear: initial !important;
 }
@@ -192,21 +235,6 @@
   clear: both    !important;
 }
 @media screen {
-  .\!fl\:0\@s {
-    float: initial !important;
-  }
-  .\!fl\:i\@s {
-    float: inherit !important;
-  }
-  .\!fl\:n\@s {
-    float: none    !important;
-  }
-  .\!fl\:l\@s {
-    float: left    !important;
-  }
-  .\!fl\:r\@s {
-    float: right   !important;
-  }
   .\!cl\:0\@s {
     clear: initial !important;
   }
@@ -227,21 +255,6 @@
   }
 }
 @media print {
-  .\!fl\:0\@p {
-    float: initial !important;
-  }
-  .\!fl\:i\@p {
-    float: inherit !important;
-  }
-  .\!fl\:n\@p {
-    float: none    !important;
-  }
-  .\!fl\:l\@p {
-    float: left    !important;
-  }
-  .\!fl\:r\@p {
-    float: right   !important;
-  }
   .\!cl\:0\@p {
     clear: initial !important;
   }
@@ -2021,42 +2034,66 @@
     _box-sizing.less
 \*################################*/
 .\!b\:0 {
-  box-sizing: initial     !important;
+  -webkit-box-sizing: initial !important;
+  -moz-box-sizing: initial !important;
+  box-sizing: initial !important;
 }
 .\!b\:i {
-  box-sizing: inherit     !important;
+  -webkit-box-sizing: inherit !important;
+  -moz-box-sizing: inherit !important;
+  box-sizing: inherit !important;
 }
 .\!b\:c {
+  -webkit-box-sizing: content-box !important;
+  -moz-box-sizing: content-box !important;
   box-sizing: content-box !important;
 }
 .\!b\:b {
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
   box-sizing: border-box !important;
 }
 @media screen {
   .\!b\:0\@s {
-    box-sizing: initial     !important;
+    -webkit-box-sizing: initial !important;
+    -moz-box-sizing: initial !important;
+    box-sizing: initial !important;
   }
   .\!b\:i\@s {
-    box-sizing: inherit     !important;
+    -webkit-box-sizing: inherit !important;
+    -moz-box-sizing: inherit !important;
+    box-sizing: inherit !important;
   }
   .\!b\:c\@s {
+    -webkit-box-sizing: content-box !important;
+    -moz-box-sizing: content-box !important;
     box-sizing: content-box !important;
   }
   .\!b\:b\@s {
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
     box-sizing: border-box !important;
   }
 }
 @media print {
   .\!b\:0\@p {
-    box-sizing: initial     !important;
+    -webkit-box-sizing: initial !important;
+    -moz-box-sizing: initial !important;
+    box-sizing: initial !important;
   }
   .\!b\:i\@p {
-    box-sizing: inherit     !important;
+    -webkit-box-sizing: inherit !important;
+    -moz-box-sizing: inherit !important;
+    box-sizing: inherit !important;
   }
   .\!b\:c\@p {
+    -webkit-box-sizing: content-box !important;
+    -moz-box-sizing: content-box !important;
     box-sizing: content-box !important;
   }
   .\!b\:b\@p {
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
     box-sizing: border-box !important;
   }
 }

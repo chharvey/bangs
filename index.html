@@ -4,7 +4,7 @@
     <title>Bangs</title>
     <meta charset="utf-8">
     <meta name="author" content="Chris Harvey">
-    <meta name="description" content="Bangs are unopinionated, single-responsibility CSS class selectors with one property and marked with !important.">
+    <meta name="description" content="Bangs are unopinionated, single-responsibility CSS class selectors marked with !important.">
     <link rel="stylesheet" href="node_modules/xmeter/xmeter.min.css">
     <link rel="stylesheet" href="bangs.css">
     <link rel="stylesheet" href="doc/styles/index.css">
@@ -12,7 +12,7 @@
   <body>
     <main>
       <h1 class="c-Title">Bangs!</h1>
-      <p class="c-Lede">Unopinionated, single-responsibility CSS class selectors with one property and marked with <code>!important</code>.</p>
+      <p class="c-Lede">Unopinionated, single-responsibility CSS class selectors marked with <code>!important</code>.</p>
       <section id="display">
         <h2>_display.less</h2>
         <section>
@@ -88,6 +88,28 @@
           <div class="!fl:n">  .!fl:n   { float: none    !important; }</div>
           <div class="!fl:l">  .!fl:l   { float: left    !important; }</div>
           <div class="!fl:r">  .!fl:r   { float: right   !important; }</div>
+        </section>
+        <section>
+          <h3>@media screen</h3>
+          <div class="!fl:0@s">.!fl:0@s { float: initial !important; }</div>
+          <div class="!fl:i@s">.!fl:i@s { float: inherit !important; }</div>
+          <div class="!fl:n@s">.!fl:n@s { float: none    !important; }</div>
+          <div class="!fl:l@s">.!fl:l@s { float: left    !important; }</div>
+          <div class="!fl:r@s">.!fl:r@s { float: right   !important; }</div>
+        </section>
+        <section>
+          <h3>@media print</h3>
+          <div class="!fl:0@p">.!fl:0@p { float: initial !important; }</div>
+          <div class="!fl:i@p">.!fl:i@p { float: inherit !important; }</div>
+          <div class="!fl:n@p">.!fl:n@p { float: none    !important; }</div>
+          <div class="!fl:l@p">.!fl:l@p { float: left    !important; }</div>
+          <div class="!fl:r@p">.!fl:r@p { float: right   !important; }</div>
+        </section>
+      </section>
+      <section id="clear">
+        <h2>_clear.less</h2>
+        <section>
+          <h3>all media queries</h3>
           <div class="!cl:0">  .!cl:0   { clear: initial !important; }</div>
           <div class="!cl:i">  .!cl:i   { clear: inherit !important; }</div>
           <div class="!cl:n">  .!cl:n   { clear: none    !important; }</div>
@@ -97,11 +119,6 @@
         </section>
         <section>
           <h3>@media screen</h3>
-          <div class="!fl:0@s">.!fl:0@s { float: initial !important; }</div>
-          <div class="!fl:i@s">.!fl:i@s { float: inherit !important; }</div>
-          <div class="!fl:n@s">.!fl:n@s { float: none    !important; }</div>
-          <div class="!fl:l@s">.!fl:l@s { float: left    !important; }</div>
-          <div class="!fl:r@s">.!fl:r@s { float: right   !important; }</div>
           <div class="!cl:0@s">.!cl:0@s { clear: initial !important; }</div>
           <div class="!cl:i@s">.!cl:i@s { clear: inherit !important; }</div>
           <div class="!cl:n@s">.!cl:n@s { clear: none    !important; }</div>
@@ -111,11 +128,6 @@
         </section>
         <section>
           <h3>@media print</h3>
-          <div class="!fl:0@p">.!fl:0@p { float: initial !important; }</div>
-          <div class="!fl:i@p">.!fl:i@p { float: inherit !important; }</div>
-          <div class="!fl:n@p">.!fl:n@p { float: none    !important; }</div>
-          <div class="!fl:l@p">.!fl:l@p { float: left    !important; }</div>
-          <div class="!fl:r@p">.!fl:r@p { float: right   !important; }</div>
           <div class="!cl:0@p">.!cl:0@p { clear: initial !important; }</div>
           <div class="!cl:i@p">.!cl:i@p { clear: inherit !important; }</div>
           <div class="!cl:n@p">.!cl:n@p { clear: none    !important; }</div>
