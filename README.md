@@ -1,5 +1,5 @@
 # bangs
-Bangs are unopinionated, single-responsibility CSS class selectors with one property and marked with !important.
+Bangs are unopinionated, single-responsibility CSS class selectors marked with !important.
 Inspired by [Atoms](http://acss.io/), [Tachyons](http://tachyons.io/), [Gravitons](http://jxnblk.com/gravitons/), and [BEMIT](http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/).
 
 ## Examples

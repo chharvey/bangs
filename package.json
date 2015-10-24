@@ -1,7 +1,7 @@
 {
   "name": "bangs",
   "version": "0.4.0",
-  "description": "Bangs are unopinionated, single-responsibility CSS class selectors with one property and marked with !important.",
+  "description": "Bangs are unopinionated, single-responsibility CSS class selectors marked with !important.",
   "main": "bangs.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
