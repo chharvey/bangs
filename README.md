@@ -22,7 +22,7 @@ Inspired by [Atoms](http://acss.io/), [Tachyons](http://tachyons.io/), [Graviton
 
 The syntax of a bang classame goes like this:
 ```
-!propqual:val
+!prop:val
 ```
 
 1. Bang classnames always start with `!`.
@@ -31,11 +31,11 @@ The syntax of a bang classame goes like this:
 3. Then comes the colon (escaped in CSS), followed by the initials for the value.
 4. Optionally, append an at-sign (escaped in CSS) for media queries
   ```
-  !propqual:val@media
+  !prop:val@media
   ```
   or a carat (escaped in CSS) for hover/focus-only styles (only available for some properties).
   ```
-  !propqual:val^
+  !prop:val^
   ```
 
 See each source file for specific abbreviations.
@@ -44,12 +44,19 @@ See each source file for specific abbreviations.
 In the classname syntax, there exist certain constants to promote predicability and readability.
 For all properties,
 
-- a value of `:i` stands for `inherit`
-- a value of `:0` stands for `initial` or `0`<sup>&lowast;</sup>
-- a value of `:n` stands for `normal` or `none`, if applicable
-- a value of `:a` stands for `auto`, if applicable
+- the suffix `:i` stands for a written value of `inherit`
+- the suffix `:0` stands for a written value of `initial`<sup>&lowast;</sup>
+- the suffix `:n` stands for a written value of `normal` or `none`, if applicable
+- the suffix `:a` stands for a written value of `auto`, if applicable
+- the suffix `:z` stands for a written value of `0`,<sup>&lowast;</sup> if applicable
 
-<i><sup>&lowast;</sup>There are some cases of conflict, that is, `initial` maps to a numeric value not equal to `0`. In these cases, `:0` stands for `initial`, and another abbreviation, such as `:z`, is assigned the value `0`.</i>
+#### Initial and Specified Values
+
+<sup>&lowast;</sup>If the initial value of a property is `0`, then using both suffixes `:0` and `:z` results in the same **specified value**. Else, `:0` results in whatever specified value to which `initial` is mapped, and `:z` results in a specified value of `0`. Some examples:
+
+- Since `0` is the initial value for `padding`, both `:0` and `:z` result in a specified value of `0`.
+- Since `auto` is the initial value for `width`, both `:0` and `:a` result in a specified value of `auto`.
+- Since `normal` is the initial value for `font-style`, both `:0` and `:n` result in a specified value of `normal`.
 
 ## Usage
 
