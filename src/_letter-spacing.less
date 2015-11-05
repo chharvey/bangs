@@ -26,10 +26,10 @@
 // ^updated
 // : 2015-10-15
 
-.\!ls\:0 { letter-spacing: initial !important; }
-.\!ls\:i { letter-spacing: inherit !important; }
-.\!ls\:n { letter-spacing: normal  !important; }
-.\!ls\:z { letter-spacing: 0       !important; }
+.\!ls\:0 { .\!ls\:n; letter-spacing: initial !important; }
+.\!ls\:i {           letter-spacing: inherit !important; }
+.\!ls\:n {           letter-spacing: normal  !important; }
+.\!ls\:z {           letter-spacing: 0       !important; }
 
 @media screen {
   .\!ls\:0\@s { .\!ls\:0; }

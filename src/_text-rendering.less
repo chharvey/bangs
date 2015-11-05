@@ -28,12 +28,12 @@
 // ^updated
 // : 2015-10-05
 
-.\!tr\:0 { text-rendering: initial            !important; }
-.\!tr\:i { text-rendering: inherit            !important; }
-.\!tr\:a { text-rendering: auto               !important; }
-.\!tr\:s { text-rendering: optimizeSpeed      !important; }
-.\!tr\:l { text-rendering: optimizeLegibility !important; }
-.\!tr\:g { text-rendering: geometricPrecision !important; }
+.\!tr\:0 { .\!tr\:a; text-rendering: initial            !important; }
+.\!tr\:i {           text-rendering: inherit            !important; }
+.\!tr\:a {           text-rendering: auto               !important; }
+.\!tr\:s {           text-rendering: optimizeSpeed      !important; }
+.\!tr\:l {           text-rendering: optimizeLegibility !important; }
+.\!tr\:g {           text-rendering: geometricPrecision !important; }
 
 @media screen {
   .\!tr\:0\@s { .\!tr\:0; }

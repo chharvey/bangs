@@ -27,11 +27,11 @@
 // ^updated
 // : 2015-10-14
 
-.\!bo\:0 { background-origin: initial     !important; }
-.\!bo\:i { background-origin: inherit     !important; }
-.\!bo\:c { background-origin: content-box !important; }
-.\!bo\:p { background-origin: padding-box !important; }
-.\!bo\:b { background-origin: border-box  !important; }
+.\!bo\:0 { .\!bo\:p; background-origin: initial     !important; }
+.\!bo\:i {           background-origin: inherit     !important; }
+.\!bo\:c {           background-origin: content-box !important; }
+.\!bo\:p {           background-origin: padding-box !important; }
+.\!bo\:b {           background-origin: border-box  !important; }
 
 @media screen {
   .\!bo\:0\@s { .\!bo\:0; }

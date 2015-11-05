@@ -39,14 +39,14 @@
 // ^updated
 // : 2015-10-02
 
-.\!d\:0  { display: initial      !important; }
-.\!d\:i  { display: inherit      !important; }
-.\!d\:n  { display: none         !important; }
-.\!d\:bk { display: block        !important; }
-.\!d\:il { display: inline       !important; }
-.\!d\:ib { display: inline-block !important; }
-.\!d\:fx { #XMETER .flexbox()    !important; }
-.\!d\:li { display: list-item    !important; }
+.\!d\:0  { .\!d\:il; display: initial      !important; }
+.\!d\:i  {           display: inherit      !important; }
+.\!d\:n  {           display: none         !important; }
+.\!d\:bk {           display: block        !important; }
+.\!d\:il {           display: inline       !important; }
+.\!d\:ib {           display: inline-block !important; }
+.\!d\:fx {           #XMETER .flexbox()    !important; }
+.\!d\:li {           display: list-item    !important; }
 
 @media screen {
   .\!d\:0\@s  { .\!d\:0 ; }

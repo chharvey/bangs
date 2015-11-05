@@ -64,10 +64,10 @@
 // ^updated
 // : 2015-10-16
 
-.\!c\:0 { color: initial      !important; }
-.\!c\:i { color: inherit      !important; }
-.\!c\:t { color: transparent  !important; }
-.\!c\:c { color: currentColor !important; } // basically same as `inherit`
+.\!c\:0 { .\!c\:c; color: initial      !important; }
+.\!c\:i {          color: inherit      !important; }
+.\!c\:t {          color: transparent  !important; }
+.\!c\:c {          color: currentColor !important; } // basically same as `inherit`
 
 .\!c\:b { color: #000000 !important; }
 .\!c\:w { color: #ffffff !important; }
