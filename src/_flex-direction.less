@@ -34,12 +34,12 @@
 // ^updated
 // : 2015-10-15
 
-.\!xd\:0  { #XMETER .flex-direction(initial)        !important; }
-.\!xd\:i  { #XMETER .flex-direction(inherit)        !important; }
-.\!xd\:r  { #XMETER .flex-direction(row)            !important; }
-.\!xd\:c  { #XMETER .flex-direction(column)         !important; }
-.\!xd\:rr { #XMETER .flex-direction(row-reverse)    !important; }
-.\!xd\:cr { #XMETER .flex-direction(column-reverse) !important; }
+.\!xd\:0  { .\!xd\:r; #XMETER .flex-direction(initial)        !important; }
+.\!xd\:i  {           #XMETER .flex-direction(inherit)        !important; }
+.\!xd\:r  {           #XMETER .flex-direction(row)            !important; }
+.\!xd\:c  {           #XMETER .flex-direction(column)         !important; }
+.\!xd\:rr {           #XMETER .flex-direction(row-reverse)    !important; }
+.\!xd\:cr {           #XMETER .flex-direction(column-reverse) !important; }
 
 @media screen {
   .\!xd\:0\@s  { .\!xd\:0 ; }

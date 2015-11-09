@@ -29,10 +29,10 @@
 // ^updated
 // : 2015-10-02
 
-.\!lsp\:0  { list-style-position: initial !important; }
-.\!lsp\:i  { list-style-position: inherit !important; }
-.\!lsp\:os { list-style-position: outside !important; }
-.\!lsp\:is { list-style-position: inside  !important; }
+.\!lsp\:0  { .\!lsp\:os; list-style-position: initial !important; }
+.\!lsp\:i  {             list-style-position: inherit !important; }
+.\!lsp\:os {             list-style-position: outside !important; }
+.\!lsp\:is {             list-style-position: inside  !important; }
 
 @media screen {
   .\!lsp\:0\@s  { .\!lsp\:0 ; }

@@ -26,10 +26,10 @@
 // ^updated
 // : 2015-10-15
 
-.\!to\:0 { text-overflow: initial  !important; }
-.\!to\:i { text-overflow: inherit  !important; }
-.\!to\:c { text-overflow: clip     !important; }
-.\!to\:e { text-overflow: ellipsis !important; }
+.\!to\:0 { .\!to\:c; text-overflow: initial  !important; }
+.\!to\:i {           text-overflow: inherit  !important; }
+.\!to\:c {           text-overflow: clip     !important; }
+.\!to\:e {           text-overflow: ellipsis !important; }
 
 @media screen {
   .\!to\:0\@s { .\!to\:0; }

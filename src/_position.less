@@ -27,12 +27,12 @@
 // ^updated
 // : 2015-10-06
 
-.\!ps\:0 { position: initial  !important; }
-.\!ps\:i { position: inherit  !important; }
-.\!ps\:s { position: static   !important; }
-.\!ps\:r { position: relative !important; }
-.\!ps\:a { position: absolute !important; }
-.\!ps\:f { position: fixed    !important; }
+.\!ps\:0 { .\!ps\:s; position: initial  !important; }
+.\!ps\:i {           position: inherit  !important; }
+.\!ps\:s {           position: static   !important; }
+.\!ps\:r {           position: relative !important; }
+.\!ps\:a {           position: absolute !important; }
+.\!ps\:f {           position: fixed    !important; }
 
 @media screen {
   .\!ps\:0\@s { .\!ps\:0; }

@@ -26,9 +26,9 @@
 // ^updated
 // : 2015-10-02
 
-.\!bi\:0 { background-image: initial !important; }
-.\!bi\:i { background-image: inherit !important; }
-.\!bi\:n { background-image: none    !important; }
+.\!bi\:0 { .\!bi\:n; background-image: initial !important; }
+.\!bi\:i {           background-image: inherit !important; }
+.\!bi\:n {           background-image: none    !important; }
 
 @media screen {
   .\!bi\:0\@s { .\!bi\:0; }

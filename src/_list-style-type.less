@@ -7,6 +7,8 @@
 // NOTE that this utility must be
 // an item with `display: list-item;`
 // in order to mean anything.
+// NOTE that this set of bangs only supports ordinal list style types,
+// not list style types that are the same symbol for each list item.
 //
 // !lst  =  list-style-type
 //
@@ -35,16 +37,16 @@
 // ^updated
 // : 2015-10-16
 
-.\!lst\:0  { list-style-type: initial              !important; }
-.\!lst\:i  { list-style-type: inherit              !important; }
-.\!lst\:n  { list-style-type: none                 !important; }
-.\!lst\:dz { list-style-type: decimal-leading-zero !important; }
-.\!lst\:ur { list-style-type: upper-roman          !important; }
-.\!lst\:ua { list-style-type: upper-alpha          !important; }
-.\!lst\:dc { list-style-type: decimal              !important; }
-.\!lst\:la { list-style-type: lower-alpha          !important; }
-.\!lst\:lr { list-style-type: lower-roman          !important; }
-.\!lst\:lg { list-style-type: lower-greek          !important; }
+.\!lst\:0  { list-style-type: disc !important; list-style-type: initial              !important; }
+.\!lst\:i  {                                   list-style-type: inherit              !important; }
+.\!lst\:n  {                                   list-style-type: none                 !important; }
+.\!lst\:dz {                                   list-style-type: decimal-leading-zero !important; }
+.\!lst\:ur {                                   list-style-type: upper-roman          !important; }
+.\!lst\:ua {                                   list-style-type: upper-alpha          !important; }
+.\!lst\:dc {                                   list-style-type: decimal              !important; }
+.\!lst\:la {                                   list-style-type: lower-alpha          !important; }
+.\!lst\:lr {                                   list-style-type: lower-roman          !important; }
+.\!lst\:lg {                                   list-style-type: lower-greek          !important; }
 
 @media screen {
   .\!lst\:0\@s  { .\!lst\:0 ; }

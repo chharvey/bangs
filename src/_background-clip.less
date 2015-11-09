@@ -27,11 +27,11 @@
 // ^updated
 // : 2015-10-14
 
-.\!bx\:0 { background-clip: initial     !important; }
-.\!bx\:i { background-clip: inherit     !important; }
-.\!bx\:c { background-clip: content-box !important; }
-.\!bx\:p { background-clip: padding-box !important; }
-.\!bx\:b { background-clip: border-box  !important; }
+.\!bx\:0 { .\!bx\:b; background-clip: initial     !important; }
+.\!bx\:i {           background-clip: inherit     !important; }
+.\!bx\:c {           background-clip: content-box !important; }
+.\!bx\:p {           background-clip: padding-box !important; }
+.\!bx\:b {           background-clip: border-box  !important; }
 
 @media screen {
   .\!bx\:0\@s { .\!bx\:0; }

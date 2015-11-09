@@ -19,6 +19,8 @@
 // :0  =  initial (also 0)
 // :i  =  inherit
 // :a  =  auto
+// :z  =  0
+// :q  =  0.25rem
 // :h  =  0.5rem
 // :1  =  1rem
 // :2  =  2rem
@@ -38,11 +40,13 @@
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2015-08-08
+// : 2015-11-06
 
-.\!ml\:0 { margin-left:   initial !important; }
+.\!ml\:0 { margin-left:   0       !important; margin-left:   initial !important; }
 .\!ml\:i { margin-left:   inherit !important; }
 .\!ml\:a { margin-left:   auto    !important; }
+.\!ml\:z { margin-left:   0       !important; }
+.\!ml\:q { margin-left:   0.25rem !important; }
 .\!ml\:h { margin-left:   0.5rem  !important; }
 .\!ml\:1 { margin-left:   1rem    !important; }
 .\!ml\:2 { margin-left:   2rem    !important; }
@@ -50,9 +54,11 @@
 .\!ml\:8 { margin-left:   8rem    !important; }
 .\!ml\:g { margin-left:   16rem   !important; }
 
-.\!mr\:0 { margin-right:  initial !important; }
+.\!mr\:0 { margin-right:  0       !important; margin-right:  initial !important; }
 .\!mr\:i { margin-right:  inherit !important; }
 .\!mr\:a { margin-right:  auto    !important; }
+.\!mr\:z { margin-right:  0       !important; }
+.\!mr\:q { margin-right:  0.25rem !important; }
 .\!mr\:h { margin-right:  0.5rem  !important; }
 .\!mr\:1 { margin-right:  1rem    !important; }
 .\!mr\:2 { margin-right:  2rem    !important; }
@@ -60,9 +66,11 @@
 .\!mr\:8 { margin-right:  8rem    !important; }
 .\!mr\:g { margin-right:  16rem   !important; }
 
-.\!mt\:0 { margin-top:    initial !important; }
+.\!mt\:0 { margin-top:    0       !important; margin-top:    initial !important; }
 .\!mt\:i { margin-top:    inherit !important; }
 .\!mt\:a { margin-top:    auto    !important; }
+.\!mt\:z { margin-top:    0       !important; }
+.\!mt\:q { margin-top:    0.25rem !important; }
 .\!mt\:h { margin-top:    0.5rem  !important; }
 .\!mt\:1 { margin-top:    1rem    !important; }
 .\!mt\:2 { margin-top:    2rem    !important; }
@@ -70,9 +78,11 @@
 .\!mt\:8 { margin-top:    8rem    !important; }
 .\!mt\:g { margin-top:    16rem   !important; }
 
-.\!mb\:0 { margin-bottom: initial !important; }
+.\!mb\:0 { margin-bottom: 0       !important; margin-bottom: initial !important; }
 .\!mb\:i { margin-bottom: inherit !important; }
 .\!mb\:a { margin-bottom: auto    !important; }
+.\!mb\:z { margin-bottom: 0       !important; }
+.\!mb\:q { margin-bottom: 0.25rem !important; }
 .\!mb\:h { margin-bottom: 0.5rem  !important; }
 .\!mb\:1 { margin-bottom: 1rem    !important; }
 .\!mb\:2 { margin-bottom: 2rem    !important; }
@@ -83,6 +93,8 @@
 .\!mx\:0 { .\!ml\:0; .\!mr\:0; }
 .\!mx\:i { .\!ml\:i; .\!mr\:i; }
 .\!mx\:a { .\!ml\:a; .\!mr\:a; }
+.\!mx\:z { .\!ml\:z; .\!mr\:z; }
+.\!mx\:q { .\!ml\:q; .\!mr\:q; }
 .\!mx\:h { .\!ml\:h; .\!mr\:h; }
 .\!mx\:1 { .\!ml\:1; .\!mr\:1; }
 .\!mx\:2 { .\!ml\:2; .\!mr\:2; }
@@ -93,6 +105,8 @@
 .\!my\:0 { .\!mt\:0; .\!mb\:0; }
 .\!my\:i { .\!mt\:i; .\!mb\:i; }
 .\!my\:a { .\!mt\:a; .\!mb\:a; }
+.\!my\:z { .\!mt\:z; .\!mb\:z; }
+.\!my\:q { .\!mt\:q; .\!mb\:q; }
 .\!my\:h { .\!mt\:h; .\!mb\:h; }
 .\!my\:1 { .\!mt\:1; .\!mb\:1; }
 .\!my\:2 { .\!mt\:2; .\!mb\:2; }
@@ -100,9 +114,11 @@
 .\!my\:8 { .\!mt\:8; .\!mb\:8; }
 .\!my\:g { .\!mt\:g; .\!mb\:g; }
 
-.\!ma\:0 { margin:        initial !important; }
+.\!ma\:0 { margin:        0       !important; margin:        initial !important; }
 .\!ma\:i { margin:        inherit !important; }
 .\!ma\:a { margin:        auto    !important; }
+.\!ma\:z { margin:        0       !important; }
+.\!ma\:q { margin:        0.25rem !important; }
 .\!ma\:h { margin:        0.5rem  !important; }
 .\!ma\:1 { margin:        1rem    !important; }
 .\!ma\:2 { margin:        2rem    !important; }
@@ -114,6 +130,8 @@
   .\!ml\:0\@s { .\!ml\:0; }
   .\!ml\:i\@s { .\!ml\:i; }
   .\!ml\:a\@s { .\!ml\:a; }
+  .\!ml\:z\@s { .\!ml\:z; }
+  .\!ml\:q\@s { .\!ml\:q; }
   .\!ml\:h\@s { .\!ml\:h; }
   .\!ml\:1\@s { .\!ml\:1; }
   .\!ml\:2\@s { .\!ml\:2; }
@@ -124,6 +142,8 @@
   .\!mr\:0\@s { .\!mr\:0; }
   .\!mr\:i\@s { .\!mr\:i; }
   .\!mr\:a\@s { .\!mr\:a; }
+  .\!mr\:z\@s { .\!mr\:z; }
+  .\!mr\:q\@s { .\!mr\:q; }
   .\!mr\:h\@s { .\!mr\:h; }
   .\!mr\:1\@s { .\!mr\:1; }
   .\!mr\:2\@s { .\!mr\:2; }
@@ -134,6 +154,8 @@
   .\!mt\:0\@s { .\!mt\:0; }
   .\!mt\:i\@s { .\!mt\:i; }
   .\!mt\:a\@s { .\!mt\:a; }
+  .\!mt\:z\@s { .\!mt\:z; }
+  .\!mt\:q\@s { .\!mt\:q; }
   .\!mt\:h\@s { .\!mt\:h; }
   .\!mt\:1\@s { .\!mt\:1; }
   .\!mt\:2\@s { .\!mt\:2; }
@@ -144,6 +166,8 @@
   .\!mb\:0\@s { .\!mb\:0; }
   .\!mb\:i\@s { .\!mb\:i; }
   .\!mb\:a\@s { .\!mb\:a; }
+  .\!mb\:z\@s { .\!mb\:z; }
+  .\!mb\:q\@s { .\!mb\:q; }
   .\!mb\:h\@s { .\!mb\:h; }
   .\!mb\:1\@s { .\!mb\:1; }
   .\!mb\:2\@s { .\!mb\:2; }
@@ -154,6 +178,8 @@
   .\!mx\:0\@s { .\!mx\:0; }
   .\!mx\:i\@s { .\!mx\:i; }
   .\!mx\:a\@s { .\!mx\:a; }
+  .\!mx\:z\@s { .\!mx\:z; }
+  .\!mx\:q\@s { .\!mx\:q; }
   .\!mx\:h\@s { .\!mx\:h; }
   .\!mx\:1\@s { .\!mx\:1; }
   .\!mx\:2\@s { .\!mx\:2; }
@@ -164,6 +190,8 @@
   .\!my\:0\@s { .\!my\:0; }
   .\!my\:i\@s { .\!my\:i; }
   .\!my\:a\@s { .\!my\:a; }
+  .\!my\:z\@s { .\!my\:z; }
+  .\!my\:q\@s { .\!my\:q; }
   .\!my\:h\@s { .\!my\:h; }
   .\!my\:1\@s { .\!my\:1; }
   .\!my\:2\@s { .\!my\:2; }
@@ -174,6 +202,8 @@
   .\!ma\:0\@s { .\!ma\:0; }
   .\!ma\:i\@s { .\!ma\:i; }
   .\!ma\:a\@s { .\!ma\:a; }
+  .\!ma\:z\@s { .\!ma\:z; }
+  .\!ma\:q\@s { .\!ma\:q; }
   .\!ma\:h\@s { .\!ma\:h; }
   .\!ma\:1\@s { .\!ma\:1; }
   .\!ma\:2\@s { .\!ma\:2; }
@@ -186,6 +216,8 @@
   .\!ml\:0\@p { .\!ml\:0; }
   .\!ml\:i\@p { .\!ml\:i; }
   .\!ml\:a\@p { .\!ml\:a; }
+  .\!ml\:z\@p { .\!ml\:z; }
+  .\!ml\:q\@p { .\!ml\:q; }
   .\!ml\:h\@p { .\!ml\:h; }
   .\!ml\:1\@p { .\!ml\:1; }
   .\!ml\:2\@p { .\!ml\:2; }
@@ -196,6 +228,8 @@
   .\!mr\:0\@p { .\!mr\:0; }
   .\!mr\:i\@p { .\!mr\:i; }
   .\!mr\:a\@p { .\!mr\:a; }
+  .\!mr\:z\@p { .\!mr\:z; }
+  .\!mr\:q\@p { .\!mr\:q; }
   .\!mr\:h\@p { .\!mr\:h; }
   .\!mr\:1\@p { .\!mr\:1; }
   .\!mr\:2\@p { .\!mr\:2; }
@@ -206,6 +240,8 @@
   .\!mt\:0\@p { .\!mt\:0; }
   .\!mt\:i\@p { .\!mt\:i; }
   .\!mt\:a\@p { .\!mt\:a; }
+  .\!mt\:z\@p { .\!mt\:z; }
+  .\!mt\:q\@p { .\!mt\:q; }
   .\!mt\:h\@p { .\!mt\:h; }
   .\!mt\:1\@p { .\!mt\:1; }
   .\!mt\:2\@p { .\!mt\:2; }
@@ -216,6 +252,8 @@
   .\!mb\:0\@p { .\!mb\:0; }
   .\!mb\:i\@p { .\!mb\:i; }
   .\!mb\:a\@p { .\!mb\:a; }
+  .\!mb\:z\@p { .\!mb\:z; }
+  .\!mb\:q\@p { .\!mb\:q; }
   .\!mb\:h\@p { .\!mb\:h; }
   .\!mb\:1\@p { .\!mb\:1; }
   .\!mb\:2\@p { .\!mb\:2; }
@@ -226,6 +264,8 @@
   .\!mx\:0\@p { .\!mx\:0; }
   .\!mx\:i\@p { .\!mx\:i; }
   .\!mx\:a\@p { .\!mx\:a; }
+  .\!mx\:z\@p { .\!mx\:z; }
+  .\!mx\:q\@p { .\!mx\:q; }
   .\!mx\:h\@p { .\!mx\:h; }
   .\!mx\:1\@p { .\!mx\:1; }
   .\!mx\:2\@p { .\!mx\:2; }
@@ -236,6 +276,8 @@
   .\!my\:0\@p { .\!my\:0; }
   .\!my\:i\@p { .\!my\:i; }
   .\!my\:a\@p { .\!my\:a; }
+  .\!my\:z\@p { .\!my\:z; }
+  .\!my\:q\@p { .\!my\:q; }
   .\!my\:h\@p { .\!my\:h; }
   .\!my\:1\@p { .\!my\:1; }
   .\!my\:2\@p { .\!my\:2; }
@@ -246,6 +288,8 @@
   .\!ma\:0\@p { .\!ma\:0; }
   .\!ma\:i\@p { .\!ma\:i; }
   .\!ma\:a\@p { .\!ma\:a; }
+  .\!ma\:z\@p { .\!ma\:z; }
+  .\!ma\:q\@p { .\!ma\:q; }
   .\!ma\:h\@p { .\!ma\:h; }
   .\!ma\:1\@p { .\!ma\:1; }
   .\!ma\:2\@p { .\!ma\:2; }
