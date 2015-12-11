@@ -28,9 +28,9 @@
 // ^updated
 // : 2015-10-02
 
-.\!lsi\:0 { list-style-image: initial !important; }
-.\!lsi\:i { list-style-image: inherit !important; }
-.\!lsi\:n { list-style-image: none    !important; }
+.\!lsi\:0 { .\!lsi\:n; list-style-image: initial !important; }
+.\!lsi\:i {            list-style-image: inherit !important; }
+.\!lsi\:n {            list-style-image: none    !important; }
 
 @media screen {
   .\!lsi\:0\@s { .\!lsi\:0; }

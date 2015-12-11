@@ -4,19 +4,20 @@ html
     title Bangs
     meta(charset="utf-8")
     meta(name="author", content="Chris Harvey")
-    meta(name="description", content="Bangs are unopinionated, single-responsibility CSS class selectors with one property and marked with !important.")
+    meta(name="description", content="Bangs are unopinionated, single-responsibility CSS class selectors marked with !important.")
     link(rel="stylesheet", href="node_modules/xmeter/xmeter.min.css")
-    link(rel="stylesheet", href="bangs.css")
-    //- link(rel="stylesheet", href="bangs.min.css")
+    //- link(rel="stylesheet", href="bangs.css")
+    link(rel="stylesheet", href="bangs.min.css")
     link(rel="stylesheet", href="doc/styles/index.css")
   body
     main
       h1.c-Title Bangs!
-      p.c-Lede Unopinionated, single-responsibility CSS class selectors with one property and marked with #[code !important].
+      p.c-Lede Unopinionated, single-responsibility CSS class selectors marked with #[code !important].
       //- LAYOUT
       include ./doc/include/_display.jade
       include ./doc/include/_position.jade
       include ./doc/include/_float.jade
+      include ./doc/include/_clear.jade
       include ./doc/include/_z-index.jade
       include ./doc/include/_vertical-align.jade
       include ./doc/include/_flex-direction.jade

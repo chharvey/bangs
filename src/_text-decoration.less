@@ -39,12 +39,12 @@
 // ^updated
 // : 2015-10-08
 
-.\!td\:0  { text-decoration: initial      !important; }
-.\!td\:i  { text-decoration: inherit      !important; }
-.\!td\:n  { text-decoration: none         !important; }
-.\!td\:u  { text-decoration: underline    !important; }
-.\!td\:o  { text-decoration: overline     !important; }
-.\!td\:s  { text-decoration: line-through !important; }
+.\!td\:0 { .\!td\:n; text-decoration: initial      !important; }
+.\!td\:i {           text-decoration: inherit      !important; }
+.\!td\:n {           text-decoration: none         !important; }
+.\!td\:u {           text-decoration: underline    !important; }
+.\!td\:o {           text-decoration: overline     !important; }
+.\!td\:s {           text-decoration: line-through !important; }
 
 @media screen {
   .\!td\:0\@s { .\!td\:0; }

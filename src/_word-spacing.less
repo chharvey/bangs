@@ -26,10 +26,10 @@
 // ^updated
 // : 2015-10-15
 
-.\!ws\:0 { word-spacing: initial !important; }
-.\!ws\:i { word-spacing: inherit !important; }
-.\!ws\:n { word-spacing: normal  !important; }
-.\!ws\:z { word-spacing: 0       !important; }
+.\!ws\:0 { .\!ws\:n; word-spacing: initial !important; }
+.\!ws\:i {           word-spacing: inherit !important; }
+.\!ws\:n {           word-spacing: normal  !important; }
+.\!ws\:z {           word-spacing: 0       !important; }
 
 @media screen {
   .\!ws\:0\@s { .\!ws\:0; }

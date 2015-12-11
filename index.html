@@ -4,15 +4,15 @@
     <title>Bangs</title>
     <meta charset="utf-8">
     <meta name="author" content="Chris Harvey">
-    <meta name="description" content="Bangs are unopinionated, single-responsibility CSS class selectors with one property and marked with !important.">
+    <meta name="description" content="Bangs are unopinionated, single-responsibility CSS class selectors marked with !important.">
     <link rel="stylesheet" href="node_modules/xmeter/xmeter.min.css">
-    <link rel="stylesheet" href="bangs.css">
+    <link rel="stylesheet" href="bangs.min.css">
     <link rel="stylesheet" href="doc/styles/index.css">
   </head>
   <body>
     <main>
       <h1 class="c-Title">Bangs!</h1>
-      <p class="c-Lede">Unopinionated, single-responsibility CSS class selectors with one property and marked with <code>!important</code>.</p>
+      <p class="c-Lede">Unopinionated, single-responsibility CSS class selectors marked with <code>!important</code>.</p>
       <section id="display">
         <h2>_display.less</h2>
         <section>
@@ -132,6 +132,28 @@
           <div class="!fl:n">  .!fl:n   { float: none    !important; }</div>
           <div class="!fl:l">  .!fl:l   { float: left    !important; }</div>
           <div class="!fl:r">  .!fl:r   { float: right   !important; }</div>
+        </section>
+        <section>
+          <h3>@media screen</h3>
+          <div class="!fl:0@s">.!fl:0@s { float: initial !important; }</div>
+          <div class="!fl:i@s">.!fl:i@s { float: inherit !important; }</div>
+          <div class="!fl:n@s">.!fl:n@s { float: none    !important; }</div>
+          <div class="!fl:l@s">.!fl:l@s { float: left    !important; }</div>
+          <div class="!fl:r@s">.!fl:r@s { float: right   !important; }</div>
+        </section>
+        <section>
+          <h3>@media print</h3>
+          <div class="!fl:0@p">.!fl:0@p { float: initial !important; }</div>
+          <div class="!fl:i@p">.!fl:i@p { float: inherit !important; }</div>
+          <div class="!fl:n@p">.!fl:n@p { float: none    !important; }</div>
+          <div class="!fl:l@p">.!fl:l@p { float: left    !important; }</div>
+          <div class="!fl:r@p">.!fl:r@p { float: right   !important; }</div>
+        </section>
+      </section>
+      <section id="clear">
+        <h2>_clear.less</h2>
+        <section>
+          <h3>all media queries</h3>
           <div class="!cl:0">  .!cl:0   { clear: initial !important; }</div>
           <div class="!cl:i">  .!cl:i   { clear: inherit !important; }</div>
           <div class="!cl:n">  .!cl:n   { clear: none    !important; }</div>
@@ -141,11 +163,6 @@
         </section>
         <section>
           <h3>@media screen</h3>
-          <div class="!fl:0@s">.!fl:0@s { float: initial !important; }</div>
-          <div class="!fl:i@s">.!fl:i@s { float: inherit !important; }</div>
-          <div class="!fl:n@s">.!fl:n@s { float: none    !important; }</div>
-          <div class="!fl:l@s">.!fl:l@s { float: left    !important; }</div>
-          <div class="!fl:r@s">.!fl:r@s { float: right   !important; }</div>
           <div class="!cl:0@s">.!cl:0@s { clear: initial !important; }</div>
           <div class="!cl:i@s">.!cl:i@s { clear: inherit !important; }</div>
           <div class="!cl:n@s">.!cl:n@s { clear: none    !important; }</div>
@@ -155,11 +172,6 @@
         </section>
         <section>
           <h3>@media print</h3>
-          <div class="!fl:0@p">.!fl:0@p { float: initial !important; }</div>
-          <div class="!fl:i@p">.!fl:i@p { float: inherit !important; }</div>
-          <div class="!fl:n@p">.!fl:n@p { float: none    !important; }</div>
-          <div class="!fl:l@p">.!fl:l@p { float: left    !important; }</div>
-          <div class="!fl:r@p">.!fl:r@p { float: right   !important; }</div>
           <div class="!cl:0@p">.!cl:0@p { clear: initial !important; }</div>
           <div class="!cl:i@p">.!cl:i@p { clear: inherit !important; }</div>
           <div class="!cl:n@p">.!cl:n@p { clear: none    !important; }</div>
@@ -753,6 +765,8 @@
           <h3>all media queries</h3>
           <div class="!pl:0">  .!pl:0   { padding-left:   initial !important; }</div>
           <div class="!pl:i">  .!pl:i   { padding-left:   inherit !important; }</div>
+          <div class="!pl:z">  .!pl:z   { padding-left:   0       !important; }</div>
+          <div class="!pl:q">  .!pl:q   { padding-left:   0.25rem !important; }</div>
           <div class="!pl:h">  .!pl:h   { padding-left:   0.5rem  !important; }</div>
           <div class="!pl:1">  .!pl:1   { padding-left:   1rem    !important; }</div>
           <div class="!pl:2">  .!pl:2   { padding-left:   2rem    !important; }</div>
@@ -761,6 +775,8 @@
           <div class="!pl:g">  .!pl:g   { padding-left:   16rem   !important; }</div>
           <div class="!pr:0">  .!pr:0   { padding-right:  initial !important; }</div>
           <div class="!pr:i">  .!pr:i   { padding-right:  inherit !important; }</div>
+          <div class="!pr:z">  .!pr:z   { padding-right:  0       !important; }</div>
+          <div class="!pr:q">  .!pr:q   { padding-right:  0.25rem !important; }</div>
           <div class="!pr:h">  .!pr:h   { padding-right:  0.5rem  !important; }</div>
           <div class="!pr:1">  .!pr:1   { padding-right:  1rem    !important; }</div>
           <div class="!pr:2">  .!pr:2   { padding-right:  2rem    !important; }</div>
@@ -769,6 +785,8 @@
           <div class="!pr:g">  .!pr:g   { padding-right:  16rem   !important; }</div>
           <div class="!pt:0">  .!pt:0   { padding-top:    initial !important; }</div>
           <div class="!pt:i">  .!pt:i   { padding-top:    inherit !important; }</div>
+          <div class="!pt:z">  .!pt:z   { padding-top:    0       !important; }</div>
+          <div class="!pt:q">  .!pt:q   { padding-top:    0.25rem !important; }</div>
           <div class="!pt:h">  .!pt:h   { padding-top:    0.5rem  !important; }</div>
           <div class="!pt:1">  .!pt:1   { padding-top:    1rem    !important; }</div>
           <div class="!pt:2">  .!pt:2   { padding-top:    2rem    !important; }</div>
@@ -777,6 +795,8 @@
           <div class="!pt:g">  .!pt:g   { padding-top:    16rem   !important; }</div>
           <div class="!pb:0">  .!pb:0   { padding-bottom: initial !important; }</div>
           <div class="!pb:i">  .!pb:i   { padding-bottom: inherit !important; }</div>
+          <div class="!pb:z">  .!pb:z   { padding-bottom: 0       !important; }</div>
+          <div class="!pb:q">  .!pb:q   { padding-bottom: 0.25rem !important; }</div>
           <div class="!pb:h">  .!pb:h   { padding-bottom: 0.5rem  !important; }</div>
           <div class="!pb:1">  .!pb:1   { padding-bottom: 1rem    !important; }</div>
           <div class="!pb:2">  .!pb:2   { padding-bottom: 2rem    !important; }</div>
@@ -785,6 +805,8 @@
           <div class="!pb:g">  .!pb:g   { padding-bottom: 16rem   !important; }</div>
           <div class="!px:0">  .!px:0   { padding-left:   initial !important; padding-right:  initial !important; }</div>
           <div class="!px:i">  .!px:i   { padding-left:   inherit !important; padding-right:  inherit !important; }</div>
+          <div class="!px:z">  .!px:z   { padding-left:   0       !important; padding-right:  0       !important; }</div>
+          <div class="!px:q">  .!px:q   { padding-left:   0.25rem !important; padding-right:  0.25rem !important; }</div>
           <div class="!px:h">  .!px:h   { padding-left:   0.5rem  !important; padding-right:  0.5rem  !important; }</div>
           <div class="!px:1">  .!px:1   { padding-left:   1rem    !important; padding-right:  1rem    !important; }</div>
           <div class="!px:2">  .!px:2   { padding-left:   2rem    !important; padding-right:  2rem    !important; }</div>
@@ -793,6 +815,8 @@
           <div class="!px:g">  .!px:g   { padding-left:   16rem   !important; padding-right:  16rem   !important; }</div>
           <div class="!py:0">  .!py:0   { padding-top:    initial !important; padding-bottom: initial !important; }</div>
           <div class="!py:i">  .!py:i   { padding-top:    inherit !important; padding-bottom: inherit !important; }</div>
+          <div class="!py:z">  .!py:z   { padding-top:    0       !important; padding-bottom: 0       !important; }</div>
+          <div class="!py:q">  .!py:q   { padding-top:    0.25rem !important; padding-bottom: 0.25rem !important; }</div>
           <div class="!py:h">  .!py:h   { padding-top:    0.5rem  !important; padding-bottom: 0.5rem  !important; }</div>
           <div class="!py:1">  .!py:1   { padding-top:    1rem    !important; padding-bottom: 1rem    !important; }</div>
           <div class="!py:2">  .!py:2   { padding-top:    2rem    !important; padding-bottom: 2rem    !important; }</div>
@@ -801,6 +825,8 @@
           <div class="!py:g">  .!py:g   { padding-top:    16rem   !important; padding-bottom: 16rem   !important; }</div>
           <div class="!pa:0">  .!pa:0   { padding:        initial !important; }</div>
           <div class="!pa:i">  .!pa:i   { padding:        inherit !important; }</div>
+          <div class="!pa:z">  .!pa:z   { padding:        0       !important; }</div>
+          <div class="!pa:q">  .!pa:q   { padding:        0.25rem !important; }</div>
           <div class="!pa:h">  .!pa:h   { padding:        0.5rem  !important; }</div>
           <div class="!pa:1">  .!pa:1   { padding:        1rem    !important; }</div>
           <div class="!pa:2">  .!pa:2   { padding:        2rem    !important; }</div>
@@ -812,6 +838,8 @@
           <h3>@media screen</h3>
           <div class="!pl:0@s">.!pl:0@s { padding-left:   initial !important; }</div>
           <div class="!pl:i@s">.!pl:i@s { padding-left:   inherit !important; }</div>
+          <div class="!pl:z@s">.!pl:z@s { padding-left:   0       !important; }</div>
+          <div class="!pl:q@s">.!pl:q@s { padding-left:   0.25rem !important; }</div>
           <div class="!pl:h@s">.!pl:h@s { padding-left:   0.5rem  !important; }</div>
           <div class="!pl:1@s">.!pl:1@s { padding-left:   1rem    !important; }</div>
           <div class="!pl:2@s">.!pl:2@s { padding-left:   2rem    !important; }</div>
@@ -820,6 +848,8 @@
           <div class="!pl:g@s">.!pl:g@s { padding-left:   16rem   !important; }</div>
           <div class="!pr:0@s">.!pr:0@s { padding-right:  initial !important; }</div>
           <div class="!pr:i@s">.!pr:i@s { padding-right:  inherit !important; }</div>
+          <div class="!pr:z@s">.!pr:z@s { padding-right:  0       !important; }</div>
+          <div class="!pr:q@s">.!pr:q@s { padding-right:  0.25rem !important; }</div>
           <div class="!pr:h@s">.!pr:h@s { padding-right:  0.5rem  !important; }</div>
           <div class="!pr:1@s">.!pr:1@s { padding-right:  1rem    !important; }</div>
           <div class="!pr:2@s">.!pr:2@s { padding-right:  2rem    !important; }</div>
@@ -828,6 +858,8 @@
           <div class="!pr:g@s">.!pr:g@s { padding-right:  16rem   !important; }</div>
           <div class="!pt:0@s">.!pt:0@s { padding-top:    initial !important; }</div>
           <div class="!pt:i@s">.!pt:i@s { padding-top:    inherit !important; }</div>
+          <div class="!pt:z@s">.!pt:z@s { padding-top:    0       !important; }</div>
+          <div class="!pt:q@s">.!pt:q@s { padding-top:    0.25rem !important; }</div>
           <div class="!pt:h@s">.!pt:h@s { padding-top:    0.5rem  !important; }</div>
           <div class="!pt:1@s">.!pt:1@s { padding-top:    1rem    !important; }</div>
           <div class="!pt:2@s">.!pt:2@s { padding-top:    2rem    !important; }</div>
@@ -836,6 +868,8 @@
           <div class="!pt:g@s">.!pt:g@s { padding-top:    16rem   !important; }</div>
           <div class="!pb:0@s">.!pb:0@s { padding-bottom: initial !important; }</div>
           <div class="!pb:i@s">.!pb:i@s { padding-bottom: inherit !important; }</div>
+          <div class="!pb:z@s">.!pb:z@s { padding-bottom: 0       !important; }</div>
+          <div class="!pb:q@s">.!pb:q@s { padding-bottom: 0.25rem !important; }</div>
           <div class="!pb:h@s">.!pb:h@s { padding-bottom: 0.5rem  !important; }</div>
           <div class="!pb:1@s">.!pb:1@s { padding-bottom: 1rem    !important; }</div>
           <div class="!pb:2@s">.!pb:2@s { padding-bottom: 2rem    !important; }</div>
@@ -844,6 +878,8 @@
           <div class="!pb:g@s">.!pb:g@s { padding-bottom: 16rem   !important; }</div>
           <div class="!px:0@s">.!px:0@s { padding-left:   initial !important; padding-right:  initial !important; }</div>
           <div class="!px:0@s">.!px:0@s { padding-left:   inherit !important; padding-right:  inherit !important; }</div>
+          <div class="!px:z@s">.!px:z@s { padding-left:   0       !important; padding-right:  0       !important; }</div>
+          <div class="!px:q@s">.!px:q@s { padding-left:   0.25rem !important; padding-right:  0.25rem !important; }</div>
           <div class="!px:h@s">.!px:h@s { padding-left:   0.5rem  !important; padding-right:  0.5rem  !important; }</div>
           <div class="!px:1@s">.!px:1@s { padding-left:   1rem    !important; padding-right:  1rem    !important; }</div>
           <div class="!px:2@s">.!px:2@s { padding-left:   2rem    !important; padding-right:  2rem    !important; }</div>
@@ -852,6 +888,8 @@
           <div class="!px:g@s">.!px:g@s { padding-left:   16rem   !important; padding-right:  16rem   !important; }</div>
           <div class="!py:0@s">.!py:0@s { padding-top:    initial !important; padding-bottom: initial !important; }</div>
           <div class="!py:0@s">.!py:0@s { padding-top:    inherit !important; padding-bottom: inherit !important; }</div>
+          <div class="!py:z@s">.!py:z@s { padding-top:    0       !important; padding-bottom: 0       !important; }</div>
+          <div class="!py:q@s">.!py:q@s { padding-top:    0.25rem !important; padding-bottom: 0.25rem !important; }</div>
           <div class="!py:h@s">.!py:h@s { padding-top:    0.5rem  !important; padding-bottom: 0.5rem  !important; }</div>
           <div class="!py:1@s">.!py:1@s { padding-top:    1rem    !important; padding-bottom: 1rem    !important; }</div>
           <div class="!py:2@s">.!py:2@s { padding-top:    2rem    !important; padding-bottom: 2rem    !important; }</div>
@@ -860,6 +898,8 @@
           <div class="!py:g@s">.!py:g@s { padding-top:    16rem   !important; padding-bottom: 16rem   !important; }</div>
           <div class="!pa:0@s">.!pa:0@s { padding:        initial !important; }</div>
           <div class="!pa:0@s">.!pa:0@s { padding:        inherit !important; }</div>
+          <div class="!pa:z@s">.!pa:z@s { padding:        0       !important; }</div>
+          <div class="!pa:q@s">.!pa:q@s { padding:        0.25rem !important; }</div>
           <div class="!pa:h@s">.!pa:h@s { padding:        0.5rem  !important; }</div>
           <div class="!pa:1@s">.!pa:1@s { padding:        1rem    !important; }</div>
           <div class="!pa:2@s">.!pa:2@s { padding:        2rem    !important; }</div>
@@ -871,6 +911,8 @@
           <h3>@media print</h3>
           <div class="!pl:0@p">.!pl:0@p { padding-left:   initial !important; }</div>
           <div class="!pl:i@p">.!pl:i@p { padding-left:   inherit !important; }</div>
+          <div class="!pl:z@p">.!pl:z@p { padding-left:   0       !important; }</div>
+          <div class="!pl:q@p">.!pl:q@p { padding-left:   0.25rem !important; }</div>
           <div class="!pl:h@p">.!pl:h@p { padding-left:   0.5rem  !important; }</div>
           <div class="!pl:1@p">.!pl:1@p { padding-left:   1rem    !important; }</div>
           <div class="!pl:2@p">.!pl:2@p { padding-left:   2rem    !important; }</div>
@@ -879,6 +921,8 @@
           <div class="!pl:g@p">.!pl:g@p { padding-left:   16rem   !important; }</div>
           <div class="!pr:0@p">.!pr:0@p { padding-right:  initial !important; }</div>
           <div class="!pr:i@p">.!pr:i@p { padding-right:  inherit !important; }</div>
+          <div class="!pr:z@p">.!pr:z@p { padding-right:  0       !important; }</div>
+          <div class="!pr:q@p">.!pr:q@p { padding-right:  0.25rem !important; }</div>
           <div class="!pr:h@p">.!pr:h@p { padding-right:  0.5rem  !important; }</div>
           <div class="!pr:1@p">.!pr:1@p { padding-right:  1rem    !important; }</div>
           <div class="!pr:2@p">.!pr:2@p { padding-right:  2rem    !important; }</div>
@@ -887,6 +931,8 @@
           <div class="!pr:g@p">.!pr:g@p { padding-right:  16rem   !important; }</div>
           <div class="!pt:0@p">.!pt:0@p { padding-top:    initial !important; }</div>
           <div class="!pt:i@p">.!pt:i@p { padding-top:    inherit !important; }</div>
+          <div class="!pt:z@p">.!pt:z@p { padding-top:    0       !important; }</div>
+          <div class="!pt:q@p">.!pt:q@p { padding-top:    0.25rem !important; }</div>
           <div class="!pt:h@p">.!pt:h@p { padding-top:    0.5rem  !important; }</div>
           <div class="!pt:1@p">.!pt:1@p { padding-top:    1rem    !important; }</div>
           <div class="!pt:2@p">.!pt:2@p { padding-top:    2rem    !important; }</div>
@@ -895,6 +941,8 @@
           <div class="!pt:g@p">.!pt:g@p { padding-top:    16rem   !important; }</div>
           <div class="!pb:0@p">.!pb:0@p { padding-bottom: initial !important; }</div>
           <div class="!pb:i@p">.!pb:i@p { padding-bottom: inherit !important; }</div>
+          <div class="!pb:z@p">.!pb:z@p { padding-bottom: 0       !important; }</div>
+          <div class="!pb:q@p">.!pb:q@p { padding-bottom: 0.25rem !important; }</div>
           <div class="!pb:h@p">.!pb:h@p { padding-bottom: 0.5rem  !important; }</div>
           <div class="!pb:1@p">.!pb:1@p { padding-bottom: 1rem    !important; }</div>
           <div class="!pb:2@p">.!pb:2@p { padding-bottom: 2rem    !important; }</div>
@@ -903,6 +951,8 @@
           <div class="!pb:g@p">.!pb:g@p { padding-bottom: 16rem   !important; }</div>
           <div class="!px:0@p">.!px:0@p { padding-left:   initial !important; padding-right:  initial !important; }</div>
           <div class="!px:i@p">.!px:i@p { padding-left:   inherit !important; padding-right:  inherit !important; }</div>
+          <div class="!px:z@p">.!px:z@p { padding-left:   0       !important; padding-right:  0       !important; }</div>
+          <div class="!px:q@p">.!px:q@p { padding-left:   0.25rem !important; padding-right:  0.25rem !important; }</div>
           <div class="!px:h@p">.!px:h@p { padding-left:   0.5rem  !important; padding-right:  0.5rem  !important; }</div>
           <div class="!px:1@p">.!px:1@p { padding-left:   1rem    !important; padding-right:  1rem    !important; }</div>
           <div class="!px:2@p">.!px:2@p { padding-left:   2rem    !important; padding-right:  2rem    !important; }</div>
@@ -911,6 +961,8 @@
           <div class="!px:g@p">.!px:g@p { padding-left:   16rem   !important; padding-right:  16rem   !important; }</div>
           <div class="!py:0@p">.!py:0@p { padding-top:    initial !important; padding-bottom: initial !important; }</div>
           <div class="!py:0@p">.!py:0@p { padding-top:    inherit !important; padding-bottom: inherit !important; }</div>
+          <div class="!py:z@p">.!py:z@p { padding-top:    0       !important; padding-bottom: 0       !important; }</div>
+          <div class="!py:q@p">.!py:q@p { padding-top:    0.25rem !important; padding-bottom: 0.25rem !important; }</div>
           <div class="!py:h@p">.!py:h@p { padding-top:    0.5rem  !important; padding-bottom: 0.5rem  !important; }</div>
           <div class="!py:1@p">.!py:1@p { padding-top:    1rem    !important; padding-bottom: 1rem    !important; }</div>
           <div class="!py:2@p">.!py:2@p { padding-top:    2rem    !important; padding-bottom: 2rem    !important; }</div>
@@ -919,6 +971,8 @@
           <div class="!py:g@p">.!py:g@p { padding-top:    16rem   !important; padding-bottom: 16rem   !important; }</div>
           <div class="!pa:0@p">.!pa:0@p { padding:        initial !important; }</div>
           <div class="!pa:0@p">.!pa:0@p { padding:        inherit !important; }</div>
+          <div class="!pa:z@p">.!pa:z@p { padding:        0       !important; }</div>
+          <div class="!pa:q@p">.!pa:q@p { padding:        0.25rem !important; }</div>
           <div class="!pa:h@p">.!pa:h@p { padding:        0.5rem  !important; }</div>
           <div class="!pa:1@p">.!pa:1@p { padding:        1rem    !important; }</div>
           <div class="!pa:2@p">.!pa:2@p { padding:        2rem    !important; }</div>
@@ -934,6 +988,8 @@
           <div class="!ml:0">  .!ml:0   { margin-left:   initial !important; }</div>
           <div class="!ml:i">  .!ml:i   { margin-left:   inherit !important; }</div>
           <div class="!ml:a">  .!ml:a   { margin-left:   auto    !important; }</div>
+          <div class="!ml:z">  .!ml:z   { margin-left:   0       !important; }</div>
+          <div class="!ml:q">  .!ml:q   { margin-left:   0.25rem !important; }</div>
           <div class="!ml:h">  .!ml:h   { margin-left:   0.5rem  !important; }</div>
           <div class="!ml:1">  .!ml:1   { margin-left:   1rem    !important; }</div>
           <div class="!ml:2">  .!ml:2   { margin-left:   2rem    !important; }</div>
@@ -943,6 +999,8 @@
           <div class="!mr:0">  .!mr:0   { margin-right:  initial !important; }</div>
           <div class="!mr:i">  .!mr:i   { margin-right:  inherit !important; }</div>
           <div class="!mr:a">  .!mr:a   { margin-right:  auto    !important; }</div>
+          <div class="!mr:z">  .!mr:z   { margin-right:  0       !important; }</div>
+          <div class="!mr:q">  .!mr:q   { margin-right:  0.25rem !important; }</div>
           <div class="!mr:h">  .!mr:h   { margin-right:  0.5rem  !important; }</div>
           <div class="!mr:1">  .!mr:1   { margin-right:  1rem    !important; }</div>
           <div class="!mr:2">  .!mr:2   { margin-right:  2rem    !important; }</div>
@@ -952,6 +1010,8 @@
           <div class="!mt:0">  .!mt:0   { margin-top:    initial !important; }</div>
           <div class="!mt:i">  .!mt:i   { margin-top:    inherit !important; }</div>
           <div class="!mt:a">  .!mt:a   { margin-top:    auto    !important; }</div>
+          <div class="!mt:z">  .!mt:z   { margin-top:    0       !important; }</div>
+          <div class="!mt:q">  .!mt:q   { margin-top:    0.25rem !important; }</div>
           <div class="!mt:h">  .!mt:h   { margin-top:    0.5rem  !important; }</div>
           <div class="!mt:1">  .!mt:1   { margin-top:    1rem    !important; }</div>
           <div class="!mt:2">  .!mt:2   { margin-top:    2rem    !important; }</div>
@@ -961,6 +1021,8 @@
           <div class="!mb:0">  .!mb:0   { margin-bottom: initial !important; }</div>
           <div class="!mb:i">  .!mb:i   { margin-bottom: inherit !important; }</div>
           <div class="!mb:a">  .!mb:a   { margin-bottom: auto    !important; }</div>
+          <div class="!mb:z">  .!mb:z   { margin-bottom: 0       !important; }</div>
+          <div class="!mb:q">  .!mb:q   { margin-bottom: 0.25rem !important; }</div>
           <div class="!mb:h">  .!mb:h   { margin-bottom: 0.5rem  !important; }</div>
           <div class="!mb:1">  .!mb:1   { margin-bottom: 1rem    !important; }</div>
           <div class="!mb:2">  .!mb:2   { margin-bottom: 2rem    !important; }</div>
@@ -970,6 +1032,8 @@
           <div class="!mx:0">  .!mx:0   { margin-left:   initial !important; margin-right:  initial !important; }</div>
           <div class="!mx:i">  .!mx:i   { margin-left:   inherit !important; margin-right:  inherit !important; }</div>
           <div class="!mx:a">  .!mx:a   { margin-left:   auto    !important; margin-right:  auto    !important; }</div>
+          <div class="!mx:z">  .!mx:z   { margin-left:   0       !important; margin-right:  0       !important; }</div>
+          <div class="!mx:q">  .!mx:q   { margin-left:   0.25rem !important; margin-right:  0.25rem !important; }</div>
           <div class="!mx:h">  .!mx:h   { margin-left:   0.5rem  !important; margin-right:  0.5rem  !important; }</div>
           <div class="!mx:1">  .!mx:1   { margin-left:   1rem    !important; margin-right:  1rem    !important; }</div>
           <div class="!mx:2">  .!mx:2   { margin-left:   2rem    !important; margin-right:  2rem    !important; }</div>
@@ -979,6 +1043,8 @@
           <div class="!my:0">  .!my:0   { margin-top:    initial !important; margin-bottom: initial !important; }</div>
           <div class="!my:i">  .!my:i   { margin-top:    inherit !important; margin-bottom: inherit !important; }</div>
           <div class="!my:a">  .!my:a   { margin-top:    auto    !important; margin-bottom: auto    !important; }</div>
+          <div class="!my:z">  .!my:z   { margin-top:    0       !important; margin-bottom: 0       !important; }</div>
+          <div class="!my:q">  .!my:q   { margin-top:    0.25rem !important; margin-bottom: 0.25rem !important; }</div>
           <div class="!my:h">  .!my:h   { margin-top:    0.5rem  !important; margin-bottom: 0.5rem  !important; }</div>
           <div class="!my:1">  .!my:1   { margin-top:    1rem    !important; margin-bottom: 1rem    !important; }</div>
           <div class="!my:2">  .!my:2   { margin-top:    2rem    !important; margin-bottom: 2rem    !important; }</div>
@@ -988,6 +1054,8 @@
           <div class="!ma:0">  .!ma:0   { margin:        initial !important; }</div>
           <div class="!ma:i">  .!ma:i   { margin:        inherit !important; }</div>
           <div class="!ma:a">  .!ma:a   { margin:        auto    !important; }</div>
+          <div class="!ma:z">  .!ma:z   { margin:        0       !important; }</div>
+          <div class="!ma:q">  .!ma:q   { margin:        0.25rem !important; }</div>
           <div class="!ma:h">  .!ma:h   { margin:        0.5rem  !important; }</div>
           <div class="!ma:1">  .!ma:1   { margin:        1rem    !important; }</div>
           <div class="!ma:2">  .!ma:2   { margin:        2rem    !important; }</div>
@@ -1000,6 +1068,8 @@
           <div class="!ml:0@s">.!ml:0@s { margin-left:   initial !important; }</div>
           <div class="!ml:i@s">.!ml:i@s { margin-left:   inherit !important; }</div>
           <div class="!ml:a@s">.!ml:a@s { margin-left:   auto    !important; }</div>
+          <div class="!ml:z@s">.!ml:z@s { margin-left:   0       !important; }</div>
+          <div class="!ml:q@s">.!ml:q@s { margin-left:   0.25rem !important; }</div>
           <div class="!ml:h@s">.!ml:h@s { margin-left:   0.5rem  !important; }</div>
           <div class="!ml:1@s">.!ml:1@s { margin-left:   1rem    !important; }</div>
           <div class="!ml:2@s">.!ml:2@s { margin-left:   2rem    !important; }</div>
@@ -1009,6 +1079,8 @@
           <div class="!mr:0@s">.!mr:0@s { margin-right:  initial !important; }</div>
           <div class="!mr:i@s">.!mr:i@s { margin-right:  inherit !important; }</div>
           <div class="!mr:a@s">.!mr:a@s { margin-right:  auto    !important; }</div>
+          <div class="!mr:z@s">.!mr:z@s { margin-right:  0       !important; }</div>
+          <div class="!mr:q@s">.!mr:q@s { margin-right:  0.25rem !important; }</div>
           <div class="!mr:h@s">.!mr:h@s { margin-right:  0.5rem  !important; }</div>
           <div class="!mr:1@s">.!mr:1@s { margin-right:  1rem    !important; }</div>
           <div class="!mr:2@s">.!mr:2@s { margin-right:  2rem    !important; }</div>
@@ -1018,6 +1090,8 @@
           <div class="!mt:0@s">.!mt:0@s { margin-top:    initial !important; }</div>
           <div class="!mt:i@s">.!mt:i@s { margin-top:    inherit !important; }</div>
           <div class="!mt:a@s">.!mt:a@s { margin-top:    auto    !important; }</div>
+          <div class="!mt:z@s">.!mt:z@s { margin-top:    0       !important; }</div>
+          <div class="!mt:q@s">.!mt:q@s { margin-top:    0.25rem !important; }</div>
           <div class="!mt:h@s">.!mt:h@s { margin-top:    0.5rem  !important; }</div>
           <div class="!mt:1@s">.!mt:1@s { margin-top:    1rem    !important; }</div>
           <div class="!mt:2@s">.!mt:2@s { margin-top:    2rem    !important; }</div>
@@ -1027,6 +1101,8 @@
           <div class="!mb:0@s">.!mb:0@s { margin-bottom: initial !important; }</div>
           <div class="!mb:i@s">.!mb:i@s { margin-bottom: inherit !important; }</div>
           <div class="!mb:a@s">.!mb:a@s { margin-bottom: auto    !important; }</div>
+          <div class="!mb:z@s">.!mb:z@s { margin-bottom: 0       !important; }</div>
+          <div class="!mb:q@s">.!mb:q@s { margin-bottom: 0.25rem !important; }</div>
           <div class="!mb:h@s">.!mb:h@s { margin-bottom: 0.5rem  !important; }</div>
           <div class="!mb:1@s">.!mb:1@s { margin-bottom: 1rem    !important; }</div>
           <div class="!mb:2@s">.!mb:2@s { margin-bottom: 2rem    !important; }</div>
@@ -1036,6 +1112,8 @@
           <div class="!mx:0@s">.!mx:0@s { margin-left:   initial !important; margin-right:  initial !important; }</div>
           <div class="!mx:i@s">.!mx:i@s { margin-left:   inherit !important; margin-right:  inherit !important; }</div>
           <div class="!mx:a@s">.!mx:a@s { margin-left:   auto    !important; margin-right:  auto    !important; }</div>
+          <div class="!mx:z@s">.!mx:z@s { margin-left:   0       !important; margin-right:  0       !important; }</div>
+          <div class="!mx:q@s">.!mx:q@s { margin-left:   0.25rem !important; margin-right:  0.25rem !important; }</div>
           <div class="!mx:h@s">.!mx:h@s { margin-left:   0.5rem  !important; margin-right:  0.5rem  !important; }</div>
           <div class="!mx:1@s">.!mx:1@s { margin-left:   1rem    !important; margin-right:  1rem    !important; }</div>
           <div class="!mx:2@s">.!mx:2@s { margin-left:   2rem    !important; margin-right:  2rem    !important; }</div>
@@ -1045,6 +1123,8 @@
           <div class="!my:0@s">.!my:0@s { margin-top:    initial !important; margin-bottom: initial !important; }</div>
           <div class="!my:i@s">.!my:i@s { margin-top:    inherit !important; margin-bottom: inherit !important; }</div>
           <div class="!my:a@s">.!my:a@s { margin-top:    auto    !important; margin-bottom: auto    !important; }</div>
+          <div class="!my:z@s">.!my:z@s { margin-top:    0       !important; margin-bottom: 0       !important; }</div>
+          <div class="!my:q@s">.!my:q@s { margin-top:    0.25rem !important; margin-bottom: 0.25rem !important; }</div>
           <div class="!my:h@s">.!my:h@s { margin-top:    0.5rem  !important; margin-bottom: 0.5rem  !important; }</div>
           <div class="!my:1@s">.!my:1@s { margin-top:    1rem    !important; margin-bottom: 1rem    !important; }</div>
           <div class="!my:2@s">.!my:2@s { margin-top:    2rem    !important; margin-bottom: 2rem    !important; }</div>
@@ -1054,6 +1134,8 @@
           <div class="!ma:0@s">.!ma:0@s { margin:        initial !important; }</div>
           <div class="!ma:i@s">.!ma:i@s { margin:        inherit !important; }</div>
           <div class="!ma:a@s">.!ma:a@s { margin:        auto    !important; }</div>
+          <div class="!ma:z@s">.!ma:z@s { margin:        0       !important; }</div>
+          <div class="!ma:q@s">.!ma:q@s { margin:        0.25rem !important; }</div>
           <div class="!ma:h@s">.!ma:h@s { margin:        0.5rem  !important; }</div>
           <div class="!ma:1@s">.!ma:1@s { margin:        1rem    !important; }</div>
           <div class="!ma:2@s">.!ma:2@s { margin:        2rem    !important; }</div>
@@ -1066,6 +1148,8 @@
           <div class="!ml:0@p">.!ml:0@p { margin-left:   initial !important; }</div>
           <div class="!ml:i@p">.!ml:i@p { margin-left:   inherit !important; }</div>
           <div class="!ml:a@p">.!ml:a@p { margin-left:   auto    !important; }</div>
+          <div class="!ml:z@p">.!ml:z@p { margin-left:   0       !important; }</div>
+          <div class="!ml:q@p">.!ml:q@p { margin-left:   0.25rem !important; }</div>
           <div class="!ml:h@p">.!ml:h@p { margin-left:   0.5rem  !important; }</div>
           <div class="!ml:1@p">.!ml:1@p { margin-left:   1rem    !important; }</div>
           <div class="!ml:2@p">.!ml:2@p { margin-left:   2rem    !important; }</div>
@@ -1075,6 +1159,8 @@
           <div class="!mr:0@p">.!mr:0@p { margin-right:  initial !important; }</div>
           <div class="!mr:i@p">.!mr:i@p { margin-right:  inherit !important; }</div>
           <div class="!mr:a@p">.!mr:a@p { margin-right:  auto    !important; }</div>
+          <div class="!mr:z@p">.!mr:z@p { margin-right:  0       !important; }</div>
+          <div class="!mr:q@p">.!mr:q@p { margin-right:  0.25rem !important; }</div>
           <div class="!mr:h@p">.!mr:h@p { margin-right:  0.5rem  !important; }</div>
           <div class="!mr:1@p">.!mr:1@p { margin-right:  1rem    !important; }</div>
           <div class="!mr:2@p">.!mr:2@p { margin-right:  2rem    !important; }</div>
@@ -1084,6 +1170,8 @@
           <div class="!mt:0@p">.!mt:0@p { margin-top:    initial !important; }</div>
           <div class="!mt:i@p">.!mt:i@p { margin-top:    inherit !important; }</div>
           <div class="!mt:a@p">.!mt:a@p { margin-top:    auto    !important; }</div>
+          <div class="!mt:z@p">.!mt:z@p { margin-top:    0       !important; }</div>
+          <div class="!mt:q@p">.!mt:q@p { margin-top:    0.25rem !important; }</div>
           <div class="!mt:h@p">.!mt:h@p { margin-top:    0.5rem  !important; }</div>
           <div class="!mt:1@p">.!mt:1@p { margin-top:    1rem    !important; }</div>
           <div class="!mt:2@p">.!mt:2@p { margin-top:    2rem    !important; }</div>
@@ -1093,6 +1181,8 @@
           <div class="!mb:0@p">.!mb:0@p { margin-bottom: initial !important; }</div>
           <div class="!mb:i@p">.!mb:i@p { margin-bottom: inherit !important; }</div>
           <div class="!mb:a@p">.!mb:a@p { margin-bottom: auto    !important; }</div>
+          <div class="!mb:z@p">.!mb:z@p { margin-bottom: 0       !important; }</div>
+          <div class="!mb:q@p">.!mb:q@p { margin-bottom: 0.25rem !important; }</div>
           <div class="!mb:h@p">.!mb:h@p { margin-bottom: 0.5rem  !important; }</div>
           <div class="!mb:1@p">.!mb:1@p { margin-bottom: 1rem    !important; }</div>
           <div class="!mb:2@p">.!mb:2@p { margin-bottom: 2rem    !important; }</div>
@@ -1102,6 +1192,8 @@
           <div class="!mx:0@p">.!mx:0@p { margin-left:   initial !important; margin-right:  initial !important; }</div>
           <div class="!mx:i@p">.!mx:i@p { margin-left:   inherit !important; margin-right:  inherit !important; }</div>
           <div class="!mx:a@p">.!mx:a@p { margin-left:   auto    !important; margin-right:  auto    !important; }</div>
+          <div class="!mx:z@p">.!mx:z@p { margin-left:   0       !important; margin-right:  0       !important; }</div>
+          <div class="!mx:q@p">.!mx:q@p { margin-left:   0.25rem !important; margin-right:  0.25rem !important; }</div>
           <div class="!mx:h@p">.!mx:h@p { margin-left:   0.5rem  !important; margin-right:  0.5rem  !important; }</div>
           <div class="!mx:1@p">.!mx:1@p { margin-left:   1rem    !important; margin-right:  1rem    !important; }</div>
           <div class="!mx:2@p">.!mx:2@p { margin-left:   2rem    !important; margin-right:  2rem    !important; }</div>
@@ -1111,6 +1203,8 @@
           <div class="!my:0@p">.!my:0@p { margin-top:    initial !important; margin-bottom: initial !important; }</div>
           <div class="!my:i@p">.!my:i@p { margin-top:    inherit !important; margin-bottom: inherit !important; }</div>
           <div class="!my:a@p">.!my:a@p { margin-top:    auto    !important; margin-bottom: auto    !important; }</div>
+          <div class="!my:z@p">.!my:z@p { margin-top:    0       !important; margin-bottom: 0       !important; }</div>
+          <div class="!my:q@p">.!my:q@p { margin-top:    0.25rem !important; margin-bottom: 0.25rem !important; }</div>
           <div class="!my:h@p">.!my:h@p { margin-top:    0.5rem  !important; margin-bottom: 0.5rem  !important; }</div>
           <div class="!my:1@p">.!my:1@p { margin-top:    1rem    !important; margin-bottom: 1rem    !important; }</div>
           <div class="!my:2@p">.!my:2@p { margin-top:    2rem    !important; margin-bottom: 2rem    !important; }</div>
@@ -1120,6 +1214,8 @@
           <div class="!ma:0@p">.!ma:0@p { margin:        initial !important; }</div>
           <div class="!ma:i@p">.!ma:i@p { margin:        inherit !important; }</div>
           <div class="!ma:a@p">.!ma:a@p { margin:        auto    !important; }</div>
+          <div class="!ma:z@p">.!ma:z@p { margin:        0       !important; }</div>
+          <div class="!ma:q@p">.!ma:q@p { margin:        0.25rem !important; }</div>
           <div class="!ma:h@p">.!ma:h@p { margin:        0.5rem  !important; }</div>
           <div class="!ma:1@p">.!ma:1@p { margin:        1rem    !important; }</div>
           <div class="!ma:2@p">.!ma:2@p { margin:        2rem    !important; }</div>
@@ -1699,40 +1795,8 @@
           <div class="!bc:i  ">  .!bc:i     { background-color: inherit      !important; }</div>
           <div class="!bc:t  ">  .!bc:t     { background-color: transparent  !important; }</div>
           <div class="!bc:c  ">  .!bc:c     { background-color: currentColor !important; }</div>
-          <div class="!bc:b  ">  .!bc:b     { background-color: #000000      !important; } /* black */</div>
-          <div class="!bc:w  ">  .!bc:w     { background-color: #ffffff      !important; } /* white */</div>
-          <div class="!bc:s03">  .!bc:s03   { background-color: #002b36      !important; } /* solarized base03  */</div>
-          <div class="!bc:s02">  .!bc:s02   { background-color: #073642      !important; } /* solarized base02  */</div>
-          <div class="!bc:s01">  .!bc:s01   { background-color: #586e75      !important; } /* solarized base01  */</div>
-          <div class="!bc:s00">  .!bc:s00   { background-color: #657b83      !important; } /* solarized base00  */</div>
-          <div class="!bc:s0 ">  .!bc:s0    { background-color: #839496      !important; } /* solarized base0   */</div>
-          <div class="!bc:s1 ">  .!bc:s1    { background-color: #93a1a1      !important; } /* solarized base1   */</div>
-          <div class="!bc:s2 ">  .!bc:s2    { background-color: #eee8d5      !important; } /* solarized base2   */</div>
-          <div class="!bc:s3 ">  .!bc:s3    { background-color: #fdf6e3      !important; } /* solarized base3   */</div>
-          <div class="!bc:sr ">  .!bc:sr    { background-color: #dc322f      !important; } /* solarized red     */</div>
-          <div class="!bc:so ">  .!bc:so    { background-color: #cb4b16      !important; } /* solarized orange  */</div>
-          <div class="!bc:sy ">  .!bc:sy    { background-color: #b58900      !important; } /* solarized yellow  */</div>
-          <div class="!bc:sg ">  .!bc:sg    { background-color: #859900      !important; } /* solarized green   */</div>
-          <div class="!bc:sc ">  .!bc:sc    { background-color: #2aa198      !important; } /* solarized cyan    */</div>
-          <div class="!bc:sb ">  .!bc:sb    { background-color: #268bd2      !important; } /* solarized blue    */</div>
-          <div class="!bc:sv ">  .!bc:sv    { background-color: #6c71c4      !important; } /* solarized violet  */</div>
-          <div class="!bc:sm ">  .!bc:sm    { background-color: #d33682      !important; } /* solarized magenta */</div>
-          <div class="!bc:l03">  .!bc:l03   { background-color: #360b00      !important; } /* lunarized base03  */</div>
-          <div class="!bc:l02">  .!bc:l02   { background-color: #421307      !important; } /* lunarized base02  */</div>
-          <div class="!bc:l01">  .!bc:l01   { background-color: #755f58      !important; } /* lunarized base01  */</div>
-          <div class="!bc:l00">  .!bc:l00   { background-color: #836d65      !important; } /* lunarized base00  */</div>
-          <div class="!bc:l0 ">  .!bc:l0    { background-color: #968583      !important; } /* lunarized base0   */</div>
-          <div class="!bc:l1 ">  .!bc:l1    { background-color: #a19393      !important; } /* lunarized base1   */</div>
-          <div class="!bc:l2 ">  .!bc:l2    { background-color: #d5dbee      !important; } /* lunarized base2   */</div>
-          <div class="!bc:l3 ">  .!bc:l3    { background-color: #e3eafd      !important; } /* lunarized base3   */</div>
-          <div class="!bc:lc ">  .!bc:lc    { background-color: #23cdd0      !important; } /* lunarized cyan    */</div>
-          <div class="!bc:lb ">  .!bc:lb    { background-color: #34b4e9      !important; } /* lunarized blue    */</div>
-          <div class="!bc:li ">  .!bc:li    { background-color: #4a76ff      !important; } /* lunarized indigo  */</div>
-          <div class="!bc:lv ">  .!bc:lv    { background-color: #7a66ff      !important; } /* lunarized violet  */</div>
-          <div class="!bc:lr ">  .!bc:lr    { background-color: #d55e67      !important; } /* lunarized red     */</div>
-          <div class="!bc:lo ">  .!bc:lo    { background-color: #d9742d      !important; } /* lunarized orange  */</div>
-          <div class="!bc:ly ">  .!bc:ly    { background-color: #938e3b      !important; } /* lunarized yellow  */</div>
-          <div class="!bc:lg ">  .!bc:lg    { background-color: #2cc97d      !important; } /* lunarized green   */</div>
+          <div class="!bc:b  ">  .!bc:b     { background-color: #000000      !important; }</div>
+          <div class="!bc:w  ">  .!bc:w     { background-color: #ffffff      !important; }</div>
         </section>
         <section>
           <h3>@media screen</h3>
@@ -1740,40 +1804,8 @@
           <div class="!bc:i@s  ">.!bc:i@s   { background-color: inherit      !important; }</div>
           <div class="!bc:t@s  ">.!bc:t@s   { background-color: transparent  !important; }</div>
           <div class="!bc:c@s  ">.!bc:c@s   { background-color: currentColor !important; }</div>
-          <div class="!bc:b@s  ">.!bc:b@s   { background-color: #000000      !important; } /* black */</div>
-          <div class="!bc:w@s  ">.!bc:w@s   { background-color: #ffffff      !important; } /* white */</div>
-          <div class="!bc:s03@s">.!bc:s03@s { background-color: #002b36      !important; } /* solarized base03  */</div>
-          <div class="!bc:s02@s">.!bc:s02@s { background-color: #073642      !important; } /* solarized base02  */</div>
-          <div class="!bc:s01@s">.!bc:s01@s { background-color: #586e75      !important; } /* solarized base01  */</div>
-          <div class="!bc:s00@s">.!bc:s00@s { background-color: #657b83      !important; } /* solarized base00  */</div>
-          <div class="!bc:s0@s ">.!bc:s0@s  { background-color: #839496      !important; } /* solarized base0   */</div>
-          <div class="!bc:s1@s ">.!bc:s1@s  { background-color: #93a1a1      !important; } /* solarized base1   */</div>
-          <div class="!bc:s2@s ">.!bc:s2@s  { background-color: #eee8d5      !important; } /* solarized base2   */</div>
-          <div class="!bc:s3@s ">.!bc:s3@s  { background-color: #fdf6e3      !important; } /* solarized base3   */</div>
-          <div class="!bc:sr@s ">.!bc:sr@s  { background-color: #dc322f      !important; } /* solarized red     */</div>
-          <div class="!bc:so@s ">.!bc:so@s  { background-color: #cb4b16      !important; } /* solarized orange  */</div>
-          <div class="!bc:sy@s ">.!bc:sy@s  { background-color: #b58900      !important; } /* solarized yellow  */</div>
-          <div class="!bc:sg@s ">.!bc:sg@s  { background-color: #859900      !important; } /* solarized green   */</div>
-          <div class="!bc:sc@s ">.!bc:sc@s  { background-color: #2aa198      !important; } /* solarized cyan    */</div>
-          <div class="!bc:sb@s ">.!bc:sb@s  { background-color: #268bd2      !important; } /* solarized blue    */</div>
-          <div class="!bc:sv@s ">.!bc:sv@s  { background-color: #6c71c4      !important; } /* solarized violet  */</div>
-          <div class="!bc:sm@s ">.!bc:sm@s  { background-color: #d33682      !important; } /* solarized magenta */</div>
-          <div class="!bc:l03@s">.!bc:l03@s { background-color: #360b00      !important; } /* lunarized base03  */</div>
-          <div class="!bc:l02@s">.!bc:l02@s { background-color: #421307      !important; } /* lunarized base02  */</div>
-          <div class="!bc:l01@s">.!bc:l01@s { background-color: #755f58      !important; } /* lunarized base01  */</div>
-          <div class="!bc:l00@s">.!bc:l00@s { background-color: #836d65      !important; } /* lunarized base00  */</div>
-          <div class="!bc:l0@s ">.!bc:l0@s  { background-color: #968583      !important; } /* lunarized base0   */</div>
-          <div class="!bc:l1@s ">.!bc:l1@s  { background-color: #a19393      !important; } /* lunarized base1   */</div>
-          <div class="!bc:l2@s ">.!bc:l2@s  { background-color: #d5dbee      !important; } /* lunarized base2   */</div>
-          <div class="!bc:l3@s ">.!bc:l3@s  { background-color: #e3eafd      !important; } /* lunarized base3   */</div>
-          <div class="!bc:lc@s ">.!bc:lc@s  { background-color: #23cdd0      !important; } /* lunarized cyan    */</div>
-          <div class="!bc:lb@s ">.!bc:lb@s  { background-color: #34b4e9      !important; } /* lunarized blue    */</div>
-          <div class="!bc:li@s ">.!bc:li@s  { background-color: #4a76ff      !important; } /* lunarized indigo  */</div>
-          <div class="!bc:lv@s ">.!bc:lv@s  { background-color: #7a66ff      !important; } /* lunarized violet  */</div>
-          <div class="!bc:lr@s ">.!bc:lr@s  { background-color: #d55e67      !important; } /* lunarized red     */</div>
-          <div class="!bc:lo@s ">.!bc:lo@s  { background-color: #d9742d      !important; } /* lunarized orange  */</div>
-          <div class="!bc:ly@s ">.!bc:ly@s  { background-color: #938e3b      !important; } /* lunarized yellow  */</div>
-          <div class="!bc:lg@s ">.!bc:lg@s  { background-color: #2cc97d      !important; } /* lunarized green   */</div>
+          <div class="!bc:b@s  ">.!bc:b@s   { background-color: #000000      !important; }</div>
+          <div class="!bc:w@s  ">.!bc:w@s   { background-color: #ffffff      !important; }</div>
         </section>
         <section>
           <h3>@media print</h3>
@@ -1781,40 +1813,8 @@
           <div class="!bc:i@p  ">.!bc:i@p   { background-color: inherit      !important; }</div>
           <div class="!bc:t@p  ">.!bc:t@p   { background-color: transparent  !important; }</div>
           <div class="!bc:c@p  ">.!bc:c@p   { background-color: currentColor !important; }</div>
-          <div class="!bc:b@p  ">.!bc:b@p   { background-color: #000000      !important; } /* black */</div>
-          <div class="!bc:w@p  ">.!bc:w@p   { background-color: #ffffff      !important; } /* white */</div>
-          <div class="!bc:s03@p">.!bc:s03@p { background-color: #002b36      !important; } /* solarized base03  */</div>
-          <div class="!bc:s02@p">.!bc:s02@p { background-color: #073642      !important; } /* solarized base02  */</div>
-          <div class="!bc:s01@p">.!bc:s01@p { background-color: #586e75      !important; } /* solarized base01  */</div>
-          <div class="!bc:s00@p">.!bc:s00@p { background-color: #657b83      !important; } /* solarized base00  */</div>
-          <div class="!bc:s0@p ">.!bc:s0@p  { background-color: #839496      !important; } /* solarized base0   */</div>
-          <div class="!bc:s1@p ">.!bc:s1@p  { background-color: #93a1a1      !important; } /* solarized base1   */</div>
-          <div class="!bc:s2@p ">.!bc:s2@p  { background-color: #eee8d5      !important; } /* solarized base2   */</div>
-          <div class="!bc:s3@p ">.!bc:s3@p  { background-color: #fdf6e3      !important; } /* solarized base3   */</div>
-          <div class="!bc:sr@p ">.!bc:sr@p  { background-color: #dc322f      !important; } /* solarized red     */</div>
-          <div class="!bc:so@p ">.!bc:so@p  { background-color: #cb4b16      !important; } /* solarized orange  */</div>
-          <div class="!bc:sy@p ">.!bc:sy@p  { background-color: #b58900      !important; } /* solarized yellow  */</div>
-          <div class="!bc:sg@p ">.!bc:sg@p  { background-color: #859900      !important; } /* solarized green   */</div>
-          <div class="!bc:sc@p ">.!bc:sc@p  { background-color: #2aa198      !important; } /* solarized cyan    */</div>
-          <div class="!bc:sb@p ">.!bc:sb@p  { background-color: #268bd2      !important; } /* solarized blue    */</div>
-          <div class="!bc:sv@p ">.!bc:sv@p  { background-color: #6c71c4      !important; } /* solarized violet  */</div>
-          <div class="!bc:sm@p ">.!bc:sm@p  { background-color: #d33682      !important; } /* solarized magenta */</div>
-          <div class="!bc:l03@p">.!bc:l03@p { background-color: #360b00      !important; } /* lunarized base03  */</div>
-          <div class="!bc:l02@p">.!bc:l02@p { background-color: #421307      !important; } /* lunarized base02  */</div>
-          <div class="!bc:l01@p">.!bc:l01@p { background-color: #755f58      !important; } /* lunarized base01  */</div>
-          <div class="!bc:l00@p">.!bc:l00@p { background-color: #836d65      !important; } /* lunarized base00  */</div>
-          <div class="!bc:l0@p ">.!bc:l0@p  { background-color: #968583      !important; } /* lunarized base0   */</div>
-          <div class="!bc:l1@p ">.!bc:l1@p  { background-color: #a19393      !important; } /* lunarized base1   */</div>
-          <div class="!bc:l2@p ">.!bc:l2@p  { background-color: #d5dbee      !important; } /* lunarized base2   */</div>
-          <div class="!bc:l3@p ">.!bc:l3@p  { background-color: #e3eafd      !important; } /* lunarized base3   */</div>
-          <div class="!bc:lc@p ">.!bc:lc@p  { background-color: #23cdd0      !important; } /* lunarized cyan    */</div>
-          <div class="!bc:lb@p ">.!bc:lb@p  { background-color: #34b4e9      !important; } /* lunarized blue    */</div>
-          <div class="!bc:li@p ">.!bc:li@p  { background-color: #4a76ff      !important; } /* lunarized indigo  */</div>
-          <div class="!bc:lv@p ">.!bc:lv@p  { background-color: #7a66ff      !important; } /* lunarized violet  */</div>
-          <div class="!bc:lr@p ">.!bc:lr@p  { background-color: #d55e67      !important; } /* lunarized red     */</div>
-          <div class="!bc:lo@p ">.!bc:lo@p  { background-color: #d9742d      !important; } /* lunarized orange  */</div>
-          <div class="!bc:ly@p ">.!bc:ly@p  { background-color: #938e3b      !important; } /* lunarized yellow  */</div>
-          <div class="!bc:lg@p ">.!bc:lg@p  { background-color: #2cc97d      !important; } /* lunarized green   */</div>
+          <div class="!bc:b@p  ">.!bc:b@p   { background-color: #000000      !important; }</div>
+          <div class="!bc:w@p  ">.!bc:w@p   { background-color: #ffffff      !important; }</div>
         </section>
         <section>
           <h3>pseudo-classes :hover and :focus</h3>
@@ -2145,40 +2145,8 @@
           <div class="!c:i  ">  .!c:i     { color: inherit      !important; }</div>
           <div class="!c:t  ">  .!c:t     { color: transparent  !important; }</div>
           <div class="!c:c  ">  .!c:c     { color: currentColor !important; }</div>
-          <div class="!c:b  ">  .!c:b     { color: #000000      !important; } /* black */</div>
-          <div class="!c:w  ">  .!c:w     { color: #ffffff      !important; } /* white */</div>
-          <div class="!c:s03">  .!c:s03   { color: #002b36      !important; } /* solarized base03  */</div>
-          <div class="!c:s02">  .!c:s02   { color: #073642      !important; } /* solarized base02  */</div>
-          <div class="!c:s01">  .!c:s01   { color: #586e75      !important; } /* solarized base01  */</div>
-          <div class="!c:s00">  .!c:s00   { color: #657b83      !important; } /* solarized base00  */</div>
-          <div class="!c:s0 ">  .!c:s0    { color: #839496      !important; } /* solarized base0   */</div>
-          <div class="!c:s1 ">  .!c:s1    { color: #93a1a1      !important; } /* solarized base1   */</div>
-          <div class="!c:s2 ">  .!c:s2    { color: #eee8d5      !important; } /* solarized base2   */</div>
-          <div class="!c:s3 ">  .!c:s3    { color: #fdf6e3      !important; } /* solarized base3   */</div>
-          <div class="!c:sr ">  .!c:sr    { color: #dc322f      !important; } /* solarized red     */</div>
-          <div class="!c:so ">  .!c:so    { color: #cb4b16      !important; } /* solarized orange  */</div>
-          <div class="!c:sy ">  .!c:sy    { color: #b58900      !important; } /* solarized yellow  */</div>
-          <div class="!c:sg ">  .!c:sg    { color: #859900      !important; } /* solarized green   */</div>
-          <div class="!c:sc ">  .!c:sc    { color: #2aa198      !important; } /* solarized cyan    */</div>
-          <div class="!c:sb ">  .!c:sb    { color: #268bd2      !important; } /* solarized blue    */</div>
-          <div class="!c:sv ">  .!c:sv    { color: #6c71c4      !important; } /* solarized violet  */</div>
-          <div class="!c:sm ">  .!c:sm    { color: #d33682      !important; } /* solarized magenta */</div>
-          <div class="!c:l03">  .!c:l03   { color: #360b00      !important; } /* lunarized base03  */</div>
-          <div class="!c:l02">  .!c:l02   { color: #421307      !important; } /* lunarized base02  */</div>
-          <div class="!c:l01">  .!c:l01   { color: #755f58      !important; } /* lunarized base01  */</div>
-          <div class="!c:l00">  .!c:l00   { color: #836d65      !important; } /* lunarized base00  */</div>
-          <div class="!c:l0 ">  .!c:l0    { color: #968583      !important; } /* lunarized base0   */</div>
-          <div class="!c:l1 ">  .!c:l1    { color: #a19393      !important; } /* lunarized base1   */</div>
-          <div class="!c:l2 ">  .!c:l2    { color: #d5dbee      !important; } /* lunarized base2   */</div>
-          <div class="!c:l3 ">  .!c:l3    { color: #e3eafd      !important; } /* lunarized base3   */</div>
-          <div class="!c:lc ">  .!c:lc    { color: #23cdd0      !important; } /* lunarized cyan    */</div>
-          <div class="!c:lb ">  .!c:lb    { color: #34b4e9      !important; } /* lunarized blue    */</div>
-          <div class="!c:li ">  .!c:li    { color: #4a76ff      !important; } /* lunarized indigo  */</div>
-          <div class="!c:lv ">  .!c:lv    { color: #7a66ff      !important; } /* lunarized violet  */</div>
-          <div class="!c:lr ">  .!c:lr    { color: #d55e67      !important; } /* lunarized red     */</div>
-          <div class="!c:lo ">  .!c:lo    { color: #d9742d      !important; } /* lunarized orange  */</div>
-          <div class="!c:ly ">  .!c:ly    { color: #938e3b      !important; } /* lunarized yellow  */</div>
-          <div class="!c:lg ">  .!c:lg    { color: #2cc97d      !important; } /* lunarized green   */</div>
+          <div class="!c:b  ">  .!c:b     { color: #000000      !important; }</div>
+          <div class="!c:w  ">  .!c:w     { color: #ffffff      !important; }</div>
         </section>
         <section>
           <h3>@media screen</h3>
@@ -2186,40 +2154,8 @@
           <div class="!c:i@s  ">.!c:i@s   { color: inherit      !important; }</div>
           <div class="!c:t@s  ">.!c:t@s   { color: transparent  !important; }</div>
           <div class="!c:c@s  ">.!c:c@s   { color: currentColor !important; }</div>
-          <div class="!c:b@s  ">.!c:b@s   { color: #000000      !important; } /* black */</div>
-          <div class="!c:w@s  ">.!c:w@s   { color: #ffffff      !important; } /* white */</div>
-          <div class="!c:s03@s">.!c:s03@s { color: #002b36      !important; } /* solarized base03  */</div>
-          <div class="!c:s02@s">.!c:s02@s { color: #073642      !important; } /* solarized base02  */</div>
-          <div class="!c:s01@s">.!c:s01@s { color: #586e75      !important; } /* solarized base01  */</div>
-          <div class="!c:s00@s">.!c:s00@s { color: #657b83      !important; } /* solarized base00  */</div>
-          <div class="!c:s0@s ">.!c:s0@s  { color: #839496      !important; } /* solarized base0   */</div>
-          <div class="!c:s1@s ">.!c:s1@s  { color: #93a1a1      !important; } /* solarized base1   */</div>
-          <div class="!c:s2@s ">.!c:s2@s  { color: #eee8d5      !important; } /* solarized base2   */</div>
-          <div class="!c:s3@s ">.!c:s3@s  { color: #fdf6e3      !important; } /* solarized base3   */</div>
-          <div class="!c:sr@s ">.!c:sr@s  { color: #dc322f      !important; } /* solarized red     */</div>
-          <div class="!c:so@s ">.!c:so@s  { color: #cb4b16      !important; } /* solarized orange  */</div>
-          <div class="!c:sy@s ">.!c:sy@s  { color: #b58900      !important; } /* solarized yellow  */</div>
-          <div class="!c:sg@s ">.!c:sg@s  { color: #859900      !important; } /* solarized green   */</div>
-          <div class="!c:sc@s ">.!c:sc@s  { color: #2aa198      !important; } /* solarized cyan    */</div>
-          <div class="!c:sb@s ">.!c:sb@s  { color: #268bd2      !important; } /* solarized blue    */</div>
-          <div class="!c:sv@s ">.!c:sv@s  { color: #6c71c4      !important; } /* solarized violet  */</div>
-          <div class="!c:sm@s ">.!c:sm@s  { color: #d33682      !important; } /* solarized magenta */</div>
-          <div class="!c:l03@s">.!c:l03@s { color: #360b00      !important; } /* lunarized base03  */</div>
-          <div class="!c:l02@s">.!c:l02@s { color: #421307      !important; } /* lunarized base02  */</div>
-          <div class="!c:l01@s">.!c:l01@s { color: #755f58      !important; } /* lunarized base01  */</div>
-          <div class="!c:l00@s">.!c:l00@s { color: #836d65      !important; } /* lunarized base00  */</div>
-          <div class="!c:l0@s ">.!c:l0@s  { color: #968583      !important; } /* lunarized base0   */</div>
-          <div class="!c:l1@s ">.!c:l1@s  { color: #a19393      !important; } /* lunarized base1   */</div>
-          <div class="!c:l2@s ">.!c:l2@s  { color: #d5dbee      !important; } /* lunarized base2   */</div>
-          <div class="!c:l3@s ">.!c:l3@s  { color: #e3eafd      !important; } /* lunarized base3   */</div>
-          <div class="!c:lc@s ">.!c:lc@s  { color: #23cdd0      !important; } /* lunarized cyan    */</div>
-          <div class="!c:lb@s ">.!c:lb@s  { color: #34b4e9      !important; } /* lunarized blue    */</div>
-          <div class="!c:li@s ">.!c:li@s  { color: #4a76ff      !important; } /* lunarized indigo  */</div>
-          <div class="!c:lv@s ">.!c:lv@s  { color: #7a66ff      !important; } /* lunarized violet  */</div>
-          <div class="!c:lr@s ">.!c:lr@s  { color: #d55e67      !important; } /* lunarized red     */</div>
-          <div class="!c:lo@s ">.!c:lo@s  { color: #d9742d      !important; } /* lunarized orange  */</div>
-          <div class="!c:ly@s ">.!c:ly@s  { color: #938e3b      !important; } /* lunarized yellow  */</div>
-          <div class="!c:lg@s ">.!c:lg@s  { color: #2cc97d      !important; } /* lunarized green   */</div>
+          <div class="!c:b@s  ">.!c:b@s   { color: #000000      !important; }</div>
+          <div class="!c:w@s  ">.!c:w@s   { color: #ffffff      !important; }</div>
         </section>
         <section>
           <h3>@media print</h3>
@@ -2227,40 +2163,8 @@
           <div class="!c:i@p  ">.!c:i@p   { color: inherit      !important; }</div>
           <div class="!c:t@p  ">.!c:t@p   { color: transparent  !important; }</div>
           <div class="!c:c@p  ">.!c:c@p   { color: currentColor !important; }</div>
-          <div class="!c:b@p  ">.!c:b@p   { color: #000000      !important; } /* black */</div>
-          <div class="!c:w@p  ">.!c:w@p   { color: #ffffff      !important; } /* white */</div>
-          <div class="!c:s03@p">.!c:s03@p { color: #002b36      !important; } /* solarized base03  */</div>
-          <div class="!c:s02@p">.!c:s02@p { color: #073642      !important; } /* solarized base02  */</div>
-          <div class="!c:s01@p">.!c:s01@p { color: #586e75      !important; } /* solarized base01  */</div>
-          <div class="!c:s00@p">.!c:s00@p { color: #657b83      !important; } /* solarized base00  */</div>
-          <div class="!c:s0@p ">.!c:s0@p  { color: #839496      !important; } /* solarized base0   */</div>
-          <div class="!c:s1@p ">.!c:s1@p  { color: #93a1a1      !important; } /* solarized base1   */</div>
-          <div class="!c:s2@p ">.!c:s2@p  { color: #eee8d5      !important; } /* solarized base2   */</div>
-          <div class="!c:s3@p ">.!c:s3@p  { color: #fdf6e3      !important; } /* solarized base3   */</div>
-          <div class="!c:sr@p ">.!c:sr@p  { color: #dc322f      !important; } /* solarized red     */</div>
-          <div class="!c:so@p ">.!c:so@p  { color: #cb4b16      !important; } /* solarized orange  */</div>
-          <div class="!c:sy@p ">.!c:sy@p  { color: #b58900      !important; } /* solarized yellow  */</div>
-          <div class="!c:sg@p ">.!c:sg@p  { color: #859900      !important; } /* solarized green   */</div>
-          <div class="!c:sc@p ">.!c:sc@p  { color: #2aa198      !important; } /* solarized cyan    */</div>
-          <div class="!c:sb@p ">.!c:sb@p  { color: #268bd2      !important; } /* solarized blue    */</div>
-          <div class="!c:sv@p ">.!c:sv@p  { color: #6c71c4      !important; } /* solarized violet  */</div>
-          <div class="!c:sm@p ">.!c:sm@p  { color: #d33682      !important; } /* solarized magenta */</div>
-          <div class="!c:l03@p">.!c:l03@p { color: #360b00      !important; } /* lunarized base03  */</div>
-          <div class="!c:l02@p">.!c:l02@p { color: #421307      !important; } /* lunarized base02  */</div>
-          <div class="!c:l01@p">.!c:l01@p { color: #755f58      !important; } /* lunarized base01  */</div>
-          <div class="!c:l00@p">.!c:l00@p { color: #836d65      !important; } /* lunarized base00  */</div>
-          <div class="!c:l0@p ">.!c:l0@p  { color: #968583      !important; } /* lunarized base0   */</div>
-          <div class="!c:l1@p ">.!c:l1@p  { color: #a19393      !important; } /* lunarized base1   */</div>
-          <div class="!c:l2@p ">.!c:l2@p  { color: #d5dbee      !important; } /* lunarized base2   */</div>
-          <div class="!c:l3@p ">.!c:l3@p  { color: #e3eafd      !important; } /* lunarized base3   */</div>
-          <div class="!c:lc@p ">.!c:lc@p  { color: #23cdd0      !important; } /* lunarized cyan    */</div>
-          <div class="!c:lb@p ">.!c:lb@p  { color: #34b4e9      !important; } /* lunarized blue    */</div>
-          <div class="!c:li@p ">.!c:li@p  { color: #4a76ff      !important; } /* lunarized indigo  */</div>
-          <div class="!c:lv@p ">.!c:lv@p  { color: #7a66ff      !important; } /* lunarized violet  */</div>
-          <div class="!c:lr@p ">.!c:lr@p  { color: #d55e67      !important; } /* lunarized red     */</div>
-          <div class="!c:lo@p ">.!c:lo@p  { color: #d9742d      !important; } /* lunarized orange  */</div>
-          <div class="!c:ly@p ">.!c:ly@p  { color: #938e3b      !important; } /* lunarized yellow  */</div>
-          <div class="!c:lg@p ">.!c:lg@p  { color: #2cc97d      !important; } /* lunarized green   */</div>
+          <div class="!c:b@p  ">.!c:b@p   { color: #000000      !important; }</div>
+          <div class="!c:w@p  ">.!c:w@p   { color: #ffffff      !important; }</div>
         </section>
         <section>
           <h3>pseudo-classes :hover and :focus</h3>

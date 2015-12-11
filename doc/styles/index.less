@@ -1,6 +1,6 @@
-@import (reference) url('../../node_modules/xmeter/src/__settings.less');
+@import (reference) url('../../node_modules/lux-nox/lux-nox.less');
 
-#XMETER .CONSTS();
+
 @color_bg:   @solar_base3;
 @color_brdr: @solar_base2;
 @color_txt:  @solar_base00;
@@ -17,7 +17,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 code {
-  font-size: inherit;
   color: @solar_green;
 }
 
@@ -31,12 +30,10 @@ code {
 }
 
 
-// any bang
-[class^='!'] {
-  // FIXME this only selects elements whose `class` attribute *starts* with `!`, not necessarily
-  // any element who may have a class starting with `!`.
-  // For example this selector will not match `<div class="abc !bc:t"></div>`
-  background-color: @solar_base2;
+// selects an element with any class containing `!`
+// thus will even select non-bang classes, such as `class="abcd!efgh"`
+[class*='!'] {
+  background-color: @color_brdr;
   outline: 1px solid fadeout(@color_comm, 50%);
 }
 
