@@ -1,0 +1,374 @@
+{
+  "constants": {
+    "value": {
+      "initial": "0"
+    , "inherit": "i"
+    }
+  , "media": {
+      "screen" : "s"
+    , "print"  : "p"
+    , "small"  : { "sK": { "em": 30, "px":  480 } }
+    , "medium" : { "sM": { "em": 45, "px":  720 } }
+    , "large"  : { "sG": { "em": 60, "px":  960 } }
+    , "xlarge" : { "sT": { "em": 75, "px": 1200 } }
+    , "xxlarge": { "sP": { "em": 90, "px": 1440 } }
+    , "hover"  : "^"
+    }
+  }
+, "properties": {
+    "display": {
+      "code": "d"
+    , "initial": "inline"
+    , "inherited": false
+    , "value": {
+        "none"              : "n"
+      , "block"             : "bk"
+      , "inline"            : "il"
+      , "inline-block"      : "ib"
+      , "flex"              : { "fx": "#XMETER .flexbox()" }
+      , "list-item"         : "li"
+      , "table"             : "tb"
+      , "table-row"         : "tr"
+      , "table-column"      : "tl"
+      , "table-cell"        : "tc"
+      , "table-row-group"   : "trg"
+      , "table-header-group": "thg"
+      , "table-footer-group": "tfg"
+      , "table-column-group": "tlg"
+      }
+    , "support": {
+        "screen": true
+      , "print" : true
+      }
+    }
+  , "position": {
+      "code": "ps"
+    , "initial": "static"
+    , "inherited": false
+    , "value": {
+        "static"  : "s"
+      , "relative": "r"
+      , "absolute": "a"
+      , "fixed"   : "f"
+      }
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      , "small"  : true
+      , "medium" : true
+      , "large"  : true
+      , "xlarge" : true
+      }
+    }
+  , "float": {
+      "code": "fl"
+    , "initial": "none"
+    , "inherited": false
+    , "value": {
+        "none" : "n"
+      , "left" : "l"
+      , "right": "r"
+      }
+    , "media": {
+        "screen": true
+      , "print" : true
+      }
+    }
+  , "clear": {
+      "code": "cl"
+    , "initial": "none"
+    , "inherited": false
+    , "value": {
+        "none" : "n"
+      , "left" : "l"
+      , "right": "r"
+      , "both" : "b"
+      }
+    , "media": {
+        "screen": true
+      , "print" : true
+      }
+    }
+  , "z-index": {
+      "code": "z"
+    , "initial": "auto"
+    , "inherited": false
+    , "value": {
+        "auto": "a"
+      , "0"   : "z"
+      , "1"   : "1"
+      , "2"   : "2"
+      , "3"   : "3"
+      , "4"   : "4"
+      , "5"   : "5"
+      , "6"   : "6"
+      , "7"   : "7"
+      , "-1"  : "-1"
+      , "-2"  : "-2"
+      , "-3"  : "-3"
+      , "-4"  : "-4"
+      , "-5"  : "-5"
+      , "-6"  : "-6"
+      , "-7"  : "-7"
+      }
+    , "media": {
+        "screen": true
+      , "print" : true
+      }
+    }
+  , "vertical-align": {
+      "code": "va"
+    , "initial": "baseline"
+    , "inherited": false
+    , "value": {
+        "baseline"    : "a"
+      , "bottom"      : "b"
+      , "middle"      : "m"
+      , "top"         : "t"
+      , "text-bottom" : "tb"
+      , "text-top"    : "tt"
+      , "sub"         : "sb"
+      , "super"       : "st"
+      }
+    , "media": {
+        "screen": true
+      , "print" : true
+      }
+    }
+  , "flex-direction": {
+      "code": "xd"
+    , "initial": "row"
+    , "inherited": false
+    , "value": {
+        "initial"       : { "0" : "#XMETER .flex-direction(initial)"        }
+      , "inherit"       : { "i" : "#XMETER .flex-direction(inherit)"        }
+      , "row"           : { "r" : "#XMETER .flex-direction(row)"            }
+      , "column"        : { "c" : "#XMETER .flex-direction(column)"         }
+      , "row-reverse"   : { "rr": "#XMETER .flex-direction(row-reverse)"    }
+      , "column-reverse": { "cr": "#XMETER .flex-direction(column-reverse)" }
+      }
+    , "media": {
+        "screen": true
+      , "print" : true
+      }
+    }
+  , "flex-wrap": {
+      "code": "xw"
+    , "initial": "nowrap"
+    , "inherited": false
+    , "value": {
+        "initial"     : { "0": "#XMETER .flex-wrap(initial)"      }
+      , "inherit"     : { "i": "#XMETER .flex-wrap(inherit)"      }
+      , "nowrap"      : { "n": "#XMETER .flex-wrap(nowrap)"       }
+      , "wrap"        : { "w": "#XMETER .flex-wrap(wrap)"         }
+      , "wrap-reverse": { "r": "#XMETER .flex-wrap(wrap-reverse)" }
+      }
+    , "media": {
+        "screen": true
+      , "print" : true
+      }
+    }
+  , "justify-content": {
+      "code": "xj"
+    , "initial": "flex-start"
+    , "inherited": false
+    , "value": {
+        "initial"      : { "0" : "#XMETER .flex-justify-content(initial)"       }
+      , "inherit"      : { "i" : "#XMETER .flex-justify-content(inherit)"       }
+      , "flex-start"   : { "xs": "#XMETER .flex-justify-content(flex-start)"    }
+      , "flex-end"     : { "xe": "#XMETER .flex-justify-content(flex-end)"      }
+      , "center"       : { "c" : "#XMETER .flex-justify-content(center)"        }
+      , "space-between": { "sb": "#XMETER .flex-justify-content(space-between)" }
+      , "space-around" : { "sa": "#XMETER .flex-justify-content(space-around)"  }
+      }
+    , "media": {
+        "screen": true
+      , "print" : true
+      }
+    }
+  , "align-content": {
+      "code": "xc"
+    , "initial": "stretch"
+    , "inherited": false
+    , "value": {
+        "initial"      : { "0" : "#XMETER .flex-align-content(initial)"       }
+      , "inherit"      : { "i" : "#XMETER .flex-align-content(inherit)"       }
+      , "stretch"      : { "s" : "#XMETER .flex-align-content(stretch)"       }
+      , "flex-start"   : { "xs": "#XMETER .flex-align-content(flex-start)"    }
+      , "flex-end"     : { "xe": "#XMETER .flex-align-content(flex-end)"      }
+      , "center"       : { "c" : "#XMETER .flex-align-content(center)"        }
+      , "space-between": { "sb": "#XMETER .flex-align-content(space-between)" }
+      , "space-around" : { "sa": "#XMETER .flex-align-content(space-around)"  }
+      }
+    , "media": {
+        "screen": true
+      , "print" : true
+      }
+    }
+  , "align-items": {
+      "code": "xi"
+    , "initial": "stretch"
+    , "inherited": false
+    , "value": {
+        "initial"   : { "0" : "#XMETER .flex-align-items(initial)"    }
+      , "inherit"   : { "i" : "#XMETER .flex-align-items(inherit)"    }
+      , "stretch"   : { "s" : "#XMETER .flex-align-items(stretch)"    }
+      , "flex-start": { "xs": "#XMETER .flex-align-items(flex-start)" }
+      , "flex-end"  : { "xe": "#XMETER .flex-align-items(flex-end)"   }
+      , "center"    : { "c" : "#XMETER .flex-align-items(center)"     }
+      , "baseline"  : { "b" : "#XMETER .flex-align-items(baseline)"   }
+      }
+    , "media": {
+        "screen": true
+      , "print" : true
+      }
+    }
+  , "order": {
+      "code": "xo"
+    , "initial": "0"
+    , "inherited": false
+    , "value": {
+        "initial": { "0" : "#XMETER .flex-order(initial)" }
+      , "inherit": { "i" : "#XMETER .flex-order(inherit)" }
+      , "0"      : { "z" : "#XMETER .flex-order(0)"       }
+      , "1"      : { "1" : "#XMETER .flex-order(1)"       }
+      , "2"      : { "2" : "#XMETER .flex-order(2)"       }
+      , "3"      : { "3" : "#XMETER .flex-order(3)"       }
+      , "4"      : { "4" : "#XMETER .flex-order(4)"       }
+      , "5"      : { "5" : "#XMETER .flex-order(5)"       }
+      , "6"      : { "6" : "#XMETER .flex-order(6)"       }
+      , "7"      : { "7" : "#XMETER .flex-order(7)"       }
+      , "8"      : { "8" : "#XMETER .flex-order(8)"       }
+      , "9"      : { "9" : "#XMETER .flex-order(9)"       }
+      , "10"     : { "a" : "#XMETER .flex-order(10)"      }
+      , "11"     : { "b" : "#XMETER .flex-order(11)"      }
+      , "12"     : { "c" : "#XMETER .flex-order(12)"      }
+      , "13"     : { "d" : "#XMETER .flex-order(13)"      }
+      , "14"     : { "e" : "#XMETER .flex-order(14)"      }
+      , "15"     : { "f" : "#XMETER .flex-order(15)"      }
+      , "-1"     : { "-1": "#XMETER .flex-order(-1)"      }
+      , "-2"     : { "-2": "#XMETER .flex-order(-2)"      }
+      , "-3"     : { "-3": "#XMETER .flex-order(-3)"      }
+      , "-4"     : { "-4": "#XMETER .flex-order(-4)"      }
+      , "-5"     : { "-5": "#XMETER .flex-order(-5)"      }
+      , "-6"     : { "-6": "#XMETER .flex-order(-6)"      }
+      , "-7"     : { "-7": "#XMETER .flex-order(-7)"      }
+      , "-8"     : { "-8": "#XMETER .flex-order(-8)"      }
+      , "-9"     : { "-9": "#XMETER .flex-order(-9)"      }
+      , "-10"    : { "-a": "#XMETER .flex-order(-10)"     }
+      , "-11"    : { "-b": "#XMETER .flex-order(-11)"     }
+      , "-12"    : { "-c": "#XMETER .flex-order(-12)"     }
+      , "-13"    : { "-d": "#XMETER .flex-order(-13)"     }
+      , "-14"    : { "-e": "#XMETER .flex-order(-14)"     }
+      , "-15"    : { "-f": "#XMETER .flex-order(-15)"     }
+      }
+    , "media": {
+        "screen": true
+      , "print" : true
+      }
+    }
+  , "align-self": {
+      "code": "xs"
+    , "initial": "auto"
+    , "inherited": false
+    , "value": {
+        "initial"   : { "0" : "#XMETER .flex-align-self(initial)"    }
+      , "inherit"   : { "i" : "#XMETER .flex-align-self(inherit)"    }
+      , "auto"      : { "a" : "#XMETER .flex-align-self(auto)"       }
+      , "stretch"   : { "s" : "#XMETER .flex-align-self(stretch)"    }
+      , "flex-start": { "xs": "#XMETER .flex-align-self(flex-start)" }
+      , "flex-end"  : { "xe": "#XMETER .flex-align-self(flex-end)"   }
+      , "center"    : { "c" : "#XMETER .flex-align-self(center)"     }
+      , "baseline"  : { "b" : "#XMETER .flex-align-self(baseline)"   }
+      }
+    , "media": {
+        "screen": true
+      , "print" : true
+      }
+    }
+  , "width": {
+      "code": "w"
+    , "initial": "auto"
+    , "inherited": false
+    , "value": {
+        "auto"  : "a"
+      , "0"     : "0o1"
+      , "@1o1"  : "1o1"
+      , "@1o2"  : "1o2"
+      , "@2o2"  : "2o2"
+      , "@1o3"  : "1o3"
+      , "@2o3"  : "2o3"
+      , "@3o3"  : "3o3"
+      , "@1o4"  : "1o4"
+      , "@2o4"  : "2o4"
+      , "@3o4"  : "3o4"
+      , "@4o4"  : "4o4"
+      , "@1o5"  : "1o5"
+      , "@2o5"  : "2o5"
+      , "@3o5"  : "3o5"
+      , "@4o5"  : "4o5"
+      , "@5o5"  : "5o5"
+      , "@1o6"  : "1o6"
+      , "@2o6"  : "2o6"
+      , "@3o6"  : "3o6"
+      , "@4o6"  : "4o6"
+      , "@5o6"  : "5o6"
+      , "@6o6"  : "6o6"
+      , "@1o8"  : "1o8"
+      , "@2o8"  : "2o8"
+      , "@3o8"  : "3o8"
+      , "@4o8"  : "4o8"
+      , "@5o8"  : "5o8"
+      , "@6o8"  : "6o8"
+      , "@7o8"  : "7o8"
+      , "@8o8"  : "8o8"
+      , "@1o9"  : "1o9"
+      , "@2o9"  : "2o9"
+      , "@3o9"  : "3o9"
+      , "@4o9"  : "4o9"
+      , "@5o9"  : "5o9"
+      , "@6o9"  : "6o9"
+      , "@7o9"  : "7o9"
+      , "@8o9"  : "8o9"
+      , "@9o9"  : "9o9"
+      , "@1o10" : "1oa"
+      , "@2o10" : "2oa"
+      , "@3o10" : "3oa"
+      , "@4o10" : "4oa"
+      , "@5o10" : "5oa"
+      , "@6o10" : "6oa"
+      , "@7o10" : "7oa"
+      , "@8o10" : "8oa"
+      , "@9o10" : "9oa"
+      , "@10o10": "aoa"
+      , "@1o12" : "1oc"
+      , "@2o12" : "2oc"
+      , "@3o12" : "3oc"
+      , "@4o12" : "4oc"
+      , "@5o12" : "5oc"
+      , "@6o12" : "6oc"
+      , "@7o12" : "7oc"
+      , "@8o12" : "8oc"
+      , "@9o12" : "9oc"
+      , "@10o12": "aoc"
+      , "@11o12": "boc"
+      , "@12o12": "coc"
+      }
+    , "media": {
+        "screen": true
+      , "print" : true
+      }
+    }
+  , "padding": {
+      "code": "p"
+    , "initial": "0"
+    , "inherited": false
+    , "value": {
+      }
+    , "media": {
+        "screen": true
+      , "print" : true
+      }
+    }
+  }
+}
