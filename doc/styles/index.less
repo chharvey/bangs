@@ -17,7 +17,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 code {
-  font-size: inherit;
   color: @solar_green;
 }
 
@@ -34,7 +33,7 @@ code {
 // selects an element with any class containing `!`
 // thus will even select non-bang classes, such as `class="abcd!efgh"`
 [class*='!'] {
-  background-color: @solar_base2;
+  background-color: @color_brdr;
   outline: 1px solid fadeout(@color_comm, 50%);
 }
 
