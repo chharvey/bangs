@@ -27,6 +27,10 @@
 //
 // @s  =  screen
 // @p  =  print
+// @sK  =  screen and (min-width: 30em)
+// @sM  =  screen and (min-width: 45em)
+// @sG  =  screen and (min-width: 60em)
+// @sT  =  screen and (min-width: 75em)
 //
 // ^initial
 // : `inline`
@@ -57,6 +61,50 @@
   .\!d\:ib\@s { .\!d\:ib; }
   .\!d\:fx\@s { .\!d\:fx; }
   .\!d\:li\@s { .\!d\:li; }
+}
+
+@media screen and (min-width: 30em) {
+  .\!d\:0\@sK  { .\!d\:0 ; }
+  .\!d\:i\@sK  { .\!d\:i ; }
+  .\!d\:n\@sK  { .\!d\:n ; }
+  .\!d\:bk\@sK { .\!d\:bk; }
+  .\!d\:il\@sK { .\!d\:il; }
+  .\!d\:ib\@sK { .\!d\:ib; }
+  .\!d\:fx\@sK { .\!d\:fx; }
+  .\!d\:li\@sK { .\!d\:li; }
+}
+
+@media screen and (min-width: 45em) {
+  .\!d\:0\@sM  { .\!d\:0 ; }
+  .\!d\:i\@sM  { .\!d\:i ; }
+  .\!d\:n\@sM  { .\!d\:n ; }
+  .\!d\:bk\@sM { .\!d\:bk; }
+  .\!d\:il\@sM { .\!d\:il; }
+  .\!d\:ib\@sM { .\!d\:ib; }
+  .\!d\:fx\@sM { .\!d\:fx; }
+  .\!d\:li\@sM { .\!d\:li; }
+}
+
+@media screen and (min-width: 60em) {
+  .\!d\:0\@sG  { .\!d\:0 ; }
+  .\!d\:i\@sG  { .\!d\:i ; }
+  .\!d\:n\@sG  { .\!d\:n ; }
+  .\!d\:bk\@sG { .\!d\:bk; }
+  .\!d\:il\@sG { .\!d\:il; }
+  .\!d\:ib\@sG { .\!d\:ib; }
+  .\!d\:fx\@sG { .\!d\:fx; }
+  .\!d\:li\@sG { .\!d\:li; }
+}
+
+@media screen and (min-width: 75em) {
+  .\!d\:0\@sT  { .\!d\:0 ; }
+  .\!d\:i\@sT  { .\!d\:i ; }
+  .\!d\:n\@sT  { .\!d\:n ; }
+  .\!d\:bk\@sT { .\!d\:bk; }
+  .\!d\:il\@sT { .\!d\:il; }
+  .\!d\:ib\@sT { .\!d\:ib; }
+  .\!d\:fx\@sT { .\!d\:fx; }
+  .\!d\:li\@sT { .\!d\:li; }
 }
 
 @media print {
