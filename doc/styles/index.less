@@ -30,9 +30,9 @@ code {
 }
 
 
-// selects an element with any class containing `!`
-// thus will even select non-bang classes, such as `class="abcd!efgh"`
-[class*='!'] {
+// selects any element with any class beginning with `!`
+[class^="!"],
+[class*=" !"] {
   background-color: @color_brdr;
   outline: 1px solid fadeout(@color_comm, 50%);
 }
