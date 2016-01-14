@@ -23,6 +23,9 @@
 // :la  =  lower-alpha           //   a.   b.   c.
 // :lr  =  lower-roman           //   i.  ii. iii.
 // :lg  =  lower-greek           //   α.   β.   γ.
+// :d   =  disc   // • (unordered)
+// :c   =  circle // ◦ (unordered)
+// :s   =  square // ▪ (unordered)
 //
 // @s  =  screen
 // @p  =  print
@@ -48,6 +51,9 @@
 .\!lst\:la {                                   list-style-type: lower-alpha          !important; }
 .\!lst\:lr {                                   list-style-type: lower-roman          !important; }
 .\!lst\:lg {                                   list-style-type: lower-greek          !important; }
+.\!lst\:d  {                                   list-style-type: disc                 !important; }
+.\!lst\:c  {                                   list-style-type: circle               !important; }
+.\!lst\:s  {                                   list-style-type: square               !important; }
 
 @media screen {
   .\!lst\:0\@s  { .\!lst\:0 ; }
@@ -60,6 +66,9 @@
   .\!lst\:la\@s { .\!lst\:la; }
   .\!lst\:lr\@s { .\!lst\:lr; }
   .\!lst\:lg\@s { .\!lst\:lg; }
+  .\!lst\:d\@s  { .\!lst\:d ; }
+  .\!lst\:c\@s  { .\!lst\:c ; }
+  .\!lst\:s\@s  { .\!lst\:s ; }
 }
 
 @media print {
@@ -73,4 +82,7 @@
   .\!lst\:la\@p { .\!lst\:la; }
   .\!lst\:lr\@p { .\!lst\:lr; }
   .\!lst\:lg\@p { .\!lst\:lg; }
+  .\!lst\:d\@p  { .\!lst\:d ; }
+  .\!lst\:c\@p  { .\!lst\:c ; }
+  .\!lst\:s\@p  { .\!lst\:s ; }
 }
