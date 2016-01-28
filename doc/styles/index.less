@@ -1,22 +1,5 @@
+@import (reference) url('../../node_modules/lux-nox/lux-nox.less');
 
-// Solarized Bases
-@solar_base03:  #002b36;
-@solar_base02:  #073642;
-@solar_base01:  #586e75;
-@solar_base00:  #657b83;
-@solar_base0:   #839496;
-@solar_base1:   #93a1a1;
-@solar_base2:   #eee8d5;
-@solar_base3:   #fdf6e3;
-// Solarized Accents
-@solar_red:     #dc322f;
-@solar_orange:  #cb4b16;
-@solar_yellow:  #b58900;
-@solar_green:   #859900;
-@solar_cyan:    #2aa198;
-@solar_blue:    #268bd2;
-@solar_violet:  #6c71c4;
-@solar_magenta: #d33682;
 
 @color_bg:   @solar_base3;
 @color_brdr: @solar_base2;
@@ -34,7 +17,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 code {
-  font-size: inherit;
   color: @solar_green;
 }
 
@@ -48,10 +30,10 @@ code {
 }
 
 
-// selects an element with any class containing `!`
-// thus will even select non-bang classes, such as `class="abcd!efgh"`
-[class*='!'] {
-  background-color: @solar_base2;
+// selects any element with any class beginning with `!`
+[class^="!"],
+[class*=" !"] {
+  background-color: @color_brdr;
   outline: 1px solid fadeout(@color_comm, 50%);
 }
 

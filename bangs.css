@@ -1,6 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     bangs
-    Version: 0.5.0
+    Version: 0.6.0
     Licence: MIT
     Repo   : https://github.com/chharvey/bangs.git
     Home   : https://chharvey.github.io/bangs/
@@ -10,7 +10,7 @@
     bangs.less
 \*================================*/
 /*################################*\
-    _display.less
+    bangs  |  _display.less
 \*################################*/
 .\!d\:0 {
   display: inline       !important;
@@ -105,7 +105,7 @@
 }
 
 /*################################*\
-    _position.less
+    bangs  |  _position.less
 \*################################*/
 .\!ps\:0 {
   position: static   !important;
@@ -170,7 +170,7 @@
 }
 
 /*################################*\
-    _float.less
+    bangs  |  _float.less
 \*################################*/
 .\!fl\:0 {
   float: none    !important;
@@ -226,7 +226,7 @@
 }
 
 /*################################*\
-    _clear.less
+    bangs  |  _clear.less
 \*################################*/
 .\!cl\:0 {
   clear: none    !important;
@@ -291,7 +291,7 @@
 }
 
 /*################################*\
-    _z-index.less
+    bangs  |  _z-index.less
 \*################################*/
 .\!z\:0 {
   z-index: auto    !important;
@@ -464,7 +464,7 @@
 }
 
 /*################################*\
-    _vertical-align.less
+    bangs  |  _vertical-align.less
 \*################################*/
 .\!va\:0 {
   vertical-align: baseline    !important;
@@ -565,7 +565,7 @@
 }
 
 /*################################*\
-    _flex-direction.less
+    bangs  |  _flex-direction.less
 \*################################*/
 .\!xd\:0 {
   -webkit-flex-direction: row !important;
@@ -693,7 +693,7 @@
 }
 
 /*################################*\
-    _flex-wrap.less
+    bangs  |  _flex-wrap.less
 \*################################*/
 .\!xw\:0 {
   -webkit-flex-wrap: nowrap !important;
@@ -803,7 +803,7 @@
 }
 
 /*################################*\
-    _justify-content.less
+    bangs  |  _justify-content.less
 \*################################*/
 .\!xj\:0 {
   -webkit-justify-content: flex-start !important;
@@ -949,7 +949,7 @@
 }
 
 /*################################*\
-    _align-content.less
+    bangs  |  _align-content.less
 \*################################*/
 .\!xc\:0 {
   -webkit-align-content: stretch !important;
@@ -1113,7 +1113,7 @@
 }
 
 /*################################*\
-    _align-items.less
+    bangs  |  _align-items.less
 \*################################*/
 .\!xi\:0 {
   -webkit-align-items: stretch !important;
@@ -1975,7 +1975,7 @@
 }
 
 /*################################*\
-    _align-self.less
+    bangs  |  _align-self.less
 \*################################*/
 .\!xs\:0 {
   -webkit-align-self: auto !important;
@@ -2139,7 +2139,7 @@
 }
 
 /*################################*\
-    _box-sizing.less
+    bangs  |  _box-sizing.less
 \*################################*/
 .\!b\:0 {
   -webkit-box-sizing: content-box !important;
@@ -2216,7 +2216,7 @@
 }
 
 /*################################*\
-    _width.less
+    bangs  |  _width.less
 \*################################*/
 .\!w\:0 {
   width: auto    !important;
@@ -2500,7 +2500,7 @@
 }
 
 /*################################*\
-    _padding.less
+    bangs  |  _padding.less
 \*################################*/
 .\!pl\:0 {
   padding-left: 0       !important;
@@ -3225,7 +3225,7 @@
 }
 
 /*################################*\
-    _margin.less
+    bangs  |  _margin.less
 \*################################*/
 .\!ml\:0 {
   margin-left: 0       !important;
@@ -4019,7 +4019,7 @@
 }
 
 /*################################*\
-    _font-style.less
+    bangs  |  _font-style.less
 \*################################*/
 .\!fs\:0 {
   font-style: normal  !important;
@@ -4083,7 +4083,7 @@
 }
 
 /*################################*\
-    _font-variant.less
+    bangs  |  _font-variant.less
 \*################################*/
 .\!fv\:0 {
   font-variant: normal     !important;
@@ -4147,7 +4147,7 @@
 }
 
 /*################################*\
-    _font-weight.less
+    bangs  |  _font-weight.less
 \*################################*/
 .\!fw\:0 {
   font-weight: normal  !important;
@@ -4328,120 +4328,84 @@
 }
 
 /*################################*\
-    _font-size.less
+    bangs  |  _font-size.less
 \*################################*/
 .\!fz\:0 {
-  font-size: 16px;
+  font-size: 16px !important;
   font-size: initial !important;
 }
 .\!fz\:i {
   font-size: inherit !important;
 }
-.\!fz\:h1 {
-  font-size: 32px !important;
-  font-size: 2rem !important;
+.\!fz\:h {
+  font-size: 8px        !important;
+  font-size: 0.5rem  !important;
 }
-.\!fz\:h2 {
-  font-size: 24px !important;
-  font-size: 1.5rem !important;
+.\!fz\:1 {
+  font-size: 16px        !important;
+  font-size: 1.0rem  !important;
 }
-.\!fz\:h3 {
-  font-size: 20px !important;
-  font-size: 1.25rem !important;
+.\!fz\:2 {
+  font-size: 32px        !important;
+  font-size: 2.0rem  !important;
 }
-.\!fz\:h4 {
-  font-size: 16px !important;
-  font-size: 1rem !important;
-}
-.\!fz\:h5 {
-  font-size: 14px !important;
-  font-size: 0.875rem !important;
-}
-.\!fz\:h6 {
-  font-size: 12px !important;
-  font-size: 0.75rem !important;
-}
-.\!fz\:h7 {
-  font-size: 8px !important;
-  font-size: 0.5rem !important;
+.\!fz\:4 {
+  font-size: 64px        !important;
+  font-size: 4.0rem  !important;
 }
 @media screen {
   .\!fz\:0\@s {
-    font-size: 16px;
+    font-size: 16px !important;
     font-size: initial !important;
   }
   .\!fz\:i\@s {
     font-size: inherit !important;
   }
-  .\!fz\:h1\@s {
-    font-size: 32px !important;
-    font-size: 2rem !important;
+  .\!fz\:h\@s {
+    font-size: 8px        !important;
+    font-size: 0.5rem  !important;
   }
-  .\!fz\:h2\@s {
-    font-size: 24px !important;
-    font-size: 1.5rem !important;
+  .\!fz\:1\@s {
+    font-size: 16px        !important;
+    font-size: 1.0rem  !important;
   }
-  .\!fz\:h3\@s {
-    font-size: 20px !important;
-    font-size: 1.25rem !important;
+  .\!fz\:2\@s {
+    font-size: 32px        !important;
+    font-size: 2.0rem  !important;
   }
-  .\!fz\:h4\@s {
-    font-size: 16px !important;
-    font-size: 1rem !important;
-  }
-  .\!fz\:h5\@s {
-    font-size: 14px !important;
-    font-size: 0.875rem !important;
-  }
-  .\!fz\:h6\@s {
-    font-size: 12px !important;
-    font-size: 0.75rem !important;
-  }
-  .\!fz\:h7\@s {
-    font-size: 8px !important;
-    font-size: 0.5rem !important;
+  .\!fz\:4\@s {
+    font-size: 64px        !important;
+    font-size: 4.0rem  !important;
   }
 }
 @media print {
   .\!fz\:0\@p {
-    font-size: 16px;
+    font-size: 16px !important;
     font-size: initial !important;
   }
   .\!fz\:i\@p {
     font-size: inherit !important;
   }
-  .\!fz\:h1\@p {
-    font-size: 32px !important;
-    font-size: 2rem !important;
+  .\!fz\:h\@p {
+    font-size: 8px        !important;
+    font-size: 0.5rem  !important;
   }
-  .\!fz\:h2\@p {
-    font-size: 24px !important;
-    font-size: 1.5rem !important;
+  .\!fz\:1\@p {
+    font-size: 16px        !important;
+    font-size: 1.0rem  !important;
   }
-  .\!fz\:h3\@p {
-    font-size: 20px !important;
-    font-size: 1.25rem !important;
+  .\!fz\:2\@p {
+    font-size: 32px        !important;
+    font-size: 2.0rem  !important;
   }
-  .\!fz\:h4\@p {
-    font-size: 16px !important;
-    font-size: 1rem !important;
-  }
-  .\!fz\:h5\@p {
-    font-size: 14px !important;
-    font-size: 0.875rem !important;
-  }
-  .\!fz\:h6\@p {
-    font-size: 12px !important;
-    font-size: 0.75rem !important;
-  }
-  .\!fz\:h7\@p {
-    font-size: 8px !important;
-    font-size: 0.5rem !important;
+  .\!fz\:4\@p {
+    font-size: 64px        !important;
+    font-size: 4.0rem  !important;
   }
 }
 
 /*################################*\
-    _font-family.less
+    bangs  |  _font-family.less
 \*################################*/
 .\!ff\:0 {
   font-family: sans-serif !important;
@@ -4515,7 +4479,7 @@
 }
 
 /*################################*\
-    _line-height.less
+    bangs  |  _line-height.less
 \*################################*/
 .\!lh\:0 {
   line-height: normal  !important;
@@ -4562,7 +4526,7 @@
 }
 
 /*################################*\
-    _letter-spacing.less
+    bangs  |  _letter-spacing.less
 \*################################*/
 .\!ls\:0 {
   letter-spacing: normal  !important;
@@ -4609,7 +4573,7 @@
 }
 
 /*################################*\
-    _word-spacing.less
+    bangs  |  _word-spacing.less
 \*################################*/
 .\!ws\:0 {
   word-spacing: normal  !important;
@@ -4656,7 +4620,7 @@
 }
 
 /*################################*\
-    _text-align.less
+    bangs  |  _text-align.less
 \*################################*/
 .\!ta\:0 {
   text-align: left    !important;
@@ -4721,7 +4685,7 @@
 }
 
 /*################################*\
-    _text-indent.less
+    bangs  |  _text-indent.less
 \*################################*/
 .\!ti\:0 {
   text-indent: 0       !important;
@@ -4759,7 +4723,7 @@
 }
 
 /*################################*\
-    _white-space.less
+    bangs  |  _white-space.less
 \*################################*/
 .\!sp\:0 {
   white-space: normal   !important;
@@ -4833,7 +4797,7 @@
 }
 
 /*################################*\
-    _overflow-wrap.less
+    bangs  |  _overflow-wrap.less
 \*################################*/
 .\!ww\:0 {
   word-wrap: normal     !important;
@@ -4895,7 +4859,7 @@
 }
 
 /*################################*\
-    _page-break.less
+    bangs  |  _page-break.less
 \*################################*/
 .\!pbb\:0 {
   page-break-before: auto    !important;
@@ -4931,7 +4895,7 @@
 }
 
 /*################################*\
-    _background-color.less
+    bangs  |  _background-color.less
 \*################################*/
 .\!bc\:0 {
   background-color: transparent  !important;
@@ -5021,7 +4985,7 @@
 }
 
 /*################################*\
-    _background-image.less
+    bangs  |  _background-image.less
 \*################################*/
 .\!bi\:0 {
   background-image: none    !important;
@@ -5059,7 +5023,7 @@
 }
 
 /*################################*\
-    _background-size.less
+    bangs  |  _background-size.less
 \*################################*/
 .\!bz\:0 {
   background-size: auto    !important;
@@ -5115,7 +5079,7 @@
 }
 
 /*################################*\
-    _background-repeat.less
+    bangs  |  _background-repeat.less
 \*################################*/
 .\!br\:0 {
   background-repeat: repeat    !important;
@@ -5180,7 +5144,7 @@
 }
 
 /*################################*\
-    _background-attachment.less
+    bangs  |  _background-attachment.less
 \*################################*/
 .\!ba\:0 {
   background-attachment: scroll  !important;
@@ -5236,7 +5200,7 @@
 }
 
 /*################################*\
-    _background-origin.less
+    bangs  |  _background-origin.less
 \*################################*/
 .\!bo\:0 {
   background-origin: padding-box !important;
@@ -5292,7 +5256,7 @@
 }
 
 /*################################*\
-    _background-clip.less
+    bangs  |  _background-clip.less
 \*################################*/
 .\!bx\:0 {
   background-clip: border-box !important;
@@ -5348,7 +5312,7 @@
 }
 
 /*################################*\
-    _overflow.less
+    bangs  |  _overflow.less
 \*################################*/
 .\!of\:0 {
   overflow: visible !important;
@@ -5413,7 +5377,7 @@
 }
 
 /*################################*\
-    _opacity.less
+    bangs  |  _opacity.less
 \*################################*/
 .\!o\:0 {
   opacity: 1.0     !important;
@@ -5490,7 +5454,7 @@
 }
 
 /*################################*\
-    _visibility.less
+    bangs  |  _visibility.less
 \*################################*/
 .\!v\:0 {
   visibility: visible  !important;
@@ -5546,7 +5510,7 @@
 }
 
 /*################################*\
-    _text-rendering.less
+    bangs  |  _text-rendering.less
 \*################################*/
 .\!tr\:0 {
   text-rendering: auto               !important;
@@ -5611,7 +5575,7 @@
 }
 
 /*################################*\
-    _text-transform.less
+    bangs  |  _text-transform.less
 \*################################*/
 .\!tt\:0 {
   text-transform: none       !important;
@@ -5701,7 +5665,7 @@
 }
 
 /*################################*\
-    _text-decoration.less
+    bangs  |  _text-decoration.less
 \*################################*/
 .\!td\:0 {
   text-decoration: none         !important;
@@ -5791,7 +5755,7 @@
 }
 
 /*################################*\
-    _text-overflow.less
+    bangs  |  _text-overflow.less
 \*################################*/
 .\!to\:0 {
   text-overflow: clip     !important;
@@ -5838,7 +5802,7 @@
 }
 
 /*################################*\
-    _list-style-type.less
+    bangs  |  _list-style-type.less
 \*################################*/
 .\!lst\:0 {
   list-style-type: disc !important;
@@ -5871,6 +5835,15 @@
 .\!lst\:lg {
   list-style-type: lower-greek !important;
 }
+.\!lst\:d {
+  list-style-type: disc                 !important;
+}
+.\!lst\:c {
+  list-style-type: circle               !important;
+}
+.\!lst\:s {
+  list-style-type: square               !important;
+}
 @media screen {
   .\!lst\:0\@s {
     list-style-type: disc !important;
@@ -5902,6 +5875,15 @@
   }
   .\!lst\:lg\@s {
     list-style-type: lower-greek !important;
+  }
+  .\!lst\:d\@s {
+    list-style-type: disc                 !important;
+  }
+  .\!lst\:c\@s {
+    list-style-type: circle               !important;
+  }
+  .\!lst\:s\@s {
+    list-style-type: square               !important;
   }
 }
 @media print {
@@ -5936,10 +5918,19 @@
   .\!lst\:lg\@p {
     list-style-type: lower-greek !important;
   }
+  .\!lst\:d\@p {
+    list-style-type: disc                 !important;
+  }
+  .\!lst\:c\@p {
+    list-style-type: circle               !important;
+  }
+  .\!lst\:s\@p {
+    list-style-type: square               !important;
+  }
 }
 
 /*################################*\
-    _list-style-position.less
+    bangs  |  _list-style-position.less
 \*################################*/
 .\!lsp\:0 {
   list-style-position: outside !important;
@@ -5986,7 +5977,7 @@
 }
 
 /*################################*\
-    _list-style-image.less
+    bangs  |  _list-style-image.less
 \*################################*/
 .\!lsi\:0 {
   list-style-image: none    !important;
@@ -6024,7 +6015,7 @@
 }
 
 /*################################*\
-    _color.less
+    bangs  |  _color.less
 \*################################*/
 .\!c\:0 {
   color: currentColor !important;
