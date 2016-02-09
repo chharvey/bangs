@@ -1,0 +1,67 @@
+@import (reference) url('../node_modules/xmeter/src/__tool.fallback.column-width.less');
+
+/*################################*\
+    bangs  |  _column-width.less
+\*################################*/
+
+// Sets the width of columns of text.
+//
+// !cc  =  column-width
+//
+// :0   =  initial
+// :i   =  inherit
+// :a   =  auto
+// :1   =  1
+// :2   =  2
+// :3   =  3
+// :4   =  4
+// :5   =  5
+// :6   =  6
+//
+// @s   =  screen
+// @p   =  print
+//
+// ^initial
+// : `auto`
+// ^inherited
+// : false
+// ^url
+// : https://developer.mozilla.org/en-US/docs/Web/CSS/column-width
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2016-02-08
+
+.\!cw\:0 { .\!cw\:a; #XMETER .column-width(initial) !important; }
+.\!cw\:i {           #XMETER .column-width(inherit) !important; }
+.\!cw\:a {           #XMETER .column-width(auto   ) !important; }
+.\!cw\:1 {           #XMETER .column-width(1      ) !important; }
+.\!cw\:2 {           #XMETER .column-width(2      ) !important; }
+.\!cw\:3 {           #XMETER .column-width(3      ) !important; }
+.\!cw\:4 {           #XMETER .column-width(4      ) !important; }
+.\!cw\:5 {           #XMETER .column-width(5      ) !important; }
+.\!cw\:6 {           #XMETER .column-width(6      ) !important; }
+
+@media screen {
+  .\!cw\:0\@s { .\!cw\:0; }
+  .\!cw\:i\@s { .\!cw\:i; }
+  .\!cw\:a\@s { .\!cw\:a; }
+  .\!cw\:1\@s { .\!cw\:1; }
+  .\!cw\:2\@s { .\!cw\:2; }
+  .\!cw\:3\@s { .\!cw\:3; }
+  .\!cw\:4\@s { .\!cw\:4; }
+  .\!cw\:5\@s { .\!cw\:5; }
+  .\!cw\:6\@s { .\!cw\:6; }
+}
+
+@media print {
+  .\!cw\:0\@p { .\!cw\:0; }
+  .\!cw\:i\@p { .\!cw\:i; }
+  .\!cw\:a\@p { .\!cw\:a; }
+  .\!cw\:1\@p { .\!cw\:1; }
+  .\!cw\:2\@p { .\!cw\:2; }
+  .\!cw\:3\@p { .\!cw\:3; }
+  .\!cw\:4\@p { .\!cw\:4; }
+  .\!cw\:5\@p { .\!cw\:5; }
+  .\!cw\:6\@p { .\!cw\:6; }
+}
