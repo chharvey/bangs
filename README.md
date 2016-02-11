@@ -40,6 +40,14 @@ The syntax of a bang classame goes like this:
 
 See each source file for specific abbreviations.
 
+In your CSS, to select *any* element with a bang, use the following selector:
+```css
+[class^="!"], [class*=" !"] { ... }
+```
+This will select any element whose `[class]` attribute begins with `!` and/or contains `_!` (the underscore representing a space), thus effectively selecting any element having any class beginning with `!`.
+
+This can be very useful if you want to highlight every bang on the page during development. (Remember to remove it before production.) You could also be more specific and use `"!w:"`, to highlight only the Width bangs. You can even color-code each type of bang!
+
 ### Constants
 In the classname syntax, there exist certain constants to promote predicability and readability.
 For all properties,

@@ -1,28 +1,22 @@
 
 /*################################*\
-    _font-size.less
+    bangs  |  _font-size.less
 \*################################*/
-@import (reference) url('../node_modules/xmeter/src/__settings.less');
 
 // Sets the font size.
 // The bangs used for font size correspond to heading sizes.
-// Heading sizes h1–h6 taken directly from [xmeter](https://github.com/chharvey/xmeter/).
-// Extra size h7 added.
 // Note that these bangs do not also set line-height.
 // There is, however, a pixel fallback for browsers that do not support rems. (16px = 1rem)
 // NOTE: THESE BANGS ARE OPINIONATED. Override them if you wish.
 //
 // !fz  =  font-size
 //
-// :0   =  initial
-// :i   =  inherit
-// :h1  =  2.000rem (32px)
-// :h2  =  1.500rem (24px)
-// :h3  =  1.250rem (20px)
-// :h4  =  1.000rem (16px)
-// :h5  =  0.875rem (14px)
-// :h6  =  0.750rem (12px)
-// :h7  =  0.625rem (10px)
+// :0  =  initial
+// :i  =  inherit
+// :h  =  0.5rem ( 8px)
+// :1  =  1.0rem (16px)
+// :2  =  2.0rem (32px)
+// :4  =  4.0rem (64px)
 //
 // @s  =  screen
 // @p  =  print
@@ -34,41 +28,31 @@
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2015-10-04
+// : 2016-01-14
 
 @default_px: 16px;
-@h7_font_size: 0.5;
 
-.\!fz\:0  { font-size: @default_px; font-size: initial !important; }
-.\!fz\:i  {                         font-size: inherit !important; }
-.\!fz\:h1 { #XMETER .VARS(); font-size: (@h1_font_size * @default_px) !important; font-size: (@h1_font_size * 1rem) !important; }
-.\!fz\:h2 { #XMETER .VARS(); font-size: (@h2_font_size * @default_px) !important; font-size: (@h2_font_size * 1rem) !important; }
-.\!fz\:h3 { #XMETER .VARS(); font-size: (@h3_font_size * @default_px) !important; font-size: (@h3_font_size * 1rem) !important; }
-.\!fz\:h4 { #XMETER .VARS(); font-size: (@h4_font_size * @default_px) !important; font-size: (@h4_font_size * 1rem) !important; }
-.\!fz\:h5 { #XMETER .VARS(); font-size: (@h5_font_size * @default_px) !important; font-size: (@h5_font_size * 1rem) !important; }
-.\!fz\:h6 { #XMETER .VARS(); font-size: (@h6_font_size * @default_px) !important; font-size: (@h6_font_size * 1rem) !important; }
-.\!fz\:h7 {                  font-size: (@h7_font_size * @default_px) !important; font-size: (@h7_font_size * 1rem) !important; }
+.\!fz\:0 { font-size: @default_px !important; font-size: initial !important; }
+.\!fz\:i {                                    font-size: inherit !important; }
+.\!fz\:h { font-size:  8px        !important; font-size: 0.5rem  !important; }
+.\!fz\:1 { font-size: 16px        !important; font-size: 1.0rem  !important; }
+.\!fz\:2 { font-size: 32px        !important; font-size: 2.0rem  !important; }
+.\!fz\:4 { font-size: 64px        !important; font-size: 4.0rem  !important; }
 
 @media screen {
-  .\!fz\:0\@s  { .\!fz\:0 ; }
-  .\!fz\:i\@s  { .\!fz\:i ; }
-  .\!fz\:h1\@s { .\!fz\:h1; }
-  .\!fz\:h2\@s { .\!fz\:h2; }
-  .\!fz\:h3\@s { .\!fz\:h3; }
-  .\!fz\:h4\@s { .\!fz\:h4; }
-  .\!fz\:h5\@s { .\!fz\:h5; }
-  .\!fz\:h6\@s { .\!fz\:h6; }
-  .\!fz\:h7\@s { .\!fz\:h7; }
+  .\!fz\:0\@s { .\!fz\:0; }
+  .\!fz\:i\@s { .\!fz\:i; }
+  .\!fz\:h\@s { .\!fz\:h; }
+  .\!fz\:1\@s { .\!fz\:1; }
+  .\!fz\:2\@s { .\!fz\:2; }
+  .\!fz\:4\@s { .\!fz\:4; }
 }
 
 @media print {
-  .\!fz\:0\@p  { .\!fz\:0 ; }
-  .\!fz\:i\@p  { .\!fz\:i ; }
-  .\!fz\:h1\@p { .\!fz\:h1; }
-  .\!fz\:h2\@p { .\!fz\:h2; }
-  .\!fz\:h3\@p { .\!fz\:h3; }
-  .\!fz\:h4\@p { .\!fz\:h4; }
-  .\!fz\:h5\@p { .\!fz\:h5; }
-  .\!fz\:h6\@p { .\!fz\:h6; }
-  .\!fz\:h7\@p { .\!fz\:h7; }
+  .\!fz\:0\@p { .\!fz\:0; }
+  .\!fz\:i\@p { .\!fz\:i; }
+  .\!fz\:h\@p { .\!fz\:h; }
+  .\!fz\:1\@p { .\!fz\:1; }
+  .\!fz\:2\@p { .\!fz\:2; }
+  .\!fz\:4\@p { .\!fz\:4; }
 }
