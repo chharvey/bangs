@@ -7,8 +7,6 @@
 // NOTE that this utility must be
 // an item with `display: list-item;`
 // in order to mean anything.
-// NOTE that this set of bangs only supports ordinal list style types,
-// not list style types that are the same symbol for each list item.
 //
 // lst  =  list-style-type
 //
@@ -40,48 +38,48 @@
 // ^updated
 // : 2016-01-14
 
-.\!lst\:0  { .\!lst\:d; list-style-type: initial              !important; }
-.\!lst\:i  {            list-style-type: inherit              !important; }
-.\!lst\:n  {            list-style-type: none                 !important; }
-.\!lst\:dz {            list-style-type: decimal-leading-zero !important; }
-.\!lst\:ur {            list-style-type: upper-roman          !important; }
-.\!lst\:ua {            list-style-type: upper-alpha          !important; }
-.\!lst\:dc {            list-style-type: decimal              !important; }
-.\!lst\:la {            list-style-type: lower-alpha          !important; }
-.\!lst\:lr {            list-style-type: lower-roman          !important; }
-.\!lst\:lg {            list-style-type: lower-greek          !important; }
-.\!lst\:d  {            list-style-type: disc                 !important; }
-.\!lst\:c  {            list-style-type: circle               !important; }
-.\!lst\:s  {            list-style-type: square               !important; }
+.-lst-0  { .-lst-d; list-style-type: initial              !important; }
+.-lst-i  {          list-style-type: inherit              !important; }
+.-lst-n  {          list-style-type: none                 !important; }
+.-lst-dz {          list-style-type: decimal-leading-zero !important; }
+.-lst-ur {          list-style-type: upper-roman          !important; }
+.-lst-ua {          list-style-type: upper-alpha          !important; }
+.-lst-dc {          list-style-type: decimal              !important; }
+.-lst-la {          list-style-type: lower-alpha          !important; }
+.-lst-lr {          list-style-type: lower-roman          !important; }
+.-lst-lg {          list-style-type: lower-greek          !important; }
+.-lst-d  {          list-style-type: disc                 !important; }
+.-lst-c  {          list-style-type: circle               !important; }
+.-lst-s  {          list-style-type: square               !important; }
 
 @media screen {
-  .\!lst\:0\@s  { .\!lst\:0 ; }
-  .\!lst\:i\@s  { .\!lst\:i ; }
-  .\!lst\:n\@s  { .\!lst\:n ; }
-  .\!lst\:dz\@s { .\!lst\:dz; }
-  .\!lst\:ur\@s { .\!lst\:ur; }
-  .\!lst\:ua\@s { .\!lst\:ua; }
-  .\!lst\:dc\@s { .\!lst\:dc; }
-  .\!lst\:la\@s { .\!lst\:la; }
-  .\!lst\:lr\@s { .\!lst\:lr; }
-  .\!lst\:lg\@s { .\!lst\:lg; }
-  .\!lst\:d\@s  { .\!lst\:d ; }
-  .\!lst\:c\@s  { .\!lst\:c ; }
-  .\!lst\:s\@s  { .\!lst\:s ; }
+  .-lst-0-s  { .-lst-0 ; }
+  .-lst-i-s  { .-lst-i ; }
+  .-lst-n-s  { .-lst-n ; }
+  .-lst-dz-s { .-lst-dz; }
+  .-lst-ur-s { .-lst-ur; }
+  .-lst-ua-s { .-lst-ua; }
+  .-lst-dc-s { .-lst-dc; }
+  .-lst-la-s { .-lst-la; }
+  .-lst-lr-s { .-lst-lr; }
+  .-lst-lg-s { .-lst-lg; }
+  .-lst-d-s  { .-lst-d ; }
+  .-lst-c-s  { .-lst-c ; }
+  .-lst-s-s  { .-lst-s ; }
 }
 
 @media print {
-  .\!lst\:0\@p  { .\!lst\:0 ; }
-  .\!lst\:i\@p  { .\!lst\:i ; }
-  .\!lst\:n\@p  { .\!lst\:n ; }
-  .\!lst\:dz\@p { .\!lst\:dz; }
-  .\!lst\:ur\@p { .\!lst\:ur; }
-  .\!lst\:ua\@p { .\!lst\:ua; }
-  .\!lst\:dc\@p { .\!lst\:dc; }
-  .\!lst\:la\@p { .\!lst\:la; }
-  .\!lst\:lr\@p { .\!lst\:lr; }
-  .\!lst\:lg\@p { .\!lst\:lg; }
-  .\!lst\:d\@p  { .\!lst\:d ; }
-  .\!lst\:c\@p  { .\!lst\:c ; }
-  .\!lst\:s\@p  { .\!lst\:s ; }
+  .-lst-0-p  { .-lst-0 ; }
+  .-lst-i-p  { .-lst-i ; }
+  .-lst-n-p  { .-lst-n ; }
+  .-lst-dz-p { .-lst-dz; }
+  .-lst-ur-p { .-lst-ur; }
+  .-lst-ua-p { .-lst-ua; }
+  .-lst-dc-p { .-lst-dc; }
+  .-lst-la-p { .-lst-la; }
+  .-lst-lr-p { .-lst-lr; }
+  .-lst-lg-p { .-lst-lg; }
+  .-lst-d-p  { .-lst-d ; }
+  .-lst-c-p  { .-lst-c ; }
+  .-lst-s-p  { .-lst-s ; }
 }
