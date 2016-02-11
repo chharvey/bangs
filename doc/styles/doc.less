@@ -1,5 +1,18 @@
 @import (reference) url('../../node_modules/lux-nox/lux-nox.less');
 
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
+    bangs
+\*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+/*================================*\
+    doc.less
+\*================================*/
+
+
+// Stylesheet for Bangs documentation.
+// (Not included in bangs.css, the main file.)
+
 
 @color_bg:   @solar_base3;
 @color_brdr: @solar_base2;
@@ -8,12 +21,20 @@
 @color_emph: @solar_base01;
 
 body {
+  margin: 0 1rem;
   color: @color_txt;
   background-color: @color_bg;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: @color_emph;
+}
+
+a {
+  color: @solar_blue;
+  &:hover {
+    color: @solar_orange;
+  }
 }
 
 code {
