@@ -81,6 +81,26 @@
 .\!w\:a {          width: auto    !important; }
 .\!w\:z {          width: 0       !important; }
 
+// Generates a class `.\!w\:‹a›o‹b›` (e.g. `.\!w\:3o5`), where
+// ‹a› is the numerator,
+// ‹b› is the denominator,
+// and the width is ‹a› divided by ‹b› as a percent.
+// ^params
+// @b  - the denominator of the fraction. required.
+// @bp - the breakpoint suffix, if any
+// .gen-w-frac(@b; @bp: ~''; @a: 1) when (@a =< @b) {
+//   .mixin() when (@b % @a = 1)
+//   .\!w\:@{a}o@{b}@{bp} { width: (@a/@b * 100%); }
+//   .gen-w-frac(@b; @bp; (@a + 1));
+// }
+// .gen-w-frac(1);
+// .gen-w-frac(2);
+// .gen-w-frac(3);
+// .gen-w-frac(4);
+// .gen-w-frac(5);
+// .gen-w-frac(6);
+// .gen-w-frac(8);
+// .gen-w-frac(10);
 .\!w\:10o10,
 .\!w\:8o8,
 .\!w\:6o6,
@@ -121,12 +141,52 @@
 .\!w\:7o10 { width: (7/10) * 100% !important; }
 .\!w\:9o10 { width: (9/10) * 100% !important; }
 
+
+@px_per_it: 96;
+@max_px: 1440;
+// Generates a class `.\!w\:‹i›px` (e.g. `.\!w\:288px`), where
+// ‹i› is the integer argument, the width in pixels.
+// The mixin is recursive, starting at ‹i›==96,
+// incrementing by 96 each time it is called,
+// stopping when ‹i›==1440.
+// ^params
+// @bp - the breakpoint suffix, if any
+.gen-w-px(@bp: ~''; @i: @px_per_it) when (@i =< @max_px) {
+  .\!w\:@{i}px@{bp} { width: (@i * 1px); }
+  .gen-w-px(@bp; @i + @px_per_it);
+}
+.gen-w-px();
+
+
+@em_per_it: 5;
+@max_em: 90;
+// Generates a class `.\!w\:‹i›em` (e.g. `.\!w\:30em`), where
+// ‹i› is the integer argument, the width in ems.
+// The mixin is recursive, starting at ‹i›==5,
+// incrementing by 5 each time it is called,
+// stopping when ‹i›==90.
+// ^params
+// @bp - the breakpoint suffix, if any
+.gen-w-em(@bp: ~''; @i: @em_per_it) when (@i =< @max_em) {
+  .\!w\:@{i}em@{bp} { width: (@i * 1em); }
+  .gen-w-em(@bp; @i+@em_per_it);
+}
+.gen-w-em();
+
 @media screen {
   .\!w\:0\@s { .\!w\:0; }
   .\!w\:i\@s { .\!w\:i; }
   .\!w\:a\@s { .\!w\:a; }
   .\!w\:z\@s { .\!w\:z; }
 
+// .gen-w-frac(1;  ~'\@s');
+// .gen-w-frac(2;  ~'\@s');
+// .gen-w-frac(3;  ~'\@s');
+// .gen-w-frac(4;  ~'\@s');
+// .gen-w-frac(5;  ~'\@s');
+// .gen-w-frac(6;  ~'\@s');
+// .gen-w-frac(8;  ~'\@s');
+// .gen-w-frac(10; ~'\@s');
   .\!w\:10o10\@s,
   .\!w\:8o8\@s,
   .\!w\:6o6\@s,
@@ -162,11 +222,13 @@
   .\!w\:3o8\@s  { .\!w\:3o8 ; }
   .\!w\:5o8\@s  { .\!w\:5o8 ; }
   .\!w\:7o8\@s  { .\!w\:7o8 ; }
-
   .\!w\:1o10\@s { .\!w\:1o10; }
   .\!w\:3o10\@s { .\!w\:3o10; }
   .\!w\:7o10\@s { .\!w\:7o10; }
   .\!w\:9o10\@s { .\!w\:9o10; }
+
+  .gen-w-px(~'\@s');
+  .gen-w-em(~'\@s');
 }
 
 @media print {
@@ -175,6 +237,14 @@
   .\!w\:a\@p { .\!w\:a; }
   .\!w\:z\@p { .\!w\:z; }
 
+// .gen-w-frac(1;  ~'\@p');
+// .gen-w-frac(2;  ~'\@p');
+// .gen-w-frac(3;  ~'\@p');
+// .gen-w-frac(4;  ~'\@p');
+// .gen-w-frac(5;  ~'\@p');
+// .gen-w-frac(6;  ~'\@p');
+// .gen-w-frac(8;  ~'\@p');
+// .gen-w-frac(10; ~'\@p');
   .\!w\:10o10\@p,
   .\!w\:8o8\@p,
   .\!w\:6o6\@p,
@@ -210,9 +280,11 @@
   .\!w\:3o8\@p  { .\!w\:3o8 ; }
   .\!w\:5o8\@p  { .\!w\:5o8 ; }
   .\!w\:7o8\@p  { .\!w\:7o8 ; }
-
   .\!w\:1o10\@p { .\!w\:1o10; }
   .\!w\:3o10\@p { .\!w\:3o10; }
   .\!w\:7o10\@p { .\!w\:7o10; }
   .\!w\:9o10\@p { .\!w\:9o10; }
+
+  .gen-w-px(~'\@p');
+  .gen-w-em(~'\@p');
 }
