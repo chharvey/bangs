@@ -20,6 +20,11 @@
       "code": "d"
     , "initial": "inline"
     , "inherited": false
+    , "values": [
+      { "name": "none" , "abbr": "n" }
+    , { "name": "block" , "abbr": "bk" }
+    , { "name": "flex" , "abbr": "fx" , "alt": "#XMETER .flexbox()" }
+    ]
     , "value": {
         "none"              : "n"
       , "block"             : "bk"
