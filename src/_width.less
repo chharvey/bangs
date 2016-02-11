@@ -152,7 +152,7 @@
 // ^params
 // @bp - the breakpoint suffix, if any
 .gen-w-px(@bp: ~''; @i: @px_per_it) when (@i =< @max_px) {
-  .\!w\:@{i}px@{bp} { width: (@i * 1px); }
+  .\!w\:@{i}px@{bp} { width: (@i * 1px) !important; }
   .gen-w-px(@bp; @i + @px_per_it);
 }
 .gen-w-px();
@@ -168,7 +168,7 @@
 // ^params
 // @bp - the breakpoint suffix, if any
 .gen-w-em(@bp: ~''; @i: @em_per_it) when (@i =< @max_em) {
-  .\!w\:@{i}em@{bp} { width: (@i * 1em); }
+  .\!w\:@{i}em@{bp} { width: (@i * 1em) !important; }
   .gen-w-em(@bp; @i+@em_per_it);
 }
 .gen-w-em();
