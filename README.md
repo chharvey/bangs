@@ -58,7 +58,7 @@ Use bang classes in the HTML `[class]` attribute only.
 
 Now, there is some debate as to whether you should use *only* bangs in your markup and
 no other classes at all. You can read my philosophical thoughts about this
-[here] (link pending).
+[here (link pending)].
 
 ## Syntax
 
@@ -67,6 +67,7 @@ In general, the syntax of a bang classname looks like this:
 -‹prop›-‹val›[-‹mq›|-h]?
 ```
 Where:
+
 1. The leading ~~*bang*, i.e., exclamation point,~~ hyphen indicates this class is a Bang and belongs to this stylesheet.
 2. `‹prop›` is the initials for the property name, followed by a hyphen.
 3. `‹val›` is the initials for the property value.
@@ -74,7 +75,7 @@ Where:
   - append `-‹mq›` (media query abbr), or
   - append `-h` for hover/focus-only styles.
 
-Read [the docs](DOCUMENTATION.md) for more info.
+Read [the docs](doc/DOC.md) for more info.
 
 ## Developing with Bangs
 
