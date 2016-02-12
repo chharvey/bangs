@@ -8,11 +8,11 @@
 // an item with `display: list-item;`
 // in order to mean anything.
 //
-// !lsi  =  list-style-image
+// lsi  =  list-style-image
 //
-// :0  =  initial
-// :i  =  inherit
-// :n  =  none
+// 0  =  initial
+// i  =  inherit
+// n  =  none
 //
 // ^initial
 // : `none`
@@ -25,18 +25,18 @@
 // ^updated
 // : 2015-10-02
 
-.\!lsi\:0 { .\!lsi\:n; list-style-image: initial !important; }
-.\!lsi\:i {            list-style-image: inherit !important; }
-.\!lsi\:n {            list-style-image: none    !important; }
+.-lsi-0 { .-lsi-n; list-style-image: initial !important; }
+.-lsi-i {          list-style-image: inherit !important; }
+.-lsi-n {          list-style-image: none    !important; }
 
 @media screen {
-  .\!lsi\:0\@s { .\!lsi\:0; }
-  .\!lsi\:i\@s { .\!lsi\:i; }
-  .\!lsi\:n\@s { .\!lsi\:n; }
+  .-lsi-0-s { .-lsi-0; }
+  .-lsi-i-s { .-lsi-i; }
+  .-lsi-n-s { .-lsi-n; }
 }
 
 @media print {
-  .\!lsi\:0\@p { .\!lsi\:0; }
-  .\!lsi\:i\@p { .\!lsi\:i; }
-  .\!lsi\:n\@p { .\!lsi\:n; }
+  .-lsi-0-p { .-lsi-0; }
+  .-lsi-i-p { .-lsi-i; }
+  .-lsi-n-p { .-lsi-n; }
 }

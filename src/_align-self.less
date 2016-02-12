@@ -7,16 +7,16 @@
 // Overrides behavior of `align-items` for aligining one specific flex item along cross axis
 // (align vertically for `flex-direction: row` or horizontally for `flex-direction: column`)
 //
-// !xs  =  align-self
+// xs  =  align-self
 //
-// :0   =  initial
-// :i   =  inherit
-// :a   =  auto
-// :s   =  stretch
-// :xs  =  flex-start
-// :xe  =  flex-end
-// :c   =  center
-// :b   =  baseline
+// 0   =  initial
+// i   =  inherit
+// a   =  auto
+// s   =  stretch
+// xs  =  flex-start
+// xe  =  flex-end
+// c   =  center
+// b   =  baseline
 //
 // ^initial
 // : `auto`
@@ -29,33 +29,33 @@
 // ^updated
 // : 2015-10-15
 
-.\!xs\:0  { .\!xs\:a; #XMETER .flex-align-self(initial)    !important; }
-.\!xs\:i  {           #XMETER .flex-align-self(inherit)    !important; }
-.\!xs\:a  {           #XMETER .flex-align-self(auto)       !important; }
-.\!xs\:s  {           #XMETER .flex-align-self(stretch)    !important; }
-.\!xs\:xs {           #XMETER .flex-align-self(flex-start) !important; }
-.\!xs\:xe {           #XMETER .flex-align-self(flex-end)   !important; }
-.\!xs\:c  {           #XMETER .flex-align-self(center)     !important; }
-.\!xs\:b  {           #XMETER .flex-align-self(baseline)   !important; }
+.-xs-0  { .-xs-a; #XMETER .flex-align-self(initial)    !important; }
+.-xs-i  {         #XMETER .flex-align-self(inherit)    !important; }
+.-xs-a  {         #XMETER .flex-align-self(auto)       !important; }
+.-xs-s  {         #XMETER .flex-align-self(stretch)    !important; }
+.-xs-xs {         #XMETER .flex-align-self(flex-start) !important; }
+.-xs-xe {         #XMETER .flex-align-self(flex-end)   !important; }
+.-xs-c  {         #XMETER .flex-align-self(center)     !important; }
+.-xs-b  {         #XMETER .flex-align-self(baseline)   !important; }
 
 @media screen {
-  .\!xs\:0\@s  { .\!xs\:0 ; }
-  .\!xs\:i\@s  { .\!xs\:i ; }
-  .\!xs\:a\@p  { .\!xs\:a ; }
-  .\!xs\:s\@s  { .\!xs\:s ; }
-  .\!xs\:xs\@s { .\!xs\:xs; }
-  .\!xs\:xe\@s { .\!xs\:xe; }
-  .\!xs\:c\@s  { .\!xs\:c ; }
-  .\!xs\:b\@s  { .\!xs\:b ; }
+  .-xs-0-s  { .-xs-0 ; }
+  .-xs-i-s  { .-xs-i ; }
+  .-xs-a-p  { .-xs-a ; }
+  .-xs-s-s  { .-xs-s ; }
+  .-xs-xs-s { .-xs-xs; }
+  .-xs-xe-s { .-xs-xe; }
+  .-xs-c-s  { .-xs-c ; }
+  .-xs-b-s  { .-xs-b ; }
 }
 
 @media print {
-  .\!xs\:0\@p  { .\!xs\:0 ; }
-  .\!xs\:i\@p  { .\!xs\:i ; }
-  .\!xs\:a\@p  { .\!xs\:a ; }
-  .\!xs\:s\@p  { .\!xs\:s ; }
-  .\!xs\:xs\@p { .\!xs\:xs; }
-  .\!xs\:xe\@p { .\!xs\:xe; }
-  .\!xs\:c\@p  { .\!xs\:c ; }
-  .\!xs\:b\@p  { .\!xs\:b ; }
+  .-xs-0-p  { .-xs-0 ; }
+  .-xs-i-p  { .-xs-i ; }
+  .-xs-a-p  { .-xs-a ; }
+  .-xs-s-p  { .-xs-s ; }
+  .-xs-xs-p { .-xs-xs; }
+  .-xs-xe-p { .-xs-xe; }
+  .-xs-c-p  { .-xs-c ; }
+  .-xs-b-p  { .-xs-b ; }
 }

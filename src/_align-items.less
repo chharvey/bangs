@@ -7,15 +7,15 @@
 // Defines default behavior for aligining flex items along cross axis
 // (align vertically for `flex-direction: row` or horizontally for `flex-direction: column`)
 //
-// !xi  =  align-items
+// xi  =  align-items
 //
-// :0   =  initial
-// :i   =  inherit
-// :s   =  stretch
-// :xs  =  flex-start
-// :xe  =  flex-end
-// :c   =  center
-// :b   =  baseline
+// 0   =  initial
+// i   =  inherit
+// s   =  stretch
+// xs  =  flex-start
+// xe  =  flex-end
+// c   =  center
+// b   =  baseline
 //
 // ^initial
 // : `stretch`
@@ -28,30 +28,30 @@
 // ^updated
 // : 2015-10-15
 
-.\!xi\:0  { .\!xi\:s; #XMETER .flex-align-items(initial)    !important; }
-.\!xi\:i  {           #XMETER .flex-align-items(inherit)    !important; }
-.\!xi\:s  {           #XMETER .flex-align-items(stretch)    !important; }
-.\!xi\:xs {           #XMETER .flex-align-items(flex-start) !important; }
-.\!xi\:xe {           #XMETER .flex-align-items(flex-end)   !important; }
-.\!xi\:c  {           #XMETER .flex-align-items(center)     !important; }
-.\!xi\:b  {           #XMETER .flex-align-items(baseline)   !important; }
+.-xi-0  { .-xi-s; #XMETER .flex-align-items(initial)    !important; }
+.-xi-i  {         #XMETER .flex-align-items(inherit)    !important; }
+.-xi-s  {         #XMETER .flex-align-items(stretch)    !important; }
+.-xi-xs {         #XMETER .flex-align-items(flex-start) !important; }
+.-xi-xe {         #XMETER .flex-align-items(flex-end)   !important; }
+.-xi-c  {         #XMETER .flex-align-items(center)     !important; }
+.-xi-b  {         #XMETER .flex-align-items(baseline)   !important; }
 
 @media screen {
-  .\!xi\:0\@s  { .\!xi\:0 ; }
-  .\!xi\:i\@s  { .\!xi\:i ; }
-  .\!xi\:s\@s  { .\!xi\:s ; }
-  .\!xi\:xs\@s { .\!xi\:xs; }
-  .\!xi\:xe\@s { .\!xi\:xe; }
-  .\!xi\:c\@s  { .\!xi\:c ; }
-  .\!xi\:b\@s  { .\!xi\:b ; }
+  .-xi-0-s  { .-xi-0 ; }
+  .-xi-i-s  { .-xi-i ; }
+  .-xi-s-s  { .-xi-s ; }
+  .-xi-xs-s { .-xi-xs; }
+  .-xi-xe-s { .-xi-xe; }
+  .-xi-c-s  { .-xi-c ; }
+  .-xi-b-s  { .-xi-b ; }
 }
 
 @media print {
-  .\!xi\:0\@p  { .\!xi\:0 ; }
-  .\!xi\:i\@p  { .\!xi\:i ; }
-  .\!xi\:s\@p  { .\!xi\:s ; }
-  .\!xi\:xs\@p { .\!xi\:xs; }
-  .\!xi\:xe\@p { .\!xi\:xe; }
-  .\!xi\:c\@p  { .\!xi\:c ; }
-  .\!xi\:b\@p  { .\!xi\:b ; }
+  .-xi-0-p  { .-xi-0 ; }
+  .-xi-i-p  { .-xi-i ; }
+  .-xi-s-p  { .-xi-s ; }
+  .-xi-xs-p { .-xi-xs; }
+  .-xi-xe-p { .-xi-xe; }
+  .-xi-c-p  { .-xi-c ; }
+  .-xi-b-p  { .-xi-b ; }
 }

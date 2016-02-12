@@ -5,13 +5,13 @@
 
 // Sets whether an element is visible or hidden.
 //
-// !o  =  opacity
+// o  =  opacity
 //
-// :0  =  initial
-// :i  =  inherit
-// :z  =  0.0
-// :h  =  0.5
-// :1  =  1.0
+// 0  =  initial
+// i  =  inherit
+// z  =  0.0
+// h  =  0.5
+// 1  =  1.0
 //
 // ^initial
 // : `1.0`
@@ -24,30 +24,30 @@
 // ^updated
 // : 2015-10-15
 
-.\!o\:0 { opacity: 1.0     !important; opacity: initial !important; }
-.\!o\:i { opacity: inherit !important; }
-.\!o\:z { opacity: 0.0     !important; }
-.\!o\:h { opacity: 0.5     !important; }
-.\!o\:1 { opacity: 1.0     !important; }
+.-o-0 { .-o-1; opacity: initial !important; }
+.-o-i {        opacity: inherit !important; }
+.-o-z {        opacity: 0.0     !important; }
+.-o-h {        opacity: 0.5     !important; }
+.-o-1 {        opacity: 1.0     !important; }
 
 @media screen {
-  .\!o\:0\@s { .\!o\:0; }
-  .\!o\:i\@s { .\!o\:i; }
-  .\!o\:z\@s { .\!o\:z; }
-  .\!o\:h\@s { .\!o\:h; }
-  .\!o\:1\@s { .\!o\:1; }
+  .-o-0-s { .-o-0; }
+  .-o-i-s { .-o-i; }
+  .-o-z-s { .-o-z; }
+  .-o-h-s { .-o-h; }
+  .-o-1-s { .-o-1; }
 }
 
 @media print {
-  .\!o\:0\@p { .\!o\:0; }
-  .\!o\:i\@p { .\!o\:i; }
-  .\!o\:z\@p { .\!o\:z; }
-  .\!o\:h\@p { .\!o\:h; }
-  .\!o\:1\@p { .\!o\:1; }
+  .-o-0-p { .-o-0; }
+  .-o-i-p { .-o-i; }
+  .-o-z-p { .-o-z; }
+  .-o-h-p { .-o-h; }
+  .-o-1-p { .-o-1; }
 }
 
-.\!o\:0\^ { &:hover, &:focus { .\!o\:0; } }
-.\!o\:i\^ { &:hover, &:focus { .\!o\:i; } }
-.\!o\:z\^ { &:hover, &:focus { .\!o\:z; } }
-.\!o\:h\^ { &:hover, &:focus { .\!o\:h; } }
-.\!o\:1\^ { &:hover, &:focus { .\!o\:1; } }
+.-o-0\^ { &:hover, &:focus { .-o-0; } }
+.-o-i\^ { &:hover, &:focus { .-o-i; } }
+.-o-z\^ { &:hover, &:focus { .-o-z; } }
+.-o-h\^ { &:hover, &:focus { .-o-h; } }
+.-o-1\^ { &:hover, &:focus { .-o-1; } }

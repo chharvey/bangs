@@ -5,16 +5,17 @@
 
 // Determines how white space in source code is rendered
 // and when to interpret line-breaks.
+// NOTE: The each-line` and `hanging` values are not supported.
 //
-// !sp  =  white-space
+// sp  =  white-space
 //
-// :0   =  initial
-// :i   =  inherit
-// :n   =  normal
-// :nw  =  nowrap
-// :pr  =  pre
-// :pw  =  pre-wrap
-// :pl  =  pre-line
+// 0   =  initial
+// i   =  inherit
+// n   =  normal
+// nw  =  nowrap
+// pr  =  pre
+// pw  =  pre-wrap
+// pl  =  pre-line
 //
 // ^initial
 // : `normal`
@@ -27,30 +28,30 @@
 // ^updated
 // : 2015-10-15
 
-.\!sp\:0  { .\!sp\:n; white-space: initial  !important; }
-.\!sp\:i  {           white-space: inherit  !important; }
-.\!sp\:n  {           white-space: normal   !important; }
-.\!sp\:nw {           white-space: nowrap   !important; }
-.\!sp\:pr {           white-space: pre      !important; }
-.\!sp\:pw {           white-space: pre-wrap !important; }
-.\!sp\:pl {           white-space: pre-line !important; }
+.-sp-0  { .-sp-n; white-space: initial  !important; }
+.-sp-i  {         white-space: inherit  !important; }
+.-sp-n  {         white-space: normal   !important; }
+.-sp-nw {         white-space: nowrap   !important; }
+.-sp-pr {         white-space: pre      !important; }
+.-sp-pw {         white-space: pre-wrap !important; }
+.-sp-pl {         white-space: pre-line !important; }
 
 @media screen {
-  .\!sp\:0\@s  { .\!sp\:0 ; }
-  .\!sp\:i\@s  { .\!sp\:i ; }
-  .\!sp\:n\@s  { .\!sp\:n ; }
-  .\!sp\:nw\@s { .\!sp\:nw; }
-  .\!sp\:pr\@s { .\!sp\:pr; }
-  .\!sp\:pw\@s { .\!sp\:pw; }
-  .\!sp\:pl\@s { .\!sp\:pl; }
+  .-sp-0-s  { .-sp-0 ; }
+  .-sp-i-s  { .-sp-i ; }
+  .-sp-n-s  { .-sp-n ; }
+  .-sp-nw-s { .-sp-nw; }
+  .-sp-pr-s { .-sp-pr; }
+  .-sp-pw-s { .-sp-pw; }
+  .-sp-pl-s { .-sp-pl; }
 }
 
 @media print {
-  .\!sp\:0\@p  { .\!sp\:0 ; }
-  .\!sp\:i\@p  { .\!sp\:i ; }
-  .\!sp\:n\@p  { .\!sp\:n ; }
-  .\!sp\:nw\@p { .\!sp\:nw; }
-  .\!sp\:pr\@p { .\!sp\:pr; }
-  .\!sp\:pw\@p { .\!sp\:pw; }
-  .\!sp\:pl\@p { .\!sp\:pl; }
+  .-sp-0-p  { .-sp-0 ; }
+  .-sp-i-p  { .-sp-i ; }
+  .-sp-n-p  { .-sp-n ; }
+  .-sp-nw-p { .-sp-nw; }
+  .-sp-pr-p { .-sp-pr; }
+  .-sp-pw-p { .-sp-pw; }
+  .-sp-pl-p { .-sp-pl; }
 }

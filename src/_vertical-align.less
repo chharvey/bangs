@@ -8,18 +8,18 @@
 // an item with `display: inline | table-cell;`
 // in order to mean anything.
 //
-// !va  =  vertical-align
+// va  =  vertical-align
 //
-// :0   =  initial
-// :i   =  inherit
-// :a   =  baseline
-// :b   =  bottom
-// :m   =  middle
-// :t   =  top
-// :tb  =  text-bottom
-// :tt  =  text-top
-// :sb  =  sub
-// :st  =  super
+// 0   =  initial
+// i   =  inherit
+// a   =  baseline
+// b   =  bottom
+// m   =  middle
+// t   =  top
+// tb  =  text-bottom
+// tt  =  text-top
+// sb  =  sub
+// st  =  super
 //
 // ^initial
 // : `baseline`
@@ -32,39 +32,39 @@
 // ^updated
 // : 2015-10-02
 
-.\!va\:0  { .\!va\:a; vertical-align: initial     !important; }
-.\!va\:i  {           vertical-align: inherit     !important; }
-.\!va\:a  {           vertical-align: baseline    !important; }
-.\!va\:b  {           vertical-align: bottom      !important; }
-.\!va\:m  {           vertical-align: middle      !important; }
-.\!va\:t  {           vertical-align: top         !important; }
-.\!va\:tb {           vertical-align: text-bottom !important; }
-.\!va\:tt {           vertical-align: text-top    !important; }
-.\!va\:sb {           vertical-align: sub         !important; }
-.\!va\:st {           vertical-align: super       !important; }
+.-va-0  { .-va-a; vertical-align: initial     !important; }
+.-va-i  {         vertical-align: inherit     !important; }
+.-va-a  {         vertical-align: baseline    !important; }
+.-va-b  {         vertical-align: bottom      !important; }
+.-va-m  {         vertical-align: middle      !important; }
+.-va-t  {         vertical-align: top         !important; }
+.-va-tb {         vertical-align: text-bottom !important; }
+.-va-tt {         vertical-align: text-top    !important; }
+.-va-sb {         vertical-align: sub         !important; }
+.-va-st {         vertical-align: super       !important; }
 
 @media screen {
-  .\!va\:0\@s  { .\!va\:0 ; }
-  .\!va\:i\@s  { .\!va\:i ; }
-  .\!va\:a\@s  { .\!va\:a ; }
-  .\!va\:b\@s  { .\!va\:b ; }
-  .\!va\:m\@s  { .\!va\:m ; }
-  .\!va\:t\@s  { .\!va\:t ; }
-  .\!va\:tb\@s { .\!va\:tb; }
-  .\!va\:tt\@s { .\!va\:tt; }
-  .\!va\:sb\@s { .\!va\:sb; }
-  .\!va\:st\@s { .\!va\:st; }
+  .-va-0-s  { .-va-0 ; }
+  .-va-i-s  { .-va-i ; }
+  .-va-a-s  { .-va-a ; }
+  .-va-b-s  { .-va-b ; }
+  .-va-m-s  { .-va-m ; }
+  .-va-t-s  { .-va-t ; }
+  .-va-tb-s { .-va-tb; }
+  .-va-tt-s { .-va-tt; }
+  .-va-sb-s { .-va-sb; }
+  .-va-st-s { .-va-st; }
 }
 
 @media print {
-  .\!va\:0\@p  { .\!va\:0 ; }
-  .\!va\:i\@p  { .\!va\:i ; }
-  .\!va\:a\@p  { .\!va\:a ; }
-  .\!va\:b\@p  { .\!va\:b ; }
-  .\!va\:m\@p  { .\!va\:m ; }
-  .\!va\:t\@p  { .\!va\:t ; }
-  .\!va\:tb\@p { .\!va\:tb; }
-  .\!va\:tt\@p { .\!va\:tt; }
-  .\!va\:sb\@p { .\!va\:sb; }
-  .\!va\:st\@p { .\!va\:st; }
+  .-va-0-p  { .-va-0 ; }
+  .-va-i-p  { .-va-i ; }
+  .-va-a-p  { .-va-a ; }
+  .-va-b-p  { .-va-b ; }
+  .-va-m-p  { .-va-m ; }
+  .-va-t-p  { .-va-t ; }
+  .-va-tb-p { .-va-tb; }
+  .-va-tt-p { .-va-tt; }
+  .-va-sb-p { .-va-sb; }
+  .-va-st-p { .-va-st; }
 }

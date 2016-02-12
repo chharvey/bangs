@@ -5,12 +5,12 @@
 
 // Sets the text color.
 //
-// !c  =  color
+// c  =  color
 //
-// :0  =  initial
-// :i  =  inherit
-// :t  =  transparent
-// :c  =  currentColor
+// 0  =  initial
+// i  =  inherit
+// t  =  transparent
+// c  =  currentColor
 //
 // :b  =  #000000
 // :w  =  #ffffff
@@ -26,38 +26,38 @@
 // ^updated
 // : 2015-10-16
 
-.\!c\:0 { .\!c\:c; color: initial      !important; }
-.\!c\:i {          color: inherit      !important; }
-.\!c\:t {          color: transparent  !important; }
-.\!c\:c {          color: currentColor !important; } // basically same as `inherit`
+.-c-0 { .-c-c; color: initial      !important; }
+.-c-i {        color: inherit      !important; }
+.-c-t {        color: transparent  !important; }
+.-c-c {        color: currentColor !important; } // basically same as `inherit`
 
-.\!c\:b { color: #000000 !important; }
-.\!c\:w { color: #ffffff !important; }
+.-c-b { color: #000000 !important; }
+.-c-w { color: #ffffff !important; }
 
 @media screen {
-  .\!c\:0\@s { .\!c\:0; }
-  .\!c\:i\@s { .\!c\:i; }
-  .\!c\:t\@s { .\!c\:t; }
-  .\!c\:c\@s { .\!c\:c; }
+  .-c-0-s { .-c-0; }
+  .-c-i-s { .-c-i; }
+  .-c-t-s { .-c-t; }
+  .-c-c-s { .-c-c; }
 
-  .\!c\:b\@s { .\!c\:b; }
-  .\!c\:w\@s { .\!c\:w; }
+  .-c-b-s { .-c-b; }
+  .-c-w-s { .-c-w; }
 }
 
 @media print {
-  .\!c\:0\@p { .\!c\:0; }
-  .\!c\:i\@p { .\!c\:i; }
-  .\!c\:t\@p { .\!c\:t; }
-  .\!c\:c\@p { .\!c\:c; }
+  .-c-0-p { .-c-0; }
+  .-c-i-p { .-c-i; }
+  .-c-t-p { .-c-t; }
+  .-c-c-p { .-c-c; }
 
-  .\!c\:b\@p { .\!c\:b; }
-  .\!c\:w\@p { .\!c\:w; }
+  .-c-b-p { .-c-b; }
+  .-c-w-p { .-c-w; }
 }
 
-.\!c\:0\^ { &:hover, &:focus { .\!c\:0; } }
-.\!c\:i\^ { &:hover, &:focus { .\!c\:i; } }
-.\!c\:t\^ { &:hover, &:focus { .\!c\:t; } }
-.\!c\:c\^ { &:hover, &:focus { .\!c\:c; } }
+.-c-0-h { &:hover, &:focus { .-c-0; } }
+.-c-i-h { &:hover, &:focus { .-c-i; } }
+.-c-t-h { &:hover, &:focus { .-c-t; } }
+.-c-c-h { &:hover, &:focus { .-c-c; } }
 
-.\!c\:b\^ { &:hover, &:focus { .\!c\:b; } }
-.\!c\:w\^ { &:hover, &:focus { .\!c\:w; } }
+.-c-b-h { &:hover, &:focus { .-c-b; } }
+.-c-w-h { &:hover, &:focus { .-c-w; } }

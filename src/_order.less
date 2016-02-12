@@ -9,41 +9,25 @@
 // (an item with `display: flex;`)
 // in order to mean anything.
 //
-// !xo  =  order
+// xo  =  order
 //
-// :0   =  initial (also 0)
-// :i   =  inherit
-// :z   =  0
-// :1   =  1
-// :2   =  2
-// :3   =  3
-// :4   =  4
-// :5   =  5
-// :6   =  6
-// :7   =  7
-// :8   =  8
-// :9   =  9
-// :a   =  10
-// :b   =  11
-// :c   =  12
-// :d   =  13
-// :e   =  14
-// :f   =  15
-// :-1  =  -1
-// :-2  =  -2
-// :-3  =  -3
-// :-4  =  -4
-// :-5  =  -5
-// :-6  =  -6
-// :-7  =  -7
-// :-8  =  -8
-// :-9  =  -9
-// :-a  =  -10
-// :-b  =  -11
-// :-c  =  -12
-// :-d  =  -13
-// :-e  =  -14
-// :-f  =  -15
+// 0   =  initial (also 0)
+// i   =  inherit
+// z   =  0
+// 1   =  1
+// 2   =  2
+// 3   =  3
+// 4   =  4
+// 5   =  5
+// 6   =  6
+// 7   =  7
+// -1  =  -1
+// -2  =  -2
+// -3  =  -3
+// -4  =  -4
+// -5  =  -5
+// -6  =  -6
+// -7  =  -7
 //
 // ^initial
 // : `0`
@@ -54,110 +38,62 @@
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2015-10-16
+// : 2016-02-11
 
-.\!xo\:0  { .\!xo\:z; #XMETER .flex-order(initial) !important; }
-.\!xo\:i  {           #XMETER .flex-order(inherit) !important; }
-.\!xo\:z  {           #XMETER .flex-order(0)       !important; }
-.\!xo\:1  {           #XMETER .flex-order(1)       !important; }
-.\!xo\:2  {           #XMETER .flex-order(2)       !important; }
-.\!xo\:3  {           #XMETER .flex-order(3)       !important; }
-.\!xo\:4  {           #XMETER .flex-order(4)       !important; }
-.\!xo\:5  {           #XMETER .flex-order(5)       !important; }
-.\!xo\:6  {           #XMETER .flex-order(6)       !important; }
-.\!xo\:7  {           #XMETER .flex-order(7)       !important; }
-.\!xo\:8  {           #XMETER .flex-order(8)       !important; }
-.\!xo\:9  {           #XMETER .flex-order(9)       !important; }
-.\!xo\:a  {           #XMETER .flex-order(10)      !important; }
-.\!xo\:b  {           #XMETER .flex-order(11)      !important; }
-.\!xo\:c  {           #XMETER .flex-order(12)      !important; }
-.\!xo\:d  {           #XMETER .flex-order(13)      !important; }
-.\!xo\:e  {           #XMETER .flex-order(14)      !important; }
-.\!xo\:f  {           #XMETER .flex-order(15)      !important; }
-.\!xo\:-1 {           #XMETER .flex-order(-1)      !important; }
-.\!xo\:-2 {           #XMETER .flex-order(-2)      !important; }
-.\!xo\:-3 {           #XMETER .flex-order(-3)      !important; }
-.\!xo\:-4 {           #XMETER .flex-order(-4)      !important; }
-.\!xo\:-5 {           #XMETER .flex-order(-5)      !important; }
-.\!xo\:-6 {           #XMETER .flex-order(-6)      !important; }
-.\!xo\:-7 {           #XMETER .flex-order(-7)      !important; }
-.\!xo\:-8 {           #XMETER .flex-order(-8)      !important; }
-.\!xo\:-9 {           #XMETER .flex-order(-9)      !important; }
-.\!xo\:-a {           #XMETER .flex-order(-10)     !important; }
-.\!xo\:-b {           #XMETER .flex-order(-11)     !important; }
-.\!xo\:-c {           #XMETER .flex-order(-12)     !important; }
-.\!xo\:-d {           #XMETER .flex-order(-13)     !important; }
-.\!xo\:-e {           #XMETER .flex-order(-14)     !important; }
-.\!xo\:-f {           #XMETER .flex-order(-15)     !important; }
+.-xo-0  { .-xo-z; #XMETER .flex-order(initial) !important; }
+.-xo-i  {         #XMETER .flex-order(inherit) !important; }
+.-xo-z  {         #XMETER .flex-order(0)       !important; }
+.-xo-1  {         #XMETER .flex-order(1)       !important; }
+.-xo-2  {         #XMETER .flex-order(2)       !important; }
+.-xo-3  {         #XMETER .flex-order(3)       !important; }
+.-xo-4  {         #XMETER .flex-order(4)       !important; }
+.-xo-5  {         #XMETER .flex-order(5)       !important; }
+.-xo-6  {         #XMETER .flex-order(6)       !important; }
+.-xo-7  {         #XMETER .flex-order(7)       !important; }
+.-xo--1 {         #XMETER .flex-order(-1)      !important; }
+.-xo--2 {         #XMETER .flex-order(-2)      !important; }
+.-xo--3 {         #XMETER .flex-order(-3)      !important; }
+.-xo--4 {         #XMETER .flex-order(-4)      !important; }
+.-xo--5 {         #XMETER .flex-order(-5)      !important; }
+.-xo--6 {         #XMETER .flex-order(-6)      !important; }
+.-xo--7 {         #XMETER .flex-order(-7)      !important; }
 
 @media screen {
-  .\!xo\:0\@s  { .\!xo\:0 ; }
-  .\!xo\:i\@s  { .\!xo\:i ; }
-  .\!xo\:z\@s  { .\!xo\:z ; }
-  .\!xo\:1\@s  { .\!xo\:1 ; }
-  .\!xo\:2\@s  { .\!xo\:2 ; }
-  .\!xo\:3\@s  { .\!xo\:3 ; }
-  .\!xo\:4\@s  { .\!xo\:4 ; }
-  .\!xo\:5\@s  { .\!xo\:5 ; }
-  .\!xo\:6\@s  { .\!xo\:6 ; }
-  .\!xo\:7\@s  { .\!xo\:7 ; }
-  .\!xo\:8\@s  { .\!xo\:8 ; }
-  .\!xo\:9\@s  { .\!xo\:9 ; }
-  .\!xo\:a\@s  { .\!xo\:a ; }
-  .\!xo\:b\@s  { .\!xo\:b ; }
-  .\!xo\:c\@s  { .\!xo\:c ; }
-  .\!xo\:d\@s  { .\!xo\:d ; }
-  .\!xo\:e\@s  { .\!xo\:e ; }
-  .\!xo\:f\@s  { .\!xo\:f ; }
-  .\!xo\:-1\@s { .\!xo\:-1; }
-  .\!xo\:-2\@s { .\!xo\:-2; }
-  .\!xo\:-3\@s { .\!xo\:-3; }
-  .\!xo\:-4\@s { .\!xo\:-4; }
-  .\!xo\:-5\@s { .\!xo\:-5; }
-  .\!xo\:-6\@s { .\!xo\:-6; }
-  .\!xo\:-7\@s { .\!xo\:-7; }
-  .\!xo\:-8\@s { .\!xo\:-8; }
-  .\!xo\:-9\@s { .\!xo\:-9; }
-  .\!xo\:-a\@s { .\!xo\:-a; }
-  .\!xo\:-b\@s { .\!xo\:-b; }
-  .\!xo\:-c\@s { .\!xo\:-c; }
-  .\!xo\:-d\@s { .\!xo\:-d; }
-  .\!xo\:-e\@s { .\!xo\:-e; }
-  .\!xo\:-f\@s { .\!xo\:-f; }
+  .-xo-0-s  { .-xo-0 ; }
+  .-xo-i-s  { .-xo-i ; }
+  .-xo-z-s  { .-xo-z ; }
+  .-xo-1-s  { .-xo-1 ; }
+  .-xo-2-s  { .-xo-2 ; }
+  .-xo-3-s  { .-xo-3 ; }
+  .-xo-4-s  { .-xo-4 ; }
+  .-xo-5-s  { .-xo-5 ; }
+  .-xo-6-s  { .-xo-6 ; }
+  .-xo-7-s  { .-xo-7 ; }
+  .-xo--1-s { .-xo--1; }
+  .-xo--2-s { .-xo--2; }
+  .-xo--3-s { .-xo--3; }
+  .-xo--4-s { .-xo--4; }
+  .-xo--5-s { .-xo--5; }
+  .-xo--6-s { .-xo--6; }
+  .-xo--7-s { .-xo--7; }
 }
 
 @media print {
-  .\!xo\:0\@p  { .\!xo\:0 ; }
-  .\!xo\:i\@p  { .\!xo\:i ; }
-  .\!xo\:z\@p  { .\!xo\:z ; }
-  .\!xo\:1\@p  { .\!xo\:1 ; }
-  .\!xo\:2\@p  { .\!xo\:2 ; }
-  .\!xo\:3\@p  { .\!xo\:3 ; }
-  .\!xo\:4\@p  { .\!xo\:4 ; }
-  .\!xo\:5\@p  { .\!xo\:5 ; }
-  .\!xo\:6\@p  { .\!xo\:6 ; }
-  .\!xo\:7\@p  { .\!xo\:7 ; }
-  .\!xo\:8\@p  { .\!xo\:8 ; }
-  .\!xo\:9\@p  { .\!xo\:9 ; }
-  .\!xo\:a\@p  { .\!xo\:a ; }
-  .\!xo\:b\@p  { .\!xo\:b ; }
-  .\!xo\:c\@p  { .\!xo\:c ; }
-  .\!xo\:d\@p  { .\!xo\:d ; }
-  .\!xo\:e\@p  { .\!xo\:e ; }
-  .\!xo\:f\@p  { .\!xo\:f ; }
-  .\!xo\:-1\@p { .\!xo\:-1; }
-  .\!xo\:-2\@p { .\!xo\:-2; }
-  .\!xo\:-3\@p { .\!xo\:-3; }
-  .\!xo\:-4\@p { .\!xo\:-4; }
-  .\!xo\:-5\@p { .\!xo\:-5; }
-  .\!xo\:-6\@p { .\!xo\:-6; }
-  .\!xo\:-7\@p { .\!xo\:-7; }
-  .\!xo\:-8\@p { .\!xo\:-8; }
-  .\!xo\:-9\@p { .\!xo\:-9; }
-  .\!xo\:-a\@p { .\!xo\:-a; }
-  .\!xo\:-b\@p { .\!xo\:-b; }
-  .\!xo\:-c\@p { .\!xo\:-c; }
-  .\!xo\:-d\@p { .\!xo\:-d; }
-  .\!xo\:-e\@p { .\!xo\:-e; }
-  .\!xo\:-f\@p { .\!xo\:-f; }
+  .-xo-0-p  { .-xo-0 ; }
+  .-xo-i-p  { .-xo-i ; }
+  .-xo-z-p  { .-xo-z ; }
+  .-xo-1-p  { .-xo-1 ; }
+  .-xo-2-p  { .-xo-2 ; }
+  .-xo-3-p  { .-xo-3 ; }
+  .-xo-4-p  { .-xo-4 ; }
+  .-xo-5-p  { .-xo-5 ; }
+  .-xo-6-p  { .-xo-6 ; }
+  .-xo-7-p  { .-xo-7 ; }
+  .-xo--1-p { .-xo--1; }
+  .-xo--2-p { .-xo--2; }
+  .-xo--3-p { .-xo--3; }
+  .-xo--4-p { .-xo--4; }
+  .-xo--5-p { .-xo--5; }
+  .-xo--6-p { .-xo--6; }
+  .-xo--7-p { .-xo--7; }
 }

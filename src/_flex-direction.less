@@ -11,14 +11,14 @@
 // (an item with `display: flex;`)
 // in order to mean anything.
 //
-// !xd  =  flex-direction
+// xd  =  flex-direction
 //
-// :0   =  initial
-// :i   =  inherit
-// :r   =  row
-// :c   =  column
-// :rr  =  row-reverse
-// :cr  =  column-reverse
+// 0   =  initial
+// i   =  inherit
+// r   =  row
+// c   =  column
+// rr  =  row-reverse
+// cr  =  column-reverse
 //
 // ^initial
 // : `row`
@@ -31,27 +31,27 @@
 // ^updated
 // : 2015-10-15
 
-.\!xd\:0  { .\!xd\:r; #XMETER .flex-direction(initial)        !important; }
-.\!xd\:i  {           #XMETER .flex-direction(inherit)        !important; }
-.\!xd\:r  {           #XMETER .flex-direction(row)            !important; }
-.\!xd\:c  {           #XMETER .flex-direction(column)         !important; }
-.\!xd\:rr {           #XMETER .flex-direction(row-reverse)    !important; }
-.\!xd\:cr {           #XMETER .flex-direction(column-reverse) !important; }
+.-xd-0  { .-xd-r; #XMETER .flex-direction(initial)        !important; }
+.-xd-i  {         #XMETER .flex-direction(inherit)        !important; }
+.-xd-r  {         #XMETER .flex-direction(row)            !important; }
+.-xd-c  {         #XMETER .flex-direction(column)         !important; }
+.-xd-rr {         #XMETER .flex-direction(row-reverse)    !important; }
+.-xd-cr {         #XMETER .flex-direction(column-reverse) !important; }
 
 @media screen {
-  .\!xd\:0\@s  { .\!xd\:0 ; }
-  .\!xd\:i\@s  { .\!xd\:i ; }
-  .\!xd\:r\@s  { .\!xd\:r ; }
-  .\!xd\:c\@s  { .\!xd\:c ; }
-  .\!xd\:rr\@s { .\!xd\:rr; }
-  .\!xd\:cr\@s { .\!xd\:cr; }
+  .-xd-0-s  { .-xd-0 ; }
+  .-xd-i-s  { .-xd-i ; }
+  .-xd-r-s  { .-xd-r ; }
+  .-xd-c-s  { .-xd-c ; }
+  .-xd-rr-s { .-xd-rr; }
+  .-xd-cr-s { .-xd-cr; }
 }
 
 @media print {
-  .\!xd\:0\@p  { .\!xd\:0 ; }
-  .\!xd\:i\@p  { .\!xd\:i ; }
-  .\!xd\:r\@p  { .\!xd\:r ; }
-  .\!xd\:c\@p  { .\!xd\:c ; }
-  .\!xd\:rr\@p { .\!xd\:rr; }
-  .\!xd\:cr\@p { .\!xd\:cr; }
+  .-xd-0-p  { .-xd-0 ; }
+  .-xd-i-p  { .-xd-i ; }
+  .-xd-r-p  { .-xd-r ; }
+  .-xd-c-p  { .-xd-c ; }
+  .-xd-rr-p { .-xd-rr; }
+  .-xd-cr-p { .-xd-cr; }
 }

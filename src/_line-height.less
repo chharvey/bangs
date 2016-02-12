@@ -5,12 +5,12 @@
 
 // Sets the minimum height of line boxes.
 //
-// !lh  =  line-height
+// lh  =  line-height
 //
-// :0   =  initial
-// :i   =  inherit
-// :n   =  normal
-// :z   =  0
+// 0   =  initial
+// i   =  inherit
+// n   =  normal
+// z   =  0
 //
 // ^initial
 // : `normal`
@@ -23,21 +23,21 @@
 // ^updated
 // : 2015-10-14
 
-.\!lh\:0 { .\!lh\:n; line-height: initial !important; }
-.\!lh\:i {           line-height: inherit !important; }
-.\!lh\:n {           line-height: normal  !important; }
-.\!lh\:z {           line-height: 0       !important; }
+.-lh-0 { .-lh-n; line-height: initial !important; }
+.-lh-i {         line-height: inherit !important; }
+.-lh-n {         line-height: normal  !important; }
+.-lh-z {         line-height: 0       !important; }
 
 @media screen {
-  .\!lh\:0\@s { .\!lh\:0; }
-  .\!lh\:i\@s { .\!lh\:i; }
-  .\!lh\:n\@s { .\!lh\:n; }
-  .\!lh\:z\@s { .\!lh\:z; }
+  .-lh-0-s { .-lh-0; }
+  .-lh-i-s { .-lh-i; }
+  .-lh-n-s { .-lh-n; }
+  .-lh-z-s { .-lh-z; }
 }
 
 @media print {
-  .\!lh\:0\@p { .\!lh\:0; }
-  .\!lh\:i\@p { .\!lh\:i; }
-  .\!lh\:n\@p { .\!lh\:n; }
-  .\!lh\:z\@p { .\!lh\:z; }
+  .-lh-0-p { .-lh-0; }
+  .-lh-i-p { .-lh-i; }
+  .-lh-n-p { .-lh-n; }
+  .-lh-z-p { .-lh-z; }
 }

@@ -8,12 +8,12 @@
 // an item with `display: list-item;`
 // in order to mean anything.
 //
-// !lsp  =  list-style-position
+// lsp  =  list-style-position
 //
-// :0   =  initial
-// :i   =  inherit
-// :os  =  outside
-// :is  =  inside
+// 0   =  initial
+// i   =  inherit
+// os  =  outside
+// is  =  inside
 //
 // ^initial
 // : `outside`
@@ -26,21 +26,21 @@
 // ^updated
 // : 2015-10-02
 
-.\!lsp\:0  { .\!lsp\:os; list-style-position: initial !important; }
-.\!lsp\:i  {             list-style-position: inherit !important; }
-.\!lsp\:os {             list-style-position: outside !important; }
-.\!lsp\:is {             list-style-position: inside  !important; }
+.-lsp-0  { .-lsp-os; list-style-position: initial !important; }
+.-lsp-i  {           list-style-position: inherit !important; }
+.-lsp-os {           list-style-position: outside !important; }
+.-lsp-is {           list-style-position: inside  !important; }
 
 @media screen {
-  .\!lsp\:0\@s  { .\!lsp\:0 ; }
-  .\!lsp\:i\@s  { .\!lsp\:i ; }
-  .\!lsp\:os\@s { .\!lsp\:os; }
-  .\!lsp\:is\@s { .\!lsp\:is; }
+  .-lsp-0-s  { .-lsp-0 ; }
+  .-lsp-i-s  { .-lsp-i ; }
+  .-lsp-os-s { .-lsp-os; }
+  .-lsp-is-s { .-lsp-is; }
 }
 
 @media print {
-  .\!lsp\:0\@p  { .\!lsp\:0 ; }
-  .\!lsp\:i\@p  { .\!lsp\:i ; }
-  .\!lsp\:os\@p { .\!lsp\:os; }
-  .\!lsp\:is\@p { .\!lsp\:is; }
+  .-lsp-0-p  { .-lsp-0 ; }
+  .-lsp-i-p  { .-lsp-i ; }
+  .-lsp-os-p { .-lsp-os; }
+  .-lsp-is-p { .-lsp-is; }
 }

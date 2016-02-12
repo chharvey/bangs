@@ -5,12 +5,12 @@
 
 // Sets small capitals on the typeface.
 //
-// !fv  =  font-variant
+// fv  =  font-variant
 //
-// :0  =  initial
-// :i  =  inherit
-// :n  =  normal
-// :s  =  small-caps
+// 0  =  initial
+// i  =  inherit
+// n  =  normal
+// s  =  small-caps
 //
 // ^initial
 // : `normal`
@@ -23,26 +23,26 @@
 // ^updated
 // : 2015-10-08
 
-.\!fv\:0 { .\!fv\:n; font-variant: initial    !important; }
-.\!fv\:i {           font-variant: inherit    !important; }
-.\!fv\:n {           font-variant: normal     !important; }
-.\!fv\:s {           font-variant: small-caps !important; }
+.-fv-0 { .-fv-n; font-variant: initial    !important; }
+.-fv-i {         font-variant: inherit    !important; }
+.-fv-n {         font-variant: normal     !important; }
+.-fv-s {         font-variant: small-caps !important; }
 
 @media screen {
-  .\!fv\:0\@s { .\!fv\:0; }
-  .\!fv\:i\@s { .\!fv\:i; }
-  .\!fv\:n\@s { .\!fv\:n; }
-  .\!fv\:s\@s { .\!fv\:s; }
+  .-fv-0-s { .-fv-0; }
+  .-fv-i-s { .-fv-i; }
+  .-fv-n-s { .-fv-n; }
+  .-fv-s-s { .-fv-s; }
 }
 
 @media print {
-  .\!fv\:0\@p { .\!fv\:0; }
-  .\!fv\:i\@p { .\!fv\:i; }
-  .\!fv\:n\@p { .\!fv\:n; }
-  .\!fv\:s\@p { .\!fv\:s; }
+  .-fv-0-p { .-fv-0; }
+  .-fv-i-p { .-fv-i; }
+  .-fv-n-p { .-fv-n; }
+  .-fv-s-p { .-fv-s; }
 }
 
-.\!fv\:0\^ { &:hover, &:focus { .\!fv\:0; } }
-.\!fv\:i\^ { &:hover, &:focus { .\!fv\:i; } }
-.\!fv\:n\^ { &:hover, &:focus { .\!fv\:n; } }
-.\!fv\:s\^ { &:hover, &:focus { .\!fv\:s; } }
+.-fv-0-h { &:hover, &:focus { .-fv-0; } }
+.-fv-i-h { &:hover, &:focus { .-fv-i; } }
+.-fv-n-h { &:hover, &:focus { .-fv-n; } }
+.-fv-s-h { &:hover, &:focus { .-fv-s; } }

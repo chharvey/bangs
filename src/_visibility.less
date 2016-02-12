@@ -5,13 +5,13 @@
 
 // Sets whether an element is visible or hidden.
 //
-// !v  =  visibility
+// v  =  visibility
 //
-// :0  =  initial
-// :i  =  inherit
-// :v  =  visible
-// :h  =  hidden
-// :c  =  collapse
+// 0  =  initial
+// i  =  inherit
+// v  =  visible
+// h  =  hidden
+// c  =  collapse
 //
 // ^initial
 // : `visible`
@@ -24,30 +24,30 @@
 // ^updated
 // : 2015-10-08
 
-.\!v\:0 { .\!v\:v; visibility: initial  !important; }
-.\!v\:i {          visibility: inherit  !important; }
-.\!v\:v {          visibility: visible  !important; }
-.\!v\:h {          visibility: hidden   !important; }
-.\!v\:c {          visibility: collapse !important; }
+.-v-0 { .-v-v; visibility: initial  !important; }
+.-v-i {        visibility: inherit  !important; }
+.-v-v {        visibility: visible  !important; }
+.-v-h {        visibility: hidden   !important; }
+.-v-c {        visibility: collapse !important; }
 
 @media screen {
-  .\!v\:0\@s { .\!v\:0; }
-  .\!v\:i\@s { .\!v\:i; }
-  .\!v\:v\@s { .\!v\:v; }
-  .\!v\:h\@s { .\!v\:h; }
-  .\!v\:c\@s { .\!v\:c; }
+  .-v-0-s { .-v-0; }
+  .-v-i-s { .-v-i; }
+  .-v-v-s { .-v-v; }
+  .-v-h-s { .-v-h; }
+  .-v-c-s { .-v-c; }
 }
 
 @media print {
-  .\!v\:0\@p { .\!v\:0; }
-  .\!v\:i\@p { .\!v\:i; }
-  .\!v\:v\@p { .\!v\:v; }
-  .\!v\:h\@p { .\!v\:h; }
-  .\!v\:c\@p { .\!v\:c; }
+  .-v-0-p { .-v-0; }
+  .-v-i-p { .-v-i; }
+  .-v-v-p { .-v-v; }
+  .-v-h-p { .-v-h; }
+  .-v-c-p { .-v-c; }
 }
 
-// .\!v\:0\^ { &:hover, &:focus { .\!v\:0; } }
-// .\!v\:i\^ { &:hover, &:focus { .\!v\:i; } }
-// .\!v\:v\^ { &:hover, &:focus { .\!v\:v; } }
-// .\!v\:h\^ { &:hover, &:focus { .\!v\:h; } }
-// .\!v\:c\^ { &:hover, &:focus { .\!v\:c; } }
+// .-v-0-h { &:hover, &:focus { .-v-0; } }
+// .-v-i-h { &:hover, &:focus { .-v-i; } }
+// .-v-v-h { &:hover, &:focus { .-v-v; } }
+// .-v-h-h { &:hover, &:focus { .-v-h; } }
+// .-v-c-h { &:hover, &:focus { .-v-c; } }

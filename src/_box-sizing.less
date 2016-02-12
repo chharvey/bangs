@@ -6,12 +6,12 @@
 
 // Alters the CSS box model used to calculate width and height.
 //
-// !b  =  box-sizing
+// b  =  box-sizing
 //
-// :0  =  initial
-// :i  =  inherit
-// :c  =  content-box
-// :b  =  border-box
+// 0  =  initial
+// i  =  inherit
+// c  =  content-box
+// b  =  border-box
 //
 // ^initial
 // : `content-box`
@@ -24,21 +24,21 @@
 // ^updated
 // : 2015-11-05
 
-.\!b\:0 { .\!b\:c; #XMETER .box-sizing(initial    ) !important; }
-.\!b\:i {          #XMETER .box-sizing(inherit    ) !important; }
-.\!b\:c {          #XMETER .box-sizing(content-box) !important; }
-.\!b\:b {          #XMETER .box-sizing(border-box ) !important; }
+.-b-0 { .-b-c; #XMETER .box-sizing(initial    ) !important; }
+.-b-i {        #XMETER .box-sizing(inherit    ) !important; }
+.-b-c {        #XMETER .box-sizing(content-box) !important; }
+.-b-b {        #XMETER .box-sizing(border-box ) !important; }
 
 @media screen {
-  .\!b\:0\@s { .\!b\:0; }
-  .\!b\:i\@s { .\!b\:i; }
-  .\!b\:c\@s { .\!b\:c; }
-  .\!b\:b\@s { .\!b\:b; }
+  .-b-0-s { .-b-0; }
+  .-b-i-s { .-b-i; }
+  .-b-c-s { .-b-c; }
+  .-b-b-s { .-b-b; }
 }
 
 @media print {
-  .\!b\:0\@p { .\!b\:0; }
-  .\!b\:i\@p { .\!b\:i; }
-  .\!b\:c\@p { .\!b\:c; }
-  .\!b\:b\@p { .\!b\:b; }
+  .-b-0-p { .-b-0; }
+  .-b-i-p { .-b-i; }
+  .-b-c-p { .-b-c; }
+  .-b-b-p { .-b-b; }
 }

@@ -5,13 +5,13 @@
 
 // Sets the position of box rendered.
 //
-// !ps  =  position
+// ps  =  position
 //
-// :0  =  initial
-// :i  =  inherit
-// :s  =  static
-// :r  =  relative
-// :f  =  fixed
+// 0  =  initial
+// i  =  inherit
+// s  =  static
+// r  =  relative
+// f  =  fixed
 //
 // ^initial
 // : `static`
@@ -24,27 +24,27 @@
 // ^updated
 // : 2015-10-06
 
-.\!ps\:0 { .\!ps\:s; position: initial  !important; }
-.\!ps\:i {           position: inherit  !important; }
-.\!ps\:s {           position: static   !important; }
-.\!ps\:r {           position: relative !important; }
-.\!ps\:a {           position: absolute !important; }
-.\!ps\:f {           position: fixed    !important; }
+.-ps-0 { .-ps-s; position: initial  !important; }
+.-ps-i {         position: inherit  !important; }
+.-ps-s {         position: static   !important; }
+.-ps-r {         position: relative !important; }
+.-ps-a {         position: absolute !important; }
+.-ps-f {         position: fixed    !important; }
 
 @media screen {
-  .\!ps\:0\@s { .\!ps\:0; }
-  .\!ps\:i\@s { .\!ps\:i; }
-  .\!ps\:s\@s { .\!ps\:s; }
-  .\!ps\:r\@s { .\!ps\:r; }
-  .\!ps\:a\@s { .\!ps\:a; }
-  .\!ps\:f\@s { .\!ps\:f; }
+  .-ps-0-s { .-ps-0; }
+  .-ps-i-s { .-ps-i; }
+  .-ps-s-s { .-ps-s; }
+  .-ps-r-s { .-ps-r; }
+  .-ps-a-s { .-ps-a; }
+  .-ps-f-s { .-ps-f; }
 }
 
 @media print {
-  .\!ps\:0\@p { .\!ps\:0; }
-  .\!ps\:i\@p { .\!ps\:i; }
-  .\!ps\:s\@p { .\!ps\:s; }
-  .\!ps\:r\@p { .\!ps\:r; }
-  .\!ps\:a\@p { .\!ps\:a; }
-  .\!ps\:f\@p { .\!ps\:f; }
+  .-ps-0-p { .-ps-0; }
+  .-ps-i-p { .-ps-i; }
+  .-ps-s-p { .-ps-s; }
+  .-ps-r-p { .-ps-r; }
+  .-ps-a-p { .-ps-a; }
+  .-ps-f-p { .-ps-f; }
 }
