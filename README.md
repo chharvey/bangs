@@ -64,70 +64,17 @@ no other classes at all. You can read my philosophical thoughts about this
 
 In general, the syntax of a bang classname looks like this:
 ```
--‹prop›-‹val›[-‹mq› | -h]?
+-‹prop›-‹val›[-‹mq›|-h]?
 ```
 Where:
-1. The ~~*bang*, i.e., exclamation point,~~ hyphen indicates this class is a Bang and belongs to this stylesheet.
+1. The leading ~~*bang*, i.e., exclamation point,~~ hyphen indicates this class is a Bang and belongs to this stylesheet.
 2. `‹prop›` is the initials for the property name, followed by a hyphen.
 3. `‹val›` is the initials for the property value.
 4. Optionally, either:
   - append `-‹mq›` (media query abbr), or
   - append `-h` for hover/focus-only styles.
 
-### More Examples
-
-```html
-<style>
-  @media screen and (min-width: 60em) {
-    .-d-ib-sG { display: inline-block !important; }
-  }
-  .-bi-n-h:hover { background-image: none !important; }
-</style>
-<p class="-d-ib-sG">Displays as inline-block for large screen sizes.</p>
-<p class="-bi-n-h">Has no background image on hover.</p>
-```
-
-### Value Constants
-In the classname syntax, there exist certain constants to promote predicability and readability.
-For all properties,
-
-the suffix | stands for a written value of
----------- | -----------------------------
-`-i`       | `inherit`
-`-0`       | `initial`<sup>&lowast;</sup>
-`-n`       | `normal` or `none`, if applicable<sup>&dagger;</sup>
-`-a`       | `auto`, if applicable
-`-z`       | `0`, if applicable
-
-#### Footnotes
-
-<sup>&lowast;</sup>This might be a little confusing, because the initial value of a property
-is not always `0`. Remember that `-0` stands for whatever **specified value** to which `initial` is mapped,
-and `-z`, if available, results in a specified value of `0`.
-In some cases, these may be the same, like for `margin`. Here are some more examples:
-
-- Since `0` is the initial value for `padding`, both `-0` and `-z` result in a specified value of `0`.
-- Since `auto` is the initial value for `width`, both `-0` and `-a` result in a specified value of `auto`,
-  while `-z` results in a specified value of `0`.
-- Since `normal` is the initial value for `font-style`, both `-0` and `-n` result in a specified value of `normal`,
-  and since `auto` and `0` are not allowed as values of `font-style`, the `-a` and `-z` suffixes are not available.
-
-<sup>&dagger;</sup>As far as I know, no properties have both `normal` and `none` as allowed values.
-Until that point, `-n` will stand for the appropriate one. If at some point in the future some
-property does have both values, I will need to adjust the syntax.
-
-### Media Queries
-
-appendage      | media query
----------      | -----
-‹no appendage› |      all media queries (screen, print, etc.)
-`-s`           |      all screen sizes
-`-sK`          |    small screens and up (greater than 30em/ 480px)
-`-sM`          |   medium screens and up (greater than 45em/ 720px)
-`-sG`          |    large screens and up (greater than 60em/ 960px)
-`-sT`          |  x-large screens and up (greater than 75em/1200px)
-`-sP`          | xx-large screens and up (greater than 90em/1440px)
-`-p`           |    print
+Read [the docs](DOCUMENTATION.md) for more info.
 
 ## Developing with Bangs
 
@@ -146,4 +93,4 @@ beginning with `-`.
 
 This can be very useful if you want to highlight every bang on the page during development.
 (Remember to remove it before production.) You could also be more specific and use `"-w-"`,
-to highlight only the Width bangs. You can even color-code each type of bang
+to highlight only the Width bangs. You can even color-code each type of bang!
