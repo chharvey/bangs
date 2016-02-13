@@ -12,6 +12,11 @@ This file lists information about each property and its supported values.
 .-d-ib    inline-block
 .-d-fx    flex
 .-d-li    list-item
+
+-sK    true
+-sM    true
+-sG    true
+-sT    true
 ```
 
 ### `position`
@@ -140,6 +145,11 @@ This file lists information about each property and its supported values.
 .-xo--5    -5
 .-xo--6    -6
 .-xo--7    -7
+
+-sK    true
+-sM    true
+-sG    true
+-sT    true
 ```
 
 
@@ -226,6 +236,11 @@ This file lists information about each property and its supported values.
 .-w-80em    80em
 .-w-85em    85em
 .-w-90em    90em
+
+-sK    true
+-sM    true
+-sG    true
+-sT    true
 ```
 
 ### `padding`
