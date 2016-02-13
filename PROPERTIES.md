@@ -299,6 +299,7 @@ This file lists information about each property and its supported values.
 ### `font-size`
 ```
 .-fz-z    0
+.-fz-q    0.25rem
 .-fz-h    0.5rem
 .-fz-1    1.0rem
 .-fz-2    2.0rem
