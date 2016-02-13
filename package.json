@@ -6,11 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lessc:bangs": "lessc-each ./src/ ./build/  ;  lessc ./bangs.less ./bangs.css",
-    "lessc:doc": "lessc ./doc/styles/doc.less ./doc/styles/doc.css",
-    "lessc:all": "npm run lessc:bangs  ;  npm run lessc:doc",
+    "lessc:all": "npm run lessc:bangs",
     "minify": "cleancss ./bangs.css -o ./bangs.min.css",
-    "jade:index": "jade index.jade",
-    "build": "npm run lessc:all  ;  npm run minify  ;  npm run jade:index"
+    "build": "npm run lessc:all  ;  npm run minify"
   },
   "repository": {
     "type": "git",
