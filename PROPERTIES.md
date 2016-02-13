@@ -20,6 +20,7 @@ This file lists information about each property and its supported values.
 .-ps-r    relative
 .-ps-a    absolute
 .-ps-f    fixed
+.-ps-k    sticky
 ```
 
 ### `float`
@@ -298,6 +299,7 @@ This file lists information about each property and its supported values.
 ### `font-size`
 ```
 .-fz-z    0
+.-fz-q    0.25rem
 .-fz-h    0.5rem
 .-fz-1    1.0rem
 .-fz-2    2.0rem
@@ -359,6 +361,22 @@ This file lists information about each property and its supported values.
 .-ww-b    break-word
 ```
 
+### `column-count`
+```
+.-cc-a    auto
+.-cc-1    1
+.-cc-2    2
+.-cc-3    3
+.-cc-4    4
+.-cc-5    5
+.-cc-6    6
+```
+
+### `column-width`
+```
+.-cw-a    auto
+```
+
 ### `page-break-[before|after]`
 ```
 .-pb*-a    auto
@@ -372,6 +390,13 @@ where `*` could be `b` or `a`
 
 
 ## Box Cosmetics
+### `box-shadow`
+```
+.-bs-0    initial
+.-bs-i    inherit
+.-bs-n    none
+```
+
 ### `background-image`
 ```
 .-bi-n    none
@@ -475,6 +500,13 @@ where `*` could be `b` or `a`
 .-td-s    line-through
 
 -h        true
+```
+
+### `text-shadow`
+```
+.-ts-0    initial
+.-ts-i    inherit
+.-ts-n    none
 ```
 
 ### `text-overflow`
