@@ -361,6 +361,22 @@ This file lists information about each property and its supported values.
 .-ww-b    break-word
 ```
 
+### `column-count`
+```
+.-cc-a    auto
+.-cc-1    1
+.-cc-2    2
+.-cc-3    3
+.-cc-4    4
+.-cc-5    5
+.-cc-6    6
+```
+
+### `column-width`
+```
+.-cw-a    auto
+```
+
 ### `page-break-[before|after]`
 ```
 .-pb*-a    auto
