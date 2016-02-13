@@ -5,13 +5,13 @@
 
 // Sets whether the background image/color extends beneath the padding/border.
 //
-// !bx  =  background-clip
+// bx  =  background-clip
 //
-// :0  =  initial
-// :i  =  inherit
-// :c  =  content-box
-// :p  =  padding-box
-// :b  =  border-box
+// 0  =  initial
+// i  =  inherit
+// c  =  content-box
+// p  =  padding-box
+// b  =  border-box
 //
 // @s  =  screen
 // @p  =  print
@@ -27,24 +27,24 @@
 // ^updated
 // : 2015-10-14
 
-.\!bx\:0 { .\!bx\:b; background-clip: initial     !important; }
-.\!bx\:i {           background-clip: inherit     !important; }
-.\!bx\:c {           background-clip: content-box !important; }
-.\!bx\:p {           background-clip: padding-box !important; }
-.\!bx\:b {           background-clip: border-box  !important; }
+.-bx-0 { .-bx-b; background-clip: initial     !important; }
+.-bx-i {         background-clip: inherit     !important; }
+.-bx-c {         background-clip: content-box !important; }
+.-bx-p {         background-clip: padding-box !important; }
+.-bx-b {         background-clip: border-box  !important; }
 
 @media screen {
-  .\!bx\:0\@s { .\!bx\:0; }
-  .\!bx\:i\@s { .\!bx\:i; }
-  .\!bx\:c\@s { .\!bx\:c; }
-  .\!bx\:p\@s { .\!bx\:p; }
-  .\!bx\:b\@s { .\!bx\:b; }
+  .-bx-0-s { .-bx-0; }
+  .-bx-i-s { .-bx-i; }
+  .-bx-c-s { .-bx-c; }
+  .-bx-p-s { .-bx-p; }
+  .-bx-b-s { .-bx-b; }
 }
 
 @media print {
-  .\!bx\:0\@p { .\!bx\:0; }
-  .\!bx\:i\@p { .\!bx\:i; }
-  .\!bx\:c\@p { .\!bx\:c; }
-  .\!bx\:p\@p { .\!bx\:p; }
-  .\!bx\:b\@p { .\!bx\:b; }
+  .-bx-0-p { .-bx-0; }
+  .-bx-i-p { .-bx-i; }
+  .-bx-c-p { .-bx-c; }
+  .-bx-p-p { .-bx-p; }
+  .-bx-b-p { .-bx-b; }
 }

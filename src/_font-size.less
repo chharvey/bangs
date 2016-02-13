@@ -9,14 +9,16 @@
 // There is, however, a pixel fallback for browsers that do not support rems. (16px = 1rem)
 // NOTE: THESE BANGS ARE OPINIONATED. Override them if you wish.
 //
-// !fz  =  font-size
+// fz  =  font-size
 //
-// :0  =  initial
-// :i  =  inherit
-// :h  =  0.5rem ( 8px)
-// :1  =  1.0rem (16px)
-// :2  =  2.0rem (32px)
-// :4  =  4.0rem (64px)
+// 0  =  initial
+// i  =  inherit
+// z  =  0
+// q  =  0.25rem (4px)
+// h  =  0.5rem ( 8px)
+// 1  =  1.0rem (16px)
+// 2  =  2.0rem (32px)
+// 4  =  4.0rem (64px)
 //
 // @s  =  screen
 // @p  =  print
@@ -32,27 +34,33 @@
 
 @default_px: 16px;
 
-.\!fz\:0 { font-size: @default_px !important; font-size: initial !important; }
-.\!fz\:i {                                    font-size: inherit !important; }
-.\!fz\:h { font-size:  8px        !important; font-size: 0.5rem  !important; }
-.\!fz\:1 { font-size: 16px        !important; font-size: 1.0rem  !important; }
-.\!fz\:2 { font-size: 32px        !important; font-size: 2.0rem  !important; }
-.\!fz\:4 { font-size: 64px        !important; font-size: 4.0rem  !important; }
+.-fz-0 { font-size: @default_px !important; font-size: initial !important; }
+.-fz-i {                                    font-size: inherit !important; }
+.-fz-z {                                    font-size: 0       !important; }
+.-fz-q { font-size:  4px        !important; font-size: 0.25rem !important; }
+.-fz-h { font-size:  8px        !important; font-size: 0.5rem  !important; }
+.-fz-1 { font-size: 16px        !important; font-size: 1.0rem  !important; }
+.-fz-2 { font-size: 32px        !important; font-size: 2.0rem  !important; }
+.-fz-4 { font-size: 64px        !important; font-size: 4.0rem  !important; }
 
 @media screen {
-  .\!fz\:0\@s { .\!fz\:0; }
-  .\!fz\:i\@s { .\!fz\:i; }
-  .\!fz\:h\@s { .\!fz\:h; }
-  .\!fz\:1\@s { .\!fz\:1; }
-  .\!fz\:2\@s { .\!fz\:2; }
-  .\!fz\:4\@s { .\!fz\:4; }
+  .-fz-0-s { .-fz-0; }
+  .-fz-i-s { .-fz-i; }
+  .-fz-z-s { .-fz-z; }
+  .-fz-q-s { .-fz-q; }
+  .-fz-h-s { .-fz-h; }
+  .-fz-1-s { .-fz-1; }
+  .-fz-2-s { .-fz-2; }
+  .-fz-4-s { .-fz-4; }
 }
 
 @media print {
-  .\!fz\:0\@p { .\!fz\:0; }
-  .\!fz\:i\@p { .\!fz\:i; }
-  .\!fz\:h\@p { .\!fz\:h; }
-  .\!fz\:1\@p { .\!fz\:1; }
-  .\!fz\:2\@p { .\!fz\:2; }
-  .\!fz\:4\@p { .\!fz\:4; }
+  .-fz-0-p { .-fz-0; }
+  .-fz-i-p { .-fz-i; }
+  .-fz-z-p { .-fz-z; }
+  .-fz-q-p { .-fz-q; }
+  .-fz-h-p { .-fz-h; }
+  .-fz-1-p { .-fz-1; }
+  .-fz-2-p { .-fz-2; }
+  .-fz-4-p { .-fz-4; }
 }

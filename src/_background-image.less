@@ -6,11 +6,11 @@
 // Sets the background image.
 // Does not set other aspects of background (such as repeat, position, size, etc.)
 //
-// !bi  =  background-image
+// bi  =  background-image
 //
-// :0  =  initial
-// :i  =  inherit
-// :n  =  none
+// 0  =  initial
+// i  =  inherit
+// n  =  none
 //
 // @s  =  screen
 // @p  =  print
@@ -26,18 +26,18 @@
 // ^updated
 // : 2015-10-02
 
-.\!bi\:0 { .\!bi\:n; background-image: initial !important; }
-.\!bi\:i {           background-image: inherit !important; }
-.\!bi\:n {           background-image: none    !important; }
+.-bi-0 { .-bi-n; background-image: initial !important; }
+.-bi-i {         background-image: inherit !important; }
+.-bi-n {         background-image: none    !important; }
 
 @media screen {
-  .\!bi\:0\@s { .\!bi\:0; }
-  .\!bi\:i\@s { .\!bi\:i; }
-  .\!bi\:n\@s { .\!bi\:n; }
+  .-bi-0-s { .-bi-0; }
+  .-bi-i-s { .-bi-i; }
+  .-bi-n-s { .-bi-n; }
 }
 
 @media print {
-  .\!bi\:0\@p { .\!bi\:0; }
-  .\!bi\:i\@p { .\!bi\:i; }
-  .\!bi\:n\@p { .\!bi\:n; }
+  .-bi-0-p { .-bi-0; }
+  .-bi-i-p { .-bi-i; }
+  .-bi-n-p { .-bi-n; }
 }

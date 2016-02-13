@@ -5,12 +5,12 @@
 
 // Defines how overflowed text content, if any, is rendered.
 //
-// !to  =  text-overflow
+// to  =  text-overflow
 //
-// :0  =  initial
-// :i  =  inherit
-// :c  =  clip
-// :e  =  ellipsis
+// 0  =  initial
+// i  =  inherit
+// c  =  clip
+// e  =  ellipsis
 //
 // @s  =  screen
 // @p  =  print
@@ -26,21 +26,21 @@
 // ^updated
 // : 2015-10-15
 
-.\!to\:0 { .\!to\:c; text-overflow: initial  !important; }
-.\!to\:i {           text-overflow: inherit  !important; }
-.\!to\:c {           text-overflow: clip     !important; }
-.\!to\:e {           text-overflow: ellipsis !important; }
+.-to-0 { .-to-c; text-overflow: initial  !important; }
+.-to-i {         text-overflow: inherit  !important; }
+.-to-c {         text-overflow: clip     !important; }
+.-to-e {         text-overflow: ellipsis !important; }
 
 @media screen {
-  .\!to\:0\@s { .\!to\:0; }
-  .\!to\:i\@s { .\!to\:i; }
-  .\!to\:c\@s { .\!to\:c; }
-  .\!to\:e\@s { .\!to\:e; }
+  .-to-0-s { .-to-0; }
+  .-to-i-s { .-to-i; }
+  .-to-c-s { .-to-c; }
+  .-to-e-s { .-to-e; }
 }
 
 @media print {
-  .\!to\:0\@p { .\!to\:0; }
-  .\!to\:i\@p { .\!to\:i; }
-  .\!to\:c\@p { .\!to\:c; }
-  .\!to\:e\@p { .\!to\:e; }
+  .-to-0-p { .-to-0; }
+  .-to-i-p { .-to-i; }
+  .-to-c-p { .-to-c; }
+  .-to-e-p { .-to-e; }
 }

@@ -6,26 +6,26 @@
 // Defines the z-order of an element and descendants.
 // Z-order is defined as the order of elements in the direction perpendicular to the screen.
 //
-// !z  =  z-index
+// z  =  z-index
 //
-// :0   =  initial (not necessarily `0`)
-// :i   =  inherit
-// :a   =  auto
-// :z   =  0
-// :1   =  1
-// :2   =  2
-// :3   =  3
-// :4   =  4
-// :5   =  5
-// :6   =  6
-// :7   =  7
-// :-1  =  -1
-// :-2  =  -2
-// :-3  =  -3
-// :-4  =  -4
-// :-5  =  -5
-// :-6  =  -6
-// :-7  =  -7
+// 0   =  initial (not necessarily `0`)
+// i   =  inherit
+// a   =  auto
+// z   =  0
+// 1   =  1
+// 2   =  2
+// 3   =  3
+// 4   =  4
+// 5   =  5
+// 6   =  6
+// 7   =  7
+// -1  =  -1
+// -2  =  -2
+// -3  =  -3
+// -4  =  -4
+// -5  =  -5
+// -6  =  -6
+// -7  =  -7
 //
 // @s  =  screen
 // @p  =  print
@@ -41,63 +41,63 @@
 // ^updated
 // : 2015-10-16
 
-.\!z\:0  { .\!z\:a; z-index: initial !important; }
-.\!z\:i  {          z-index: inherit !important; }
-.\!z\:a  {          z-index: auto    !important; }
-.\!z\:z  {          z-index:  0      !important; }
-.\!z\:1  {          z-index:  1      !important; }
-.\!z\:2  {          z-index:  2      !important; }
-.\!z\:3  {          z-index:  3      !important; }
-.\!z\:4  {          z-index:  4      !important; }
-.\!z\:5  {          z-index:  5      !important; }
-.\!z\:6  {          z-index:  6      !important; }
-.\!z\:7  {          z-index:  7      !important; }
-.\!z\:-1 {          z-index: -1      !important; }
-.\!z\:-2 {          z-index: -2      !important; }
-.\!z\:-3 {          z-index: -3      !important; }
-.\!z\:-4 {          z-index: -4      !important; }
-.\!z\:-5 {          z-index: -5      !important; }
-.\!z\:-6 {          z-index: -6      !important; }
-.\!z\:-7 {          z-index: -7      !important; }
+.-z-0  { .-z-a; z-index: initial !important; }
+.-z-i  {        z-index: inherit !important; }
+.-z-a  {        z-index: auto    !important; }
+.-z-z  {        z-index:  0      !important; }
+.-z-1  {        z-index:  1      !important; }
+.-z-2  {        z-index:  2      !important; }
+.-z-3  {        z-index:  3      !important; }
+.-z-4  {        z-index:  4      !important; }
+.-z-5  {        z-index:  5      !important; }
+.-z-6  {        z-index:  6      !important; }
+.-z-7  {        z-index:  7      !important; }
+.-z--1 {        z-index: -1      !important; }
+.-z--2 {        z-index: -2      !important; }
+.-z--3 {        z-index: -3      !important; }
+.-z--4 {        z-index: -4      !important; }
+.-z--5 {        z-index: -5      !important; }
+.-z--6 {        z-index: -6      !important; }
+.-z--7 {        z-index: -7      !important; }
 
 @media screen {
-  .\!z\:0\@s  { .\!z\:0 ; }
-  .\!z\:i\@s  { .\!z\:i ; }
-  .\!z\:a\@s  { .\!z\:a ; }
-  .\!z\:z\@s  { .\!z\:z ; }
-  .\!z\:1\@s  { .\!z\:1 ; }
-  .\!z\:2\@s  { .\!z\:2 ; }
-  .\!z\:3\@s  { .\!z\:3 ; }
-  .\!z\:4\@s  { .\!z\:4 ; }
-  .\!z\:5\@s  { .\!z\:5 ; }
-  .\!z\:6\@s  { .\!z\:6 ; }
-  .\!z\:7\@s  { .\!z\:7 ; }
-  .\!z\:-1\@s { .\!z\:-1; }
-  .\!z\:-2\@s { .\!z\:-2; }
-  .\!z\:-3\@s { .\!z\:-3; }
-  .\!z\:-4\@s { .\!z\:-4; }
-  .\!z\:-5\@s { .\!z\:-5; }
-  .\!z\:-6\@s { .\!z\:-6; }
-  .\!z\:-7\@s { .\!z\:-7; }
+  .-z-0-s  { .-z-0 ; }
+  .-z-i-s  { .-z-i ; }
+  .-z-a-s  { .-z-a ; }
+  .-z-z-s  { .-z-z ; }
+  .-z-1-s  { .-z-1 ; }
+  .-z-2-s  { .-z-2 ; }
+  .-z-3-s  { .-z-3 ; }
+  .-z-4-s  { .-z-4 ; }
+  .-z-5-s  { .-z-5 ; }
+  .-z-6-s  { .-z-6 ; }
+  .-z-7-s  { .-z-7 ; }
+  .-z--1-s { .-z--1; }
+  .-z--2-s { .-z--2; }
+  .-z--3-s { .-z--3; }
+  .-z--4-s { .-z--4; }
+  .-z--5-s { .-z--5; }
+  .-z--6-s { .-z--6; }
+  .-z--7-s { .-z--7; }
 }
 
 @media print {
-  .\!z\:0\@p  { .\!z\:0 ; }
-  .\!z\:i\@p  { .\!z\:i ; }
-  .\!z\:a\@p  { .\!z\:a ; }
-  .\!z\:z\@p  { .\!z\:z ; }
-  .\!z\:1\@p  { .\!z\:1 ; }
-  .\!z\:2\@p  { .\!z\:2 ; }
-  .\!z\:3\@p  { .\!z\:3 ; }
-  .\!z\:4\@p  { .\!z\:4 ; }
-  .\!z\:5\@p  { .\!z\:5 ; }
-  .\!z\:6\@p  { .\!z\:6 ; }
-  .\!z\:7\@p  { .\!z\:7 ; }
-  .\!z\:-1\@p { .\!z\:-1; }
-  .\!z\:-2\@p { .\!z\:-2; }
-  .\!z\:-3\@p { .\!z\:-3; }
-  .\!z\:-4\@p { .\!z\:-4; }
-  .\!z\:-5\@p { .\!z\:-5; }
-  .\!z\:-6\@p { .\!z\:-6; }
-  .\!z\:-7\@p { .\!z\:-7; }
+  .-z-0-p  { .-z-0 ; }
+  .-z-i-p  { .-z-i ; }
+  .-z-a-p  { .-z-a ; }
+  .-z-z-p  { .-z-z ; }
+  .-z-1-p  { .-z-1 ; }
+  .-z-2-p  { .-z-2 ; }
+  .-z-3-p  { .-z-3 ; }
+  .-z-4-p  { .-z-4 ; }
+  .-z-5-p  { .-z-5 ; }
+  .-z-6-p  { .-z-6 ; }
+  .-z-7-p  { .-z-7 ; }
+  .-z--1-p { .-z--1; }
+  .-z--2-p { .-z--2; }
+  .-z--3-p { .-z--3; }
+  .-z--4-p { .-z--4; }
+  .-z--5-p { .-z--5; }
+  .-z--6-p { .-z--6; }
+  .-z--7-p { .-z--7; }
 }

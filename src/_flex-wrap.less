@@ -6,13 +6,13 @@
 
 // Determines whether boxes wrap to the next row or column.
 //
-// !xw  =  flex-wrap
+// xw  =  flex-wrap
 //
-// :0  =  initial
-// :i  =  inherit
-// :n  =  nowrap
-// :w  =  wrap
-// :r  =  wrap-reverse
+// 0  =  initial
+// i  =  inherit
+// n  =  nowrap
+// w  =  wrap
+// r  =  wrap-reverse
 //
 // @s  =  screen
 // @p  =  print
@@ -28,24 +28,24 @@
 // ^updated
 // : 2015-10-15
 
-.\!xw\:0 { .\!xw\:n; #XMETER .flex-wrap(initial)      !important; }
-.\!xw\:i {           #XMETER .flex-wrap(inherit)      !important; }
-.\!xw\:n {           #XMETER .flex-wrap(nowrap)       !important; }
-.\!xw\:w {           #XMETER .flex-wrap(wrap)         !important; }
-.\!xw\:r {           #XMETER .flex-wrap(wrap-reverse) !important; }
+.-xw-0 { .-xw-n; #XMETER .flex-wrap(initial)      !important; }
+.-xw-i {         #XMETER .flex-wrap(inherit)      !important; }
+.-xw-n {         #XMETER .flex-wrap(nowrap)       !important; }
+.-xw-w {         #XMETER .flex-wrap(wrap)         !important; }
+.-xw-r {         #XMETER .flex-wrap(wrap-reverse) !important; }
 
 @media screen {
-  .\!xw\:0\@s { .\!xw\:0; }
-  .\!xw\:i\@s { .\!xw\:i; }
-  .\!xw\:n\@s { .\!xw\:n; }
-  .\!xw\:w\@s { .\!xw\:w; }
-  .\!xw\:r\@s { .\!xw\:r; }
+  .-xw-0-s { .-xw-0; }
+  .-xw-i-s { .-xw-i; }
+  .-xw-n-s { .-xw-n; }
+  .-xw-w-s { .-xw-w; }
+  .-xw-r-s { .-xw-r; }
 }
 
 @media print {
-  .\!xw\:0\@p { .\!xw\:0; }
-  .\!xw\:i\@p { .\!xw\:i; }
-  .\!xw\:n\@p { .\!xw\:n; }
-  .\!xw\:w\@p { .\!xw\:w; }
-  .\!xw\:r\@p { .\!xw\:r; }
+  .-xw-0-p { .-xw-0; }
+  .-xw-i-p { .-xw-i; }
+  .-xw-n-p { .-xw-n; }
+  .-xw-w-p { .-xw-w; }
+  .-xw-r-p { .-xw-r; }
 }

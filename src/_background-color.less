@@ -5,12 +5,12 @@
 
 // Sets the background color.
 //
-// !bc  =  background-color
+// bc  =  background-color
 //
-// :0  =  initial
-// :i  =  inherit
-// :t  =  transparent
-// :c  =  currentColor
+// 0  =  initial
+// i  =  inherit
+// t  =  transparent
+// c  =  currentColor
 //
 // :b  =  #000000
 // :w  =  #ffffff
@@ -29,38 +29,38 @@
 // ^updated
 // : 2015-10-16
 
-.\!bc\:0 { background-color: transparent  !important; background-color: initial      !important; }
-.\!bc\:i { background-color: inherit      !important; }
-.\!bc\:t { background-color: transparent  !important; }
-.\!bc\:c { background-color: currentColor !important; }
+.-bc-0 { .-bc-t; background-color: initial      !important; }
+.-bc-i {         background-color: inherit      !important; }
+.-bc-t {         background-color: transparent  !important; }
+.-bc-c {         background-color: currentColor !important; }
 
-.\!bc\:b { background-color: #000000 !important; }
-.\!bc\:w { background-color: #ffffff !important; }
+.-bc-b { background-color: #000000 !important; }
+.-bc-w { background-color: #ffffff !important; }
 
 @media screen {
-  .\!bc\:0\@s { .\!bc\:0; }
-  .\!bc\:i\@s { .\!bc\:i; }
-  .\!bc\:t\@s { .\!bc\:t; }
-  .\!bc\:c\@s { .\!bc\:c; }
+  .-bc-0-s { .-bc-0; }
+  .-bc-i-s { .-bc-i; }
+  .-bc-t-s { .-bc-t; }
+  .-bc-c-s { .-bc-c; }
 
-  .\!bc\:b\@s { .\!bc\:b; }
-  .\!bc\:w\@s { .\!bc\:w; }
+  .-bc-b-s { .-bc-b; }
+  .-bc-w-s { .-bc-w; }
 }
 
 @media print {
-  .\!bc\:0\@p { .\!bc\:0; }
-  .\!bc\:i\@p { .\!bc\:i; }
-  .\!bc\:t\@p { .\!bc\:t; }
-  .\!bc\:c\@p { .\!bc\:c; }
+  .-bc-0-p { .-bc-0; }
+  .-bc-i-p { .-bc-i; }
+  .-bc-t-p { .-bc-t; }
+  .-bc-c-p { .-bc-c; }
 
-  .\!bc\:b\@p { .\!bc\:b; }
-  .\!bc\:w\@p { .\!bc\:w; }
+  .-bc-b-p { .-bc-b; }
+  .-bc-w-p { .-bc-w; }
 }
 
-.\!bc\:0\^ { &:hover, &:focus { .\!bc\:0; } }
-.\!bc\:i\^ { &:hover, &:focus { .\!bc\:i; } }
-.\!bc\:t\^ { &:hover, &:focus { .\!bc\:t; } }
-.\!bc\:c\^ { &:hover, &:focus { .\!bc\:c; } }
+.-bc-0-h { &:hover, &:focus { .-bc-0; } }
+.-bc-i-h { &:hover, &:focus { .-bc-i; } }
+.-bc-t-h { &:hover, &:focus { .-bc-t; } }
+.-bc-c-h { &:hover, &:focus { .-bc-c; } }
 
-.\!bc\:b\^ { &:hover, &:focus { .\!bc\:b; } }
-.\!bc\:w\^ { &:hover, &:focus { .\!bc\:w; } }
+.-bc-b-h { &:hover, &:focus { .-bc-b; } }
+.-bc-w-h { &:hover, &:focus { .-bc-w; } }

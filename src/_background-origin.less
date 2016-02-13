@@ -5,13 +5,13 @@
 
 // Sets the position of the origin of the background image.
 //
-// !bo  =  background-origin
+// bo  =  background-origin
 //
-// :0  =  initial
-// :i  =  inherit
-// :c  =  content-box
-// :p  =  padding-box
-// :b  =  border-box
+// 0  =  initial
+// i  =  inherit
+// c  =  content-box
+// p  =  padding-box
+// b  =  border-box
 //
 // @s  =  screen
 // @p  =  print
@@ -27,24 +27,24 @@
 // ^updated
 // : 2015-10-14
 
-.\!bo\:0 { .\!bo\:p; background-origin: initial     !important; }
-.\!bo\:i {           background-origin: inherit     !important; }
-.\!bo\:c {           background-origin: content-box !important; }
-.\!bo\:p {           background-origin: padding-box !important; }
-.\!bo\:b {           background-origin: border-box  !important; }
+.-bo-0 { .-bo-p; background-origin: initial     !important; }
+.-bo-i {         background-origin: inherit     !important; }
+.-bo-c {         background-origin: content-box !important; }
+.-bo-p {         background-origin: padding-box !important; }
+.-bo-b {         background-origin: border-box  !important; }
 
 @media screen {
-  .\!bo\:0\@s { .\!bo\:0; }
-  .\!bo\:i\@s { .\!bo\:i; }
-  .\!bo\:c\@s { .\!bo\:c; }
-  .\!bo\:p\@s { .\!bo\:p; }
-  .\!bo\:b\@s { .\!bo\:b; }
+  .-bo-0-s { .-bo-0; }
+  .-bo-i-s { .-bo-i; }
+  .-bo-c-s { .-bo-c; }
+  .-bo-p-s { .-bo-p; }
+  .-bo-b-s { .-bo-b; }
 }
 
 @media print {
-  .\!bo\:0\@p { .\!bo\:0; }
-  .\!bo\:i\@p { .\!bo\:i; }
-  .\!bo\:c\@p { .\!bo\:c; }
-  .\!bo\:p\@p { .\!bo\:p; }
-  .\!bo\:b\@p { .\!bo\:b; }
+  .-bo-0-p { .-bo-0; }
+  .-bo-i-p { .-bo-i; }
+  .-bo-c-p { .-bo-c; }
+  .-bo-p-p { .-bo-p; }
+  .-bo-b-p { .-bo-b; }
 }

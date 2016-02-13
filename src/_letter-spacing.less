@@ -5,12 +5,12 @@
 
 // Sets the spacing between characters in text.
 //
-// !ls  =  letter-spacing
+// ls  =  letter-spacing
 //
-// :0   =  initial
-// :i   =  inherit
-// :n   =  normal
-// :z   =  0
+// 0   =  initial
+// i   =  inherit
+// n   =  normal
+// z   =  0
 //
 // @s  =  screen
 // @p  =  print
@@ -26,21 +26,21 @@
 // ^updated
 // : 2015-10-15
 
-.\!ls\:0 { .\!ls\:n; letter-spacing: initial !important; }
-.\!ls\:i {           letter-spacing: inherit !important; }
-.\!ls\:n {           letter-spacing: normal  !important; }
-.\!ls\:z {           letter-spacing: 0       !important; }
+.-ls-0 { .-ls-n; letter-spacing: initial !important; }
+.-ls-i {         letter-spacing: inherit !important; }
+.-ls-n {         letter-spacing: normal  !important; }
+.-ls-z {         letter-spacing: 0       !important; }
 
 @media screen {
-  .\!ls\:0\@s { .\!ls\:0; }
-  .\!ls\:i\@s { .\!ls\:i; }
-  .\!ls\:n\@s { .\!ls\:n; }
-  .\!ls\:z\@s { .\!ls\:z; }
+  .-ls-0-s { .-ls-0; }
+  .-ls-i-s { .-ls-i; }
+  .-ls-n-s { .-ls-n; }
+  .-ls-z-s { .-ls-z; }
 }
 
 @media print {
-  .\!ls\:0\@p { .\!ls\:0; }
-  .\!ls\:i\@p { .\!ls\:i; }
-  .\!ls\:n\@p { .\!ls\:n; }
-  .\!ls\:z\@p { .\!ls\:z; }
+  .-ls-0-p { .-ls-0; }
+  .-ls-i-p { .-ls-i; }
+  .-ls-n-p { .-ls-n; }
+  .-ls-z-p { .-ls-z; }
 }
