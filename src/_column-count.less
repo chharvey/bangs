@@ -1,0 +1,64 @@
+@import (reference) url('../node_modules/xmeter/src/__tool.fallback.column-count.less');
+
+/*################################*\
+    bangs  |  _column-count.less
+\*################################*/
+
+// Sets the number of columns of text.
+//
+// cc  =  column-count
+//
+// 0   =  initial
+// i   =  inherit
+// a   =  auto
+// 1   =  1
+// 2   =  2
+// 3   =  3
+// 4   =  4
+// 5   =  5
+// 6   =  6
+//
+// ^initial
+// : `auto`
+// ^inherited
+// : false
+// ^url
+// : https://developer.mozilla.org/en-US/docs/Web/CSS/column-count
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2016-02-08
+
+.-cc-0 { .-cc-a; #XMETER .column-count(initial) !important; }
+.-cc-i {         #XMETER .column-count(inherit) !important; }
+.-cc-a {         #XMETER .column-count(auto   ) !important; }
+.-cc-1 {         #XMETER .column-count(1      ) !important; }
+.-cc-2 {         #XMETER .column-count(2      ) !important; }
+.-cc-3 {         #XMETER .column-count(3      ) !important; }
+.-cc-4 {         #XMETER .column-count(4      ) !important; }
+.-cc-5 {         #XMETER .column-count(5      ) !important; }
+.-cc-6 {         #XMETER .column-count(6      ) !important; }
+
+@media screen {
+  .-cc-0-s { .-cc-0; }
+  .-cc-i-s { .-cc-i; }
+  .-cc-a-s { .-cc-a; }
+  .-cc-1-s { .-cc-1; }
+  .-cc-2-s { .-cc-2; }
+  .-cc-3-s { .-cc-3; }
+  .-cc-4-s { .-cc-4; }
+  .-cc-5-s { .-cc-5; }
+  .-cc-6-s { .-cc-6; }
+}
+
+@media print {
+  .-cc-0-p { .-cc-0; }
+  .-cc-i-p { .-cc-i; }
+  .-cc-a-p { .-cc-a; }
+  .-cc-1-p { .-cc-1; }
+  .-cc-2-p { .-cc-2; }
+  .-cc-3-p { .-cc-3; }
+  .-cc-4-p { .-cc-4; }
+  .-cc-5-p { .-cc-5; }
+  .-cc-6-p { .-cc-6; }
+}
