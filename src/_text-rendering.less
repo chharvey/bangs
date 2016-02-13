@@ -5,17 +5,14 @@
 
 // Defines what to optimize when rendering text.
 //
-// !tr  =  text-rendering
+// tr  =  text-rendering
 //
-// :0  =  initial
-// :i  =  inherit
-// :a  =  auto
-// :s  =  optimizeSpeed
-// :l  =  optimizeLegibility
-// :g  =  geometricPrecision
-//
-// @s  =  screen
-// @p  =  print
+// 0  =  initial
+// i  =  inherit
+// a  =  auto
+// s  =  optimizeSpeed
+// l  =  optimizeLegibility
+// g  =  geometricPrecision
 //
 // ^initial
 // : `auto`
@@ -28,27 +25,27 @@
 // ^updated
 // : 2015-10-05
 
-.\!tr\:0 { .\!tr\:a; text-rendering: initial            !important; }
-.\!tr\:i {           text-rendering: inherit            !important; }
-.\!tr\:a {           text-rendering: auto               !important; }
-.\!tr\:s {           text-rendering: optimizeSpeed      !important; }
-.\!tr\:l {           text-rendering: optimizeLegibility !important; }
-.\!tr\:g {           text-rendering: geometricPrecision !important; }
+.-tr-0 { .-tr-a; text-rendering: initial            !important; }
+.-tr-i {         text-rendering: inherit            !important; }
+.-tr-a {         text-rendering: auto               !important; }
+.-tr-s {         text-rendering: optimizeSpeed      !important; }
+.-tr-l {         text-rendering: optimizeLegibility !important; }
+.-tr-g {         text-rendering: geometricPrecision !important; }
 
 @media screen {
-  .\!tr\:0\@s { .\!tr\:0; }
-  .\!tr\:i\@s { .\!tr\:i; }
-  .\!tr\:a\@s { .\!tr\:a; }
-  .\!tr\:s\@s { .\!tr\:s; }
-  .\!tr\:l\@s { .\!tr\:l; }
-  .\!tr\:g\@s { .\!tr\:g; }
+  .-tr-0-s { .-tr-0; }
+  .-tr-i-s { .-tr-i; }
+  .-tr-a-s { .-tr-a; }
+  .-tr-s-s { .-tr-s; }
+  .-tr-l-s { .-tr-l; }
+  .-tr-g-s { .-tr-g; }
 }
 
 @media print {
-  .\!tr\:0\@p { .\!tr\:0; }
-  .\!tr\:i\@p { .\!tr\:i; }
-  .\!tr\:a\@p { .\!tr\:a; }
-  .\!tr\:s\@p { .\!tr\:s; }
-  .\!tr\:l\@p { .\!tr\:l; }
-  .\!tr\:g\@p { .\!tr\:g; }
+  .-tr-0-p { .-tr-0; }
+  .-tr-i-p { .-tr-i; }
+  .-tr-a-p { .-tr-a; }
+  .-tr-s-p { .-tr-s; }
+  .-tr-l-p { .-tr-l; }
+  .-tr-g-p { .-tr-g; }
 }

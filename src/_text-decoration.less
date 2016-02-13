@@ -15,18 +15,14 @@
 // with the values of `underline`, `overline`, and `line-through`.
 // The value `blink` is not supported.
 //
-// !td  =  text-decoration
+// td  =  text-decoration
 //
-// :0  =  initial
-// :i  =  inherit
-// :n  =  none
-// :u  =  underline
-// :o  =  overline
-// :s  =  line-through
-//
-// @s  =  screen
-// @p  =  print
-// ^   =  hover / focus
+// 0  =  initial
+// i  =  inherit
+// n  =  none
+// u  =  underline
+// o  =  overline
+// s  =  line-through
 //
 // ^initial
 // : `none`
@@ -39,34 +35,34 @@
 // ^updated
 // : 2015-10-08
 
-.\!td\:0 { .\!td\:n; text-decoration: initial      !important; }
-.\!td\:i {           text-decoration: inherit      !important; }
-.\!td\:n {           text-decoration: none         !important; }
-.\!td\:u {           text-decoration: underline    !important; }
-.\!td\:o {           text-decoration: overline     !important; }
-.\!td\:s {           text-decoration: line-through !important; }
+.-td-0 { .-td-n; text-decoration: initial      !important; }
+.-td-i {         text-decoration: inherit      !important; }
+.-td-n {         text-decoration: none         !important; }
+.-td-u {         text-decoration: underline    !important; }
+.-td-o {         text-decoration: overline     !important; }
+.-td-s {         text-decoration: line-through !important; }
 
 @media screen {
-  .\!td\:0\@s { .\!td\:0; }
-  .\!td\:i\@s { .\!td\:i; }
-  .\!td\:n\@s { .\!td\:n; }
-  .\!td\:u\@s { .\!td\:u; }
-  .\!td\:o\@s { .\!td\:o; }
-  .\!td\:s\@s { .\!td\:s; }
+  .-td-0-s { .-td-0; }
+  .-td-i-s { .-td-i; }
+  .-td-n-s { .-td-n; }
+  .-td-u-s { .-td-u; }
+  .-td-o-s { .-td-o; }
+  .-td-s-s { .-td-s; }
 }
 
 @media print {
-  .\!td\:0\@p { .\!td\:0; }
-  .\!td\:i\@p { .\!td\:i; }
-  .\!td\:n\@p { .\!td\:n; }
-  .\!td\:u\@p { .\!td\:u; }
-  .\!td\:o\@p { .\!td\:o; }
-  .\!td\:s\@p { .\!td\:s; }
+  .-td-0-p { .-td-0; }
+  .-td-i-p { .-td-i; }
+  .-td-n-p { .-td-n; }
+  .-td-u-p { .-td-u; }
+  .-td-o-p { .-td-o; }
+  .-td-s-p { .-td-s; }
 }
 
-.\!td\:0\^ { &:hover, &:focus { .\!td\:0; } }
-.\!td\:i\^ { &:hover, &:focus { .\!td\:i; } }
-.\!td\:n\^ { &:hover, &:focus { .\!td\:n; } }
-.\!td\:u\^ { &:hover, &:focus { .\!td\:u; } }
-.\!td\:o\^ { &:hover, &:focus { .\!td\:o; } }
-.\!td\:s\^ { &:hover, &:focus { .\!td\:s; } }
+.-td-0-h { &:hover, &:focus { .-td-0; } }
+.-td-i-h { &:hover, &:focus { .-td-i; } }
+.-td-n-h { &:hover, &:focus { .-td-n; } }
+.-td-u-h { &:hover, &:focus { .-td-u; } }
+.-td-o-h { &:hover, &:focus { .-td-o; } }
+.-td-s-h { &:hover, &:focus { .-td-s; } }

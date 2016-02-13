@@ -7,14 +7,14 @@
 // Only relevant when printing (@media print)
 // thus no media queries are specified
 //
-// !pbb  =  page-break-before
-// !pba  =  page-break-after
+// pbb  =  page-break-before
+// pba  =  page-break-after
 //
-// :0  =  initial
-// :i  =  inherit
-// :a  =  auto
-// :t  =  always
-// :f  =  avoid
+// 0  =  initial
+// i  =  inherit
+// a  =  auto
+// t  =  always
+// f  =  avoid
 //
 // ^initial
 // : `auto`
@@ -28,14 +28,14 @@
 // ^updated
 // : 2015-11-05
 
-.\!pbb\:0 { .\!pbb\:a; page-break-before: initial !important; }
-.\!pbb\:i {            page-break-before: inherit !important; }
-.\!pbb\:a {            page-break-before: auto    !important; }
-.\!pbb\:t {            page-break-before: always  !important; }
-.\!pbb\:f {            page-break-before: avoid   !important; }
+.-pbb-0 { .-pbb-a; page-break-before: initial !important; }
+.-pbb-i {          page-break-before: inherit !important; }
+.-pbb-a {          page-break-before: auto    !important; }
+.-pbb-t {          page-break-before: always  !important; }
+.-pbb-f {          page-break-before: avoid   !important; }
 
-.\!pba\:0 { .\!pba\:a; page-break-after:  initial !important; }
-.\!pba\:i {            page-break-after:  inherit !important; }
-.\!pba\:a {            page-break-after:  auto    !important; }
-.\!pba\:t {            page-break-after:  always  !important; }
-.\!pba\:f {            page-break-after:  avoid   !important; }
+.-pba-0 { .-pba-a; page-break-after:  initial !important; }
+.-pba-i {          page-break-after:  inherit !important; }
+.-pba-a {          page-break-after:  auto    !important; }
+.-pba-t {          page-break-after:  always  !important; }
+.-pba-f {          page-break-after:  avoid   !important; }

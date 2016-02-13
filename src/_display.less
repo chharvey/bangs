@@ -6,27 +6,25 @@
 
 // Sets the type of box rendered.
 //
-// !d  =  display
+// d  =  display
 //
-// :0    =  initial
-// :i    =  inherit
-// :n    =  none
-// :bk   =  block
-// :il   =  inline
-// :ib   =  inline-block
-// :fx   =  flex
-// :li   =  list-item
-// :tb   =  table
-// :tr   =  table-row
-// :tl   =  table-column
-// :tc   =  table-cell
-// :trg  =  table-row-group
-// :thg  =  table-header-group
-// :tfg  =  table-footer-group
-// :tlg  =  table-column-group
+// 0    =  initial
+// i    =  inherit
+// n    =  none
+// bk   =  block
+// il   =  inline
+// ib   =  inline-block
+// fx   =  flex
+// li   =  list-item
 //
-// @s  =  screen
-// @p  =  print
+// tb   =  table
+// tr   =  table-row
+// tl   =  table-column
+// tc   =  table-cell
+// trg  =  table-row-group
+// thg  =  table-header-group
+// tfg  =  table-footer-group
+// tlg  =  table-column-group
 //
 // ^initial
 // : `inline`
@@ -39,33 +37,77 @@
 // ^updated
 // : 2015-10-02
 
-.\!d\:0  { .\!d\:il; display: initial      !important; }
-.\!d\:i  {           display: inherit      !important; }
-.\!d\:n  {           display: none         !important; }
-.\!d\:bk {           display: block        !important; }
-.\!d\:il {           display: inline       !important; }
-.\!d\:ib {           display: inline-block !important; }
-.\!d\:fx {           #XMETER .flexbox()    !important; }
-.\!d\:li {           display: list-item    !important; }
+.-d-0  { .-d-il; display: initial      !important; }
+.-d-i  {         display: inherit      !important; }
+.-d-n  {         display: none         !important; }
+.-d-bk {         display: block        !important; }
+.-d-il {         display: inline       !important; }
+.-d-ib {         display: inline-block !important; }
+.-d-fx {         #XMETER .flexbox()    !important; }
+.-d-li {         display: list-item    !important; }
 
 @media screen {
-  .\!d\:0\@s  { .\!d\:0 ; }
-  .\!d\:i\@s  { .\!d\:i ; }
-  .\!d\:n\@s  { .\!d\:n ; }
-  .\!d\:bk\@s { .\!d\:bk; }
-  .\!d\:il\@s { .\!d\:il; }
-  .\!d\:ib\@s { .\!d\:ib; }
-  .\!d\:fx\@s { .\!d\:fx; }
-  .\!d\:li\@s { .\!d\:li; }
+  .-d-0-s  { .-d-0 ; }
+  .-d-i-s  { .-d-i ; }
+  .-d-n-s  { .-d-n ; }
+  .-d-bk-s { .-d-bk; }
+  .-d-il-s { .-d-il; }
+  .-d-ib-s { .-d-ib; }
+  .-d-fx-s { .-d-fx; }
+  .-d-li-s { .-d-li; }
+}
+
+@media screen and (min-width: 30em) {
+  .-d-0-sK  { .-d-0 ; }
+  .-d-i-sK  { .-d-i ; }
+  .-d-n-sK  { .-d-n ; }
+  .-d-bk-sK { .-d-bk; }
+  .-d-il-sK { .-d-il; }
+  .-d-ib-sK { .-d-ib; }
+  .-d-fx-sK { .-d-fx; }
+  .-d-li-sK { .-d-li; }
+}
+
+@media screen and (min-width: 45em) {
+  .-d-0-sM  { .-d-0 ; }
+  .-d-i-sM  { .-d-i ; }
+  .-d-n-sM  { .-d-n ; }
+  .-d-bk-sM { .-d-bk; }
+  .-d-il-sM { .-d-il; }
+  .-d-ib-sM { .-d-ib; }
+  .-d-fx-sM { .-d-fx; }
+  .-d-li-sM { .-d-li; }
+}
+
+@media screen and (min-width: 60em) {
+  .-d-0-sG  { .-d-0 ; }
+  .-d-i-sG  { .-d-i ; }
+  .-d-n-sG  { .-d-n ; }
+  .-d-bk-sG { .-d-bk; }
+  .-d-il-sG { .-d-il; }
+  .-d-ib-sG { .-d-ib; }
+  .-d-fx-sG { .-d-fx; }
+  .-d-li-sG { .-d-li; }
+}
+
+@media screen and (min-width: 75em) {
+  .-d-0-sT  { .-d-0 ; }
+  .-d-i-sT  { .-d-i ; }
+  .-d-n-sT  { .-d-n ; }
+  .-d-bk-sT { .-d-bk; }
+  .-d-il-sT { .-d-il; }
+  .-d-ib-sT { .-d-ib; }
+  .-d-fx-sT { .-d-fx; }
+  .-d-li-sT { .-d-li; }
 }
 
 @media print {
-  .\!d\:0\@p  { .\!d\:0 ; }
-  .\!d\:i\@p  { .\!d\:i ; }
-  .\!d\:n\@p  { .\!d\:n ; }
-  .\!d\:bk\@p { .\!d\:bk; }
-  .\!d\:il\@p { .\!d\:il; }
-  .\!d\:ib\@p { .\!d\:ib; }
-  .\!d\:fx\@p { .\!d\:fx; }
-  .\!d\:li\@p { .\!d\:li; }
+  .-d-0-p  { .-d-0 ; }
+  .-d-i-p  { .-d-i ; }
+  .-d-n-p  { .-d-n ; }
+  .-d-bk-p { .-d-bk; }
+  .-d-il-p { .-d-il; }
+  .-d-ib-p { .-d-ib; }
+  .-d-fx-p { .-d-fx; }
+  .-d-li-p { .-d-li; }
 }
