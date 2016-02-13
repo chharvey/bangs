@@ -20,6 +20,7 @@ This file lists information about each property and its supported values.
 .-ps-r    relative
 .-ps-a    absolute
 .-ps-f    fixed
+.-ps-k    sticky
 ```
 
 ### `float`
