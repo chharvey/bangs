@@ -46,10 +46,10 @@ appendage    | meaning                                           | property supp
 ---------    | -------                                           | ----------------
 no appendage | all media queries                                 | all properties
 `-s`         | `@media screen`                                   | all properties
-`-sK`        | `@media screen and (min-width: 30em)` (small+)    | ?
-`-sM`        | `@media screen and (min-width: 45em)` (medium+)   | ?
-`-sG`        | `@media screen and (min-width: 60em)` (large+)    | ?
-`-sT`        | `@media screen and (min-width: 75em)` (x-large+)  | ?
+`-sK`        | `@media screen and (min-width: 30em)` (small+)    | display, width
+`-sM`        | `@media screen and (min-width: 45em)` (medium+)   | display, width
+`-sG`        | `@media screen and (min-width: 60em)` (large+)    | display, width
+`-sT`        | `@media screen and (min-width: 75em)` (x-large+)  | display, width
 `-sP`        | `@media screen and (min-width: 90em)` (xx-large+) | ?
 `-p`         | `@media print`                                    | all properties
 `-h`         | pseudo-classes `:hover` and `:focus`              | font-[style&#x007c;variant&#x007c;weight], background-color, opacity, text-transform, color
