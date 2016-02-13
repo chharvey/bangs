@@ -374,6 +374,13 @@ where `*` could be `b` or `a`
 
 
 ## Box Cosmetics
+### `box-shadow`
+```
+.-bs-0    initial
+.-bs-i    inherit
+.-bs-n    none
+```
+
 ### `background-image`
 ```
 .-bi-n    none
@@ -477,6 +484,13 @@ where `*` could be `b` or `a`
 .-td-s    line-through
 
 -h        true
+```
+
+### `text-shadow`
+```
+.-ts-0    initial
+.-ts-i    inherit
+.-ts-n    none
 ```
 
 ### `text-overflow`
