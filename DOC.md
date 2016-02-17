@@ -13,7 +13,7 @@ the suffix | stands for a written value of
 `-z`       | `0`, if applicable
 
 Every property has support for the values `initial` and `inherit`. Therefore each set of classes
-has bangs that uses the corresponding suffixes.
+has bangs that use the corresponding suffixes.
 For example, the classes `.-d-0` and `.-d-i` have `display: initial;` and `display: inherit;` respectively.
 These classes and such classes for all properties are not listed for brevity.
 
@@ -40,7 +40,8 @@ property does have both values, I will then need to adjust the syntax.
 By default, all bangs work in all media types. Additionally, each bang supports the
 `screen` and `print` media queries.
 Even further, there are more sets of classes that provide support for
-additional media queries and hover/focus, and these are mentioned on a per-property basis below.
+additional media queries and hover/focus, and these are mentioned on a per-property basis below
+and on [the full list](PROPERTIES.md) (with the keyword `true`).
 
 appendage    | meaning                                           | property support
 ---------    | -------                                           | ----------------

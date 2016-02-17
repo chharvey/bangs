@@ -297,7 +297,7 @@ This file lists information about each property and its supported values.
 ### `font-weight`
 ```
 .-fw-n    normal
-.-fw-t    bold
+.-fw-b    bold
 .-fw-1    100
 .-fw-2    200
 .-fw-3    300
@@ -394,14 +394,16 @@ This file lists information about each property and its supported values.
 
 ### `page-break-[before|after]`
 ```
-.-pb*-a    auto
-.-pb*-t    always
-.-pb*-f    avoid
+.-pbb  .-pba
+```
+(for `-before` or `-after`, respectively)
+```
+.-a    auto
+.-t    always
+.-f    avoid
 
 NOTE: no support for any media queries
 ```
-where `*` could be `b` or `a`
-(for `before` or `after`, respectively)
 
 
 ## Box Cosmetics
@@ -547,8 +549,8 @@ where `*` could be `b` or `a`
 
 ### `list-style-position`
 ```
-.!lsp:os   { list-style-position: outside !important; }
-.!lsp:is   { list-style-position: inside  !important; }
+.-lsp-os    outside
+.-lsp-is    inside
 ```
 
 ### `list-style-image`
@@ -563,5 +565,5 @@ where `*` could be `b` or `a`
 .-c-b    #000000
 .-c-w    #ffffff
 
--h        true
+-h       true
 ```

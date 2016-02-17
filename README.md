@@ -18,7 +18,7 @@ Inspired by
 </style>
 <p class="-fw-b">friends with benefits</p>
 <p class="-ff-ss-p">fast forward slightly slower please</p>
-<p class="-td-u-h">tabulate data units</p>
+<p class="-td-u-h">tabulate data using hyphens</p>
 ```
 
 ## Usage
@@ -75,7 +75,7 @@ Where:
   - append `-‹mq›` (media query abbr), or
   - append `-h` for hover/focus-only styles.
 
-Read [the docs](doc/DOC.md) for more info.
+Read [the docs](DOC.md) for more info.
 
 ## Developing with Bangs
 
