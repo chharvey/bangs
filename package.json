@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/chharvey/bangs/issues"
   },
-  "homepage": "https://chharvey.github.io/bangs/",
+  "homepage": "https://github.com/chharvey/bangs/blob/gh-pages/README.md",
   "devDependencies": {
     "clean-css": "^3.4.5",
     "jade": "^1.11.0",
