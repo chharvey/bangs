@@ -26,10 +26,8 @@
   "homepage": "https://github.com/chharvey/bangs/blob/gh-pages/README.md",
   "devDependencies": {
     "clean-css": "^3.4.5",
-    "jade": "^1.11.0",
     "less": "^2.5.3",
     "lessc-each": "^1.0.1",
-    "lux-nox": "^1.1.0",
     "xmeter": "^3.3.0"
   }
 }
