@@ -243,11 +243,11 @@ This file lists information about each property and its supported values.
 -sT    true
 ```
 
-### `padding`
+### `padding-`
 ```
 .-pl  .-pr  .-pt  .-pb  .-px  .-py  .-pa
 ```
-(for `-left`, `-right`, `-top`, `-bottom`, horizontal, vertical, or all, respectively)
+(for `-left`, `-right`, `-top`, `-bottom`, ‘horizontal’, ‘vertical’, or ‘all’, respectively)
 ```
 -z    0
 -q    0.25rem
@@ -259,11 +259,11 @@ This file lists information about each property and its supported values.
 -g    16rem
 ```
 
-### `margin`
+### `margin-`
 ```
 .-ml  .-mr  .-mt  .-mb  .-mx  .-my  .-ma
 ```
-(for `-left`, `-right`, `-top`, `-bottom`, horizontal, vertical, or all, respectively)
+(for `-left`, `-right`, `-top`, `-bottom`, ‘horizontal’, ‘vertical’, or ‘all’, respectively)
 ```
 -a    auto
 -z    0
@@ -316,9 +316,9 @@ This file lists information about each property and its supported values.
 .-fz-z    0
 .-fz-q    0.25rem
 .-fz-h    0.5rem
-.-fz-1    1.0rem
-.-fz-2    2.0rem
-.-fz-4    4.0rem
+.-fz-1    1rem
+.-fz-2    2rem
+.-fz-4    4rem
 ```
 
 ### `font-family`
@@ -409,8 +409,6 @@ NOTE: no support for any media queries
 ## Box Cosmetics
 ### `box-shadow`
 ```
-.-bs-0    initial
-.-bs-i    inherit
 .-bs-n    none
 ```
 
@@ -521,8 +519,6 @@ NOTE: no support for any media queries
 
 ### `text-shadow`
 ```
-.-ts-0    initial
-.-ts-i    inherit
 .-ts-n    none
 ```
 
