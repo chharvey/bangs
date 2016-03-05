@@ -489,14 +489,6 @@ NOTE: no support for any media queries
 
 
 ## Text Cosmetics
-### `text-rendering`
-```
-.-tr-a    auto
-.-tr-s    optimizeSpeed
-.-tr-l    optimizeLegibility
-.-tr-g    geometricPrecision
-```
-
 ### `text-transform`
 ```
 .-tt-n    none
