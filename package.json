@@ -1,14 +1,14 @@
 {
   "name": "bangs",
-  "version": "0.6.0",
+  "version": "0.7.1",
   "description": "Bangs are unopinionated, single-responsibility CSS class selectors marked with !important.",
   "main": "bangs.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lessc:all": "lessc-each ./src/ ./build/  ;  lessc ./bangs.less ./bangs.css ; lessc ./doc/styles/index.less ./doc/styles/index.css",
+    "lessc:bangs": "lessc-each ./src/ ./build/  ;  lessc ./bangs.less ./bangs.css",
+    "lessc:all": "npm run lessc:bangs",
     "minify": "cleancss ./bangs.css -o ./bangs.min.css",
-    "jade:index": "jade index.jade",
-    "build": "npm run lessc:all  ;  npm run minify  ;  npm run jade:index"
+    "build": "npm run lessc:all  ;  npm run minify"
   },
   "repository": {
     "type": "git",
@@ -23,13 +23,11 @@
   "bugs": {
     "url": "https://github.com/chharvey/bangs/issues"
   },
-  "homepage": "https://chharvey.github.io/bangs/",
+  "homepage": "https://github.com/chharvey/bangs/blob/gh-pages/README.md",
   "devDependencies": {
     "clean-css": "^3.4.5",
-    "jade": "^1.11.0",
     "less": "^2.5.3",
     "lessc-each": "^1.0.1",
-    "lux-nox": "^1.1.0",
-    "xmeter": "^3.3.0"
+    "xmeter": "^4.0.0"
   }
 }

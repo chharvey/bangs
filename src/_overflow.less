@@ -5,17 +5,14 @@
 
 // Defines how content outside the box is rendered.
 //
-// !of  =  overflow
+// of  =  overflow
 //
-// :0  =  initial
-// :i  =  inherit
-// :a  =  auto
-// :v  =  visible
-// :h  =  hidden
-// :s  =  scroll
-//
-// @s  =  screen
-// @p  =  print
+// 0  =  initial
+// i  =  inherit
+// a  =  auto
+// v  =  visible
+// h  =  hidden
+// s  =  scroll
 //
 // ^initial
 // : `visible`
@@ -28,27 +25,27 @@
 // ^updated
 // : 2015-10-15
 
-.\!of\:0 { .\!of\:v; overflow: initial !important; }
-.\!of\:i {           overflow: inherit !important; }
-.\!of\:a {           overflow: auto    !important; }
-.\!of\:v {           overflow: visible !important; }
-.\!of\:h {           overflow: hidden  !important; }
-.\!of\:s {           overflow: scroll  !important; }
+.-of-0 { .-of-v; overflow: initial !important; }
+.-of-i {         overflow: inherit !important; }
+.-of-a {         overflow: auto    !important; }
+.-of-v {         overflow: visible !important; }
+.-of-h {         overflow: hidden  !important; }
+.-of-s {         overflow: scroll  !important; }
 
 @media screen {
-  .\!of\:0\@s { .\!of\:0; }
-  .\!of\:i\@s { .\!of\:i; }
-  .\!of\:a\@s { .\!of\:a; }
-  .\!of\:v\@s { .\!of\:v; }
-  .\!of\:h\@s { .\!of\:h; }
-  .\!of\:s\@s { .\!of\:s; }
+  .-of-0-s { .-of-0; }
+  .-of-i-s { .-of-i; }
+  .-of-a-s { .-of-a; }
+  .-of-v-s { .-of-v; }
+  .-of-h-s { .-of-h; }
+  .-of-s-s { .-of-s; }
 }
 
 @media print {
-  .\!of\:0\@p { .\!of\:0; }
-  .\!of\:i\@p { .\!of\:i; }
-  .\!of\:a\@p { .\!of\:a; }
-  .\!of\:v\@p { .\!of\:v; }
-  .\!of\:h\@p { .\!of\:h; }
-  .\!of\:s\@p { .\!of\:s; }
+  .-of-0-p { .-of-0; }
+  .-of-i-p { .-of-i; }
+  .-of-a-p { .-of-a; }
+  .-of-v-p { .-of-v; }
+  .-of-h-p { .-of-h; }
+  .-of-s-p { .-of-s; }
 }

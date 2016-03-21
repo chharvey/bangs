@@ -1,36 +1,33 @@
-@import (reference) url('../node_modules/xmeter/src/__tool.fallback.flexbox.less');
 
 /*################################*\
     _order.less
 \*################################*/
+@import (reference) url('../node_modules/xmeter/src/__tool.fallback.flexbox.less');
 
 // Defines the `order` property of flex items.
 // NOTE that this utility must be a child of a flexbox
 // (an item with `display: flex;`)
 // in order to mean anything.
 //
-// !xo  =  order
+// xo  =  order
 //
-// :0   =  initial (also 0)
-// :i   =  inherit
-// :z   =  0
-// :1   =  1
-// :2   =  2
-// :3   =  3
-// :4   =  4
-// :5   =  5
-// :6   =  6
-// :7   =  7
-// :-1  =  -1
-// :-2  =  -2
-// :-3  =  -3
-// :-4  =  -4
-// :-5  =  -5
-// :-6  =  -6
-// :-7  =  -7
-//
-// @s  =  screen
-// @p  =  print
+// 0   =  initial
+// i   =  inherit
+// z   =  0
+// 1   =  1
+// 2   =  2
+// 3   =  3
+// 4   =  4
+// 5   =  5
+// 6   =  6
+// 7   =  7
+// -1  =  -1
+// -2  =  -2
+// -3  =  -3
+// -4  =  -4
+// -5  =  -5
+// -6  =  -6
+// -7  =  -7
 //
 // ^initial
 // : `0`
@@ -43,60 +40,140 @@
 // ^updated
 // : 2016-02-11
 
-.\!xo\:0  { .\!xo\:z; #XMETER .flex-order(initial) !important; }
-.\!xo\:i  {           #XMETER .flex-order(inherit) !important; }
-.\!xo\:z  {           #XMETER .flex-order(0)       !important; }
-.\!xo\:1  {           #XMETER .flex-order(1)       !important; }
-.\!xo\:2  {           #XMETER .flex-order(2)       !important; }
-.\!xo\:3  {           #XMETER .flex-order(3)       !important; }
-.\!xo\:4  {           #XMETER .flex-order(4)       !important; }
-.\!xo\:5  {           #XMETER .flex-order(5)       !important; }
-.\!xo\:6  {           #XMETER .flex-order(6)       !important; }
-.\!xo\:7  {           #XMETER .flex-order(7)       !important; }
-.\!xo\:-1 {           #XMETER .flex-order(-1)      !important; }
-.\!xo\:-2 {           #XMETER .flex-order(-2)      !important; }
-.\!xo\:-3 {           #XMETER .flex-order(-3)      !important; }
-.\!xo\:-4 {           #XMETER .flex-order(-4)      !important; }
-.\!xo\:-5 {           #XMETER .flex-order(-5)      !important; }
-.\!xo\:-6 {           #XMETER .flex-order(-6)      !important; }
-.\!xo\:-7 {           #XMETER .flex-order(-7)      !important; }
+.-xo-0  { .-xo-z; .flex-order(initial) !important; }
+.-xo-i  {         .flex-order(inherit) !important; }
+.-xo-z  {         .flex-order(0)       !important; }
+.-xo-1  {         .flex-order(1)       !important; }
+.-xo-2  {         .flex-order(2)       !important; }
+.-xo-3  {         .flex-order(3)       !important; }
+.-xo-4  {         .flex-order(4)       !important; }
+.-xo-5  {         .flex-order(5)       !important; }
+.-xo-6  {         .flex-order(6)       !important; }
+.-xo-7  {         .flex-order(7)       !important; }
+.-xo--1 {         .flex-order(-1)      !important; }
+.-xo--2 {         .flex-order(-2)      !important; }
+.-xo--3 {         .flex-order(-3)      !important; }
+.-xo--4 {         .flex-order(-4)      !important; }
+.-xo--5 {         .flex-order(-5)      !important; }
+.-xo--6 {         .flex-order(-6)      !important; }
+.-xo--7 {         .flex-order(-7)      !important; }
 
 @media screen {
-  .\!xo\:0\@s  { .\!xo\:0 ; }
-  .\!xo\:i\@s  { .\!xo\:i ; }
-  .\!xo\:z\@s  { .\!xo\:z ; }
-  .\!xo\:1\@s  { .\!xo\:1 ; }
-  .\!xo\:2\@s  { .\!xo\:2 ; }
-  .\!xo\:3\@s  { .\!xo\:3 ; }
-  .\!xo\:4\@s  { .\!xo\:4 ; }
-  .\!xo\:5\@s  { .\!xo\:5 ; }
-  .\!xo\:6\@s  { .\!xo\:6 ; }
-  .\!xo\:7\@s  { .\!xo\:7 ; }
-  .\!xo\:-1\@s { .\!xo\:-1; }
-  .\!xo\:-2\@s { .\!xo\:-2; }
-  .\!xo\:-3\@s { .\!xo\:-3; }
-  .\!xo\:-4\@s { .\!xo\:-4; }
-  .\!xo\:-5\@s { .\!xo\:-5; }
-  .\!xo\:-6\@s { .\!xo\:-6; }
-  .\!xo\:-7\@s { .\!xo\:-7; }
+  .-xo-0-s  { .-xo-0 ; }
+  .-xo-i-s  { .-xo-i ; }
+  .-xo-z-s  { .-xo-z ; }
+  .-xo-1-s  { .-xo-1 ; }
+  .-xo-2-s  { .-xo-2 ; }
+  .-xo-3-s  { .-xo-3 ; }
+  .-xo-4-s  { .-xo-4 ; }
+  .-xo-5-s  { .-xo-5 ; }
+  .-xo-6-s  { .-xo-6 ; }
+  .-xo-7-s  { .-xo-7 ; }
+  .-xo--1-s { .-xo--1; }
+  .-xo--2-s { .-xo--2; }
+  .-xo--3-s { .-xo--3; }
+  .-xo--4-s { .-xo--4; }
+  .-xo--5-s { .-xo--5; }
+  .-xo--6-s { .-xo--6; }
+  .-xo--7-s { .-xo--7; }
+}
+
+@media screen and (min-width: 30em) {
+  .-xo-0-sK  { .-xo-0 ; }
+  .-xo-i-sK  { .-xo-i ; }
+  .-xo-z-sK  { .-xo-z ; }
+  .-xo-1-sK  { .-xo-1 ; }
+  .-xo-2-sK  { .-xo-2 ; }
+  .-xo-3-sK  { .-xo-3 ; }
+  .-xo-4-sK  { .-xo-4 ; }
+  .-xo-5-sK  { .-xo-5 ; }
+  .-xo-6-sK  { .-xo-6 ; }
+  .-xo-7-sK  { .-xo-7 ; }
+  .-xo--1-sK { .-xo--1; }
+  .-xo--2-sK { .-xo--2; }
+  .-xo--3-sK { .-xo--3; }
+  .-xo--4-sK { .-xo--4; }
+  .-xo--5-sK { .-xo--5; }
+  .-xo--6-sK { .-xo--6; }
+  .-xo--7-sK { .-xo--7; }
+}
+
+@media screen and (min-width: 45em) {
+  .-xo-0-sM  { .-xo-0 ; }
+  .-xo-i-sM  { .-xo-i ; }
+  .-xo-z-sM  { .-xo-z ; }
+  .-xo-1-sM  { .-xo-1 ; }
+  .-xo-2-sM  { .-xo-2 ; }
+  .-xo-3-sM  { .-xo-3 ; }
+  .-xo-4-sM  { .-xo-4 ; }
+  .-xo-5-sM  { .-xo-5 ; }
+  .-xo-6-sM  { .-xo-6 ; }
+  .-xo-7-sM  { .-xo-7 ; }
+  .-xo--1-sM { .-xo--1; }
+  .-xo--2-sM { .-xo--2; }
+  .-xo--3-sM { .-xo--3; }
+  .-xo--4-sM { .-xo--4; }
+  .-xo--5-sM { .-xo--5; }
+  .-xo--6-sM { .-xo--6; }
+  .-xo--7-sM { .-xo--7; }
+}
+
+@media screen and (min-width: 60em) {
+  .-xo-0-sG  { .-xo-0 ; }
+  .-xo-i-sG  { .-xo-i ; }
+  .-xo-z-sG  { .-xo-z ; }
+  .-xo-1-sG  { .-xo-1 ; }
+  .-xo-2-sG  { .-xo-2 ; }
+  .-xo-3-sG  { .-xo-3 ; }
+  .-xo-4-sG  { .-xo-4 ; }
+  .-xo-5-sG  { .-xo-5 ; }
+  .-xo-6-sG  { .-xo-6 ; }
+  .-xo-7-sG  { .-xo-7 ; }
+  .-xo--1-sG { .-xo--1; }
+  .-xo--2-sG { .-xo--2; }
+  .-xo--3-sG { .-xo--3; }
+  .-xo--4-sG { .-xo--4; }
+  .-xo--5-sG { .-xo--5; }
+  .-xo--6-sG { .-xo--6; }
+  .-xo--7-sG { .-xo--7; }
+}
+
+@media screen and (min-width: 75em) {
+  .-xo-0-sT  { .-xo-0 ; }
+  .-xo-i-sT  { .-xo-i ; }
+  .-xo-z-sT  { .-xo-z ; }
+  .-xo-1-sT  { .-xo-1 ; }
+  .-xo-2-sT  { .-xo-2 ; }
+  .-xo-3-sT  { .-xo-3 ; }
+  .-xo-4-sT  { .-xo-4 ; }
+  .-xo-5-sT  { .-xo-5 ; }
+  .-xo-6-sT  { .-xo-6 ; }
+  .-xo-7-sT  { .-xo-7 ; }
+  .-xo--1-sT { .-xo--1; }
+  .-xo--2-sT { .-xo--2; }
+  .-xo--3-sT { .-xo--3; }
+  .-xo--4-sT { .-xo--4; }
+  .-xo--5-sT { .-xo--5; }
+  .-xo--6-sT { .-xo--6; }
+  .-xo--7-sT { .-xo--7; }
 }
 
 @media print {
-  .\!xo\:0\@p  { .\!xo\:0 ; }
-  .\!xo\:i\@p  { .\!xo\:i ; }
-  .\!xo\:z\@p  { .\!xo\:z ; }
-  .\!xo\:1\@p  { .\!xo\:1 ; }
-  .\!xo\:2\@p  { .\!xo\:2 ; }
-  .\!xo\:3\@p  { .\!xo\:3 ; }
-  .\!xo\:4\@p  { .\!xo\:4 ; }
-  .\!xo\:5\@p  { .\!xo\:5 ; }
-  .\!xo\:6\@p  { .\!xo\:6 ; }
-  .\!xo\:7\@p  { .\!xo\:7 ; }
-  .\!xo\:-1\@p { .\!xo\:-1; }
-  .\!xo\:-2\@p { .\!xo\:-2; }
-  .\!xo\:-3\@p { .\!xo\:-3; }
-  .\!xo\:-4\@p { .\!xo\:-4; }
-  .\!xo\:-5\@p { .\!xo\:-5; }
-  .\!xo\:-6\@p { .\!xo\:-6; }
-  .\!xo\:-7\@p { .\!xo\:-7; }
+  .-xo-0-p  { .-xo-0 ; }
+  .-xo-i-p  { .-xo-i ; }
+  .-xo-z-p  { .-xo-z ; }
+  .-xo-1-p  { .-xo-1 ; }
+  .-xo-2-p  { .-xo-2 ; }
+  .-xo-3-p  { .-xo-3 ; }
+  .-xo-4-p  { .-xo-4 ; }
+  .-xo-5-p  { .-xo-5 ; }
+  .-xo-6-p  { .-xo-6 ; }
+  .-xo-7-p  { .-xo-7 ; }
+  .-xo--1-p { .-xo--1; }
+  .-xo--2-p { .-xo--2; }
+  .-xo--3-p { .-xo--3; }
+  .-xo--4-p { .-xo--4; }
+  .-xo--5-p { .-xo--5; }
+  .-xo--6-p { .-xo--6; }
+  .-xo--7-p { .-xo--7; }
 }

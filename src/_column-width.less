@@ -1,0 +1,40 @@
+
+/*################################*\
+    bangs  |  _column-width.less
+\*################################*/
+@import (reference) url('../node_modules/xmeter/src/__tool.fallback.column-width.less');
+
+// Sets the width of columns of text.
+//
+// cw  =  column-width
+//
+// 0   =  initial
+// i   =  inherit
+// a   =  auto
+//
+// ^initial
+// : `auto`
+// ^inherited
+// : false
+// ^url
+// : https://developer.mozilla.org/en-US/docs/Web/CSS/column-width
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2016-02-13
+
+.-cw-0 { .-cw-a; .column-width(initial) !important; }
+.-cw-i {         .column-width(inherit) !important; }
+.-cw-a {         .column-width(auto   ) !important; }
+
+@media screen {
+  .-cw-0-s { .-cw-0; }
+  .-cw-i-s { .-cw-i; }
+  .-cw-a-s { .-cw-a; }
+}
+
+@media print {
+  .-cw-0-p { .-cw-0; }
+  .-cw-i-p { .-cw-i; }
+  .-cw-a-p { .-cw-a; }
+}

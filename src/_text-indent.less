@@ -6,14 +6,11 @@
 // Sets the spacing between tags and words in text.
 // The `each-line` and `hanging` values are not yet widely supported.
 //
-// !ti  =  text-indent
+// ti  =  text-indent
 //
-// :0   =  initial
-// :i   =  inherit
-// :z   =  0
-//
-// @s  =  screen
-// @p  =  print
+// 0   =  initial
+// i   =  inherit
+// z   =  0
 //
 // ^initial
 // : `0`
@@ -26,18 +23,18 @@
 // ^updated
 // : 2015-10-15
 
-.\!ti\:0 { .\!ti\:z; text-indent: initial !important; }
-.\!ti\:i {           text-indent: inherit !important; }
-.\!ti\:z {           text-indent: 0       !important; }
+.-ti-0 { .-ti-z; text-indent: initial !important; }
+.-ti-i {         text-indent: inherit !important; }
+.-ti-z {         text-indent: 0       !important; }
 
 @media screen {
-  .\!ti\:0\@s { .\!ti\:0; }
-  .\!ti\:i\@s { .\!ti\:i; }
-  .\!ti\:z\@s { .\!ti\:z; }
+  .-ti-0-s { .-ti-0; }
+  .-ti-i-s { .-ti-i; }
+  .-ti-z-s { .-ti-z; }
 }
 
 @media print {
-  .\!ti\:0\@p { .\!ti\:0; }
-  .\!ti\:i\@p { .\!ti\:i; }
-  .\!ti\:z\@p { .\!ti\:z; }
+  .-ti-0-p { .-ti-0; }
+  .-ti-i-p { .-ti-i; }
+  .-ti-z-p { .-ti-z; }
 }
