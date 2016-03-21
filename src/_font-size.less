@@ -4,9 +4,7 @@
 \*################################*/
 
 // Sets the font size.
-// The bangs used for font size correspond to heading sizes.
-// Note that these bangs do not also set line-height.
-// There is, however, a pixel fallback for browsers that do not support rems. (16px = 1rem)
+// Font sizes use the relative em unit. Line-height is not set.
 // NOTE: THESE BANGS ARE OPINIONATED. Override them if you wish.
 //
 // fz  =  font-size
@@ -14,11 +12,11 @@
 // 0  =  initial
 // i  =  inherit
 // z  =  0
-// q  =  0.25rem ( 4px)
-// h  =  0.5rem  ( 8px)
-// 1  =  1.0rem  (16px)
-// 2  =  2.0rem  (32px)
-// 4  =  4.0rem  (64px)
+// q  =  0.25em
+// h  =  0.5em
+// 1  =  1.0em
+// 2  =  2.0em
+// 4  =  4.0em
 //
 // ^initial
 // : `medium` (user agent setting)
@@ -27,18 +25,16 @@
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2016-01-14
+// : 2016-02-21
 
-@default_px: 16px;
-
-.-fz-0 { font-size: @default_px !important; font-size: initial !important; }
-.-fz-i {                                    font-size: inherit !important; }
-.-fz-z {                                    font-size: 0       !important; }
-.-fz-q { font-size:  4px        !important; font-size: 0.25rem !important; }
-.-fz-h { font-size:  8px        !important; font-size: 0.5rem  !important; }
-.-fz-1 { font-size: 16px        !important; font-size: 1.0rem  !important; }
-.-fz-2 { font-size: 32px        !important; font-size: 2.0rem  !important; }
-.-fz-4 { font-size: 64px        !important; font-size: 4.0rem  !important; }
+.-fz-0 { .-fz-1; font-size: initial !important; }
+.-fz-i {         font-size: inherit !important; }
+.-fz-z {         font-size: 0       !important; }
+.-fz-q {         font-size: 0.25em  !important; }
+.-fz-h {         font-size: 0.5em   !important; }
+.-fz-1 {         font-size: 1.0em   !important; }
+.-fz-2 {         font-size: 2.0em   !important; }
+.-fz-4 {         font-size: 4.0em   !important; }
 
 @media screen {
   .-fz-0-s { .-fz-0; }
