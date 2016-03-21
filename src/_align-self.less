@@ -1,8 +1,8 @@
-@import (reference) url('../node_modules/xmeter/src/__tool.fallback.flexbox.less');
 
 /*################################*\
     bangs  |  _align-self.less
 \*################################*/
+@import (reference) url('../node_modules/xmeter/src/__tool.fallback.flexbox.less');
 
 // Overrides behavior of `align-items` for aligining one specific flex item along cross axis
 // (align vertically for `flex-direction: row` or horizontally for `flex-direction: column`)
@@ -29,14 +29,14 @@
 // ^updated
 // : 2015-10-15
 
-.-xs-0  { .-xs-a; #XMETER .flex-align-self(initial)    !important; }
-.-xs-i  {         #XMETER .flex-align-self(inherit)    !important; }
-.-xs-a  {         #XMETER .flex-align-self(auto)       !important; }
-.-xs-s  {         #XMETER .flex-align-self(stretch)    !important; }
-.-xs-xs {         #XMETER .flex-align-self(flex-start) !important; }
-.-xs-xe {         #XMETER .flex-align-self(flex-end)   !important; }
-.-xs-c  {         #XMETER .flex-align-self(center)     !important; }
-.-xs-b  {         #XMETER .flex-align-self(baseline)   !important; }
+.-xs-0  { .-xs-a; .flex-align-self(initial)    !important; }
+.-xs-i  {         .flex-align-self(inherit)    !important; }
+.-xs-a  {         .flex-align-self(auto)       !important; }
+.-xs-s  {         .flex-align-self(stretch)    !important; }
+.-xs-xs {         .flex-align-self(flex-start) !important; }
+.-xs-xe {         .flex-align-self(flex-end)   !important; }
+.-xs-c  {         .flex-align-self(center)     !important; }
+.-xs-b  {         .flex-align-self(baseline)   !important; }
 
 @media screen {
   .-xs-0-s  { .-xs-0 ; }
