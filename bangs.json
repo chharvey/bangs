@@ -311,6 +311,24 @@
       }
     }
   , {
+      "name": "box-sizing"
+    , "code": "b"
+    , "summary": "Alters the CSS box model used to calculate width and height."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing"
+    , "initial": "content-box"
+    , "inherited": false
+    , "values": [
+        { "name" : "initial"     ,                 "use" : ".box-sizing(initial)"     }
+      , { "name" : "inherit"     ,                 "use" : ".box-sizing(inherit)"     }
+      , { "name" : "content-box" , "code" : "c"  , "use" : ".box-sizing(content-box)" }
+      , { "name" : "border-box"  , "code" : "b"  , "use" : ".box-sizing(border-box)"  }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
       "name": "width"
     , "code": "w"
     , "summary": "Sets the width of an element."
@@ -400,6 +418,66 @@
       , "large" : true
       , "xlarge": true
       , "print" : true
+      }
+    }
+  , {
+      "name": "padding"
+    , "code": {
+        "left"       : "pl"
+      , "right"      : "pr"
+      , "top"        : "pt"
+      , "bottom"     : "pb"
+      , "horizontal" : "px"
+      , "vertical"   : "py"
+      , "all"        : "pa"
+      }
+    , "summary": "Sets the padding space on an element."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/padding"
+    , "initial": "0"
+    , "inherited": false
+    , "values": [
+        { "name" : "0"       , "code" : "z" }
+      , { "name" : "0.25rem" , "code" : "q" }
+      , { "name" : "0.5rem"  , "code" : "h" }
+      , { "name" : "1rem"    , "code" : "1" }
+      , { "name" : "2rem"    , "code" : "2" }
+      , { "name" : "4rem"    , "code" : "4" }
+      , { "name" : "8rem"    , "code" : "8" }
+      , { "name" : "16rem"   , "code" : "g" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "margin"
+    , "code": {
+        "left"       : "ml"
+      , "right"      : "mr"
+      , "top"        : "mt"
+      , "bottom"     : "mb"
+      , "horizontal" : "mx"
+      , "vertical"   : "my"
+      , "all"        : "ma"
+      }
+    , "summary": "Sets the margin space on an element."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/margin"
+    , "initial": "0"
+    , "inherited": false
+    , "values": [
+        { "name" : "0"       , "code" : "z" }
+      , { "name" : "0.25rem" , "code" : "q" }
+      , { "name" : "0.5rem"  , "code" : "h" }
+      , { "name" : "1rem"    , "code" : "1" }
+      , { "name" : "2rem"    , "code" : "2" }
+      , { "name" : "4rem"    , "code" : "4" }
+      , { "name" : "8rem"    , "code" : "8" }
+      , { "name" : "16rem"   , "code" : "g" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
       }
     }
   ]
