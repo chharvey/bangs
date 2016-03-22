@@ -480,5 +480,104 @@
       , "print"  : true
       }
     }
+  , {
+      "name": "font-style"
+    , "code": "fs"
+    , "summary": "Sets italics or oblique on the typeface."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-style"
+    , "initial": "normal"
+    , "inherited": true
+    , "values": [
+        { "name" : "normal" , "code" : "n" }
+      , { "name" : "italic" , "code" : "t" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      , "hover"  : true
+      }
+    }
+  , {
+      "name": "font-variant"
+    , "code": "fv"
+    , "summary": "Sets small capitals on the typeface."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant"
+    , "initial": "normal"
+    , "inherited": true
+    , "values": [
+        { "name" : "normal"     , "code" : "n" }
+      , { "name" : "small-caps" , "code" : "s" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      , "hover"  : true
+      }
+    }
+  , {
+      "name": "font-weight"
+    , "code": "fw"
+    , "summary": "Sets weight on the typeface."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight"
+    , "initial": "normal"
+    , "inherited": true
+    , "values": [
+        { "name" : "normal" , "code" : "n" }
+      , { "name" : "bold"   , "code" : "b" }
+      , { "name" : "100"    , "code" : "1" }
+      , { "name" : "200"    , "code" : "2" }
+      , { "name" : "300"    , "code" : "3" }
+      , { "name" : "400"    , "code" : "4" }
+      , { "name" : "500"    , "code" : "5" }
+      , { "name" : "600"    , "code" : "6" }
+      , { "name" : "700"    , "code" : "7" }
+      , { "name" : "800"    , "code" : "8" }
+      , { "name" : "900"    , "code" : "9" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      , "hover"  : true
+      }
+    }
+  , {
+      "name": "font-size"
+    , "code": "fz"
+    , "summary": "Sets the font size."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-size"
+    , "initial": "medium"
+    , "inherited": true
+    , "values": [
+        { "name" : "0"      , "code" : "z" }
+      , { "name" : "0.25em" , "code" : "q" }
+      , { "name" : "0.5em"  , "code" : "h" }
+      , { "name" : "1em"    , "code" : "1" }
+      , { "name" : "2em"    , "code" : "2" }
+      , { "name" : "4em"    , "code" : "4" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "font-family"
+    , "code": "ff"
+    , "summary": "Sets the typeface."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-family"
+    , "initial": ""
+    , "inherited": true
+    , "values": [
+        { "name" : "sans-serif" , "code" : "ss" }
+      , { "name" : "serif"      , "code" : "sf" }
+      , { "name" : "monospace"  , "code" : "ms" }
+      , { "name" : "fantasy"    , "code" : "fy" }
+      , { "name" : "cursive"    , "code" : "cs" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
   ]
 }
