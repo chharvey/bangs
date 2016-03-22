@@ -19,6 +19,8 @@
     {
       "name": "display"
     , "code": "d"
+    , "summary": "Sets the type of box rendered."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/display"
     , "initial": "inline"
     , "inherited": false
     , "values": [
@@ -26,7 +28,7 @@
       , { "name" : "block"              , "code" : "bk"  }
       , { "name" : "inline"             , "code" : "il"  }
       , { "name" : "inline-block"       , "code" : "ib"  }
-      , { "name" : "flex"               , "code" : "fx"  , "alt": ".flexbox()" }
+      , { "name" : "flex"               , "code" : "fx"  , "alt" : ".flexbox()" }
       , { "name" : "list-item"          , "code" : "li"  }
       , { "name" : "table"              , "code" : "tb"  }
       , { "name" : "table-row"          , "code" : "tr"  }
@@ -49,6 +51,8 @@
   , {
       "name": "position"
     , "code": "ps"
+    , "summary": "Sets the position of box rendered."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/position"
     , "initial": "static"
     , "inherited": false
     , "values": [
@@ -66,6 +70,8 @@
   , {
       "name": "float"
     , "code": "fl"
+    , "summary": "Floats the box in content."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/float"
     , "initial": "none"
     , "inherited": false
     , "values": [
@@ -81,6 +87,8 @@
   , {
       "name": "clear"
     , "code": "cl"
+    , "summary": "Specifies positioning next to floating elements."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/clear"
     , "initial": "none"
     , "inherited": false
     , "values": [
@@ -97,6 +105,8 @@
   , {
       "name": "z-index"
     , "code": "z"
+    , "summary": "Defines the z-order of an element and descendants. Z-order is defined as the order of elements in the direction perpendicular to the screen."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/z-index"
     , "initial": "auto"
     , "inherited": false
     , "values": [
@@ -125,6 +135,8 @@
   , {
       "name": "vertical-align"
     , "code": "va"
+    , "summary": "Vertically aligns text in an inline or table-cell box."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align"
     , "initial": "baseline"
     , "inherited": false
     , "values": [
@@ -145,6 +157,8 @@
   , {
       "name": "flex-direction"
     , "code": "xd"
+    , "summary": "Specifies how flex items are placed in the flex container."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction"
     , "initial": "row"
     , "inherited": false
     , "values": [
@@ -163,6 +177,8 @@
   , {
       "name": "flex-wrap"
     , "code": "xw"
+    , "summary": "Determines whether boxes wrap to the next row or column."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap"
     , "initial": "nowrap"
     , "inherited": false
     , "values": [
@@ -180,6 +196,8 @@
   , {
       "name": "justify-content"
     , "code": "xj"
+    , "summary": "Defines how the browser distributes space between and around flex items along the main-axis of their container."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content"
     , "initial": "flex-start"
     , "inherited": false
     , "values": [
@@ -199,6 +217,8 @@
   , {
       "name": "align-content"
     , "code": "xc"
+    , "summary": "Aligns a flex container’s lines when there is empty space in the cross-axis."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/align-content"
     , "initial": "stretch"
     , "inherited": false
     , "values": [
@@ -219,6 +239,8 @@
   , {
       "name": "align-items"
     , "code": "xi"
+    , "summary": "Defines default behavior for aligining flex items along cross-axis."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/align-items"
     , "initial": "stretch"
     , "inherited": false
     , "values": [
@@ -238,6 +260,8 @@
   , {
       "name": "align-self"
     , "code": "xs"
+    , "summary": "Overrides behavior of `align-items` for aligining one specific flex item along cross-axis."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/align-self"
     , "initial": "auto"
     , "inherited": false
     , "values": [
@@ -258,6 +282,8 @@
   , {
       "name": "order"
     , "code": "xo"
+    , "summary": "Specifies the order used to lay out flex items."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/order"
     , "initial": "0"
     , "inherited": false
     , "values": [
@@ -287,6 +313,8 @@
   , {
       "name": "width"
     , "code": "w"
+    , "summary": "Sets the width of an element."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/width"
     , "initial": "auto"
     , "inherited": false
     , "values": [
