@@ -216,7 +216,7 @@
     }
   , {
       "name": "align-content"
-    , "code": "xc"
+    , "code": "xac"
     , "summary": "Aligns a flex container’s lines when there is empty space in the cross-axis."
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/align-content"
     , "initial": "stretch"

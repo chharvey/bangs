@@ -101,12 +101,12 @@ This file lists information about each property and its supported values.
 
 ### `align-content`
 ```
-.-xc-s     stretch
-.-xc-xs    flex-start
-.-xc-xe    flex-end
-.-xc-c     center
-.-xc-sb    space-between
-.-xc-sa    space-around
+.-xac-s     stretch
+.-xac-xs    flex-start
+.-xac-xe    flex-end
+.-xac-c     center
+.-xac-sb    space-between
+.-xac-sa    space-around
 ```
 
 ### `align-items`
