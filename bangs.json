@@ -427,8 +427,8 @@
       , "right"      : "pr"
       , "top"        : "pt"
       , "bottom"     : "pb"
-      , "horizontal" : "px"
-      , "vertical"   : "py"
+      , "horizontal" : "ph"
+      , "vertical"   : "pv"
       , "all"        : "pa"
       }
     , "summary": "Sets the padding space on an element."
@@ -457,8 +457,8 @@
       , "right"      : "mr"
       , "top"        : "mt"
       , "bottom"     : "mb"
-      , "horizontal" : "mx"
-      , "vertical"   : "my"
+      , "horizontal" : "mh"
+      , "vertical"   : "mv"
       , "all"        : "ma"
       }
     , "summary": "Sets the margin space on an element."
@@ -466,6 +466,7 @@
     , "initial": "0"
     , "inherited": false
     , "values": [
+        { "name" : "auto"    , "code" : "a" }
         { "name" : "0"       , "code" : "z" }
       , { "name" : "0.25rem" , "code" : "q" }
       , { "name" : "0.5rem"  , "code" : "h" }

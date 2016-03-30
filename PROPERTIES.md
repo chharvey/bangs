@@ -245,7 +245,7 @@ This file lists information about each property and its supported values.
 
 ### `padding-`
 ```
-.-pl  .-pr  .-pt  .-pb  .-px  .-py  .-pa
+.-pl  .-pr  .-pt  .-pb  .-ph  .-pv  .-pa
 ```
 (for `-left`, `-right`, `-top`, `-bottom`, ‘horizontal’, ‘vertical’, or ‘all’, respectively)
 ```
@@ -261,7 +261,7 @@ This file lists information about each property and its supported values.
 
 ### `margin-`
 ```
-.-ml  .-mr  .-mt  .-mb  .-mx  .-my  .-ma
+.-ml  .-mr  .-mt  .-mb  .-mh  .-mv  .-ma
 ```
 (for `-left`, `-right`, `-top`, `-bottom`, ‘horizontal’, ‘vertical’, or ‘all’, respectively)
 ```
