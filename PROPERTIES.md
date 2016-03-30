@@ -111,11 +111,11 @@ This file lists information about each property and its supported values.
 
 ### `align-items`
 ```
-.-xi-s     stretch
-.-xi-xs    flex-start
-.-xi-xe    flex-end
-.-xi-c     center
-.-xi-b     baseline
+.-xai-s     stretch
+.-xai-xs    flex-start
+.-xai-xe    flex-end
+.-xai-c     center
+.-xai-b     baseline
 ```
 
 ### `align-self`

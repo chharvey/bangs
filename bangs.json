@@ -238,7 +238,7 @@
     }
   , {
       "name": "align-items"
-    , "code": "xi"
+    , "code": "xai"
     , "summary": "Defines default behavior for aligining flex items along cross-axis."
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/align-items"
     , "initial": "stretch"
