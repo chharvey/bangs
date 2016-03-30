@@ -274,6 +274,13 @@ This file lists information about each property and its supported values.
 -4    4rem
 -8    8rem
 -g    16rem
+--q    -0.25rem
+--h    -0.5rem
+--1    -1rem
+--2    -2rem
+--4    -4rem
+--8    -8rem
+--g    -16rem
 ```
 
 
