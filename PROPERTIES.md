@@ -120,12 +120,12 @@ This file lists information about each property and its supported values.
 
 ### `align-self`
 ```
-.-xs-a     auto
-.-xs-s     stretch
-.-xs-xs    flex-start
-.-xs-xe    flex-end
-.-xs-c     center
-.-xs-b     baseline
+.-xas-a     auto
+.-xas-s     stretch
+.-xas-xs    flex-start
+.-xas-xe    flex-end
+.-xas-c     center
+.-xas-b     baseline
 ```
 
 ### `order`

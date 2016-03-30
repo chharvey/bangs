@@ -259,7 +259,7 @@
     }
   , {
       "name": "align-self"
-    , "code": "xs"
+    , "code": "xas"
     , "summary": "Overrides behavior of `align-items` for aligining one specific flex item along cross-axis."
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/align-self"
     , "initial": "auto"
