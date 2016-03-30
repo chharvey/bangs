@@ -1,0 +1,583 @@
+{
+  "constants": {
+    "values": [
+      { "name": "initial" , "code": "0" }
+    , { "name": "inherit" , "code": "i" }
+    ]
+  , "media": [
+      { "name" : "screen"  , "code" : "s"  }
+    , { "name" : "small"   , "code" : "sK" , "breakpoint" : { "em" : 30 , "px" :  480 } }
+    , { "name" : "medium"  , "code" : "sM" , "breakpoint" : { "em" : 45 , "px" :  720 } }
+    , { "name" : "large"   , "code" : "sG" , "breakpoint" : { "em" : 60 , "px" :  960 } }
+    , { "name" : "xlarge"  , "code" : "sT" , "breakpoint" : { "em" : 75 , "px" : 1200 } }
+    , { "name" : "xxlarge" , "code" : "sP" , "breakpoint" : { "em" : 90 , "px" : 1440 } }
+    , { "name" : "print"   , "code" : "p"  }
+    , { "name" : "hover"   , "code" : "h"  }
+    ]
+  }
+, "properties": [
+    {
+      "name": "display"
+    , "code": "d"
+    , "summary": "Sets the type of box rendered."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/display"
+    , "initial": "inline"
+    , "inherited": false
+    , "values": [
+        { "name" : "none"               , "code" : "n"   }
+      , { "name" : "block"              , "code" : "bk"  }
+      , { "name" : "inline"             , "code" : "il"  }
+      , { "name" : "inline-block"       , "code" : "ib"  }
+      , { "name" : "flex"               , "code" : "fx"  , "use" : ".flexbox()" }
+      , { "name" : "list-item"          , "code" : "li"  }
+      , { "name" : "table"              , "code" : "tb"  }
+      , { "name" : "table-row"          , "code" : "tr"  }
+      , { "name" : "table-column"       , "code" : "tl"  }
+      , { "name" : "table-cell"         , "code" : "tc"  }
+      , { "name" : "table-row-group"    , "code" : "trg" }
+      , { "name" : "table-header-group" , "code" : "thg" }
+      , { "name" : "table-footer-group" , "code" : "tfg" }
+      , { "name" : "table-column-group" , "code" : "tlg" }
+      ]
+    , "media": {
+        "screen" : true
+      , "small"  : true
+      , "medium" : true
+      , "large"  : true
+      , "xlarge" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "position"
+    , "code": "ps"
+    , "summary": "Sets the position of box rendered."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/position"
+    , "initial": "static"
+    , "inherited": false
+    , "values": [
+        { "name" : "static"   , "code" : "s" }
+      , { "name" : "relative" , "code" : "r" }
+      , { "name" : "absolute" , "code" : "a" }
+      , { "name" : "fixed"    , "code" : "f" }
+      , { "name" : "sticky"   , "code" : "k" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "float"
+    , "code": "fl"
+    , "summary": "Floats the box in content."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/float"
+    , "initial": "none"
+    , "inherited": false
+    , "values": [
+        { "name" : "none"  , "code" : "n" }
+      , { "name" : "left"  , "code" : "l" }
+      , { "name" : "right" , "code" : "r" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "clear"
+    , "code": "cl"
+    , "summary": "Specifies positioning next to floating elements."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/clear"
+    , "initial": "none"
+    , "inherited": false
+    , "values": [
+        { "name" : "none"  , "code" : "n" }
+      , { "name" : "left"  , "code" : "l" }
+      , { "name" : "right" , "code" : "r" }
+      , { "name" : "both"  , "code" : "b" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "z-index"
+    , "code": "z"
+    , "summary": "Defines the z-order of an element and descendants. Z-order is defined as the order of elements in the direction perpendicular to the screen."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/z-index"
+    , "initial": "auto"
+    , "inherited": false
+    , "values": [
+        { "name" : "auto" , "code" : "a"  }
+      , { "name" : "0"    , "code" : "0"  }
+      , { "name" : "1"    , "code" : "1"  }
+      , { "name" : "2"    , "code" : "2"  }
+      , { "name" : "3"    , "code" : "3"  }
+      , { "name" : "4"    , "code" : "4"  }
+      , { "name" : "5"    , "code" : "5"  }
+      , { "name" : "6"    , "code" : "6"  }
+      , { "name" : "7"    , "code" : "7"  }
+      , { "name" : "-1"   , "code" : "-1" }
+      , { "name" : "-2"   , "code" : "-2" }
+      , { "name" : "-3"   , "code" : "-3" }
+      , { "name" : "-4"   , "code" : "-4" }
+      , { "name" : "-5"   , "code" : "-5" }
+      , { "name" : "-6"   , "code" : "-6" }
+      , { "name" : "-7"   , "code" : "-7" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "vertical-align"
+    , "code": "va"
+    , "summary": "Vertically aligns text in an inline or table-cell box."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align"
+    , "initial": "baseline"
+    , "inherited": false
+    , "values": [
+        { "name" : "baseline"    , "code" : "a"  }
+      , { "name" : "bottom"      , "code" : "b"  }
+      , { "name" : "middle"      , "code" : "m"  }
+      , { "name" : "top"         , "code" : "t"  }
+      , { "name" : "text-bottom" , "code" : "tb" }
+      , { "name" : "text-top"    , "code" : "tt" }
+      , { "name" : "sub"         , "code" : "sb" }
+      , { "name" : "super"       , "code" : "st" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "flex-direction"
+    , "code": "xd"
+    , "summary": "Specifies how flex items are placed in the flex container."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction"
+    , "initial": "row"
+    , "inherited": false
+    , "values": [
+        { "name" : "initial"        ,                 "use" : ".flex-direction(initial)"        }
+      , { "name" : "inherit"        ,                 "use" : ".flex-direction(inherit)"        }
+      , { "name" : "row"            , "code" : "r"  , "use" : ".flex-direction(row)"            }
+      , { "name" : "column"         , "code" : "c"  , "use" : ".flex-direction(column)"         }
+      , { "name" : "row-reverse"    , "code" : "rr" , "use" : ".flex-direction(row-reverse)"    }
+      , { "name" : "column-reverse" , "code" : "cr" , "use" : ".flex-direction(column-reverse)" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "flex-wrap"
+    , "code": "xw"
+    , "summary": "Determines whether boxes wrap to the next row or column."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap"
+    , "initial": "nowrap"
+    , "inherited": false
+    , "values": [
+        { "name" : "initial"      ,                "use" : ".flex-wrap(initial)"      }
+      , { "name" : "inherit"      ,                "use" : ".flex-wrap(inherit)"      }
+      , { "name" : "nowrap"       , "code" : "n" , "use" : ".flex-wrap(nowrap)"       }
+      , { "name" : "wrap"         , "code" : "c" , "use" : ".flex-wrap(wrap)"         }
+      , { "name" : "wrap-reverse" , "code" : "w" , "use" : ".flex-wrap(wrap-reverse)" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "justify-content"
+    , "code": "xj"
+    , "summary": "Defines how the browser distributes space between and around flex items along the main-axis of their container."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content"
+    , "initial": "flex-start"
+    , "inherited": false
+    , "values": [
+        { "name" : "initial"       ,                 "use" : ".flex-justify-content(initial)"       }
+      , { "name" : "inherit"       ,                 "use" : ".flex-justify-content(inherit)"       }
+      , { "name" : "flex-start"    , "code" : "xs" , "use" : ".flex-justify-content(flex-start)"    }
+      , { "name" : "flex-end"      , "code" : "xe" , "use" : ".flex-justify-content(flex-end)"      }
+      , { "name" : "center"        , "code" : "c"  , "use" : ".flex-justify-content(center)"        }
+      , { "name" : "space-between" , "code" : "sb" , "use" : ".flex-justify-content(space-between)" }
+      , { "name" : "space-around"  , "code" : "sa" , "use" : ".flex-justify-content(space-around)"  }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "align-content"
+    , "code": "xc"
+    , "summary": "Aligns a flex container’s lines when there is empty space in the cross-axis."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/align-content"
+    , "initial": "stretch"
+    , "inherited": false
+    , "values": [
+        { "name" : "initial"       ,                 "use" : ".flex-align-content(initial)"       }
+      , { "name" : "inherit"       ,                 "use" : ".flex-align-content(inherit)"       }
+      , { "name" : "stretch"       , "code" : "s"  , "use" : ".flex-align-content(stretch)"       }
+      , { "name" : "flex-start"    , "code" : "xs" , "use" : ".flex-align-content(flex-start)"    }
+      , { "name" : "flex-end"      , "code" : "xe" , "use" : ".flex-align-content(flex-end)"      }
+      , { "name" : "center"        , "code" : "c"  , "use" : ".flex-align-content(center)"        }
+      , { "name" : "space-between" , "code" : "sa" , "use" : ".flex-align-content(space-between)" }
+      , { "name" : "space-around"  , "code" : "sa" , "use" : ".flex-align-content(space-around)"  }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "align-items"
+    , "code": "xi"
+    , "summary": "Defines default behavior for aligining flex items along cross-axis."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/align-items"
+    , "initial": "stretch"
+    , "inherited": false
+    , "values": [
+        { "name" : "initial"    ,                 "use" : ".flex-align-items(initial)"    }
+      , { "name" : "inherit"    ,                 "use" : ".flex-align-items(inherit)"    }
+      , { "name" : "stretch"    , "code" : "s"  , "use" : ".flex-align-items(stretch)"    }
+      , { "name" : "flex-start" , "code" : "xs" , "use" : ".flex-align-items(flex-start)" }
+      , { "name" : "flex-end"   , "code" : "xe" , "use" : ".flex-align-items(flex-end)"   }
+      , { "name" : "center"     , "code" : "c"  , "use" : ".flex-align-items(center)"     }
+      , { "name" : "baseline"   , "code" : "b"  , "use" : ".flex-align-items(baseline)"   }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "align-self"
+    , "code": "xs"
+    , "summary": "Overrides behavior of `align-items` for aligining one specific flex item along cross-axis."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/align-self"
+    , "initial": "auto"
+    , "inherited": false
+    , "values": [
+        { "name" : "initial"    ,                 "use" : ".flex-align-items(initial)"    }
+      , { "name" : "inherit"    ,                 "use" : ".flex-align-items(inherit)"    }
+      , { "name" : "auto"       , "code" : "a"  , "use" : ".flex-align-items(auto)"       }
+      , { "name" : "stretch"    , "code" : "s"  , "use" : ".flex-align-items(stretch)"    }
+      , { "name" : "flex-start" , "code" : "xs" , "use" : ".flex-align-items(flex-start)" }
+      , { "name" : "flex-end"   , "code" : "xe" , "use" : ".flex-align-items(flex-end)"   }
+      , { "name" : "center"     , "code" : "c"  , "use" : ".flex-align-items(center)"     }
+      , { "name" : "baseline"   , "code" : "b"  , "use" : ".flex-align-items(baseline)"   }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "order"
+    , "code": "xo"
+    , "summary": "Specifies the order used to lay out flex items."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/order"
+    , "initial": "0"
+    , "inherited": false
+    , "values": [
+        { "name" : "initial" ,                 "use" : ".flex-order(initial)" }
+      , { "name" : "inherit" ,                 "use" : ".flex-order(inherit)" }
+      , { "name" : "0"       , "code" : "0"  , "use" : ".flex-order(0)"       }
+      , { "name" : "1"       , "code" : "1"  , "use" : ".flex-order(1)"       }
+      , { "name" : "2"       , "code" : "2"  , "use" : ".flex-order(2)"       }
+      , { "name" : "3"       , "code" : "3"  , "use" : ".flex-order(3)"       }
+      , { "name" : "4"       , "code" : "4"  , "use" : ".flex-order(4)"       }
+      , { "name" : "5"       , "code" : "5"  , "use" : ".flex-order(5)"       }
+      , { "name" : "6"       , "code" : "6"  , "use" : ".flex-order(6)"       }
+      , { "name" : "7"       , "code" : "7"  , "use" : ".flex-order(7)"       }
+      , { "name" : "-1"      , "code" : "-1" , "use" : ".flex-order(-1)"      }
+      , { "name" : "-2"      , "code" : "-2" , "use" : ".flex-order(-2)"      }
+      , { "name" : "-3"      , "code" : "-3" , "use" : ".flex-order(-3)"      }
+      , { "name" : "-4"      , "code" : "-4" , "use" : ".flex-order(-4)"      }
+      , { "name" : "-5"      , "code" : "-5" , "use" : ".flex-order(-5)"      }
+      , { "name" : "-6"      , "code" : "-6" , "use" : ".flex-order(-6)"      }
+      , { "name" : "-7"      , "code" : "-7" , "use" : ".flex-order(-7)"      }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "box-sizing"
+    , "code": "b"
+    , "summary": "Alters the CSS box model used to calculate width and height."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing"
+    , "initial": "content-box"
+    , "inherited": false
+    , "values": [
+        { "name" : "initial"     ,                 "use" : ".box-sizing(initial)"     }
+      , { "name" : "inherit"     ,                 "use" : ".box-sizing(inherit)"     }
+      , { "name" : "content-box" , "code" : "c"  , "use" : ".box-sizing(content-box)" }
+      , { "name" : "border-box"  , "code" : "b"  , "use" : ".box-sizing(border-box)"  }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "width"
+    , "code": "w"
+    , "summary": "Sets the width of an element."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/width"
+    , "initial": "auto"
+    , "inherited": false
+    , "values": [
+        { "name" : "auto" , "code" : "a" }
+      , { "name" :   "0"  , "code" : "z" }
+      , { "name" : "100%" , "code" : "1o1"   , "use" : "( 1/ 1) * 100%" }
+      , { "name" :  "50%" , "code" : "1o2"   , "use" : "( 1/ 2) * 100%" }
+      , { "name" : "100%" , "code" : "2o2"   , "use" : "( 2/ 2) * 100%" }
+      , { "name" :  "33%" , "code" : "1o3"   , "use" : "( 1/ 3) * 100%" }
+      , { "name" :  "67%" , "code" : "2o3"   , "use" : "( 2/ 3) * 100%" }
+      , { "name" : "100%" , "code" : "3o3"   , "use" : "( 3/ 3) * 100%" }
+      , { "name" :  "25%" , "code" : "1o4"   , "use" : "( 1/ 4) * 100%" }
+      , { "name" :  "50%" , "code" : "2o4"   , "use" : "( 2/ 4) * 100%" }
+      , { "name" :  "75%" , "code" : "3o4"   , "use" : "( 3/ 4) * 100%" }
+      , { "name" : "100%" , "code" : "4o4"   , "use" : "( 4/ 4) * 100%" }
+      , { "name" :  "20%" , "code" : "1o5"   , "use" : "( 1/ 5) * 100%" }
+      , { "name" :  "40%" , "code" : "2o5"   , "use" : "( 2/ 5) * 100%" }
+      , { "name" :  "60%" , "code" : "3o5"   , "use" : "( 3/ 5) * 100%" }
+      , { "name" :  "80%" , "code" : "4o5"   , "use" : "( 4/ 5) * 100%" }
+      , { "name" : "100%" , "code" : "5o5"   , "use" : "( 5/ 5) * 100%" }
+      , { "name" :  "16%" , "code" : "1o6"   , "use" : "( 1/ 6) * 100%" }
+      , { "name" :  "33%" , "code" : "2o6"   , "use" : "( 2/ 6) * 100%" }
+      , { "name" :  "50%" , "code" : "3o6"   , "use" : "( 3/ 6) * 100%" }
+      , { "name" :  "67%" , "code" : "4o6"   , "use" : "( 4/ 6) * 100%" }
+      , { "name" :  "83%" , "code" : "5o6"   , "use" : "( 5/ 6) * 100%" }
+      , { "name" : "100%" , "code" : "6o6"   , "use" : "( 6/ 6) * 100%" }
+      , { "name" :  "13%" , "code" : "1o8"   , "use" : "( 1/ 8) * 100%" }
+      , { "name" :  "25%" , "code" : "2o8"   , "use" : "( 2/ 8) * 100%" }
+      , { "name" :  "38%" , "code" : "3o8"   , "use" : "( 3/ 8) * 100%" }
+      , { "name" :  "50%" , "code" : "4o8"   , "use" : "( 4/ 8) * 100%" }
+      , { "name" :  "63%" , "code" : "5o8"   , "use" : "( 5/ 8) * 100%" }
+      , { "name" :  "75%" , "code" : "6o8"   , "use" : "( 6/ 8) * 100%" }
+      , { "name" :  "88%" , "code" : "7o8"   , "use" : "( 7/ 8) * 100%" }
+      , { "name" : "100%" , "code" : "8o8"   , "use" : "( 8/ 8) * 100%" }
+      , { "name" :  "10%" , "code" : "1o10"  , "use" : "( 1/10) * 100%" }
+      , { "name" :  "20%" , "code" : "2o10"  , "use" : "( 2/10) * 100%" }
+      , { "name" :  "30%" , "code" : "3o10"  , "use" : "( 3/10) * 100%" }
+      , { "name" :  "40%" , "code" : "4o10"  , "use" : "( 4/10) * 100%" }
+      , { "name" :  "50%" , "code" : "5o10"  , "use" : "( 5/10) * 100%" }
+      , { "name" :  "60%" , "code" : "6o10"  , "use" : "( 6/10) * 100%" }
+      , { "name" :  "70%" , "code" : "7o10"  , "use" : "( 7/10) * 100%" }
+      , { "name" :  "80%" , "code" : "8o10"  , "use" : "( 8/10) * 100%" }
+      , { "name" :  "90%" , "code" : "9o10"  , "use" : "( 9/10) * 100%" }
+      , { "name" : "100%" , "code" : "10o10" , "use" : "(10/10) * 100%" }
+      , { "name" :   "96px" , "code" :   "96px" , "alt" :    "6em" }
+      , { "name" :  "192px" , "code" :  "192px" , "alt" :   "12em" }
+      , { "name" :  "288px" , "code" :  "288px" , "alt" :   "18em" }
+      , { "name" :  "384px" , "code" :  "384px" , "alt" :   "24em" }
+      , { "name" :  "480px" , "code" :  "480px" , "alt" :   "30em" }
+      , { "name" :  "576px" , "code" :  "576px" , "alt" :   "36em" }
+      , { "name" :  "672px" , "code" :  "672px" , "alt" :   "42em" }
+      , { "name" :  "768px" , "code" :  "768px" , "alt" :   "48em" }
+      , { "name" :  "864px" , "code" :  "864px" , "alt" :   "54em" }
+      , { "name" :  "960px" , "code" :  "960px" , "alt" :   "60em" }
+      , { "name" : "1056px" , "code" : "1056px" , "alt" :   "66em" }
+      , { "name" : "1152px" , "code" : "1152px" , "alt" :   "72em" }
+      , { "name" : "1248px" , "code" : "1248px" , "alt" :   "78em" }
+      , { "name" : "1344px" , "code" : "1344px" , "alt" :   "84em" }
+      , { "name" : "1440px" , "code" : "1440px" , "alt" :   "90em" }
+      , { "name" :    "5em" , "code" :    "5em" , "alt" :   "80px" }
+      , { "name" :   "10em" , "code" :   "10em" , "alt" :  "160px" }
+      , { "name" :   "15em" , "code" :   "15em" , "alt" :  "240px" }
+      , { "name" :   "20em" , "code" :   "20em" , "alt" :  "320px" }
+      , { "name" :   "25em" , "code" :   "25em" , "alt" :  "400px" }
+      , { "name" :   "30em" , "code" :   "30em" , "alt" :  "480px" }
+      , { "name" :   "35em" , "code" :   "35em" , "alt" :  "560px" }
+      , { "name" :   "40em" , "code" :   "40em" , "alt" :  "640px" }
+      , { "name" :   "45em" , "code" :   "45em" , "alt" :  "720px" }
+      , { "name" :   "50em" , "code" :   "50em" , "alt" :  "800px" }
+      , { "name" :   "55em" , "code" :   "55em" , "alt" :  "880px" }
+      , { "name" :   "60em" , "code" :   "60em" , "alt" :  "960px" }
+      , { "name" :   "65em" , "code" :   "65em" , "alt" : "1040px" }
+      , { "name" :   "70em" , "code" :   "70em" , "alt" : "1120px" }
+      , { "name" :   "75em" , "code" :   "75em" , "alt" : "1200px" }
+      , { "name" :   "80em" , "code" :   "80em" , "alt" : "1280px" }
+      , { "name" :   "85em" , "code" :   "85em" , "alt" : "1360px" }
+      , { "name" :   "90em" , "code" :   "90em" , "alt" : "1440px" }
+      ]
+    , "media": {
+        "screen": true
+      , "small" : true
+      , "medium": true
+      , "large" : true
+      , "xlarge": true
+      , "print" : true
+      }
+    }
+  , {
+      "name": "padding"
+    , "code": {
+        "left"       : "pl"
+      , "right"      : "pr"
+      , "top"        : "pt"
+      , "bottom"     : "pb"
+      , "horizontal" : "px"
+      , "vertical"   : "py"
+      , "all"        : "pa"
+      }
+    , "summary": "Sets the padding space on an element."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/padding"
+    , "initial": "0"
+    , "inherited": false
+    , "values": [
+        { "name" : "0"       , "code" : "z" }
+      , { "name" : "0.25rem" , "code" : "q" }
+      , { "name" : "0.5rem"  , "code" : "h" }
+      , { "name" : "1rem"    , "code" : "1" }
+      , { "name" : "2rem"    , "code" : "2" }
+      , { "name" : "4rem"    , "code" : "4" }
+      , { "name" : "8rem"    , "code" : "8" }
+      , { "name" : "16rem"   , "code" : "g" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "margin"
+    , "code": {
+        "left"       : "ml"
+      , "right"      : "mr"
+      , "top"        : "mt"
+      , "bottom"     : "mb"
+      , "horizontal" : "mx"
+      , "vertical"   : "my"
+      , "all"        : "ma"
+      }
+    , "summary": "Sets the margin space on an element."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/margin"
+    , "initial": "0"
+    , "inherited": false
+    , "values": [
+        { "name" : "0"       , "code" : "z" }
+      , { "name" : "0.25rem" , "code" : "q" }
+      , { "name" : "0.5rem"  , "code" : "h" }
+      , { "name" : "1rem"    , "code" : "1" }
+      , { "name" : "2rem"    , "code" : "2" }
+      , { "name" : "4rem"    , "code" : "4" }
+      , { "name" : "8rem"    , "code" : "8" }
+      , { "name" : "16rem"   , "code" : "g" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "font-style"
+    , "code": "fs"
+    , "summary": "Sets italics or oblique on the typeface."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-style"
+    , "initial": "normal"
+    , "inherited": true
+    , "values": [
+        { "name" : "normal" , "code" : "n" }
+      , { "name" : "italic" , "code" : "t" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      , "hover"  : true
+      }
+    }
+  , {
+      "name": "font-variant"
+    , "code": "fv"
+    , "summary": "Sets small capitals on the typeface."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant"
+    , "initial": "normal"
+    , "inherited": true
+    , "values": [
+        { "name" : "normal"     , "code" : "n" }
+      , { "name" : "small-caps" , "code" : "s" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      , "hover"  : true
+      }
+    }
+  , {
+      "name": "font-weight"
+    , "code": "fw"
+    , "summary": "Sets weight on the typeface."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight"
+    , "initial": "normal"
+    , "inherited": true
+    , "values": [
+        { "name" : "normal" , "code" : "n" }
+      , { "name" : "bold"   , "code" : "b" }
+      , { "name" : "100"    , "code" : "1" }
+      , { "name" : "200"    , "code" : "2" }
+      , { "name" : "300"    , "code" : "3" }
+      , { "name" : "400"    , "code" : "4" }
+      , { "name" : "500"    , "code" : "5" }
+      , { "name" : "600"    , "code" : "6" }
+      , { "name" : "700"    , "code" : "7" }
+      , { "name" : "800"    , "code" : "8" }
+      , { "name" : "900"    , "code" : "9" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      , "hover"  : true
+      }
+    }
+  , {
+      "name": "font-size"
+    , "code": "fz"
+    , "summary": "Sets the font size."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-size"
+    , "initial": "medium"
+    , "inherited": true
+    , "values": [
+        { "name" : "0"      , "code" : "z" }
+      , { "name" : "0.25em" , "code" : "q" }
+      , { "name" : "0.5em"  , "code" : "h" }
+      , { "name" : "1em"    , "code" : "1" }
+      , { "name" : "2em"    , "code" : "2" }
+      , { "name" : "4em"    , "code" : "4" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "font-family"
+    , "code": "ff"
+    , "summary": "Sets the typeface."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-family"
+    , "initial": ""
+    , "inherited": true
+    , "values": [
+        { "name" : "sans-serif" , "code" : "ss" }
+      , { "name" : "serif"      , "code" : "sf" }
+      , { "name" : "monospace"  , "code" : "ms" }
+      , { "name" : "fantasy"    , "code" : "fy" }
+      , { "name" : "cursive"    , "code" : "cs" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  ]
+}
