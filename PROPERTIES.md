@@ -407,11 +407,6 @@ NOTE: no support for any media queries
 
 
 ## Box Cosmetics
-### `box-shadow`
-```
-.-bs-n    none
-```
-
 ### `background-image`
 ```
 .-bi-n    none
@@ -461,6 +456,11 @@ NOTE: no support for any media queries
 .-bc-w    #ffffff
 
 -h        true
+```
+
+### `box-shadow`
+```
+.-bs-n    none
 ```
 
 ### `overflow`

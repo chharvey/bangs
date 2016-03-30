@@ -579,5 +579,125 @@
       , "print"  : true
       }
     }
+  , {
+      "name": "background-image"
+    , "code": "bi"
+    , "summary": "Sets the background image."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/background-image"
+    , "initial": "none"
+    , "inherited": false
+    , "values": [
+        { "name" : "none" , "code" : "n" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "background-size"
+    , "code": "bz"
+    , "summary": "Sets the size of the background image."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/background-size"
+    , "initial": "auto auto"
+    , "inherited": false
+    , "values": [
+        { "name" : "auto"    , "code" : "a" }
+      , { "name" : "contain" , "code" : "s" }
+      , { "name" : "cover"   , "code" : "l" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "background-repeat"
+    , "code": "br"
+    , "summary": "Defines how the background image repeats."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat"
+    , "initial": "repeat"
+    , "inherited": false
+    , "values": [
+        { "name" : "no-repeat" , "code" : "n" }
+      , { "name" : "repeat"    , "code" : "a" }
+      , { "name" : "repeat-x"  , "code" : "x" }
+      , { "name" : "repeat-y"  , "code" : "y" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "background-attachment"
+    , "code": "ba"
+    , "summary": "Sets how the background image is attached to the viewport."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment"
+    , "initial": "scroll"
+    , "inherited": false
+    , "values": [
+        { "name" : "scroll" , "code" : "s" }
+      , { "name" : "fixed"  , "code" : "f" }
+      , { "name" : "local"  , "code" : "l" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "background-origin"
+    , "code": "bo"
+    , "summary": "Sets the position of the origin of the background image."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin"
+    , "initial": "padding-box"
+    , "inherited": false
+    , "values": [
+        { "name" : "content-box" , "code" : "c" }
+      , { "name" : "padding-box" , "code" : "p" }
+      , { "name" : "border-box"  , "code" : "b" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "background-clip"
+    , "code": "bx"
+    , "summary": "Sets whether the background image/color extends beneath the padding/border."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip"
+    , "initial": "border-box"
+    , "inherited": false
+    , "values": [
+        { "name" : "content-box" , "code" : "c" }
+      , { "name" : "padding-box" , "code" : "p" }
+      , { "name" : "border-box"  , "code" : "b" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "background-color"
+    , "code": "bc"
+    , "summary": "Sets the background color."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/background-color"
+    , "initial": "transparent"
+    , "inherited": false
+    , "values": [
+        { "name" : "transparent"  , "code" : "t" }
+      , { "name" : "currentColor" , "code" : "c" }
+      , { "name" : "#000000"      , "code" : "b" }
+      , { "name" : "#ffffff"      , "code" : "w" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      , "hover"  : true
+      }
+    }
   ]
 }
