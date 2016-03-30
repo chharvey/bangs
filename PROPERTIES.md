@@ -92,40 +92,40 @@ This file lists information about each property and its supported values.
 
 ### `justify-content`
 ```
-.-xj-xs    flex-start
-.-xj-xe    flex-end
-.-xj-c     center
-.-xj-sb    space-between
-.-xj-sa    space-around
+.-xjc-xs    flex-start
+.-xjc-xe    flex-end
+.-xjc-c     center
+.-xjc-sb    space-between
+.-xjc-sa    space-around
 ```
 
 ### `align-content`
 ```
-.-xc-s     stretch
-.-xc-xs    flex-start
-.-xc-xe    flex-end
-.-xc-c     center
-.-xc-sb    space-between
-.-xc-sa    space-around
+.-xac-s     stretch
+.-xac-xs    flex-start
+.-xac-xe    flex-end
+.-xac-c     center
+.-xac-sb    space-between
+.-xac-sa    space-around
 ```
 
 ### `align-items`
 ```
-.-xi-s     stretch
-.-xi-xs    flex-start
-.-xi-xe    flex-end
-.-xi-c     center
-.-xi-b     baseline
+.-xai-s     stretch
+.-xai-xs    flex-start
+.-xai-xe    flex-end
+.-xai-c     center
+.-xai-b     baseline
 ```
 
 ### `align-self`
 ```
-.-xs-a     auto
-.-xs-s     stretch
-.-xs-xs    flex-start
-.-xs-xe    flex-end
-.-xs-c     center
-.-xs-b     baseline
+.-xas-a     auto
+.-xas-s     stretch
+.-xas-xs    flex-start
+.-xas-xe    flex-end
+.-xas-c     center
+.-xas-b     baseline
 ```
 
 ### `order`
