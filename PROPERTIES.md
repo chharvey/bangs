@@ -92,11 +92,11 @@ This file lists information about each property and its supported values.
 
 ### `justify-content`
 ```
-.-xj-xs    flex-start
-.-xj-xe    flex-end
-.-xj-c     center
-.-xj-sb    space-between
-.-xj-sa    space-around
+.-xjc-xs    flex-start
+.-xjc-xe    flex-end
+.-xjc-c     center
+.-xjc-sb    space-between
+.-xjc-sa    space-around
 ```
 
 ### `align-content`

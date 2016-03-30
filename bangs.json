@@ -195,7 +195,7 @@
     }
   , {
       "name": "justify-content"
-    , "code": "xj"
+    , "code": "xjc"
     , "summary": "Defines how the browser distributes space between and around flex items along the main-axis of their container."
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content"
     , "initial": "flex-start"
