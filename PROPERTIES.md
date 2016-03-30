@@ -412,6 +412,24 @@ NOTE: no support for any media queries
 .-bi-n    none
 ```
 
+### `background-position`
+```
+.-bp-l     left
+.-bp-r     right
+.-bp-c     center
+.-bp-t     top
+.-bp-b     bottom
+.-bp-lt    left   top
+.-bp-lc    left   center
+.-bp-lb    left   bottom
+.-bp-ct    center top
+.-bp-cc    center center
+.-bp-cb    center bottom
+.-bp-rt    right  top
+.-bp-rc    right  center
+.-bp-rb    right  bottom
+```
+
 ### `background-size`
 ```
 .-bz-a    auto

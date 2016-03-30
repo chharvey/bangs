@@ -595,6 +595,34 @@
       }
     }
   , {
+      "name": "background-position"
+    , "code": "bp"
+    , "summary": "Sets the position of the background image."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/background-position"
+    , "initial": "0% 0%"
+    , "inherited": false
+    , "values": [
+        { "name" : "left"            , "code" : "l"  }
+      , { "name" : "right"           , "code" : "r"  }
+      , { "name" : "center"          , "code" : "c"  }
+      , { "name" : "top"             , "code" : "t"  }
+      , { "name" : "bottom"          , "code" : "b"  }
+      , { "name" : "left   top   "   , "code" : "lt" }
+      , { "name" : "left   center"   , "code" : "lc" }
+      , { "name" : "left   bottom"   , "code" : "lb" }
+      , { "name" : "center top   "   , "code" : "ct" }
+      , { "name" : "center center"   , "code" : "cc" }
+      , { "name" : "center bottom"   , "code" : "cb" }
+      , { "name" : "right  top   "   , "code" : "rt" }
+      , { "name" : "right  center"   , "code" : "rc" }
+      , { "name" : "right  bottom"   , "code" : "rb" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
       "name": "background-size"
     , "code": "bz"
     , "summary": "Sets the size of the background image."
