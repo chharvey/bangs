@@ -156,8 +156,8 @@ This file lists information about each property and its supported values.
 ## Box Structure
 ### `box-sizing`
 ```
-.-b-c    content-box
-.-b-b    border-box
+.-xz-c    content-box
+.-xz-b    border-box
 ```
 
 ### `width`
