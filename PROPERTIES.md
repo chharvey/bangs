@@ -243,7 +243,7 @@ This file lists information about each property and its supported values.
 -sT    true
 ```
 
-### `padding-`
+### `padding-*`
 ```
 .-pl  .-pr  .-pt  .-pb  .-ph  .-pv  .-pa
 ```
@@ -259,7 +259,7 @@ This file lists information about each property and its supported values.
 -g    16rem
 ```
 
-### `margin-`
+### `margin-*`
 ```
 .-ml  .-mr  .-mt  .-mb  .-mh  .-mv  .-ma
 ```
@@ -405,9 +405,9 @@ This file lists information about each property and its supported values.
 ```
 (for `-before` or `-after`, respectively)
 ```
-.-a    auto
-.-t    always
-.-f    avoid
+-a    auto
+-t    always
+-f    avoid
 
 NOTE: no support for any media queries
 ```
