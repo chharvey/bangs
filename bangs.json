@@ -620,6 +620,32 @@
       }
     }
   , {
+      "name": "border-color"
+    , "code": {
+        "left"       : "rlc"
+      , "right"      : "rrc"
+      , "top"        : "rtc"
+      , "bottom"     : "rbc"
+      , "horizontal" : "rhc"
+      , "vertical"   : "rvc"
+      , "all"        : "rac"
+      }
+    , "summary": "Sets the color of the border on a side of an element."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/border-color"
+    , "initial": "currentColor"
+    , "inherited": false
+    , "values": [
+        { "name" : "transparent"  , "code" : "t" }
+      , { "name" : "currentColor" , "code" : "c" }
+      , { "name" : "#000000"      , "code" : "b" }
+      , { "name" : "#ffffff"      , "code" : "w" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
       "name": "background-image"
     , "code": "bi"
     , "summary": "Sets the background image."

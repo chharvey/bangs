@@ -432,6 +432,18 @@ NOTE: no support for any media queries
 -os    outset
 ```
 
+### `border-*-color`
+```
+.-rlc  .-rrc  .-rtc  .-rbc  .-rhc  .-rvc  .-rac
+```
+(for `-left`, `-right`, `-top`, `-bottom`, ‘horizontal’, ‘vertical’, or ‘all’, respectively)
+```
+-t    transparent
+-c    currentColor
+-b    #000000
+-w    #ffffff
+```
+
 ### `background-image`
 ```
 .-bi-n    none
