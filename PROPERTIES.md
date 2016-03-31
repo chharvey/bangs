@@ -468,9 +468,9 @@ NOTE: no support for any media queries
 
 ### `background-clip`
 ```
-.-bx-c    content-box
-.-bx-p    padding-box
-.-bx-b    border-box
+.-bk-c    content-box
+.-bk-p    padding-box
+.-bk-b    border-box
 ```
 
 ### `background-color`
