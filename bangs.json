@@ -735,5 +735,20 @@
       , "hover"  : true
       }
     }
+  , {
+      "name": "box-shadow"
+    , "code": "xs"
+    , "summary": "Describes one or more shadow effects on the frame of an element."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow"
+    , "initial": "none"
+    , "inherited": false
+    , "values": [
+        { "name" : "none" , "code" : "n" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
   ]
 }

@@ -485,7 +485,7 @@ NOTE: no support for any media queries
 
 ### `box-shadow`
 ```
-.-bs-n    none
+.-xs-n    none
 ```
 
 ### `overflow`
