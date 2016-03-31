@@ -447,6 +447,10 @@
       ]
     , "media": {
         "screen" : true
+      , "small"  : true
+      , "medium" : true
+      , "large"  : true
+      , "xlarge" : true
       , "print"  : true
       }
     }
