@@ -1,0 +1,185 @@
+
+/*################################*\
+    bangs  |  _border-color.less
+\*################################*/
+
+// Sets the color of the border on a side of an element.
+//
+// r*c  =  border-*-color
+//
+// l  =  left
+// r  =  right
+// t  =  top
+// b  =  bottom
+// h  =  horizontal
+// v  =  vertical
+// a  =  all
+//
+// 0   =  initial
+// i   =  inherit
+// t   =  transparent
+// c   =  currentColor
+// b   =  #000000
+// w   =  #ffffff
+//
+// ^initial
+// : `currentColor`
+// ^inherited
+// : false
+// ^url
+// : https://developer.mozilla.org/en-US/docs/Web/CSS/border-color
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2016-03-31
+
+.-rlc-0 { .-rlc-c; border-left-color:   initial      !important; }
+.-rlc-i {          border-left-color:   inherit      !important; }
+.-rlc-t {          border-left-color:   transparent  !important; }
+.-rlc-c {          border-left-color:   currentColor !important; }
+.-rlc-b {          border-left-color:   #000000      !important; }
+.-rlc-w {          border-left-color:   #ffffff      !important; }
+
+.-rrc-0 { .-rrc-c; border-right-color:  initial      !important; }
+.-rrc-i {          border-right-color:  inherit      !important; }
+.-rrc-t {          border-right-color:  transparent  !important; }
+.-rrc-c {          border-right-color:  currentColor !important; }
+.-rrc-b {          border-right-color:  #000000      !important; }
+.-rrc-w {          border-right-color:  #ffffff      !important; }
+
+.-rtc-0 { .-rtc-c; border-top-color:    initial      !important; }
+.-rtc-i {          border-top-color:    inherit      !important; }
+.-rtc-t {          border-top-color:    transparent  !important; }
+.-rtc-c {          border-top-color:    currentColor !important; }
+.-rtc-b {          border-top-color:    #000000      !important; }
+.-rtc-w {          border-top-color:    #ffffff      !important; }
+
+.-rbc-0 { .-rbc-c; border-bottom-color: initial      !important; }
+.-rbc-i {          border-bottom-color: inherit      !important; }
+.-rbc-t {          border-bottom-color: transparent  !important; }
+.-rbc-c {          border-bottom-color: currentColor !important; }
+.-rbc-b {          border-bottom-color: #000000      !important; }
+.-rbc-w {          border-bottom-color: #ffffff      !important; }
+
+.-rhc-0 { .-rlc-0; .-rrc-0; }
+.-rhc-i { .-rlc-i; .-rrc-i; }
+.-rhc-t { .-rlc-t; .-rrc-t; }
+.-rhc-c { .-rlc-c; .-rrc-c; }
+.-rhc-b { .-rlc-b; .-rrc-b; }
+.-rhc-w { .-rlc-w; .-rrc-w; }
+
+.-rvc-0 { .-rtc-0; .-rbc-0; }
+.-rvc-i { .-rtc-i; .-rbc-i; }
+.-rvc-t { .-rtc-t; .-rbc-t; }
+.-rvc-c { .-rtc-c; .-rbc-c; }
+.-rvc-b { .-rtc-b; .-rbc-b; }
+.-rvc-w { .-rtc-w; .-rbc-w; }
+
+.-rac-0 { .-rac-c; border-color:        initial      !important; }
+.-rac-i {          border-color:        inherit      !important; }
+.-rac-t {          border-color:        transparent  !important; }
+.-rac-c {          border-color:        currentColor !important; }
+.-rac-b {          border-color:        #000000      !important; }
+.-rac-w {          border-color:        #ffffff      !important; }
+
+@media screen {
+  .-rlc-0-s { .-rlc-0; }
+  .-rlc-i-s { .-rlc-i; }
+  .-rlc-t-s { .-rlc-t; }
+  .-rlc-c-s { .-rlc-c; }
+  .-rlc-b-s { .-rlc-b; }
+  .-rlc-w-s { .-rlc-w; }
+
+  .-rrc-0-s { .-rrc-0; }
+  .-rrc-i-s { .-rrc-i; }
+  .-rrc-t-s { .-rrc-t; }
+  .-rrc-c-s { .-rrc-c; }
+  .-rrc-b-s { .-rrc-b; }
+  .-rrc-w-s { .-rrc-w; }
+
+  .-rtc-0-s { .-rtc-0; }
+  .-rtc-i-s { .-rtc-i; }
+  .-rtc-t-s { .-rtc-t; }
+  .-rtc-c-s { .-rtc-c; }
+  .-rtc-b-s { .-rtc-b; }
+  .-rtc-w-s { .-rtc-w; }
+
+  .-rbc-0-s { .-rbc-0; }
+  .-rbc-i-s { .-rbc-i; }
+  .-rbc-t-s { .-rbc-t; }
+  .-rbc-c-s { .-rbc-c; }
+  .-rbc-b-s { .-rbc-b; }
+  .-rbc-w-s { .-rbc-w; }
+
+  .-rhc-0-s { .-rhc-0; }
+  .-rhc-i-s { .-rhc-i; }
+  .-rhc-t-s { .-rhc-t; }
+  .-rhc-c-s { .-rhc-c; }
+  .-rhc-b-s { .-rhc-b; }
+  .-rhc-w-s { .-rhc-w; }
+
+  .-rvc-0-s { .-rvc-0; }
+  .-rvc-i-s { .-rvc-i; }
+  .-rvc-t-s { .-rvc-t; }
+  .-rvc-c-s { .-rvc-c; }
+  .-rvc-b-s { .-rvc-b; }
+  .-rvc-w-s { .-rvc-w; }
+
+  .-rac-0-s { .-rac-0; }
+  .-rac-i-s { .-rac-i; }
+  .-rac-t-s { .-rac-t; }
+  .-rac-c-s { .-rac-c; }
+  .-rac-b-s { .-rac-b; }
+  .-rac-w-s { .-rac-w; }
+}
+
+@media print {
+  .-rlc-0-p { .-rlc-0; }
+  .-rlc-i-p { .-rlc-i; }
+  .-rlc-t-p { .-rlc-t; }
+  .-rlc-c-p { .-rlc-c; }
+  .-rlc-b-p { .-rlc-b; }
+  .-rlc-w-p { .-rlc-w; }
+
+  .-rrc-0-p { .-rrc-0; }
+  .-rrc-i-p { .-rrc-i; }
+  .-rrc-t-p { .-rrc-t; }
+  .-rrc-c-p { .-rrc-c; }
+  .-rrc-b-p { .-rrc-b; }
+  .-rrc-w-p { .-rrc-w; }
+
+  .-rtc-0-p { .-rtc-0; }
+  .-rtc-i-p { .-rtc-i; }
+  .-rtc-t-p { .-rtc-t; }
+  .-rtc-c-p { .-rtc-c; }
+  .-rtc-b-p { .-rtc-b; }
+  .-rtc-w-p { .-rtc-w; }
+
+  .-rbc-0-p { .-rbc-0; }
+  .-rbc-i-p { .-rbc-i; }
+  .-rbc-t-p { .-rbc-t; }
+  .-rbc-c-p { .-rbc-c; }
+  .-rbc-b-p { .-rbc-b; }
+  .-rbc-w-p { .-rbc-w; }
+
+  .-rhc-0-p { .-rhc-0; }
+  .-rhc-i-p { .-rhc-i; }
+  .-rhc-t-p { .-rhc-t; }
+  .-rhc-c-p { .-rhc-c; }
+  .-rhc-b-p { .-rhc-b; }
+  .-rhc-w-p { .-rhc-w; }
+
+  .-rvc-0-p { .-rvc-0; }
+  .-rvc-i-p { .-rvc-i; }
+  .-rvc-t-p { .-rvc-t; }
+  .-rvc-c-p { .-rvc-c; }
+  .-rvc-b-p { .-rvc-b; }
+  .-rvc-w-p { .-rvc-w; }
+
+  .-rac-0-p { .-rac-0; }
+  .-rac-i-p { .-rac-i; }
+  .-rac-t-p { .-rac-t; }
+  .-rac-c-p { .-rac-c; }
+  .-rac-b-p { .-rac-b; }
+  .-rac-w-p { .-rac-w; }
+}
