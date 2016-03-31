@@ -414,6 +414,24 @@ NOTE: no support for any media queries
 
 
 ## Box Cosmetics
+### `border-*-style`
+```
+.-rls  .-rrs  .-rts  .-rbs  .-rhs  .-rvs  .-ras
+```
+(for `-left`, `-right`, `-top`, `-bottom`, ‘horizontal’, ‘vertical’, or ‘all’, respectively)
+```
+-n     none
+-h     hidden
+-s     solid
+-do    dotted
+-da    dashed
+-db    double
+-gv    groove
+-rg    ridge
+-is    inset
+-os    outset
+```
+
 ### `background-image`
 ```
 .-bi-n    none

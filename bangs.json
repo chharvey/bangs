@@ -588,6 +588,38 @@
       }
     }
   , {
+      "name": "border-style"
+    , "code": {
+        "left"       : "rls"
+      , "right"      : "rrs"
+      , "top"        : "rts"
+      , "bottom"     : "rbs"
+      , "horizontal" : "rhs"
+      , "vertical"   : "rvs"
+      , "all"        : "ras"
+      }
+    , "summary": "Sets the line style of the border on a side of an element."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/border-style"
+    , "initial": "none"
+    , "inherited": false
+    , "values": [
+        { "name" : "none"   , "code" : "n"  }
+      , { "name" : "hidden" , "code" : "h"  }
+      , { "name" : "solid"  , "code" : "s"  }
+      , { "name" : "dotted" , "code" : "do" }
+      , { "name" : "dashed" , "code" : "da" }
+      , { "name" : "double" , "code" : "db" }
+      , { "name" : "groove" , "code" : "gv" }
+      , { "name" : "ridge"  , "code" : "rg" }
+      , { "name" : "inset"  , "code" : "is" }
+      , { "name" : "outset" , "code" : "os" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
       "name": "background-image"
     , "code": "bi"
     , "summary": "Sets the background image."
