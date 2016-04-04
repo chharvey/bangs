@@ -8,6 +8,7 @@ the suffix | stands for a written value of
 ---------- | -----------------------------
 `-i`       | `inherit` (available for all properties)
 `-0`       | `initial` (available for all properties)<sup>&lowast;</sup>
+`-u`       | `unset`   (**reserved; not supported yet**)
 `-n`       | `normal` or `none`, if applicable<sup>&dagger;</sup>
 `-a`       | `auto`, if applicable
 `-z`       | `0`, if applicable
