@@ -558,7 +558,7 @@ NOTE: no support for any media queries
 ```
 .-tt-n    none
 .-tt-c    capitalize
-.-tt-u    uppercase
+.-tt-h    uppercase
 .-tt-l    lowercase
 
 -h        true
