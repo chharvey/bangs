@@ -14,11 +14,11 @@ Inspired by
   @media print {
     .-ff-ss-p { font-family: sans-serif !important; }
   }
-  .-td-u-h:hover { text-decoration: underline !important; }
+  .-td-ul-h:hover { text-decoration: underline !important; }
 </style>
 <p class="-fw-b">friends with benefits</p>
 <p class="-ff-ss-p">fast forward slightly slower please</p>
-<p class="-td-u-h">tabulate data using hyphens</p>
+<p class="-td-ul-h">tabulate data using large hyphens</p>
 ```
 
 ## Usage
@@ -42,7 +42,7 @@ no logical reason at all. Think of them as alternatives to inline styles.
 - Some bangs provide fallbacks and multiple browser vendor prefixes (such as `initial` and `box-sizing` respectively).
 - Inline styles can’t be applied in media queries. `class="-ff-ss-p"` says,
   “font-family sans-serif on print only.”
-- Inline styles don’t have pseudo-classes. `class="-td-u-h"` says,
+- Inline styles don’t have pseudo-classes. `class="-td-ul-h"` says,
   “text-decoration underline on hover only.”
 
 ### Use Bangs in Markup Only!

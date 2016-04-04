@@ -8,6 +8,7 @@ the suffix | stands for a written value of
 ---------- | -----------------------------
 `-i`       | `inherit` (available for all properties)
 `-0`       | `initial` (available for all properties)<sup>&lowast;</sup>
+`-u`       | `unset`   (**reserved; not supported yet**)
 `-n`       | `normal` or `none`, if applicable<sup>&dagger;</sup>
 `-a`       | `auto`, if applicable
 `-z`       | `0`, if applicable
@@ -58,7 +59,7 @@ no appendage | all media queries                                 | all propertie
 `-sT`        | `@media screen and (min-width: 75em)` (x-large+)  | display, order, width, padding, margin
 `-sP`        | `@media screen and (min-width: 90em)` (xx-large+) | none so far
 `-p`         | `@media print`                                    | all properties
-`-h`         | pseudo-classes `:hover` and `:focus`              | font-[style&#x007c;variant&#x007c;weight], background-color, opacity, text-transform, color
+`-h`         | pseudo-classes `:hover` and `:focus`              | font-[style&#x007c;variant&#x007c;weight], background-color, opacity, text-[transform&#x007c;decoration], color
 
 ## Examples
 

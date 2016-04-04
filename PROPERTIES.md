@@ -558,7 +558,7 @@ NOTE: no support for any media queries
 ```
 .-tt-n    none
 .-tt-c    capitalize
-.-tt-u    uppercase
+.-tt-h    uppercase
 .-tt-l    lowercase
 
 -h        true
@@ -566,10 +566,10 @@ NOTE: no support for any media queries
 
 ### `text-decoration`
 ```
-.-td-n    none
-.-td-u    underline
-.-td-o    overline
-.-td-s    line-through
+.-td-n     none
+.-td-ul    underline
+.-td-ol    overline
+.-td-lt    line-through
 
 -h        true
 ```
