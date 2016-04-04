@@ -286,6 +286,11 @@ This file lists information about each property and its supported values.
 --4    -4rem
 --8    -8rem
 --g    -16rem
+
+-sK    true
+-sM    true
+-sG    true
+-sT    true
 ```
 
 
