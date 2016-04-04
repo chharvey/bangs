@@ -566,10 +566,10 @@ NOTE: no support for any media queries
 
 ### `text-decoration`
 ```
-.-td-n    none
-.-td-u    underline
-.-td-o    overline
-.-td-s    line-through
+.-td-n     none
+.-td-ul    underline
+.-td-ol    overline
+.-td-lt    line-through
 
 -h        true
 ```
