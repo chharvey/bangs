@@ -17,6 +17,11 @@ has bangs that use the corresponding suffixes.
 For example, the classes `.-d-0` and `.-d-i` have `display: initial;` and `display: inherit;` respectively.
 These classes and such classes for all properties are not listed for brevity.
 
+Note that due to currently narrow support for the value `initial`, every class `-0` has a fallback,
+which corresponds to the CSS-specified initial value for that property.
+For example `.-d-0` is defined as `{display: inline; display: initial;}` because
+`inline` is the CSS-specified initial value for `display`.
+
 ### Footnotes
 
 <sup>&lowast;</sup>The suffix for the value `initial` might be a little misleading, because the

@@ -1,5 +1,5 @@
-# bangs
-Bangs are unopinionated, single-responsibility CSS class selectors marked with `!important`.
+# Bangs!
+Bangs! are unopinionated, single-responsibility CSS class selectors marked with `!important`.
 Inspired by
 [Atoms](http://acss.io/),
 [Tachyons](http://tachyons.io/),
@@ -23,11 +23,11 @@ Inspired by
 
 ## Usage
 
-Use bang classes when you would say,
+Use a bang class when you would say,
 
 > I want this to look just like a \_\_\_\_\_ component except with a different \_\_\_\_\_.
 
-Bangs are very specific classes used for creating anomalies or fixing broken styles.
+Bang classes are very specific classes used for creating anomalies or fixing broken styles.
 They are the end-all-be-all rules that always win, no matter what.
 Add a bang to an HTML element’s `[class]` attribute
 when you need a quick fix, override, or when you simply need to style it differently for
@@ -35,11 +35,11 @@ no logical reason at all. Think of them as alternatives to inline styles.
 
 ### Why Not Inline Styles?
 
-- Inline styles are way more specific (even more than `!important`) and thus harder to override.
+- <del>Inline styles are way more specific than class selectors and thus harder to override.</del> <ins>Each bang class has `!important` though, which trumps inline specificity so never mind.</ins>
 - Inline styles are much more verbose. Would you rather write
   `style="font-weight: bold !important;"` or `class="-fw-b"`?
   In fact, most likely, the `class` attribute is already present, so you’re really just adding one more class.
-  Also, bangs become especially helpful for when you need fallbacks and multiple browser vendor prefixes.
+- Some bangs provide fallbacks and multiple browser vendor prefixes (such as `initial` and `box-sizing` respectively).
 - Inline styles can’t be applied in media queries. `class="-ff-ss-p"` says,
   “font-family sans-serif on print only.”
 - Inline styles don’t have pseudo-classes. `class="-td-u-h"` says,
@@ -52,13 +52,26 @@ If you use a CSS preprocessor, do *not* use bangs when building your CSS codebas
 making bigger objects/components. Bangs are very specific, localized, and explicit. So rather than
 living at the foundation of your codebase, they’re right there at the very tippy top.
 
-Bangs should be applied last, after all your other stylesheets, whether you’re using
+Bangs! should be applied last, after all your other stylesheets, whether you’re using
 `<link rel="stylesheet" href="bangs.css"/>` in your HTML or `@import url('bangs.css');` in your CSS.
 Use bang classes in the HTML `[class]` attribute only.
 
 Now, there is some debate as to whether you should use *only* bangs in your markup and
 no other classes at all. You can read my philosophical thoughts about this
 [here (link pending)].
+
+## Using Bangs! on Your Own Site
+Locally
+```
+$ npm install bangs
+```
+```html
+<link rel="stylesheet" href="/node_modules/bangs/bangs[.min].css"/>
+```
+Remotely (from a CDN)
+```html
+<link rel="stylesheet" href="https://raw.githubusercontent.com/chharvey/bangs/gh-pages/bangs[.min].css"/>
+```
 
 ## Syntax
 
@@ -77,9 +90,9 @@ Where:
 
 Read [the docs](DOC.md) for more info.
 
-## Developing with Bangs
+## Developing with Bangs!
 
-Feel free to download Bangs and expand or modify it to fit your own needs.
+Feel free to download Bangs! and expand or modify it to fit your own needs.
 
     $ npm install --save-dev bangs
 
