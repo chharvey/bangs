@@ -68,9 +68,9 @@ $ npm install bangs
 ```html
 <link rel="stylesheet" href="/node_modules/bangs/bangs[.min].css"/>
 ```
-Remotely (from a CDN)
+Remotely (from a CDN; not recommended)
 ```html
-<link rel="stylesheet" href="https://raw.githubusercontent.com/chharvey/bangs/gh-pages/bangs[.min].css"/>
+<link rel="stylesheet" href="https://raw.githubusercontent.com/chharvey/bangs/master/bangs[.min].css"/>
 ```
 
 ## Syntax
