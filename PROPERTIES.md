@@ -28,6 +28,30 @@ This file lists information about each property and its supported values.
 .-ps-k    sticky
 ```
 
+### `left`
+```
+.-l-a    auto
+.-l-z    0
+```
+
+### `right`
+```
+.-r-a    auto
+.-r-z    0
+```
+
+### `top`
+```
+.-t-a    auto
+.-t-z    0
+```
+
+### `bottom`
+```
+.-b-a    auto
+.-b-z    0
+```
+
 ### `float`
 ```
 .-fl-n    none

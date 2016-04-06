@@ -69,6 +69,70 @@
       }
     }
   , {
+      "name": "left"
+    , "code": "l"
+    , "summary": "Specifies how far to position an element from the left."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/left"
+    , "initial": "auto"
+    , "inherited": false
+    , "values": [
+        { "name" : "auto" , "code" : "a" }
+      , { "name" : "0"    , "code" : "z" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "right"
+    , "code": "r"
+    , "summary": "Specifies how far to position an element from the right."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/right"
+    , "initial": "auto"
+    , "inherited": false
+    , "values": [
+        { "name" : "auto" , "code" : "a" }
+      , { "name" : "0"    , "code" : "z" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "top"
+    , "code": "t"
+    , "summary": "Specifies how far to position an element from the top."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/top"
+    , "initial": "auto"
+    , "inherited": false
+    , "values": [
+        { "name" : "auto" , "code" : "a" }
+      , { "name" : "0"    , "code" : "z" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "bottom"
+    , "code": "b"
+    , "summary": "Specifies how far to position an element from the bottom."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/bottom"
+    , "initial": "auto"
+    , "inherited": false
+    , "values": [
+        { "name" : "auto" , "code" : "a" }
+      , { "name" : "0"    , "code" : "z" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
       "name": "float"
     , "code": "fl"
     , "summary": "Floats the box in content."
