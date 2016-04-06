@@ -8,14 +8,20 @@ the suffix | stands for a written value of
 ---------- | -----------------------------
 `-i`       | `inherit` (available for all properties)
 `-0`       | `initial` (available for all properties)<sup>&lowast;</sup>
+`-u`       | `unset`   (**reserved; not supported yet**)
 `-n`       | `normal` or `none`, if applicable<sup>&dagger;</sup>
 `-a`       | `auto`, if applicable
 `-z`       | `0`, if applicable
 
 Every property has support for the values `initial` and `inherit`. Therefore each set of classes
-has bangs that uses the corresponding suffixes.
+has bangs that use the corresponding suffixes.
 For example, the classes `.-d-0` and `.-d-i` have `display: initial;` and `display: inherit;` respectively.
 These classes and such classes for all properties are not listed for brevity.
+
+Note that due to currently narrow support for the value `initial`, every class `-0` has a fallback,
+which corresponds to the CSS-specified initial value for that property.
+For example `.-d-0` is defined as `{display: inline; display: initial;}` because
+`inline` is the CSS-specified initial value for `display`.
 
 ### Footnotes
 
@@ -40,19 +46,20 @@ property does have both values, I will then need to adjust the syntax.
 By default, all bangs work in all media types. Additionally, each bang supports the
 `screen` and `print` media queries.
 Even further, there are more sets of classes that provide support for
-additional media queries and hover/focus, and these are mentioned on a per-property basis below.
+additional media queries and hover/focus, and these are mentioned on a per-property basis below
+and on [the full list](PROPERTIES.md) (with the keyword `true`).
 
 appendage    | meaning                                           | property support
 ---------    | -------                                           | ----------------
 no appendage | all media queries                                 | all properties
 `-s`         | `@media screen`                                   | all properties
-`-sK`        | `@media screen and (min-width: 30em)` (small+)    | display, order, width
-`-sM`        | `@media screen and (min-width: 45em)` (medium+)   | display, order, width
-`-sG`        | `@media screen and (min-width: 60em)` (large+)    | display, order, width
-`-sT`        | `@media screen and (min-width: 75em)` (x-large+)  | display, order, width
-`-sP`        | `@media screen and (min-width: 90em)` (xx-large+) | ?
+`-sK`        | `@media screen and (min-width: 30em)` (small+)    | display, order, width, padding, margin
+`-sM`        | `@media screen and (min-width: 45em)` (medium+)   | display, order, width, padding, margin
+`-sG`        | `@media screen and (min-width: 60em)` (large+)    | display, order, width, padding, margin
+`-sT`        | `@media screen and (min-width: 75em)` (x-large+)  | display, order, width, padding, margin
+`-sP`        | `@media screen and (min-width: 90em)` (xx-large+) | none so far
 `-p`         | `@media print`                                    | all properties
-`-h`         | pseudo-classes `:hover` and `:focus`              | font-[style&#x007c;variant&#x007c;weight], background-color, opacity, text-transform, color
+`-h`         | pseudo-classes `:hover` and `:focus`              | font-[style&#x007c;variant&#x007c;weight], background-color, opacity, text-[transform&#x007c;decoration], color
 
 ## Examples
 

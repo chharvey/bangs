@@ -1,13 +1,13 @@
-@import (reference) url('../node_modules/xmeter/src/__tool.fallback.flexbox.less');
 
 /*################################*\
     bangs  |  _align-content.less
 \*################################*/
+@import (reference) url('../node_modules/xmeter/src/__tool.fallback.flexbox.less');
 
-// Aligns a flex container's lines when there is empty space in the cross-axis.
+// Aligns a flex container’s lines when there is empty space in the cross-axis.
 // (align vertically for `flex-direction: row` or horizontally for `flex-direction: column`)
 //
-// xc  =  align-content
+// xac  =  align-content
 //
 // 0   =  initial
 // i   =  inherit
@@ -29,33 +29,33 @@
 // ^updated
 // : 2015-10-15
 
-.-xc-0  { .-xc-s; #XMETER .flex-align-content(initial)       !important; }
-.-xc-i  {         #XMETER .flex-align-content(inherit)       !important; }
-.-xc-s  {         #XMETER .flex-align-content(stretch)       !important; }
-.-xc-xs {         #XMETER .flex-align-content(flex-start)    !important; }
-.-xc-xe {         #XMETER .flex-align-content(flex-end)      !important; }
-.-xc-c  {         #XMETER .flex-align-content(center)        !important; }
-.-xc-sb {         #XMETER .flex-align-content(space-between) !important; }
-.-xc-sa {         #XMETER .flex-align-content(space-around)  !important; }
+.-xac-0  { .-xac-s; .flex-align-content(initial)       !important; }
+.-xac-i  {          .flex-align-content(inherit)       !important; }
+.-xac-s  {          .flex-align-content(stretch)       !important; }
+.-xac-xs {          .flex-align-content(flex-start)    !important; }
+.-xac-xe {          .flex-align-content(flex-end)      !important; }
+.-xac-c  {          .flex-align-content(center)        !important; }
+.-xac-sb {          .flex-align-content(space-between) !important; }
+.-xac-sa {          .flex-align-content(space-around)  !important; }
 
 @media screen {
-  .-xc-0-s  { .-xc-0 ; }
-  .-xc-i-s  { .-xc-i ; }
-  .-xc-s-s  { .-xc-s ; }
-  .-xc-xs-s { .-xc-xs; }
-  .-xc-xe-s { .-xc-xe; }
-  .-xc-c-s  { .-xc-c ; }
-  .-xc-sb-s { .-xc-sb; }
-  .-xc-sa-s { .-xc-sa; }
+  .-xac-0-s  { .-xac-0 ; }
+  .-xac-i-s  { .-xac-i ; }
+  .-xac-s-s  { .-xac-s ; }
+  .-xac-xs-s { .-xac-xs; }
+  .-xac-xe-s { .-xac-xe; }
+  .-xac-c-s  { .-xac-c ; }
+  .-xac-sb-s { .-xac-sb; }
+  .-xac-sa-s { .-xac-sa; }
 }
 
 @media print {
-  .-xc-0-p  { .-xc-0 ; }
-  .-xc-i-p  { .-xc-i ; }
-  .-xc-s-p  { .-xc-s ; }
-  .-xc-xs-p { .-xc-xs; }
-  .-xc-xe-p { .-xc-xe; }
-  .-xc-c-p  { .-xc-c ; }
-  .-xc-sb-p { .-xc-sb; }
-  .-xc-sa-p { .-xc-sa; }
+  .-xac-0-p  { .-xac-0 ; }
+  .-xac-i-p  { .-xac-i ; }
+  .-xac-s-p  { .-xac-s ; }
+  .-xac-xs-p { .-xac-xs; }
+  .-xac-xe-p { .-xac-xe; }
+  .-xac-c-p  { .-xac-c ; }
+  .-xac-sb-p { .-xac-sb; }
+  .-xac-sa-p { .-xac-sa; }
 }

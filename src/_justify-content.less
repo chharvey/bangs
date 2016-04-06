@@ -1,8 +1,8 @@
-@import (reference) url('../node_modules/xmeter/src/__tool.fallback.flexbox.less');
 
 /*################################*\
     bangs  |  _justify-content.less
 \*################################*/
+@import (reference) url('../node_modules/xmeter/src/__tool.fallback.flexbox.less');
 
 // Defines how the browser distributes space
 // between and around flex items
@@ -11,7 +11,7 @@
 // (an item with `display: flex;`)
 // in order to mean anything.
 //
-// xj  =  justify-content
+// xjc  =  justify-content
 //
 // 0   =  initial
 // i   =  inherit
@@ -32,30 +32,30 @@
 // ^updated
 // : 2015-10-14
 
-.-xj-0  { .-xj-xs; #XMETER .flex-justify-content(initial)       !important; }
-.-xj-i  {          #XMETER .flex-justify-content(inherit)       !important; }
-.-xj-xs {          #XMETER .flex-justify-content(flex-start)    !important; }
-.-xj-xe {          #XMETER .flex-justify-content(flex-end)      !important; }
-.-xj-c  {          #XMETER .flex-justify-content(center)        !important; }
-.-xj-sb {          #XMETER .flex-justify-content(space-between) !important; }
-.-xj-sa {          #XMETER .flex-justify-content(space-around)  !important; }
+.-xjc-0  { .-xjc-xs; .flex-justify-content(initial)       !important; }
+.-xjc-i  {           .flex-justify-content(inherit)       !important; }
+.-xjc-xs {           .flex-justify-content(flex-start)    !important; }
+.-xjc-xe {           .flex-justify-content(flex-end)      !important; }
+.-xjc-c  {           .flex-justify-content(center)        !important; }
+.-xjc-sb {           .flex-justify-content(space-between) !important; }
+.-xjc-sa {           .flex-justify-content(space-around)  !important; }
 
 @media screen {
-  .-xj-0-s  { .-xj-0 ; }
-  .-xj-i-s  { .-xj-i ; }
-  .-xj-xs-s { .-xj-xs; }
-  .-xj-xe-s { .-xj-xe; }
-  .-xj-c-s  { .-xj-c ; }
-  .-xj-sb-s { .-xj-sb; }
-  .-xj-sa-s { .-xj-sa; }
+  .-xjc-0-s  { .-xjc-0 ; }
+  .-xjc-i-s  { .-xjc-i ; }
+  .-xjc-xs-s { .-xjc-xs; }
+  .-xjc-xe-s { .-xjc-xe; }
+  .-xjc-c-s  { .-xjc-c ; }
+  .-xjc-sb-s { .-xjc-sb; }
+  .-xjc-sa-s { .-xjc-sa; }
 }
 
 @media print {
-  .-xj-0-p  { .-xj-0 ; }
-  .-xj-i-p  { .-xj-i ; }
-  .-xj-xs-p { .-xj-xs; }
-  .-xj-xe-p { .-xj-xe; }
-  .-xj-c-p  { .-xj-c ; }
-  .-xj-sb-p { .-xj-sb; }
-  .-xj-sa-p { .-xj-sa; }
+  .-xjc-0-p  { .-xjc-0 ; }
+  .-xjc-i-p  { .-xjc-i ; }
+  .-xjc-xs-p { .-xjc-xs; }
+  .-xjc-xe-p { .-xjc-xe; }
+  .-xjc-c-p  { .-xjc-c ; }
+  .-xjc-sb-p { .-xjc-sb; }
+  .-xjc-sa-p { .-xjc-sa; }
 }

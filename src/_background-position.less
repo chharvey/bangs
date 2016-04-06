@@ -1,0 +1,83 @@
+
+/*################################*\
+    bangs  |  _background-position.less
+\*################################*/
+
+// Sets the position of the background image.
+//
+// bp  =  background-size
+//
+// 0  =  initial
+// i  =  inherit
+// a  =  auto
+// s  =  contain
+// l  =  cover
+//
+// ^initial
+// : `0% 0%`
+// ^inherited
+// : false
+// ^url
+// : https://developer.mozilla.org/en-US/docs/Web/CSS/background-position
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2016-03-30
+
+.-bp-0  { .-bp-lt; background-position: initial        !important; }
+.-bp-i  {          background-position: inherit        !important; }
+.-bp-l  {          background-position: left           !important; } // shorthand for `left   center`
+.-bp-r  {          background-position: right          !important; } // shorthand for `right  center`
+.-bp-c  {          background-position: center         !important; } // shorthand for `center center`
+.-bp-t  {          background-position: top            !important; } // shorthand for `center top`
+.-bp-b  {          background-position: bottom         !important; } // shorthand for `center bottom`
+
+.-bp-lt {          background-position: left   top     !important; } // same as `0% 0%` (initial)
+.-bp-lc {          background-position: left   center  !important; }
+.-bp-lb {          background-position: left   bottom  !important; }
+.-bp-ct {          background-position: center top     !important; }
+.-bp-cc {          background-position: center center  !important; }
+.-bp-cb {          background-position: center bottom  !important; }
+.-bp-rt {          background-position: right  top     !important; }
+.-bp-rc {          background-position: right  center  !important; }
+.-bp-rb {          background-position: right  bottom  !important; }
+
+@media screen {
+  .-bp-0-s  { .-bp-0 ; }
+  .-bp-i-s  { .-bp-i ; }
+  .-bp-l-s  { .-bp-l ; }
+  .-bp-r-s  { .-bp-r ; }
+  .-bp-c-s  { .-bp-c ; }
+  .-bp-t-s  { .-bp-t ; }
+  .-bp-b-s  { .-bp-b ; }
+
+  .-bp-lt-s { .-bp-lt; }
+  .-bp-lc-s { .-bp-lc; }
+  .-bp-lb-s { .-bp-lb; }
+  .-bp-ct-s { .-bp-ct; }
+  .-bp-cc-s { .-bp-cc; }
+  .-bp-cb-s { .-bp-cb; }
+  .-bp-rt-s { .-bp-rt; }
+  .-bp-rc-s { .-bp-rc; }
+  .-bp-rb-s { .-bp-rb; }
+}
+
+@media print {
+  .-bp-0-p  { .-bp-0 ; }
+  .-bp-i-p  { .-bp-i ; }
+  .-bp-l-p  { .-bp-l ; }
+  .-bp-r-p  { .-bp-r ; }
+  .-bp-c-p  { .-bp-c ; }
+  .-bp-t-p  { .-bp-t ; }
+  .-bp-b-p  { .-bp-b ; }
+
+  .-bp-lt-p { .-bp-lt; }
+  .-bp-lc-p { .-bp-lc; }
+  .-bp-lb-p { .-bp-lb; }
+  .-bp-ct-p { .-bp-ct; }
+  .-bp-cc-p { .-bp-cc; }
+  .-bp-cb-p { .-bp-cb; }
+  .-bp-rt-p { .-bp-rt; }
+  .-bp-rc-p { .-bp-rc; }
+  .-bp-rb-p { .-bp-rb; }
+}

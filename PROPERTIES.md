@@ -28,6 +28,30 @@ This file lists information about each property and its supported values.
 .-ps-k    sticky
 ```
 
+### `left`
+```
+.-l-a    auto
+.-l-z    0
+```
+
+### `right`
+```
+.-r-a    auto
+.-r-z    0
+```
+
+### `top`
+```
+.-t-a    auto
+.-t-z    0
+```
+
+### `bottom`
+```
+.-b-a    auto
+.-b-z    0
+```
+
 ### `float`
 ```
 .-fl-n    none
@@ -92,40 +116,40 @@ This file lists information about each property and its supported values.
 
 ### `justify-content`
 ```
-.-xj-xs    flex-start
-.-xj-xe    flex-end
-.-xj-c     center
-.-xj-sb    space-between
-.-xj-sa    space-around
+.-xjc-xs    flex-start
+.-xjc-xe    flex-end
+.-xjc-c     center
+.-xjc-sb    space-between
+.-xjc-sa    space-around
 ```
 
 ### `align-content`
 ```
-.-xc-s     stretch
-.-xc-xs    flex-start
-.-xc-xe    flex-end
-.-xc-c     center
-.-xc-sb    space-between
-.-xc-sa    space-around
+.-xac-s     stretch
+.-xac-xs    flex-start
+.-xac-xe    flex-end
+.-xac-c     center
+.-xac-sb    space-between
+.-xac-sa    space-around
 ```
 
 ### `align-items`
 ```
-.-xi-s     stretch
-.-xi-xs    flex-start
-.-xi-xe    flex-end
-.-xi-c     center
-.-xi-b     baseline
+.-xai-s     stretch
+.-xai-xs    flex-start
+.-xai-xe    flex-end
+.-xai-c     center
+.-xai-b     baseline
 ```
 
 ### `align-self`
 ```
-.-xs-a     auto
-.-xs-s     stretch
-.-xs-xs    flex-start
-.-xs-xe    flex-end
-.-xs-c     center
-.-xs-b     baseline
+.-xas-a     auto
+.-xas-s     stretch
+.-xas-xs    flex-start
+.-xas-xe    flex-end
+.-xas-c     center
+.-xas-b     baseline
 ```
 
 ### `order`
@@ -156,8 +180,8 @@ This file lists information about each property and its supported values.
 ## Box Structure
 ### `box-sizing`
 ```
-.-b-c    content-box
-.-b-b    border-box
+.-xz-c    content-box
+.-xz-b    border-box
 ```
 
 ### `width`
@@ -243,11 +267,11 @@ This file lists information about each property and its supported values.
 -sT    true
 ```
 
-### `padding`
+### `padding-*`
 ```
-.-pl  .-pr  .-pt  .-pb  .-px  .-py  .-pa
+.-pl  .-pr  .-pt  .-pb  .-ph  .-pv  .-pa
 ```
-(for `-left`, `-right`, `-top`, `-bottom`, horizontal, vertical, or all, respectively)
+(for `-left`, `-right`, `-top`, `-bottom`, ‘horizontal’, ‘vertical’, or ‘all’, respectively)
 ```
 -z    0
 -q    0.25rem
@@ -257,13 +281,18 @@ This file lists information about each property and its supported values.
 -4    4rem
 -8    8rem
 -g    16rem
+
+-sK    true
+-sM    true
+-sG    true
+-sT    true
 ```
 
-### `margin`
+### `margin-*`
 ```
-.-ml  .-mr  .-mt  .-mb  .-mx  .-my  .-ma
+.-ml  .-mr  .-mt  .-mb  .-mh  .-mv  .-ma
 ```
-(for `-left`, `-right`, `-top`, `-bottom`, horizontal, vertical, or all, respectively)
+(for `-left`, `-right`, `-top`, `-bottom`, ‘horizontal’, ‘vertical’, or ‘all’, respectively)
 ```
 -a    auto
 -z    0
@@ -274,6 +303,18 @@ This file lists information about each property and its supported values.
 -4    4rem
 -8    8rem
 -g    16rem
+--q    -0.25rem
+--h    -0.5rem
+--1    -1rem
+--2    -2rem
+--4    -4rem
+--8    -8rem
+--g    -16rem
+
+-sK    true
+-sM    true
+-sG    true
+-sT    true
 ```
 
 
@@ -297,7 +338,7 @@ This file lists information about each property and its supported values.
 ### `font-weight`
 ```
 .-fw-n    normal
-.-fw-t    bold
+.-fw-b    bold
 .-fw-1    100
 .-fw-2    200
 .-fw-3    300
@@ -316,9 +357,9 @@ This file lists information about each property and its supported values.
 .-fz-z    0
 .-fz-q    0.25rem
 .-fz-h    0.5rem
-.-fz-1    1.0rem
-.-fz-2    2.0rem
-.-fz-4    4.0rem
+.-fz-1    1rem
+.-fz-2    2rem
+.-fz-4    4rem
 ```
 
 ### `font-family`
@@ -394,27 +435,70 @@ This file lists information about each property and its supported values.
 
 ### `page-break-[before|after]`
 ```
-.-pb*-a    auto
-.-pb*-t    always
-.-pb*-f    avoid
+.-pbb  .-pba
+```
+(for `-before` or `-after`, respectively)
+```
+-a    auto
+-t    always
+-f    avoid
 
 NOTE: no support for any media queries
 ```
-where `*` could be `b` or `a`
-(for `before` or `after`, respectively)
 
 
 ## Box Cosmetics
-### `box-shadow`
+### `border-*-style`
 ```
-.-bs-0    initial
-.-bs-i    inherit
-.-bs-n    none
+.-rls  .-rrs  .-rts  .-rbs  .-rhs  .-rvs  .-ras
+```
+(for `-left`, `-right`, `-top`, `-bottom`, ‘horizontal’, ‘vertical’, or ‘all’, respectively)
+```
+-n     none
+-h     hidden
+-s     solid
+-do    dotted
+-da    dashed
+-db    double
+-gv    groove
+-rg    ridge
+-is    inset
+-os    outset
+```
+
+### `border-*-color`
+```
+.-rlc  .-rrc  .-rtc  .-rbc  .-rhc  .-rvc  .-rac
+```
+(for `-left`, `-right`, `-top`, `-bottom`, ‘horizontal’, ‘vertical’, or ‘all’, respectively)
+```
+-t    transparent
+-c    currentColor
+-b    #000000
+-w    #ffffff
 ```
 
 ### `background-image`
 ```
 .-bi-n    none
+```
+
+### `background-position`
+```
+.-bp-l     left
+.-bp-r     right
+.-bp-c     center
+.-bp-t     top
+.-bp-b     bottom
+.-bp-lt    left   top
+.-bp-lc    left   center
+.-bp-lb    left   bottom
+.-bp-ct    center top
+.-bp-cc    center center
+.-bp-cb    center bottom
+.-bp-rt    right  top
+.-bp-rc    right  center
+.-bp-rb    right  bottom
 ```
 
 ### `background-size`
@@ -448,9 +532,9 @@ where `*` could be `b` or `a`
 
 ### `background-clip`
 ```
-.-bx-c    content-box
-.-bx-p    padding-box
-.-bx-b    border-box
+.-bk-c    content-box
+.-bk-p    padding-box
+.-bk-b    border-box
 ```
 
 ### `background-color`
@@ -461,6 +545,11 @@ where `*` could be `b` or `a`
 .-bc-w    #ffffff
 
 -h        true
+```
+
+### `box-shadow`
+```
+.-xs-n    none
 ```
 
 ### `overflow`
@@ -489,19 +578,11 @@ where `*` could be `b` or `a`
 
 
 ## Text Cosmetics
-### `text-rendering`
-```
-.-tr-a    auto
-.-tr-s    optimizeSpeed
-.-tr-l    optimizeLegibility
-.-tr-g    geometricPrecision
-```
-
 ### `text-transform`
 ```
 .-tt-n    none
 .-tt-c    capitalize
-.-tt-u    uppercase
+.-tt-h    uppercase
 .-tt-l    lowercase
 
 -h        true
@@ -509,18 +590,16 @@ where `*` could be `b` or `a`
 
 ### `text-decoration`
 ```
-.-td-n    none
-.-td-u    underline
-.-td-o    overline
-.-td-s    line-through
+.-td-n     none
+.-td-ul    underline
+.-td-ol    overline
+.-td-lt    line-through
 
 -h        true
 ```
 
 ### `text-shadow`
 ```
-.-ts-0    initial
-.-ts-i    inherit
 .-ts-n    none
 ```
 
@@ -547,8 +626,8 @@ where `*` could be `b` or `a`
 
 ### `list-style-position`
 ```
-.!lsp:os   { list-style-position: outside !important; }
-.!lsp:is   { list-style-position: inside  !important; }
+.-lsp-os    outside
+.-lsp-is    inside
 ```
 
 ### `list-style-image`
@@ -563,5 +642,5 @@ where `*` could be `b` or `a`
 .-c-b    #000000
 .-c-w    #ffffff
 
--h        true
+-h       true
 ```
