@@ -39,6 +39,8 @@ no logical reason at all. Think of them as alternatives to inline styles.
 - Inline styles are much more verbose. Would you rather write
   `style="font-weight: bold !important;"` or `class="-fw-b"`?
   In fact, most likely, the `class` attribute is already present, so you’re really just adding one more class.
+- External stylesheets like `bangs.css` can be cached, whereas the data from inline styles is
+  re-downloaded each time the user loads a page.
 - Some bangs provide fallbacks and multiple browser vendor prefixes (such as `initial` and `box-sizing` respectively).
 - Inline styles can’t be applied in media queries. `class="-ff-ss-p"` says,
   “font-family sans-serif on print only.”
@@ -70,8 +72,9 @@ $ npm install bangs
 ```
 Remotely (from a CDN; not recommended)
 ```html
-<link rel="stylesheet" href="https://raw.githubusercontent.com/chharvey/bangs/master/bangs[.min].css"/>
+<link rel="stylesheet" href="https://cdn.rawgit.com/chharvey/bangs/‹master›/bangs[.min].css"/>
 ```
+where `‹master›` can be a branch or a tag, and optional `[.min]` is for the minified version.
 
 ## Syntax
 
