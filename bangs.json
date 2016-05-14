@@ -603,17 +603,17 @@
     , "initial": "normal"
     , "inherited": true
     , "values": [
-        { "name" : "normal" , "code" : "n" }
-      , { "name" : "bold"   , "code" : "b" }
-      , { "name" : "100"    , "code" : "1" }
-      , { "name" : "200"    , "code" : "2" }
-      , { "name" : "300"    , "code" : "3" }
-      , { "name" : "400"    , "code" : "4" }
-      , { "name" : "500"    , "code" : "5" }
-      , { "name" : "600"    , "code" : "6" }
-      , { "name" : "700"    , "code" : "7" }
-      , { "name" : "800"    , "code" : "8" }
-      , { "name" : "900"    , "code" : "9" }
+        { "name" : "normal" , "code" : "n"   }
+      , { "name" : "bold"   , "code" : "b"   }
+      , { "name" : "100"    , "code" : "100" }
+      , { "name" : "200"    , "code" : "200" }
+      , { "name" : "300"    , "code" : "300" }
+      , { "name" : "400"    , "code" : "400" }
+      , { "name" : "500"    , "code" : "500" }
+      , { "name" : "600"    , "code" : "600" }
+      , { "name" : "700"    , "code" : "700" }
+      , { "name" : "800"    , "code" : "800" }
+      , { "name" : "900"    , "code" : "900" }
       ]
     , "media": {
         "screen" : true

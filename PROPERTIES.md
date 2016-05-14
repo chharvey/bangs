@@ -337,17 +337,17 @@ This file lists information about each property and its supported values.
 
 ### `font-weight`
 ```
-.-fw-n    normal
-.-fw-b    bold
-.-fw-1    100
-.-fw-2    200
-.-fw-3    300
-.-fw-4    400
-.-fw-5    500
-.-fw-6    600
-.-fw-7    700
-.-fw-8    800
-.-fw-9    900
+.-fw-n      normal
+.-fw-b      bold
+.-fw-100    100
+.-fw-200    200
+.-fw-300    300
+.-fw-400    400
+.-fw-500    500
+.-fw-600    600
+.-fw-700    700
+.-fw-800    800
+.-fw-900    900
 
 -h        true
 ```
