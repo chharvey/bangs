@@ -549,7 +549,7 @@ NOTE: no support for any media queries
 
 ### `box-shadow`
 ```
-.-xs-n    none
+.-ks-n    none
 ```
 
 ### `overflow`

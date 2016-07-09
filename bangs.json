@@ -868,7 +868,7 @@
     }
   , {
       "name": "box-shadow"
-    , "code": "xs"
+    , "code": "ks"
     , "summary": "Describes one or more shadow effects on the frame of an element."
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow"
     , "initial": "none"
