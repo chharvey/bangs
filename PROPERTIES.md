@@ -180,8 +180,8 @@ This file lists information about each property and its supported values.
 ## Box Structure
 ### `box-sizing`
 ```
-.-xz-c    content-box
-.-xz-b    border-box
+.-kz-c    content-box
+.-kz-b    border-box
 ```
 
 ### `width`

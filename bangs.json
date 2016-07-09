@@ -377,7 +377,7 @@
     }
   , {
       "name": "box-sizing"
-    , "code": "xz"
+    , "code": "kz"
     , "summary": "Alters the CSS box model used to calculate width and height."
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing"
     , "initial": "content-box"
