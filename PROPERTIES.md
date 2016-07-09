@@ -186,6 +186,9 @@ This file lists information about each property and its supported values.
 
 ### `width`
 ```
+.-w-a    auto
+.-w-z    0
+
 .-w-1o1      100%
 .-w-1o2      50%
 .-w-2o2      100%
