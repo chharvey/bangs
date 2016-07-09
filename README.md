@@ -6,6 +6,15 @@ Inspired by
 [Gravitons](http://jxnblk.com/gravitons/), and
 [BEMIT](http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/).
 
+## !IMPORTANT
+
+(see what I did there? but seriously, this is important so please read.)
+
+Bangs! is currently in its initial stages of development, hence the
+[0.y.z version number](http://semver.org/). You may use/reference this repository in your own development environment,
+but be aware that it is not stable and any major or minor parts may change without warning at any time.
+Using Bangs! in production code is not at all recommended until Version 1.0.
+
 ## Examples
 
 ```html

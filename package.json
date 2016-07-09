@@ -24,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/chharvey/bangs/issues"
   },
-  "homepage": "https://github.com/chharvey/bangs/blob/gh-pages/README.md",
+  "homepage": "https://github.com/chharvey/bangs#readme",
   "devDependencies": {
     "clean-css": "^3.4.5",
     "less": "^2.5.3",
