@@ -176,6 +176,57 @@ This file lists information about each property and its supported values.
 -sT    true
 ```
 
+### `flex`
+```
+.-x-a    auto
+.-x-1    1
+
+.-x-1o1      100%
+.-x-1o2      50%
+.-x-2o2      100%
+.-x-1o3      33.3%
+.-x-2o3      66.7%
+.-x-3o3      100%
+.-x-1o4      25%
+.-x-2o4      50%
+.-x-3o4      75%
+.-x-4o4      100%
+.-x-1o5      20%
+.-x-2o5      40%
+.-x-3o5      60%
+.-x-4o5      80%
+.-x-5o5      100%
+.-x-1o6      16.7%
+.-x-2o6      33.3%
+.-x-3o6      50%
+.-x-4o6      66.7%
+.-x-5o6      83.3%
+.-x-6o6      100%
+.-x-1o8      12.5%
+.-x-2o8      25%
+.-x-3o8      37.5%
+.-x-4o8      50%
+.-x-5o8      62.5%
+.-x-6o8      75%
+.-x-7o8      87.5%
+.-x-8o8      100%
+.-x-1o10     10%
+.-x-2o10     20%
+.-x-3o10     30%
+.-x-4o10     40%
+.-x-5o10     50%
+.-x-6o10     60%
+.-x-7o10     70%
+.-x-8o10     80%
+.-x-9o10     90%
+.-x-10o10    100%
+
+-sK    true
+-sM    true
+-sG    true
+-sT    true
+```
+
 
 ## Box Structure
 ### `box-sizing`
