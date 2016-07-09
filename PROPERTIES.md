@@ -4,6 +4,7 @@ This file lists information about each property and its supported values.
 
 
 ## Layout
+
 ### `display`
 ```
 .-d-n     none
@@ -178,6 +179,7 @@ This file lists information about each property and its supported values.
 
 
 ## Box Structure
+
 ### `box-sizing`
 ```
 .-xz-c    content-box
@@ -319,6 +321,7 @@ This file lists information about each property and its supported values.
 
 
 ## Text Structure
+
 ### `font-style`
 ```
 .-fs-n    normal
@@ -448,6 +451,7 @@ NOTE: no support for any media queries
 
 
 ## Box Cosmetics
+
 ### `border-*-style`
 ```
 .-rls  .-rrs  .-rts  .-rbs  .-rhs  .-rvs  .-ras
@@ -578,6 +582,7 @@ NOTE: no support for any media queries
 
 
 ## Text Cosmetics
+
 ### `text-transform`
 ```
 .-tt-n    none

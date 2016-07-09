@@ -5,10 +5,11 @@
   "main": "bangs.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lessc:bangs": "lessc-each ./src/ ./build/  ;  lessc ./bangs.less ./bangs.css",
+    "lessc:bangs": "lessc-each src/ build/  &&  lessc bangs.less bangs.css",
     "lessc:all": "npm run lessc:bangs",
-    "minify": "cleancss ./bangs.css -o ./bangs.min.css",
-    "build": "npm run lessc:all  ;  npm run minify"
+    "minify": "cleancss bangs.css -o bangs.min.css",
+    "unbuild": "rm bangs.css bangs.min.css  &&  rm -r build/",
+    "build": "npm run lessc:all  &&  npm run minify"
   },
   "repository": {
     "type": "git",
