@@ -6,12 +6,15 @@
 
 // Shorthand for setting the flex-grow, flex-shrink, and flex-basis properties of an element.
 //
-// x  =  width
+// x  =  flex
 //
 // 0  =  initial (not 0)
 // i  =  inherit
 // a  =  auto
+// c  =  content
+// h  =  0.5
 // 1  =  1
+// 2  =  2
 //
 // # Percentage Flex-Bases
 // ## In order by denominator
@@ -48,12 +51,15 @@
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2016-07-08
+// : 2016-07-15
 
 .-x-0 { .flex(0 1 auto) !important; .flex(initial) !important; }
 .-x-i {                             .flex(inherit) !important; }
 .-x-a {                             .flex(auto)    !important; }
+.-x-c {                             .flex(content) !important; }
+.-x-h {                             .flex(0.5)     !important; }
 .-x-1 {                             .flex(1)       !important; }
+.-x-2 {                             .flex(2)       !important; }
 
 .-x-10o10,
 .-x-8o8,
@@ -99,7 +105,10 @@
   .-x-0-s { .-x-0; }
   .-x-i-s { .-x-i; }
   .-x-a-s { .-x-a; }
+  .-x-c-s { .-x-c; }
+  .-x-h-s { .-x-h; }
   .-x-1-s { .-x-1; }
+  .-x-2-s { .-x-2; }
 
   .-x-10o10-s,
   .-x-8o8-s,
@@ -146,7 +155,10 @@
   .-x-0-sK { .-x-0; }
   .-x-i-sK { .-x-i; }
   .-x-a-sK { .-x-a; }
+  .-x-c-sK { .-x-c; }
+  .-x-h-sK { .-x-h; }
   .-x-1-sK { .-x-1; }
+  .-x-2-sK { .-x-2; }
 
   .-x-10o10-sK,
   .-x-8o8-sK,
@@ -193,7 +205,10 @@
   .-x-0-sM { .-x-0; }
   .-x-i-sM { .-x-i; }
   .-x-a-sM { .-x-a; }
+  .-x-c-sM { .-x-c; }
+  .-x-h-sM { .-x-h; }
   .-x-1-sM { .-x-1; }
+  .-x-2-sM { .-x-2; }
 
   .-x-10o10-sM,
   .-x-8o8-sM,
@@ -240,7 +255,10 @@
   .-x-0-sG { .-x-0; }
   .-x-i-sG { .-x-i; }
   .-x-a-sG { .-x-a; }
+  .-x-c-sG { .-x-c; }
+  .-x-h-sG { .-x-h; }
   .-x-1-sG { .-x-1; }
+  .-x-2-sG { .-x-2; }
 
   .-x-10o10-sG,
   .-x-8o8-sG,
@@ -287,7 +305,10 @@
   .-x-0-sT { .-x-0; }
   .-x-i-sT { .-x-i; }
   .-x-a-sT { .-x-a; }
+  .-x-c-sT { .-x-c; }
+  .-x-h-sT { .-x-h; }
   .-x-1-sT { .-x-1; }
+  .-x-2-sT { .-x-2; }
 
   .-x-10o10-sT,
   .-x-8o8-sT,
@@ -334,7 +355,10 @@
   .-x-0-p { .-x-0; }
   .-x-i-p { .-x-i; }
   .-x-a-p { .-x-a; }
+  .-x-c-p { .-x-c; }
+  .-x-h-p { .-x-h; }
   .-x-1-p { .-x-1; }
+  .-x-2-p { .-x-2; }
 
   .-x-10o10-p,
   .-x-8o8-p,

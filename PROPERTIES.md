@@ -180,7 +180,10 @@ This file lists information about each property and its supported values.
 ### `flex`
 ```
 .-x-a    auto
+.-x-c    content
+.-x-h    0.5
 .-x-1    1
+.-x-2    2
 
 .-x-1o1      100%
 .-x-1o2      50%
