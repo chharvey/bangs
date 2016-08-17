@@ -691,12 +691,7 @@
     , "initial": "medium"
     , "inherited": true
     , "values": [
-        { "name" : "0"      , "code" : "z" }
-      , { "name" : "0.25em" , "code" : "q" }
-      , { "name" : "0.5em"  , "code" : "h" }
-      , { "name" : "1em"    , "code" : "1" }
-      , { "name" : "2em"    , "code" : "2" }
-      , { "name" : "4em"    , "code" : "4" }
+        { "name" : "0" , "code" : "z" }
       ]
     , "media": {
         "screen" : true

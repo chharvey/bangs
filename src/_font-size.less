@@ -11,11 +11,6 @@
 // 0  =  initial
 // i  =  inherit
 // z  =  0
-// q  =  0.25em
-// h  =  0.5em
-// 1  =  1.0em
-// 2  =  2.0em
-// 4  =  4.0em
 //
 // ^initial
 // : `medium` (user agent setting)
@@ -24,35 +19,20 @@
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2016-02-21
+// : 2016-08-17
 
-.-fz-0 { .-fz-1; font-size: initial !important; }
-.-fz-i {         font-size: inherit !important; }
-.-fz-z {         font-size: 0       !important; }
-.-fz-q {         font-size: 0.25em  !important; }
-.-fz-h {         font-size: 0.5em   !important; }
-.-fz-1 {         font-size: 1.0em   !important; }
-.-fz-2 {         font-size: 2.0em   !important; }
-.-fz-4 {         font-size: 4.0em   !important; }
+.-fz-0 { font-size: 1em; font-size: initial !important; }
+.-fz-i {                 font-size: inherit !important; }
+.-fz-z {                 font-size: 0       !important; }
 
 @media screen {
   .-fz-0-s { .-fz-0; }
   .-fz-i-s { .-fz-i; }
   .-fz-z-s { .-fz-z; }
-  .-fz-q-s { .-fz-q; }
-  .-fz-h-s { .-fz-h; }
-  .-fz-1-s { .-fz-1; }
-  .-fz-2-s { .-fz-2; }
-  .-fz-4-s { .-fz-4; }
 }
 
 @media print {
   .-fz-0-p { .-fz-0; }
   .-fz-i-p { .-fz-i; }
   .-fz-z-p { .-fz-z; }
-  .-fz-q-p { .-fz-q; }
-  .-fz-h-p { .-fz-h; }
-  .-fz-1-p { .-fz-1; }
-  .-fz-2-p { .-fz-2; }
-  .-fz-4-p { .-fz-4; }
 }
