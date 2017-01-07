@@ -28,7 +28,6 @@
   "devDependencies": {
     "clean-css": "^3.4.5",
     "less": "^2.5.3",
-    "lessc-each": "^1.0.1",
-    "xmeter": "^4.0.0"
+    "xmeter": "^5.3.1"
   }
 }

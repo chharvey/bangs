@@ -2,7 +2,6 @@
 /*################################*\
     bangs  |  _box-sizing.less
 \*################################*/
-@import (reference) url('../node_modules/xmeter/src/__tool.fallback.box-sizing.less');
 
 // Alters the CSS box model used to calculate width and height.
 //
@@ -24,10 +23,10 @@
 // ^updated
 // : 2016-07-08
 
-.-kz-0 { .-kz-c; .box-sizing(initial    ) !important; }
-.-kz-i {         .box-sizing(inherit    ) !important; }
-.-kz-c {         .box-sizing(content-box) !important; }
-.-kz-b {         .box-sizing(border-box ) !important; }
+.-kz-0 { .-kz-c; box-sizing: initial     !important; }
+.-kz-i {         box-sizing: inherit     !important; }
+.-kz-c {         box-sizing: content-box !important; }
+.-kz-b {         box-sizing: border-box  !important; }
 
 @media screen {
   .-kz-0-s { .-kz-0; }
