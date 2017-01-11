@@ -423,7 +423,7 @@ This file lists information about each property and its supported values.
 .-ff-sf    serif
 .-ff-ms    monospace
 .-ff-fy    fantasy
-.-ff-cs    cursive
+.-ff-cv    cursive
 ```
 
 ### `line-height`

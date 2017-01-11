@@ -708,7 +708,7 @@
       , { "name" : "serif"      , "code" : "sf" }
       , { "name" : "monospace"  , "code" : "ms" }
       , { "name" : "fantasy"    , "code" : "fy" }
-      , { "name" : "cursive"    , "code" : "cs" }
+      , { "name" : "cursive"    , "code" : "cv" }
       ]
     , "media": {
         "screen" : true
