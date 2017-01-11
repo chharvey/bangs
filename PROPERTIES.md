@@ -79,13 +79,13 @@ This file lists information about each property and its supported values.
 .-z-5      5
 .-z-6      6
 .-z-7      7
-.-z--1    -1
-.-z--2    -2
-.-z--3    -3
-.-z--4    -4
-.-z--5    -5
-.-z--6    -6
-.-z--7    -7
+.-z-_1    -1
+.-z-_2    -2
+.-z-_3    -3
+.-z-_4    -4
+.-z-_5    -5
+.-z-_6    -6
+.-z-_7    -7
 ```
 
 ### `vertical-align`

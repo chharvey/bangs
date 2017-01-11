@@ -184,13 +184,13 @@
       , { "name" : "5"    , "code" : "5"  }
       , { "name" : "6"    , "code" : "6"  }
       , { "name" : "7"    , "code" : "7"  }
-      , { "name" : "-1"   , "code" : "-1" }
-      , { "name" : "-2"   , "code" : "-2" }
-      , { "name" : "-3"   , "code" : "-3" }
-      , { "name" : "-4"   , "code" : "-4" }
-      , { "name" : "-5"   , "code" : "-5" }
-      , { "name" : "-6"   , "code" : "-6" }
-      , { "name" : "-7"   , "code" : "-7" }
+      , { "name" : "-1"   , "code" : "_1" }
+      , { "name" : "-2"   , "code" : "_2" }
+      , { "name" : "-3"   , "code" : "_3" }
+      , { "name" : "-4"   , "code" : "_4" }
+      , { "name" : "-5"   , "code" : "_5" }
+      , { "name" : "-6"   , "code" : "_6" }
+      , { "name" : "-7"   , "code" : "_7" }
       ]
     , "media": {
         "screen" : true
