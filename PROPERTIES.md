@@ -163,13 +163,13 @@ This file lists information about each property and its supported values.
 .-xo-5      5
 .-xo-6      6
 .-xo-7      7
-.-xo--1    -1
-.-xo--2    -2
-.-xo--3    -3
-.-xo--4    -4
-.-xo--5    -5
-.-xo--6    -6
-.-xo--7    -7
+.-xo-_1    -1
+.-xo-_2    -2
+.-xo-_3    -3
+.-xo-_4    -4
+.-xo-_5    -5
+.-xo-_6    -6
+.-xo-_7    -7
 
 -sK    true
 -sM    true
