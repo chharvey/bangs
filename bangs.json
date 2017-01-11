@@ -184,13 +184,13 @@
       , { "name" : "5"    , "code" : "5"  }
       , { "name" : "6"    , "code" : "6"  }
       , { "name" : "7"    , "code" : "7"  }
-      , { "name" : "-1"   , "code" : "-1" }
-      , { "name" : "-2"   , "code" : "-2" }
-      , { "name" : "-3"   , "code" : "-3" }
-      , { "name" : "-4"   , "code" : "-4" }
-      , { "name" : "-5"   , "code" : "-5" }
-      , { "name" : "-6"   , "code" : "-6" }
-      , { "name" : "-7"   , "code" : "-7" }
+      , { "name" : "-1"   , "code" : "_1" }
+      , { "name" : "-2"   , "code" : "_2" }
+      , { "name" : "-3"   , "code" : "_3" }
+      , { "name" : "-4"   , "code" : "_4" }
+      , { "name" : "-5"   , "code" : "_5" }
+      , { "name" : "-6"   , "code" : "_6" }
+      , { "name" : "-7"   , "code" : "_7" }
       ]
     , "media": {
         "screen" : true
@@ -362,13 +362,13 @@
       , { "name" : "5"       , "code" : "5"  , "use" : ".flex-order(5)"       }
       , { "name" : "6"       , "code" : "6"  , "use" : ".flex-order(6)"       }
       , { "name" : "7"       , "code" : "7"  , "use" : ".flex-order(7)"       }
-      , { "name" : "-1"      , "code" : "-1" , "use" : ".flex-order(-1)"      }
-      , { "name" : "-2"      , "code" : "-2" , "use" : ".flex-order(-2)"      }
-      , { "name" : "-3"      , "code" : "-3" , "use" : ".flex-order(-3)"      }
-      , { "name" : "-4"      , "code" : "-4" , "use" : ".flex-order(-4)"      }
-      , { "name" : "-5"      , "code" : "-5" , "use" : ".flex-order(-5)"      }
-      , { "name" : "-6"      , "code" : "-6" , "use" : ".flex-order(-6)"      }
-      , { "name" : "-7"      , "code" : "-7" , "use" : ".flex-order(-7)"      }
+      , { "name" : "-1"      , "code" : "_1" , "use" : ".flex-order(-1)"      }
+      , { "name" : "-2"      , "code" : "_2" , "use" : ".flex-order(-2)"      }
+      , { "name" : "-3"      , "code" : "_3" , "use" : ".flex-order(-3)"      }
+      , { "name" : "-4"      , "code" : "_4" , "use" : ".flex-order(-4)"      }
+      , { "name" : "-5"      , "code" : "_5" , "use" : ".flex-order(-5)"      }
+      , { "name" : "-6"      , "code" : "_6" , "use" : ".flex-order(-6)"      }
+      , { "name" : "-7"      , "code" : "_7" , "use" : ".flex-order(-7)"      }
       ]
     , "media": {
         "screen" : true
@@ -570,13 +570,13 @@
       , { "name" : "4rem"    , "code" : "4" }
       , { "name" : "8rem"    , "code" : "8" }
       , { "name" : "16rem"   , "code" : "g" }
-      , { "name" : "-0.25rem" , "code" : "-q" }
-      , { "name" : "-0.5rem"  , "code" : "-h" }
-      , { "name" : "-1rem"    , "code" : "-1" }
-      , { "name" : "-2rem"    , "code" : "-2" }
-      , { "name" : "-4rem"    , "code" : "-4" }
-      , { "name" : "-8rem"    , "code" : "-8" }
-      , { "name" : "-16rem"   , "code" : "-g" }
+      , { "name" : "-0.25rem" , "code" : "_q" }
+      , { "name" : "-0.5rem"  , "code" : "_h" }
+      , { "name" : "-1rem"    , "code" : "_1" }
+      , { "name" : "-2rem"    , "code" : "_2" }
+      , { "name" : "-4rem"    , "code" : "_4" }
+      , { "name" : "-8rem"    , "code" : "_8" }
+      , { "name" : "-16rem"   , "code" : "_g" }
       ]
     , "media": {
         "screen" : true

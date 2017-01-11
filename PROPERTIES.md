@@ -79,13 +79,13 @@ This file lists information about each property and its supported values.
 .-z-5      5
 .-z-6      6
 .-z-7      7
-.-z--1    -1
-.-z--2    -2
-.-z--3    -3
-.-z--4    -4
-.-z--5    -5
-.-z--6    -6
-.-z--7    -7
+.-z-_1    -1
+.-z-_2    -2
+.-z-_3    -3
+.-z-_4    -4
+.-z-_5    -5
+.-z-_6    -6
+.-z-_7    -7
 ```
 
 ### `vertical-align`
@@ -163,13 +163,13 @@ This file lists information about each property and its supported values.
 .-xo-5      5
 .-xo-6      6
 .-xo-7      7
-.-xo--1    -1
-.-xo--2    -2
-.-xo--3    -3
-.-xo--4    -4
-.-xo--5    -5
-.-xo--6    -6
-.-xo--7    -7
+.-xo-_1    -1
+.-xo-_2    -2
+.-xo-_3    -3
+.-xo-_4    -4
+.-xo-_5    -5
+.-xo-_6    -6
+.-xo-_7    -7
 
 -sK    true
 -sM    true
@@ -341,13 +341,13 @@ This file lists information about each property and its supported values.
 -4    4rem
 -8    8rem
 -g    16rem
---q    -0.25rem
---h    -0.5rem
---1    -1rem
---2    -2rem
---4    -4rem
---8    -8rem
---g    -16rem
+-_q    -0.25rem
+-_h    -0.5rem
+-_1    -1rem
+-_2    -2rem
+-_4    -4rem
+-_8    -8rem
+-_g    -16rem
 
 -sK    true
 -sM    true
