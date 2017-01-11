@@ -546,40 +546,6 @@
       }
     }
   , {
-      "name": "padding"
-    , "code": {
-        "left"       : "pl"
-      , "right"      : "pr"
-      , "top"        : "pt"
-      , "bottom"     : "pb"
-      , "horizontal" : "ph"
-      , "vertical"   : "pv"
-      , "all"        : "pa"
-      }
-    , "summary": "Sets the padding space on an element."
-    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/padding"
-    , "initial": "0"
-    , "inherited": false
-    , "values": [
-        { "name" : "0"       , "code" : "z" }
-      , { "name" : "0.25rem" , "code" : "q" }
-      , { "name" : "0.5rem"  , "code" : "h" }
-      , { "name" : "1rem"    , "code" : "1" }
-      , { "name" : "2rem"    , "code" : "2" }
-      , { "name" : "4rem"    , "code" : "4" }
-      , { "name" : "8rem"    , "code" : "8" }
-      , { "name" : "16rem"   , "code" : "g" }
-      ]
-    , "media": {
-        "screen" : true
-      , "small"  : true
-      , "medium" : true
-      , "large"  : true
-      , "xlarge" : true
-      , "print"  : true
-      }
-    }
-  , {
       "name": "margin"
     , "code": {
         "left"       : "ml"
@@ -611,6 +577,40 @@
       , { "name" : "-4rem"    , "code" : "-4" }
       , { "name" : "-8rem"    , "code" : "-8" }
       , { "name" : "-16rem"   , "code" : "-g" }
+      ]
+    , "media": {
+        "screen" : true
+      , "small"  : true
+      , "medium" : true
+      , "large"  : true
+      , "xlarge" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "padding"
+    , "code": {
+        "left"       : "pl"
+      , "right"      : "pr"
+      , "top"        : "pt"
+      , "bottom"     : "pb"
+      , "horizontal" : "ph"
+      , "vertical"   : "pv"
+      , "all"        : "pa"
+      }
+    , "summary": "Sets the padding space on an element."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/padding"
+    , "initial": "0"
+    , "inherited": false
+    , "values": [
+        { "name" : "0"       , "code" : "z" }
+      , { "name" : "0.25rem" , "code" : "q" }
+      , { "name" : "0.5rem"  , "code" : "h" }
+      , { "name" : "1rem"    , "code" : "1" }
+      , { "name" : "2rem"    , "code" : "2" }
+      , { "name" : "4rem"    , "code" : "4" }
+      , { "name" : "8rem"    , "code" : "8" }
+      , { "name" : "16rem"   , "code" : "g" }
       ]
     , "media": {
         "screen" : true

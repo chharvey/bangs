@@ -326,27 +326,6 @@ This file lists information about each property and its supported values.
 -sT    true
 ```
 
-### `padding-*`
-```
-.-pl  .-pr  .-pt  .-pb  .-ph  .-pv  .-pa
-```
-(for `-left`, `-right`, `-top`, `-bottom`, ‘horizontal’, ‘vertical’, or ‘all’, respectively)
-```
--z    0
--q    0.25rem
--h    0.5rem
--1    1rem
--2    2rem
--4    4rem
--8    8rem
--g    16rem
-
--sK    true
--sM    true
--sG    true
--sT    true
-```
-
 ### `margin-*`
 ```
 .-ml  .-mr  .-mt  .-mb  .-mh  .-mv  .-ma
@@ -369,6 +348,27 @@ This file lists information about each property and its supported values.
 --4    -4rem
 --8    -8rem
 --g    -16rem
+
+-sK    true
+-sM    true
+-sG    true
+-sT    true
+```
+
+### `padding-*`
+```
+.-pl  .-pr  .-pt  .-pb  .-ph  .-pv  .-pa
+```
+(for `-left`, `-right`, `-top`, `-bottom`, ‘horizontal’, ‘vertical’, or ‘all’, respectively)
+```
+-z    0
+-q    0.25rem
+-h    0.5rem
+-1    1rem
+-2    2rem
+-4    4rem
+-8    8rem
+-g    16rem
 
 -sK    true
 -sM    true
