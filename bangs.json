@@ -445,10 +445,8 @@
     , "initial": "content-box"
     , "inherited": false
     , "values": [
-        { "name" : "initial"     ,                 "use" : ".box-sizing(initial)"     }
-      , { "name" : "inherit"     ,                 "use" : ".box-sizing(inherit)"     }
-      , { "name" : "content-box" , "code" : "c"  , "use" : ".box-sizing(content-box)" }
-      , { "name" : "border-box"  , "code" : "b"  , "use" : ".box-sizing(border-box)"  }
+        { "name" : "content-box" , "code" : "c" }
+      , { "name" : "border-box"  , "code" : "b" }
       ]
     , "media": {
         "screen" : true

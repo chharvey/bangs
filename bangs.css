@@ -1,6 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     bangs
-    Version: 0.9.0
+    Version: 0.9.1
     Licence: MIT
     Repo   : https://github.com/chharvey/bangs.git
     Home   : https://github.com/chharvey/bangs/blob/gh-pages/README.md
@@ -227,7 +227,6 @@
     display: list-item !important;
   }
 }
-
 /*################################*\
     bangs  |  _position.less
 \*################################*/
@@ -301,7 +300,6 @@
     position: sticky   !important;
   }
 }
-
 /*################################*\
     bangs  |  _left.less
 \*################################*/
@@ -348,7 +346,6 @@
     left: 0       !important;
   }
 }
-
 /*################################*\
     bangs  |  _right.less
 \*################################*/
@@ -395,7 +392,6 @@
     right: 0       !important;
   }
 }
-
 /*################################*\
     bangs  |  _top.less
 \*################################*/
@@ -442,7 +438,6 @@
     top: 0       !important;
   }
 }
-
 /*################################*\
     bangs  |  _bottom.less
 \*################################*/
@@ -489,7 +484,6 @@
     bottom: 0       !important;
   }
 }
-
 /*################################*\
     bangs  |  _float.less
 \*################################*/
@@ -545,7 +539,6 @@
     float: right   !important;
   }
 }
-
 /*################################*\
     bangs  |  _clear.less
 \*################################*/
@@ -610,7 +603,6 @@
     clear: both    !important;
   }
 }
-
 /*################################*\
     bangs  |  _z-index.less
 \*################################*/
@@ -783,7 +775,6 @@
     z-index: -7 !important;
   }
 }
-
 /*################################*\
     bangs  |  _vertical-align.less
 \*################################*/
@@ -884,7 +875,6 @@
     vertical-align: super       !important;
   }
 }
-
 /*################################*\
     bangs  |  _flex-direction.less
 \*################################*/
@@ -1012,7 +1002,6 @@
     flex-direction: column-reverse !important;
   }
 }
-
 /*################################*\
     bangs  |  _flex-wrap.less
 \*################################*/
@@ -1122,7 +1111,6 @@
     flex-wrap: wrap-reverse !important;
   }
 }
-
 /*################################*\
     bangs  |  _justify-content.less
 \*################################*/
@@ -1268,7 +1256,6 @@
     justify-content: space-around !important;
   }
 }
-
 /*################################*\
     bangs  |  _align-content.less
 \*################################*/
@@ -1432,7 +1419,6 @@
     align-content: space-around !important;
   }
 }
-
 /*################################*\
     bangs  |  _align-items.less
 \*################################*/
@@ -1578,7 +1564,6 @@
     align-items: baseline !important;
   }
 }
-
 /*################################*\
     bangs  |  _align-self.less
 \*################################*/
@@ -1742,7 +1727,6 @@
     align-self: baseline !important;
   }
 }
-
 /*################################*\
     _order.less
 \*################################*/
@@ -2626,7 +2610,6 @@
     order: -7 !important;
   }
 }
-
 /*################################*\
     bangs  |  _flex.less
 \*################################*/
@@ -4329,84 +4312,52 @@
     flex: 90% !important;
   }
 }
-
 /*################################*\
     bangs  |  _box-sizing.less
 \*################################*/
 .-kz-0 {
-  -webkit-box-sizing: content-box !important;
-  -moz-box-sizing: content-box !important;
   box-sizing: content-box !important;
-  -webkit-box-sizing: initial !important;
-  -moz-box-sizing: initial !important;
-  box-sizing: initial !important;
+  box-sizing: initial     !important;
 }
 .-kz-i {
-  -webkit-box-sizing: inherit !important;
-  -moz-box-sizing: inherit !important;
-  box-sizing: inherit !important;
+  box-sizing: inherit     !important;
 }
 .-kz-c {
-  -webkit-box-sizing: content-box !important;
-  -moz-box-sizing: content-box !important;
   box-sizing: content-box !important;
 }
 .-kz-b {
-  -webkit-box-sizing: border-box !important;
-  -moz-box-sizing: border-box !important;
   box-sizing: border-box !important;
 }
 @media screen {
   .-kz-0-s {
-    -webkit-box-sizing: content-box !important;
-    -moz-box-sizing: content-box !important;
     box-sizing: content-box !important;
-    -webkit-box-sizing: initial !important;
-    -moz-box-sizing: initial !important;
-    box-sizing: initial !important;
+    box-sizing: initial     !important;
   }
   .-kz-i-s {
-    -webkit-box-sizing: inherit !important;
-    -moz-box-sizing: inherit !important;
-    box-sizing: inherit !important;
+    box-sizing: inherit     !important;
   }
   .-kz-c-s {
-    -webkit-box-sizing: content-box !important;
-    -moz-box-sizing: content-box !important;
     box-sizing: content-box !important;
   }
   .-kz-b-s {
-    -webkit-box-sizing: border-box !important;
-    -moz-box-sizing: border-box !important;
     box-sizing: border-box !important;
   }
 }
 @media print {
   .-kz-0-p {
-    -webkit-box-sizing: content-box !important;
-    -moz-box-sizing: content-box !important;
     box-sizing: content-box !important;
-    -webkit-box-sizing: initial !important;
-    -moz-box-sizing: initial !important;
-    box-sizing: initial !important;
+    box-sizing: initial     !important;
   }
   .-kz-i-p {
-    -webkit-box-sizing: inherit !important;
-    -moz-box-sizing: inherit !important;
-    box-sizing: inherit !important;
+    box-sizing: inherit     !important;
   }
   .-kz-c-p {
-    -webkit-box-sizing: content-box !important;
-    -moz-box-sizing: content-box !important;
     box-sizing: content-box !important;
   }
   .-kz-b-p {
-    -webkit-box-sizing: border-box !important;
-    -moz-box-sizing: border-box !important;
     box-sizing: border-box !important;
   }
 }
-
 /*################################*\
     bangs  |  _width.less
 \*################################*/
@@ -5759,7 +5710,6 @@
     width: 90em !important;
   }
 }
-
 /*################################*\
     bangs  |  _padding.less
 \*################################*/
@@ -7448,7 +7398,6 @@
     padding: 16rem   !important;
   }
 }
-
 /*################################*\
     bangs  |  _margin.less
 \*################################*/
@@ -10425,7 +10374,6 @@
     margin: -16rem !important;
   }
 }
-
 /*################################*\
     bangs  |  _font-style.less
 \*################################*/
@@ -10489,7 +10437,6 @@
 .-fs-t-h:focus {
   font-style: italic  !important;
 }
-
 /*################################*\
     bangs  |  _font-variant.less
 \*################################*/
@@ -10553,7 +10500,6 @@
 .-fv-s-h:focus {
   font-variant: small-caps !important;
 }
-
 /*################################*\
     bangs  |  _font-weight.less
 \*################################*/
@@ -10734,7 +10680,6 @@
 .-fw-900-h:focus {
   font-weight: 900     !important;
 }
-
 /*################################*\
     bangs  |  _font-size.less
 \*################################*/
@@ -10772,7 +10717,6 @@
     font-size: 0       !important;
   }
 }
-
 /*################################*\
     bangs  |  _font-family.less
 \*################################*/
@@ -10846,7 +10790,6 @@
     font-family: cursive    !important;
   }
 }
-
 /*################################*\
     bangs  |  _line-height.less
 \*################################*/
@@ -10893,7 +10836,6 @@
     line-height: 0       !important;
   }
 }
-
 /*################################*\
     bangs  |  _letter-spacing.less
 \*################################*/
@@ -10940,7 +10882,6 @@
     letter-spacing: 0       !important;
   }
 }
-
 /*################################*\
     bangs  |  _word-spacing.less
 \*################################*/
@@ -10987,7 +10928,6 @@
     word-spacing: 0       !important;
   }
 }
-
 /*################################*\
     bangs  |  _text-align.less
 \*################################*/
@@ -11052,7 +10992,6 @@
     text-align: justify !important;
   }
 }
-
 /*################################*\
     bangs  |  _text-indent.less
 \*################################*/
@@ -11090,7 +11029,6 @@
     text-indent: 0       !important;
   }
 }
-
 /*################################*\
     bangs  |  _white-space.less
 \*################################*/
@@ -11164,7 +11102,6 @@
     white-space: pre-line !important;
   }
 }
-
 /*################################*\
     bangs  |  _overflow-wrap.less
 \*################################*/
@@ -11226,7 +11163,6 @@
     overflow-wrap: break-word !important;
   }
 }
-
 /*################################*\
     bangs  |  _column-count.less
 \*################################*/
@@ -11378,7 +11314,6 @@
     column-count: 6 !important;
   }
 }
-
 /*################################*\
     bangs  |  _column-width.less
 \*################################*/
@@ -11440,7 +11375,6 @@
     column-width: auto !important;
   }
 }
-
 /*################################*\
     bangs  |  _page-break.less
 \*################################*/
@@ -11476,7 +11410,6 @@
 .-pba-f {
   page-break-after: avoid   !important;
 }
-
 /*################################*\
     bangs  |  _border-style.less
 \*################################*/
@@ -12339,7 +12272,6 @@
     border-style: outset  !important;
   }
 }
-
 /*################################*\
     bangs  |  _border-color.less
 \*################################*/
@@ -12788,7 +12720,6 @@
     border-color: #ffffff      !important;
   }
 }
-
 /*################################*\
     bangs  |  _background-image.less
 \*################################*/
@@ -12826,7 +12757,6 @@
     background-image: none    !important;
   }
 }
-
 /*################################*\
     bangs  |  _background-position.less
 \*################################*/
@@ -12981,7 +12911,6 @@
     background-position: right  bottom  !important;
   }
 }
-
 /*################################*\
     bangs  |  _background-size.less
 \*################################*/
@@ -13037,7 +12966,6 @@
     background-size: cover   !important;
   }
 }
-
 /*################################*\
     bangs  |  _background-repeat.less
 \*################################*/
@@ -13102,7 +13030,6 @@
     background-repeat: repeat-y !important;
   }
 }
-
 /*################################*\
     bangs  |  _background-attachment.less
 \*################################*/
@@ -13158,7 +13085,6 @@
     background-attachment: local   !important;
   }
 }
-
 /*################################*\
     bangs  |  _background-origin.less
 \*################################*/
@@ -13214,7 +13140,6 @@
     background-origin: border-box !important;
   }
 }
-
 /*################################*\
     bangs  |  _background-clip.less
 \*################################*/
@@ -13270,7 +13195,6 @@
     background-clip: border-box !important;
   }
 }
-
 /*################################*\
     bangs  |  _background-color.less
 \*################################*/
@@ -13360,7 +13284,6 @@
 .-bc-w-h:focus {
   background-color: #ffffff !important;
 }
-
 /*################################*\
     bangs  |  _box-shadow.less
 \*################################*/
@@ -13398,7 +13321,6 @@
     box-shadow: none    !important;
   }
 }
-
 /*################################*\
     bangs  |  _overflow.less
 \*################################*/
@@ -13463,7 +13385,6 @@
     overflow: scroll  !important;
   }
 }
-
 /*################################*\
     bangs  |  _opacity.less
 \*################################*/
@@ -13540,7 +13461,6 @@
 .-o-1-h:focus {
   opacity: 1.0     !important;
 }
-
 /*################################*\
     bangs  |  _visibility.less
 \*################################*/
@@ -13596,7 +13516,6 @@
     visibility: collapse !important;
   }
 }
-
 /*################################*\
     bangs  |  _text-transform.less
 \*################################*/
@@ -13686,7 +13605,6 @@
 .-tt-l-h:focus {
   text-transform: lowercase  !important;
 }
-
 /*################################*\
     bangs  |  _text-decoration.less
 \*################################*/
@@ -13776,7 +13694,6 @@
 .-td-lt-h:focus {
   text-decoration: line-through !important;
 }
-
 /*################################*\
     bangs  |  _text-shadow.less
 \*################################*/
@@ -13814,7 +13731,6 @@
     text-shadow: none    !important;
   }
 }
-
 /*################################*\
     bangs  |  _text-overflow.less
 \*################################*/
@@ -13861,7 +13777,6 @@
     text-overflow: ellipsis !important;
   }
 }
-
 /*################################*\
     bangs  |  _list-style-type.less
 \*################################*/
@@ -13989,7 +13904,6 @@
     list-style-type: square               !important;
   }
 }
-
 /*################################*\
     bangs  |  _list-style-position.less
 \*################################*/
@@ -14036,7 +13950,6 @@
     list-style-position: inside  !important;
   }
 }
-
 /*################################*\
     bangs  |  _list-style-image.less
 \*################################*/
@@ -14074,7 +13987,6 @@
     list-style-image: none    !important;
   }
 }
-
 /*################################*\
     bangs  |  _color.less
 \*################################*/
@@ -14164,4 +14076,3 @@
 .-c-w-h:focus {
   color: #ffffff !important;
 }
-
