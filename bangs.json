@@ -212,7 +212,7 @@
       , { "name" : "text-bottom" , "code" : "tb" }
       , { "name" : "text-top"    , "code" : "tt" }
       , { "name" : "sub"         , "code" : "sb" }
-      , { "name" : "super"       , "code" : "st" }
+      , { "name" : "super"       , "code" : "sp" }
       ]
     , "media": {
         "screen" : true

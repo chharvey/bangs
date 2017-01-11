@@ -97,7 +97,7 @@ This file lists information about each property and its supported values.
 .-va-tb    text-bottom
 .-va-tt    text-top
 .-va-sb    sub
-.-va-st    super
+.-va-sp    super
 ```
 
 ### `flex-direction`
