@@ -604,13 +604,13 @@
       , { "name" : "4rem"    , "code" : "4" }
       , { "name" : "8rem"    , "code" : "8" }
       , { "name" : "16rem"   , "code" : "g" }
-      , { "name" : "-0.25rem" , "code" : "-q" }
-      , { "name" : "-0.5rem"  , "code" : "-h" }
-      , { "name" : "-1rem"    , "code" : "-1" }
-      , { "name" : "-2rem"    , "code" : "-2" }
-      , { "name" : "-4rem"    , "code" : "-4" }
-      , { "name" : "-8rem"    , "code" : "-8" }
-      , { "name" : "-16rem"   , "code" : "-g" }
+      , { "name" : "-0.25rem" , "code" : "_q" }
+      , { "name" : "-0.5rem"  , "code" : "_h" }
+      , { "name" : "-1rem"    , "code" : "_1" }
+      , { "name" : "-2rem"    , "code" : "_2" }
+      , { "name" : "-4rem"    , "code" : "_4" }
+      , { "name" : "-8rem"    , "code" : "_8" }
+      , { "name" : "-16rem"   , "code" : "_g" }
       ]
     , "media": {
         "screen" : true
