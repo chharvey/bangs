@@ -59,10 +59,10 @@ no appendage | all media queries                                  | all properti
 `-sG`        | `@media screen  and (min-width: 60em)` (large+)    | display, order, flex, width, margin, padding
 `-sT`        | `@media screen  and (min-width: 75em)` (x-large+)  | display, order, flex, width, margin, padding
 `-sP`        | `@media screen  and (min-width: 90em)` (xx-large+) | none so far
-`-nK`        | `@media not all and (min-width: 30em)` (x-small-)  | none so far
-`-nM`        | `@media not all and (min-width: 45em)` (small-)    | none so far
-`-nG`        | `@media not all and (min-width: 60em)` (medium-)   | none so far
-`-nT`        | `@media not all and (min-width: 75em)` (large-)    | none so far
+`-nK`        | `@media not all and (min-width: 30em)` (x-small-)  | display
+`-nM`        | `@media not all and (min-width: 45em)` (small-)    | display
+`-nG`        | `@media not all and (min-width: 60em)` (medium-)   | display
+`-nT`        | `@media not all and (min-width: 75em)` (large-)    | display
 `-nP`        | `@media not all and (min-width: 90em)` (x-large-)  | none so far
 `-h`         | pseudo-classes `:hover` and `:focus`               | font-[style&#x007c;variant&#x007c;weight], background-color, opacity, text-[transform&#x007c;decoration], color
 

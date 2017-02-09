@@ -18,6 +18,11 @@ This file lists information about each property and its supported values.
 -sM    true
 -sG    true
 -sT    true
+
+-nK    true
+-nM    true
+-nG    true
+-nT    true
 ```
 
 ### `position`
