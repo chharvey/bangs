@@ -940,5 +940,30 @@
       , "print"  : true
       }
     }
+  , {
+      "name": "list-style-type"
+    , "code": "lst"
+    , "summary": "Specifies the appearance of list item markers."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type"
+    , "initial": "disc"
+    , "inherited": true
+    , "values": [
+        { "name": "none"                , "code": "n"  }
+      , { "name": "decimal"             , "code": "dc" }
+      , { "name": "decimal-leading-zero", "code": "dz" }
+      , { "name": "lower-roman"         , "code": "lr" }
+      , { "name": "upper-roman"         , "code": "ur" }
+      , { "name": "lower-alpha"         , "code": "la" }
+      , { "name": "upper-alpha"         , "code": "ua" }
+      , { "name": "lower-greek"         , "code": "lg" }
+      , { "name": "disc"                , "code": "d"  }
+      , { "name": "circle"              , "code": "c"  }
+      , { "name": "square"              , "code": "s"  }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
   ]
 }
