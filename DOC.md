@@ -49,17 +49,17 @@ Even further, there are more sets of classes that provide support for
 additional media queries and hover/focus, and these are mentioned on a per-property basis below
 and on [the full list](PROPERTIES.md) (with the keyword `true`).
 
-appendage    | meaning                                           | property support
----------    | -------                                           | ----------------
-no appendage | all media queries                                 | all properties
-`-s`         | `@media screen`                                   | all properties
-`-sK`        | `@media screen and (min-width: 30em)` (small+)    | display, order, flex, width, padding, margin
-`-sM`        | `@media screen and (min-width: 45em)` (medium+)   | display, order, flex, width, padding, margin
-`-sG`        | `@media screen and (min-width: 60em)` (large+)    | display, order, flex, width, padding, margin
-`-sT`        | `@media screen and (min-width: 75em)` (x-large+)  | display, order, flex, width, padding, margin
-`-sP`        | `@media screen and (min-width: 90em)` (xx-large+) | none so far
-`-p`         | `@media print`                                    | all properties
-`-h`         | pseudo-classes `:hover` and `:focus`              | font-[style&#x007c;variant&#x007c;weight], background-color, opacity, text-[transform&#x007c;decoration], color
+appendage    | meaning                                            | property support
+---------    | -------                                            | ----------------
+no appendage | all media queries                                  | all properties
+`-s`         | `@media screen`                                    | all properties
+`-p`         | `@media print`                                     | all properties
+`-sK`        | `@media screen  and (min-width: 30em)` (small+)    | display, order, flex, width, margin, padding
+`-sM`        | `@media screen  and (min-width: 45em)` (medium+)   | display, order, flex, width, margin, padding
+`-sG`        | `@media screen  and (min-width: 60em)` (large+)    | display, order, flex, width, margin, padding
+`-sT`        | `@media screen  and (min-width: 75em)` (x-large+)  | display, order, flex, width, margin, padding
+`-sP`        | `@media screen  and (min-width: 90em)` (xx-large+) | none so far
+`-h`         | pseudo-classes `:hover` and `:focus`               | font-[style&#x007c;variant&#x007c;weight], background-color, opacity, text-[transform&#x007c;decoration], color
 
 ## Examples
 
