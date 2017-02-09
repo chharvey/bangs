@@ -6,14 +6,14 @@
     , { "name": "unset"   , "code": "u" }
     ]
   , "media": [
-      { "name" : "screen"  , "code" : "s"  }
-    , { "name" : "print"   , "code" : "p"  }
-    , { "name" : "small"   , "code" : "sK" , "breakpoint" : { "em" : 30 , "px" :  480 } }
-    , { "name" : "medium"  , "code" : "sM" , "breakpoint" : { "em" : 45 , "px" :  720 } }
-    , { "name" : "large"   , "code" : "sG" , "breakpoint" : { "em" : 60 , "px" :  960 } }
-    , { "name" : "xlarge"  , "code" : "sT" , "breakpoint" : { "em" : 75 , "px" : 1200 } }
-    , { "name" : "xxlarge" , "code" : "sP" , "breakpoint" : { "em" : 90 , "px" : 1440 } }
-    , { "name" : "hover"   , "code" : "h"  }
+      { "name": "screen"  , "code": "s"  }
+    , { "name": "print"   , "code": "p"  }
+    , { "name": "small+"  , "code": "sK", "breakpoint": { "em": 30, "px" :  480 } }
+    , { "name": "medium+" , "code": "sM", "breakpoint": { "em": 45, "px" :  720 } }
+    , { "name": "large+"  , "code": "sG", "breakpoint": { "em": 60, "px" :  960 } }
+    , { "name": "xlarge+" , "code": "sT", "breakpoint": { "em": 75, "px" : 1200 } }
+    , { "name": "xxlarge+", "code": "sP", "breakpoint": { "em": 90, "px" : 1440 } }
+    , { "name": "hover"   , "code": "h"  }
     ]
   }
 , "properties": [
@@ -43,10 +43,10 @@
     , "media": {
         "screen" : true
       , "print"  : true
-      , "small"  : true
-      , "medium" : true
-      , "large"  : true
-      , "xlarge" : true
+      , "small+" : true
+      , "medium+": true
+      , "large+" : true
+      , "xlarge+": true
       }
     }
   , {
@@ -373,10 +373,10 @@
     , "media": {
         "screen" : true
       , "print"  : true
-      , "small"  : true
-      , "medium" : true
-      , "large"  : true
-      , "xlarge" : true
+      , "small+" : true
+      , "medium+": true
+      , "large+" : true
+      , "xlarge+": true
       }
     }
   , {
@@ -435,10 +435,10 @@
     , "media": {
         "screen": true
       , "print" : true
-      , "small" : true
-      , "medium": true
-      , "large" : true
-      , "xlarge": true
+      , "small+" : true
+      , "medium+": true
+      , "large+" : true
+      , "xlarge+": true
       }
     }
   , {
@@ -543,10 +543,10 @@
     , "media": {
         "screen": true
       , "print" : true
-      , "small" : true
-      , "medium": true
-      , "large" : true
-      , "xlarge": true
+      , "small+" : true
+      , "medium+": true
+      , "large+" : true
+      , "xlarge+": true
       }
     }
   , {
@@ -585,10 +585,10 @@
     , "media": {
         "screen" : true
       , "print"  : true
-      , "small"  : true
-      , "medium" : true
-      , "large"  : true
-      , "xlarge" : true
+      , "small+" : true
+      , "medium+": true
+      , "large+" : true
+      , "xlarge+": true
       }
     }
   , {
@@ -619,10 +619,10 @@
     , "media": {
         "screen" : true
       , "print"  : true
-      , "small"  : true
-      , "medium" : true
-      , "large"  : true
-      , "xlarge" : true
+      , "small+" : true
+      , "medium+": true
+      , "large+" : true
+      , "xlarge+": true
       }
     }
   , {
