@@ -13,6 +13,11 @@
     , { "name": "large+"  , "code": "sG", "breakpoint": { "em": 60, "px" :  960 } }
     , { "name": "xlarge+" , "code": "sT", "breakpoint": { "em": 75, "px" : 1200 } }
     , { "name": "xxlarge+", "code": "sP", "breakpoint": { "em": 90, "px" : 1440 } }
+    , { "name": "xsmall-" , "code": "nK", "breakpoint": { "em": 30, "px":  480, "negative" : true } }
+    , { "name": "small-"  , "code": "nM", "breakpoint": { "em": 45, "px":  720, "negative" : true } }
+    , { "name": "medium-" , "code": "nG", "breakpoint": { "em": 60, "px":  960, "negative" : true } }
+    , { "name": "large-"  , "code": "nT", "breakpoint": { "em": 75, "px": 1200, "negative" : true } }
+    , { "name": "xlarge-" , "code": "nP", "breakpoint": { "em": 90, "px": 1440, "negative" : true } }
     , { "name": "hover"   , "code": "h"  }
     ]
   }
