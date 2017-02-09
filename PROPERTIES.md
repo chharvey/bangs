@@ -669,12 +669,14 @@ NOTE: no support for any media queries
 ### `list-style-type`
 ```
 .-lst-n     none
-.-lst-dz    decimal-leading-zero
-.-lst-ur    upper-roman
-.-lst-ua    upper-alpha
 .-lst-dc    decimal
-.-lst-la    lower-alpha
+.-lst-dz    decimal-leading-zero
 .-lst-lr    lower-roman
+.-lst-ur    upper-roman
+.-lst-la    lower-alpha
+.-lst-ua    upper-alpha
+.-lst-ll    lower-latin
+.-lst-ul    upper-latin
 .-lst-lg    lower-greek
 .-lst-d     disc
 .-lst-c     circle
