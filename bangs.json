@@ -955,6 +955,8 @@
       , { "name": "upper-roman"         , "code": "ur" }
       , { "name": "lower-alpha"         , "code": "la" }
       , { "name": "upper-alpha"         , "code": "ua" }
+      , { "name": "lower-latin"         , "code": "ll" }
+      , { "name": "upper-latin"         , "code": "ul" }
       , { "name": "lower-greek"         , "code": "lg" }
       , { "name": "disc"                , "code": "d"  }
       , { "name": "circle"              , "code": "c"  }

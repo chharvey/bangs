@@ -675,6 +675,8 @@ NOTE: no support for any media queries
 .-lst-ur    upper-roman
 .-lst-la    lower-alpha
 .-lst-ua    upper-alpha
+.-lst-ll    lower-latin
+.-lst-ul    upper-latin
 .-lst-lg    lower-greek
 .-lst-d     disc
 .-lst-c     circle
