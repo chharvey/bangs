@@ -386,6 +386,10 @@
       , "medium+": true
       , "large+" : true
       , "xlarge+": true
+      , "xsmall-": true
+      , "small-" : true
+      , "medium-": true
+      , "large-" : true
       }
     }
   , {
