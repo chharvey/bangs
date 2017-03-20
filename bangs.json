@@ -6,14 +6,19 @@
     , { "name": "unset"   , "code": "u" }
     ]
   , "media": [
-      { "name" : "screen"  , "code" : "s"  }
-    , { "name" : "small"   , "code" : "sK" , "breakpoint" : { "em" : 30 , "px" :  480 } }
-    , { "name" : "medium"  , "code" : "sM" , "breakpoint" : { "em" : 45 , "px" :  720 } }
-    , { "name" : "large"   , "code" : "sG" , "breakpoint" : { "em" : 60 , "px" :  960 } }
-    , { "name" : "xlarge"  , "code" : "sT" , "breakpoint" : { "em" : 75 , "px" : 1200 } }
-    , { "name" : "xxlarge" , "code" : "sP" , "breakpoint" : { "em" : 90 , "px" : 1440 } }
-    , { "name" : "print"   , "code" : "p"  }
-    , { "name" : "hover"   , "code" : "h"  }
+      { "name": "screen"  , "code": "s"  }
+    , { "name": "print"   , "code": "p"  }
+    , { "name": "small+"  , "code": "sK", "breakpoint": { "em": 30, "px" :  480 } }
+    , { "name": "medium+" , "code": "sM", "breakpoint": { "em": 45, "px" :  720 } }
+    , { "name": "large+"  , "code": "sG", "breakpoint": { "em": 60, "px" :  960 } }
+    , { "name": "xlarge+" , "code": "sT", "breakpoint": { "em": 75, "px" : 1200 } }
+    , { "name": "xxlarge+", "code": "sP", "breakpoint": { "em": 90, "px" : 1440 } }
+    , { "name": "xsmall-" , "code": "nK", "breakpoint": { "em": 30, "px":  480, "negative" : true } }
+    , { "name": "small-"  , "code": "nM", "breakpoint": { "em": 45, "px":  720, "negative" : true } }
+    , { "name": "medium-" , "code": "nG", "breakpoint": { "em": 60, "px":  960, "negative" : true } }
+    , { "name": "large-"  , "code": "nT", "breakpoint": { "em": 75, "px": 1200, "negative" : true } }
+    , { "name": "xlarge-" , "code": "nP", "breakpoint": { "em": 90, "px": 1440, "negative" : true } }
+    , { "name": "hover"   , "code": "h"  }
     ]
   }
 , "properties": [
@@ -42,11 +47,15 @@
       ]
     , "media": {
         "screen" : true
-      , "small"  : true
-      , "medium" : true
-      , "large"  : true
-      , "xlarge" : true
       , "print"  : true
+      , "small+" : true
+      , "medium+": true
+      , "large+" : true
+      , "xlarge+": true
+      , "xsmall-": true
+      , "small-" : true
+      , "medium-": true
+      , "large-" : true
       }
     }
   , {
@@ -184,13 +193,13 @@
       , { "name" : "5"    , "code" : "5"  }
       , { "name" : "6"    , "code" : "6"  }
       , { "name" : "7"    , "code" : "7"  }
-      , { "name" : "-1"   , "code" : "-1" }
-      , { "name" : "-2"   , "code" : "-2" }
-      , { "name" : "-3"   , "code" : "-3" }
-      , { "name" : "-4"   , "code" : "-4" }
-      , { "name" : "-5"   , "code" : "-5" }
-      , { "name" : "-6"   , "code" : "-6" }
-      , { "name" : "-7"   , "code" : "-7" }
+      , { "name" : "-1"   , "code" : "_1" }
+      , { "name" : "-2"   , "code" : "_2" }
+      , { "name" : "-3"   , "code" : "_3" }
+      , { "name" : "-4"   , "code" : "_4" }
+      , { "name" : "-5"   , "code" : "_5" }
+      , { "name" : "-6"   , "code" : "_6" }
+      , { "name" : "-7"   , "code" : "_7" }
       ]
     , "media": {
         "screen" : true
@@ -362,17 +371,21 @@
       , { "name" : "5"       , "code" : "5"  , "use" : ".flex-order(5)"       }
       , { "name" : "6"       , "code" : "6"  , "use" : ".flex-order(6)"       }
       , { "name" : "7"       , "code" : "7"  , "use" : ".flex-order(7)"       }
-      , { "name" : "-1"      , "code" : "-1" , "use" : ".flex-order(-1)"      }
-      , { "name" : "-2"      , "code" : "-2" , "use" : ".flex-order(-2)"      }
-      , { "name" : "-3"      , "code" : "-3" , "use" : ".flex-order(-3)"      }
-      , { "name" : "-4"      , "code" : "-4" , "use" : ".flex-order(-4)"      }
-      , { "name" : "-5"      , "code" : "-5" , "use" : ".flex-order(-5)"      }
-      , { "name" : "-6"      , "code" : "-6" , "use" : ".flex-order(-6)"      }
-      , { "name" : "-7"      , "code" : "-7" , "use" : ".flex-order(-7)"      }
+      , { "name" : "-1"      , "code" : "_1" , "use" : ".flex-order(-1)"      }
+      , { "name" : "-2"      , "code" : "_2" , "use" : ".flex-order(-2)"      }
+      , { "name" : "-3"      , "code" : "_3" , "use" : ".flex-order(-3)"      }
+      , { "name" : "-4"      , "code" : "_4" , "use" : ".flex-order(-4)"      }
+      , { "name" : "-5"      , "code" : "_5" , "use" : ".flex-order(-5)"      }
+      , { "name" : "-6"      , "code" : "_6" , "use" : ".flex-order(-6)"      }
+      , { "name" : "-7"      , "code" : "_7" , "use" : ".flex-order(-7)"      }
       ]
     , "media": {
         "screen" : true
       , "print"  : true
+      , "small+" : true
+      , "medium+": true
+      , "large+" : true
+      , "xlarge+": true
       }
     }
   , {
@@ -430,11 +443,11 @@
       ]
     , "media": {
         "screen": true
-      , "small" : true
-      , "medium": true
-      , "large" : true
-      , "xlarge": true
       , "print" : true
+      , "small+" : true
+      , "medium+": true
+      , "large+" : true
+      , "xlarge+": true
       }
     }
   , {
@@ -538,11 +551,53 @@
       ]
     , "media": {
         "screen": true
-      , "small" : true
-      , "medium": true
-      , "large" : true
-      , "xlarge": true
       , "print" : true
+      , "small+" : true
+      , "medium+": true
+      , "large+" : true
+      , "xlarge+": true
+      }
+    }
+  , {
+      "name": "margin"
+    , "code": {
+        "left"       : "ml"
+      , "right"      : "mr"
+      , "top"        : "mt"
+      , "bottom"     : "mb"
+      , "horizontal" : "mh"
+      , "vertical"   : "mv"
+      , "all"        : "ma"
+      }
+    , "summary": "Sets the margin space on an element."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/margin"
+    , "initial": "0"
+    , "inherited": false
+    , "values": [
+        { "name" : "auto"    , "code" : "a" }
+        { "name" : "0"       , "code" : "z" }
+      , { "name" : "0.25rem" , "code" : "q" }
+      , { "name" : "0.5rem"  , "code" : "h" }
+      , { "name" : "1rem"    , "code" : "1" }
+      , { "name" : "2rem"    , "code" : "2" }
+      , { "name" : "4rem"    , "code" : "4" }
+      , { "name" : "8rem"    , "code" : "8" }
+      , { "name" : "16rem"   , "code" : "g" }
+      , { "name" : "-0.25rem" , "code" : "_q" }
+      , { "name" : "-0.5rem"  , "code" : "_h" }
+      , { "name" : "-1rem"    , "code" : "_1" }
+      , { "name" : "-2rem"    , "code" : "_2" }
+      , { "name" : "-4rem"    , "code" : "_4" }
+      , { "name" : "-8rem"    , "code" : "_8" }
+      , { "name" : "-16rem"   , "code" : "_g" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      , "small+" : true
+      , "medium+": true
+      , "large+" : true
+      , "xlarge+": true
       }
     }
   , {
@@ -572,53 +627,11 @@
       ]
     , "media": {
         "screen" : true
-      , "small"  : true
-      , "medium" : true
-      , "large"  : true
-      , "xlarge" : true
       , "print"  : true
-      }
-    }
-  , {
-      "name": "margin"
-    , "code": {
-        "left"       : "ml"
-      , "right"      : "mr"
-      , "top"        : "mt"
-      , "bottom"     : "mb"
-      , "horizontal" : "mh"
-      , "vertical"   : "mv"
-      , "all"        : "ma"
-      }
-    , "summary": "Sets the margin space on an element."
-    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/margin"
-    , "initial": "0"
-    , "inherited": false
-    , "values": [
-        { "name" : "auto"    , "code" : "a" }
-        { "name" : "0"       , "code" : "z" }
-      , { "name" : "0.25rem" , "code" : "q" }
-      , { "name" : "0.5rem"  , "code" : "h" }
-      , { "name" : "1rem"    , "code" : "1" }
-      , { "name" : "2rem"    , "code" : "2" }
-      , { "name" : "4rem"    , "code" : "4" }
-      , { "name" : "8rem"    , "code" : "8" }
-      , { "name" : "16rem"   , "code" : "g" }
-      , { "name" : "-0.25rem" , "code" : "-q" }
-      , { "name" : "-0.5rem"  , "code" : "-h" }
-      , { "name" : "-1rem"    , "code" : "-1" }
-      , { "name" : "-2rem"    , "code" : "-2" }
-      , { "name" : "-4rem"    , "code" : "-4" }
-      , { "name" : "-8rem"    , "code" : "-8" }
-      , { "name" : "-16rem"   , "code" : "-g" }
-      ]
-    , "media": {
-        "screen" : true
-      , "small"  : true
-      , "medium" : true
-      , "large"  : true
-      , "xlarge" : true
-      , "print"  : true
+      , "small+" : true
+      , "medium+": true
+      , "large+" : true
+      , "xlarge+": true
       }
     }
   , {
@@ -930,6 +943,33 @@
     , "inherited": false
     , "values": [
         { "name" : "none" , "code" : "n" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "list-style-type"
+    , "code": "lst"
+    , "summary": "Specifies the appearance of list item markers."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type"
+    , "initial": "disc"
+    , "inherited": true
+    , "values": [
+        { "name": "none"                , "code": "n"  }
+      , { "name": "decimal"             , "code": "dc" }
+      , { "name": "decimal-leading-zero", "code": "dz" }
+      , { "name": "lower-roman"         , "code": "lr" }
+      , { "name": "upper-roman"         , "code": "ur" }
+      , { "name": "lower-alpha"         , "code": "la" }
+      , { "name": "upper-alpha"         , "code": "ua" }
+      , { "name": "lower-latin"         , "code": "ll" }
+      , { "name": "upper-latin"         , "code": "ul" }
+      , { "name": "lower-greek"         , "code": "lg" }
+      , { "name": "disc"                , "code": "d"  }
+      , { "name": "circle"              , "code": "c"  }
+      , { "name": "square"              , "code": "s"  }
       ]
     , "media": {
         "screen" : true
