@@ -1,5 +1,5 @@
 {
-  "constants": {
+  "globals": {
     "values": [
       { "name": "initial" , "code": "0" }
     , { "name": "inherit" , "code": "i" }
@@ -19,6 +19,13 @@
     , { "name": "large-"  , "code": "nT", "breakpoint": { "em": 75, "px": 1200, "negative" : true } }
     , { "name": "xlarge-" , "code": "nP", "breakpoint": { "em": 90, "px": 1440, "negative" : true } }
     , { "name": "hover"   , "code": "h"  }
+    ]
+  , "stability_indices": [
+      { "name": "obsolete"    , "description": "This feature is no longer supported. Do not use it." }
+    , { "name": "deprecated"  , "description": "Breaking changes are planned for this feature, or it will be removed in future versions. It is no longer in development, and should not be relied upon." }
+    , { "name": "experimental", "description": "This feature is in development, but is subject to change or may be removed in future versions." }
+    , { "name": "stable"      , "description": "This feature has been tested and proven satisfactory. It is in development, but no breaking changes will be made unless absolutely necessary." }
+    , { "name": "locked"      , "description": "Only bug fixes and performance improvements will be made to this feature. It is no longer in development. It may be heavily relied upon and will not be removed in future versions." }
     ]
   }
 , "properties": [

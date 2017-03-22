@@ -2,6 +2,15 @@
 
 This file lists information about each property and its supported values.
 
+Please note the following stability indices. Use at your own risk.
+
+1. **Stability 1: OBSOLETE.** This feature is no longer supported. Do not use it.
+  (In *Bangs v0.y.z* version numbers, no features have Stability 1).
+2. **Stability 2: DEPRECATED.** Breaking changes are planned for this feature, or it will be removed in future versions. It is no longer in development, and should not be relied upon.
+  (In *Bangs v0.Y.Z* version numbers, no features have Stability 2).
+3. **Stability 3: EXPERIMENTAL.** This feature is in development, but is subject to change or may be removed in future versions.
+4. **Stability 4: STABLE.** This feature has been tested and proven satisfactory. It is in development, but no breaking changes will be made unless absolutely necessary.
+5. **Stability 5: LOCKED.** Only bug fixes and performance improvements will be made to this feature. It is no longer in development. It may be heavily relied upon and will not be removed in future versions.
 
 ## Layout
 
