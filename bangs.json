@@ -23,9 +23,9 @@
   , "stability_indices": [
       { "name": "obsolete"    , "description": "This feature is no longer supported. Do not use it." }
     , { "name": "deprecated"  , "description": "Breaking changes are planned for this feature, or it will be removed in future versions. It is no longer in development, and should not be relied upon." }
-    , { "name": "experimental", "description": "This feature is in development, but is subject to change or may be removed in future versions." }
+    , { "name": "experimental", "description": "This feature is in development, but is unsupported or subject to change. It could be removed in future versions." }
     , { "name": "stable"      , "description": "This feature has been tested and proven satisfactory. It is in development, but no breaking changes will be made unless absolutely necessary." }
-    , { "name": "locked"      , "description": "Only patches and performance improvements will be made to this feature. It is no longer in development. It may be heavily relied upon and will not be removed in future versions." }
+    , { "name": "locked"      , "description": "Only patches will be made to this feature. It is no longer in development. It may be heavily relied upon and will not be removed in future versions." }
     ]
   }
 , "properties": [
@@ -36,6 +36,7 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/display"
     , "initial": "inline"
     , "inherited": false
+    , "stability": 3
     , "values": [
         { "name" : "none"               , "code" : "n"   }
       , { "name" : "block"              , "code" : "bk"  }
@@ -44,13 +45,13 @@
       , { "name" : "flex"               , "code" : "fx"  , "use" : ".flexbox()" }
       , { "name" : "list-item"          , "code" : "li"  }
       , { "name" : "table"              , "code" : "tb"  }
-      , { "name" : "table-row"          , "code" : "tr"  }
-      , { "name" : "table-column"       , "code" : "tl"  }
-      , { "name" : "table-cell"         , "code" : "tc"  }
-      , { "name" : "table-row-group"    , "code" : "trg" }
-      , { "name" : "table-header-group" , "code" : "thg" }
-      , { "name" : "table-footer-group" , "code" : "tfg" }
-      , { "name" : "table-column-group" , "code" : "tcg" }
+      , { "name" : "table-row"          , "code" : "tr"  , "stability": 2}
+      , { "name" : "table-column"       , "code" : "tl"  , "stability": 2}
+      , { "name" : "table-cell"         , "code" : "tc"  , "stability": 2}
+      , { "name" : "table-row-group"    , "code" : "trg" , "stability": 2}
+      , { "name" : "table-header-group" , "code" : "thg" , "stability": 2}
+      , { "name" : "table-footer-group" , "code" : "tfg" , "stability": 2}
+      , { "name" : "table-column-group" , "code" : "tcg" , "stability": 2}
       ]
     , "media": {
         "screen" : true
