@@ -9,6 +9,99 @@ html(lang="en")
     -
       var title = 'Bangs!'
       var description = 'This file lists information about each property and its supported values.'
+      const groupings = {
+        'Layout': [
+          'display'
+        , 'position'
+        , 'left'
+        , 'right'
+        , 'top'
+        , 'bottom'
+        , 'float'
+        , 'clear'
+        , 'z-index'
+        , 'vertical-align'
+        , 'flex-direction'
+        , 'flex-wrap'
+        , 'justify-content'
+        , 'align-content'
+        , 'align-items'
+        , 'align-self'
+        , 'order'
+        , 'flex'
+        ]
+      , 'Box Structure': [
+          'box-sizing'
+        , 'width'
+        , 'margin'
+        , 'padding'
+        ]
+      , 'Text Structure': [
+          'font-style'
+        , 'font-variant'
+        , 'font-weight'
+        , 'font-size'
+        , 'font-family'
+        , 'line-height'
+        , 'letter-spacing'
+        , 'word-spacing'
+        , 'text-align'
+        , 'text-indent'
+        , 'white-space'
+        , 'overflow-wrap'
+        , 'column-count'
+        , 'column-width'
+        , 'page-break'
+        ]
+      , 'Box Cosmetics': [
+          'border-*-style'
+        , 'border-*-color'
+        , 'background-image'
+        , 'background-position'
+        , 'background-size'
+        , 'background-repeat'
+        , 'background-attachment'
+        , 'background-origin'
+        , 'background-clip'
+        , 'background-color'
+        , 'box-shadow'
+        , 'overflow'
+        , 'opacity'
+        , 'visibility'
+        ]
+      , 'Text Cosmetics': [
+          'text-transform'
+        , 'text-decoration'
+        , 'text-shadow'
+        , 'text-overflow'
+        , 'list-style-type'
+        , 'list-style-position'
+        , 'list-style-image'
+        , 'color'
+        ]
+      }
+    mixin propertyDoc(property)
+      section(id=property.name)
+        h3
+          = property.name
+          a._fragid(href=`#${property.name}` aria-label="permalink")
+        dl
+          dt Name
+          dd: a(href=property.url): code= property.name
+          dt Description
+          dd= property.summary
+          dt Inherited #[sup: a(href="https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance" title="read about inherited properties") ?]
+          dd= property.inherited
+          dt Initial #[sup: a(href="https://developer.mozilla.org/en-US/docs/Web/CSS/initial_value" title="read about initial values") ?]
+          dd: code= property.initial
+          dt Classes
+          dd: dl
+            each val in global.values
+              dt: code= `.-${property.code}-${val.code}`
+              dd: code= `${property.name}: ${val.name};`
+            each val in property.values.filter(function (v) { return global.values.map(function (u) { return u.name }).indexOf(v.name) < 0 })
+              dt: code= `.-${property.code}-${val.code}`
+              dd: code= `${property.name}: ${val.name};`
   head
     title= title
     meta(charset="utf-8")
@@ -41,6 +134,20 @@ html(lang="en")
         .c-Stability__Kwd {
           text-transform: uppercase;
         }
+        ._fragid {
+          display: inline;
+          line-height: 0;
+          margin-left: 1rem;
+          font-weight: 100;
+        }
+        ._fragid::before { content: ''; }
+        h1:hover > ._fragid::before,
+        h2:hover > ._fragid::before,
+        h3:hover > ._fragid::before,
+        h4:hover > ._fragid::before,
+        h5:hover > ._fragid::before,
+        h6:hover > ._fragid::before,
+        ._fragid:focus::before { content: '\00a7'; }
   body.docs-body
     a.h-Hidden(href="#main") skip to main content
     main.docs-main#main
@@ -63,13 +170,8 @@ html(lang="en")
               li.o-List__Item.c-Stability(class=`c-Stability--${item.name}`)
                 h3.c-Stability__Hn.c-Stability__Kwd= item.name
                 p= item.description
-      section
-        h2 Layout
-      section
-        h2 Box Structure
-      section
-        h2 Text Structure
-      section
-        h2 Box Cosmetics
-      section
-        h2 Text Cosmetics
+      each group,index in groupings
+        section
+          h2= index
+          each prop in properties.filter(function (p) { return groupings[index].indexOf(p.name) >= 0 })
+            +propertyDoc(prop)
