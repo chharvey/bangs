@@ -238,7 +238,7 @@
       , { "name" : "text-bottom" , "code" : "tb" }
       , { "name" : "text-top"    , "code" : "tt" }
       , { "name" : "sub"         , "code" : "sb" }
-      , { "name" : "super"       , "code" : "st" }
+      , { "name" : "super"       , "code" : "sp" , "stability": 2 }
       ]
     , "media": {
         "screen" : true
@@ -755,7 +755,7 @@
       , { "name" : "serif"      , "code" : "sf" }
       , { "name" : "monospace"  , "code" : "ms" }
       , { "name" : "fantasy"    , "code" : "fy" }
-      , { "name" : "cursive"    , "code" : "cs" , "stability": 2 }
+      , { "name" : "cursive"    , "code" : "cv" , "stability": 2 }
       ]
     , "media": {
         "screen" : true
