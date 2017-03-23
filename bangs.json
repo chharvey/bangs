@@ -25,7 +25,7 @@
     , { "name": "deprecated"  , "description": "Breaking changes are planned for this feature, or it will be removed in future versions. It is no longer in development, and should not be relied upon." }
     , { "name": "experimental", "description": "This feature is in development, but is subject to change or may be removed in future versions." }
     , { "name": "stable"      , "description": "This feature has been tested and proven satisfactory. It is in development, but no breaking changes will be made unless absolutely necessary." }
-    , { "name": "locked"      , "description": "Only bug fixes and performance improvements will be made to this feature. It is no longer in development. It may be heavily relied upon and will not be removed in future versions." }
+    , { "name": "locked"      , "description": "Only patches and performance improvements will be made to this feature. It is no longer in development. It may be heavily relied upon and will not be removed in future versions." }
     ]
   }
 , "properties": [

@@ -5,6 +5,7 @@
   "main": "bangs.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "pug:root": "pug -O bangs.json index.pug",
     "lessc:bangs": "lessc bangs.less bangs.css",
     "lessc:all": "npm run lessc:bangs",
     "minify": "cleancss bangs.css -o bangs.min.css",

@@ -1,0 +1,75 @@
+doctype html
+html(lang="en")
+  mixin newSection(n, page)
+    - var id = page.url().split('#')[1]
+    section(id=id)
+      | <h#{n}>#{page.name()} <a class="docs-_fragid" href="##{id}" aria-label="permalink"></a></h#{n}>
+      block
+  block vars
+    -
+      var title = 'Bangs!'
+      var description = 'This file lists information about each property and its supported values.'
+  head
+    title= title
+    meta(charset="utf-8")
+    meta(name="description" content=description)
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    block styles
+      link(rel="stylesheet" href="https://cdn.rawgit.com/chharvey/xmeter/master/xmeter.min.css")
+      link(rel="stylesheet" href="./bangs.css")
+      style.
+        ol {
+          counter-reset: stability;
+        }
+        .c-Stability {
+          padding: calc(var(--vru) / 2) 1rem;
+          margin-bottom: var(--vru);
+        }
+        .c-Stability::before {
+          counter-increment: stability;
+          content: 'Stability ' counter(stability);
+          position: absolute;
+        }
+        .c-Stability--obsolete     { background-color: black;   color: white; }
+        .c-Stability--deprecated   { background-color: #ff4b33; color: white; }
+        .c-Stability--experimental { background-color: #ffe433; }
+        .c-Stability--stable       { background-color: #9acc7a; }
+        .c-Stability--locked       { background-color: #99daff; }
+        .c-Stability__Hn {
+          text-align: center;
+        }
+        .c-Stability__Kwd {
+          text-transform: uppercase;
+        }
+  body.docs-body
+    a.h-Hidden(href="#main") skip to main content
+    main.docs-main#main
+      header
+        h1= title
+        p= description
+        section
+          h2 Stability Indices
+          p.
+            Please note the following stability indices.
+            Each CSS property in this project is assigned an index describing its stability;
+            some values or pseudo-classes under a property might possibly have their own index,
+            in which case this would override the property&rsquo;s stability index.
+          p.
+            For example, the group of classes #[code .-d] (corresponding to the CSS property #[code display])
+            might have Stability 4, but #[code .-d-fx] (for #[code display: flex]) could have Stability 3, and
+            #[code .-d-il-nK] (for #[code display: inline] on extra-small screens) could have Stability 2.
+          ol.o-List.-w-3o4.-mh-a
+            each item in global.stability_indices
+              li.o-List__Item.c-Stability(class=`c-Stability--${item.name}`)
+                h3.c-Stability__Hn.c-Stability__Kwd= item.name
+                p= item.description
+      section
+        h2 Layout
+      section
+        h2 Box Structure
+      section
+        h2 Text Structure
+      section
+        h2 Box Cosmetics
+      section
+        h2 Text Cosmetics
