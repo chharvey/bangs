@@ -100,7 +100,7 @@ html(lang="en")
             each val in global.values
               dt: code= `.-${property.code}-${val.code}`
               dd: code= `${property.name}: ${val.name};`
-            each val in property.values.filter(function (v) { return global.values.map(function (u) { return u.name }).indexOf(v.name) < 0 })
+            each val in property.values.filter(function (v) { return global.values.every(function (u) { return u.name !== v.name }) })
               dt
                 code= `.-${property.code}-${val.code}`
                 if val.stability
