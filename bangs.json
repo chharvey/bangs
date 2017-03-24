@@ -858,12 +858,12 @@
     , "inherited": true
     , "initial": "left"
     , "category": 2
-    , "stability": 3
+    , "stability": 2
     , "values": [
         { "name" : "left"   , "code" : "l" }
       , { "name" : "right"  , "code" : "r" }
-      , { "name" : "center" , "code" : "c" }
-      , { "name" : "justify", "code" : "j" }
+      , { "name" : "center" , "code" : "c", "stability": 3 }
+      , { "name" : "justify", "code" : "j", "stability": 3 }
       ]
     , "media": {
         "screen" : true
