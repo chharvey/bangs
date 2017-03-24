@@ -833,6 +833,24 @@
       }
     }
   , {
+      "name": "word-spacing"
+    , "code": "ws"
+    , "summary": "Sets the spacing between tags and words in text."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing"
+    , "inherited": true
+    , "initial": "normal"
+    , "category": 2
+    , "stability": 3
+    , "values": [
+        { "name" : "normal" , "code" : "n" }
+      , { "name" : "0"      , "code" : "z" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
       "name": "border-style"
     , "code": {
         "left"       : "rls"
