@@ -212,56 +212,25 @@ NOTE: no support for any media queries
 
 ### `text-transform`
 ```
-.-tt-n    none
-.-tt-c    capitalize
-.-tt-h    uppercase
-.-tt-l    lowercase
-
 -h        true
 ```
 
 ### `text-decoration`
 ```
-.-td-n     none
-.-td-ul    underline
-.-td-ol    overline
-.-td-lt    line-through
-
 -h        true
 ```
 
 ### `text-shadow`
-```
-.-ts-n    none
-```
 
 ### `text-overflow`
-```
-.-to-c    clip
-.-to-e    ellipsis
-```
 
 ### `list-style-type`
-```
-```
 
 ### `list-style-position`
-```
-.-lsp-os    outside
-.-lsp-is    inside
-```
 
 ### `list-style-image`
-```
-.-lsi-n     none
-```
 
 ### `color`
 ```
-.-c-t    transparent
-.-c-c    currentColor
-.-c-b    #000000
-.-c-w    #ffffff
-
 -h       true
 ```

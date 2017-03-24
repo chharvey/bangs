@@ -1244,6 +1244,104 @@
       }
     }
   , {
+      "name": "color"
+    , "code": "c"
+    , "summary": "Sets the text color."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/color"
+    , "inherited": true
+    , "initial": ""
+    , "category": 4
+    , "stability": 3
+    , "values": [
+        { "name" : "transparent"  , "code" : "t" }
+      , { "name" : "currentColor" , "code" : "c" }
+      , { "name" : "#000000"      , "code" : "b" }
+      , { "name" : "#ffffff"      , "code" : "w" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      , "hover"  : true
+      }
+    }
+  , {
+      "name": "text-transform"
+    , "code": "tt"
+    , "summary": "Capitalizes text."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform"
+    , "inherited": true
+    , "initial": "none"
+    , "category": 4
+    , "stability": 3
+    , "values": [
+        { "name" : "none"      , "code" : "n" }
+      , { "name" : "capitalize", "code" : "c", "stability": 1 }
+      , { "name" : "uppercase" , "code" : "h", "stability": 1 }
+      , { "name" : "lowercase" , "code" : "l", "stability": 1 }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      , "hover"  : true
+      }
+    }
+  , {
+      "name": "text-decoration"
+    , "code": "td"
+    , "summary": "Sets a line decoration to text."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration"
+    , "inherited": false
+    , "initial": "none"
+    , "category": 4
+    , "stability": 1
+    , "values": [
+        { "name" : "none"        , "code" : "n" }
+      , { "name" : "underline"   , "code" : "ul" }
+      , { "name" : "overline"    , "code" : "ol" }
+      , { "name" : "line-through", "code" : "lt" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      , "hover"  : true
+      }
+    }
+  , {
+      "name": "text-shadow"
+    , "code": "ts"
+    , "summary": "Describes shadow effects on the text and text-decorations of an element."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow"
+    , "inherited": true
+    , "initial": "none"
+    , "category": 4
+    , "stability": 3
+    , "values": [
+        { "name" : "none", "code" : "n" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "text-overflow"
+    , "code": "to"
+    , "summary": "Defines how invisible overflowed text content, if any, is rendered."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow"
+    , "inherited": false
+    , "initial": "clip"
+    , "category": 4
+    , "stability": 3
+    , "values": [
+        { "name" : "clip"    , "code" : "c" }
+      , { "name" : "ellipsis", "code" : "e" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
       "name": "list-style-type"
     , "code": "lst"
     , "summary": "Specifies the appearance of list item markers."
@@ -1266,6 +1364,41 @@
       , { "name": "disc"                , "code": "d"  }
       , { "name": "circle"              , "code": "c"  }
       , { "name": "square"              , "code": "s"  }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "list-style-position"
+    , "code": "lsp"
+    , "summary": "Sets the position of list item markers."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position"
+    , "inherited": true
+    , "initial": "outside"
+    , "category": 4
+    , "stability": 3
+    , "values": [
+        { "name": "outside", "code": "os" }
+      , { "name": "inside" , "code": "is" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "list-style-image"
+    , "code": "lsi"
+    , "summary": "Sets the image used as list item markers."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-image"
+    , "inherited": true
+    , "initial": "none"
+    , "category": 4
+    , "stability": 3
+    , "values": [
+        { "name": "none", "code": "n" }
       ]
     , "media": {
         "screen" : true
