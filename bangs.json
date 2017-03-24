@@ -1244,6 +1244,27 @@
       }
     }
   , {
+      "name": "text-transform"
+    , "code": "tt"
+    , "summary": "Capitalizes text."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform"
+    , "inherited": true
+    , "initial": "none"
+    , "category": 4
+    , "stability": 3
+    , "values": [
+        { "name" : "none"      , "code" : "n" }
+      , { "name" : "capitalize", "code" : "c", "stability": 1 }
+      , { "name" : "uppercase" , "code" : "h", "stability": 1 }
+      , { "name" : "lowercase" , "code" : "l", "stability": 1 }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      , "hover"  : true
+      }
+    }
+  , {
       "name": "list-style-type"
     , "code": "lst"
     , "summary": "Specifies the appearance of list item markers."

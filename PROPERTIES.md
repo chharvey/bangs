@@ -212,11 +212,6 @@ NOTE: no support for any media queries
 
 ### `text-transform`
 ```
-.-tt-n    none
-.-tt-c    capitalize
-.-tt-h    uppercase
-.-tt-l    lowercase
-
 -h        true
 ```
 
