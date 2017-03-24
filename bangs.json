@@ -871,6 +871,23 @@
       }
     }
   , {
+      "name": "text-indent"
+    , "code": "ti"
+    , "summary": "Leaves empty space before lines of text in a block."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent"
+    , "inherited": true
+    , "initial": "0"
+    , "category": 2
+    , "stability": 3
+    , "values": [
+        { "name" : "0", "code" : "z" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
       "name": "border-style"
     , "code": {
         "left"       : "rls"
