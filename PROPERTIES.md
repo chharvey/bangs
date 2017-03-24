@@ -184,28 +184,13 @@ NOTE: no support for any media queries
 ### `box-shadow`
 
 ### `overflow`
-```
-.-of-a    auto
-.-of-v    visible
-.-of-h    hidden
-.-of-s    scroll
-```
 
 ### `opacity`
 ```
-.-o-z    0.0
-.-o-h    0.5
-.-o-1    1.0
-
 -h        true
 ```
 
 ### `visibility`
-```
-.-v-v    visible
-.-v-h    hidden
-.-v-c    collapse
-```
 
 
 ## Text Cosmetics

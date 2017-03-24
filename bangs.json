@@ -1227,6 +1227,65 @@
       }
     }
   , {
+      "name": "overflow"
+    , "code": "of"
+    , "summary": "Defines how content outside the box is rendered."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/overflow"
+    , "inherited": false
+    , "initial": "visible"
+    , "category": 3
+    , "stability": 3
+    , "values": [
+        { "name" : "auto"   , "code" : "a" }
+      , { "name" : "visible", "code" : "v" }
+      , { "name" : "hidden" , "code" : "h" }
+      , { "name" : "scroll" , "code" : "s" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "opacity"
+    , "code": "o"
+    , "summary": "Sets the transparency of an element."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/opacity"
+    , "inherited": false
+    , "initial": "1.0"
+    , "category": 3
+    , "stability": 3
+    , "values": [
+        { "name" : "0.0", "code" : "z" }
+      , { "name" : "0.5", "code" : "h" }
+      , { "name" : "1.0", "code" : "1" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      , "hover"  : true
+      }
+    }
+  , {
+      "name": "visibility"
+    , "code": "v"
+    , "summary": "Specifies whether an element is visible or hidden."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/visibility"
+    , "inherited": true
+    , "initial": "visible"
+    , "category": 3
+    , "stability": 3
+    , "values": [
+        { "name" : "visible" , "code" : "v" }
+      , { "name" : "hidden"  , "code" : "h" }
+      , { "name" : "collapse", "code" : "c" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
       "name": "box-shadow"
     , "code": "ks"
     , "summary": "Describes one or more shadow effects on the frame of an element."
