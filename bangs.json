@@ -1286,6 +1286,23 @@
       }
     }
   , {
+      "name": "text-shadow"
+    , "code": "ts"
+    , "summary": "Describes shadow effects on the text and text-decorations of an element."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow"
+    , "inherited": true
+    , "initial": "none"
+    , "category": 4
+    , "stability": 3
+    , "values": [
+        { "name" : "none", "code" : "n" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
       "name": "list-style-type"
     , "code": "lst"
     , "summary": "Specifies the appearance of list item markers."

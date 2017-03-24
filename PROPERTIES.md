@@ -221,9 +221,6 @@ NOTE: no support for any media queries
 ```
 
 ### `text-shadow`
-```
-.-ts-n    none
-```
 
 ### `text-overflow`
 ```
