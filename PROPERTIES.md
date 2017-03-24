@@ -223,10 +223,6 @@ NOTE: no support for any media queries
 ### `text-shadow`
 
 ### `text-overflow`
-```
-.-to-c    clip
-.-to-e    ellipsis
-```
 
 ### `list-style-type`
 ```

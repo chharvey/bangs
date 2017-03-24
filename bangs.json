@@ -1303,6 +1303,24 @@
       }
     }
   , {
+      "name": "text-overflow"
+    , "code": "to"
+    , "summary": "Defines how invisible overflowed text content, if any, is rendered."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow"
+    , "inherited": false
+    , "initial": "clip"
+    , "category": 4
+    , "stability": 3
+    , "values": [
+        { "name" : "clip"    , "code" : "c" }
+      , { "name" : "ellipsis", "code" : "e" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
       "name": "list-style-type"
     , "code": "lst"
     , "summary": "Specifies the appearance of list item markers."
