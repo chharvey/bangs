@@ -16,64 +16,34 @@
 ```
 
 ### `position`
-```
-```
 
 ### `left`
-```
-```
 
 ### `right`
-```
-```
 
 ### `top`
-```
-```
 
 ### `bottom`
-```
-```
 
 ### `float`
-```
-```
 
 ### `clear`
-```
-```
 
 ### `z-index`
-```
-```
 
 ### `vertical-align`
-```
-```
 
 ### `flex-direction`
-```
-```
 
 ### `flex-wrap`
-```
-```
 
 ### `justify-content`
-```
-```
 
 ### `align-content`
-```
-```
 
 ### `align-items`
-```
-```
 
 ### `align-self`
-```
-```
 
 ### `order`
 ```
@@ -95,8 +65,6 @@
 ## Box Structure
 
 ### `box-sizing`
-```
-```
 
 ### `width`
 ```
@@ -149,74 +117,26 @@
 ```
 
 ### `font-size`
-```
-```
 
 ### `font-family`
-```
-```
 
 ### `line-height`
-```
-.-lh-n    normal
-.-lh-z    0
-```
 
 ### `letter-spacing`
-```
-.-ls-n    normal
-.-ls-z    0
-```
 
 ### `word-spacing`
-```
-.-ws-n    normal
-.-ws-z    0
-```
 
 ### `text-align`
-```
-.-ta-l    left
-.-ta-r    right
-.-ta-c    center
-.-ta-j    justify
-```
 
 ### `text-indent`
-```
-.-ti-z    0
-```
 
 ### `white-space`
-```
-.-sp-n     normal
-.-sp-nw    nowrap
-.-sp-pr    pre
-.-sp-pw    pre-wrap
-.-sp-pl    pre-line
-```
 
 ### `overflow-wrap`
-```
-.-ww-n    normal
-.-ww-b    break-word
-```
 
 ### `column-count`
-```
-.-cc-a    auto
-.-cc-1    1
-.-cc-2    2
-.-cc-3    3
-.-cc-4    4
-.-cc-5    5
-.-cc-6    6
-```
 
 ### `column-width`
-```
-.-cw-a    auto
-```
 
 ### `page-break-[before|after]`
 ```
@@ -224,10 +144,6 @@
 ```
 (for `-before` or `-after`, respectively)
 ```
--a    auto
--t    always
--f    avoid
-
 NOTE: no support for any media queries
 ```
 
@@ -239,58 +155,26 @@ NOTE: no support for any media queries
 .-rls  .-rrs  .-rts  .-rbs  .-rhs  .-rvs  .-ras
 ```
 (for `-left`, `-right`, `-top`, `-bottom`, ‘horizontal’, ‘vertical’, or ‘all’, respectively)
-```
--n     none
--h     hidden
--s     solid
--do    dotted
--da    dashed
--db    double
--gv    groove
--rg    ridge
--is    inset
--os    outset
-```
 
 ### `border-*-color`
 ```
 .-rlc  .-rrc  .-rtc  .-rbc  .-rhc  .-rvc  .-rac
 ```
 (for `-left`, `-right`, `-top`, `-bottom`, ‘horizontal’, ‘vertical’, or ‘all’, respectively)
-```
--t    transparent
--c    currentColor
--b    #000000
--w    #ffffff
-```
 
 ### `background-image`
-```
-```
 
 ### `background-position`
-```
-```
 
 ### `background-size`
-```
-```
 
 ### `background-repeat`
-```
-```
 
 ### `background-attachment`
-```
-```
 
 ### `background-origin`
-```
-```
 
 ### `background-clip`
-```
-```
 
 ### `background-color`
 ```
@@ -298,8 +182,6 @@ NOTE: no support for any media queries
 ```
 
 ### `box-shadow`
-```
-```
 
 ### `overflow`
 ```
