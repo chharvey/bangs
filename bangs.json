@@ -952,6 +952,25 @@
       }
     }
   , {
+      "name": "column-width"
+    , "code": "cw"
+    , "summary": "Suggests the optimal width for columns of content."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/column-width"
+    , "inherited": false
+    , "initial": "auto"
+    , "category": 2
+    , "stability": 2
+    , "values": [
+        { "name" : "initial",               "use" : [".column-width(initial)"] }
+      , { "name" : "inherit",               "use" : [".column-width(inherit)"] }
+      , { "name" : "auto"   , "code" : "a"                                     }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
       "name": "border-style"
     , "code": {
         "left"       : "rls"
