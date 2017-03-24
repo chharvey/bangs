@@ -909,6 +909,24 @@
       }
     }
   , {
+      "name": "overflow-wrap"
+    , "code": "ww"
+    , "summary": "Specifies whether words can be broken and wrapped to prevent overflow."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap"
+    , "inherited": true
+    , "initial": "normal"
+    , "category": 2
+    , "stability": 1
+    , "values": [
+        { "name" : "normal"    , "code" : "n", "use": ["word-wrap: normal"    , "overflow-wrap: normal"] }
+      , { "name" : "break-word", "code" : "b", "use": ["word-wrap: break-word", "overflow-wrap: break-word"] }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
       "name": "border-style"
     , "code": {
         "left"       : "rls"
