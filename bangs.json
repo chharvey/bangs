@@ -888,6 +888,27 @@
       }
     }
   , {
+      "name": "white-space"
+    , "code": "sp"
+    , "summary": "Determines how white space in source code is rendered."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/white-space"
+    , "inherited": true
+    , "initial": "normal"
+    , "category": 2
+    , "stability": 3
+    , "values": [
+        { "name" : "normal"  , "code" : "n"  }
+      , { "name" : "nowrap"  , "code" : "nw" }
+      , { "name" : "pre"     , "code" : "pr" }
+      , { "name" : "pre-wrap", "code" : "pw" }
+      , { "name" : "pre-line", "code" : "pl" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
       "name": "border-style"
     , "code": {
         "left"       : "rls"
