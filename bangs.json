@@ -851,6 +851,26 @@
       }
     }
   , {
+      "name": "text-align"
+    , "code": "ta"
+    , "summary": "Horizontally aligns text in a block."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/text-align"
+    , "inherited": true
+    , "initial": "left"
+    , "category": 2
+    , "stability": 3
+    , "values": [
+        { "name" : "left"   , "code" : "l" }
+      , { "name" : "right"  , "code" : "r" }
+      , { "name" : "center" , "code" : "c" }
+      , { "name" : "justify", "code" : "j" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
       "name": "border-style"
     , "code": {
         "left"       : "rls"
