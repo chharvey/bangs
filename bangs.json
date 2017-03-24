@@ -971,6 +971,36 @@
       }
     }
   , {
+      "name": "page-break-before"
+    , "code": "pbb"
+    , "summary": "Defines a page-break before an element."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/page-break-before"
+    , "inherited": false
+    , "initial": "auto"
+    , "category": 2
+    , "stability": 1
+    , "values": [
+        { "name": "auto"  , "code": "a" }
+      , { "name": "always", "code": "t" }
+      , { "name": "avoid" , "code": "f" }
+      ]
+    }
+  , {
+      "name": "page-break-after"
+    , "code": "pba"
+    , "summary": "Defines a page-break after an element."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/page-break-after"
+    , "inherited": false
+    , "initial": "auto"
+    , "category": 2
+    , "stability": 1
+    , "values": [
+        { "name": "auto"  , "code": "a" }
+      , { "name": "always", "code": "t" }
+      , { "name": "avoid" , "code": "f" }
+      ]
+    }
+  , {
       "name": "border-style"
     , "code": {
         "left"       : "rls"
