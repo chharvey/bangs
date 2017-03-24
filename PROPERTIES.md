@@ -232,10 +232,5 @@ NOTE: no support for any media queries
 
 ### `color`
 ```
-.-c-t    transparent
-.-c-c    currentColor
-.-c-b    #000000
-.-c-w    #ffffff
-
 -h       true
 ```

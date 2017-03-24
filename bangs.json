@@ -1244,6 +1244,27 @@
       }
     }
   , {
+      "name": "color"
+    , "code": "c"
+    , "summary": "Sets the text color."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/color"
+    , "inherited": true
+    , "initial": ""
+    , "category": 4
+    , "stability": 3
+    , "values": [
+        { "name" : "transparent"  , "code" : "t" }
+      , { "name" : "currentColor" , "code" : "c" }
+      , { "name" : "#000000"      , "code" : "b" }
+      , { "name" : "#ffffff"      , "code" : "w" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      , "hover"  : true
+      }
+    }
+  , {
       "name": "text-transform"
     , "code": "tt"
     , "summary": "Capitalizes text."
