@@ -797,6 +797,24 @@
       }
     }
   , {
+      "name": "line-height"
+    , "code": "lh"
+    , "summary": "Sets the minimum height of line boxes."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/line-height"
+    , "inherited": true
+    , "initial": "normal"
+    , "category": 2
+    , "stability": 3
+    , "values": [
+        { "name" : "normal" , "code" : "n" }
+      , { "name" : "0"      , "code" : "z" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
       "name": "border-style"
     , "code": {
         "left"       : "rls"
