@@ -1265,6 +1265,27 @@
       }
     }
   , {
+      "name": "text-decoration"
+    , "code": "td"
+    , "summary": "Sets a line decoration to text."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration"
+    , "inherited": false
+    , "initial": "none"
+    , "category": 4
+    , "stability": 1
+    , "values": [
+        { "name" : "none"        , "code" : "n" }
+      , { "name" : "underline"   , "code" : "ul" }
+      , { "name" : "overline"    , "code" : "ol" }
+      , { "name" : "line-through", "code" : "lt" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      , "hover"  : true
+      }
+    }
+  , {
       "name": "list-style-type"
     , "code": "lst"
     , "summary": "Specifies the appearance of list item markers."
