@@ -225,14 +225,8 @@ NOTE: no support for any media queries
 ### `text-overflow`
 
 ### `list-style-type`
-```
-```
 
 ### `list-style-position`
-```
-.-lsp-os    outside
-.-lsp-is    inside
-```
 
 ### `list-style-image`
 ```

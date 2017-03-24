@@ -1349,5 +1349,23 @@
       , "print"  : true
       }
     }
+  , {
+      "name": "list-style-position"
+    , "code": "lsp"
+    , "summary": "Sets the position of list item markers."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position"
+    , "inherited": true
+    , "initial": "outside"
+    , "category": 4
+    , "stability": 3
+    , "values": [
+        { "name": "outside", "code": "os" }
+      , { "name": "inside" , "code": "is" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
   ]
 }
