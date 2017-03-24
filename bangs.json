@@ -1367,5 +1367,22 @@
       , "print"  : true
       }
     }
+  , {
+      "name": "list-style-image"
+    , "code": "lsi"
+    , "summary": "Sets the image used as list item markers."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-image"
+    , "inherited": true
+    , "initial": "none"
+    , "category": 4
+    , "stability": 3
+    , "values": [
+        { "name": "none", "code": "n" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
   ]
 }

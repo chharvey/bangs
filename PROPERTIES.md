@@ -229,9 +229,6 @@ NOTE: no support for any media queries
 ### `list-style-position`
 
 ### `list-style-image`
-```
-.-lsi-n     none
-```
 
 ### `color`
 ```
