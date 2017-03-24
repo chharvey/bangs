@@ -797,6 +797,210 @@
       }
     }
   , {
+      "name": "line-height"
+    , "code": "lh"
+    , "summary": "Sets the minimum height of line boxes."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/line-height"
+    , "inherited": true
+    , "initial": "normal"
+    , "category": 2
+    , "stability": 3
+    , "values": [
+        { "name" : "normal" , "code" : "n" }
+      , { "name" : "0"      , "code" : "z" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "letter-spacing"
+    , "code": "ls"
+    , "summary": "Sets the spacing between characters in text."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing"
+    , "inherited": true
+    , "initial": "normal"
+    , "category": 2
+    , "stability": 3
+    , "values": [
+        { "name" : "normal" , "code" : "n" }
+      , { "name" : "0"      , "code" : "z" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "word-spacing"
+    , "code": "ws"
+    , "summary": "Sets the spacing between tags and words in text."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing"
+    , "inherited": true
+    , "initial": "normal"
+    , "category": 2
+    , "stability": 3
+    , "values": [
+        { "name" : "normal" , "code" : "n" }
+      , { "name" : "0"      , "code" : "z" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "text-align"
+    , "code": "ta"
+    , "summary": "Horizontally aligns text in a block."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/text-align"
+    , "inherited": true
+    , "initial": "left"
+    , "category": 2
+    , "stability": 3
+    , "values": [
+        { "name" : "left"   , "code" : "l" }
+      , { "name" : "right"  , "code" : "r" }
+      , { "name" : "center" , "code" : "c" }
+      , { "name" : "justify", "code" : "j" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "text-indent"
+    , "code": "ti"
+    , "summary": "Leaves empty space before lines of text in a block."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent"
+    , "inherited": true
+    , "initial": "0"
+    , "category": 2
+    , "stability": 3
+    , "values": [
+        { "name" : "0", "code" : "z" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "white-space"
+    , "code": "sp"
+    , "summary": "Determines how white space in source code is rendered."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/white-space"
+    , "inherited": true
+    , "initial": "normal"
+    , "category": 2
+    , "stability": 3
+    , "values": [
+        { "name" : "normal"  , "code" : "n"  }
+      , { "name" : "nowrap"  , "code" : "nw" }
+      , { "name" : "pre"     , "code" : "pr" }
+      , { "name" : "pre-wrap", "code" : "pw" }
+      , { "name" : "pre-line", "code" : "pl" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "overflow-wrap"
+    , "code": "ww"
+    , "summary": "Specifies whether words can be broken and wrapped to prevent overflow."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap"
+    , "inherited": true
+    , "initial": "normal"
+    , "category": 2
+    , "stability": 1
+    , "values": [
+        { "name" : "normal"    , "code" : "n", "use": ["word-wrap: normal"    , "overflow-wrap: normal"] }
+      , { "name" : "break-word", "code" : "b", "use": ["word-wrap: break-word", "overflow-wrap: break-word"] }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "column-count"
+    , "code": "cc"
+    , "summary": "Sets the number of columns of content."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/column-count"
+    , "inherited": false
+    , "initial": "auto"
+    , "category": 2
+    , "stability": 2
+    , "values": [
+        { "name" : "inherit",               "use": [".column-count(inherit)"] }
+      , { "name" : "initial",               "use": [".column-count(initial)"] }
+      , { "name" : "auto"   , "code" : "a", "use": [".column-count(auto)"] }
+      , { "name" : "1"      , "code" : "1", "use": [".column-count(1)"] }
+      , { "name" : "2"      , "code" : "2", "use": [".column-count(2)"] }
+      , { "name" : "3"      , "code" : "3", "use": [".column-count(3)"] }
+      , { "name" : "4"      , "code" : "4", "use": [".column-count(4)"] }
+      , { "name" : "5"      , "code" : "5", "use": [".column-count(5)"] }
+      , { "name" : "6"      , "code" : "6", "use": [".column-count(6)"] }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "column-width"
+    , "code": "cw"
+    , "summary": "Suggests the optimal width for columns of content."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/column-width"
+    , "inherited": false
+    , "initial": "auto"
+    , "category": 2
+    , "stability": 2
+    , "values": [
+        { "name" : "initial",               "use" : [".column-width(initial)"] }
+      , { "name" : "inherit",               "use" : [".column-width(inherit)"] }
+      , { "name" : "auto"   , "code" : "a"                                     }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name": "page-break-before"
+    , "code": "pbb"
+    , "summary": "Defines a page-break before an element."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/page-break-before"
+    , "inherited": false
+    , "initial": "auto"
+    , "category": 2
+    , "stability": 1
+    , "values": [
+        { "name": "auto"  , "code": "a" }
+      , { "name": "always", "code": "t" }
+      , { "name": "avoid" , "code": "f" }
+      ]
+    }
+  , {
+      "name": "page-break-after"
+    , "code": "pba"
+    , "summary": "Defines a page-break after an element."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/page-break-after"
+    , "inherited": false
+    , "initial": "auto"
+    , "category": 2
+    , "stability": 1
+    , "values": [
+        { "name": "auto"  , "code": "a" }
+      , { "name": "always", "code": "t" }
+      , { "name": "avoid" , "code": "f" }
+      ]
+    }
+  , {
       "name": "border-style"
     , "code": {
         "left"       : "rls"
