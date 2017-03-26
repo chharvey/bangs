@@ -1,5 +1,16 @@
 doctype html
 html(lang="en")
+  mixin proptoc(args, inner)
+    //- NOTE parameter validation
+    -
+      var pages   = args.pages   || []
+      var depth   = +args.depth  || 0
+    ol&attributes(inner ? {} : { role: 'directory' })
+      each item in pages
+        li
+          a(href=item.url())= item.name()
+          if item.findAll().length && depth > 0
+            +proptoc({pages: item.findAll(), depth: depth-1}, true)
   block vars
     - let page = Docs.DOCS.find('/docs/index.html')
     mixin stabilityHn(stab)
@@ -9,19 +20,18 @@ html(lang="en")
       - let property = Docs.DATA.properties.find(function (p) { return p.name === property_name })
       - let stab = Docs.DATA.global.stability_indices[property.stability]
       section.c-Property(id=property.name)
-        h3
+        h4.-fz-giga
           = property.name
           a._fragid(href=`#${property.name}` aria-label="permalink")
         p.o-Alert(class=`t-stability-${stab.name}`)
           span.o-Alert__Hn.h-Block: +stabilityHn(stab)
           span.h-Block= stab.description
-        p: a(href=property.url)= property.summary
+        p: a(href=property.url rel="external")= property.summary
         dl.c-Property__Details
           dt Inherited#[sup: a(href="https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance" title="read about inherited properties") ?]:
           dd= property.inherited
           dt Initial Value#[sup: a(href="https://developer.mozilla.org/en-US/docs/Web/CSS/initial_value" title="read about initial values") ?]:
           dd: code= property.initial
-        h4 Classes
         dl.c-Property__Classes
             each val in Docs.DATA.global.values
               dt: code= `.-${property.code}-${val.code}`
@@ -105,6 +115,10 @@ html(lang="en")
       header
         h1= page.title() || page.name()
         p= page.description()
+        nav#table-contents
+          h2 Table of Contents
+          +proptoc({pages: page.findAll(), depth: 1})
+      div
         section
           h2 Stability Indices
           p.
@@ -122,72 +136,13 @@ html(lang="en")
                 dt.o-Alert__Hn: +stabilityHn(item)
                 dd= item.description
       section
-        h2 Layout
-        +propertyDoc('display')
-        +propertyDoc('position')
-        +propertyDoc('left')
-        +propertyDoc('right')
-        +propertyDoc('top')
-        +propertyDoc('bottom')
-        +propertyDoc('float')
-        +propertyDoc('clear')
-        +propertyDoc('z-index')
-        +propertyDoc('vertical-align')
-        +propertyDoc('flex-direction')
-        +propertyDoc('flex-wrap')
-        +propertyDoc('justify-content')
-        +propertyDoc('align-content')
-        +propertyDoc('align-items')
-        +propertyDoc('align-self')
-        +propertyDoc('order')
-        +propertyDoc('flex')
-      section
-        h2 Box Structure
-        +propertyDoc('box-sizing')
-        +propertyDoc('width')
-        +propertyDoc('margin')
-        +propertyDoc('padding')
-      section
-        h2 Text Structure
-        +propertyDoc('font-style')
-        +propertyDoc('font-variant')
-        +propertyDoc('font-weight')
-        +propertyDoc('font-size')
-        +propertyDoc('font-family')
-        +propertyDoc('line-height')
-        +propertyDoc('letter-spacing')
-        +propertyDoc('word-spacing')
-        +propertyDoc('text-align')
-        +propertyDoc('text-indent')
-        +propertyDoc('white-space')
-        +propertyDoc('overflow-wrap')
-        +propertyDoc('column-count')
-        +propertyDoc('column-width')
-        +propertyDoc('page-break-before')
-        +propertyDoc('page-break-after')
-      section
-        h2 Box Cosmetics
-        +propertyDoc('border-style')
-        +propertyDoc('border-color')
-        +propertyDoc('background-image')
-        +propertyDoc('background-position')
-        +propertyDoc('background-size')
-        +propertyDoc('background-repeat')
-        +propertyDoc('background-attachment')
-        +propertyDoc('background-origin')
-        +propertyDoc('background-clip')
-        +propertyDoc('background-color')
-        +propertyDoc('overflow')
-        +propertyDoc('opacity')
-        +propertyDoc('visibility')
-        +propertyDoc('box-shadow')
-      section
-        h2 Text Cosmetics
-        +propertyDoc('color')
-        +propertyDoc('text-transform')
-        +propertyDoc('text-decoration')
-        +propertyDoc('text-shadow')
-        +propertyDoc('text-overflow')
-        +propertyDoc('list-style-type')
-        +propertyDoc('list-style-position')
-        +propertyDoc('list-style-image')
+        h2 Properties
+        each subpage in page.findAll()
+          - let id = subpage.url().split('#')[1]
+          section(id=id)
+            h3
+              = subpage.name()
+              a._fragid(href=`#${id}` aria-label="permalink")
+            each propertypage in subpage.findAll()
+              +propertyDoc(propertypage.name())
+    a(href="#main" style="position:fixed;bottom:var(--vru);right:1rem;") skip to top
