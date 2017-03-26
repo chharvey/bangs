@@ -1,16 +1,26 @@
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
+    Bangs!
+\*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+/*================================*\
+    docs.less
+\*================================*/
+@import (reference) url('../../node_modules/xmeter/src/__tool.fontsize.less');
 main {
-  margin: 0 2rem;
+  margin: 0 1rem;
 }
-.o-Alert {
+.o-Alert,
+.c-Property__Classes {
   width: 66.667%;
   margin-left: auto;
   margin-right: auto;
+}
+.o-Alert {
   margin-bottom: var(--vru);
   padding: calc(~'var(--vru) / 2') 1rem;
-  font-size: 0.875rem;
-}
-.o-Alert > * {
-  --vru: calc(~'var(--line-height) * 0.875rem');
+  .font-size-mod(0.875);
 }
 .o-Alert__Hn {
   margin-bottom: var(--vru);
@@ -33,6 +43,11 @@ main {
   padding: calc(~'var(--vru) / 8') 0.25rem;
   font-variant: small-caps;
 }
+#ss-layout         { background-color: rgba(100%, 000%, 000%, 0.2); }
+#ss-box-structure  { background-color: rgba(100%, 050%, 000%, 0.2); }
+#ss-text-structure { background-color: rgba(100%, 100%, 000%, 0.2); }
+#ss-box-cosmetics  { background-color: rgba(050%, 100%, 000%, 0.2); }
+#ss-text-cosmetics { background-color: rgba(000%, 100%, 000%, 0.2); }
 .t-stability-obsolete     { background-color: black;   color: white; }
 .t-stability-deprecated   { background-color: #ff4b33; color: white; }
 .t-stability-experimental { background-color: #ffe433; }
