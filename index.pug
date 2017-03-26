@@ -6,27 +6,25 @@ html(lang="en")
       var description = 'This file lists information about each property and its supported values.'
     mixin propertyDoc(property_name)
       - var property = properties.find(function (p) { return p.name === property_name })
+      - let stab = global.stability_indices[property.stability]
       section(id=property.name)
         h3
           = property.name
           a._fragid(href=`#${property.name}` aria-label="permalink")
+        p.c-Stability.c-Stability--block(class=`c-Stability--${stab.name}`)
+          span.c-Stability__Hn.h-Block
+            span.c-Stability__Idx.h-Block= `Stability ${property.stability}:`
+            b.c-Stability__Kwd= `${stab.name.charAt(0).toUpperCase() + stab.name.slice(1)}`
+          span.h-Block= stab.description
+        p: a(href=property.url)= property.summary
         dl
-          dt Name
-          dd: a(href=property.url): code= property.name
-          dt Description
-          dd= property.summary
-          dt Inherited #[sup: a(href="https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance" title="read about inherited properties") ?]
+          dt Inherited #[sup: a(href="https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance" title="read about inherited properties") ?]:
           dd= property.inherited
-          dt Initial #[sup: a(href="https://developer.mozilla.org/en-US/docs/Web/CSS/initial_value" title="read about initial values") ?]
+          dt Initial Value #[sup: a(href="https://developer.mozilla.org/en-US/docs/Web/CSS/initial_value" title="read about initial values") ?]:
           dd: code= property.initial
-          if property.stability
-            dt Stability
-            dd
-              - let kwd = global.stability_indices[property.stability].name
-              span.c-Stability.c-Stability--inline(class=`c-Stability--${kwd}`)
-                b.c-Stability__Kwd= kwd
-          dt Classes
-          dd: dl
+        h4 Classes
+        div
+          dl
             each val in global.values
               dt: code= `.-${property.code}-${val.code}`
               dd: code= `${property.name}: ${val.name};`
@@ -113,11 +111,13 @@ html(lang="en")
             For example, the group of classes #[code .-d] (corresponding to the CSS property #[code display])
             might have Stability 4, but #[code .-d-fx] (for #[code display: flex]) could have Stability 3, and
             #[code .-d-il-nK] (for #[code display: inline] on extra-small screens) could have Stability 2.
-          ol.o-List.-w-2o3.-mh-a
-            each item in global.stability_indices
-              li.o-List__Item.c-Stability.c-Stability--block(class=`c-Stability--${item.name}`)
-                h3.c-Stability__Hn.c-Stability__Kwd= item.name
-                p= item.description
+          dl.o-List
+            each stab,index in global.stability_indices
+              li.o-List__Item.c-Stability.c-Stability--block(class=`c-Stability--${stab.name}`)
+                dt.c-Stability__Hn
+                  span.c-Stability__Idx.h-Block= `Stability ${index}:`
+                  b.c-Stability__Kwd= `${stab.name.charAt(0).toUpperCase() + stab.name.slice(1)}`
+                dd= stab.description
       section
         h2 Layout
         +propertyDoc('display')
