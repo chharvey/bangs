@@ -117,8 +117,73 @@ html(lang="en")
               li.o-List__Item.c-Stability.c-Stability--block(class=`c-Stability--${item.name}`)
                 h3.c-Stability__Hn.c-Stability__Kwd= item.name
                 p= item.description
-      each group in global.categories
-        section
-          h2= group
-          each prop in properties.filter(function (p) { return global.categories[p.category] === group })
-            +propertyDoc(prop)
+      section
+        h2 Layout
+        +propertyDoc(properties.find(function (p) { return p.name === 'display' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'position' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'left' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'right' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'top' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'bottom' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'float' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'clear' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'z-index' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'vertical-align' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'flex-direction' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'flex-wrap' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'justify-content' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'align-content' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'align-items' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'align-self' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'order' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'flex' }))
+      section
+        h2 Box Structure
+        +propertyDoc(properties.find(function (p) { return p.name === 'box-sizing' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'width' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'margin' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'padding' }))
+      section
+        h2 Text Structure
+        +propertyDoc(properties.find(function (p) { return p.name === 'font-style' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'font-variant' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'font-weight' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'font-size' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'font-family' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'line-height' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'letter-spacing' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'word-spacing' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'text-align' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'text-indent' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'white-space' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'overflow-wrap' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'column-count' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'column-width' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'page-break-before' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'page-break-after' }))
+      section
+        h2 Box Cosmetics
+        +propertyDoc(properties.find(function (p) { return p.name === 'border-style' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'border-color' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'background-image' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'background-position' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'background-size' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'background-repeat' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'background-attachment' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'background-origin' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'background-clip' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'background-color' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'overflow' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'opacity' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'visibility' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'box-shadow' }))
+      section
+        h2 Text Cosmetics
+        +propertyDoc(properties.find(function (p) { return p.name === 'color' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'text-transform' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'text-decoration' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'text-shadow' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'text-overflow' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'list-style-type' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'list-style-position' }))
+        +propertyDoc(properties.find(function (p) { return p.name === 'list-style-image' }))

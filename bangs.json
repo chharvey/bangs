@@ -20,13 +20,6 @@
     , { "name": "xlarge-" , "code": "nP", "breakpoint": { "em": 90, "px": 1440, "negative" : true } }
     , { "name": "hover"   , "code": "h"  }
     ]
-  , "categories": [
-      "Layout"
-    , "Box Structure"
-    , "Text Structure"
-    , "Box Cosmetics"
-    , "Text Cosmetics"
-    ]
   , "stability_indices": [
       { "name": "obsolete"    , "description": "This feature is no longer supported. Do not use it." }
     , { "name": "deprecated"  , "description": "Breaking changes are planned for this feature, or it will be removed in future versions. It is no longer in development, and should not be relied upon." }
@@ -43,7 +36,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/display"
     , "inherited": false
     , "initial": "inline"
-    , "category": 0
     , "stability": 3
     , "values": [
         { "name" : "none"               , "code" : "n"   }
@@ -81,7 +73,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/position"
     , "inherited": false
     , "initial": "static"
-    , "category": 0
     , "stability": 3
     , "values": [
         { "name" : "static"   , "code" : "s" }
@@ -102,7 +93,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/left"
     , "inherited": false
     , "initial": "auto"
-    , "category": 0
     , "stability": 3
     , "values": [
         { "name" : "auto" , "code" : "a" }
@@ -120,7 +110,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/right"
     , "inherited": false
     , "initial": "auto"
-    , "category": 0
     , "stability": 3
     , "values": [
         { "name" : "auto" , "code" : "a" }
@@ -138,7 +127,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/top"
     , "inherited": false
     , "initial": "auto"
-    , "category": 0
     , "stability": 3
     , "values": [
         { "name" : "auto" , "code" : "a" }
@@ -156,7 +144,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/bottom"
     , "inherited": false
     , "initial": "auto"
-    , "category": 0
     , "stability": 3
     , "values": [
         { "name" : "auto" , "code" : "a" }
@@ -174,7 +161,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/float"
     , "inherited": false
     , "initial": "none"
-    , "category": 0
     , "stability": 3
     , "values": [
         { "name" : "none"  , "code" : "n" }
@@ -193,7 +179,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/clear"
     , "inherited": false
     , "initial": "none"
-    , "category": 0
     , "stability": 3
     , "values": [
         { "name" : "none"  , "code" : "n" }
@@ -213,7 +198,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/z-index"
     , "inherited": false
     , "initial": "auto"
-    , "category": 0
     , "stability": 3
     , "values": [
         { "name" : "auto" , "code" : "a"  }
@@ -245,7 +229,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align"
     , "inherited": false
     , "initial": "baseline"
-    , "category": 0
     , "stability": 3
     , "values": [
         { "name" : "baseline"    , "code" : "a"  }
@@ -269,7 +252,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction"
     , "inherited": false
     , "initial": "row"
-    , "category": 0
     , "stability": 2
     , "values": [
         { "name" : "initial"        ,                 "use" : ".flex-direction(initial)"        }
@@ -291,7 +273,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap"
     , "inherited": false
     , "initial": "nowrap"
-    , "category": 0
     , "stability": 2
     , "values": [
         { "name" : "initial"      ,                "use" : ".flex-wrap(initial)"      }
@@ -312,7 +293,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content"
     , "inherited": false
     , "initial": "flex-start"
-    , "category": 0
     , "stability": 2
     , "values": [
         { "name" : "initial"       ,                 "use" : ".flex-justify-content(initial)"       }
@@ -335,7 +315,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/align-content"
     , "inherited": false
     , "initial": "stretch"
-    , "category": 0
     , "stability": 2
     , "values": [
         { "name" : "initial"       ,                 "use" : ".flex-align-content(initial)"       }
@@ -359,7 +338,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/align-items"
     , "inherited": false
     , "initial": "stretch"
-    , "category": 0
     , "stability": 2
     , "values": [
         { "name" : "initial"    ,                 "use" : ".flex-align-items(initial)"    }
@@ -382,7 +360,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/align-self"
     , "inherited": false
     , "initial": "auto"
-    , "category": 0
     , "stability": 2
     , "values": [
         { "name" : "initial"    ,                 "use" : ".flex-align-items(initial)"    }
@@ -406,7 +383,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/order"
     , "inherited": false
     , "initial": "0"
-    , "category": 0
     , "stability": 2
     , "values": [
         { "name" : "initial" ,                 "use" : ".flex-order(initial)" }
@@ -443,7 +419,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/flex"
     , "inherited": false
     , "initial": "0 1 auto"
-    , "category": 0
     , "stability": 2
     , "values": [
         { "name" : "auto"    , "code" : "a" }
@@ -507,7 +482,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing"
     , "inherited": false
     , "initial": "content-box"
-    , "category": 1
     , "stability": 3
     , "values": [
         { "name" : "content-box" , "code" : "c" }
@@ -525,7 +499,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/width"
     , "inherited": false
     , "initial": "auto"
-    , "category": 1
     , "stability": 3
     , "values": [
         { "name" : "auto" , "code" : "a" }
@@ -627,7 +600,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/margin"
     , "inherited": false
     , "initial": "0"
-    , "category": 1
     , "stability": 2
     , "values": [
         { "name" : "auto"    , "code" : "a" }
@@ -671,7 +643,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/padding"
     , "inherited": false
     , "initial": "0"
-    , "category": 1
     , "stability": 2
     , "values": [
         { "name" : "0"       , "code" : "z" }
@@ -699,7 +670,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-style"
     , "inherited": true
     , "initial": "normal"
-    , "category": 2
     , "stability": 3
     , "values": [
         { "name" : "normal" , "code" : "n" }
@@ -718,7 +688,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant"
     , "inherited": true
     , "initial": "normal"
-    , "category": 2
     , "stability": 3
     , "values": [
         { "name" : "normal"     , "code" : "n" }
@@ -737,7 +706,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight"
     , "inherited": true
     , "initial": "normal"
-    , "category": 2
     , "stability": 3
     , "values": [
         { "name" : "normal" , "code" : "n"   }
@@ -765,7 +733,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-size"
     , "inherited": true
     , "initial": "medium"
-    , "category": 2
     , "stability": 3
     , "values": [
         { "name" : "0" , "code" : "z" }
@@ -782,7 +749,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-family"
     , "inherited": true
     , "initial": ""
-    , "category": 2
     , "stability": 3
     , "values": [
         { "name" : "sans-serif" , "code" : "ss" }
@@ -803,7 +769,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/line-height"
     , "inherited": true
     , "initial": "normal"
-    , "category": 2
     , "stability": 3
     , "values": [
         { "name" : "normal" , "code" : "n" }
@@ -821,7 +786,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing"
     , "inherited": true
     , "initial": "normal"
-    , "category": 2
     , "stability": 3
     , "values": [
         { "name" : "normal" , "code" : "n" }
@@ -839,7 +803,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing"
     , "inherited": true
     , "initial": "normal"
-    , "category": 2
     , "stability": 3
     , "values": [
         { "name" : "normal" , "code" : "n" }
@@ -857,7 +820,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/text-align"
     , "inherited": true
     , "initial": "left"
-    , "category": 2
     , "stability": 2
     , "values": [
         { "name" : "left"   , "code" : "l" }
@@ -877,7 +839,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent"
     , "inherited": true
     , "initial": "0"
-    , "category": 2
     , "stability": 3
     , "values": [
         { "name" : "0", "code" : "z" }
@@ -894,7 +855,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/white-space"
     , "inherited": true
     , "initial": "normal"
-    , "category": 2
     , "stability": 3
     , "values": [
         { "name" : "normal"  , "code" : "n"  }
@@ -915,7 +875,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap"
     , "inherited": true
     , "initial": "normal"
-    , "category": 2
     , "stability": 1
     , "values": [
         { "name" : "normal"    , "code" : "n", "use": ["word-wrap: normal"    , "overflow-wrap: normal"] }
@@ -933,7 +892,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/column-count"
     , "inherited": false
     , "initial": "auto"
-    , "category": 2
     , "stability": 2
     , "values": [
         { "name" : "inherit",               "use": [".column-count(inherit)"] }
@@ -958,7 +916,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/column-width"
     , "inherited": false
     , "initial": "auto"
-    , "category": 2
     , "stability": 2
     , "values": [
         { "name" : "initial",               "use" : [".column-width(initial)"] }
@@ -977,7 +934,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/page-break-before"
     , "inherited": false
     , "initial": "auto"
-    , "category": 2
     , "stability": 1
     , "values": [
         { "name": "auto"  , "code": "a" }
@@ -992,7 +948,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/page-break-after"
     , "inherited": false
     , "initial": "auto"
-    , "category": 2
     , "stability": 1
     , "values": [
         { "name": "auto"  , "code": "a" }
@@ -1015,7 +970,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/border-style"
     , "inherited": false
     , "initial": "none"
-    , "category": 3
     , "stability": 2
     , "values": [
         { "name" : "none"   , "code" : "n"  }
@@ -1049,7 +1003,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/border-color"
     , "inherited": false
     , "initial": "currentColor"
-    , "category": 3
     , "stability": 2
     , "values": [
         { "name" : "transparent"  , "code" : "t" }
@@ -1069,7 +1022,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/background-image"
     , "inherited": false
     , "initial": "none"
-    , "category": 3
     , "stability": 3
     , "values": [
         { "name" : "none" , "code" : "n" }
@@ -1086,7 +1038,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/background-position"
     , "inherited": false
     , "initial": "0% 0%"
-    , "category": 3
     , "stability": 3
     , "values": [
         { "name" : "left"            , "code" : "l"  }
@@ -1116,7 +1067,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/background-size"
     , "inherited": false
     , "initial": "auto auto"
-    , "category": 3
     , "stability": 3
     , "values": [
         { "name" : "auto"    , "code" : "a" }
@@ -1135,7 +1085,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat"
     , "inherited": false
     , "initial": "repeat"
-    , "category": 3
     , "stability": 2
     , "values": [
         { "name" : "no-repeat" , "code" : "n" }
@@ -1155,7 +1104,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment"
     , "inherited": false
     , "initial": "scroll"
-    , "category": 3
     , "stability": 3
     , "values": [
         { "name" : "scroll" , "code" : "s" }
@@ -1174,7 +1122,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin"
     , "inherited": false
     , "initial": "padding-box"
-    , "category": 3
     , "stability": 3
     , "values": [
         { "name" : "content-box" , "code" : "c" }
@@ -1193,7 +1140,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip"
     , "inherited": false
     , "initial": "border-box"
-    , "category": 3
     , "stability": 3
     , "values": [
         { "name" : "content-box" , "code" : "c" }
@@ -1212,7 +1158,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/background-color"
     , "inherited": false
     , "initial": "transparent"
-    , "category": 3
     , "stability": 3
     , "values": [
         { "name" : "transparent"  , "code" : "t" }
@@ -1233,7 +1178,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/overflow"
     , "inherited": false
     , "initial": "visible"
-    , "category": 3
     , "stability": 3
     , "values": [
         { "name" : "auto"   , "code" : "a" }
@@ -1253,7 +1197,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/opacity"
     , "inherited": false
     , "initial": "1.0"
-    , "category": 3
     , "stability": 3
     , "values": [
         { "name" : "0.0", "code" : "z" }
@@ -1273,7 +1216,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/visibility"
     , "inherited": true
     , "initial": "visible"
-    , "category": 3
     , "stability": 3
     , "values": [
         { "name" : "visible" , "code" : "v" }
@@ -1292,7 +1234,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow"
     , "inherited": false
     , "initial": "none"
-    , "category": 3
     , "stability": 3
     , "values": [
         { "name" : "none" , "code" : "n" }
@@ -1309,7 +1250,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/color"
     , "inherited": true
     , "initial": ""
-    , "category": 4
     , "stability": 3
     , "values": [
         { "name" : "transparent"  , "code" : "t" }
@@ -1330,7 +1270,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform"
     , "inherited": true
     , "initial": "none"
-    , "category": 4
     , "stability": 3
     , "values": [
         { "name" : "none"      , "code" : "n" }
@@ -1351,7 +1290,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration"
     , "inherited": false
     , "initial": "none"
-    , "category": 4
     , "stability": 1
     , "values": [
         { "name" : "none"        , "code" : "n" }
@@ -1372,7 +1310,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow"
     , "inherited": true
     , "initial": "none"
-    , "category": 4
     , "stability": 3
     , "values": [
         { "name" : "none", "code" : "n" }
@@ -1389,7 +1326,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow"
     , "inherited": false
     , "initial": "clip"
-    , "category": 4
     , "stability": 3
     , "values": [
         { "name" : "clip"    , "code" : "c" }
@@ -1407,7 +1343,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type"
     , "inherited": true
     , "initial": "disc"
-    , "category": 4
     , "stability": 3
     , "values": [
         { "name": "none"                , "code": "n"  }
@@ -1436,7 +1371,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position"
     , "inherited": true
     , "initial": "outside"
-    , "category": 4
     , "stability": 3
     , "values": [
         { "name": "outside", "code": "os" }
@@ -1454,7 +1388,6 @@
     , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-image"
     , "inherited": true
     , "initial": "none"
-    , "category": 4
     , "stability": 3
     , "values": [
         { "name": "none", "code": "n" }
