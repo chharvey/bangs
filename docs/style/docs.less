@@ -11,6 +11,10 @@
 main {
   margin: 0 1rem;
 }
+a:hover {
+  text-decoration: underline; // HACK fallback
+  text-decoration-line: underline;
+}
 .o-Alert,
 .c-Property__Classes {
   width: 66.667%;
@@ -26,7 +30,6 @@ main {
   margin-bottom: var(--vru);
   text-align: center;
 }
-.c-Property__Details,
 .c-Property__Classes {
   display: -ms-grid;
   display:     grid;
@@ -53,17 +56,25 @@ main {
 .t-stability-experimental { background-color: #ffe433; }
 .t-stability-stable       { background-color: #9acc7a; }
 .t-stability-locked       { background-color: #99daff; }
-._fragid {
-  display: inline;
-  line-height: 0;
+
+#_skip-to-top {
+  position: fixed;
+  bottom: calc(~'var(--vru) / 2');
+  right: 1rem;
+}
+
+// TODO copied from xmeter@stage-v5.6.0; once published, import then delete
+.c-Permalink {
   margin-left: 1rem;
   font-weight: 100;
+  h1:hover > &,
+  h2:hover > &,
+  h3:hover > &,
+  h4:hover > &,
+  h5:hover > &,
+  h6:hover > & {
+    position: static; // HACK fallback
+    position: initial; // HACK fallback
+    position: unset; // unset `.h-Hidden`
+  }
 }
-._fragid::before { content: ''; }
-h1:hover > ._fragid::before,
-h2:hover > ._fragid::before,
-h3:hover > ._fragid::before,
-h4:hover > ._fragid::before,
-h5:hover > ._fragid::before,
-h6:hover > ._fragid::before,
-._fragid:focus::before { content: '\00a7'; }

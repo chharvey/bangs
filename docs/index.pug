@@ -22,16 +22,17 @@ html(lang="en")
       section.c-Property(id=property.name)
         h4.-fz-giga
           = property.name
-          a._fragid(href=`#${property.name}` aria-label="permalink")
+          //- TODO use Permalink Component from xmeter@5.6.0
+          a.c-Permalink.h-Inline.h-Hidden(href=`#${property.name}` aria-label="permalink") &sect;
         p.o-Alert(class=`t-stability-${stab.name}`)
           span.o-Alert__Hn.h-Block: +stabilityHn(stab)
           span.h-Block= stab.description
-        p: a(href=property.url rel="external")= property.summary
-        dl.c-Property__Details
-          dt Inherited#[sup: a(href="https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance" title="read about inherited properties") ?]:
-          dd= property.inherited
-          dt Initial Value#[sup: a(href="https://developer.mozilla.org/en-US/docs/Web/CSS/initial_value" title="read about initial values") ?]:
-          dd: code= property.initial
+        p
+          a(href=property.url rel="external")= property.summary
+          if property.inherited
+            small.c-Label.-tt-h.-tt-uc(style="background-color:#ff99c0;")
+              a(title="read about inherited properties" href="https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance" rel="external")
+                | inherited
         dl.c-Property__Classes
             each val in Docs.DATA.global.values
               dt: code= `.-${property.code}-${val.code}`
@@ -45,7 +46,9 @@ html(lang="en")
               dd
                 code= val.name
                 if val.name === property.initial
-                  small.c-Label.-tt-h.-tt-uc(style="background-color:#ff99c0;") initial value
+                  small.c-Label.-tt-h.-tt-uc(style="background-color:#ff99c0;")
+                    a(title="read about initial values" href="https://developer.mozilla.org/en-US/docs/Web/CSS/initial_value" rel="external")
+                      | initial value
   head
     title= page.title() || page.name()
     meta(charset="utf-8")
@@ -88,7 +91,8 @@ html(lang="en")
           section(id=id)
             h3
               = subpage.name()
-              a._fragid(href=`#${id}` aria-label="permalink")
+              //- TODO use Permalink Component from xmeter@5.6.0
+              a.c-Permalink.h-Inline.h-Hidden(href=`#${id}` aria-label="permalink") &sect;
             each propertypage in subpage.findAll()
               +propertyDoc(propertypage.name())
-    a(href="#main" style="position:fixed;bottom:var(--vru);right:1rem;") skip to top
+    a#_skip-to-top(href="#main") skip to top
