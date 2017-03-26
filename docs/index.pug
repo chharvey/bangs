@@ -64,11 +64,12 @@ html(lang="en")
       header
         h1= page.title() || page.name()
         p= page.description()
-        nav#table-contents
-          h2 Table of Contents
-          +proptoc({pages: page.findAll(), depth: 1})
-      div
-        section
+        nav#contents
+          h2 Contents
+          details
+            summary.-fz-mill show cotents
+            +proptoc({pages: page.findAll(), depth: 1})
+      aside
           h2 Stability Indices
           p.
             Please note the following stability indices.
@@ -95,4 +96,4 @@ html(lang="en")
               //- a.c-Permalink.h-Inline.h-Hidden(href=`#${id}` aria-label="permalink") &sect;
             each propertypage in subpage.findAll()
               +propertyDoc(propertypage.name())
-    a#_skip-to-top(href="#main") skip to top
+    a#_skip-to-top(href="#main") jump to top
