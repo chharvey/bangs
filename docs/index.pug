@@ -27,7 +27,7 @@ html(lang="en")
         blockquote.c-Property__Desc
           a(href=property.url rel="external")= property.summary
           if property.inherited
-            small.c-Label.-tt-h.-tt-uc(style="background-color:#ff99c0;")
+            small.c-Label.c-Label--inherited
               a(title="read about inherited properties" href="https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance" rel="external")
                 | inherited
         p.o-Alert(class=`t-stability-${stab.name}`)
@@ -46,7 +46,7 @@ html(lang="en")
               dd
                 code= val.name
                 if val.name === property.initial
-                  small.c-Label.-tt-h.-tt-uc(style="background-color:#ff99c0;")
+                  small.c-Label.c-Label--initial
                     a(title="read about initial values" href="https://developer.mozilla.org/en-US/docs/Web/CSS/initial_value" rel="external")
                       | initial value
   head
@@ -92,7 +92,7 @@ html(lang="en")
             h3
               = subpage.name()
               //- TODO use Permalink Component from xmeter@5.6.0
-              a.c-Permalink.h-Inline.h-Hidden(href=`#${id}` aria-label="permalink") &sect;
+              //- a.c-Permalink.h-Inline.h-Hidden(href=`#${id}` aria-label="permalink") &sect;
             each propertypage in subpage.findAll()
               +propertyDoc(propertypage.name())
     a#_skip-to-top(href="#main") skip to top

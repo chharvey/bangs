@@ -7,6 +7,7 @@
 /*================================*\
     docs.less
 \*================================*/
+@import (reference) url('../../node_modules/xmeter/src/__tool.borders.less');
 @import (reference) url('../../node_modules/xmeter/src/__tool.fontsize.less');
 a:hover {
   text-decoration: underline; // HACK fallback
@@ -45,6 +46,11 @@ a:hover {
   padding: calc(~'var(--vru) / 8') 0.25rem;
   font-variant: small-caps;
 }
+.c-Label--inherited,
+.c-Label--initial {
+  text-transform: uppercase;
+  background-color: #ff99c0;
+}
 @color-ss-layout        : spin(hsl(0 * 72, 100%, 50%), -36);
 @color-ss-box-structure : spin(hsl(1 * 72, 100%, 50%), -36);
 @color-ss-text-structure: spin(hsl(2 * 72, 100%, 50%), -36);
@@ -56,6 +62,13 @@ a:hover {
 #ss-box-cosmetics ,
 #ss-text-cosmetics {
   padding: var(--vru) 1rem;
+  & > h3 {
+    .border-vert(bottom, 2px);
+    border-style: solid;
+    border-color: fadeout(black, 50%);
+    padding-bottom: calc(~'var(--vru) / 4');
+    text-align: center;
+  }
 }
 #ss-layout         { background: linear-gradient(to bottom, lighten(@color-ss-layout        , 90%, relative), lighten(spin(@color-ss-layout        , 36), 75%, relative)); }
 #ss-box-structure  { background: linear-gradient(to bottom, lighten(@color-ss-box-structure , 90%, relative), lighten(spin(@color-ss-box-structure , 36), 75%, relative)); }
