@@ -8,22 +8,23 @@
     docs.less
 \*================================*/
 @import (reference) url('../../node_modules/xmeter/src/__tool.fontsize.less');
-main {
-  margin: 0 1rem;
-}
 a:hover {
   text-decoration: underline; // HACK fallback
   text-decoration-line: underline;
 }
 .o-Alert,
+.c-Property__Desc,
 .c-Property__Classes {
   width: 66.667%;
   margin-left: auto;
   margin-right: auto;
 }
+.o-Alert,
+.c-Property__Classes {
+  padding: calc(~'var(--vru) / 2') 1rem;
+}
 .o-Alert {
   margin-bottom: var(--vru);
-  padding: calc(~'var(--vru) / 2') 1rem;
   .font-size-mod(0.875);
 }
 .o-Alert__Hn {
@@ -35,22 +36,32 @@ a:hover {
   display:     grid;
   -ms-grid-template-columns: 200px auto;
       grid-template-columns: 200px auto;
-}
-.c-Property__Classes {
   max-height: 300px;
   overflow: scroll;
-  background-color: #eee;
+  background-color: fadeout(white, 50%);
 }
 .c-Label {
   margin-left: 1rem;
   padding: calc(~'var(--vru) / 8') 0.25rem;
   font-variant: small-caps;
 }
-#ss-layout         { background-color: rgba(100%, 000%, 000%, 0.2); }
-#ss-box-structure  { background-color: rgba(100%, 050%, 000%, 0.2); }
-#ss-text-structure { background-color: rgba(100%, 100%, 000%, 0.2); }
-#ss-box-cosmetics  { background-color: rgba(050%, 100%, 000%, 0.2); }
-#ss-text-cosmetics { background-color: rgba(000%, 100%, 000%, 0.2); }
+@color-ss-layout        : spin(hsl(0 * 72, 100%, 50%), -36);
+@color-ss-box-structure : spin(hsl(1 * 72, 100%, 50%), -36);
+@color-ss-text-structure: spin(hsl(2 * 72, 100%, 50%), -36);
+@color-ss-box-cosmetics : spin(hsl(3 * 72, 100%, 50%), -36);
+@color-ss-text-cosmetics: spin(hsl(4 * 72, 100%, 50%), -36);
+#ss-layout        ,
+#ss-box-structure ,
+#ss-text-structure,
+#ss-box-cosmetics ,
+#ss-text-cosmetics {
+  padding: var(--vru) 1rem;
+}
+#ss-layout         { background: linear-gradient(to bottom, lighten(@color-ss-layout        , 90%, relative), lighten(spin(@color-ss-layout        , 36), 75%, relative)); }
+#ss-box-structure  { background: linear-gradient(to bottom, lighten(@color-ss-box-structure , 90%, relative), lighten(spin(@color-ss-box-structure , 36), 75%, relative)); }
+#ss-text-structure { background: linear-gradient(to bottom, lighten(@color-ss-text-structure, 90%, relative), lighten(spin(@color-ss-text-structure, 36), 75%, relative)); }
+#ss-box-cosmetics  { background: linear-gradient(to bottom, lighten(@color-ss-box-cosmetics , 90%, relative), lighten(spin(@color-ss-box-cosmetics , 36), 75%, relative)); }
+#ss-text-cosmetics { background: linear-gradient(to bottom, lighten(@color-ss-text-cosmetics, 90%, relative), lighten(spin(@color-ss-text-cosmetics, 36), 75%, relative)); }
 .t-stability-obsolete     { background-color: black;   color: white; }
 .t-stability-deprecated   { background-color: #ff4b33; color: white; }
 .t-stability-experimental { background-color: #ffe433; }
