@@ -5,7 +5,7 @@
   "main": "bangs.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pug:root": "pug -O bangs.json index.pug",
+    "pug:docs": "pug -O docs/_models/options.js docs/index.pug",
     "lessc:bangs": "lessc bangs.less bangs.css",
     "lessc:all": "npm run lessc:bangs",
     "minify": "cleancss bangs.css -o bangs.min.css",
@@ -29,6 +29,7 @@
   "devDependencies": {
     "clean-css": "^3.4.5",
     "less": "^2.5.3",
+    "sitepage": "^1.0.0",
     "xmeter": "^5.3.1"
   }
 }

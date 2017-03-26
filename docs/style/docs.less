@@ -1,0 +1,104 @@
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
+    Bangs!
+\*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+/*================================*\
+    docs.less
+\*================================*/
+@import (reference) url('../../node_modules/xmeter/src/__tool.borders.less');
+@import (reference) url('../../node_modules/xmeter/src/__tool.fontsize.less');
+a:hover {
+  text-decoration: underline; // HACK fallback
+  text-decoration-line: underline;
+}
+.o-Alert,
+.c-Property__Desc,
+.c-Property__Classes {
+  width: 66.667%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.o-Alert,
+.c-Property__Classes {
+  padding: calc(~'var(--vru) / 2') 1rem;
+}
+.o-Alert {
+  margin-bottom: var(--vru);
+  .font-size-mod(0.875);
+}
+.o-Alert__Hn {
+  margin-bottom: var(--vru);
+  text-align: center;
+}
+.c-Property__Classes {
+  display: -ms-grid;
+  display:     grid;
+  -ms-grid-template-columns: 200px auto;
+      grid-template-columns: 200px auto;
+  max-height: 300px;
+  overflow: scroll;
+  background-color: fadeout(white, 50%);
+}
+.c-Label {
+  margin-left: 1rem;
+  padding: calc(~'var(--vru) / 8') 0.25rem;
+  font-variant: small-caps;
+}
+.c-Label--inherited,
+.c-Label--initial {
+  text-transform: uppercase;
+  background-color: #ff99c0;
+}
+@color-ss-layout        : spin(hsl(0 * 72, 100%, 50%), -36);
+@color-ss-box-structure : spin(hsl(1 * 72, 100%, 50%), -36);
+@color-ss-text-structure: spin(hsl(2 * 72, 100%, 50%), -36);
+@color-ss-box-cosmetics : spin(hsl(3 * 72, 100%, 50%), -36);
+@color-ss-text-cosmetics: spin(hsl(4 * 72, 100%, 50%), -36);
+#ss-layout        ,
+#ss-box-structure ,
+#ss-text-structure,
+#ss-box-cosmetics ,
+#ss-text-cosmetics {
+  padding: var(--vru) 1rem;
+  & > h3 {
+    .border-vert(bottom, 2px);
+    border-style: solid;
+    border-color: fadeout(black, 50%);
+    padding-bottom: calc(~'var(--vru) / 4');
+    text-align: center;
+  }
+}
+#ss-layout         { background: linear-gradient(to bottom, lighten(@color-ss-layout        , 90%, relative), lighten(spin(@color-ss-layout        , 36), 75%, relative)); }
+#ss-box-structure  { background: linear-gradient(to bottom, lighten(@color-ss-box-structure , 90%, relative), lighten(spin(@color-ss-box-structure , 36), 75%, relative)); }
+#ss-text-structure { background: linear-gradient(to bottom, lighten(@color-ss-text-structure, 90%, relative), lighten(spin(@color-ss-text-structure, 36), 75%, relative)); }
+#ss-box-cosmetics  { background: linear-gradient(to bottom, lighten(@color-ss-box-cosmetics , 90%, relative), lighten(spin(@color-ss-box-cosmetics , 36), 75%, relative)); }
+#ss-text-cosmetics { background: linear-gradient(to bottom, lighten(@color-ss-text-cosmetics, 90%, relative), lighten(spin(@color-ss-text-cosmetics, 36), 75%, relative)); }
+.t-stability-obsolete     { background-color: black;   color: white; }
+.t-stability-deprecated   { background-color: #ff4b33; color: white; }
+.t-stability-experimental { background-color: #ffe433; }
+.t-stability-stable       { background-color: #9acc7a; }
+.t-stability-locked       { background-color: #99daff; }
+
+#_skip-to-top {
+  position: fixed;
+  bottom: calc(~'var(--vru) / 2');
+  right: 1rem;
+}
+
+// TODO copied from xmeter@stage-v5.6.0; once published, import then delete
+.c-Permalink {
+  margin-left: 1rem;
+  font-weight: 100;
+  h1:hover > &,
+  h2:hover > &,
+  h3:hover > &,
+  h4:hover > &,
+  h5:hover > &,
+  h6:hover > & {
+    position: static; // HACK fallback
+    position: initial; // HACK fallback
+    position: unset; // unset `.h-Hidden`
+  }
+}
