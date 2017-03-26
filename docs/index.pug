@@ -1,15 +1,13 @@
 doctype html
 html(lang="en")
   block vars
-    -
-      var title = 'Bangs!'
-      var description = 'This file lists information about each property and its supported values.'
+    - let page = Docs.DOCS.find('/docs/index.html')
     mixin stabilityHn(stab)
-      span.h-Block.-ps-a= `Stability ${global.stability_indices.indexOf(stab)}:`
+      span.h-Block.-ps-a= `Stability ${Docs.DATA.global.stability_indices.indexOf(stab)}:`
       b.-tt-h.-tt-uc= `${stab.name.charAt(0).toUpperCase() + stab.name.slice(1)}`
     mixin propertyDoc(property_name)
-      - var property = properties.find(function (p) { return p.name === property_name })
-      - let stab = global.stability_indices[property.stability]
+      - let property = Docs.DATA.properties.find(function (p) { return p.name === property_name })
+      - let stab = Docs.DATA.global.stability_indices[property.stability]
       section.c-Property(id=property.name)
         h3
           = property.name
@@ -25,27 +23,27 @@ html(lang="en")
           dd: code= property.initial
         h4 Classes
         dl.c-Property__Classes
-            each val in global.values
+            each val in Docs.DATA.global.values
               dt: code= `.-${property.code}-${val.code}`
               dd: code= val.name
-            each val in property.values.filter(function (v) { return global.values.every(function (u) { return u.name !== v.name }) })
+            each val in property.values.filter(function (v) { return Docs.DATA.global.values.every(function (u) { return u.name !== v.name }) })
               dt
                 code= `.-${property.code}-${val.code}`
                 if val.stability
-                  - let kwd = global.stability_indices[val.stability].name
+                  - let kwd = Docs.DATA.global.stability_indices[val.stability].name
                   small.c-Label(class=`t-stability-${kwd}`): b= kwd
               dd
                 code= val.name
                 if val.name === property.initial
                   small.c-Label.-tt-h.-tt-uc(style="background-color:#ff99c0;") initial value
   head
-    title= title
+    title= page.title() || page.name()
     meta(charset="utf-8")
-    meta(name="description" content=description)
+    meta(name="description" content=page.description())
     meta(name="viewport" content="width=device-width, initial-scale=1")
     block styles
       link(rel="stylesheet" href="https://cdn.rawgit.com/chharvey/xmeter/master/xmeter.min.css")
-      link(rel="stylesheet" href="./bangs.css")
+      link(rel="stylesheet" href="../bangs.css")
       style.
         main {
           margin: 0 2rem;
@@ -105,8 +103,8 @@ html(lang="en")
     a.h-Hidden(href="#main") skip to main content
     main.docs-main#main
       header
-        h1= title
-        p= description
+        h1= page.title() || page.name()
+        p= page.description()
         section
           h2 Stability Indices
           p.
@@ -119,7 +117,7 @@ html(lang="en")
             might have Stability 4, but #[code .-d-fx] (for #[code display: flex]) could have Stability 3, and
             #[code .-d-il-nK] (for #[code display: inline] on extra-small screens) could have Stability 2.
           dl.o-List
-            each item in global.stability_indices
+            each item in Docs.DATA.global.stability_indices
               li.o-List__Item.o-Alert(class=`t-stability-${item.name}`)
                 dt.o-Alert__Hn: +stabilityHn(item)
                 dd= item.description
