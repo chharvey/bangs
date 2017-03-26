@@ -4,38 +4,40 @@ html(lang="en")
     -
       var title = 'Bangs!'
       var description = 'This file lists information about each property and its supported values.'
+    mixin stabilityHn(stab)
+      span.h-Block.-ps-a= `Stability ${global.stability_indices.indexOf(stab)}:`
+      b.-tt-h.-tt-uc= `${stab.name.charAt(0).toUpperCase() + stab.name.slice(1)}`
     mixin propertyDoc(property_name)
       - var property = properties.find(function (p) { return p.name === property_name })
       - let stab = global.stability_indices[property.stability]
-      section(id=property.name)
+      section.c-Property(id=property.name)
         h3
           = property.name
           a._fragid(href=`#${property.name}` aria-label="permalink")
-        p.c-Stability.c-Stability--block(class=`c-Stability--${stab.name}`)
-          span.c-Stability__Hn.h-Block
-            span.c-Stability__Idx.h-Block= `Stability ${property.stability}:`
-            b.c-Stability__Kwd= `${stab.name.charAt(0).toUpperCase() + stab.name.slice(1)}`
+        p.o-Alert(class=`t-stability-${stab.name}`)
+          span.o-Alert__Hn.h-Block: +stabilityHn(stab)
           span.h-Block= stab.description
         p: a(href=property.url)= property.summary
-        dl
-          dt Inherited #[sup: a(href="https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance" title="read about inherited properties") ?]:
+        dl.c-Property__Details
+          dt Inherited#[sup: a(href="https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance" title="read about inherited properties") ?]:
           dd= property.inherited
-          dt Initial Value #[sup: a(href="https://developer.mozilla.org/en-US/docs/Web/CSS/initial_value" title="read about initial values") ?]:
+          dt Initial Value#[sup: a(href="https://developer.mozilla.org/en-US/docs/Web/CSS/initial_value" title="read about initial values") ?]:
           dd: code= property.initial
         h4 Classes
-        div
-          dl
+        dl.c-Property__Classes
             each val in global.values
               dt: code= `.-${property.code}-${val.code}`
-              dd: code= `${property.name}: ${val.name};`
+              dd: code= val.name
             each val in property.values.filter(function (v) { return global.values.every(function (u) { return u.name !== v.name }) })
               dt
                 code= `.-${property.code}-${val.code}`
                 if val.stability
                   - let kwd = global.stability_indices[val.stability].name
-                  small.c-Stability.c-Stability--inline(class=`c-Stability--${kwd}`)
-                    b.c-Stability__Kwd= kwd
-              dd: code= `${property.name}: ${val.name};`
+                  small.c-Label(class=`t-stability-${kwd}`): b= kwd
+              dd
+                code= val.name
+                if val.name === property.initial
+                  small.c-Label.-tt-h.-tt-uc(style="background-color:#ff99c0;") initial value
   head
     title= title
     meta(charset="utf-8")
@@ -45,41 +47,46 @@ html(lang="en")
       link(rel="stylesheet" href="https://cdn.rawgit.com/chharvey/xmeter/master/xmeter.min.css")
       link(rel="stylesheet" href="./bangs.css")
       style.
-        ol {
-          counter-reset: stability -1;
+        main {
+          margin: 0 2rem;
         }
-        .c-Stability--block {
-          padding: calc(var(--vru) / 2) 1rem;
+        .o-Alert {
+          width: 66.667%;
+          margin-left: auto;
+          margin-right: auto;
           margin-bottom: var(--vru);
+          padding: calc(var(--vru) / 2) 1rem;
+          font-size: 0.875rem;
         }
-        .c-Stability--block::before {
-          counter-increment: stability;
-          content: 'Stability ' counter(stability);
-          position: absolute;
+        .o-Alert > * {
+          --vru: calc(var(--line-height) * 0.875rem);
         }
-        .c-Stability--block h3,
-        .c-Stability--block p {
-          margin-bottom: 0;
-        }
-        .c-Stability--inline {
-          padding: calc(var(--vru) / 8) 0.25rem;
-        }
-        small.c-Stability--inline {
-          margin-left: 1rem;
-        }
-        .c-Stability--obsolete     { background-color: black;   color: white; }
-        .c-Stability--deprecated   { background-color: #ff4b33; color: white; }
-        .c-Stability--experimental { background-color: #ffe433; }
-        .c-Stability--stable       { background-color: #9acc7a; }
-        .c-Stability--locked       { background-color: #99daff; }
-        .c-Stability__Hn {
-          font-size: inherit;
-          line-height: inherit;
+        .o-Alert__Hn {
+          margin-bottom: var(--vru);
           text-align: center;
         }
-        .c-Stability__Kwd {
-          text-transform: uppercase;
+        .c-Property__Details,
+        .c-Property__Classes {
+          display: -ms-grid;
+          display:     grid;
+          -ms-grid-template-columns: 200px auto;
+              grid-template-columns: 200px auto;
         }
+        .c-Property__Classes {
+          max-height: 300px;
+          overflow: scroll;
+          background-color: #eee;
+        }
+        .c-Label {
+          margin-left: 1rem;
+          padding: calc(var(--vru) / 8) 0.25rem;
+          font-variant: small-caps;
+        }
+        .t-stability-obsolete     { background-color: black;   color: white; }
+        .t-stability-deprecated   { background-color: #ff4b33; color: white; }
+        .t-stability-experimental { background-color: #ffe433; }
+        .t-stability-stable       { background-color: #9acc7a; }
+        .t-stability-locked       { background-color: #99daff; }
         ._fragid {
           display: inline;
           line-height: 0;
@@ -112,12 +119,10 @@ html(lang="en")
             might have Stability 4, but #[code .-d-fx] (for #[code display: flex]) could have Stability 3, and
             #[code .-d-il-nK] (for #[code display: inline] on extra-small screens) could have Stability 2.
           dl.o-List
-            each stab,index in global.stability_indices
-              li.o-List__Item.c-Stability.c-Stability--block(class=`c-Stability--${stab.name}`)
-                dt.c-Stability__Hn
-                  span.c-Stability__Idx.h-Block= `Stability ${index}:`
-                  b.c-Stability__Kwd= `${stab.name.charAt(0).toUpperCase() + stab.name.slice(1)}`
-                dd= stab.description
+            each item in global.stability_indices
+              li.o-List__Item.o-Alert(class=`t-stability-${item.name}`)
+                dt.o-Alert__Hn: +stabilityHn(item)
+                dd= item.description
       section
         h2 Layout
         +propertyDoc('display')
