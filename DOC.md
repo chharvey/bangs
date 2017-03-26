@@ -64,7 +64,7 @@ no appendage | all media queries                                  | all properti
 `-nG`        | `@media not all and (min-width: 60em)` (medium-)   | display
 `-nT`        | `@media not all and (min-width: 75em)` (large-)    | display
 `-nP`        | `@media not all and (min-width: 90em)` (x-large-)  | none so far
-`-h`         | pseudo-classes `:hover` and `:focus`               | font-[style&#x007c;variant&#x007c;weight], background-color, opacity, text-[transform&#x007c;decoration], color
+`-h`         | pseudo-classes `:hover` and `:focus`               | font-[style&#x007c;variant&#x007c;weight], background-color, opacity, color, text-[transform&#x007c;decoration]
 
 ## Examples
 

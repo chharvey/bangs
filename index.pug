@@ -4,7 +4,8 @@ html(lang="en")
     -
       var title = 'Bangs!'
       var description = 'This file lists information about each property and its supported values.'
-    mixin propertyDoc(property)
+    mixin propertyDoc(property_name)
+      - var property = properties.find(function (p) { return p.name === property_name })
       section(id=property.name)
         h3
           = property.name
@@ -117,8 +118,73 @@ html(lang="en")
               li.o-List__Item.c-Stability.c-Stability--block(class=`c-Stability--${item.name}`)
                 h3.c-Stability__Hn.c-Stability__Kwd= item.name
                 p= item.description
-      each group in global.categories
-        section
-          h2= group
-          each prop in properties.filter(function (p) { return global.categories[p.category] === group })
-            +propertyDoc(prop)
+      section
+        h2 Layout
+        +propertyDoc('display')
+        +propertyDoc('position')
+        +propertyDoc('left')
+        +propertyDoc('right')
+        +propertyDoc('top')
+        +propertyDoc('bottom')
+        +propertyDoc('float')
+        +propertyDoc('clear')
+        +propertyDoc('z-index')
+        +propertyDoc('vertical-align')
+        +propertyDoc('flex-direction')
+        +propertyDoc('flex-wrap')
+        +propertyDoc('justify-content')
+        +propertyDoc('align-content')
+        +propertyDoc('align-items')
+        +propertyDoc('align-self')
+        +propertyDoc('order')
+        +propertyDoc('flex')
+      section
+        h2 Box Structure
+        +propertyDoc('box-sizing')
+        +propertyDoc('width')
+        +propertyDoc('margin')
+        +propertyDoc('padding')
+      section
+        h2 Text Structure
+        +propertyDoc('font-style')
+        +propertyDoc('font-variant')
+        +propertyDoc('font-weight')
+        +propertyDoc('font-size')
+        +propertyDoc('font-family')
+        +propertyDoc('line-height')
+        +propertyDoc('letter-spacing')
+        +propertyDoc('word-spacing')
+        +propertyDoc('text-align')
+        +propertyDoc('text-indent')
+        +propertyDoc('white-space')
+        +propertyDoc('overflow-wrap')
+        +propertyDoc('column-count')
+        +propertyDoc('column-width')
+        +propertyDoc('page-break-before')
+        +propertyDoc('page-break-after')
+      section
+        h2 Box Cosmetics
+        +propertyDoc('border-style')
+        +propertyDoc('border-color')
+        +propertyDoc('background-image')
+        +propertyDoc('background-position')
+        +propertyDoc('background-size')
+        +propertyDoc('background-repeat')
+        +propertyDoc('background-attachment')
+        +propertyDoc('background-origin')
+        +propertyDoc('background-clip')
+        +propertyDoc('background-color')
+        +propertyDoc('overflow')
+        +propertyDoc('opacity')
+        +propertyDoc('visibility')
+        +propertyDoc('box-shadow')
+      section
+        h2 Text Cosmetics
+        +propertyDoc('color')
+        +propertyDoc('text-transform')
+        +propertyDoc('text-decoration')
+        +propertyDoc('text-shadow')
+        +propertyDoc('text-overflow')
+        +propertyDoc('list-style-type')
+        +propertyDoc('list-style-position')
+        +propertyDoc('list-style-image')
