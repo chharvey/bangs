@@ -54,61 +54,7 @@ html(lang="en")
     block styles
       link(rel="stylesheet" href="https://cdn.rawgit.com/chharvey/xmeter/master/xmeter.min.css")
       link(rel="stylesheet" href="../bangs.css")
-      style.
-        main {
-          margin: 0 2rem;
-        }
-        .o-Alert {
-          width: 66.667%;
-          margin-left: auto;
-          margin-right: auto;
-          margin-bottom: var(--vru);
-          padding: calc(var(--vru) / 2) 1rem;
-          font-size: 0.875rem;
-        }
-        .o-Alert > * {
-          --vru: calc(var(--line-height) * 0.875rem);
-        }
-        .o-Alert__Hn {
-          margin-bottom: var(--vru);
-          text-align: center;
-        }
-        .c-Property__Details,
-        .c-Property__Classes {
-          display: -ms-grid;
-          display:     grid;
-          -ms-grid-template-columns: 200px auto;
-              grid-template-columns: 200px auto;
-        }
-        .c-Property__Classes {
-          max-height: 300px;
-          overflow: scroll;
-          background-color: #eee;
-        }
-        .c-Label {
-          margin-left: 1rem;
-          padding: calc(var(--vru) / 8) 0.25rem;
-          font-variant: small-caps;
-        }
-        .t-stability-obsolete     { background-color: black;   color: white; }
-        .t-stability-deprecated   { background-color: #ff4b33; color: white; }
-        .t-stability-experimental { background-color: #ffe433; }
-        .t-stability-stable       { background-color: #9acc7a; }
-        .t-stability-locked       { background-color: #99daff; }
-        ._fragid {
-          display: inline;
-          line-height: 0;
-          margin-left: 1rem;
-          font-weight: 100;
-        }
-        ._fragid::before { content: ''; }
-        h1:hover > ._fragid::before,
-        h2:hover > ._fragid::before,
-        h3:hover > ._fragid::before,
-        h4:hover > ._fragid::before,
-        h5:hover > ._fragid::before,
-        h6:hover > ._fragid::before,
-        ._fragid:focus::before { content: '\00a7'; }
+      link(rel="stylesheet" href="style/docs.css")
   body.docs-body
     a.h-Hidden(href="#main") skip to main content
     main.docs-main#main
