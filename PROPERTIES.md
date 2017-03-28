@@ -102,7 +102,7 @@ This file lists information about each property and its supported values.
 .-va-tb    text-bottom
 .-va-tt    text-top
 .-va-sb    sub
-.-va-st    super
+.-va-sp    super
 ```
 
 ### `flex-direction`
@@ -115,9 +115,9 @@ This file lists information about each property and its supported values.
 
 ### `flex-wrap`
 ```
-.-xw-n    nowrap
-.-xw-w    wrap
-.-xw-r    wrap-reverse
+.-xw-nw    nowrap
+.-xw-wp    wrap
+.-xw-wr    wrap-reverse
 ```
 
 ### `justify-content`
@@ -428,7 +428,7 @@ This file lists information about each property and its supported values.
 .-ff-sf    serif
 .-ff-ms    monospace
 .-ff-fy    fantasy
-.-ff-cs    cursive
+.-ff-cv    cursive
 ```
 
 ### `line-height`
@@ -473,8 +473,8 @@ This file lists information about each property and its supported values.
 
 ### `overflow-wrap`
 ```
-.-ww-n    normal
-.-ww-b    break-word
+.-ow-n    normal
+.-ow-b    break-word
 ```
 
 ### `column-count`
@@ -564,9 +564,9 @@ NOTE: no support for any media queries
 
 ### `background-size`
 ```
-.-bz-a    auto
-.-bz-s    contain
-.-bz-l    cover
+.-bz-a     auto
+.-bz-cn    contain
+.-bz-cr    cover
 ```
 
 ### `background-repeat`
@@ -615,10 +615,10 @@ NOTE: no support for any media queries
 
 ### `overflow`
 ```
-.-of-a    auto
-.-of-v    visible
-.-of-h    hidden
-.-of-s    scroll
+.-ko-a    auto
+.-ko-v    visible
+.-ko-h    hidden
+.-ko-s    scroll
 ```
 
 ### `opacity`
@@ -642,10 +642,10 @@ NOTE: no support for any media queries
 
 ### `text-transform`
 ```
-.-tt-n    none
-.-tt-c    capitalize
-.-tt-h    uppercase
-.-tt-l    lowercase
+.-tt-n     none
+.-tt-cp    capitalize
+.-tt-uc    uppercase
+.-tt-lc    lowercase
 
 -h        true
 ```
