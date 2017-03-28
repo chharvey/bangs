@@ -245,8 +245,8 @@
     , "stability": 3
     , "values"   : [
         { "name": "auto"   , "code": "a" }
-      , { "name": "contain", "code": "s", "stability": 1 }
-      , { "name": "cover"  , "code": "l", "stability": 1 }
+      , { "name": "contain", "code": "cn", "stability": 2 }
+      , { "name": "cover"  , "code": "cr", "stability": 2 }
       ]
     , "media": [
         "screen"
@@ -576,11 +576,11 @@
     , "initial"  : "nowrap"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit"     ,              "use": ".flex-wrap(inherit);" }
-      , { "name": "initial"     ,              "use": ".flex-wrap(nowrap); .flex-wrap(initial);" }
-      , { "name": "nowrap"      , "code": "n", "use": ".flex-wrap(nowrap);"       }
-      , { "name": "wrap"        , "code": "w", "use": ".flex-wrap(wrap);"         }
-      , { "name": "wrap-reverse", "code": "r", "use": ".flex-wrap(wrap-reverse);" }
+        { "name": "inherit"     ,               "use": ".flex-wrap(inherit);" }
+      , { "name": "initial"     ,               "use": ".flex-wrap(nowrap); .flex-wrap(initial);" }
+      , { "name": "nowrap"      , "code": "nw", "use": ".flex-wrap(nowrap);"       }
+      , { "name": "wrap"        , "code": "wp", "use": ".flex-wrap(wrap);"         }
+      , { "name": "wrap-reverse", "code": "wr", "use": ".flex-wrap(wrap-reverse);" }
       ]
     , "media": [
         "screen"
@@ -938,12 +938,12 @@
     }
   , {
       "name"     : "overflow"
-    , "code"     : "of"
+    , "code"     : "ko"
     , "summary"  : "Defines how content outside the box is rendered."
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/overflow"
     , "inherited": false
     , "initial"  : "visible"
-    , "stability": 3
+    , "stability": 2
     , "values"   : [
         { "name": "auto"   , "code": "a" }
       , { "name": "visible", "code": "v" }
@@ -957,12 +957,12 @@
     }
   , {
       "name"     : "overflow-wrap"
-    , "code"     : "ww"
+    , "code"     : "ow"
     , "summary"  : "Specifies whether words can be broken and wrapped to prevent overflow."
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap"
     , "inherited": true
     , "initial"  : "normal"
-    , "stability": 1
+    , "stability": 2
     , "values"   : [
         { "name": "inherit"   ,              "use": "word-wrap: inherit;    overflow-wrap: inherit;" }
       , { "name": "initial"   ,              "use": "word-wrap: normal;     overflow-wrap: normal; word-wrap: initial; overflow-wrap: initial;" }
@@ -1172,9 +1172,9 @@
     , "stability": 3
     , "values"   : [
         { "name": "none"      , "code": "n" }
-      , { "name": "capitalize", "code": "c", "stability": 1 }
-      , { "name": "uppercase" , "code": "h", "stability": 1 }
-      , { "name": "lowercase" , "code": "l", "stability": 1 }
+      , { "name": "capitalize", "code": "cp", "stability": 2 }
+      , { "name": "uppercase" , "code": "uc", "stability": 2 }
+      , { "name": "lowercase" , "code": "lc", "stability": 2 }
       ]
     , "media": [
         "screen"
