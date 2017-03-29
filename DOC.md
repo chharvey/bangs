@@ -1,5 +1,45 @@
 # Bangs Documentation
 
+## Trends
+This table describes typical letter usage.
+The most frequent instances of the letter correspond with the properties and values described below.
+Note that this list is non-normative and non-comprehensive:
+these are not the only uses of the letters, and there may be exceptions.
+
+Letter | Typical Usage  | Example Properties | Example Values
+------ | -------------- |------------------- | --------------
+0      | `initial`      | **none** | *all properties use this value*
+a      | all            | [padding, margin]&#x200b;(-all) | **none**
+a      | `auto`         | **none** | [left, right, top, bottom, z-index, [justify,align]-[content,items,self], flex, width, margin, column-[count,width], background-size, (box-)overflow]: auto
+b      | bottom         | bottom, [margin, padding]-bottom | background-position: bottom; vertical-align: [text-]bottom
+b      | background     | background-[image, position, size, repeat, attachment, origin, clip, color] | **none**
+c      | color          | [border-, background-]color | [border-, background-]color: currentColor
+c      | content        | [justify, align]-content | flex: content; [box-sizing, background-[origin, clip]]: content(-box)
+c      | column         | grid-template-columns, grid-column-gap, column-[count, width] | flex-direction: column[-reverse]
+c      | center         | **none** | [[justify, align]-[content,items,self], text-align, background-position]: center; vertical-align: middle (center)
+f      | font           | font-[style, variant, weight, size, family] | **none**
+g      | grid           | grid-template-[rows, columns], grid-[row, column]-gap | display: grid (gd)
+i      | `inherit`      | **none** | *all properties use this value*
+k      | box            | box-[sizing, shadow], (box-)overflow | **none**
+l      | left           | left, [margin, padding]-left | [float, clear, text-align, background-position]: left
+m      | margin         | margin | **none**
+n      | `normal`       | **none** | [font-[style, variant, weight], line-height, letter-spacing, word-spacing, white-space, overflow-wrap]: normal
+n      | `none`         | **none** | [display, float, clear, border-style, background-image, box-shadow, text-[transform,decoration,shadow], list-style-[type,image]]: none
+o      | overflow       | [(box-), text-]overflow, overflow-wrap | **none**
+p      | padding        | padding |  background-[origin, clip]: padding(-box)
+r      | border         | border-[style, color] | [box-sizing, background-[origin, clip]]: border(-box)
+r      | right          | right, [margin, padding]-right | [float, clear, text-align, background-position]: right
+c      | row            | grid-template-rows, grid-row-gap | flex-direction: row[-reverse]
+t      | top            | top, [margin, padding]-top | background-position: top; vertical-align: [text-]top
+t      | text           | text-[align, indent, transform, decoration, shadow, overflow] | vertical-align: text-[top, bottom]
+u      | `unset`        | **none** | *all properties use this value*
+w      | width          | width, column-width | **none**
+w      | wrap           | [flex, overflow]-wrap | flex-wrap: [nowrap, wrap, wrap-reverse]; white-space: [nowrap, pre-wrap]
+x      | flex           | flex[-direction, -wrap] | flex-[start, end]
+x      | clip           | background-clip | text-overflow: clip
+z      | size           | box-sizing, font-size, background-size | **none**
+z      | 0              | **none** | [left, right, top, bottom, z-index, order, width, margin, padding, font-size, line-height, letter-spacing, word-spacing, text-indent, opacity]: 0
+
 ## Value Constants
 
 For [all properties](PROPERTIES.md),
