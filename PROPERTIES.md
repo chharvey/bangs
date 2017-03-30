@@ -588,7 +588,7 @@ NOTE: no support for any media queries
 ```
 .-bo-c    content-box
 .-bo-p    padding-box
-.-bo-b    border-box
+.-bo-r    border-box
 ```
 
 ### `background-clip`
