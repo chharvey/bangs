@@ -97,7 +97,7 @@ This file lists information about each property and its supported values.
 ```
 .-va-a     baseline
 .-va-b     bottom
-.-va-m     middle
+.-va-c     middle
 .-va-t     top
 .-va-tb    text-bottom
 .-va-tt    text-top
@@ -242,7 +242,7 @@ This file lists information about each property and its supported values.
 ### `box-sizing`
 ```
 .-kz-c    content-box
-.-kz-b    border-box
+.-kz-r    border-box
 ```
 
 ### `width`
@@ -588,14 +588,14 @@ NOTE: no support for any media queries
 ```
 .-bo-c    content-box
 .-bo-p    padding-box
-.-bo-b    border-box
+.-bo-r    border-box
 ```
 
 ### `background-clip`
 ```
 .-bk-c    content-box
 .-bk-p    padding-box
-.-bk-b    border-box
+.-bk-r    border-box
 ```
 
 ### `background-color`
@@ -667,7 +667,7 @@ NOTE: no support for any media queries
 
 ### `text-overflow`
 ```
-.-to-c    clip
+.-to-k    clip
 .-to-e    ellipsis
 ```
 
