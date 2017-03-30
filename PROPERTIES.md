@@ -242,7 +242,7 @@ This file lists information about each property and its supported values.
 ### `box-sizing`
 ```
 .-kz-c    content-box
-.-kz-b    border-box
+.-kz-r    border-box
 ```
 
 ### `width`
