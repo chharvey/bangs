@@ -1,0 +1,25 @@
+
+/*################################*\
+    bangs  |  _quotes.less
+\*################################*/
+
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2017-03-30
+
+.-q-0 { quotes: '\“' '\”'; quotes: initial !important; }
+.-q-i {                    quotes: inherit !important; }
+.-q-n {                    quotes: none    !important; }
+
+@media screen {
+  .-q-0-s { .-q-0; }
+  .-q-i-s { .-q-i; }
+  .-q-n-s { .-q-n; }
+}
+
+@media print {
+  .-q-0-p { .-q-0; }
+  .-q-i-p { .-q-i; }
+  .-q-n-p { .-q-n; }
+}
