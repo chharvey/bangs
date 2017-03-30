@@ -667,7 +667,7 @@ NOTE: no support for any media queries
 
 ### `text-overflow`
 ```
-.-to-c    clip
+.-to-k    clip
 .-to-e    ellipsis
 ```
 
