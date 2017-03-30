@@ -97,7 +97,7 @@ This file lists information about each property and its supported values.
 ```
 .-va-a     baseline
 .-va-b     bottom
-.-va-m     middle
+.-va-c     middle
 .-va-t     top
 .-va-tb    text-bottom
 .-va-tt    text-top
