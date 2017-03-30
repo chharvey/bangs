@@ -595,7 +595,7 @@ NOTE: no support for any media queries
 ```
 .-bk-c    content-box
 .-bk-p    padding-box
-.-bk-b    border-box
+.-bk-r    border-box
 ```
 
 ### `background-color`
