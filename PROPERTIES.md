@@ -453,6 +453,8 @@ This file lists information about each property and its supported values.
 ```
 .-ta-l    left
 .-ta-r    right
+.-ta-s    start (stability: 2)
+.-ta-e    end (stability: 2)
 .-ta-c    center
 .-ta-j    justify
 ```
@@ -669,6 +671,7 @@ NOTE: no support for any media queries
 ```
 .-to-k    clip
 .-to-e    ellipsis
+.-to-f    fade (stability: 2)
 ```
 
 ### `list-style-type`
@@ -707,4 +710,9 @@ NOTE: no support for any media queries
 .-c-w    #ffffff
 
 -h       true
+```
+
+### `quotes`
+```
+.-q-n    none
 ```

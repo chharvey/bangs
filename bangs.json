@@ -976,5 +976,21 @@
       , "print"  : true
       }
     }
+  , {
+      "name"     : "quotes"
+    , "code"     : "q"
+    , "summary"  : "Specifies how quotation marks should be rendered."
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/quotes"
+    , "inherited": true
+    , "initial"  : "'“' '”'"
+    , "stability": 2
+    , "values"   : [
+        { "name": "none", "code": "n"  }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
   ]
 }
