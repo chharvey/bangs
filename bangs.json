@@ -1081,12 +1081,14 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/text-align"
     , "inherited": true
     , "initial"  : "left"
-    , "stability": 2
+    , "stability": 3
     , "values"   : [
         { "name": "left"   , "code": "l" }
       , { "name": "right"  , "code": "r" }
-      , { "name": "center" , "code": "c", "stability": 3 }
-      , { "name": "justify", "code": "j", "stability": 3 }
+      , { "name": "start"  , "code": "s", "stability": 2 }
+      , { "name": "end"    , "code": "e", "stability": 2 }
+      , { "name": "center" , "code": "c" }
+      , { "name": "justify", "code": "j" }
       ]
     , "media": [
         "screen"
@@ -1140,6 +1142,7 @@
     , "values"   : [
         { "name": "clip"    , "code": "k", "stability": 2 }
       , { "name": "ellipsis", "code": "e" }
+      , { "name": "fade"    , "code": "f", "stability": 2 }
       ]
     , "media": [
         "screen"

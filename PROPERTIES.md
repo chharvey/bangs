@@ -221,6 +221,3 @@ NOTE: no support for any media queries
 ```
 
 ### `quotes`
-```
-.-q-n    none
-```
