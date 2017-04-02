@@ -2,128 +2,316 @@
 /*################################*\
     bangs  |  _display.less
 \*################################*/
-@import (reference) url('../node_modules/xmeter/styles/__fallback.flexbox.less');
+@import (reference) url('../node_modules/xmeter/src/__fallback.flexbox.less');
+@import (reference) url('../node_modules/xmeter/src/__fallback.grid.less');
 
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2017-02-09
+// : 2017-04-02
 
-.-d-0  { .-d-il; display: initial      !important; }
-.-d-i  {         display: inherit      !important; }
-.-d-n  {         display: none         !important; }
-.-d-bk {         display: block        !important; }
-.-d-il {         display: inline       !important; }
-.-d-ib {         display: inline-block !important; }
-.-d-fx {         .flexbox()            !important; }
-.-d-li {         display: list-item    !important; }
+
+//++++++++++++++++++++++++++++++++//
+//    # GLOBAL
+//++++++++++++++++++++++++++++++++//
+.-d-0 { .-d-l; display: initial !important; }
+.-d-i {        display: inherit !important; }
+//++++ end # GLOBAL ++++//
+
+
+//++++++++++++++++++++++++++++++++//
+//    # BOX
+//++++++++++++++++++++++++++++++++//
+.-d-n { display: none     !important; }
+.-d-c { display: contents !important; }
+//++++ end # BOX ++++//
+
+
+//++++++++++++++++++++++++++++++++//
+//    # OUTSIDE
+//++++++++++++++++++++++++++++++++//
+.-d-b { display: block  !important; }
+.-d-l { display: inline !important; }
+.-d-r { display: run-in !important; }
+//++++ end # OUTSIDE ++++//
+
+
+//++++++++++++++++++++++++++++++++//
+//    # INSIDE
+//++++++++++++++++++++++++++++++++//
+.-d-f { display: flow      !important; }
+.-d-o { display: flow-root !important; }
+// .-d-t { display: table     !important; }
+.-d-x { .flexbox()         !important; }
+.-d-g { .grid()            !important; }
+// .-d-y { display: ruby      !important; }
+//++++ end # INSIDE ++++//
+
+
+//++++++++++++++++++++++++++++++++//
+//    # INTERNAL
+//++++++++++++++++++++++++++++++++//
+// table-row-group
+// table-header-group
+// table-footer-group
+// table-row
+// table-cell
+// table-column-group
+// table-column
+// table-caption
+// ruby-base
+// ruby-text
+// ruby-base-container
+// ruby-text-container
+//++++ end # INTERNAL ++++//
+
+
+//++++++++++++++++++++++++++++++++//
+//    # OTHER
+//++++++++++++++++++++++++++++++++//
+.-d-s     { display: list-item                  !important; }
+// .-d-s_f   { display: list-item        flow      !important; }
+.-d-s_o   { display: list-item        flow-root !important; }
+// .-d-s_b   { display: list-item block            !important; }
+// .-d-s_b_f { display: list-item block  flow      !important; }
+// .-d-s_b_o { display: list-item block  flow-root !important; }
+.-d-s_l   { display: list-item inline           !important; }
+// .-d-s_l_f { display: list-item inline flow      !important; }
+// .-d-s_l_o { display: list-item inline flow-root !important; }
+// .-d-s_r   { display: list-item run-in           !important; }
+// .-d-s_r_f { display: list-item run-in flow      !important; }
+// .-d-s_r_o { display: list-item run-in flow-root !important; }
+//++++ end # OTHER ++++//
+
+
+//++++++++++++++++++++++++++++++++//
+//    # LEGACY (deprecated)
+//++++++++++++++++++++++++++++++++//
+.-d-lb { display: inline-block     !important; } // CHANGED use `display: inline flow-root` instead
+.-d-ls { display: inline-list-item !important; } // CHANGED use `display: list-item inline flow` instead
+.-d-lt { display: inline-table     !important; } // CHANGED use `display: inline table` instead
+.-d-lf { display: inline-flex      !important; } // CHANGED use `display: inline flex` instead
+.-d-lg { display: inline-grid      !important; } // CHANGED use `display: inline grid` instead
+//++++ end # LEGACY (deprecated) ++++//
+
+
 
 @media screen {
-  .-d-0-s  { .-d-0 ; }
-  .-d-i-s  { .-d-i ; }
-  .-d-n-s  { .-d-n ; }
-  .-d-bk-s { .-d-bk; }
-  .-d-il-s { .-d-il; }
-  .-d-ib-s { .-d-ib; }
-  .-d-fx-s { .-d-fx; }
-  .-d-li-s { .-d-li; }
+  .-d-0-s   { .-d-0  ; }
+  .-d-i-s   { .-d-i  ; }
+  .-d-n-s   { .-d-n  ; }
+  .-d-c-s   { .-d-c  ; }
+  .-d-b-s   { .-d-b  ; }
+  .-d-l-s   { .-d-l  ; }
+  .-d-r-s   { .-d-r  ; }
+  .-d-f-s   { .-d-f  ; }
+  .-d-o-s   { .-d-o  ; }
+  .-d-x-s   { .-d-x  ; }
+  .-d-g-s   { .-d-g  ; }
+  .-d-s-s   { .-d-s  ; }
+  .-d-s_o-s { .-d-s_o; }
+  .-d-s_l-s { .-d-s_l; }
+  .-d-lb-s  { .-d-lb ; }
+  .-d-lli-s { .-d-lli; }
+  .-d-lt-s  { .-d-lt ; }
+  .-d-lf-s  { .-d-lf ; }
+  .-d-lg-s  { .-d-lg ; }
 }
 
 @media print {
-  .-d-0-p  { .-d-0 ; }
-  .-d-i-p  { .-d-i ; }
-  .-d-n-p  { .-d-n ; }
-  .-d-bk-p { .-d-bk; }
-  .-d-il-p { .-d-il; }
-  .-d-ib-p { .-d-ib; }
-  .-d-fx-p { .-d-fx; }
-  .-d-li-p { .-d-li; }
+  .-d-0-p   { .-d-0  ; }
+  .-d-i-p   { .-d-i  ; }
+  .-d-n-p   { .-d-n  ; }
+  .-d-c-p   { .-d-c  ; }
+  .-d-b-p   { .-d-b  ; }
+  .-d-l-p   { .-d-l  ; }
+  .-d-r-p   { .-d-r  ; }
+  .-d-f-p   { .-d-f  ; }
+  .-d-o-p   { .-d-o  ; }
+  .-d-x-p   { .-d-x  ; }
+  .-d-g-p   { .-d-g  ; }
+  .-d-s-p   { .-d-s  ; }
+  .-d-s_o-p { .-d-s_o; }
+  .-d-s_l-p { .-d-s_l; }
+  .-d-lb-p  { .-d-lb ; }
+  .-d-lli-p { .-d-lli; }
+  .-d-lt-p  { .-d-lt ; }
+  .-d-lf-p  { .-d-lf ; }
+  .-d-lg-p  { .-d-lg ; }
 }
 
 @media screen and (min-width: 30em) {
-  .-d-0-sK  { .-d-0 ; }
-  .-d-i-sK  { .-d-i ; }
-  .-d-n-sK  { .-d-n ; }
-  .-d-bk-sK { .-d-bk; }
-  .-d-il-sK { .-d-il; }
-  .-d-ib-sK { .-d-ib; }
-  .-d-fx-sK { .-d-fx; }
-  .-d-li-sK { .-d-li; }
+  .-d-0-sK   { .-d-0  ; }
+  .-d-i-sK   { .-d-i  ; }
+  .-d-n-sK   { .-d-n  ; }
+  .-d-c-sK   { .-d-c  ; }
+  .-d-b-sK   { .-d-b  ; }
+  .-d-l-sK   { .-d-l  ; }
+  .-d-r-sK   { .-d-r  ; }
+  .-d-f-sK   { .-d-f  ; }
+  .-d-o-sK   { .-d-o  ; }
+  .-d-x-sK   { .-d-x  ; }
+  .-d-g-sK   { .-d-g  ; }
+  .-d-s-sK   { .-d-s  ; }
+  .-d-s_o-sK { .-d-s_o; }
+  .-d-s_l-sK { .-d-s_l; }
+  .-d-lb-sK  { .-d-lb ; }
+  .-d-lli-sK { .-d-lli; }
+  .-d-lt-sK  { .-d-lt ; }
+  .-d-lf-sK  { .-d-lf ; }
+  .-d-lg-sK  { .-d-lg ; }
 }
 
 @media screen and (min-width: 45em) {
-  .-d-0-sM  { .-d-0 ; }
-  .-d-i-sM  { .-d-i ; }
-  .-d-n-sM  { .-d-n ; }
-  .-d-bk-sM { .-d-bk; }
-  .-d-il-sM { .-d-il; }
-  .-d-ib-sM { .-d-ib; }
-  .-d-fx-sM { .-d-fx; }
-  .-d-li-sM { .-d-li; }
+  .-d-0-sM   { .-d-0  ; }
+  .-d-i-sM   { .-d-i  ; }
+  .-d-n-sM   { .-d-n  ; }
+  .-d-c-sM   { .-d-c  ; }
+  .-d-b-sM   { .-d-b  ; }
+  .-d-l-sM   { .-d-l  ; }
+  .-d-r-sM   { .-d-r  ; }
+  .-d-f-sM   { .-d-f  ; }
+  .-d-o-sM   { .-d-o  ; }
+  .-d-x-sM   { .-d-x  ; }
+  .-d-g-sM   { .-d-g  ; }
+  .-d-s-sM   { .-d-s  ; }
+  .-d-s_o-sM { .-d-s_o; }
+  .-d-s_l-sM { .-d-s_l; }
+  .-d-lb-sM  { .-d-lb ; }
+  .-d-lli-sM { .-d-lli; }
+  .-d-lt-sM  { .-d-lt ; }
+  .-d-lf-sM  { .-d-lf ; }
+  .-d-lg-sM  { .-d-lg ; }
 }
 
 @media screen and (min-width: 60em) {
-  .-d-0-sG  { .-d-0 ; }
-  .-d-i-sG  { .-d-i ; }
-  .-d-n-sG  { .-d-n ; }
-  .-d-bk-sG { .-d-bk; }
-  .-d-il-sG { .-d-il; }
-  .-d-ib-sG { .-d-ib; }
-  .-d-fx-sG { .-d-fx; }
-  .-d-li-sG { .-d-li; }
+  .-d-0-sG   { .-d-0  ; }
+  .-d-i-sG   { .-d-i  ; }
+  .-d-n-sG   { .-d-n  ; }
+  .-d-c-sG   { .-d-c  ; }
+  .-d-b-sG   { .-d-b  ; }
+  .-d-l-sG   { .-d-l  ; }
+  .-d-r-sG   { .-d-r  ; }
+  .-d-f-sG   { .-d-f  ; }
+  .-d-o-sG   { .-d-o  ; }
+  .-d-x-sG   { .-d-x  ; }
+  .-d-g-sG   { .-d-g  ; }
+  .-d-s-sG   { .-d-s  ; }
+  .-d-s_o-sG { .-d-s_o; }
+  .-d-s_l-sG { .-d-s_l; }
+  .-d-lb-sG  { .-d-lb ; }
+  .-d-lli-sG { .-d-lli; }
+  .-d-lt-sG  { .-d-lt ; }
+  .-d-lf-sG  { .-d-lf ; }
+  .-d-lg-sG  { .-d-lg ; }
 }
 
 @media screen and (min-width: 75em) {
-  .-d-0-sT  { .-d-0 ; }
-  .-d-i-sT  { .-d-i ; }
-  .-d-n-sT  { .-d-n ; }
-  .-d-bk-sT { .-d-bk; }
-  .-d-il-sT { .-d-il; }
-  .-d-ib-sT { .-d-ib; }
-  .-d-fx-sT { .-d-fx; }
-  .-d-li-sT { .-d-li; }
+  .-d-0-sT   { .-d-0  ; }
+  .-d-i-sT   { .-d-i  ; }
+  .-d-n-sT   { .-d-n  ; }
+  .-d-c-sT   { .-d-c  ; }
+  .-d-b-sT   { .-d-b  ; }
+  .-d-l-sT   { .-d-l  ; }
+  .-d-r-sT   { .-d-r  ; }
+  .-d-f-sT   { .-d-f  ; }
+  .-d-o-sT   { .-d-o  ; }
+  .-d-x-sT   { .-d-x  ; }
+  .-d-g-sT   { .-d-g  ; }
+  .-d-s-sT   { .-d-s  ; }
+  .-d-s_o-sT { .-d-s_o; }
+  .-d-s_l-sT { .-d-s_l; }
+  .-d-lb-sT  { .-d-lb ; }
+  .-d-lli-sT { .-d-lli; }
+  .-d-lt-sT  { .-d-lt ; }
+  .-d-lf-sT  { .-d-lf ; }
+  .-d-lg-sT  { .-d-lg ; }
 }
 
 @media not all and (min-width: 30em) {
-  .-d-0-nK  { .-d-0 ; }
-  .-d-i-nK  { .-d-i ; }
-  .-d-n-nK  { .-d-n ; }
-  .-d-bk-nK { .-d-bk; }
-  .-d-il-nK { .-d-il; }
-  .-d-ib-nK { .-d-ib; }
-  .-d-fx-nK { .-d-fx; }
-  .-d-li-nK { .-d-li; }
+  .-d-0-nK   { .-d-0  ; }
+  .-d-i-nK   { .-d-i  ; }
+  .-d-n-nK   { .-d-n  ; }
+  .-d-c-nK   { .-d-c  ; }
+  .-d-b-nK   { .-d-b  ; }
+  .-d-l-nK   { .-d-l  ; }
+  .-d-r-nK   { .-d-r  ; }
+  .-d-f-nK   { .-d-f  ; }
+  .-d-o-nK   { .-d-o  ; }
+  .-d-x-nK   { .-d-x  ; }
+  .-d-g-nK   { .-d-g  ; }
+  .-d-s-nK   { .-d-s  ; }
+  .-d-s_o-nK { .-d-s_o; }
+  .-d-s_l-nK { .-d-s_l; }
+  .-d-lb-nK  { .-d-lb ; }
+  .-d-lli-nK { .-d-lli; }
+  .-d-lt-nK  { .-d-lt ; }
+  .-d-lf-nK  { .-d-lf ; }
+  .-d-lg-nK  { .-d-lg ; }
 }
 
 @media not all and (min-width: 45em) {
-  .-d-0-nM  { .-d-0 ; }
-  .-d-i-nM  { .-d-i ; }
-  .-d-n-nM  { .-d-n ; }
-  .-d-bk-nM { .-d-bk; }
-  .-d-il-nM { .-d-il; }
-  .-d-ib-nM { .-d-ib; }
-  .-d-fx-nM { .-d-fx; }
-  .-d-li-nM { .-d-li; }
+  .-d-0-nM   { .-d-0  ; }
+  .-d-i-nM   { .-d-i  ; }
+  .-d-n-nM   { .-d-n  ; }
+  .-d-c-nM   { .-d-c  ; }
+  .-d-b-nM   { .-d-b  ; }
+  .-d-l-nM   { .-d-l  ; }
+  .-d-r-nM   { .-d-r  ; }
+  .-d-f-nM   { .-d-f  ; }
+  .-d-o-nM   { .-d-o  ; }
+  .-d-x-nM   { .-d-x  ; }
+  .-d-g-nM   { .-d-g  ; }
+  .-d-s-nM   { .-d-s  ; }
+  .-d-s_o-nM { .-d-s_o; }
+  .-d-s_l-nM { .-d-s_l; }
+  .-d-lb-nM  { .-d-lb ; }
+  .-d-lli-nM { .-d-lli; }
+  .-d-lt-nM  { .-d-lt ; }
+  .-d-lf-nM  { .-d-lf ; }
+  .-d-lg-nM  { .-d-lg ; }
 }
 
 @media not all and (min-width: 60em) {
-  .-d-0-nG  { .-d-0 ; }
-  .-d-i-nG  { .-d-i ; }
-  .-d-n-nG  { .-d-n ; }
-  .-d-bk-nG { .-d-bk; }
-  .-d-il-nG { .-d-il; }
-  .-d-ib-nG { .-d-ib; }
-  .-d-fx-nG { .-d-fx; }
-  .-d-li-nG { .-d-li; }
+  .-d-0-nG   { .-d-0  ; }
+  .-d-i-nG   { .-d-i  ; }
+  .-d-n-nG   { .-d-n  ; }
+  .-d-c-nG   { .-d-c  ; }
+  .-d-b-nG   { .-d-b  ; }
+  .-d-l-nG   { .-d-l  ; }
+  .-d-r-nG   { .-d-r  ; }
+  .-d-f-nG   { .-d-f  ; }
+  .-d-o-nG   { .-d-o  ; }
+  .-d-x-nG   { .-d-x  ; }
+  .-d-g-nG   { .-d-g  ; }
+  .-d-s-nG   { .-d-s  ; }
+  .-d-s_o-nG { .-d-s_o; }
+  .-d-s_l-nG { .-d-s_l; }
+  .-d-lb-nG  { .-d-lb ; }
+  .-d-lli-nG { .-d-lli; }
+  .-d-lt-nG  { .-d-lt ; }
+  .-d-lf-nG  { .-d-lf ; }
+  .-d-lg-nG  { .-d-lg ; }
 }
 
 @media not all and (min-width: 75em) {
-  .-d-0-nT  { .-d-0 ; }
-  .-d-i-nT  { .-d-i ; }
-  .-d-n-nT  { .-d-n ; }
-  .-d-bk-nT { .-d-bk; }
-  .-d-il-nT { .-d-il; }
-  .-d-ib-nT { .-d-ib; }
-  .-d-fx-nT { .-d-fx; }
-  .-d-li-nT { .-d-li; }
+  .-d-0-nT   { .-d-0  ; }
+  .-d-i-nT   { .-d-i  ; }
+  .-d-n-nT   { .-d-n  ; }
+  .-d-c-nT   { .-d-c  ; }
+  .-d-b-nT   { .-d-b  ; }
+  .-d-l-nT   { .-d-l  ; }
+  .-d-r-nT   { .-d-r  ; }
+  .-d-f-nT   { .-d-f  ; }
+  .-d-o-nT   { .-d-o  ; }
+  .-d-x-nT   { .-d-x  ; }
+  .-d-g-nT   { .-d-g  ; }
+  .-d-s-nT   { .-d-s  ; }
+  .-d-s_o-nT { .-d-s_o; }
+  .-d-s_l-nT { .-d-s_l; }
+  .-d-lb-nT  { .-d-lb ; }
+  .-d-lli-nT { .-d-lli; }
+  .-d-lt-nT  { .-d-lt ; }
+  .-d-lf-nT  { .-d-lf ; }
+  .-d-lg-nT  { .-d-lg ; }
 }

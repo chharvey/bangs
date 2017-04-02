@@ -10,27 +10,93 @@
 // ^updated
 // : 2015-10-14
 
-.-br-0 { .-br-a; background-repeat: initial   !important; }
-.-br-i {         background-repeat: inherit   !important; }
-.-br-n {         background-repeat: no-repeat !important; }
-.-br-a {         background-repeat: repeat    !important; }
-.-br-x {         background-repeat: repeat-x  !important; }
-.-br-y {         background-repeat: repeat-y  !important; }
+.-br-0  { .-br-r; background-repeat: initial   !important; }
+.-br-i  {         background-repeat: inherit   !important; }
+.-br-r  {         background-repeat: repeat    !important; } // shorthand for `repeat    repeat`
+.-br-nr {         background-repeat: no-repeat !important; } // shorthand for `no-repeat no-repeat`
+.-br-sp {         background-repeat: space     !important; } // shorthand for `space     space`
+.-br-rd {         background-repeat: round     !important; } // shorthand for `round     round`
+
+.-br-rx {
+  // background-repeat: repeat no-repeat !important; // HACK fallback
+  background-repeat: repeat-x !important;
+}
+.-br-ry {
+  // background-repeat: no-repeat repeat !important; // HACK fallback
+  background-repeat: repeat-y !important;
+}
+.-br-spx {
+  background-repeat: space no-repeat !important; // HACK fallback
+  background-repeat: space-x !important; // NOTE non-standardized
+}
+.-br-spy {
+  background-repeat: no-repeat space !important; // HACK fallback
+  background-repeat: space-y !important; // NOTE non-standardized
+}
+.-br-rdx {
+  background-repeat: round no-repeat !important; // HACK fallback
+  background-repeat: round-x !important; // NOTE non-standardized
+}
+.-br-rdy {
+  background-repeat: no-repeat round !important; // HACK fallback
+  background-repeat: round-y !important; // NOTE non-standardized
+}
+
+// .-br-r_r   { background-repeat: repeat    repeat    !important; }
+// .-br-r_nr  { background-repeat: repeat    no-repeat !important; }
+.-br-r_sp  { background-repeat: repeat    space     !important; }
+.-br-r_rd  { background-repeat: repeat    round     !important; }
+// .-br-nr_r  { background-repeat: no-repeat repeat    !important; }
+// .-br-nr_nr { background-repeat: no-repeat no-repeat !important; }
+// .-br-nr_sp { background-repeat: no-repeat space     !important; }
+// .-br-nr_rd { background-repeat: no-repeat round     !important; }
+.-br-sp_r  { background-repeat: space     repeat    !important; }
+// .-br-sp_nr { background-repeat: space     no-repeat !important; }
+// .-br-sp_sp { background-repeat: space     space     !important; }
+.-br-sp_rd { background-repeat: space     round     !important; }
+.-br-rd_r  { background-repeat: round     repeat    !important; }
+// .-br-rd_nr { background-repeat: round     no-repeat !important; }
+.-br-rd_sp { background-repeat: round     space     !important; }
+// .-br-rd_rd { background-repeat: round     round     !important; }
 
 @media screen {
-  .-br-0-s { .-br-0; }
-  .-br-i-s { .-br-i; }
-  .-br-n-s { .-br-n; }
-  .-br-a-s { .-br-a; }
-  .-br-x-s { .-br-x; }
-  .-br-y-s { .-br-y; }
+  .-br-0-s     { .-br-0    ; }
+  .-br-i-s     { .-br-i    ; }
+  .-br-r-s     { .-br-r    ; }
+  .-br-nr-s    { .-br-nr   ; }
+  .-br-sp-s    { .-br-sp   ; }
+  .-br-rd-s    { .-br-rd   ; }
+  .-br-rx-s    { .-br-rx   ; }
+  .-br-ry-s    { .-br-ry   ; }
+  .-br-spx-s   { .-br-spx  ; }
+  .-br-spy-s   { .-br-spy  ; }
+  .-br-rdx-s   { .-br-rdx  ; }
+  .-br-rdy-s   { .-br-rdy  ; }
+  .-br-r_sp-s  { .-br-r_sp ; }
+  .-br-r_rd-s  { .-br-r_rd ; }
+  .-br-sp_r-s  { .-br-sp_r ; }
+  .-br-sp_rd-s { .-br-sp_rd; }
+  .-br-rd_r-s  { .-br-rd_r ; }
+  .-br-rd_sp-s { .-br-rd_sp; }
 }
 
 @media print {
-  .-br-0-p { .-br-0; }
-  .-br-i-p { .-br-i; }
-  .-br-n-p { .-br-n; }
-  .-br-a-p { .-br-a; }
-  .-br-x-p { .-br-x; }
-  .-br-y-p { .-br-y; }
+  .-br-0-p     { .-br-0    ; }
+  .-br-i-p     { .-br-i    ; }
+  .-br-r-p     { .-br-r    ; }
+  .-br-nr-p    { .-br-nr   ; }
+  .-br-sp-p    { .-br-sp   ; }
+  .-br-rd-p    { .-br-rd   ; }
+  .-br-rx-p    { .-br-rx   ; }
+  .-br-ry-p    { .-br-ry   ; }
+  .-br-spx-p   { .-br-spx  ; }
+  .-br-spy-p   { .-br-spy  ; }
+  .-br-rdx-p   { .-br-rdx  ; }
+  .-br-rdy-p   { .-br-rdy  ; }
+  .-br-r_sp-p  { .-br-r_sp ; }
+  .-br-r_rd-p  { .-br-r_rd ; }
+  .-br-sp_r-p  { .-br-sp_r ; }
+  .-br-sp_rd-p { .-br-sp_rd; }
+  .-br-rd_r-p  { .-br-rd_r ; }
+  .-br-rd_sp-p { .-br-rd_sp; }
 }

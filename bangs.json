@@ -225,10 +225,22 @@
     , "initial"  : "repeat"
     , "stability": 2
     , "values"   : [
-        { "name": "no-repeat", "code": "n" }
-      , { "name": "repeat"   , "code": "a", "stability": 1 }
-      , { "name": "repeat-x" , "code": "x" }
-      , { "name": "repeat-y" , "code": "y" }
+        { "name": "repeat"   , "code": "r"  , "alt": "background-repeat: repeat    repeat   ;" }
+      , { "name": "no-repeat", "code": "nr" , "alt": "background-repeat: no-repeat no-repeat;" }
+      , { "name": "space"    , "code": "sp" , "alt": "background-repeat: space     space    ;" }
+      , { "name": "round"    , "code": "rd" , "alt": "background-repeat: round     round    ;" }
+      , { "name": "repeat-x" , "code": "rx" , "alt": "background-repeat: repeat no-repeat;" }
+      , { "name": "repeat-y" , "code": "ry" , "alt": "background-repeat: no-repeat repeat;" }
+      , { "name": "space-x"  , "code": "spx", "use": "background-repeat: space no-repeat ;" }
+      , { "name": "space-y"  , "code": "spy", "use": "background-repeat: no-repeat space ;" }
+      , { "name": "round-x"  , "code": "rdx", "use": "background-repeat: round no-repeat ;" }
+      , { "name": "round-y"  , "code": "rdy", "use": "background-repeat: no-repeat round ;" }
+      , { "name": "repeat space" , "code": "r_sp"  }
+      , { "name": "repeat round" , "code": "r_rd"  }
+      , { "name": "space  repeat", "code": "sp_r"  }
+      , { "name": "space  round" , "code": "sp_rd" }
+      , { "name": "round  repeat", "code": "rd_r"  }
+      , { "name": "round  space" , "code": "rd_sp" }
       ]
     , "media": [
         "screen"
@@ -451,22 +463,33 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/display"
     , "inherited": false
     , "initial"  : "inline"
-    , "stability": 3
+    , "stability": 2
     , "values"   : [
-        { "name": "none"              , "code": "n"  }
-      , { "name": "block"             , "code": "bk" }
-      , { "name": "inline"            , "code": "il" }
-      , { "name": "inline-block"      , "code": "ib" }
-      , { "name": "list-item"         , "code": "li" }
-      , { "name": "table"             , "code": "tb" }
-      , { "name": "flex"              , "code": "fx" , "stability": 2, "use": ".flexbox();" }
-      , { "name": "table-row"         , "code": "tr" , "stability": 2 }
-      , { "name": "table-column"      , "code": "tl" , "stability": 2 }
-      , { "name": "table-cell"        , "code": "tc" , "stability": 2 }
-      , { "name": "table-row-group"   , "code": "trg", "stability": 2 }
-      , { "name": "table-header-group", "code": "thg", "stability": 2 }
-      , { "name": "table-footer-group", "code": "tfg", "stability": 2 }
-      , { "name": "table-column-group", "code": "tcg", "stability": 2 }
+        { "name": "none"               , "code": "n"  , "stability": 3 }
+      , { "name": "contents"           , "code": "c"                   }
+      , { "name": "block"              , "code": "b"                   }
+      , { "name": "inline"             , "code": "l"                   }
+      , { "name": "run-in"             , "code": "r"                   }
+      , { "name": "flow"               , "code": "f"                   }
+      , { "name": "flow-root"          , "code": "o"                   }
+      , { "name": "table"              , "code": "t"  , "stability": 0 }
+      , { "name": "flex"               , "code": "x"  ,                 "use": ".flexbox()" }
+      , { "name": "grid"               , "code": "g"  ,                 "use": ".grid()"    }
+      , { "name": "list-item"          , "code": "s"  , "stability": 3 }
+      , { "name": "list-item flow-root", "code": "s_o"                 }
+      , { "name": "list-item inline"   , "code": "s_l"                 }
+      , { "name": "inline-block"       , "code": "lb" , "stability": 1 }
+      , { "name": "inline-list-item"   , "code": "ls" , "stability": 1 }
+      , { "name": "inline-table"       , "code": "lt" , "stability": 1 }
+      , { "name": "inline-flex"        , "code": "lf" , "stability": 1 }
+      , { "name": "inline-grid"        , "code": "lg" , "stability": 1 }
+      , { "name": "table-row"          , "code": "tr" , "stability": 0 }
+      , { "name": "table-column"       , "code": "tl" , "stability": 0 }
+      , { "name": "table-cell"         , "code": "tc" , "stability": 0 }
+      , { "name": "table-row-group"    , "code": "trg", "stability": 0 }
+      , { "name": "table-header-group" , "code": "thg", "stability": 0 }
+      , { "name": "table-footer-group" , "code": "tfg", "stability": 0 }
+      , { "name": "table-column-group" , "code": "tlg", "stability": 0 }
       ]
     , "media": [
         "screen"
