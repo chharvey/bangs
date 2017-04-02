@@ -7,12 +7,36 @@ This file lists information about each property and its supported values.
 
 ### `display`
 ```
-.-d-n     none
-.-d-bk    block
-.-d-il    inline
-.-d-ib    inline-block
-.-d-fx    flex
-.-d-li    list-item
+    , "stability": 2
+    , "values": [
+        { "name": "none"               , "code": "n"  , "stability": 3 }
+        { "name": "contents"           , "code": "c"                   }
+      , { "name": "block"              , "code": "b"                   }
+      , { "name": "inline"             , "code": "l"                   }
+      , { "name": "run-in"             , "code": "r"                   }
+      , { "name": "flow"               , "code": "f"                   }
+      , { "name": "flow-root"          , "code": "o"                   }
+      , { "name": "table"              , "code": "t"  , "stability": 0 }
+      , { "name": "flex"               , "code": "x"  ,                 "use": ".flexbox()" }
+      , { "name": "grid"               , "code": "g"  ,                 "use": ".grid()"    }
+      , { "name": "list-item"          , "code": "s"  , "stability": 3 }
+      , { "name": "list-item flow-root", "code": "s_o"                 }
+      , { "name": "list-item inline"   , "code": "s_l"                 }
+
+      , { "name": "inline-block"       , "code": "lb" , "stability": 1 }
+      , { "name": "inline-list-item"   , "code": "ls" , "stability": 1 }
+      , { "name": "inline-table"       , "code": "lt" , "stability": 1 }
+      , { "name": "inline-flex"        , "code": "lf" , "stability": 1 }
+      , { "name": "inline-grid"        , "code": "lg" , "stability": 1 }
+
+      , { "name": "table-row"          , "code": "tr" , "stability": 0 }
+      , { "name": "table-column"       , "code": "tl" , "stability": 0 }
+      , { "name": "table-cell"         , "code": "tc" , "stability": 0 }
+      , { "name": "table-row-group"    , "code": "trg", "stability": 0 }
+      , { "name": "table-header-group" , "code": "thg", "stability": 0 }
+      , { "name": "table-footer-group" , "code": "tfg", "stability": 0 }
+      , { "name": "table-column-group" , "code": "tlg", "stability": 0 }
+      ]
 
 -sK    true
 -sM    true
