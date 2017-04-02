@@ -669,6 +669,7 @@ NOTE: no support for any media queries
 ```
 .-to-k    clip
 .-to-e    ellipsis
+.-to-f    fade (stability: 2)
 ```
 
 ### `list-style-type`
