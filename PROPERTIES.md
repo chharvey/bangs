@@ -453,6 +453,8 @@ This file lists information about each property and its supported values.
 ```
 .-ta-l    left
 .-ta-r    right
+.-ta-s    start (stability: 2)
+.-ta-e    end (stability: 2)
 .-ta-c    center
 .-ta-j    justify
 ```
