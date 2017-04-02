@@ -597,10 +597,25 @@ NOTE: no support for any media queries
 
 ### `background-repeat`
 ```
-.-br-n    no-repeat
-.-br-a    repeat
-.-br-x    repeat-x
-.-br-y    repeat-y
+    , "stability": 2
+    , "values": [
+        { "name": "repeat"   , "code": "r"  , "alt": "background-repeat: repeat    repeat;"    }
+      , { "name": "no-repeat", "code": "nr" , "alt": "background-repeat: no-repeat no-repeat;" }
+      , { "name": "space"    , "code": "sp" , "alt": "background-repeat: space     space;"     }
+      , { "name": "round"    , "code": "rd" , "alt": "background-repeat: round     round;"     }
+      , { "name": "repeat-x" , "code": "rx" , "alt": "background-repeat: repeat no-repeat;" }
+      , { "name": "repeat-y" , "code": "ry" , "alt": "background-repeat: no-repeat repeat;" }
+      , { "name": "space-x"  , "code": "spx", "use": "background-repeat: space no-repeat ;" }
+      , { "name": "space-y"  , "code": "spy", "use": "background-repeat: no-repeat space ;" }
+      , { "name": "round-x"  , "code": "rdx", "use": "background-repeat: round no-repeat ;" }
+      , { "name": "round-y"  , "code": "rdy", "use": "background-repeat: no-repeat round ;" }
+      , { "name": "repeat space" , "code": "r_sp"  }
+      , { "name": "repeat round" , "code": "r_rd"  }
+      , { "name": "space  repeat", "code": "sp_r"  }
+      , { "name": "space  round" , "code": "sp_rd" }
+      , { "name": "round  repeat", "code": "rd_r"  }
+      , { "name": "round  space" , "code": "rd_sp" }
+      ]
 ```
 
 ### `background-attachment`
