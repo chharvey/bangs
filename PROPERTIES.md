@@ -210,6 +210,7 @@ This file lists information about each property and its supported values.
 ```
 .-x-a    auto
 .-x-c    content
+.-x-z    0
 .-x-h    0.5
 .-x-1    1
 .-x-2    2
