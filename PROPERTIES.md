@@ -518,6 +518,28 @@ This file lists information about each property and its supported values.
 -sG    true
 -sT    true
 ```
+```
+  , {
+      "name": "margin"
+    , "code": "m"
+    , "summary": "Sets the margin space on an element."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/margin"
+    , "inherited": false
+    , "initial": "0"
+    , "values": [
+        { "name" : "auto", "code" : "a" }
+      , { "name" : "0"   , "code" : "z" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      , "small+" : true
+      , "medium+": true
+      , "large+" : true
+      , "xlarge+": true
+      }
+    }
+```
 
 ### `padding-top`, `padding-bottom`, ‘padding-vertical’
 ```
@@ -641,6 +663,27 @@ This file lists information about each property and its supported values.
 -sM    true
 -sG    true
 -sT    true
+```
+```
+  , {
+      "name": "padding"
+    , "code": "p"
+    , "summary": "Sets the padding space on an element."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/padding"
+    , "inherited": false
+    , "initial": "0"
+    , "values": [
+        { "name" : "0", "code" : "z" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      , "small+" : true
+      , "medium+": true
+      , "large+" : true
+      , "xlarge+": true
+      }
+    }
 ```
 
 
