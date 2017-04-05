@@ -355,6 +355,34 @@ This file lists information about each property and its supported values.
 -sT    true
 ```
 
+### `margin-top`, `margin-bottom`, ‘margin-vertical’
+```
+.-mt  .-mb  .-mv
+
+-a     auto
+-z     0
+-q     0.25vru
+-h     0.5vru
+-1     1vru
+-2     2vru
+-4     4vru
+-8     8vru
+-g     16vru
+-_q    -0.25vru
+-_h    -0.5vru
+-_1    -1vru
+-_2    -2vru
+-_4    -4vru
+-_8    -8vru
+-_g    -16vru
+
+-sK    true
+-sM    true
+-sG    true
+-sT    true
+```
+(where ‘vru’ is one “vertical rhythm unit,” that is, `var(--vru, 1.5rem)`)
+
 ### `margin-*`
 ```
 .-ml  .-mr  .-mt  .-mb  .-mh  .-mv  .-ma
@@ -383,6 +411,26 @@ This file lists information about each property and its supported values.
 -sG    true
 -sT    true
 ```
+
+### `padding-top`, `padding-bottom`, ‘padding-vertical’
+```
+.-pt  .-pb  .-pv
+
+-z    0
+-q    0.25vru
+-h    0.5vru
+-1    1vru
+-2    2vru
+-4    4vru
+-8    8vru
+-g    16vru
+
+-sK    true
+-sM    true
+-sG    true
+-sT    true
+```
+(where ‘vru’ is one “vertical rhythm unit,” that is, `var(--vru, 1.5rem)`)
 
 ### `padding-*`
 ```
