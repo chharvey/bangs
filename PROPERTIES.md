@@ -382,6 +382,48 @@ This file lists information about each property and its supported values.
 -sT    true
 ```
 (where ‘vru’ is one “vertical rhythm unit,” that is, `var(--vru, 1.5rem)`)
+```
+  , {
+      "name": "margin-vertical"
+    , "code": {
+        "mt": "margin-top"
+      , "mb": "margin-bottom"
+      , "mv": "margin-vertical"
+      }
+    , "summary": "Sets the top, bottom, or top and bottom margin space on an element."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/margin"
+    , "inherited": false
+    , "initial": "0"
+    , "values": [
+        { "name" : "inherit"  ,                 "use": { "mv": ".-mt-i ; .-mb-i ;" } }
+        { "name" : "initial"  ,                 "use": { "mv": ".-mt-0 ; .-mb-0 ;" } }
+        { "name" : "auto"     , "code" : "a"  , "use": { "mv": ".-mt-a ; .-mb-a ;" } }
+      , { "name" : "0"        , "code" : "z"  , "use": { "mv": ".-mt-z ; .-mb-z ;" } }
+      , { "name" : "0.25vru"  , "code" : "q"  , "use": { "mt": "margin-top: calc(0.25  ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(0.25  ~'*' var(--vru, 1.5rem));", "mv": ".-mt-q ; .-mb-q ;" } }
+      , { "name" : "0.5vru"   , "code" : "h"  , "use": { "mt": "margin-top: calc(0.5   ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(0.5   ~'*' var(--vru, 1.5rem));", "mv": ".-mt-h ; .-mb-h ;" } }
+      , { "name" : "1vru"     , "code" : "1"  , "use": { "mt": "margin-top: calc(1     ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(1     ~'*' var(--vru, 1.5rem));", "mv": ".-mt-1 ; .-mb-1 ;" } }
+      , { "name" : "2vru"     , "code" : "2"  , "use": { "mt": "margin-top: calc(2     ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(2     ~'*' var(--vru, 1.5rem));", "mv": ".-mt-2 ; .-mb-2 ;" } }
+      , { "name" : "4vru"     , "code" : "4"  , "use": { "mt": "margin-top: calc(4     ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(4     ~'*' var(--vru, 1.5rem));", "mv": ".-mt-4 ; .-mb-4 ;" } }
+      , { "name" : "8vru"     , "code" : "8"  , "use": { "mt": "margin-top: calc(8     ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(8     ~'*' var(--vru, 1.5rem));", "mv": ".-mt-8 ; .-mb-8 ;" } }
+      , { "name" : "16vru"    , "code" : "g"  , "use": { "mt": "margin-top: calc(16    ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(16    ~'*' var(--vru, 1.5rem));", "mv": ".-mt-g ; .-mb-g ;" } }
+      , { "name" : "-0.25vru" , "code" : "_q" , "use": { "mt": "margin-top: calc(-0.25 ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(-0.25 ~'*' var(--vru, 1.5rem));", "mv": ".-mt-_q; .-mb-_q;" } }
+      , { "name" : "-0.5vru"  , "code" : "_h" , "use": { "mt": "margin-top: calc(-0.5  ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(-0.5  ~'*' var(--vru, 1.5rem));", "mv": ".-mt-_h; .-mb-_h;" } }
+      , { "name" : "-1vru"    , "code" : "_1" , "use": { "mt": "margin-top: calc(-1    ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(-1    ~'*' var(--vru, 1.5rem));", "mv": ".-mt-_1; .-mb-_1;" } }
+      , { "name" : "-2vru"    , "code" : "_2" , "use": { "mt": "margin-top: calc(-2    ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(-2    ~'*' var(--vru, 1.5rem));", "mv": ".-mt-_2; .-mb-_2;" } }
+      , { "name" : "-4vru"    , "code" : "_4" , "use": { "mt": "margin-top: calc(-4    ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(-4    ~'*' var(--vru, 1.5rem));", "mv": ".-mt-_4; .-mb-_4;" } }
+      , { "name" : "-8vru"    , "code" : "_8" , "use": { "mt": "margin-top: calc(-8    ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(-8    ~'*' var(--vru, 1.5rem));", "mv": ".-mt-_8; .-mb-_8;" } }
+      , { "name" : "-16vru"   , "code" : "_g" , "use": { "mt": "margin-top: calc(-16   ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(-16   ~'*' var(--vru, 1.5rem));", "mv": ".-mt-_g; .-mb-_g;" } }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      , "small+" : true
+      , "medium+": true
+      , "large+" : true
+      , "xlarge+": true
+      }
+    }
+```
 
 ### `margin-left`, `margin-right`, ‘margin-horizontal’
 ```
@@ -408,6 +450,48 @@ This file lists information about each property and its supported values.
 -sM    true
 -sG    true
 -sT    true
+```
+```
+  , {
+      "name": "margin-horizontal"
+    , "code": {
+        "ml": "margin-left"
+      , "mr": "margin-right"
+      , "mh": "margin-horizontal"
+      }
+    , "summary": "Sets the left, right, or left and right margin space on an element."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/margin"
+    , "inherited": false
+    , "initial": "0"
+    , "values": [
+        { "name" : "inherit"  ,                 "use": { "mh": ".-ml-i ; .-mr-i ;" } }
+        { "name" : "initial"  ,                 "use": { "mh": ".-ml-0 ; .-mr-0 ;" } }
+        { "name" : "auto"     , "code" : "a"  , "use": { "mh": ".-ml-a ; .-mr-a ;" } }
+      , { "name" : "0"        , "code" : "z"  , "use": { "mh": ".-ml-z ; .-mr-z ;" } }
+      , { "name" : "0.25rem"  , "code" : "q"  , "use": { "mh": ".-ml-q ; .-mr-q ;", "ma": ".-mv-q ; .-mh-q; " } }
+      , { "name" : "0.5rem"   , "code" : "h"  , "use": { "mh": ".-ml-h ; .-mr-h ;", "ma": ".-mv-h ; .-mh-h; " } }
+      , { "name" : "1rem"     , "code" : "1"  , "use": { "mh": ".-ml-1 ; .-mr-1 ;", "ma": ".-mv-1 ; .-mh-1; " } }
+      , { "name" : "2rem"     , "code" : "2"  , "use": { "mh": ".-ml-2 ; .-mr-2 ;", "ma": ".-mv-2 ; .-mh-2; " } }
+      , { "name" : "4rem"     , "code" : "4"  , "use": { "mh": ".-ml-4 ; .-mr-4 ;", "ma": ".-mv-4 ; .-mh-4; " } }
+      , { "name" : "8rem"     , "code" : "8"  , "use": { "mh": ".-ml-8 ; .-mr-8 ;", "ma": ".-mv-8 ; .-mh-8; " } }
+      , { "name" : "16rem"    , "code" : "g"  , "use": { "mh": ".-ml-g ; .-mr-g ;", "ma": ".-mv-g ; .-mh-g; " } }
+      , { "name" : "-0.25rem" , "code" : "_q" , "use": { "mh": ".-ml-_q; .-mr-_q;", "ma": ".-mv-_q; .-mh-_q;" } }
+      , { "name" : "-0.5rem"  , "code" : "_h" , "use": { "mh": ".-ml-_h; .-mr-_h;", "ma": ".-mv-_h; .-mh-_h;" } }
+      , { "name" : "-1rem"    , "code" : "_1" , "use": { "mh": ".-ml-_1; .-mr-_1;", "ma": ".-mv-_1; .-mh-_1;" } }
+      , { "name" : "-2rem"    , "code" : "_2" , "use": { "mh": ".-ml-_2; .-mr-_2;", "ma": ".-mv-_2; .-mh-_2;" } }
+      , { "name" : "-4rem"    , "code" : "_4" , "use": { "mh": ".-ml-_4; .-mr-_4;", "ma": ".-mv-_4; .-mh-_4;" } }
+      , { "name" : "-8rem"    , "code" : "_8" , "use": { "mh": ".-ml-_8; .-mr-_8;", "ma": ".-mv-_8; .-mh-_8;" } }
+      , { "name" : "-16rem"   , "code" : "_g" , "use": { "mh": ".-ml-_g; .-mr-_g;", "ma": ".-mv-_g; .-mh-_g;" } }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      , "small+" : true
+      , "medium+": true
+      , "large+" : true
+      , "xlarge+": true
+      }
+    }
 ```
 
 ### `margin`
@@ -454,6 +538,40 @@ This file lists information about each property and its supported values.
 -sT    true
 ```
 (where ‘vru’ is one “vertical rhythm unit,” that is, `var(--vru, 1.5rem)`)
+```
+  , {
+      "name": "padding-vertical"
+    , "code": {
+        "pt": "padding-top"
+      , "pb": "padding-bottom"
+      , "pv": "padding-vertical"
+      }
+    , "summary": "Sets the top, bottom, or top and bottom padding space on an element."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/margin"
+    , "inherited": false
+    , "initial": "0"
+    , "values": [
+        { "name" : "inherit"  ,                 "use": { "pv": ".-pt-i; .-pb-i;" } }
+        { "name" : "initial"  ,                 "use": { "pv": ".-pt-0; .-pb-0;" } }
+      , { "name" : "0"        , "code" : "z"  , "use": { "pv": ".-pt-z; .-pb-z;" } }
+      , { "name" : "0.25vru"  , "code" : "q"  , "use": { "pt": "padding-top: calc(0.25 ~'*' var(--vru, 1.5rem));", "pb": "padding-bottom: calc(0.25 ~'*' var(--vru, 1.5rem));", "pv": ".-pt-q; .-pb-q;" } }
+      , { "name" : "0.5vru"   , "code" : "h"  , "use": { "pt": "padding-top: calc(0.5  ~'*' var(--vru, 1.5rem));", "pb": "padding-bottom: calc(0.5  ~'*' var(--vru, 1.5rem));", "pv": ".-pt-h; .-pb-h;" } }
+      , { "name" : "1vru"     , "code" : "1"  , "use": { "pt": "padding-top: calc(1    ~'*' var(--vru, 1.5rem));", "pb": "padding-bottom: calc(1    ~'*' var(--vru, 1.5rem));", "pv": ".-pt-1; .-pb-1;" } }
+      , { "name" : "2vru"     , "code" : "2"  , "use": { "pt": "padding-top: calc(2    ~'*' var(--vru, 1.5rem));", "pb": "padding-bottom: calc(2    ~'*' var(--vru, 1.5rem));", "pv": ".-pt-2; .-pb-2;" } }
+      , { "name" : "4vru"     , "code" : "4"  , "use": { "pt": "padding-top: calc(4    ~'*' var(--vru, 1.5rem));", "pb": "padding-bottom: calc(4    ~'*' var(--vru, 1.5rem));", "pv": ".-pt-4; .-pb-4;" } }
+      , { "name" : "8vru"     , "code" : "8"  , "use": { "pt": "padding-top: calc(8    ~'*' var(--vru, 1.5rem));", "pb": "padding-bottom: calc(8    ~'*' var(--vru, 1.5rem));", "pv": ".-pt-8; .-pb-8;" } }
+      , { "name" : "16vru"    , "code" : "g"  , "use": { "pt": "padding-top: calc(16   ~'*' var(--vru, 1.5rem));", "pb": "padding-bottom: calc(16   ~'*' var(--vru, 1.5rem));", "pv": ".-pt-g; .-pb-g;" } }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      , "small+" : true
+      , "medium+": true
+      , "large+" : true
+      , "xlarge+": true
+      }
+    }
+```
 
 ### `padding-left`, `padding-right`, ‘padding-horizontal’
 ```
@@ -472,6 +590,40 @@ This file lists information about each property and its supported values.
 -sM    true
 -sG    true
 -sT    true
+```
+```
+  , {
+      "name": "padding-horizontal"
+    , "code": {
+        "pl": "padding-left"
+      , "pr": "padding-right"
+      , "ph": "padding-horizontal"
+      }
+    , "summary": "Sets the left, right, or left and right padding space on an element."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/margin"
+    , "inherited": false
+    , "initial": "0"
+    , "values": [
+        { "name" : "inherit"  ,                 "use": { "ph": ".-pl-i; .-pr-i;" } }
+        { "name" : "initial"  ,                 "use": { "ph": ".-pl-0; .-pr-0;" } }
+      , { "name" : "0"        , "code" : "z"  , "use": { "ph": ".-pl-z; .-pr-z;" } }
+      , { "name" : "0.25rem"  , "code" : "q"  , "use": { "ph": ".-pl-q; .-pr-q;", "pa": ".-pv-q; .-ph-q;" } }
+      , { "name" : "0.5rem"   , "code" : "h"  , "use": { "ph": ".-pl-h; .-pr-h;", "pa": ".-pv-h; .-ph-h;" } }
+      , { "name" : "1rem"     , "code" : "1"  , "use": { "ph": ".-pl-1; .-pr-1;", "pa": ".-pv-1; .-ph-1;" } }
+      , { "name" : "2rem"     , "code" : "2"  , "use": { "ph": ".-pl-2; .-pr-2;", "pa": ".-pv-2; .-ph-2;" } }
+      , { "name" : "4rem"     , "code" : "4"  , "use": { "ph": ".-pl-4; .-pr-4;", "pa": ".-pv-4; .-ph-4;" } }
+      , { "name" : "8rem"     , "code" : "8"  , "use": { "ph": ".-pl-8; .-pr-8;", "pa": ".-pv-8; .-ph-8;" } }
+      , { "name" : "16rem"    , "code" : "g"  , "use": { "ph": ".-pl-g; .-pr-g;", "pa": ".-pv-g; .-ph-g;" } }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      , "small+" : true
+      , "medium+": true
+      , "large+" : true
+      , "xlarge+": true
+      }
+    }
 ```
 
 ### `padding`
