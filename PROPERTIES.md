@@ -410,28 +410,24 @@ This file lists information about each property and its supported values.
 -sT    true
 ```
 
-### `margin-*`
+### `margin`
 ```
-.-ml  .-mr  .-mt  .-mb  .-mh  .-mv  .-ma
-```
-(for `-left`, `-right`, `-top`, `-bottom`, ‘horizontal’, ‘vertical’, or ‘all’, respectively)
-```
--a    auto
--z    0
--q    0.25rem
--h    0.5rem
--1    1rem
--2    2rem
--4    4rem
--8    8rem
--g    16rem
--_q    -0.25rem
--_h    -0.5rem
--_1    -1rem
--_2    -2rem
--_4    -4rem
--_8    -8rem
--_g    -16rem
+.-ma-a     auto     o
+.-ma-z     0        0
+.-ma-q     0.25vru  0.25rem
+.-ma-h     0.5vru   0.5rem
+.-ma-1     1vru     m
+.-ma-2     2vru     m
+.-ma-4     4vru     m
+.-ma-8     8vru     m
+.-ma-g     16vru    m
+.-ma-_q    -0.25vru -0.25rem
+.-ma-_h    -0.5vru  -0.5rem
+.-ma-_1    -1vru    -1rem
+.-ma-_2    -2vru    -2rem
+.-ma-_4    -4vru    -4rem
+.-ma-_8    -8vru    -8rem
+.-ma-_g    -16vru   -16rem
 
 -sK    true
 -sM    true
@@ -478,20 +474,16 @@ This file lists information about each property and its supported values.
 -sT    true
 ```
 
-### `padding-*`
+### `padding`
 ```
-.-pl  .-pr  .-pt  .-pb  .-ph  .-pv  .-pa
-```
-(for `-left`, `-right`, `-top`, `-bottom`, ‘horizontal’, ‘vertical’, or ‘all’, respectively)
-```
--z    0
--q    0.25rem
--h    0.5rem
--1    1rem
--2    2rem
--4    4rem
--8    8rem
--g    16rem
+.-pa-z    0       0
+.-pa-q    0.25vru 0.25rem
+.-pa-h    0.5vru  0.5rem
+.-pa-1    1vru    1rem
+.-pa-2    2vru    2rem
+.-pa-4    4vru    4rem
+.-pa-8    8vru    8rem
+.-pa-g    16vru   16rem
 
 -sK    true
 -sM    true
