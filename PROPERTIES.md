@@ -468,20 +468,20 @@ This file lists information about each property and its supported values.
         { "name" : "initial"  ,                 "use": { "mh": ".-ml-0 ; .-mr-0 ;" } }
         { "name" : "auto"     , "code" : "a"  , "use": { "mh": ".-ml-a ; .-mr-a ;" } }
       , { "name" : "0"        , "code" : "z"  , "use": { "mh": ".-ml-z ; .-mr-z ;" } }
-      , { "name" : "0.25rem"  , "code" : "q"  , "use": { "mh": ".-ml-q ; .-mr-q ;", "ma": ".-mv-q ; .-mh-q; " } }
-      , { "name" : "0.5rem"   , "code" : "h"  , "use": { "mh": ".-ml-h ; .-mr-h ;", "ma": ".-mv-h ; .-mh-h; " } }
-      , { "name" : "1rem"     , "code" : "1"  , "use": { "mh": ".-ml-1 ; .-mr-1 ;", "ma": ".-mv-1 ; .-mh-1; " } }
-      , { "name" : "2rem"     , "code" : "2"  , "use": { "mh": ".-ml-2 ; .-mr-2 ;", "ma": ".-mv-2 ; .-mh-2; " } }
-      , { "name" : "4rem"     , "code" : "4"  , "use": { "mh": ".-ml-4 ; .-mr-4 ;", "ma": ".-mv-4 ; .-mh-4; " } }
-      , { "name" : "8rem"     , "code" : "8"  , "use": { "mh": ".-ml-8 ; .-mr-8 ;", "ma": ".-mv-8 ; .-mh-8; " } }
-      , { "name" : "16rem"    , "code" : "g"  , "use": { "mh": ".-ml-g ; .-mr-g ;", "ma": ".-mv-g ; .-mh-g; " } }
-      , { "name" : "-0.25rem" , "code" : "_q" , "use": { "mh": ".-ml-_q; .-mr-_q;", "ma": ".-mv-_q; .-mh-_q;" } }
-      , { "name" : "-0.5rem"  , "code" : "_h" , "use": { "mh": ".-ml-_h; .-mr-_h;", "ma": ".-mv-_h; .-mh-_h;" } }
-      , { "name" : "-1rem"    , "code" : "_1" , "use": { "mh": ".-ml-_1; .-mr-_1;", "ma": ".-mv-_1; .-mh-_1;" } }
-      , { "name" : "-2rem"    , "code" : "_2" , "use": { "mh": ".-ml-_2; .-mr-_2;", "ma": ".-mv-_2; .-mh-_2;" } }
-      , { "name" : "-4rem"    , "code" : "_4" , "use": { "mh": ".-ml-_4; .-mr-_4;", "ma": ".-mv-_4; .-mh-_4;" } }
-      , { "name" : "-8rem"    , "code" : "_8" , "use": { "mh": ".-ml-_8; .-mr-_8;", "ma": ".-mv-_8; .-mh-_8;" } }
-      , { "name" : "-16rem"   , "code" : "_g" , "use": { "mh": ".-ml-_g; .-mr-_g;", "ma": ".-mv-_g; .-mh-_g;" } }
+      , { "name" : "0.25rem"  , "code" : "q"  , "use": { "mh": ".-ml-q ; .-mr-q ;" } }
+      , { "name" : "0.5rem"   , "code" : "h"  , "use": { "mh": ".-ml-h ; .-mr-h ;" } }
+      , { "name" : "1rem"     , "code" : "1"  , "use": { "mh": ".-ml-1 ; .-mr-1 ;" } }
+      , { "name" : "2rem"     , "code" : "2"  , "use": { "mh": ".-ml-2 ; .-mr-2 ;" } }
+      , { "name" : "4rem"     , "code" : "4"  , "use": { "mh": ".-ml-4 ; .-mr-4 ;" } }
+      , { "name" : "8rem"     , "code" : "8"  , "use": { "mh": ".-ml-8 ; .-mr-8 ;" } }
+      , { "name" : "16rem"    , "code" : "g"  , "use": { "mh": ".-ml-g ; .-mr-g ;" } }
+      , { "name" : "-0.25rem" , "code" : "_q" , "use": { "mh": ".-ml-_q; .-mr-_q;" } }
+      , { "name" : "-0.5rem"  , "code" : "_h" , "use": { "mh": ".-ml-_h; .-mr-_h;" } }
+      , { "name" : "-1rem"    , "code" : "_1" , "use": { "mh": ".-ml-_1; .-mr-_1;" } }
+      , { "name" : "-2rem"    , "code" : "_2" , "use": { "mh": ".-ml-_2; .-mr-_2;" } }
+      , { "name" : "-4rem"    , "code" : "_4" , "use": { "mh": ".-ml-_4; .-mr-_4;" } }
+      , { "name" : "-8rem"    , "code" : "_8" , "use": { "mh": ".-ml-_8; .-mr-_8;" } }
+      , { "name" : "-16rem"   , "code" : "_g" , "use": { "mh": ".-ml-_g; .-mr-_g;" } }
       ]
     , "media": {
         "screen" : true
@@ -607,13 +607,13 @@ This file lists information about each property and its supported values.
         { "name" : "inherit"  ,                 "use": { "ph": ".-pl-i; .-pr-i;" } }
         { "name" : "initial"  ,                 "use": { "ph": ".-pl-0; .-pr-0;" } }
       , { "name" : "0"        , "code" : "z"  , "use": { "ph": ".-pl-z; .-pr-z;" } }
-      , { "name" : "0.25rem"  , "code" : "q"  , "use": { "ph": ".-pl-q; .-pr-q;", "pa": ".-pv-q; .-ph-q;" } }
-      , { "name" : "0.5rem"   , "code" : "h"  , "use": { "ph": ".-pl-h; .-pr-h;", "pa": ".-pv-h; .-ph-h;" } }
-      , { "name" : "1rem"     , "code" : "1"  , "use": { "ph": ".-pl-1; .-pr-1;", "pa": ".-pv-1; .-ph-1;" } }
-      , { "name" : "2rem"     , "code" : "2"  , "use": { "ph": ".-pl-2; .-pr-2;", "pa": ".-pv-2; .-ph-2;" } }
-      , { "name" : "4rem"     , "code" : "4"  , "use": { "ph": ".-pl-4; .-pr-4;", "pa": ".-pv-4; .-ph-4;" } }
-      , { "name" : "8rem"     , "code" : "8"  , "use": { "ph": ".-pl-8; .-pr-8;", "pa": ".-pv-8; .-ph-8;" } }
-      , { "name" : "16rem"    , "code" : "g"  , "use": { "ph": ".-pl-g; .-pr-g;", "pa": ".-pv-g; .-ph-g;" } }
+      , { "name" : "0.25rem"  , "code" : "q"  , "use": { "ph": ".-pl-q; .-pr-q;" } }
+      , { "name" : "0.5rem"   , "code" : "h"  , "use": { "ph": ".-pl-h; .-pr-h;" } }
+      , { "name" : "1rem"     , "code" : "1"  , "use": { "ph": ".-pl-1; .-pr-1;" } }
+      , { "name" : "2rem"     , "code" : "2"  , "use": { "ph": ".-pl-2; .-pr-2;" } }
+      , { "name" : "4rem"     , "code" : "4"  , "use": { "ph": ".-pl-4; .-pr-4;" } }
+      , { "name" : "8rem"     , "code" : "8"  , "use": { "ph": ".-pl-8; .-pr-8;" } }
+      , { "name" : "16rem"    , "code" : "g"  , "use": { "ph": ".-pl-g; .-pr-g;" } }
       ]
     , "media": {
         "screen" : true
