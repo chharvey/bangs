@@ -2894,6 +2894,12 @@
   -ms-flex: content !important;
   flex: content !important;
 }
+.-x-z {
+  -webkit-box-flex: 0 !important;
+  -webkit-flex: 0 !important;
+  -ms-flex: 0 !important;
+  flex: 0 !important;
+}
 .-x-h {
   -webkit-box-flex: 0.5 !important;
   -webkit-flex: 0.5 !important;
@@ -3079,6 +3085,12 @@
     -webkit-flex: content !important;
     -ms-flex: content !important;
     flex: content !important;
+  }
+  .-x-z-s {
+    -webkit-box-flex: 0 !important;
+    -webkit-flex: 0 !important;
+    -ms-flex: 0 !important;
+    flex: 0 !important;
   }
   .-x-h-s {
     -webkit-box-flex: 0.5 !important;
@@ -3267,6 +3279,12 @@
     -ms-flex: content !important;
     flex: content !important;
   }
+  .-x-z-p {
+    -webkit-box-flex: 0 !important;
+    -webkit-flex: 0 !important;
+    -ms-flex: 0 !important;
+    flex: 0 !important;
+  }
   .-x-h-p {
     -webkit-box-flex: 0.5 !important;
     -webkit-flex: 0.5 !important;
@@ -3453,6 +3471,12 @@
     -webkit-flex: content !important;
     -ms-flex: content !important;
     flex: content !important;
+  }
+  .-x-z-sK {
+    -webkit-box-flex: 0 !important;
+    -webkit-flex: 0 !important;
+    -ms-flex: 0 !important;
+    flex: 0 !important;
   }
   .-x-h-sK {
     -webkit-box-flex: 0.5 !important;
@@ -3641,6 +3665,12 @@
     -ms-flex: content !important;
     flex: content !important;
   }
+  .-x-z-sM {
+    -webkit-box-flex: 0 !important;
+    -webkit-flex: 0 !important;
+    -ms-flex: 0 !important;
+    flex: 0 !important;
+  }
   .-x-h-sM {
     -webkit-box-flex: 0.5 !important;
     -webkit-flex: 0.5 !important;
@@ -3828,6 +3858,12 @@
     -ms-flex: content !important;
     flex: content !important;
   }
+  .-x-z-sG {
+    -webkit-box-flex: 0 !important;
+    -webkit-flex: 0 !important;
+    -ms-flex: 0 !important;
+    flex: 0 !important;
+  }
   .-x-h-sG {
     -webkit-box-flex: 0.5 !important;
     -webkit-flex: 0.5 !important;
@@ -4014,6 +4050,12 @@
     -webkit-flex: content !important;
     -ms-flex: content !important;
     flex: content !important;
+  }
+  .-x-z-sT {
+    -webkit-box-flex: 0 !important;
+    -webkit-flex: 0 !important;
+    -ms-flex: 0 !important;
+    flex: 0 !important;
   }
   .-x-h-sT {
     -webkit-box-flex: 0.5 !important;
