@@ -1,0 +1,48 @@
+
+/*################################*\
+    bangs  |  _flex-wrap.less
+\*################################*/
+@import (reference) url('../node_modules/xmeter/src/__fallback.flexbox.less');
+
+// Determines whether boxes wrap to the next row or column.
+//
+// xw  =  flex-wrap
+//
+// 0  =  initial
+// i  =  inherit
+// n  =  nowrap
+// w  =  wrap
+// r  =  wrap-reverse
+//
+// ^initial
+// : `nowrap`
+// ^inherited
+// : false
+// ^url
+// : https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2017-03-28
+
+.-xw-0  { .-xw-nw; .flex-wrap(initial)      !important; }
+.-xw-i  {          .flex-wrap(inherit)      !important; }
+.-xw-nw {          .flex-wrap(nowrap)       !important; }
+.-xw-wp {          .flex-wrap(wrap)         !important; }
+.-xw-wr {          .flex-wrap(wrap-reverse) !important; }
+
+@media screen {
+  .-xw-0-s  { .-xw-0 ; }
+  .-xw-i-s  { .-xw-i ; }
+  .-xw-nw-s { .-xw-nw; }
+  .-xw-wp-s { .-xw-wp; }
+  .-xw-wr-s { .-xw-wr; }
+}
+
+@media print {
+  .-xw-0-p  { .-xw-0 ; }
+  .-xw-i-p  { .-xw-i ; }
+  .-xw-nw-p { .-xw-nw; }
+  .-xw-wp-p { .-xw-wp; }
+  .-xw-wr-p { .-xw-wr; }
+}

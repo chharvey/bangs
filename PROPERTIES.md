@@ -7,12 +7,36 @@ This file lists information about each property and its supported values.
 
 ### `display`
 ```
-.-d-n     none
-.-d-bk    block
-.-d-il    inline
-.-d-ib    inline-block
-.-d-fx    flex
-.-d-li    list-item
+    , "stability": 2
+    , "values": [
+        { "name": "none"               , "code": "n"  , "stability": 3 }
+        { "name": "contents"           , "code": "c"                   }
+      , { "name": "block"              , "code": "b"                   }
+      , { "name": "inline"             , "code": "l"                   }
+      , { "name": "run-in"             , "code": "r"                   }
+      , { "name": "flow"               , "code": "f"                   }
+      , { "name": "flow-root"          , "code": "o"                   }
+      , { "name": "table"              , "code": "t"  , "stability": 0 }
+      , { "name": "flex"               , "code": "x"  ,                 "use": ".flexbox()" }
+      , { "name": "grid"               , "code": "g"  ,                 "use": ".grid()"    }
+      , { "name": "list-item"          , "code": "s"  , "stability": 3 }
+      , { "name": "list-item flow-root", "code": "s_o"                 }
+      , { "name": "list-item inline"   , "code": "s_l"                 }
+
+      , { "name": "inline-block"       , "code": "lb" , "stability": 1 }
+      , { "name": "inline-list-item"   , "code": "ls" , "stability": 1 }
+      , { "name": "inline-table"       , "code": "lt" , "stability": 1 }
+      , { "name": "inline-flex"        , "code": "lf" , "stability": 1 }
+      , { "name": "inline-grid"        , "code": "lg" , "stability": 1 }
+
+      , { "name": "table-row"          , "code": "tr" , "stability": 0 }
+      , { "name": "table-column"       , "code": "tl" , "stability": 0 }
+      , { "name": "table-cell"         , "code": "tc" , "stability": 0 }
+      , { "name": "table-row-group"    , "code": "trg", "stability": 0 }
+      , { "name": "table-header-group" , "code": "thg", "stability": 0 }
+      , { "name": "table-footer-group" , "code": "tfg", "stability": 0 }
+      , { "name": "table-column-group" , "code": "tlg", "stability": 0 }
+      ]
 
 -sK    true
 -sM    true
@@ -97,12 +121,12 @@ This file lists information about each property and its supported values.
 ```
 .-va-a     baseline
 .-va-b     bottom
-.-va-m     middle
+.-va-c     middle
 .-va-t     top
 .-va-tb    text-bottom
 .-va-tt    text-top
 .-va-sb    sub
-.-va-st    super
+.-va-sp    super
 ```
 
 ### `flex-direction`
@@ -115,9 +139,9 @@ This file lists information about each property and its supported values.
 
 ### `flex-wrap`
 ```
-.-xw-n    nowrap
-.-xw-w    wrap
-.-xw-r    wrap-reverse
+.-xw-nw    nowrap
+.-xw-wp    wrap
+.-xw-wr    wrap-reverse
 ```
 
 ### `justify-content`
@@ -186,6 +210,7 @@ This file lists information about each property and its supported values.
 ```
 .-x-a    auto
 .-x-c    content
+.-x-z    0
 .-x-h    0.5
 .-x-1    1
 .-x-2    2
@@ -242,7 +267,7 @@ This file lists information about each property and its supported values.
 ### `box-sizing`
 ```
 .-kz-c    content-box
-.-kz-b    border-box
+.-kz-r    border-box
 ```
 
 ### `width`
@@ -331,21 +356,89 @@ This file lists information about each property and its supported values.
 -sT    true
 ```
 
-### `margin-*`
+### `margin-top`, `margin-bottom`, ‘margin-vertical’
 ```
-.-ml  .-mr  .-mt  .-mb  .-mh  .-mv  .-ma
+.-mt  .-mb  .-mv
+
+-a     auto
+-z     0
+-q     0.25vru
+-h     0.5vru
+-1     1vru
+-2     2vru
+-4     4vru
+-8     8vru
+-g     16vru
+-_q    -0.25vru
+-_h    -0.5vru
+-_1    -1vru
+-_2    -2vru
+-_4    -4vru
+-_8    -8vru
+-_g    -16vru
+
+-sK    true
+-sM    true
+-sG    true
+-sT    true
 ```
-(for `-left`, `-right`, `-top`, `-bottom`, ‘horizontal’, ‘vertical’, or ‘all’, respectively)
+(where ‘vru’ is one “vertical rhythm unit,” that is, `var(--vru, 1.5rem)`)
 ```
--a    auto
--z    0
--q    0.25rem
--h    0.5rem
--1    1rem
--2    2rem
--4    4rem
--8    8rem
--g    16rem
+  , {
+      "name": "margin-vertical"
+    , "code": {
+        "mt": "margin-top"
+      , "mb": "margin-bottom"
+      , "mv": "margin-vertical"
+      }
+    , "summary": "Sets the top, bottom, or top and bottom margin space on an element."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/margin"
+    , "inherited": false
+    , "initial": "0"
+    , "values": [
+        { "name" : "inherit"  ,                 "use": { "mv": ".-mt-i ; .-mb-i ;" } }
+        { "name" : "initial"  ,                 "use": { "mv": ".-mt-0 ; .-mb-0 ;" } }
+        { "name" : "auto"     , "code" : "a"  , "use": { "mv": ".-mt-a ; .-mb-a ;" } }
+      , { "name" : "0"        , "code" : "z"  , "use": { "mv": ".-mt-z ; .-mb-z ;" } }
+      , { "name" : "0.25vru"  , "code" : "q"  , "use": { "mt": "margin-top: calc(0.25  ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(0.25  ~'*' var(--vru, 1.5rem));", "mv": ".-mt-q ; .-mb-q ;" } }
+      , { "name" : "0.5vru"   , "code" : "h"  , "use": { "mt": "margin-top: calc(0.5   ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(0.5   ~'*' var(--vru, 1.5rem));", "mv": ".-mt-h ; .-mb-h ;" } }
+      , { "name" : "1vru"     , "code" : "1"  , "use": { "mt": "margin-top: calc(1     ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(1     ~'*' var(--vru, 1.5rem));", "mv": ".-mt-1 ; .-mb-1 ;" } }
+      , { "name" : "2vru"     , "code" : "2"  , "use": { "mt": "margin-top: calc(2     ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(2     ~'*' var(--vru, 1.5rem));", "mv": ".-mt-2 ; .-mb-2 ;" } }
+      , { "name" : "4vru"     , "code" : "4"  , "use": { "mt": "margin-top: calc(4     ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(4     ~'*' var(--vru, 1.5rem));", "mv": ".-mt-4 ; .-mb-4 ;" } }
+      , { "name" : "8vru"     , "code" : "8"  , "use": { "mt": "margin-top: calc(8     ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(8     ~'*' var(--vru, 1.5rem));", "mv": ".-mt-8 ; .-mb-8 ;" } }
+      , { "name" : "16vru"    , "code" : "g"  , "use": { "mt": "margin-top: calc(16    ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(16    ~'*' var(--vru, 1.5rem));", "mv": ".-mt-g ; .-mb-g ;" } }
+      , { "name" : "-0.25vru" , "code" : "_q" , "use": { "mt": "margin-top: calc(-0.25 ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(-0.25 ~'*' var(--vru, 1.5rem));", "mv": ".-mt-_q; .-mb-_q;" } }
+      , { "name" : "-0.5vru"  , "code" : "_h" , "use": { "mt": "margin-top: calc(-0.5  ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(-0.5  ~'*' var(--vru, 1.5rem));", "mv": ".-mt-_h; .-mb-_h;" } }
+      , { "name" : "-1vru"    , "code" : "_1" , "use": { "mt": "margin-top: calc(-1    ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(-1    ~'*' var(--vru, 1.5rem));", "mv": ".-mt-_1; .-mb-_1;" } }
+      , { "name" : "-2vru"    , "code" : "_2" , "use": { "mt": "margin-top: calc(-2    ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(-2    ~'*' var(--vru, 1.5rem));", "mv": ".-mt-_2; .-mb-_2;" } }
+      , { "name" : "-4vru"    , "code" : "_4" , "use": { "mt": "margin-top: calc(-4    ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(-4    ~'*' var(--vru, 1.5rem));", "mv": ".-mt-_4; .-mb-_4;" } }
+      , { "name" : "-8vru"    , "code" : "_8" , "use": { "mt": "margin-top: calc(-8    ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(-8    ~'*' var(--vru, 1.5rem));", "mv": ".-mt-_8; .-mb-_8;" } }
+      , { "name" : "-16vru"   , "code" : "_g" , "use": { "mt": "margin-top: calc(-16   ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(-16   ~'*' var(--vru, 1.5rem));", "mv": ".-mt-_g; .-mb-_g;" } }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      , "small+" : true
+      , "medium+": true
+      , "large+" : true
+      , "xlarge+": true
+      }
+    }
+```
+
+### `margin-left`, `margin-right`, ‘margin-horizontal’
+```
+.-ml  .-mr  .-mh
+
+-a     auto
+-z     0
+-q     0.25rem
+-h     0.5rem
+-1     1rem
+-2     2rem
+-4     4rem
+-8     8rem
+-g     16rem
 -_q    -0.25rem
 -_h    -0.5rem
 -_1    -1rem
@@ -359,13 +452,154 @@ This file lists information about each property and its supported values.
 -sG    true
 -sT    true
 ```
+```
+  , {
+      "name": "margin-horizontal"
+    , "code": {
+        "ml": "margin-left"
+      , "mr": "margin-right"
+      , "mh": "margin-horizontal"
+      }
+    , "summary": "Sets the left, right, or left and right margin space on an element."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/margin"
+    , "inherited": false
+    , "initial": "0"
+    , "values": [
+        { "name" : "inherit"  ,                 "use": { "mh": ".-ml-i ; .-mr-i ;" } }
+        { "name" : "initial"  ,                 "use": { "mh": ".-ml-0 ; .-mr-0 ;" } }
+        { "name" : "auto"     , "code" : "a"  , "use": { "mh": ".-ml-a ; .-mr-a ;" } }
+      , { "name" : "0"        , "code" : "z"  , "use": { "mh": ".-ml-z ; .-mr-z ;" } }
+      , { "name" : "0.25rem"  , "code" : "q"  , "use": { "mh": ".-ml-q ; .-mr-q ;" } }
+      , { "name" : "0.5rem"   , "code" : "h"  , "use": { "mh": ".-ml-h ; .-mr-h ;" } }
+      , { "name" : "1rem"     , "code" : "1"  , "use": { "mh": ".-ml-1 ; .-mr-1 ;" } }
+      , { "name" : "2rem"     , "code" : "2"  , "use": { "mh": ".-ml-2 ; .-mr-2 ;" } }
+      , { "name" : "4rem"     , "code" : "4"  , "use": { "mh": ".-ml-4 ; .-mr-4 ;" } }
+      , { "name" : "8rem"     , "code" : "8"  , "use": { "mh": ".-ml-8 ; .-mr-8 ;" } }
+      , { "name" : "16rem"    , "code" : "g"  , "use": { "mh": ".-ml-g ; .-mr-g ;" } }
+      , { "name" : "-0.25rem" , "code" : "_q" , "use": { "mh": ".-ml-_q; .-mr-_q;" } }
+      , { "name" : "-0.5rem"  , "code" : "_h" , "use": { "mh": ".-ml-_h; .-mr-_h;" } }
+      , { "name" : "-1rem"    , "code" : "_1" , "use": { "mh": ".-ml-_1; .-mr-_1;" } }
+      , { "name" : "-2rem"    , "code" : "_2" , "use": { "mh": ".-ml-_2; .-mr-_2;" } }
+      , { "name" : "-4rem"    , "code" : "_4" , "use": { "mh": ".-ml-_4; .-mr-_4;" } }
+      , { "name" : "-8rem"    , "code" : "_8" , "use": { "mh": ".-ml-_8; .-mr-_8;" } }
+      , { "name" : "-16rem"   , "code" : "_g" , "use": { "mh": ".-ml-_g; .-mr-_g;" } }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      , "small+" : true
+      , "medium+": true
+      , "large+" : true
+      , "xlarge+": true
+      }
+    }
+```
 
-### `padding-*`
+### `margin`
 ```
-.-pl  .-pr  .-pt  .-pb  .-ph  .-pv  .-pa
+.-ma-a     auto     o
+.-ma-z     0        0
+.-ma-q     0.25vru  0.25rem
+.-ma-h     0.5vru   0.5rem
+.-ma-1     1vru     m
+.-ma-2     2vru     m
+.-ma-4     4vru     m
+.-ma-8     8vru     m
+.-ma-g     16vru    m
+.-ma-_q    -0.25vru -0.25rem
+.-ma-_h    -0.5vru  -0.5rem
+.-ma-_1    -1vru    -1rem
+.-ma-_2    -2vru    -2rem
+.-ma-_4    -4vru    -4rem
+.-ma-_8    -8vru    -8rem
+.-ma-_g    -16vru   -16rem
+
+-sK    true
+-sM    true
+-sG    true
+-sT    true
 ```
-(for `-left`, `-right`, `-top`, `-bottom`, ‘horizontal’, ‘vertical’, or ‘all’, respectively)
 ```
+  , {
+      "name": "margin"
+    , "code": "m"
+    , "summary": "Sets the margin space on an element."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/margin"
+    , "inherited": false
+    , "initial": "0"
+    , "values": [
+        { "name" : "auto", "code" : "a" }
+      , { "name" : "0"   , "code" : "z" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      , "small+" : true
+      , "medium+": true
+      , "large+" : true
+      , "xlarge+": true
+      }
+    }
+```
+
+### `padding-top`, `padding-bottom`, ‘padding-vertical’
+```
+.-pt  .-pb  .-pv
+
+-z    0
+-q    0.25vru
+-h    0.5vru
+-1    1vru
+-2    2vru
+-4    4vru
+-8    8vru
+-g    16vru
+
+-sK    true
+-sM    true
+-sG    true
+-sT    true
+```
+(where ‘vru’ is one “vertical rhythm unit,” that is, `var(--vru, 1.5rem)`)
+```
+  , {
+      "name": "padding-vertical"
+    , "code": {
+        "pt": "padding-top"
+      , "pb": "padding-bottom"
+      , "pv": "padding-vertical"
+      }
+    , "summary": "Sets the top, bottom, or top and bottom padding space on an element."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/margin"
+    , "inherited": false
+    , "initial": "0"
+    , "values": [
+        { "name" : "inherit"  ,                 "use": { "pv": ".-pt-i; .-pb-i;" } }
+        { "name" : "initial"  ,                 "use": { "pv": ".-pt-0; .-pb-0;" } }
+      , { "name" : "0"        , "code" : "z"  , "use": { "pv": ".-pt-z; .-pb-z;" } }
+      , { "name" : "0.25vru"  , "code" : "q"  , "use": { "pt": "padding-top: calc(0.25 ~'*' var(--vru, 1.5rem));", "pb": "padding-bottom: calc(0.25 ~'*' var(--vru, 1.5rem));", "pv": ".-pt-q; .-pb-q;" } }
+      , { "name" : "0.5vru"   , "code" : "h"  , "use": { "pt": "padding-top: calc(0.5  ~'*' var(--vru, 1.5rem));", "pb": "padding-bottom: calc(0.5  ~'*' var(--vru, 1.5rem));", "pv": ".-pt-h; .-pb-h;" } }
+      , { "name" : "1vru"     , "code" : "1"  , "use": { "pt": "padding-top: calc(1    ~'*' var(--vru, 1.5rem));", "pb": "padding-bottom: calc(1    ~'*' var(--vru, 1.5rem));", "pv": ".-pt-1; .-pb-1;" } }
+      , { "name" : "2vru"     , "code" : "2"  , "use": { "pt": "padding-top: calc(2    ~'*' var(--vru, 1.5rem));", "pb": "padding-bottom: calc(2    ~'*' var(--vru, 1.5rem));", "pv": ".-pt-2; .-pb-2;" } }
+      , { "name" : "4vru"     , "code" : "4"  , "use": { "pt": "padding-top: calc(4    ~'*' var(--vru, 1.5rem));", "pb": "padding-bottom: calc(4    ~'*' var(--vru, 1.5rem));", "pv": ".-pt-4; .-pb-4;" } }
+      , { "name" : "8vru"     , "code" : "8"  , "use": { "pt": "padding-top: calc(8    ~'*' var(--vru, 1.5rem));", "pb": "padding-bottom: calc(8    ~'*' var(--vru, 1.5rem));", "pv": ".-pt-8; .-pb-8;" } }
+      , { "name" : "16vru"    , "code" : "g"  , "use": { "pt": "padding-top: calc(16   ~'*' var(--vru, 1.5rem));", "pb": "padding-bottom: calc(16   ~'*' var(--vru, 1.5rem));", "pv": ".-pt-g; .-pb-g;" } }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      , "small+" : true
+      , "medium+": true
+      , "large+" : true
+      , "xlarge+": true
+      }
+    }
+```
+
+### `padding-left`, `padding-right`, ‘padding-horizontal’
+```
+.-pl  .-pr  .-ph
+
 -z    0
 -q    0.25rem
 -h    0.5rem
@@ -379,6 +613,78 @@ This file lists information about each property and its supported values.
 -sM    true
 -sG    true
 -sT    true
+```
+```
+  , {
+      "name": "padding-horizontal"
+    , "code": {
+        "pl": "padding-left"
+      , "pr": "padding-right"
+      , "ph": "padding-horizontal"
+      }
+    , "summary": "Sets the left, right, or left and right padding space on an element."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/margin"
+    , "inherited": false
+    , "initial": "0"
+    , "values": [
+        { "name" : "inherit"  ,                 "use": { "ph": ".-pl-i; .-pr-i;" } }
+        { "name" : "initial"  ,                 "use": { "ph": ".-pl-0; .-pr-0;" } }
+      , { "name" : "0"        , "code" : "z"  , "use": { "ph": ".-pl-z; .-pr-z;" } }
+      , { "name" : "0.25rem"  , "code" : "q"  , "use": { "ph": ".-pl-q; .-pr-q;" } }
+      , { "name" : "0.5rem"   , "code" : "h"  , "use": { "ph": ".-pl-h; .-pr-h;" } }
+      , { "name" : "1rem"     , "code" : "1"  , "use": { "ph": ".-pl-1; .-pr-1;" } }
+      , { "name" : "2rem"     , "code" : "2"  , "use": { "ph": ".-pl-2; .-pr-2;" } }
+      , { "name" : "4rem"     , "code" : "4"  , "use": { "ph": ".-pl-4; .-pr-4;" } }
+      , { "name" : "8rem"     , "code" : "8"  , "use": { "ph": ".-pl-8; .-pr-8;" } }
+      , { "name" : "16rem"    , "code" : "g"  , "use": { "ph": ".-pl-g; .-pr-g;" } }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      , "small+" : true
+      , "medium+": true
+      , "large+" : true
+      , "xlarge+": true
+      }
+    }
+```
+
+### `padding`
+```
+.-pa-z    0       0
+.-pa-q    0.25vru 0.25rem
+.-pa-h    0.5vru  0.5rem
+.-pa-1    1vru    1rem
+.-pa-2    2vru    2rem
+.-pa-4    4vru    4rem
+.-pa-8    8vru    8rem
+.-pa-g    16vru   16rem
+
+-sK    true
+-sM    true
+-sG    true
+-sT    true
+```
+```
+  , {
+      "name": "padding"
+    , "code": "p"
+    , "summary": "Sets the padding space on an element."
+    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/padding"
+    , "inherited": false
+    , "initial": "0"
+    , "values": [
+        { "name" : "0", "code" : "z" }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      , "small+" : true
+      , "medium+": true
+      , "large+" : true
+      , "xlarge+": true
+      }
+    }
 ```
 
 
@@ -428,7 +734,7 @@ This file lists information about each property and its supported values.
 .-ff-sf    serif
 .-ff-ms    monospace
 .-ff-fy    fantasy
-.-ff-cs    cursive
+.-ff-cv    cursive
 ```
 
 ### `line-height`
@@ -453,6 +759,8 @@ This file lists information about each property and its supported values.
 ```
 .-ta-l    left
 .-ta-r    right
+.-ta-s    start (stability: 2)
+.-ta-e    end (stability: 2)
 .-ta-c    center
 .-ta-j    justify
 ```
@@ -473,8 +781,8 @@ This file lists information about each property and its supported values.
 
 ### `overflow-wrap`
 ```
-.-ww-n    normal
-.-ww-b    break-word
+.-ow-n    normal
+.-ow-b    break-word
 ```
 
 ### `column-count`
@@ -564,17 +872,32 @@ NOTE: no support for any media queries
 
 ### `background-size`
 ```
-.-bz-a    auto
-.-bz-s    contain
-.-bz-l    cover
+.-bz-a     auto
+.-bz-cn    contain
+.-bz-cr    cover
 ```
 
 ### `background-repeat`
 ```
-.-br-n    no-repeat
-.-br-a    repeat
-.-br-x    repeat-x
-.-br-y    repeat-y
+    , "stability": 2
+    , "values": [
+        { "name": "repeat"   , "code": "r"  , "alt": "background-repeat: repeat    repeat;"    }
+      , { "name": "no-repeat", "code": "nr" , "alt": "background-repeat: no-repeat no-repeat;" }
+      , { "name": "space"    , "code": "sp" , "alt": "background-repeat: space     space;"     }
+      , { "name": "round"    , "code": "rd" , "alt": "background-repeat: round     round;"     }
+      , { "name": "repeat-x" , "code": "rx" , "alt": "background-repeat: repeat no-repeat;" }
+      , { "name": "repeat-y" , "code": "ry" , "alt": "background-repeat: no-repeat repeat;" }
+      , { "name": "space-x"  , "code": "spx", "use": "background-repeat: space no-repeat ;" }
+      , { "name": "space-y"  , "code": "spy", "use": "background-repeat: no-repeat space ;" }
+      , { "name": "round-x"  , "code": "rdx", "use": "background-repeat: round no-repeat ;" }
+      , { "name": "round-y"  , "code": "rdy", "use": "background-repeat: no-repeat round ;" }
+      , { "name": "repeat space" , "code": "r_sp"  }
+      , { "name": "repeat round" , "code": "r_rd"  }
+      , { "name": "space  repeat", "code": "sp_r"  }
+      , { "name": "space  round" , "code": "sp_rd" }
+      , { "name": "round  repeat", "code": "rd_r"  }
+      , { "name": "round  space" , "code": "rd_sp" }
+      ]
 ```
 
 ### `background-attachment`
@@ -588,14 +911,14 @@ NOTE: no support for any media queries
 ```
 .-bo-c    content-box
 .-bo-p    padding-box
-.-bo-b    border-box
+.-bo-r    border-box
 ```
 
 ### `background-clip`
 ```
 .-bk-c    content-box
 .-bk-p    padding-box
-.-bk-b    border-box
+.-bk-r    border-box
 ```
 
 ### `background-color`
@@ -615,10 +938,10 @@ NOTE: no support for any media queries
 
 ### `overflow`
 ```
-.-of-a    auto
-.-of-v    visible
-.-of-h    hidden
-.-of-s    scroll
+.-ko-a    auto
+.-ko-v    visible
+.-ko-h    hidden
+.-ko-s    scroll
 ```
 
 ### `opacity`
@@ -642,10 +965,10 @@ NOTE: no support for any media queries
 
 ### `text-transform`
 ```
-.-tt-n    none
-.-tt-c    capitalize
-.-tt-h    uppercase
-.-tt-l    lowercase
+.-tt-n     none
+.-tt-cp    capitalize
+.-tt-uc    uppercase
+.-tt-lc    lowercase
 
 -h        true
 ```
@@ -667,8 +990,9 @@ NOTE: no support for any media queries
 
 ### `text-overflow`
 ```
-.-to-c    clip
+.-to-k    clip
 .-to-e    ellipsis
+.-to-f    fade (stability: 2)
 ```
 
 ### `list-style-type`
@@ -707,4 +1031,9 @@ NOTE: no support for any media queries
 .-c-w    #ffffff
 
 -h       true
+```
+
+### `quotes`
+```
+.-q-n    none
 ```

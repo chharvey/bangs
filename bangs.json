@@ -1,5 +1,5 @@
 {
-  "constants": {
+  "global": {
     "values": [
       { "name": "initial" , "code": "0" }
     , { "name": "inherit" , "code": "i" }
@@ -43,7 +43,7 @@
       , { "name" : "table-row-group"    , "code" : "trg" }
       , { "name" : "table-header-group" , "code" : "thg" }
       , { "name" : "table-footer-group" , "code" : "tfg" }
-      , { "name" : "table-column-group" , "code" : "tlg" }
+      , { "name" : "table-column-group" , "code" : "tcg" }
       ]
     , "media": {
         "screen" : true
@@ -185,7 +185,7 @@
     , "inherited": false
     , "values": [
         { "name" : "auto" , "code" : "a"  }
-      , { "name" : "0"    , "code" : "0"  }
+      , { "name" : "0"    , "code" : "z"  }
       , { "name" : "1"    , "code" : "1"  }
       , { "name" : "2"    , "code" : "2"  }
       , { "name" : "3"    , "code" : "3"  }
@@ -221,7 +221,7 @@
       , { "name" : "text-bottom" , "code" : "tb" }
       , { "name" : "text-top"    , "code" : "tt" }
       , { "name" : "sub"         , "code" : "sb" }
-      , { "name" : "super"       , "code" : "st" }
+      , { "name" : "super"       , "code" : "sp" }
       ]
     , "media": {
         "screen" : true
@@ -363,7 +363,7 @@
     , "values": [
         { "name" : "initial" ,                 "use" : ".flex-order(initial)" }
       , { "name" : "inherit" ,                 "use" : ".flex-order(inherit)" }
-      , { "name" : "0"       , "code" : "0"  , "use" : ".flex-order(0)"       }
+      , { "name" : "0"       , "code" : "z"  , "use" : ".flex-order(0)"       }
       , { "name" : "1"       , "code" : "1"  , "use" : ".flex-order(1)"       }
       , { "name" : "2"       , "code" : "2"  , "use" : ".flex-order(2)"       }
       , { "name" : "3"       , "code" : "3"  , "use" : ".flex-order(3)"       }
@@ -396,11 +396,11 @@
     , "initial": "0 1 auto"
     , "inherited": false
     , "values": [
-        { "name" : "auto"    , "code" : "a"   }
-        { "name" : "content" , "code" : "c"   }
-      , { "name" : "h"       , "code" : "0.5" }
-      , { "name" : "1"       , "code" : "1"   }
-      , { "name" : "2"       , "code" : "2"   }
+        { "name" : "auto"    , "code" : "a" }
+      , { "name" : "content" , "code" : "c" }
+      , { "name" : "0.5"     , "code" : "h" }
+      , { "name" : "1"       , "code" : "1" }
+      , { "name" : "2"       , "code" : "2" }
       , { "name" : "100%" , "code" : "1o1"   , "use" : ".flex(( 1/ 1) * 100%)" }
       , { "name" :  "50%" , "code" : "1o2"   , "use" : ".flex(( 1/ 2) * 100%)" }
       , { "name" : "100%" , "code" : "2o2"   , "use" : ".flex(( 2/ 2) * 100%)" }
@@ -575,7 +575,7 @@
     , "inherited": false
     , "values": [
         { "name" : "auto"    , "code" : "a" }
-        { "name" : "0"       , "code" : "z" }
+      , { "name" : "0"       , "code" : "z" }
       , { "name" : "0.25rem" , "code" : "q" }
       , { "name" : "0.5rem"  , "code" : "h" }
       , { "name" : "1rem"    , "code" : "1" }
@@ -721,7 +721,7 @@
       , { "name" : "serif"      , "code" : "sf" }
       , { "name" : "monospace"  , "code" : "ms" }
       , { "name" : "fantasy"    , "code" : "fy" }
-      , { "name" : "cursive"    , "code" : "cs" }
+      , { "name" : "cursive"    , "code" : "cv" }
       ]
     , "media": {
         "screen" : true
@@ -970,6 +970,22 @@
       , { "name": "disc"                , "code": "d"  }
       , { "name": "circle"              , "code": "c"  }
       , { "name": "square"              , "code": "s"  }
+      ]
+    , "media": {
+        "screen" : true
+      , "print"  : true
+      }
+    }
+  , {
+      "name"     : "quotes"
+    , "code"     : "q"
+    , "summary"  : "Specifies how quotation marks should be rendered."
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/quotes"
+    , "inherited": true
+    , "initial"  : "'“' '”'"
+    , "stability": 2
+    , "values"   : [
+        { "name": "none", "code": "n"  }
       ]
     , "media": {
         "screen" : true
