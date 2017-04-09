@@ -86,19 +86,3 @@ a:hover {
   bottom: calc(~'var(--vru) / 2');
   right: 1rem;
 }
-
-// TODO copied from xmeter@stage-v5.6.0; once published, import then delete
-.c-Permalink {
-  margin-left: 1rem;
-  font-weight: 100;
-  h1:hover > &,
-  h2:hover > &,
-  h3:hover > &,
-  h4:hover > &,
-  h5:hover > &,
-  h6:hover > & {
-    position: static; // HACK fallback
-    position: initial; // HACK fallback
-    position: unset; // unset `.h-Hidden`
-  }
-}
