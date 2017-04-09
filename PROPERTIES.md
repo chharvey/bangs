@@ -74,11 +74,7 @@
 -sT    true
 ```
 
-### `margin-*`
-```
-.-ml  .-mr  .-mt  .-mb  .-mh  .-mv  .-ma
-```
-(for `-left`, `-right`, `-top`, `-bottom`, ‘horizontal’, ‘vertical’, or ‘all’, respectively)
+### `margin`
 ```
 -sK    true
 -sM    true
@@ -86,12 +82,48 @@
 -sT    true
 ```
 
-### `padding-*`
+### `margin-top`, `margin-bottom`, ‘margin-vertical’
 ```
-.-pl  .-pr  .-pt  .-pb  .-ph  .-pv  .-pa
+.-mt  .-mb  .-mv
+
+-sK    true
+-sM    true
+-sG    true
+-sT    true
 ```
-(for `-left`, `-right`, `-top`, `-bottom`, ‘horizontal’, ‘vertical’, or ‘all’, respectively)
+
+### `margin-left`, `margin-right`, ‘margin-horizontal’
 ```
+.-ml  .-mr  .-mh
+
+-sK    true
+-sM    true
+-sG    true
+-sT    true
+```
+
+### `padding`
+```
+-sK    true
+-sM    true
+-sG    true
+-sT    true
+```
+
+### `padding-top`, `padding-bottom`, ‘padding-vertical’
+```
+.-pt  .-pb  .-pv
+
+-sK    true
+-sM    true
+-sG    true
+-sT    true
+```
+
+### `padding-left`, `padding-right`, ‘padding-horizontal’
+```
+.-pl  .-pr  .-ph
+
 -sK    true
 -sM    true
 -sG    true
