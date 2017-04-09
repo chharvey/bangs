@@ -1193,6 +1193,22 @@
       ]
     }
   , {
+      "name"     : "quotes"
+    , "code"     : "q"
+    , "summary"  : "Specifies how quotation marks should be rendered."
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/quotes"
+    , "inherited": true
+    , "initial"  : "'“' '”'"
+    , "stability": 2
+    , "values"   : [
+        { "name": "none", "code": "n"  }
+      ]
+    , "media": [
+        "screen"
+      , "print"
+      ]
+    }
+  , {
       "name"     : "right"
     , "code"     : "r"
     , "summary"  : "Specifies how far to position an element from the right."
@@ -1538,22 +1554,6 @@
         "screen"
       , "print"
       ]
-    }
-  , {
-      "name"     : "quotes"
-    , "code"     : "q"
-    , "summary"  : "Specifies how quotation marks should be rendered."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/quotes"
-    , "inherited": true
-    , "initial"  : "'“' '”'"
-    , "stability": 2
-    , "values"   : [
-        { "name": "none", "code": "n"  }
-      ]
-    , "media": {
-        "screen" : true
-      , "print"  : true
-      }
     }
   ]
 }

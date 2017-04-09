@@ -94,6 +94,7 @@ module.exports = (function () {
         .add(new Page({ name: 'list-style-type'    , url: '/docs/index.html#list-style-type' }))
         .add(new Page({ name: 'list-style-position', url: '/docs/index.html#list-style-position' }))
         .add(new Page({ name: 'list-style-image'   , url: '/docs/index.html#list-style-image' }))
+        .add(new Page({ name: 'quotes'             , url: '/docs/index.html#quotes' }))
       )
     )
 
