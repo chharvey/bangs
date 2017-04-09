@@ -40,7 +40,7 @@ html(lang="en")
             each val in property.values.filter(function (v) { return Docs.DATA.global.values.every(function (u) { return u.name !== v.name }) })
               dt
                 code= `.-${property.code}-${val.code}`
-                if val.stability
+                if val.stability >= 0
                   - let kwd = Docs.DATA.global.stability_indices[val.stability].name
                   small.c-Label(class=`t-stability-${kwd}`): b= kwd
               dd

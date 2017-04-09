@@ -475,7 +475,7 @@
       , { "name": "table"              , "code": "t"  , "stability": 0 }
       , { "name": "flex"               , "code": "x"  ,                 "use": ".flexbox()" }
       , { "name": "grid"               , "code": "g"  ,                 "use": ".grid()"    }
-      , { "name": "list-item"          , "code": "s"  , "stability": 3 }
+      , { "name": "list-item"          , "code": "s"                   }
       , { "name": "list-item flow-root", "code": "s_o"                 }
       , { "name": "list-item inline"   , "code": "s_l"                 }
       , { "name": "inline-block"       , "code": "lb" , "stability": 1 }
