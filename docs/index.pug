@@ -1,5 +1,6 @@
 doctype html
 html(lang="en")
+  - let page = Docs.DOCS.find('/docs/index.html')
   mixin proptoc(args, inner)
     //- NOTE parameter validation
     -
@@ -17,39 +18,6 @@ html(lang="en")
         span.h-Block.-ps-a= `Stability ${Docs.DATA.global.stability_levels.indexOf(stab)}:`
         b.-tt-h.-tt-uc= `${stab.name.charAt(0).toUpperCase() + stab.name.slice(1)}`
       span.h-Block= stab.description
-  block vars
-    - let page = Docs.DOCS.find('/docs/index.html')
-    mixin propertyDoc(property_name)
-      - let property = Docs.DATA.properties.find(function (p) { return p.name === property_name })
-      - let stab = Docs.DATA.global.stability_levels[property.stability]
-      section.c-Property(id=property.name)
-        h4.-fz-giga
-          = property.name
-          //- TODO use Permalink Component from xmeter@5.6.0
-          a.c-Permalink.h-Inline.h-Hidden(href=`#${property.name}` aria-label="permalink") &sect;
-        blockquote.c-Property__Desc
-          a(href=property.url rel="external")= property.summary
-          if property.inherited
-            small.c-Label.c-Label--inherited
-              a(title="read about inherited properties" href="https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance" rel="external")
-                | inherited
-        +stabilityLevel(stab)
-        dl.c-Property__Classes
-            each val in Docs.DATA.global.values
-              dt: code= `.-${property.code}-${val.code}`
-              dd: code= val.name
-            each val in property.values.filter(function (v) { return Docs.DATA.global.values.every(function (u) { return u.name !== v.name }) })
-              dt
-                code= `.-${property.code}-${val.code}`
-                if val.stability >= 0
-                  - let kwd = Docs.DATA.global.stability_levels[val.stability].name
-                  small.c-Label(class=`t-stability-${kwd}`): b= kwd
-              dd
-                code= val.name
-                if val.name === property.initial
-                  small.c-Label.c-Label--initial
-                    a(title="read about initial values" href="https://developer.mozilla.org/en-US/docs/Web/CSS/initial_value" rel="external")
-                      | initial value
   head
     title= page.title() || page.name()
     meta(charset="utf-8")
@@ -59,9 +27,9 @@ html(lang="en")
       link(rel="stylesheet" href="https://cdn.rawgit.com/chharvey/xmeter/master/xmeter.min.css")
       link(rel="stylesheet" href="../bangs.css")
       link(rel="stylesheet" href="styles/docs.css")
-  body.docs-bodsy
+  body
     a.h-Hidden(href="#main") skip to main content
-    main.docs-main#main
+    main#main
       header
         h1= page.title() || page.name()
         p= page.description()
@@ -71,19 +39,19 @@ html(lang="en")
             summary.-fz-mill show cotents
             +proptoc({pages: page.findAll(), depth: 1})
       aside
-          h2 Stability Levels
-          p.
-            Please note the following stability levels.
-            Each CSS property in this project is assigned a level describing its stability;
-            some values or pseudo-classes under a property might possibly have their own level,
-            in which case this would override the property&rsquo;s stability level.
-          p.
-            For example, the group of classes #[code .-d] (corresponding to the CSS property #[code display])
-            might have Stability 4, but #[code .-d-fx] (for #[code display: flex]) could have Stability 3, and
-            #[code .-d-il-nK] (for #[code display: inline] on extra-small screens) could have Stability 2.
-          ol.o-List
-            each item in Docs.DATA.global.stability_levels
-              li.o-List__Item: +stabilityLevel(item)
+        h2 Stability Levels
+        p.
+          Please note the following stability levels.
+          Each CSS property in this project is assigned a level describing its stability;
+          some values or pseudo-classes under a property might possibly have their own level,
+          in which case this would override the property&rsquo;s stability level.
+        p.
+          For example, the group of classes #[code .-d] (corresponding to the CSS property #[code display])
+          might have Stability 4, but #[code .-d-fx] (for #[code display: flex]) could have Stability 3, and
+          #[code .-d-il-nK] (for #[code display: inline] on extra-small screens) could have Stability 2.
+        ol.o-List
+          each item in Docs.DATA.global.stability_levels
+            li.o-List__Item: +stabilityLevel(item)
       section
         h2 Properties
         each subpage in page.findAll()
@@ -94,5 +62,35 @@ html(lang="en")
               //- TODO use Permalink Component from xmeter@5.6.0
               //- a.c-Permalink.h-Inline.h-Hidden(href=`#${id}` aria-label="permalink") &sect;
             each propertypage in subpage.findAll()
-              +propertyDoc(propertypage.name())
+              -
+                let property = Docs.DATA.properties.find(function (p) { return p.name === propertypage.name() })
+                let stab = Docs.DATA.global.stability_levels[property.stability]
+              section.c-Property(id=property.name)
+                h4.-fz-giga
+                  = property.name
+                  //- TODO use Permalink Component from xmeter@5.6.0
+                  a.c-Permalink.h-Inline.h-Hidden(href=`#${property.name}` aria-label="permalink") &sect;
+                blockquote.c-Property__Desc
+                  a(href=property.url rel="external")= property.summary
+                  if property.inherited
+                    small.c-Label.c-Label--inherited
+                      a(title="read about inherited properties" href="https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance" rel="external")
+                        | inherited
+                +stabilityLevel(stab)
+                dl.c-Property__Classes
+                  each val in Docs.DATA.global.values
+                    dt: code= `.-${property.code}-${val.code}`
+                    dd: code= val.name
+                  each val in property.values.filter(function (v) { return Docs.DATA.global.values.every(function (u) { return u.name !== v.name }) })
+                    dt
+                      code= `.-${property.code}-${val.code}`
+                      if val.stability >= 0
+                        - let kwd = Docs.DATA.global.stability_levels[val.stability].name
+                        small.c-Label(class=`t-stability-${kwd}`): b= kwd
+                    dd
+                      code= val.name
+                      if val.name === property.initial
+                        small.c-Label.c-Label--initial
+                          a(title="read about initial values" href="https://developer.mozilla.org/en-US/docs/Web/CSS/initial_value" rel="external")
+                            | initial value
     a#_skip-to-top(href="#main") jump to top
