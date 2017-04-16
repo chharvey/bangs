@@ -14,14 +14,14 @@ html(lang="en")
   mixin stabilityLevel(stab)
     p.o-Alert(class=`t-stability-${stab.name}`)
       span.o-Alert__Hn.h-Block
-        span.h-Block.-ps-a= `Stability ${Docs.DATA.global.stability_indices.indexOf(stab)}:`
+        span.h-Block.-ps-a= `Stability ${Docs.DATA.global.stability_levels.indexOf(stab)}:`
         b.-tt-h.-tt-uc= `${stab.name.charAt(0).toUpperCase() + stab.name.slice(1)}`
       span.h-Block= stab.description
   block vars
     - let page = Docs.DOCS.find('/docs/index.html')
     mixin propertyDoc(property_name)
       - let property = Docs.DATA.properties.find(function (p) { return p.name === property_name })
-      - let stab = Docs.DATA.global.stability_indices[property.stability]
+      - let stab = Docs.DATA.global.stability_levels[property.stability]
       section.c-Property(id=property.name)
         h4.-fz-giga
           = property.name
@@ -42,7 +42,7 @@ html(lang="en")
               dt
                 code= `.-${property.code}-${val.code}`
                 if val.stability >= 0
-                  - let kwd = Docs.DATA.global.stability_indices[val.stability].name
+                  - let kwd = Docs.DATA.global.stability_levels[val.stability].name
                   small.c-Label(class=`t-stability-${kwd}`): b= kwd
               dd
                 code= val.name
@@ -71,18 +71,18 @@ html(lang="en")
             summary.-fz-mill show cotents
             +proptoc({pages: page.findAll(), depth: 1})
       aside
-          h2 Stability Indices
+          h2 Stability Levels
           p.
-            Please note the following stability indices.
-            Each CSS property in this project is assigned an index describing its stability;
-            some values or pseudo-classes under a property might possibly have their own index,
-            in which case this would override the property&rsquo;s stability index.
+            Please note the following stability levels.
+            Each CSS property in this project is assigned a level describing its stability;
+            some values or pseudo-classes under a property might possibly have their own level,
+            in which case this would override the property&rsquo;s stability level.
           p.
             For example, the group of classes #[code .-d] (corresponding to the CSS property #[code display])
             might have Stability 4, but #[code .-d-fx] (for #[code display: flex]) could have Stability 3, and
             #[code .-d-il-nK] (for #[code display: inline] on extra-small screens) could have Stability 2.
           ol.o-List
-            each item in Docs.DATA.global.stability_indices
+            each item in Docs.DATA.global.stability_levels
               li.o-List__Item: +stabilityLevel(item)
       section
         h2 Properties
