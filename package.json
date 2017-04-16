@@ -29,6 +29,7 @@
   "devDependencies": {
     "clean-css": "^3.4.5",
     "less": "^2.5.3",
+    "pug-cli": "^1.0.0-alpha6",
     "sitepage": "^1.0.0",
     "xmeter": "^5.3.1"
   }

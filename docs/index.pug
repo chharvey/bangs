@@ -59,8 +59,8 @@ html(lang="en")
           section(id=id)
             h3
               = subpage.name()
-              //- TODO use Permalink Component from xmeter@5.6.0
-              //- a.c-Permalink.h-Inline.h-Hidden(href=`#${id}` aria-label="permalink") &sect;
+              include ../node_modules/xmeter/_views/_c-Permalink.view.pug
+              //- +permalink(id)
             each propertypage in subpage.findAll()
               -
                 let property = Docs.DATA.properties.find(function (p) { return p.name === propertypage.name() })
@@ -68,8 +68,8 @@ html(lang="en")
               section.c-Property(id=property.name)
                 h4.-fz-giga
                   = property.name
-                  //- TODO use Permalink Component from xmeter@5.6.0
-                  a.c-Permalink.h-Inline.h-Hidden(href=`#${property.name}` aria-label="permalink") &sect;
+                  include ../node_modules/xmeter/_views/_c-Permalink.view.pug
+                  +permalink(property.name)
                 blockquote.c-Property__Desc
                   a(href=property.url rel="external")= property.summary
                   if property.inherited
