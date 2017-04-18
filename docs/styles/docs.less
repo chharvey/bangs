@@ -81,8 +81,9 @@ a:hover {
 .t-stability-stable       { background-color: #9acc7a; }
 .t-stability-locked       { background-color: #99daff; }
 
-#_skip-to-top {
+body > a:last-of-type {
+  // TODO use a class instead
   position: fixed;
-  bottom: calc(~'var(--vru) / 2');
+  bottom: var(--vru);
   right: 1rem;
 }
