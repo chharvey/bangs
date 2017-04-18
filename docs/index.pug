@@ -56,41 +56,44 @@ html(lang="en")
         h2 Properties
         each subpage in page.findAll()
           - let id = subpage.url().split('#')[1]
-          section(id=id)
+          section._ss(id=id)
             h3
               = subpage.name()
               include ../node_modules/xmeter/_views/_c-Permalink.view.pug
               //- +permalink(id)
             each propertypage in subpage.findAll()
-              -
-                let property = Docs.DATA.properties.find(function (p) { return p.name === propertypage.name() })
-                let stab = Docs.DATA.global.stability_levels[property.stability]
-              section.c-Property(id=property.name)
-                h4.-fz-giga
-                  = property.name
-                  include ../node_modules/xmeter/_views/_c-Permalink.view.pug
-                  +permalink(property.name)
-                blockquote.c-Property__Desc
-                  a(href=property.url rel="external")= property.summary
-                  if property.inherited
-                    small.c-Label.c-Label--inherited
-                      a(title="read about inherited properties" href="https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance" rel="external")
-                        | inherited
-                +stabilityLevel(stab)
-                dl.c-Property__Classes
-                  each val in Docs.DATA.global.values
-                    dt: code= `.-${property.code}-${val.code}`
-                    dd: code= val.name
-                  each val in property.values.filter(function (v) { return Docs.DATA.global.values.every(function (u) { return u.name !== v.name }) })
-                    dt
-                      code= `.-${property.code}-${val.code}`
-                      if val.stability >= 0
-                        - let kwd = Docs.DATA.global.stability_levels[val.stability].name
-                        small.c-Label(class=`t-stability-${kwd}`): b= kwd
-                    dd
-                      code= val.name
-                      if val.name === property.initial
-                        small.c-Label.c-Label--initial
-                          a(title="read about initial values" href="https://developer.mozilla.org/en-US/docs/Web/CSS/initial_value" rel="external")
-                            | initial value
+              - let property = Docs.DATA.properties.find(function (p) { return p.name === propertypage.name() })
+              if property
+                - let stab = Docs.DATA.global.stability_levels[property.stability]
+                section.c-Property(id=property.name)
+                  h4.-fz-giga
+                    = property.name
+                    include ../node_modules/xmeter/_views/_c-Permalink.view.pug
+                    +permalink(property.name)
+                  blockquote.c-Property__Desc
+                    a(href=property.url rel="external")= property.summary
+                    if property.inherited
+                      small.c-Label.c-Label--inherited
+                        a(title="read about inherited properties" href="https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance" rel="external")
+                          | inherited
+                  +stabilityLevel(stab)
+                  dl.c-Property__Classes
+                    each val in Docs.DATA.global.values
+                      dt: code= `.-${property.code}-${val.code}`
+                      dd: code= val.name
+                    each val in property.values.filter(function (v) { return Docs.DATA.global.values.every(function (u) { return u.name !== v.name }) })
+                      dt
+                        code= `.-${property.code}-${val.code}`
+                        if val.stability >= 0
+                          - let kwd = Docs.DATA.global.stability_levels[val.stability].name
+                          small.c-Label(class=`t-stability-${kwd}`): b= kwd
+                      dd
+                        code= val.name
+                        if val.name === property.initial
+                          small.c-Label.c-Label--initial
+                            a(title="read about initial values" href="https://developer.mozilla.org/en-US/docs/Web/CSS/initial_value" rel="external")
+                              | initial value
+              else
+                section.c-Property
+                  h4.-fz-giga #{propertypage.name()} Not Found
     a(href="#body") jump to top

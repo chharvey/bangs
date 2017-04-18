@@ -51,16 +51,15 @@ a:hover {
   text-transform: uppercase;
   background-color: #ff99c0;
 }
-@color-ss-layout        : spin(hsl(0 * 72, 100%, 50%), -36);
-@color-ss-box-structure : spin(hsl(1 * 72, 100%, 50%), -36);
-@color-ss-text-structure: spin(hsl(2 * 72, 100%, 50%), -36);
-@color-ss-box-cosmetics : spin(hsl(3 * 72, 100%, 50%), -36);
-@color-ss-text-cosmetics: spin(hsl(4 * 72, 100%, 50%), -36);
-#ss-layout        ,
-#ss-box-structure ,
-#ss-text-structure,
-#ss-box-cosmetics ,
-#ss-text-cosmetics {
+
+@n_ss: 6; // number of sections
+@color-ss-layout        : spin(hsl(0 * (360/@n_ss), 100%, 50%), -(360/(@n_ss*2)));
+@color-ss-box-model     : spin(hsl(1 * (360/@n_ss), 100%, 50%), -(360/(@n_ss*2)));
+@color-ss-typography    : spin(hsl(2 * (360/@n_ss), 100%, 50%), -(360/(@n_ss*2)));
+@color-ss-box-cosmetics : spin(hsl(3 * (360/@n_ss), 100%, 50%), -(360/(@n_ss*2)));
+@color-ss-text-cosmetics: spin(hsl(4 * (360/@n_ss), 100%, 50%), -(360/(@n_ss*2)));
+@color-ss-misc          : spin(hsl(5 * (360/@n_ss), 100%, 50%), -(360/(@n_ss*2)));
+._ss {
   padding: var(--vru) 1rem;
   & > h3 {
     .border-vert(bottom, 2px);
@@ -70,11 +69,12 @@ a:hover {
     text-align: center;
   }
 }
-#ss-layout         { background: linear-gradient(to bottom, lighten(@color-ss-layout        , 90%, relative), lighten(spin(@color-ss-layout        , 36), 75%, relative)); }
-#ss-box-structure  { background: linear-gradient(to bottom, lighten(@color-ss-box-structure , 90%, relative), lighten(spin(@color-ss-box-structure , 36), 75%, relative)); }
-#ss-text-structure { background: linear-gradient(to bottom, lighten(@color-ss-text-structure, 90%, relative), lighten(spin(@color-ss-text-structure, 36), 75%, relative)); }
-#ss-box-cosmetics  { background: linear-gradient(to bottom, lighten(@color-ss-box-cosmetics , 90%, relative), lighten(spin(@color-ss-box-cosmetics , 36), 75%, relative)); }
-#ss-text-cosmetics { background: linear-gradient(to bottom, lighten(@color-ss-text-cosmetics, 90%, relative), lighten(spin(@color-ss-text-cosmetics, 36), 75%, relative)); }
+#ss-layout         { background: linear-gradient(to bottom, lighten(@color-ss-layout        , 90%, relative), lighten(spin(@color-ss-layout        , (360/(@n_ss*2))), 75%, relative)); }
+#ss-box-model      { background: linear-gradient(to bottom, lighten(@color-ss-box-model     , 90%, relative), lighten(spin(@color-ss-box-model     , (360/(@n_ss*2))), 75%, relative)); }
+#ss-typography     { background: linear-gradient(to bottom, lighten(@color-ss-typography    , 90%, relative), lighten(spin(@color-ss-typography    , (360/(@n_ss*2))), 75%, relative)); }
+#ss-box-cosmetics  { background: linear-gradient(to bottom, lighten(@color-ss-box-cosmetics , 90%, relative), lighten(spin(@color-ss-box-cosmetics , (360/(@n_ss*2))), 75%, relative)); }
+#ss-text-cosmetics { background: linear-gradient(to bottom, lighten(@color-ss-text-cosmetics, 90%, relative), lighten(spin(@color-ss-text-cosmetics, (360/(@n_ss*2))), 75%, relative)); }
+#ss-misc           { background: linear-gradient(to bottom, lighten(@color-ss-misc          , 90%, relative), lighten(spin(@color-ss-misc          , (360/(@n_ss*2))), 75%, relative)); }
 .t-stability-obsolete     { background-color: black;   color: white; }
 .t-stability-deprecated   { background-color: #ff4b33; color: white; }
 .t-stability-experimental { background-color: #ffe433; }
