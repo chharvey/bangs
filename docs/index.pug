@@ -6,12 +6,24 @@ html(lang="en")
     -
       var pages   = args.pages   || []
       var depth   = +args.depth  || 0
-    ol&attributes(inner ? {} : { role: 'directory' })
+    ol&attributes(inner ? {} : { role: 'tree' })
       each item in pages
         li
+          if item.findAll().length && depth > 0
+            | <details class="-mb-u -mb-0">
+            |   <summary>
           a(href=item.url())= item.name()
           if item.findAll().length && depth > 0
+            |   </summary>
             +proptoc({pages: item.findAll(), depth: depth-1}, true)
+            | </details>
+        //- li NOTE equivalent:
+          if item.findAll().length && depth > 0
+            details
+              summary: a(href=item.url())= item.name()
+              +proptoc({pages: item.findAll(), depth: depth-1}, true)
+          else
+            a(href=item.url())= item.name()
   mixin stabilityLevel(stab)
     p.o-Alert(class=`t-stability-${stab.name}`)
       span.o-Alert__Hn.h-Block
@@ -35,10 +47,8 @@ html(lang="en")
         p= page.description()
         nav#contents
           h2 Contents
-          details
-            summary.-fz-mill show cotents
-            +proptoc({pages: page.findAll(), depth: 1})
-      aside
+          +proptoc({pages: page.findAll(), depth: 1})
+      aside.-mh-1
         h2 Stability Levels
         p.
           Please note the following stability levels.

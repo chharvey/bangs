@@ -87,3 +87,16 @@ body > a:last-of-type {
   bottom: var(--vru);
   right: 1rem;
 }
+
+@media screen and (min-width: 60em) {
+  body {
+    width: 75%;
+  }
+  #contents {
+    position: fixed;
+    top: 0; bottom: 0;
+    right: 0;
+    width: 25%;
+    overflow: auto;
+  }
+}
