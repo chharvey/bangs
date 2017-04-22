@@ -19,6 +19,8 @@ c      | column         | grid-template-columns, grid-column-gap, column-[count,
 c      | center         | **none** | [[justify, align]-[content,items,self], text-align, background-position]: center; vertical-align: middle (center)
 f      | font           | font-[style, variant, weight, size, family] | **none**
 g      | grid           | grid-template-[rows, columns], grid-[row, column]-gap | display: grid (gd)
+h      | 0.5 (half)     | **none** | [flex,opacity]: 0.5; [margin,padding]-vertical: 0.5vru; [margin,padding]-horizontal: 0.5rem
+h      | hidden         | **none** | [overflow,border-style,visibility]: hidden
 i      | `inherit`      | **none** | *all properties use this value*
 k      | box            | box-[sizing, shadow], (box-)overflow | **none**
 l      | left           | left, [margin, padding]-left | [float, clear, text-align, background-position]: left
