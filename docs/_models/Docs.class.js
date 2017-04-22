@@ -118,5 +118,26 @@ module.exports = (function () {
    */
   Docs.DATA = require('../../bangs.json')
 
+  Docs.generatePercents = function generatePercents(prefix, mixin) {
+    let denoms = [1, 2, 3, 4, 5, 6, 8, 10, 12]
+    let unique_values = []
+    let output = []
+    for (let i = 0; i < denoms.length; i++) {
+      for (let j = 1; j <= denoms[i]; j++) {
+        let fraction = j/denoms[i]
+        let classname = `.-${prefix}-${j}o${denoms[i]}`
+        if (unique_values.find(function (el) { return el.value === fraction })) {
+          unique_values.find(function (el) { return el.value === fraction }).classes.push(classname)
+        } else {
+          unique_values.push({ value: fraction, classes: [classname] })
+        }
+      }
+    }
+    for (let el of unique_values) {
+      output.push(`${el.classes.join(', ')} { ${mixin.call(null, el.value)} !important; }`)
+    }
+    return output.join('\n')
+  }
+
   return Docs
 })()
