@@ -73,38 +73,6 @@
 .-w-9o10 { width: (9/10) * 100% !important; }
 
 
-// Generates a class `.-w-‹i›px` (e.g. `.-w-288px`), where
-// ‹i› is the integer argument, the width in pixels.
-// The mixin is recursive, starting at ‹i›==96,
-// incrementing by 96 each time it is called,
-// stopping when ‹i›==1440.
-// ^params
-// @bp - the breakpoint suffix, if any
-@px_per_it: 96;
-@max_px: 1440;
-.gen-w-px(@bp: ~''; @i: @px_per_it) when (@i =< @max_px) {
-  .-w-@{i}px@{bp} { width: (@i * 1px) !important; }
-  .gen-w-px(@bp; @i + @px_per_it);
-}
-.gen-w-px();
-
-
-// Generates a class `.-w-‹i›em` (e.g. `.-w-30em`), where
-// ‹i› is the integer argument, the width in ems.
-// The mixin is recursive, starting at ‹i›==5,
-// incrementing by 5 each time it is called,
-// stopping when ‹i›==90.
-// ^params
-// bp - the breakpoint suffix, if any
-@em_per_it: 5;
-@max_em: 90;
-.gen-w-em(@bp: ~''; @i: @em_per_it) when (@i =< @max_em) {
-  .-w-@{i}em@{bp} { width: (@i * 1em) !important; }
-  .gen-w-em(@bp; @i+@em_per_it);
-}
-.gen-w-em();
-
-
 @media screen {
   .-w-0-s { .-w-0; }
   .-w-i-s { .-w-i; }
@@ -158,9 +126,6 @@
   .-w-3o10-s { .-w-3o10; }
   .-w-7o10-s { .-w-7o10; }
   .-w-9o10-s { .-w-9o10; }
-
-  .gen-w-px(~'-s');
-  .gen-w-em(~'-s');
 }
 
 @media print {
@@ -216,9 +181,6 @@
   .-w-3o10-p { .-w-3o10; }
   .-w-7o10-p { .-w-7o10; }
   .-w-9o10-p { .-w-9o10; }
-
-  .gen-w-px(~'-p');
-  .gen-w-em(~'-p');
 }
 
 @media screen and (min-width: 30em) {
@@ -274,9 +236,6 @@
   .-w-3o10-sK { .-w-3o10; }
   .-w-7o10-sK { .-w-7o10; }
   .-w-9o10-sK { .-w-9o10; }
-
-  .gen-w-px(~'-sK');
-  .gen-w-em(~'-sK');
 }
 
 @media screen and (min-width: 45em) {
@@ -332,9 +291,6 @@
   .-w-3o10-sM { .-w-3o10; }
   .-w-7o10-sM { .-w-7o10; }
   .-w-9o10-sM { .-w-9o10; }
-
-  .gen-w-px(~'-sM');
-  .gen-w-em(~'-sM');
 }
 
 @media screen and (min-width: 60em) {
@@ -390,9 +346,6 @@
   .-w-3o10-sG { .-w-3o10; }
   .-w-7o10-sG { .-w-7o10; }
   .-w-9o10-sG { .-w-9o10; }
-
-  .gen-w-px(~'-sG');
-  .gen-w-em(~'-sG');
 }
 
 @media screen and (min-width: 75em) {
@@ -448,7 +401,4 @@
   .-w-3o10-sT { .-w-3o10; }
   .-w-7o10-sT { .-w-7o10; }
   .-w-9o10-sT { .-w-9o10; }
-
-  .gen-w-px(~'-sT');
-  .gen-w-em(~'-sT');
 }
