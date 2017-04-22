@@ -450,6 +450,46 @@
         { "name": "initial",              "use": ".column-width(auto); .column-width(initial);" }
       , { "name": "inherit",              "use": ".column-width(inherit);" }
       , { "name": "auto"   , "code": "a", "use": ".column-width(auto);"    }
+      , { "name": "0"      , "code": "z", "use": ".column-width(0);"       }
+      , { "name": "100%", "code": "1o1"  , "use": ".column-width(( 1/ 1) * 100%);" }
+      , { "name":  "50%", "code": "1o2"  , "use": ".column-width(( 1/ 2) * 100%);" }
+      , { "name": "100%", "code": "2o2"  , "use": ".column-width(( 2/ 2) * 100%);" }
+      , { "name":  "33%", "code": "1o3"  , "use": ".column-width(( 1/ 3) * 100%);" }
+      , { "name":  "67%", "code": "2o3"  , "use": ".column-width(( 2/ 3) * 100%);" }
+      , { "name": "100%", "code": "3o3"  , "use": ".column-width(( 3/ 3) * 100%);" }
+      , { "name":  "25%", "code": "1o4"  , "use": ".column-width(( 1/ 4) * 100%);" }
+      , { "name":  "50%", "code": "2o4"  , "use": ".column-width(( 2/ 4) * 100%);" }
+      , { "name":  "75%", "code": "3o4"  , "use": ".column-width(( 3/ 4) * 100%);" }
+      , { "name": "100%", "code": "4o4"  , "use": ".column-width(( 4/ 4) * 100%);" }
+      , { "name":  "20%", "code": "1o5"  , "use": ".column-width(( 1/ 5) * 100%);" }
+      , { "name":  "40%", "code": "2o5"  , "use": ".column-width(( 2/ 5) * 100%);" }
+      , { "name":  "60%", "code": "3o5"  , "use": ".column-width(( 3/ 5) * 100%);" }
+      , { "name":  "80%", "code": "4o5"  , "use": ".column-width(( 4/ 5) * 100%);" }
+      , { "name": "100%", "code": "5o5"  , "use": ".column-width(( 5/ 5) * 100%);" }
+      , { "name":  "16%", "code": "1o6"  , "use": ".column-width(( 1/ 6) * 100%);" }
+      , { "name":  "33%", "code": "2o6"  , "use": ".column-width(( 2/ 6) * 100%);" }
+      , { "name":  "50%", "code": "3o6"  , "use": ".column-width(( 3/ 6) * 100%);" }
+      , { "name":  "67%", "code": "4o6"  , "use": ".column-width(( 4/ 6) * 100%);" }
+      , { "name":  "83%", "code": "5o6"  , "use": ".column-width(( 5/ 6) * 100%);" }
+      , { "name": "100%", "code": "6o6"  , "use": ".column-width(( 6/ 6) * 100%);" }
+      , { "name":  "13%", "code": "1o8"  , "use": ".column-width(( 1/ 8) * 100%);" }
+      , { "name":  "25%", "code": "2o8"  , "use": ".column-width(( 2/ 8) * 100%);" }
+      , { "name":  "38%", "code": "3o8"  , "use": ".column-width(( 3/ 8) * 100%);" }
+      , { "name":  "50%", "code": "4o8"  , "use": ".column-width(( 4/ 8) * 100%);" }
+      , { "name":  "63%", "code": "5o8"  , "use": ".column-width(( 5/ 8) * 100%);" }
+      , { "name":  "75%", "code": "6o8"  , "use": ".column-width(( 6/ 8) * 100%);" }
+      , { "name":  "88%", "code": "7o8"  , "use": ".column-width(( 7/ 8) * 100%);" }
+      , { "name": "100%", "code": "8o8"  , "use": ".column-width(( 8/ 8) * 100%);" }
+      , { "name":  "10%", "code": "1o10" , "use": ".column-width(( 1/10) * 100%);" }
+      , { "name":  "20%", "code": "2o10" , "use": ".column-width(( 2/10) * 100%);" }
+      , { "name":  "30%", "code": "3o10" , "use": ".column-width(( 3/10) * 100%);" }
+      , { "name":  "40%", "code": "4o10" , "use": ".column-width(( 4/10) * 100%);" }
+      , { "name":  "50%", "code": "5o10" , "use": ".column-width(( 5/10) * 100%);" }
+      , { "name":  "60%", "code": "6o10" , "use": ".column-width(( 6/10) * 100%);" }
+      , { "name":  "70%", "code": "7o10" , "use": ".column-width(( 7/10) * 100%);" }
+      , { "name":  "80%", "code": "8o10" , "use": ".column-width(( 8/10) * 100%);" }
+      , { "name":  "90%", "code": "9o10" , "use": ".column-width(( 9/10) * 100%);" }
+      , { "name": "100%", "code": "10o10", "use": ".column-width((10/10) * 100%);" }
       ]
     , "media": [
         "screen"
@@ -1425,78 +1465,45 @@
     , "values"   : [
         { "name": "auto", "code": "a" }
       , { "name":   "0" , "code": "z" }
-      , { "name": "100%", "code": "1o1"  , "use": "width: ( 1/ 1) * 100%;" }
-      , { "name":  "50%", "code": "1o2"  , "use": "width: ( 1/ 2) * 100%;" }
-      , { "name": "100%", "code": "2o2"  , "use": "width: ( 2/ 2) * 100%;" }
-      , { "name":  "33%", "code": "1o3"  , "use": "width: ( 1/ 3) * 100%;" }
-      , { "name":  "67%", "code": "2o3"  , "use": "width: ( 2/ 3) * 100%;" }
-      , { "name": "100%", "code": "3o3"  , "use": "width: ( 3/ 3) * 100%;" }
-      , { "name":  "25%", "code": "1o4"  , "use": "width: ( 1/ 4) * 100%;" }
-      , { "name":  "50%", "code": "2o4"  , "use": "width: ( 2/ 4) * 100%;" }
-      , { "name":  "75%", "code": "3o4"  , "use": "width: ( 3/ 4) * 100%;" }
-      , { "name": "100%", "code": "4o4"  , "use": "width: ( 4/ 4) * 100%;" }
-      , { "name":  "20%", "code": "1o5"  , "use": "width: ( 1/ 5) * 100%;" }
-      , { "name":  "40%", "code": "2o5"  , "use": "width: ( 2/ 5) * 100%;" }
-      , { "name":  "60%", "code": "3o5"  , "use": "width: ( 3/ 5) * 100%;" }
-      , { "name":  "80%", "code": "4o5"  , "use": "width: ( 4/ 5) * 100%;" }
-      , { "name": "100%", "code": "5o5"  , "use": "width: ( 5/ 5) * 100%;" }
-      , { "name":  "16%", "code": "1o6"  , "use": "width: ( 1/ 6) * 100%;" }
-      , { "name":  "33%", "code": "2o6"  , "use": "width: ( 2/ 6) * 100%;" }
-      , { "name":  "50%", "code": "3o6"  , "use": "width: ( 3/ 6) * 100%;" }
-      , { "name":  "67%", "code": "4o6"  , "use": "width: ( 4/ 6) * 100%;" }
-      , { "name":  "83%", "code": "5o6"  , "use": "width: ( 5/ 6) * 100%;" }
-      , { "name": "100%", "code": "6o6"  , "use": "width: ( 6/ 6) * 100%;" }
-      , { "name":  "13%", "code": "1o8"  , "use": "width: ( 1/ 8) * 100%;" }
-      , { "name":  "25%", "code": "2o8"  , "use": "width: ( 2/ 8) * 100%;" }
-      , { "name":  "38%", "code": "3o8"  , "use": "width: ( 3/ 8) * 100%;" }
-      , { "name":  "50%", "code": "4o8"  , "use": "width: ( 4/ 8) * 100%;" }
-      , { "name":  "63%", "code": "5o8"  , "use": "width: ( 5/ 8) * 100%;" }
-      , { "name":  "75%", "code": "6o8"  , "use": "width: ( 6/ 8) * 100%;" }
-      , { "name":  "88%", "code": "7o8"  , "use": "width: ( 7/ 8) * 100%;" }
-      , { "name": "100%", "code": "8o8"  , "use": "width: ( 8/ 8) * 100%;" }
-      , { "name":  "10%", "code": "1o10" , "use": "width: ( 1/10) * 100%;" }
-      , { "name":  "20%", "code": "2o10" , "use": "width: ( 2/10) * 100%;" }
-      , { "name":  "30%", "code": "3o10" , "use": "width: ( 3/10) * 100%;" }
-      , { "name":  "40%", "code": "4o10" , "use": "width: ( 4/10) * 100%;" }
-      , { "name":  "50%", "code": "5o10" , "use": "width: ( 5/10) * 100%;" }
-      , { "name":  "60%", "code": "6o10" , "use": "width: ( 6/10) * 100%;" }
-      , { "name":  "70%", "code": "7o10" , "use": "width: ( 7/10) * 100%;" }
-      , { "name":  "80%", "code": "8o10" , "use": "width: ( 8/10) * 100%;" }
-      , { "name":  "90%", "code": "9o10" , "use": "width: ( 9/10) * 100%;" }
-      , { "name": "100%", "code": "10o10", "use": "width: (10/10) * 100%;" }
-      , { "name":   "96px", "code":   "96px", "comment":    "6em" }
-      , { "name":  "192px", "code":  "192px", "comment":   "12em" }
-      , { "name":  "288px", "code":  "288px", "comment":   "18em" }
-      , { "name":  "384px", "code":  "384px", "comment":   "24em" }
-      , { "name":  "480px", "code":  "480px", "comment":   "30em" }
-      , { "name":  "576px", "code":  "576px", "comment":   "36em" }
-      , { "name":  "672px", "code":  "672px", "comment":   "42em" }
-      , { "name":  "768px", "code":  "768px", "comment":   "48em" }
-      , { "name":  "864px", "code":  "864px", "comment":   "54em" }
-      , { "name":  "960px", "code":  "960px", "comment":   "60em" }
-      , { "name": "1056px", "code": "1056px", "comment":   "66em" }
-      , { "name": "1152px", "code": "1152px", "comment":   "72em" }
-      , { "name": "1248px", "code": "1248px", "comment":   "78em" }
-      , { "name": "1344px", "code": "1344px", "comment":   "84em" }
-      , { "name": "1440px", "code": "1440px", "comment":   "90em" }
-      , { "name":    "5em", "code":    "5em", "comment":   "80px" }
-      , { "name":   "10em", "code":   "10em", "comment":  "160px" }
-      , { "name":   "15em", "code":   "15em", "comment":  "240px" }
-      , { "name":   "20em", "code":   "20em", "comment":  "320px" }
-      , { "name":   "25em", "code":   "25em", "comment":  "400px" }
-      , { "name":   "30em", "code":   "30em", "comment":  "480px" }
-      , { "name":   "35em", "code":   "35em", "comment":  "560px" }
-      , { "name":   "40em", "code":   "40em", "comment":  "640px" }
-      , { "name":   "45em", "code":   "45em", "comment":  "720px" }
-      , { "name":   "50em", "code":   "50em", "comment":  "800px" }
-      , { "name":   "55em", "code":   "55em", "comment":  "880px" }
-      , { "name":   "60em", "code":   "60em", "comment":  "960px" }
-      , { "name":   "65em", "code":   "65em", "comment": "1040px" }
-      , { "name":   "70em", "code":   "70em", "comment": "1120px" }
-      , { "name":   "75em", "code":   "75em", "comment": "1200px" }
-      , { "name":   "80em", "code":   "80em", "comment": "1280px" }
-      , { "name":   "85em", "code":   "85em", "comment": "1360px" }
-      , { "name":   "90em", "code":   "90em", "comment": "1440px" }
+      , { "name": "100%", "code": "1o1"  , "use": "width: (( 1/ 1) * 100%);" }
+      , { "name":  "50%", "code": "1o2"  , "use": "width: (( 1/ 2) * 100%);" }
+      , { "name": "100%", "code": "2o2"  , "use": "width: (( 2/ 2) * 100%);" }
+      , { "name":  "33%", "code": "1o3"  , "use": "width: (( 1/ 3) * 100%);" }
+      , { "name":  "67%", "code": "2o3"  , "use": "width: (( 2/ 3) * 100%);" }
+      , { "name": "100%", "code": "3o3"  , "use": "width: (( 3/ 3) * 100%);" }
+      , { "name":  "25%", "code": "1o4"  , "use": "width: (( 1/ 4) * 100%);" }
+      , { "name":  "50%", "code": "2o4"  , "use": "width: (( 2/ 4) * 100%);" }
+      , { "name":  "75%", "code": "3o4"  , "use": "width: (( 3/ 4) * 100%);" }
+      , { "name": "100%", "code": "4o4"  , "use": "width: (( 4/ 4) * 100%);" }
+      , { "name":  "20%", "code": "1o5"  , "use": "width: (( 1/ 5) * 100%);" }
+      , { "name":  "40%", "code": "2o5"  , "use": "width: (( 2/ 5) * 100%);" }
+      , { "name":  "60%", "code": "3o5"  , "use": "width: (( 3/ 5) * 100%);" }
+      , { "name":  "80%", "code": "4o5"  , "use": "width: (( 4/ 5) * 100%);" }
+      , { "name": "100%", "code": "5o5"  , "use": "width: (( 5/ 5) * 100%);" }
+      , { "name":  "16%", "code": "1o6"  , "use": "width: (( 1/ 6) * 100%);" }
+      , { "name":  "33%", "code": "2o6"  , "use": "width: (( 2/ 6) * 100%);" }
+      , { "name":  "50%", "code": "3o6"  , "use": "width: (( 3/ 6) * 100%);" }
+      , { "name":  "67%", "code": "4o6"  , "use": "width: (( 4/ 6) * 100%);" }
+      , { "name":  "83%", "code": "5o6"  , "use": "width: (( 5/ 6) * 100%);" }
+      , { "name": "100%", "code": "6o6"  , "use": "width: (( 6/ 6) * 100%);" }
+      , { "name":  "13%", "code": "1o8"  , "use": "width: (( 1/ 8) * 100%);" }
+      , { "name":  "25%", "code": "2o8"  , "use": "width: (( 2/ 8) * 100%);" }
+      , { "name":  "38%", "code": "3o8"  , "use": "width: (( 3/ 8) * 100%);" }
+      , { "name":  "50%", "code": "4o8"  , "use": "width: (( 4/ 8) * 100%);" }
+      , { "name":  "63%", "code": "5o8"  , "use": "width: (( 5/ 8) * 100%);" }
+      , { "name":  "75%", "code": "6o8"  , "use": "width: (( 6/ 8) * 100%);" }
+      , { "name":  "88%", "code": "7o8"  , "use": "width: (( 7/ 8) * 100%);" }
+      , { "name": "100%", "code": "8o8"  , "use": "width: (( 8/ 8) * 100%);" }
+      , { "name":  "10%", "code": "1o10" , "use": "width: (( 1/10) * 100%);" }
+      , { "name":  "20%", "code": "2o10" , "use": "width: (( 2/10) * 100%);" }
+      , { "name":  "30%", "code": "3o10" , "use": "width: (( 3/10) * 100%);" }
+      , { "name":  "40%", "code": "4o10" , "use": "width: (( 4/10) * 100%);" }
+      , { "name":  "50%", "code": "5o10" , "use": "width: (( 5/10) * 100%);" }
+      , { "name":  "60%", "code": "6o10" , "use": "width: (( 6/10) * 100%);" }
+      , { "name":  "70%", "code": "7o10" , "use": "width: (( 7/10) * 100%);" }
+      , { "name":  "80%", "code": "8o10" , "use": "width: (( 8/10) * 100%);" }
+      , { "name":  "90%", "code": "9o10" , "use": "width: (( 9/10) * 100%);" }
+      , { "name": "100%", "code": "10o10", "use": "width: ((10/10) * 100%);" }
       ]
     , "media": [
         "screen"
