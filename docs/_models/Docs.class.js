@@ -118,7 +118,8 @@ module.exports = (function () {
    */
   Docs.DATA = require('../../bangs.json')
 
-  Docs.generatePercents = function generatePercents(prefix, mixin) {
+  Docs.generatePercentsFileAsync = function generatePercentsFileAsync(prefix, mixin, callback) {
+  try {
     let denoms = [1, 2, 3, 4, 5, 6, 8, 10, 12]
     let unique_values = []
     let output = []
@@ -136,7 +137,10 @@ module.exports = (function () {
     for (let el of unique_values) {
       output.push(`${el.classes.join(', ')} { ${mixin.call(null, el.value)} !important; }`)
     }
-    return output.join('\n')
+    callback.call(null, null, output.join('\n'))
+  } catch (e) {
+    callback.call(null, e, null)
+  }
   }
 
   return Docs
