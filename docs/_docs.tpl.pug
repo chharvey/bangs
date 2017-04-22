@@ -1,0 +1,37 @@
+doctype html
+html(lang="en")
+  block vars
+  mixin doctoc(args, inner)
+    //- NOTE parameter validation
+    -
+      var pages   = args.pages   || []
+      var depth   = +args.depth  || 0
+    ol&attributes(inner ? {} : { role: 'directory' })
+      each item in pages
+        li
+          a(href=item.url())&attributes((page.url()===item.url()) ? {'aria-current':'page'} : {})= item.name()
+          if item.description()
+            = ': ' + item.description()
+          if item.findAll().length && depth > 0
+            +doctoc({pages: item.findAll(), depth: depth-1}, true)
+  head
+    title= page.title() || `${page.name()} | ${Docs.DOCS.name()}`
+    meta(charset="utf-8")
+    meta(name="description" content=page.description())
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    block styles
+      link(rel="stylesheet" href="https://cdn.rawgit.com/chharvey/xmeter/master/xmeter.min.css")
+      link(rel="stylesheet" href="../bangs.css")
+      link(rel="stylesheet" href="styles/docs.css")
+  body#body
+    a.h-Hidden(href="#main") skip to main content
+    main#main
+      block main
+        header
+          h1= page.name()
+          p= page.description()
+          block toc
+            nav#contents
+              h2 Contents
+              +doctoc({pages: page.findAll(), depth: 1})
+    a(href="#body") jump to top
