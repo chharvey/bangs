@@ -119,14 +119,15 @@ module.exports = (function () {
   Docs.DATA = require('../../bangs.json')
 
   Docs.generatePercentsFileAsync = function generatePercentsFileAsync(prefix, mixin, callback) {
-  try {
+  function media(suffix) {
+    suffix = suffix || ''
     let denoms = [1, 2, 3, 4, 5, 6, 8, 10, 12]
     let unique_values = []
     let output = []
     for (let i = 0; i < denoms.length; i++) {
       for (let j = 1; j <= denoms[i]; j++) {
         let fraction = j/denoms[i]
-        let classname = `.-${prefix}-${j}o${denoms[i]}`
+        let classname = `.-${prefix}-${j}o${denoms[i]}${(suffix) ? `-${suffix}` : ''}`
         if (unique_values.find(function (el) { return el.value === fraction })) {
           unique_values.find(function (el) { return el.value === fraction }).classes.push(classname)
         } else {
@@ -137,6 +138,16 @@ module.exports = (function () {
     for (let el of unique_values) {
       output.push(`${el.classes.join(', ')} { ${mixin.call(null, el.value)} !important; }`)
     }
+    if (suffix) {
+      return `
+        @media ${Docs.DATA.global.media.find(function (el) { return el.code === suffix}).query} {
+          ${output.join('\n')}
+        }
+      `
+    } else return output.join('\n')
+  }
+  try {
+    let output = Docs.DATA.global.media.slice(0,-1).map(function (el) { return media(el.code) })
     callback.call(null, null, output.join('\n'))
   } catch (e) {
     callback.call(null, e, null)

@@ -6,18 +6,18 @@
     , { "name": "unset"  , "code": "u" }
     ]
   , "media": [
-      { "name": "screen"  , "code": "s"  }
-    , { "name": "print"   , "code": "p"  }
-    , { "name": "small+"  , "code": "sK", "breakpoint": { "em": 30, "px":  480 } }
-    , { "name": "medium+" , "code": "sM", "breakpoint": { "em": 45, "px":  720 } }
-    , { "name": "large+"  , "code": "sG", "breakpoint": { "em": 60, "px":  960 } }
-    , { "name": "xlarge+" , "code": "sT", "breakpoint": { "em": 75, "px": 1200 } }
-    , { "name": "xxlarge+", "code": "sP", "breakpoint": { "em": 90, "px": 1440 } }
-    , { "name": "xsmall-" , "code": "nK", "breakpoint": { "em": 30, "px":  480, "negative": true } }
-    , { "name": "small-"  , "code": "nM", "breakpoint": { "em": 45, "px":  720, "negative": true } }
-    , { "name": "medium-" , "code": "nG", "breakpoint": { "em": 60, "px":  960, "negative": true } }
-    , { "name": "large-"  , "code": "nT", "breakpoint": { "em": 75, "px": 1200, "negative": true } }
-    , { "name": "xlarge-" , "code": "nP", "breakpoint": { "em": 90, "px": 1440, "negative": true } }
+      { "name": "screen"  , "code": "s" , "query": "screen" }
+    , { "name": "print"   , "code": "p" , "query": "print" }
+    , { "name": "small+"  , "code": "sK", "query": "screen  and (min-width: 30em)" }
+    , { "name": "medium+" , "code": "sM", "query": "screen  and (min-width: 45em)" }
+    , { "name": "large+"  , "code": "sG", "query": "screen  and (min-width: 60em)" }
+    , { "name": "xlarge+" , "code": "sT", "query": "screen  and (min-width: 75em)" }
+    , { "name": "xxlarge+", "code": "sP", "query": "screen  and (min-width: 90em)" }
+    , { "name": "xsmall-" , "code": "nK", "query": "not all and (min-width: 30em)" }
+    , { "name": "small-"  , "code": "nM", "query": "not all and (min-width: 45em)" }
+    , { "name": "medium-" , "code": "nG", "query": "not all and (min-width: 60em)" }
+    , { "name": "large-"  , "code": "nT", "query": "not all and (min-width: 75em)" }
+    , { "name": "xlarge-" , "code": "nP", "query": "not all and (min-width: 90em)" }
     , { "name": "hover"   , "code": "h"  }
     ]
   , "stability_levels": [
