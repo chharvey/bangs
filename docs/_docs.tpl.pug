@@ -29,7 +29,8 @@ html(lang="en")
       block main
         header
           h1= page.name()
-          p= page.description()
+          if page.description
+            p= page.description()
           block toc
             nav#contents
               h2 Contents

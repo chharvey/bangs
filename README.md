@@ -85,23 +85,6 @@ Remotely (from a CDN; not recommended)
 ```
 where `‹master›` can be a branch or a tag, and optional `[.min]` is for the minified version.
 
-## Syntax
-
-In general, the syntax of a bang classname looks like this:
-```
--‹prop›-‹val›[-‹mq›|-h]?
-```
-Where:
-
-1. The leading ~~*bang*, i.e., exclamation point,~~ hyphen indicates this class is a Bang and belongs to this stylesheet.
-2. `‹prop›` is the initials for the property name, followed by a hyphen.
-3. `‹val›` is the initials for the property value.
-4. Optionally, either:
-  - append `-‹mq›` (media query abbr), or
-  - append `-h` for hover/focus-only styles.
-
-Read [the docs](DOC.md) for more info.
-
 ## Developing with Bangs!
 
 Feel free to download Bangs! and expand or modify it to fit your own needs.

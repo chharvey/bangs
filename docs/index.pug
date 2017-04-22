@@ -3,6 +3,332 @@ extends _docs.tpl.pug
 block append vars
   - let page = Docs.DOCS.find('/docs/index.html')
 
-block append main
+block append styles
+  style.
+    main { margin: 0 2rem; }
+    table,
+    th, td {border: 1px solid #999;}
+    th, td {padding: 6px 8px;}
 
-block toc
+block append main
+  section#introduction
+    h2 Introduction
+    p.
+      Bangs are CSS classes that have one style, one responsibility. For the most common CSS
+      property-value pairs, there is a corresponding Bang class. For an overview on usage, see the
+      #[a(href="https://github.com/chharvey/bangs#readme" rel="external") readme]. You can also
+      look through the #[a(href="https://github.com/chharvey/bangs/issues" rel="external") issues]
+      to see what features are being added or how they&rsquo;re being changed.
+      Check out the #[a(href="https://github.com/chharvey/bangs/releases" rel="external") releases]
+      for version updates.
+      This documentation describes the naming convention used throughout the project.
+    p In general, the syntax of a bang classname looks like this:
+    pre.
+      .-‹prop›-‹val›[-‹suffix›]?
+    figure
+      figcaption Some examples of Bang classnames.
+      pre.
+        &lt;style&gt;
+          .-fs-t { font-style: italic; }
+          @media screen and (min-width: 60em) {
+            .-d-lb-sG { display: inline-block !important; }
+          }
+          .-bc-b-h:hover { background-color: #000000 !important; }
+        &lt;/style&gt;
+        &lt;p class="-fs-t"&gt;Italic font in all media.&lt;/p&gt;
+        &lt;p class="-d-lb-sG"&gt;Displays as inline-block for large screen sizes.&lt;/p&gt;
+        &lt;p class="-bc-b-h"&gt;Black background on hover.&lt;/p&gt;
+    p.
+      The leading hyphen indicates the class is an &ldquo;Atom,&rdquo; which is to be used on top of
+      all the Object, Component, and Helper styles. A developer seeing this classname in the markup
+      will understand that the class is very localized and specific.
+    p.
+      #[code ‹prop›] is the initials for the property name, and #[code -‹val›] is the initials for
+      the property value. The optional #[code -‹suffix›] could stand for a media query or pseudo-class,
+      such as #[code :hover]. The most common initials are listed below.
+  section#global-values
+    h2 Global Values
+    p.
+      Every CSS property has the three global values #[code inherit], #[code initial], and #[code unset].
+      In addition, a great many properties also have #[code normal], #[code none], #[code auto], and
+      a few other common values.
+    table
+      caption Global (or mostly-global) values and their abbreviations.
+      thead: tr
+        th abbreviation
+        th value
+      tbody
+        tr #[td: code -i] #[td #[code inherit] (global)]
+        tr #[td: code -0] #[td #[code initial] (global)#[sup &lowast;]]
+        tr #[td: code -u] #[td #[code unset]   (global)]
+        tr #[td: code -n] #[td #[code normal] or #[code none], if applicable#[sup &dagger;]]
+        tr #[td: code -a] #[td #[code auto], if applicable]
+        tr #[td: code -z] #[td #[code 0], if applicable]
+    aside
+      p.
+        #[sup &lowast;] The abbreviation #[code -0] (for #[code initial]) might be a little misleading,
+        because the initial value of a property is not always #[code 0]. However I could not use #[code -i],
+        which is reserved for #[code inherit]. Remember that #[code -0] stands for whatever
+        #[b specified value] to which #[code initial] is mapped, and #[code -z] results in a
+        specified value of #[code 0], if it&rsquo;s an allowed value. In some cases, these may be the same,
+        like for #[code margin]. Here are some more examples:
+      pre.
+        -p-0 { padding: initial; } /* specified as `padding: 0;` */
+        -p-z { padding: 0; }
+
+        -w-0 { width: initial; } /* specified as `width: auto;` */
+        -w-a { width: auto; } /* may or may not compute to `0` */
+        -w-z { width: 0; }
+
+        -fs-0 { font-style: initial; } /* specified as `font-style: normal;` */
+        -fs-n { font-style: normal; } /* determined by your browser and the current value of `font-family` */
+        /* `font-style: auto;` is invalid, so `.-fs-a` is not a class. */
+        /* `font-style: 0;` is invalid, so `.-fs-z` is also not a class. */
+    aside
+      p.
+        #[sup &dagger;] There are very few properties that have both #[code normal] and #[code none]
+        as allowed values. For now, the abbreviation #[code -n] stands for whichever one
+        the value has, if any. So for instance #[code .-fs-n] stands for #[code font-style: normal;]
+        while #[code .-d-n] stands for #[code display: none;].
+        See #[a(href="https://github.com/chharvey/bangs/issues/35" rel="external") Issue #35] for the exceptions.
+  section#fallbacks
+    h2 Fallbacks
+    p.
+      Due to currently narrow, but increasing, support for #[code initial], every class with #[code -0]
+      has a fallback, which corresponds to the CSS-specified initial value for that property.
+      For example #[code .-d-0] is defined as #[code {display: inline; display: initial;}] because
+      #[code inline] is the CSS-specified initial value for #[code display].
+    p.
+      To that same end, every #[code unset] class has a fallback, which corresponds to one of
+      the values #[code inherit] (if that property is inherited) or #[code initial] (if it is not).
+  section#extensions
+    h2 Extensions
+    p.
+      By default, all bangs work in all media types. Additionally, each bang supports the
+      #[code screen] and #[code print] media queries.
+      Even further, there are more sets of classes that provide support for
+      additional media queries and hover/focus, and these are mentioned on a per-property basis below.
+    table
+      caption Media Query Support
+      thead: tr
+        th suffix
+        th query
+        th property support
+      tbody
+        tr #[td no suffix] #[td no media queries (same as #[code @media all])] #[td all properties]
+        tr #[td: code -s] #[td: code @media screen] #[td all properties]
+        tr #[td: code -p] #[td: code @media print] #[td all properties]
+        tr #[td: code -sK] #[td #[code @media screen  and (min-width: 30em)] (small+)]    #[td display, order, flex, width, margin, padding]
+        tr #[td: code -sM] #[td #[code @media screen  and (min-width: 45em)] (medium+)]   #[td display, order, flex, width, margin, padding]
+        tr #[td: code -sG] #[td #[code @media screen  and (min-width: 60em)] (large+)]    #[td display, order, flex, width, margin, padding]
+        tr #[td: code -sT] #[td #[code @media screen  and (min-width: 75em)] (x-large+)]  #[td display, order, flex, width, margin, padding]
+        tr #[td: code -sP] #[td #[code @media screen  and (min-width: 90em)] (xx-large+)] #[td none so far]
+        tr #[td: code -nK] #[td #[code @media not all and (min-width: 30em)] (x-small-)]  #[td display]
+        tr #[td: code -nM] #[td #[code @media not all and (min-width: 45em)] (small-)]    #[td display]
+        tr #[td: code -nG] #[td #[code @media not all and (min-width: 60em)] (medium-)]   #[td display]
+        tr #[td: code -nT] #[td #[code @media not all and (min-width: 75em)] (large-)]    #[td display]
+        tr #[td: code -nP] #[td #[code @media not all and (min-width: 90em)] (x-large-)]  #[td none so far]
+        tr
+          td: code -h
+          td pseudo-classes #[code :hover, :focus]
+          td font-[style,variant,weight], background-color, opacity, color, text-[transform,decoration]
+  section#trends
+    h2 Trends
+    p.
+      This table describes typical letter usage. The most frequent instances of the letter correspond
+      with the properties and values described below. Note that this list is non-normative and
+      non-comprehensive: these are not the only uses of the letters, and there may be exceptions.
+      #[strong Warning:] these abbreviations can change at any time (until Version 1.0.0).
+    table
+      thead
+        tr
+          th Letter
+          th Typical Usage
+          th Example Properties
+          th Example Values
+      tbody
+        tr
+          td 0
+          td initial
+          td: strong none
+          td: em global value
+        tr
+          td a
+          td all
+          td [padding, margin]&#x200b;(-all)
+          td: strong none
+        tr
+          td a
+          td auto
+          td: strong none
+          td [left, right, top, bottom, z-index, [justify,align]-[content,items,self], flex, width, margin, column-[count,width], background-size, (box-)overflow]: auto
+        tr
+          td b
+          td bottom
+          td bottom
+          td margin, padding]-bottom | background-position: bottom; vertical-align: [text-]bottom
+        tr
+          td b
+          td background
+          td background-[image, position, size, repeat, attachment, origin, clip, color]
+          td: strong none
+        tr
+          td c
+          td color
+          td [border-, background-]color
+          td [border-, background-]color: currentColor
+        tr
+          td c
+          td content
+          td [justify, align]-content
+          td flex: content; [box-sizing, background-[origin, clip]]: content(-box)
+        tr
+          td c
+          td column
+          td grid-template-columns, grid-column-gap, column-[count, width]
+          td flex-direction: column[-reverse]
+        tr
+          td c
+          td center
+          td: strong none
+          td [[justify, align]-[content,items,self], text-align, background-position]: center; vertical-align: middle (center)
+        tr
+          td f
+          td font
+          td font-[style, variant, weight, size, family]
+          td: strong none
+        tr
+          td g
+          td grid
+          td grid-template-[rows, columns], grid-[row, column]-gap
+          td display: grid (gd)
+        tr
+          td h
+          td 0.5 (half)
+          td: strong none
+          td [flex,opacity]: 0.5; [margin,padding]-vertical: 0.5vru; [margin,padding]-horizontal: 0.5rem
+        tr
+          td h
+          td hidden
+          td: strong none
+          td [overflow,border-style,visibility]: hidden
+        tr
+          td i
+          td inherit
+          td: strong none
+          td: em global value
+        tr
+          td k
+          td box
+          td box-[sizing, shadow], (box-)overflow
+          td: strong none
+        tr
+          td l
+          td left
+          td left, [margin, padding]-left
+          td [float, clear, text-align, background-position]: left
+        tr
+          td m
+          td margin
+          td margin
+          td: strong none
+        tr
+          td n
+          td normal
+          td: strong none
+          td [font-[style, variant, weight], line-height, letter-spacing, word-spacing, white-space, overflow-wrap]: normal
+        tr
+          td n
+          td none
+          td: strong none
+          td [display, float, clear, border-style, background-image, box-shadow, text-[transform,decoration,shadow], list-style-[type,image]]: none
+        tr
+          td o
+          td overflow
+          td [(box-), text-]overflow, overflow-wrap
+          td: strong none
+        tr
+          td p
+          td padding
+          td padding
+          td background-[origin, clip]: padding(-box)
+        tr
+          td r
+          td border
+          td border-[style, color]
+          td [box-sizing, background-[origin, clip]]: border(-box)
+        tr
+          td r
+          td right
+          td right, [margin, padding]-right
+          td [float, clear, text-align, background-position]: right
+        tr
+          td c
+          td row
+          td grid-template-rows, grid-row-gap
+          td flex-direction: row[-reverse]
+        tr
+          td t
+          td top
+          td top, [margin, padding]-top
+          td background-position: top; vertical-align: [text-]top
+        tr
+          td t
+          td text
+          td text-[align, indent, transform, decoration, shadow, overflow]
+          td vertical-align: text-[top, bottom]
+        tr
+          td u
+          td unset
+          td: strong none
+          td: em global value
+        tr
+          td w
+          td width
+          td width, column-width
+          td: strong none
+        tr
+          td w
+          td wrap
+          td [flex, overflow]-wrap
+          td flex-wrap: [nowrap, wrap, wrap-reverse]; white-space: [nowrap, pre-wrap]
+        tr
+          td x
+          td flex
+          td flex[-direction, -wrap]
+          td flex-[start, end]
+        tr
+          td x
+          td clip
+          td background-clip
+          td text-overflow: clip
+        tr
+          td z
+          td size
+          td box-sizing, font-size, background-size
+          td: strong none
+        tr
+          td z
+          td 0
+          td: strong none
+          td [left, right, top, bottom, z-index, order, width, margin, padding, font-size, line-height, letter-spacing, word-spacing, text-indent, opacity]: 0
+        tr
+          td ?
+          td block
+          td: em any logical properties
+          td display: block; background-position: block-[start, end]
+        tr
+          td ?
+          td inline
+          td: em any logical properties
+          td display: inline; background-position: inline-[start, end]
+        tr
+          td ?
+          td start
+          td: em any logical properties
+          td [text-align, float]: start; [justify,align]-[content,items,self]: [flex-]start; background-position: [inline-,block-]start
+        tr
+          td ?
+          td end
+          td: em any logical properties
+          td [text-align, float]: end; [justify,align]-[content,items,self]: [flex-]end; background-position: [inline-,block-]end
