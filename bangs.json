@@ -449,7 +449,7 @@
   , {
       "name"     : "column-fill"
     , "code"     : "cf"
-    , "summary"  : "Specifies whether columns are filled equally or sequentially."
+    , "summary"  : "Controls how contents are partitioned into columns."
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-fill"
     , "inherited": false
     , "initial"  : "balance"
