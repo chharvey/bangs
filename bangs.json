@@ -447,6 +447,84 @@
       ]
     }
   , {
+      "name"     : "column-fill"
+    , "code"     : "cf"
+    , "summary"  : ""
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-fill"
+    , "inherited": false
+    , "initial"  : ""
+    , "stability": 2
+    , "values"   : [
+      ]
+    , "media": [
+      ]
+    }
+  , {
+      "name"     : "column-gap"
+    , "code"     : "cg"
+    , "summary"  : ""
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-gap"
+    , "inherited": false
+    , "initial"  : ""
+    , "stability": 2
+    , "values"   : [
+      ]
+    , "media": [
+      ]
+    }
+  , {
+      "name"     : "column-rule-color"
+    , "code"     : "crc"
+    , "summary"  : ""
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule-color"
+    , "inherited": false
+    , "initial"  : ""
+    , "stability": 2
+    , "values"   : [
+      ]
+    , "media": [
+      ]
+    }
+  , {
+      "name"     : "column-rule-style"
+    , "code"     : "crs"
+    , "summary"  : ""
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule-style"
+    , "inherited": false
+    , "initial"  : ""
+    , "stability": 2
+    , "values"   : [
+      ]
+    , "media": [
+      ]
+    }
+  , {
+      "name"     : "column-rule-width"
+    , "code"     : "crw"
+    , "summary"  : ""
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule-width"
+    , "inherited": false
+    , "initial"  : ""
+    , "stability": 2
+    , "values"   : [
+      ]
+    , "media": [
+      ]
+    }
+  , {
+      "name"     : "column-span"
+    , "code"     : "cs"
+    , "summary"  : ""
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-span"
+    , "inherited": false
+    , "initial"  : ""
+    , "stability": 2
+    , "values"   : [
+      ]
+    , "media": [
+      ]
+    }
+  , {
       "name"     : "column-width"
     , "code"     : "cw"
     , "summary"  : "Suggests the optimal width for columns of content."
