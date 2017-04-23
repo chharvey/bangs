@@ -434,11 +434,8 @@
       , { "name": "4"      , "code": "4" , "use": ".column-count(4);"    }
       , { "name": "5"      , "code": "5" , "use": ".column-count(5);"    }
       , { "name": "6"      , "code": "6" , "use": ".column-count(6);"    }
-      , { "name": "7"      , "code": "7" , "use": ".column-count(7);"    }
       , { "name": "8"      , "code": "8" , "use": ".column-count(8);"    }
-      , { "name": "9"      , "code": "9" , "use": ".column-count(9);"    }
       , { "name": "10"     , "code": "10", "use": ".column-count(10);"   }
-      , { "name": "11"     , "code": "11", "use": ".column-count(11);"   }
       , { "name": "12"     , "code": "12", "use": ".column-count(12);"   }
       ]
     , "media": [
