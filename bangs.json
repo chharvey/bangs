@@ -441,6 +441,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -640,6 +650,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -766,6 +786,12 @@
       , "medium+"
       , "large+"
       , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -997,6 +1023,20 @@
       , { "name": "repeat(10, 1fr)" , "code": "10", "use": ".grid-template-columns(repeat(10, 1fr));" }
       , { "name": "repeat(12, 1fr)" , "code": "12", "use": ".grid-template-columns(repeat(12, 1fr));" }
       ]
+    , "media": [
+        "screen"
+      , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
+      ]
     }
   , {
       "name"     : "grid-template-rows"
@@ -1020,6 +1060,20 @@
       , { "name": "repeat(8 , 1fr)" , "code": "8" , "use": ".grid-template-rows(repeat(8 , 1fr));" }
       , { "name": "repeat(10, 1fr)" , "code": "10", "use": ".grid-template-rows(repeat(10, 1fr));" }
       , { "name": "repeat(12, 1fr)" , "code": "12", "use": ".grid-template-rows(repeat(12, 1fr));" }
+      ]
+    , "media": [
+        "screen"
+      , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1778,6 +1832,12 @@
       , "medium+"
       , "large+"
       , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
