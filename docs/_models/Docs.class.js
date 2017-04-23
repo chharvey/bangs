@@ -118,16 +118,28 @@ module.exports = (function () {
    */
   Docs.DATA = require('../../bangs.json')
 
-  Docs.generatePercentsFileAsync = function generatePercentsFileAsync(prefix, mixin, callback) {
+  /**
+   * Automate percentages.
+   * @param  {string} prop abbreviation for css property
+   * @param  {function(number)=string} mixin function outputting the css value
+   * @param  {Function} callback callback function to call after execution. standard callback params.
+   */
+  Docs.generatePercentsAsync = function generatePercentsAsync(prop, mixin, callback) {
+    /**
+     * Return a media query containing rulesets.
+     * If no suffix is given, the media query will be ommitted (equivalent to `@media all`).
+     * @param  {string=''} suffix media query code, e.g. ('-sK')
+     * @return {string} complete css media query as a string
+     */
     function media(suffix) {
       suffix = suffix || ''
       let denoms = [1, 2, 3, 4, 5, 6, 8, 10, 12]
       let unique_values = []
-      let ruleset = []
+      let rulesets = []
       for (let i = 0; i < denoms.length; i++) {
         for (let j = 1; j <= denoms[i]; j++) {
           let fraction = j/denoms[i]
-          let classname = `.-${prefix}-${j}o${denoms[i]}${(suffix) ? `-${suffix}` : ''}`
+          let classname = `.-${prop}-${j}o${denoms[i]}${(suffix) ? `-${suffix}` : ''}`
           let selector = unique_values.find(function (el) { return el.value === fraction })
           if (selector) {
             selector.classes.push(classname)
@@ -137,15 +149,14 @@ module.exports = (function () {
         }
       }
       for (let selector of unique_values) {
-        ruleset.push(`${selector.classes.join(', ')} { ${mixin.call(null, selector.value)} !important; }`)
+        let rule = (suffix) ? selector.classes[0].split('-').slice(0,-1).join('-') : `${mixin.call(null, selector.value)} !important`
+        rulesets.push(`${selector.classes.join(', ')} { ${rule}; }`)
       }
-      if (suffix) {
-        return `
-          @media ${Docs.DATA.global.media.find(function (el) { return el.code === suffix}).query} {
-            ${ruleset.join('\n')}
-          }
-        `
-      } else return ruleset.join('\n')
+      return (suffix) ? `
+        @media ${Docs.DATA.global.media.find(function (el) { return el.code === suffix}).query} {
+          ${rulesets.join('\n')}
+        }
+      ` : rulesets.join('\n')
     }
     try {
       callback.call(null, null, [''].concat(Docs.DATA.global.media.map(function (el) { return el.code })).map(media).join(''))
