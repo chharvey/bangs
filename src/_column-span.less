@@ -7,3 +7,15 @@
 // : Chris Harvey
 // ^updated
 // : 2017-04-22
+
+.column-span(@span: none) {
+  -webkit-column-span: @span;
+     -moz-column-span: @span;
+          column-span: @span;
+}
+
+.-cs-i {         .column-span(inherit) !important; }
+.-cs-0 { .-cs-n; .column-span(initial) !important; }
+.-cs-u { .-cs-0; .column-span(unset  ) !important; }
+.-cs-n {         .column-span(none)    !important; }
+.-cs-a {         .column-span(all)     !important; }

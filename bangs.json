@@ -555,12 +555,17 @@
   , {
       "name"     : "column-span"
     , "code"     : "cs"
-    , "summary"  : ""
+    , "summary"  : "Describes how many columns an element spans across."
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-span"
     , "inherited": false
-    , "initial"  : ""
+    , "initial"  : "none"
     , "stability": 2
     , "values"   : [
+        { "name": "inherit",              "use": ".column-span(inherit);" }
+      , { "name": "initial",              "use": ".column-span(initial);" }
+      , { "name": "unset"  ,              "use": ".column-span(unset);"   }
+      , { "name": "none"   , "code": "n", "use": ".column-span(none);"    }
+      , { "name": "all"    , "code": "a", "use": ".column-span(all);"     }
       ]
     , "media": [
       ]
