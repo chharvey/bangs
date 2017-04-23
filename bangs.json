@@ -500,12 +500,25 @@
   , {
       "name"     : "column-rule-style"
     , "code"     : "crs"
-    , "summary"  : ""
+    , "summary"  : "Sets the line style of the rule drawn between columns."
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule-style"
     , "inherited": false
-    , "initial"  : ""
+    , "initial"  : "none"
     , "stability": 2
     , "values"   : [
+        { "name": "inherit",              "use": ".column-rule-style(inherit);" }
+      , { "name": "initial",              "use": ".column-rule-style(initial);" }
+      , { "name": "unset"  ,              "use": ".column-rule-style(unset);"   }
+      , { "name": "none"   , "code": "n"  }
+      , { "name": "hidden" , "code": "h"  }
+      , { "name": "solid"  , "code": "s"  }
+      , { "name": "dotted" , "code": "do" }
+      , { "name": "dashed" , "code": "da" }
+      , { "name": "double" , "code": "db" }
+      , { "name": "groove" , "code": "gv" }
+      , { "name": "ridge"  , "code": "rg" }
+      , { "name": "inset"  , "code": "is" }
+      , { "name": "outset" , "code": "os" }
       ]
     , "media": [
       ]
