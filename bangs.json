@@ -425,15 +425,21 @@
     , "initial"  : "auto"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit",              "use": ".column-count(inherit);" }
-      , { "name": "initial",              "use": ".column-count(auto); .column-count(initial);" }
-      , { "name": "auto"   , "code": "a", "use": ".column-count(auto);" }
-      , { "name": "1"      , "code": "1", "use": ".column-count(1);"    }
-      , { "name": "2"      , "code": "2", "use": ".column-count(2);"    }
-      , { "name": "3"      , "code": "3", "use": ".column-count(3);"    }
-      , { "name": "4"      , "code": "4", "use": ".column-count(4);"    }
-      , { "name": "5"      , "code": "5", "use": ".column-count(5);"    }
-      , { "name": "6"      , "code": "6", "use": ".column-count(6);"    }
+        { "name": "inherit",               "use": ".column-count(inherit);" }
+      , { "name": "initial",               "use": ".column-count(auto); .column-count(initial);" }
+      , { "name": "auto"   , "code": "a" , "use": ".column-count(auto);" }
+      , { "name": "1"      , "code": "1" , "use": ".column-count(1);"    }
+      , { "name": "2"      , "code": "2" , "use": ".column-count(2);"    }
+      , { "name": "3"      , "code": "3" , "use": ".column-count(3);"    }
+      , { "name": "4"      , "code": "4" , "use": ".column-count(4);"    }
+      , { "name": "5"      , "code": "5" , "use": ".column-count(5);"    }
+      , { "name": "6"      , "code": "6" , "use": ".column-count(6);"    }
+      , { "name": "7"      , "code": "7" , "use": ".column-count(7);"    }
+      , { "name": "8"      , "code": "8" , "use": ".column-count(8);"    }
+      , { "name": "9"      , "code": "9" , "use": ".column-count(9);"    }
+      , { "name": "10"     , "code": "10", "use": ".column-count(10);"   }
+      , { "name": "11"     , "code": "11", "use": ".column-count(11);"   }
+      , { "name": "12"     , "code": "12", "use": ".column-count(12);"   }
       ]
     , "media": [
         "screen"
