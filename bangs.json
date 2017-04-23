@@ -498,6 +498,18 @@
       , { "name":  "80%", "code": "8o10" , "use": ".column-width(( 8/10) * 100%);" }
       , { "name":  "90%", "code": "9o10" , "use": ".column-width(( 9/10) * 100%);" }
       , { "name": "100%", "code": "10o10", "use": ".column-width((10/10) * 100%);" }
+      , { "name":   "8%", "code": "1o12" , "use": ".column-width(( 1/12) * 100%);" }
+      , { "name":  "17%", "code": "2o12" , "use": ".column-width(( 2/12) * 100%);" }
+      , { "name":  "25%", "code": "3o12" , "use": ".column-width(( 3/12) * 100%);" }
+      , { "name":  "33%", "code": "4o12" , "use": ".column-width(( 4/12) * 100%);" }
+      , { "name":  "42%", "code": "5o12" , "use": ".column-width(( 5/12) * 100%);" }
+      , { "name":  "50%", "code": "6o12" , "use": ".column-width(( 6/12) * 100%);" }
+      , { "name":  "58%", "code": "7o12" , "use": ".column-width(( 7/12) * 100%);" }
+      , { "name":  "67%", "code": "8o12" , "use": ".column-width(( 8/12) * 100%);" }
+      , { "name":  "75%", "code": "9o12" , "use": ".column-width(( 9/12) * 100%);" }
+      , { "name":  "83%", "code": "10o12", "use": ".column-width((10/12) * 100%);" }
+      , { "name":  "92%", "code": "11o12", "use": ".column-width((11/12) * 100%);" }
+      , { "name": "100%", "code": "12o12", "use": ".column-width((12/12) * 100%);" }
       ]
     , "media": [
         "screen"
@@ -608,6 +620,18 @@
       , { "name":  "80%", "code": "8o10" , "use": ".flex(( 8/10) * 100%);" }
       , { "name":  "90%", "code": "9o10" , "use": ".flex(( 9/10) * 100%);" }
       , { "name": "100%", "code": "10o10", "use": ".flex((10/10) * 100%);" }
+      , { "name":   "8%", "code": "1o12" , "use": ".flex(( 1/12) * 100%);" }
+      , { "name":  "17%", "code": "2o12" , "use": ".flex(( 2/12) * 100%);" }
+      , { "name":  "25%", "code": "3o12" , "use": ".flex(( 3/12) * 100%);" }
+      , { "name":  "33%", "code": "4o12" , "use": ".flex(( 4/12) * 100%);" }
+      , { "name":  "42%", "code": "5o12" , "use": ".flex(( 5/12) * 100%);" }
+      , { "name":  "50%", "code": "6o12" , "use": ".flex(( 6/12) * 100%);" }
+      , { "name":  "58%", "code": "7o12" , "use": ".flex(( 7/12) * 100%);" }
+      , { "name":  "67%", "code": "8o12" , "use": ".flex(( 8/12) * 100%);" }
+      , { "name":  "75%", "code": "9o12" , "use": ".flex(( 9/12) * 100%);" }
+      , { "name":  "83%", "code": "10o12", "use": ".flex((10/12) * 100%);" }
+      , { "name":  "92%", "code": "11o12", "use": ".flex((11/12) * 100%);" }
+      , { "name": "100%", "code": "12o12", "use": ".flex((12/12) * 100%);" }
       ]
     , "media": [
         "screen"
@@ -1512,6 +1536,18 @@
       , { "name":  "80%", "code": "8o10" , "use": "width: (( 8/10) * 100%);" }
       , { "name":  "90%", "code": "9o10" , "use": "width: (( 9/10) * 100%);" }
       , { "name": "100%", "code": "10o10", "use": "width: ((10/10) * 100%);" }
+      , { "name":   "8%", "code": "1o12" , "use": "width: (( 1/12) * 100%);" }
+      , { "name":  "17%", "code": "2o12" , "use": "width: (( 2/12) * 100%);" }
+      , { "name":  "25%", "code": "3o12" , "use": "width: (( 3/12) * 100%);" }
+      , { "name":  "33%", "code": "4o12" , "use": "width: (( 4/12) * 100%);" }
+      , { "name":  "42%", "code": "5o12" , "use": "width: (( 5/12) * 100%);" }
+      , { "name":  "50%", "code": "6o12" , "use": "width: (( 6/12) * 100%);" }
+      , { "name":  "58%", "code": "7o12" , "use": "width: (( 7/12) * 100%);" }
+      , { "name":  "67%", "code": "8o12" , "use": "width: (( 8/12) * 100%);" }
+      , { "name":  "75%", "code": "9o12" , "use": "width: (( 9/12) * 100%);" }
+      , { "name":  "83%", "code": "10o10", "use": "width: ((10/12) * 100%);" }
+      , { "name":  "92%", "code": "11o11", "use": "width: ((11/12) * 100%);" }
+      , { "name": "100%", "code": "12o12", "use": "width: ((12/12) * 100%);" }
       ]
     , "media": [
         "screen"
