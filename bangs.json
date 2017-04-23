@@ -954,6 +954,30 @@
       ]
     }
   , {
+      "name"     : "grid-row-gap"
+    , "code"     : "grg"
+    , "summary"  : "Sets the gutter size between grid rows."
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-gap"
+    , "inherited": false
+    , "initial"  : "0"
+    , "stability": 2
+    , "values"   : [
+        { "name": "inherit",              "use": ".grid-row-gap(inherit);" }
+      , { "name": "initial",              "use": ".grid-row-gap(initial);" }
+      , { "name": "unset"  ,              "use": ".grid-row-gap(unset);"   }
+      , { "name": "0"      , "code": "z", "use": ".grid-row-gap(0);"       }
+      , { "name": "0.25rem", "code": "q", "use": ".grid-row-gap(0.25rem);" }
+      , { "name": "0.5rem" , "code": "h", "use": ".grid-row-gap(0.5rem);"  }
+      , { "name": "1rem"   , "code": "1", "use": ".grid-row-gap(1rem);"    }
+      , { "name": "2rem"   , "code": "2", "use": ".grid-row-gap(2rem);"    }
+      , { "name": "4rem"   , "code": "4", "use": ".grid-row-gap(4rem);"    }
+      , { "name": "8rem"   , "code": "8", "use": ".grid-row-gap(8rem);"    }
+      , { "name": "16rem"  , "code": "g", "use": ".grid-row-gap(16rem);"   }
+      ]
+    , "media": [
+      ]
+    }
+  , {
       "name"     : "grid-template-columns"
     , "code"     : "gtc"
     , "summary"  : "Defines track sizing functions of grid columns."

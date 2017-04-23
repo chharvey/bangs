@@ -47,6 +47,7 @@ module.exports = (function () {
         .add(new Page({ name: 'grid-template-columns', url: '/docs/props.html#grid-template-columns' }))
         .add(new Page({ name: 'grid-template-rows'   , url: '/docs/props.html#grid-template-rows' }))
         .add(new Page({ name: 'grid-column-gap'      , url: '/docs/props.html#grid-column-gap' }))
+        .add(new Page({ name: 'grid-row-gap'         , url: '/docs/props.html#grid-row-gap' }))
         .add(new Page({ name: 'justify-content'  , url: '/docs/props.html#justify-content' }))
         .add(new Page({ name: 'align-content'    , url: '/docs/props.html#align-content' }))
         .add(new Page({ name: 'justify-items'    , url: '/docs/props.html#justify-items' }))
