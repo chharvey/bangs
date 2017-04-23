@@ -487,12 +487,19 @@
   , {
       "name"     : "column-rule-color"
     , "code"     : "crc"
-    , "summary"  : ""
+    , "summary"  : "Sets the color of the rule drawn between columns."
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule-color"
     , "inherited": false
-    , "initial"  : ""
+    , "initial"  : "currentColor"
     , "stability": 2
     , "values"   : [
+        { "name": "inherit",                   "use": ".column-rule-color(inherit);" }
+      , { "name": "initial",                   "use": ".column-rule-color(initial);" }
+      , { "name": "unset"  ,                   "use": ".column-rule-color(unset);"   }
+      , { "name": "transparent" , "code": "t" }
+      , { "name": "currentColor", "code": "c" }
+      , { "name": "#000"        , "code": "b" }
+      , { "name": "#fff"        , "code": "w" }
       ]
     , "media": [
       ]
