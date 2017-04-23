@@ -930,6 +930,108 @@
       ]
     }
   , {
+      "name"     : "grid-column-gap"
+    , "code"     : "gcg"
+    , "summary"  : "Sets the gutter size between grid columns."
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-gap"
+    , "inherited": false
+    , "initial"  : "0"
+    , "stability": 2
+    , "values"   : [
+        { "name": "inherit",              "use": ".grid-column-gap(inherit);" }
+      , { "name": "initial",              "use": ".grid-column-gap(initial);" }
+      , { "name": "unset"  ,              "use": ".grid-column-gap(unset);"   }
+      , { "name": "0"      , "code": "z", "use": ".grid-column-gap(0);"       }
+      , { "name": "0.25rem", "code": "q", "use": ".grid-column-gap(0.25rem);" }
+      , { "name": "0.5rem" , "code": "h", "use": ".grid-column-gap(0.5rem);"  }
+      , { "name": "1rem"   , "code": "1", "use": ".grid-column-gap(1rem);"    }
+      , { "name": "2rem"   , "code": "2", "use": ".grid-column-gap(2rem);"    }
+      , { "name": "4rem"   , "code": "4", "use": ".grid-column-gap(4rem);"    }
+      , { "name": "8rem"   , "code": "8", "use": ".grid-column-gap(8rem);"    }
+      , { "name": "16rem"  , "code": "g", "use": ".grid-column-gap(16rem);"   }
+      ]
+    , "media": [
+      ]
+    }
+  , {
+      "name"     : "grid-row-gap"
+    , "code"     : "grg"
+    , "summary"  : "Sets the gutter size between grid rows."
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-gap"
+    , "inherited": false
+    , "initial"  : "0"
+    , "stability": 2
+    , "values"   : [
+        { "name": "inherit",              "use": ".grid-row-gap(inherit);" }
+      , { "name": "initial",              "use": ".grid-row-gap(initial);" }
+      , { "name": "unset"  ,              "use": ".grid-row-gap(unset);"   }
+      , { "name": "0"      , "code": "z", "use": ".grid-row-gap(0);"       }
+      , { "name": "0.25rem", "code": "q", "use": ".grid-row-gap(0.25rem);" }
+      , { "name": "0.5rem" , "code": "h", "use": ".grid-row-gap(0.5rem);"  }
+      , { "name": "1rem"   , "code": "1", "use": ".grid-row-gap(1rem);"    }
+      , { "name": "2rem"   , "code": "2", "use": ".grid-row-gap(2rem);"    }
+      , { "name": "4rem"   , "code": "4", "use": ".grid-row-gap(4rem);"    }
+      , { "name": "8rem"   , "code": "8", "use": ".grid-row-gap(8rem);"    }
+      , { "name": "16rem"  , "code": "g", "use": ".grid-row-gap(16rem);"   }
+      ]
+    , "media": [
+      ]
+    }
+  , {
+      "name"     : "grid-template-columns"
+    , "code"     : "gtc"
+    , "summary"  : "Defines track sizing functions of grid columns."
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns"
+    , "inherited": false
+    , "initial"  : "none"
+    , "stability": 2
+    , "values"   : [
+        { "name": "inherit"         ,               "use": ".grid-template-columns(inherit);" }
+      , { "name": "initial"         ,               "use": ".grid-template-columns(initial);" }
+      , { "name": "unset"           ,               "use": ".grid-template-columns(unset);"   }
+      , { "name": "none"            , "code": "n",  "use": ".grid-template-columns(none);"    }
+      , { "name": "repeat(1 , 1fr)" , "code": "1" , "use": ".grid-template-columns(repeat(1 , 1fr));" }
+      , { "name": "repeat(2 , 1fr)" , "code": "2" , "use": ".grid-template-columns(repeat(2 , 1fr));" }
+      , { "name": "repeat(3 , 1fr)" , "code": "3" , "use": ".grid-template-columns(repeat(3 , 1fr));" }
+      , { "name": "repeat(4 , 1fr)" , "code": "4" , "use": ".grid-template-columns(repeat(4 , 1fr));" }
+      , { "name": "repeat(5 , 1fr)" , "code": "5" , "use": ".grid-template-columns(repeat(5 , 1fr));" }
+      , { "name": "repeat(6 , 1fr)" , "code": "6" , "use": ".grid-template-columns(repeat(6 , 1fr));" }
+      , { "name": "repeat(7 , 1fr)" , "code": "7" , "use": ".grid-template-columns(repeat(7 , 1fr));" }
+      , { "name": "repeat(8 , 1fr)" , "code": "8" , "use": ".grid-template-columns(repeat(8 , 1fr));" }
+      , { "name": "repeat(9 , 1fr)" , "code": "9" , "use": ".grid-template-columns(repeat(9 , 1fr));" }
+      , { "name": "repeat(10, 1fr)" , "code": "10", "use": ".grid-template-columns(repeat(10, 1fr));" }
+      , { "name": "repeat(11, 1fr)" , "code": "11", "use": ".grid-template-columns(repeat(11, 1fr));" }
+      , { "name": "repeat(12, 1fr)" , "code": "12", "use": ".grid-template-columns(repeat(12, 1fr));" }
+      ]
+    }
+  , {
+      "name"     : "grid-template-rows"
+    , "code"     : "gtr"
+    , "summary"  : "Defines track sizing functions of grid rows."
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows"
+    , "inherited": false
+    , "initial"  : "none"
+    , "stability": 2
+    , "values"   : [
+        { "name": "inherit"         ,               "use": ".grid-template-rows(inherit);" }
+      , { "name": "initial"         ,               "use": ".grid-template-rows(initial);" }
+      , { "name": "unset"           ,               "use": ".grid-template-rows(unset);"   }
+      , { "name": "none"            , "code": "n",  "use": ".grid-template-rows(none);"    }
+      , { "name": "repeat(1 , 1fr)" , "code": "1" , "use": ".grid-template-rows(repeat(1 , 1fr));" }
+      , { "name": "repeat(2 , 1fr)" , "code": "2" , "use": ".grid-template-rows(repeat(2 , 1fr));" }
+      , { "name": "repeat(3 , 1fr)" , "code": "3" , "use": ".grid-template-rows(repeat(3 , 1fr));" }
+      , { "name": "repeat(4 , 1fr)" , "code": "4" , "use": ".grid-template-rows(repeat(4 , 1fr));" }
+      , { "name": "repeat(5 , 1fr)" , "code": "5" , "use": ".grid-template-rows(repeat(5 , 1fr));" }
+      , { "name": "repeat(6 , 1fr)" , "code": "6" , "use": ".grid-template-rows(repeat(6 , 1fr));" }
+      , { "name": "repeat(7 , 1fr)" , "code": "7" , "use": ".grid-template-rows(repeat(7 , 1fr));" }
+      , { "name": "repeat(8 , 1fr)" , "code": "8" , "use": ".grid-template-rows(repeat(8 , 1fr));" }
+      , { "name": "repeat(9 , 1fr)" , "code": "9" , "use": ".grid-template-rows(repeat(9 , 1fr));" }
+      , { "name": "repeat(10, 1fr)" , "code": "10", "use": ".grid-template-rows(repeat(10, 1fr));" }
+      , { "name": "repeat(11, 1fr)" , "code": "11", "use": ".grid-template-rows(repeat(11, 1fr));" }
+      , { "name": "repeat(12, 1fr)" , "code": "12", "use": ".grid-template-rows(repeat(12, 1fr));" }
+      ]
+    }
+  , {
       "name"     : "justify-content"
     , "code"     : "xjc"
     , "summary"  : "Defines how the browser distributes space between and around flex items along the main-axis of their container."
