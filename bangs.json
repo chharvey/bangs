@@ -425,19 +425,154 @@
     , "initial"  : "auto"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit",              "use": ".column-count(inherit);" }
-      , { "name": "initial",              "use": ".column-count(auto); .column-count(initial);" }
-      , { "name": "auto"   , "code": "a", "use": ".column-count(auto);" }
-      , { "name": "1"      , "code": "1", "use": ".column-count(1);"    }
-      , { "name": "2"      , "code": "2", "use": ".column-count(2);"    }
-      , { "name": "3"      , "code": "3", "use": ".column-count(3);"    }
-      , { "name": "4"      , "code": "4", "use": ".column-count(4);"    }
-      , { "name": "5"      , "code": "5", "use": ".column-count(5);"    }
-      , { "name": "6"      , "code": "6", "use": ".column-count(6);"    }
+        { "name": "inherit",               "use": ".column-count(inherit);" }
+      , { "name": "initial",               "use": ".column-count(auto); .column-count(initial);" }
+      , { "name": "auto"   , "code": "a" , "use": ".column-count(auto);" }
+      , { "name": "1"      , "code": "1" , "use": ".column-count(1);"    }
+      , { "name": "2"      , "code": "2" , "use": ".column-count(2);"    }
+      , { "name": "3"      , "code": "3" , "use": ".column-count(3);"    }
+      , { "name": "4"      , "code": "4" , "use": ".column-count(4);"    }
+      , { "name": "5"      , "code": "5" , "use": ".column-count(5);"    }
+      , { "name": "6"      , "code": "6" , "use": ".column-count(6);"    }
+      , { "name": "7"      , "code": "7" , "use": ".column-count(7);"    }
+      , { "name": "8"      , "code": "8" , "use": ".column-count(8);"    }
+      , { "name": "9"      , "code": "9" , "use": ".column-count(9);"    }
+      , { "name": "10"     , "code": "10", "use": ".column-count(10);"   }
+      , { "name": "11"     , "code": "11", "use": ".column-count(11);"   }
+      , { "name": "12"     , "code": "12", "use": ".column-count(12);"   }
       ]
     , "media": [
         "screen"
       , "print"
+      ]
+    }
+  , {
+      "name"     : "column-fill"
+    , "code"     : "cf"
+    , "summary"  : "Specifies whether columns are filled equally or sequentially."
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-fill"
+    , "inherited": false
+    , "initial"  : "balance"
+    , "stability": 2
+    , "values"   : [
+        { "name": "inherit",              "use": ".column-fill(inherit);" }
+      , { "name": "initial",              "use": ".column-fill(initial);" }
+      , { "name": "unset"  ,              "use": ".column-fill(unset);"   }
+      , { "name": "balance", "code": "b", "use": ".column-fill(balance);" }
+      , { "name": "auto"   , "code": "a", "use": ".column-fill(auto);"    }
+      ]
+    , "media": [
+      ]
+    }
+  , {
+      "name"     : "column-gap"
+    , "code"     : "cg"
+    , "summary"  : "Sets the size of the gap between columns."
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-gap"
+    , "inherited": false
+    , "initial"  : "normal"
+    , "stability": 2
+    , "values"   : [
+        { "name": "inherit",              "use": ".column-gap(inherit);" }
+      , { "name": "initial",              "use": ".column-gap(initial);" }
+      , { "name": "unset"  ,              "use": ".column-gap(unset);"   }
+      , { "name": "normal" , "code": "n", "use": ".column-gap(normal);"  }
+      , { "name": "0"      , "code": "z", "use": ".column-gap(0);"       }
+      , { "name": "0.25rem", "code": "q", "use": ".column-gap(0.25rem);" }
+      , { "name": "0.5rem" , "code": "h", "use": ".column-gap(0.5rem);"  }
+      , { "name": "1rem"   , "code": "1", "use": ".column-gap(1rem);"    }
+      , { "name": "2rem"   , "code": "2", "use": ".column-gap(2rem);"    }
+      , { "name": "4rem"   , "code": "4", "use": ".column-gap(4rem);"    }
+      , { "name": "8rem"   , "code": "8", "use": ".column-gap(8rem);"    }
+      , { "name": "16rem"  , "code": "g", "use": ".column-gap(16rem);"   }
+      ]
+    , "media": [
+      ]
+    }
+  , {
+      "name"     : "column-rule-color"
+    , "code"     : "crc"
+    , "summary"  : "Sets the color of the rule drawn between columns."
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule-color"
+    , "inherited": false
+    , "initial"  : "currentColor"
+    , "stability": 2
+    , "values"   : [
+        { "name": "inherit",                   "use": ".column-rule-color(inherit);" }
+      , { "name": "initial",                   "use": ".column-rule-color(initial);" }
+      , { "name": "unset"  ,                   "use": ".column-rule-color(unset);"   }
+      , { "name": "transparent" , "code": "t" }
+      , { "name": "currentColor", "code": "c" }
+      , { "name": "#000"        , "code": "b" }
+      , { "name": "#fff"        , "code": "w" }
+      ]
+    , "media": [
+      ]
+    }
+  , {
+      "name"     : "column-rule-style"
+    , "code"     : "crs"
+    , "summary"  : "Sets the line style of the rule drawn between columns."
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule-style"
+    , "inherited": false
+    , "initial"  : "none"
+    , "stability": 2
+    , "values"   : [
+        { "name": "inherit",              "use": ".column-rule-style(inherit);" }
+      , { "name": "initial",              "use": ".column-rule-style(initial);" }
+      , { "name": "unset"  ,              "use": ".column-rule-style(unset);"   }
+      , { "name": "none"   , "code": "n"  }
+      , { "name": "hidden" , "code": "h"  }
+      , { "name": "solid"  , "code": "s"  }
+      , { "name": "dotted" , "code": "do" }
+      , { "name": "dashed" , "code": "da" }
+      , { "name": "double" , "code": "db" }
+      , { "name": "groove" , "code": "gv" }
+      , { "name": "ridge"  , "code": "rg" }
+      , { "name": "inset"  , "code": "is" }
+      , { "name": "outset" , "code": "os" }
+      ]
+    , "media": [
+      ]
+    }
+  , {
+      "name"     : "column-rule-width"
+    , "code"     : "crw"
+    , "summary"  : "Sets the width of the rule drawn between columns."
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule-width"
+    , "inherited": false
+    , "initial"  : "medium"
+    , "stability": 2
+    , "values"   : [
+        { "name": "inherit",              "use": ".column-rule-width(inherit);" }
+      , { "name": "initial",              "use": ".column-rule-width(initial);" }
+      , { "name": "unset"  ,              "use": ".column-rule-width(unset);"   }
+      , { "name": "0"      , "code": "z", "use": ".column-rule-width(0);"       }
+      , { "name": "1px"    , "code": "1", "use": ".column-rule-width(1px);"     }
+      , { "name": "2px"    , "code": "2", "use": ".column-rule-width(2px);"     }
+      , { "name": "4px"    , "code": "4", "use": ".column-rule-width(4px);"     }
+      , { "name": "8px"    , "code": "8", "use": ".column-rule-width(8px);"     }
+      , { "name": "16px"   , "code": "g", "use": ".column-rule-width(16px);"    }
+      ]
+    , "media": [
+      ]
+    }
+  , {
+      "name"     : "column-span"
+    , "code"     : "cs"
+    , "summary"  : "Describes how many columns an element spans across."
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-span"
+    , "inherited": false
+    , "initial"  : "none"
+    , "stability": 2
+    , "values"   : [
+        { "name": "inherit",              "use": ".column-span(inherit);" }
+      , { "name": "initial",              "use": ".column-span(initial);" }
+      , { "name": "unset"  ,              "use": ".column-span(unset);"   }
+      , { "name": "none"   , "code": "n", "use": ".column-span(none);"    }
+      , { "name": "all"    , "code": "a", "use": ".column-span(all);"     }
+      ]
+    , "media": [
       ]
     }
   , {
@@ -492,6 +627,18 @@
       , { "name":  "80%", "code": "8o10" , "use": ".column-width(( 8/10) * 100%);" }
       , { "name":  "90%", "code": "9o10" , "use": ".column-width(( 9/10) * 100%);" }
       , { "name": "100%", "code": "10o10", "use": ".column-width((10/10) * 100%);" }
+      , { "name":   "8%", "code": "1o12" , "use": ".column-width(( 1/12) * 100%);" }
+      , { "name":  "17%", "code": "2o12" , "use": ".column-width(( 2/12) * 100%);" }
+      , { "name":  "25%", "code": "3o12" , "use": ".column-width(( 3/12) * 100%);" }
+      , { "name":  "33%", "code": "4o12" , "use": ".column-width(( 4/12) * 100%);" }
+      , { "name":  "42%", "code": "5o12" , "use": ".column-width(( 5/12) * 100%);" }
+      , { "name":  "50%", "code": "6o12" , "use": ".column-width(( 6/12) * 100%);" }
+      , { "name":  "58%", "code": "7o12" , "use": ".column-width(( 7/12) * 100%);" }
+      , { "name":  "67%", "code": "8o12" , "use": ".column-width(( 8/12) * 100%);" }
+      , { "name":  "75%", "code": "9o12" , "use": ".column-width(( 9/12) * 100%);" }
+      , { "name":  "83%", "code": "10o12", "use": ".column-width((10/12) * 100%);" }
+      , { "name":  "92%", "code": "11o12", "use": ".column-width((11/12) * 100%);" }
+      , { "name": "100%", "code": "12o12", "use": ".column-width((12/12) * 100%);" }
       ]
     , "media": [
         "screen"
@@ -602,6 +749,18 @@
       , { "name":  "80%", "code": "8o10" , "use": ".flex(( 8/10) * 100%);" }
       , { "name":  "90%", "code": "9o10" , "use": ".flex(( 9/10) * 100%);" }
       , { "name": "100%", "code": "10o10", "use": ".flex((10/10) * 100%);" }
+      , { "name":   "8%", "code": "1o12" , "use": ".flex(( 1/12) * 100%);" }
+      , { "name":  "17%", "code": "2o12" , "use": ".flex(( 2/12) * 100%);" }
+      , { "name":  "25%", "code": "3o12" , "use": ".flex(( 3/12) * 100%);" }
+      , { "name":  "33%", "code": "4o12" , "use": ".flex(( 4/12) * 100%);" }
+      , { "name":  "42%", "code": "5o12" , "use": ".flex(( 5/12) * 100%);" }
+      , { "name":  "50%", "code": "6o12" , "use": ".flex(( 6/12) * 100%);" }
+      , { "name":  "58%", "code": "7o12" , "use": ".flex(( 7/12) * 100%);" }
+      , { "name":  "67%", "code": "8o12" , "use": ".flex(( 8/12) * 100%);" }
+      , { "name":  "75%", "code": "9o12" , "use": ".flex(( 9/12) * 100%);" }
+      , { "name":  "83%", "code": "10o12", "use": ".flex((10/12) * 100%);" }
+      , { "name":  "92%", "code": "11o12", "use": ".flex((11/12) * 100%);" }
+      , { "name": "100%", "code": "12o12", "use": ".flex((12/12) * 100%);" }
       ]
     , "media": [
         "screen"
@@ -1506,6 +1665,18 @@
       , { "name":  "80%", "code": "8o10" , "use": "width: (( 8/10) * 100%);" }
       , { "name":  "90%", "code": "9o10" , "use": "width: (( 9/10) * 100%);" }
       , { "name": "100%", "code": "10o10", "use": "width: ((10/10) * 100%);" }
+      , { "name":   "8%", "code": "1o12" , "use": "width: (( 1/12) * 100%);" }
+      , { "name":  "17%", "code": "2o12" , "use": "width: (( 2/12) * 100%);" }
+      , { "name":  "25%", "code": "3o12" , "use": "width: (( 3/12) * 100%);" }
+      , { "name":  "33%", "code": "4o12" , "use": "width: (( 4/12) * 100%);" }
+      , { "name":  "42%", "code": "5o12" , "use": "width: (( 5/12) * 100%);" }
+      , { "name":  "50%", "code": "6o12" , "use": "width: (( 6/12) * 100%);" }
+      , { "name":  "58%", "code": "7o12" , "use": "width: (( 7/12) * 100%);" }
+      , { "name":  "67%", "code": "8o12" , "use": "width: (( 8/12) * 100%);" }
+      , { "name":  "75%", "code": "9o12" , "use": "width: (( 9/12) * 100%);" }
+      , { "name":  "83%", "code": "10o10", "use": "width: ((10/12) * 100%);" }
+      , { "name":  "92%", "code": "11o11", "use": "width: ((11/12) * 100%);" }
+      , { "name": "100%", "code": "12o12", "use": "width: ((12/12) * 100%);" }
       ]
     , "media": [
         "screen"

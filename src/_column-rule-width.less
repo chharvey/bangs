@@ -1,0 +1,26 @@
+
+/*################################*\
+    bangs  |  _column-rule-width.less
+\*################################*/
+
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2017-04-22
+
+.column-rule-width(@width: medium) {
+  -webkit-column-rule-width: @width;
+     -moz-column-rule-width: @width;
+          column-rule-width: @width;
+}
+
+.-crw-i  {                                  .column-rule-width(inherit) !important; }
+.-crw-0  { .column-rule-width() !important; .column-rule-width(initial) !important; }
+.-crw-u  { .-crw-0;                         .column-rule-width(unset  ) !important; }
+
+.-crw-z { .column-rule-width(0)    !important; }
+.-crw-1 { .column-rule-width(1px)  !important; }
+.-crw-2 { .column-rule-width(2px)  !important; }
+.-crw-4 { .column-rule-width(4px)  !important; }
+.-crw-8 { .column-rule-width(8px)  !important; }
+.-crw-g { .column-rule-width(16px) !important; }
