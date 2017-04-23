@@ -44,6 +44,7 @@ module.exports = (function () {
         .add(new Page({ name: 'column-span'      , url: '/docs/props.html#column-span' }))
         .add(new Page({ name: 'page-break-before', url: '/docs/props.html#page-break-before' }))
         .add(new Page({ name: 'page-break-after' , url: '/docs/props.html#page-break-after' }))
+        .add(new Page({ name: 'grid-template-columns', url: '/docs/props.html#grid-template-columns' }))
         .add(new Page({ name: 'justify-content'  , url: '/docs/props.html#justify-content' }))
         .add(new Page({ name: 'align-content'    , url: '/docs/props.html#align-content' }))
         .add(new Page({ name: 'justify-items'    , url: '/docs/props.html#justify-items' }))

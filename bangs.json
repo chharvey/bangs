@@ -930,6 +930,33 @@
       ]
     }
   , {
+      "name"     : "grid-template-columns"
+    , "code"     : "gtc"
+    , "summary"  : "Defines track sizing functions of grid columns."
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns"
+    , "inherited": false
+    , "initial"  : "none"
+    , "stability": 2
+    , "values"   : [
+        { "name": "inherit"         ,               "use": ".grid-template-columns(inherit);" }
+      , { "name": "initial"         ,               "use": ".grid-template-columns(initial);" }
+      , { "name": "unset"           ,               "use": ".grid-template-columns(unset);"   }
+      , { "name": "none"            , "code": "n",  "use": ".grid-template-columns(none);"    }
+      , { "name": "repeat(1 , 1fr)" , "code": "1" , "use": ".grid-template-columns(repeat(1 , 1fr));" }
+      , { "name": "repeat(2 , 1fr)" , "code": "2" , "use": ".grid-template-columns(repeat(2 , 1fr));" }
+      , { "name": "repeat(3 , 1fr)" , "code": "3" , "use": ".grid-template-columns(repeat(3 , 1fr));" }
+      , { "name": "repeat(4 , 1fr)" , "code": "4" , "use": ".grid-template-columns(repeat(4 , 1fr));" }
+      , { "name": "repeat(5 , 1fr)" , "code": "5" , "use": ".grid-template-columns(repeat(5 , 1fr));" }
+      , { "name": "repeat(6 , 1fr)" , "code": "6" , "use": ".grid-template-columns(repeat(6 , 1fr));" }
+      , { "name": "repeat(7 , 1fr)" , "code": "7" , "use": ".grid-template-columns(repeat(7 , 1fr));" }
+      , { "name": "repeat(8 , 1fr)" , "code": "8" , "use": ".grid-template-columns(repeat(8 , 1fr));" }
+      , { "name": "repeat(9 , 1fr)" , "code": "9" , "use": ".grid-template-columns(repeat(9 , 1fr));" }
+      , { "name": "repeat(10, 1fr)" , "code": "10", "use": ".grid-template-columns(repeat(10, 1fr));" }
+      , { "name": "repeat(11, 1fr)" , "code": "11", "use": ".grid-template-columns(repeat(11, 1fr));" }
+      , { "name": "repeat(12, 1fr)" , "code": "12", "use": ".grid-template-columns(repeat(12, 1fr));" }
+      ]
+    }
+  , {
       "name"     : "justify-content"
     , "code"     : "xjc"
     , "summary"  : "Defines how the browser distributes space between and around flex items along the main-axis of their container."
