@@ -513,12 +513,21 @@
   , {
       "name"     : "column-rule-width"
     , "code"     : "crw"
-    , "summary"  : ""
+    , "summary"  : "Sets the width of the rule drawn between columns."
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule-width"
     , "inherited": false
-    , "initial"  : ""
+    , "initial"  : "medium"
     , "stability": 2
     , "values"   : [
+        { "name": "inherit",              "use": ".column-rule-width(inherit);" }
+      , { "name": "initial",              "use": ".column-rule-width(initial);" }
+      , { "name": "unset"  ,              "use": ".column-rule-width(unset);"   }
+      , { "name": "0"      , "code": "z", "use": ".column-rule-width(0);"       }
+      , { "name": "1px"    , "code": "1", "use": ".column-rule-width(1px);"     }
+      , { "name": "2px"    , "code": "2", "use": ".column-rule-width(2px);"     }
+      , { "name": "4px"    , "code": "4", "use": ".column-rule-width(4px);"     }
+      , { "name": "8px"    , "code": "8", "use": ".column-rule-width(8px);"     }
+      , { "name": "16px"   , "code": "g", "use": ".column-rule-width(16px);"    }
       ]
     , "media": [
       ]
