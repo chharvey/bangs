@@ -18,7 +18,9 @@
     , { "name": "medium-" , "code": "nG", "query": "not all and (min-width: 60em)" }
     , { "name": "large-"  , "code": "nT", "query": "not all and (min-width: 75em)" }
     , { "name": "xlarge-" , "code": "nP", "query": "not all and (min-width: 90em)" }
-    , { "name": "hover"   , "code": "h"  }
+    ]
+  , "pseudo": [
+      { "name": "hover", "code": "h"  }
     ]
   , "stability_levels": [
       { "name": "obsolete"    , "description": "This feature is no longer supported. Do not use it." }
