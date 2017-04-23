@@ -993,11 +993,8 @@
       , { "name": "repeat(4 , 1fr)" , "code": "4" , "use": ".grid-template-columns(repeat(4 , 1fr));" }
       , { "name": "repeat(5 , 1fr)" , "code": "5" , "use": ".grid-template-columns(repeat(5 , 1fr));" }
       , { "name": "repeat(6 , 1fr)" , "code": "6" , "use": ".grid-template-columns(repeat(6 , 1fr));" }
-      , { "name": "repeat(7 , 1fr)" , "code": "7" , "use": ".grid-template-columns(repeat(7 , 1fr));" }
       , { "name": "repeat(8 , 1fr)" , "code": "8" , "use": ".grid-template-columns(repeat(8 , 1fr));" }
-      , { "name": "repeat(9 , 1fr)" , "code": "9" , "use": ".grid-template-columns(repeat(9 , 1fr));" }
       , { "name": "repeat(10, 1fr)" , "code": "10", "use": ".grid-template-columns(repeat(10, 1fr));" }
-      , { "name": "repeat(11, 1fr)" , "code": "11", "use": ".grid-template-columns(repeat(11, 1fr));" }
       , { "name": "repeat(12, 1fr)" , "code": "12", "use": ".grid-template-columns(repeat(12, 1fr));" }
       ]
     }
