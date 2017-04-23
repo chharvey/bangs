@@ -7,3 +7,23 @@
 // : Chris Harvey
 // ^updated
 // : 2017-04-22
+
+.column-gap(@length: normal) {
+  -webkit-column-gap: @length;
+     -moz-column-gap: @length;
+          column-gap: @length;
+}
+
+.-cg-i  {         .column-gap(inherit) !important; }
+.-cg-0  { .-cg-n; .column-gap(initial) !important; }
+.-cg-u  { .-cg-0; .column-gap(unset  ) !important; }
+.-cg-n  {         .column-gap(normal ) !important; }
+
+.-cg-z { .column-gap(0)       !important; }
+.-cg-q { .column-gap(0.25rem) !important; }
+.-cg-h { .column-gap(0.5rem)  !important; }
+.-cg-1 { .column-gap(1rem)    !important; }
+.-cg-2 { .column-gap(2rem)    !important; }
+.-cg-4 { .column-gap(4rem)    !important; }
+.-cg-8 { .column-gap(8rem)    !important; }
+.-cg-g { .column-gap(16rem)   !important; }

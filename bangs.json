@@ -462,12 +462,24 @@
   , {
       "name"     : "column-gap"
     , "code"     : "cg"
-    , "summary"  : ""
+    , "summary"  : "Sets the size of the gap between columns."
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-gap"
     , "inherited": false
-    , "initial"  : ""
+    , "initial"  : "normal"
     , "stability": 2
     , "values"   : [
+        { "name": "inherit",              "use": ".column-gap(inherit);" }
+      , { "name": "initial",              "use": ".column-gap(initial);" }
+      , { "name": "unset"  ,              "use": ".column-gap(unset);"   }
+      , { "name": "normal" , "code": "n", "use": ".column-gap(normal);"  }
+      , { "name": "0"      , "code": "z", "use": ".column-gap(0);"       }
+      , { "name": "0.25rem", "code": "q", "use": ".column-gap(0.25rem);" }
+      , { "name": "0.5rem" , "code": "h", "use": ".column-gap(0.5rem);"  }
+      , { "name": "1rem"   , "code": "1", "use": ".column-gap(1rem);"    }
+      , { "name": "2rem"   , "code": "2", "use": ".column-gap(2rem);"    }
+      , { "name": "4rem"   , "code": "4", "use": ".column-gap(4rem);"    }
+      , { "name": "8rem"   , "code": "8", "use": ".column-gap(8rem);"    }
+      , { "name": "16rem"  , "code": "g", "use": ".column-gap(16rem);"   }
       ]
     , "media": [
       ]
