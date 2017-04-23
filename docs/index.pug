@@ -116,8 +116,8 @@ block append main
         th property support
       tbody
         tr #[td no suffix] #[td no media queries (same as #[code @media all])] #[td all properties]
-        tr #[td: code -s] #[td: code @media screen] #[td all properties]
-        tr #[td: code -p] #[td: code @media print] #[td all properties]
+        tr #[td: code -s] #[td: code @media screen] #[td all properties except column-[gap, rule-[width,style,color], fill, span]]
+        tr #[td: code -p] #[td: code @media print] #[td all properties  except column-[gap, rule-[width,style,color], fill, span]]
         tr #[td: code -sK] #[td #[code @media screen  and (min-width: 30em)] (small+)]    #[td display, order, flex, column-width, width, margin, padding]
         tr #[td: code -sM] #[td #[code @media screen  and (min-width: 45em)] (medium+)]   #[td display, order, flex, column-width, width, margin, padding]
         tr #[td: code -sG] #[td #[code @media screen  and (min-width: 60em)] (large+)]    #[td display, order, flex, column-width, width, margin, padding]
@@ -185,7 +185,7 @@ block append main
         tr
           td c
           td column
-          td grid-template-columns, grid-column-gap, column-[count, width]
+          td grid-template-columns, grid-column-gap, column-[width, count, gap, rule-[width,style,color], fill, span]
           td flex-direction: column[-reverse]
         tr
           td c
