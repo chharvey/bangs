@@ -1,0 +1,102 @@
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
+    Bangs!
+\*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+/*================================*\
+    docs.less
+\*================================*/
+@import (reference) url('../../node_modules/xmeter/src/__tool.borders.less');
+@import (reference) url('../../node_modules/xmeter/src/__tool.fontsize.less');
+a:hover {
+  text-decoration: underline; // HACK fallback
+  text-decoration-line: underline;
+}
+.o-Alert,
+.c-Property__Desc,
+.c-Property__Classes {
+  width: 66.667%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.o-Alert,
+.c-Property__Classes {
+  padding: calc(~'var(--vru) / 2') 1rem;
+}
+.o-Alert {
+  margin-bottom: var(--vru);
+  .font-size-mod(0.875);
+}
+.o-Alert__Hn {
+  margin-bottom: var(--vru);
+  text-align: center;
+}
+.c-Property__Classes {
+  display: -ms-grid;
+  display:     grid;
+  -ms-grid-template-columns: 200px auto;
+      grid-template-columns: 200px auto;
+  max-height: 300px;
+  overflow: scroll;
+  background-color: fadeout(white, 50%);
+}
+.c-Label {
+  margin-left: 1rem;
+  padding: calc(~'var(--vru) / 8') 0.25rem;
+  font-variant: small-caps;
+}
+.c-Label--inherited,
+.c-Label--initial {
+  text-transform: uppercase;
+  background-color: #ff99c0;
+}
+
+@n_ss: 6; // number of sections
+@color-ss-layout        : spin(hsl(0 * (360/@n_ss), 100%, 50%), -(360/(@n_ss*2)));
+@color-ss-box-model     : spin(hsl(1 * (360/@n_ss), 100%, 50%), -(360/(@n_ss*2)));
+@color-ss-typography    : spin(hsl(2 * (360/@n_ss), 100%, 50%), -(360/(@n_ss*2)));
+@color-ss-box-cosmetics : spin(hsl(3 * (360/@n_ss), 100%, 50%), -(360/(@n_ss*2)));
+@color-ss-text-cosmetics: spin(hsl(4 * (360/@n_ss), 100%, 50%), -(360/(@n_ss*2)));
+@color-ss-misc          : spin(hsl(5 * (360/@n_ss), 100%, 50%), -(360/(@n_ss*2)));
+._ss {
+  padding: var(--vru) 1rem;
+  & > h3 {
+    .border-vert(bottom, 2px);
+    border-style: solid;
+    border-color: fadeout(black, 50%);
+    padding-bottom: calc(~'var(--vru) / 4');
+    text-align: center;
+  }
+}
+#ss-layout         { background: linear-gradient(to bottom, lighten(@color-ss-layout        , 90%, relative), lighten(spin(@color-ss-layout        , (360/(@n_ss*2))), 75%, relative)); }
+#ss-box-model      { background: linear-gradient(to bottom, lighten(@color-ss-box-model     , 90%, relative), lighten(spin(@color-ss-box-model     , (360/(@n_ss*2))), 75%, relative)); }
+#ss-typography     { background: linear-gradient(to bottom, lighten(@color-ss-typography    , 90%, relative), lighten(spin(@color-ss-typography    , (360/(@n_ss*2))), 75%, relative)); }
+#ss-box-cosmetics  { background: linear-gradient(to bottom, lighten(@color-ss-box-cosmetics , 90%, relative), lighten(spin(@color-ss-box-cosmetics , (360/(@n_ss*2))), 75%, relative)); }
+#ss-text-cosmetics { background: linear-gradient(to bottom, lighten(@color-ss-text-cosmetics, 90%, relative), lighten(spin(@color-ss-text-cosmetics, (360/(@n_ss*2))), 75%, relative)); }
+#ss-misc           { background: linear-gradient(to bottom, lighten(@color-ss-misc          , 90%, relative), lighten(spin(@color-ss-misc          , (360/(@n_ss*2))), 75%, relative)); }
+.t-stability-obsolete     { background-color: black;   color: white; }
+.t-stability-deprecated   { background-color: #ff4b33; color: white; }
+.t-stability-experimental { background-color: #ffe433; }
+.t-stability-stable       { background-color: #9acc7a; }
+.t-stability-locked       { background-color: #99daff; }
+
+body > a:last-of-type {
+  // TODO use a class instead
+  position: fixed;
+  bottom: var(--vru);
+  right: 1rem;
+}
+
+@media screen and (min-width: 60em) {
+  body {
+    width: 75%;
+  }
+  #contents {
+    position: fixed;
+    top: 0; bottom: 0;
+    right: 0;
+    width: 25%;
+    overflow: auto;
+  }
+}
