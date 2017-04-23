@@ -7,3 +7,15 @@
 // : Chris Harvey
 // ^updated
 // : 2017-04-22
+
+.column-fill(@fill: balance) {
+  -webkit-column-fill: @fill;
+     -moz-column-fill: @fill;
+          column-fill: @fill;
+}
+
+.-cf-i {         .column-fill(inherit) !important; }
+.-cf-0 { .-cf-b; .column-fill(initial) !important; }
+.-cf-u { .-cf-0; .column-fill(unset  ) !important; }
+.-cf-b {         .column-fill(balance) !important; }
+.-cf-a {         .column-fill(auto)    !important; }

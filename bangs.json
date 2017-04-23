@@ -449,12 +449,17 @@
   , {
       "name"     : "column-fill"
     , "code"     : "cf"
-    , "summary"  : ""
+    , "summary"  : "Specifies whether columns are filled equally or sequentially."
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-fill"
     , "inherited": false
-    , "initial"  : ""
+    , "initial"  : "balance"
     , "stability": 2
     , "values"   : [
+        { "name": "inherit",              "use": ".column-fill(inherit);" }
+      , { "name": "initial",              "use": ".column-fill(initial);" }
+      , { "name": "unset"  ,              "use": ".column-fill(unset);"   }
+      , { "name": "balance", "code": "b", "use": ".column-fill(balance);" }
+      , { "name": "auto"   , "code": "a", "use": ".column-fill(auto);"    }
       ]
     , "media": [
       ]
