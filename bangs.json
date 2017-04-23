@@ -20,7 +20,7 @@
     , { "name": "xlarge-" , "code": "nP", "query": "not all and (min-width: 90em)" }
     ]
   , "pseudo": [
-      { "name": "hover", "code": "h"  }
+      { "name": "hover", "code": "h", "selectors": [":hover", ":focus"] }
     ]
   , "stability_levels": [
       { "name": "obsolete"    , "description": "This feature is no longer supported. Do not use it." }
@@ -152,7 +152,9 @@
     , "media": [
         "screen"
       , "print"
-      , "hover"
+      ]
+    , "pseudo": [
+        "hover"
       ]
     }
   , {
@@ -413,7 +415,9 @@
     , "media": [
         "screen"
       , "print"
-      , "hover"
+      ]
+    , "pseudo": [
+        "hover"
       ]
     }
   , {
@@ -904,7 +908,9 @@
     , "media": [
         "screen"
       , "print"
-      , "hover"
+      ]
+    , "pseudo": [
+        "hover"
       ]
     }
   , {
@@ -922,7 +928,9 @@
     , "media": [
         "screen"
       , "print"
-      , "hover"
+      ]
+    , "pseudo": [
+        "hover"
       ]
     }
   , {
@@ -949,7 +957,9 @@
     , "media": [
         "screen"
       , "print"
-      , "hover"
+      ]
+    , "pseudo": [
+        "hover"
       ]
     }
   , {
@@ -1329,7 +1339,9 @@
     , "media": [
         "screen"
       , "print"
-      , "hover"
+      ]
+    , "pseudo": [
+        "hover"
       ]
     }
   , {
@@ -1611,7 +1623,9 @@
     , "media": [
         "screen"
       , "print"
-      , "hover"
+      ]
+    , "pseudo": [
+        "hover"
       ]
     }
   , {
@@ -1681,7 +1695,9 @@
     , "media": [
         "screen"
       , "print"
-      , "hover"
+      ]
+    , "pseudo": [
+        "hover"
       ]
     }
   , {
