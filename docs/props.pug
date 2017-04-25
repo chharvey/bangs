@@ -28,7 +28,7 @@ block append vars
   mixin stabilityLevel(stab)
     p.o-Alert(class=`t-stability-${stab.name}`)
       span.o-Alert__Hn.h-Block
-        span.h-Block.-ps-a= `Stability ${Docs.DATA.global.stability_levels.indexOf(stab)}:`
+        span.h-Block.-ps-a= `Stability ${Bangs.DATA.global.stability_levels.indexOf(stab)}:`
         b.-tt-h.-tt-uc= `${stab.name.charAt(0).toUpperCase() + stab.name.slice(1)}`
       span.h-Block= stab.description
 
@@ -50,7 +50,7 @@ block append main
           might have Stability 4, but #[code .-d-fx] (for #[code display: flex]) could have Stability 3, and
           #[code .-d-il-nK] (for #[code display: inline] on extra-small screens) could have Stability 2.
         ol.o-List
-          each item in Docs.DATA.global.stability_levels
+          each item in Bangs.DATA.global.stability_levels
             li.o-List__Item: +stabilityLevel(item)
       section#properties
         h2 Properties
@@ -62,9 +62,9 @@ block append main
               include ../node_modules/xmeter/_views/_c-Permalink.view.pug
               //- +permalink(id)
             each propertypage in subpage.findAll()
-              - let property = Docs.DATA.properties.find(function (p) { return p.name === propertypage.name() })
+              - let property = Bangs.DATA.properties.find(function (p) { return p.name === propertypage.name() })
               if property
-                - let stab = Docs.DATA.global.stability_levels[property.stability]
+                - let stab = Bangs.DATA.global.stability_levels[property.stability]
                 section.c-Property(id=property.name)
                   h4.-fz-giga
                     = property.name
@@ -78,14 +78,14 @@ block append main
                           | inherited
                   +stabilityLevel(stab)
                   dl.c-Property__Classes
-                    each val in Docs.DATA.global.values
+                    each val in Bangs.DATA.global.values
                       dt: code= `.-${property.code}-${val.code}`
                       dd: code= val.name
-                    each val in property.values.filter(function (v) { return Docs.DATA.global.values.every(function (u) { return u.name !== v.name }) })
+                    each val in property.values.filter(function (v) { return Bangs.DATA.global.values.every(function (u) { return u.name !== v.name }) })
                       dt
                         code= `.-${property.code}-${val.code}`
                         if val.stability >= 0
-                          - let kwd = Docs.DATA.global.stability_levels[val.stability].name
+                          - let kwd = Bangs.DATA.global.stability_levels[val.stability].name
                           small.c-Label(class=`t-stability-${kwd}`): b= kwd
                       dd
                         code= val.name
