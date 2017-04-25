@@ -5,6 +5,9 @@
     , { "name": "initial", "code": "0" }
     , { "name": "unset"  , "code": "u" }
     ]
+  , "common": {
+      "tracks": [1, 2, 3, 4, 5, 6, 8, 10, 12]
+    }
   , "media": [
       { "name": "screen"  , "code": "s" , "query": "screen" }
     , { "name": "print"   , "code": "p" , "query": "print" }

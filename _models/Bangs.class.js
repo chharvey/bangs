@@ -13,12 +13,12 @@ module.exports = (function () {
   Bangs.DATA = require('../bangs.json')
 
   /**
-   * Automate percentages.
+   * Automate track percentages.
    * @param  {string} prop abbreviation for css property
    * @param  {function(number)=string} mixin function outputting the css value
    * @param  {Function} callback callback function to call after execution. standard callback params.
    */
-  Bangs.generatePercentsAsync = function generatePercentsAsync(prop, mixin, callback) {
+  Bangs.generateTrackPercentsAsync = function generatePercentsAsync(prop, mixin, callback) {
     /**
      * Return a media query containing rulesets.
      * If no suffix is given, the media query will be ommitted (equivalent to `@media all`).
@@ -27,13 +27,13 @@ module.exports = (function () {
      */
     function media(suffix) {
       suffix = suffix || ''
-      let denoms = [1, 2, 3, 4, 5, 6, 8, 10, 12]
+      const DENOMS = Bangs.DATA.global.common.tracks
       let unique_values = []
       let rulesets = []
-      for (let i = 0; i < denoms.length; i++) {
-        for (let j = 1; j <= denoms[i]; j++) {
-          let fraction = j/denoms[i]
-          let classname = `.-${prop}-${j}o${denoms[i]}${(suffix) ? `-${suffix}` : ''}`
+      for (let i = 0; i < DENOMS.length; i++) {
+        for (let j = 1; j <= DENOMS[i]; j++) {
+          let fraction = j/DENOMS[i]
+          let classname = `.-${prop}-${j}o${DENOMS[i]}${(suffix) ? `-${suffix}` : ''}`
           let selector = unique_values.find(function (el) { return el.value === fraction })
           if (selector) {
             selector.classes.push(classname)
@@ -60,12 +60,12 @@ module.exports = (function () {
   }
 
   /**
-   * Automate counts (column-count, grid-template-columns, etc).
+   * Automate track counts (column-count, grid-template-columns, etc).
    * @param  {string} prop abbreviation for css property
    * @param  {function(number)=string} mixin function outputting the css value
    * @param  {Function} callback callback function to call after execution. standard callback params.
    */
-  Bangs.generateCountsAsync = function generateCountsAsync(prop, mixin, callback) {
+  Bangs.generateTrackCountsAsync = function generateCountsAsync(prop, mixin, callback) {
     /**
      * Return a media query containing rulesets.
      * If no suffix is given, the media query will be ommitted (equivalent to `@media all`).
@@ -74,11 +74,11 @@ module.exports = (function () {
      */
     function media(suffix) {
       suffix = suffix || ''
-      let denoms = [1, 2, 3, 4, 5, 6, 8, 10, 12]
+      const DENOMS = Bangs.DATA.global.common.tracks
       let rulesets = []
-      for (let i = 0; i < denoms.length; i++) {
-        let classname = `.-${prop}-${denoms[i]}${(suffix) ? `-${suffix}` : ''}`
-        let rule = (suffix) ? classname.split('-').slice(0,-1).join('-') : `${mixin.call(null, denoms[i])} !important`
+      for (let i = 0; i < DENOMS.length; i++) {
+        let classname = `.-${prop}-${DENOMS[i]}${(suffix) ? `-${suffix}` : ''}`
+        let rule = (suffix) ? classname.split('-').slice(0,-1).join('-') : `${mixin.call(null, DENOMS[i])} !important`
         rulesets.push(`${classname} { ${rule}; }`)
       }
       return (suffix) ? `
