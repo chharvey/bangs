@@ -1097,6 +1097,34 @@
       ]
     }
   , {
+      "name"     : "justify-self"
+    , "code"     : "js"
+    , "summary"  : "Overrides parent `justify-items` property."
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self"
+    , "inherited": false
+    , "initial"  : "auto"
+    , "stability": 2
+    , "values"   : [
+        { "name": "inherit"      ,               "use": ".justify-self(inherit);"       }
+      , { "name": "initial"      ,               "use": ".justify-self(initial);"       }
+      , { "name": "unset"        ,               "use": ".justify-self(unset);"         }
+      , { "name": "auto"         , "code": "a" , "use": ".justify-self(auto);"          }
+      , { "name": "normal"       , "code": "n" , "use": ".justify-self(normal);"        }
+      , { "name": "center"       , "code": "c" , "use": ".justify-self(center);"        }
+      , { "name": "start"        , "code": "s" , "use": ".justify-self(start);"         }
+      , { "name": "end"          , "code": "e" , "use": ".justify-self(end);"           }
+      , { "name": "stretch"      , "code": "st", "use": ".justify-self(stretch);"       }
+      , { "name": "flex-start"   , "code": "xs", "use": ".justify-self(flex-start);"    }
+      , { "name": "flex-end"     , "code": "xe", "use": ".justify-self(flex-end);"      }
+      , { "name": "self-start"   , "code": "ss", "use": ".justify-self(self-start);"    }
+      , { "name": "self-end"     , "code": "se", "use": ".justify-self(self-end);"      }
+      ]
+    , "media": [
+        "screen"
+      , "print"
+      ]
+    }
+  , {
       "name"     : "left"
     , "code"     : "l"
     , "summary"  : "Specifies how far to position an element from the left."
