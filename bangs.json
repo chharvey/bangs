@@ -61,20 +61,25 @@
     }
   , {
       "name"     : "align-items"
-    , "code"     : "xai"
-    , "summary"  : "Defines default behavior for aligining flex items along cross-axis."
+    , "code"     : "ai"
+    , "summary"  : "Defines how item contents are aligned along the block/cross/column-axis."
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/align-items"
     , "inherited": false
-    , "initial"  : "stretch"
+    , "initial"  : "normal"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit"   ,               "use": ".flex-align-items(inherit);" }
-      , { "name": "initial"   ,               "use": ".flex-align-items(stretch); .flex-align-items(initial);" }
-      , { "name": "stretch"   , "code": "s" , "use": ".flex-align-items(stretch);"    }
-      , { "name": "flex-start", "code": "xs", "use": ".flex-align-items(flex-start);" }
-      , { "name": "flex-end"  , "code": "xe", "use": ".flex-align-items(flex-end);"   }
-      , { "name": "center"    , "code": "c" , "use": ".flex-align-items(center);"     }
-      , { "name": "baseline"  , "code": "b" , "use": ".flex-align-items(baseline);"   }
+        { "name": "inherit"      ,               "use": ".align-items(inherit);"       }
+      , { "name": "initial"      ,               "use": ".align-items(initial);"       }
+      , { "name": "unset"        ,               "use": ".align-items(unset);"         }
+      , { "name": "normal"       , "code": "n" , "use": ".align-items(normal);"        }
+      , { "name": "center"       , "code": "c" , "use": ".align-items(center);"        }
+      , { "name": "start"        , "code": "s" , "use": ".align-items(start);"         }
+      , { "name": "end"          , "code": "e" , "use": ".align-items(end);"           }
+      , { "name": "stretch"      , "code": "st", "use": ".align-items(stretch);"       }
+      , { "name": "flex-start"   , "code": "xs", "use": ".align-items(flex-start);"    }
+      , { "name": "flex-end"     , "code": "xe", "use": ".align-items(flex-end);"      }
+      , { "name": "self-start"   , "code": "ss", "use": ".align-items(self-start);"    }
+      , { "name": "self-end"     , "code": "se", "use": ".align-items(self-end);"      }
       ]
     , "media": [
         "screen"
