@@ -1065,6 +1065,33 @@
       ]
     }
   , {
+      "name"     : "justify-items"
+    , "code"     : "ji"
+    , "summary"  : "Defines how item contents are aligned along the inline/main/row-axis."
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items"
+    , "inherited": false
+    , "initial"  : "normal"
+    , "stability": 2
+    , "values"   : [
+        { "name": "inherit"      ,               "use": ".justify-items(inherit);"       }
+      , { "name": "initial"      ,               "use": ".justify-items(initial);"       }
+      , { "name": "unset"        ,               "use": ".justify-items(unset);"         }
+      , { "name": "normal"       , "code": "n" , "use": ".justify-items(normal);"        }
+      , { "name": "center"       , "code": "c" , "use": ".justify-items(center);"        }
+      , { "name": "start"        , "code": "s" , "use": ".justify-items(start);"         }
+      , { "name": "end"          , "code": "e" , "use": ".justify-items(end);"           }
+      , { "name": "stretch"      , "code": "st", "use": ".justify-items(stretch);"       }
+      , { "name": "flex-start"   , "code": "xs", "use": ".justify-items(flex-start);"    }
+      , { "name": "flex-end"     , "code": "xe", "use": ".justify-items(flex-end);"      }
+      , { "name": "self-start"   , "code": "ss", "use": ".justify-items(self-start);"    }
+      , { "name": "self-end"     , "code": "se", "use": ".justify-items(self-end);"      }
+      ]
+    , "media": [
+        "screen"
+      , "print"
+      ]
+    }
+  , {
       "name"     : "left"
     , "code"     : "l"
     , "summary"  : "Specifies how far to position an element from the left."
