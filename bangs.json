@@ -1033,20 +1033,26 @@
     }
   , {
       "name"     : "justify-content"
-    , "code"     : "xjc"
-    , "summary"  : "Defines how the browser distributes space between and around flex items along the main-axis of their container."
+    , "code"     : "jc"
+    , "summary"  : "Defines how space is distributed along the inline/main/row-axis."
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content"
     , "inherited": false
-    , "initial"  : "flex-start"
+    , "initial"  : "normal"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit"      ,               "use": ".flex-justify-content(inherit);" }
-      , { "name": "initial"      ,               "use": ".flex-justify-content(flex-start); .flex-justify-content(initial);" }
-      , { "name": "flex-start"   , "code": "xs", "use": ".flex-justify-content(flex-start);"    }
-      , { "name": "flex-end"     , "code": "xe", "use": ".flex-justify-content(flex-end);"      }
-      , { "name": "center"       , "code": "c" , "use": ".flex-justify-content(center);"        }
-      , { "name": "space-between", "code": "sb", "use": ".flex-justify-content(space-between);" }
-      , { "name": "space-around" , "code": "sa", "use": ".flex-justify-content(space-around);"  }
+        { "name": "inherit"      ,               "use": ".justify-content(inherit);"       }
+      , { "name": "initial"      ,               "use": ".justify-content(initial);"       }
+      , { "name": "unset"        ,               "use": ".justify-content(unset);"         }
+      , { "name": "normal"       , "code": "n" , "use": ".justify-content(normal);"        }
+      , { "name": "center"       , "code": "c" , "use": ".justify-content(center);"        }
+      , { "name": "start"        , "code": "s" , "use": ".justify-content(start);"         }
+      , { "name": "end"          , "code": "e" , "use": ".justify-content(end);"           }
+      , { "name": "stretch"      , "code": "st", "use": ".justify-content(stretch);"       }
+      , { "name": "space-between", "code": "sb", "use": ".justify-content(space-between);" }
+      , { "name": "space-around" , "code": "sa", "use": ".justify-content(space-around);"  }
+      , { "name": "space-evenly" , "code": "sv", "use": ".justify-content(space-evenly);"  }
+      , { "name": "flex-start"   , "code": "xs", "use": ".justify-content(flex-start);"    }
+      , { "name": "flex-end"     , "code": "xe", "use": ".justify-content(flex-end);"      }
       ]
     , "media": [
         "screen"
