@@ -88,21 +88,26 @@
     }
   , {
       "name"     : "align-self"
-    , "code"     : "xas"
-    , "summary"  : "Overrides behavior of `align-items` for aligining one specific flex item along cross-axis."
+    , "code"     : "as"
+    , "summary"  : "Overrides parent `align-items` property."
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/align-self"
     , "inherited": false
     , "initial"  : "auto"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit"   ,               "use": ".flex-align-items(inherit);"    }
-      , { "name": "initial"   ,               "use": ".flex-align-items(auto); .flex-align-items(initial);" }
-      , { "name": "auto"      , "code": "a" , "use": ".flex-align-items(auto);"       }
-      , { "name": "stretch"   , "code": "s" , "use": ".flex-align-items(stretch);"    }
-      , { "name": "flex-start", "code": "xs", "use": ".flex-align-items(flex-start);" }
-      , { "name": "flex-end"  , "code": "xe", "use": ".flex-align-items(flex-end);"   }
-      , { "name": "center"    , "code": "c" , "use": ".flex-align-items(center);"     }
-      , { "name": "baseline"  , "code": "b" , "use": ".flex-align-items(baseline);"   }
+        { "name": "inherit"      ,               "use": ".align-self(inherit);"       }
+      , { "name": "initial"      ,               "use": ".align-self(initial);"       }
+      , { "name": "unset"        ,               "use": ".align-self(unset);"         }
+      , { "name": "auto"         , "code": "a" , "use": ".align-self(auto);"          }
+      , { "name": "normal"       , "code": "n" , "use": ".align-self(normal);"        }
+      , { "name": "center"       , "code": "c" , "use": ".align-self(center);"        }
+      , { "name": "start"        , "code": "s" , "use": ".align-self(start);"         }
+      , { "name": "end"          , "code": "e" , "use": ".align-self(end);"           }
+      , { "name": "stretch"      , "code": "st", "use": ".align-self(stretch);"       }
+      , { "name": "flex-start"   , "code": "xs", "use": ".align-self(flex-start);"    }
+      , { "name": "flex-end"     , "code": "xe", "use": ".align-self(flex-end);"      }
+      , { "name": "self-start"   , "code": "ss", "use": ".align-self(self-start);"    }
+      , { "name": "self-end"     , "code": "se", "use": ".align-self(self-end);"      }
       ]
     , "media": [
         "screen"
