@@ -106,6 +106,7 @@ module.exports = (function () {
         .add(new Page({ name: 'border-width'         , url: '/docs/props.html#border-width' }))
         .add(new Page({ name: 'border-style'         , url: '/docs/props.html#border-style' }))
         .add(new Page({ name: 'border-color'         , url: '/docs/props.html#border-color' }))
+        .add(new Page({ name: 'border-radius'        , url: '/docs/props.html#border-radius' }))
         .add(new Page({ name: 'box-shadow'           , url: '/docs/props.html#box-shadow' }))
         .add(new Page({ name: 'opacity'              , url: '/docs/props.html#opacity' }))
         .add(new Page({ name: 'visibility'           , url: '/docs/props.html#visibility' }))
