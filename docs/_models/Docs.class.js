@@ -103,6 +103,7 @@ module.exports = (function () {
         .add(new Page({ name: 'background-origin'    , url: '/docs/props.html#background-origin' }))
         .add(new Page({ name: 'background-clip'      , url: '/docs/props.html#background-clip' }))
         .add(new Page({ name: 'background-color'     , url: '/docs/props.html#background-color' }))
+        .add(new Page({ name: 'border-width'         , url: '/docs/props.html#border-width' }))
         .add(new Page({ name: 'border-style'         , url: '/docs/props.html#border-style' }))
         .add(new Page({ name: 'border-color'         , url: '/docs/props.html#border-color' }))
         .add(new Page({ name: 'box-shadow'           , url: '/docs/props.html#box-shadow' }))
