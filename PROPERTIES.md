@@ -111,10 +111,6 @@
 ### `border-*-style`
 
 ### `border-*-color`
-```
-.-rlc  .-rrc  .-rtc  .-rbc  .-rhc  .-rvc  .-rac
-```
-(for `-left`, `-right`, `-top`, `-bottom`, ‘horizontal’, ‘vertical’, or ‘all’, respectively)
 
 ### `background-image`
 

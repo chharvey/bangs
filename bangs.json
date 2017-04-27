@@ -288,17 +288,9 @@
       ]
     }
   , {
-      "name": "border-color"
-    , "code": {
-        "left"      : "rlc"
-      , "right"     : "rrc"
-      , "top"       : "rtc"
-      , "bottom"    : "rbc"
-      , "horizontal": "rhc"
-      , "vertical"  : "rvc"
-      , "all"       : "rac"
-      }
-    , "summary"  : "Sets the color of the border on a side of an element."
+      "name"     : "border-color"
+    , "code"     : "rc"
+    , "summary"  : "Sets the color of an element’s border."
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/border-color"
     , "inherited": false
     , "initial"  : "currentColor"
