@@ -5,6 +5,9 @@
     , { "name": "initial", "code": "0" }
     , { "name": "unset"  , "code": "u" }
     ]
+  , "common": {
+      "tracks": [1, 2, 3, 4, 5, 6, 8, 10, 12]
+    }
   , "media": [
       { "name": "screen"  , "code": "s" , "query": "screen" }
     , { "name": "print"   , "code": "p" , "query": "print" }
@@ -20,7 +23,7 @@
     , { "name": "xlarge-" , "code": "nP", "query": "not all and (min-width: 90em)" }
     ]
   , "pseudo": [
-      { "name": "hover", "code": "h"  }
+      { "name": "hover", "code": "h", "selectors": [":hover", ":focus"] }
     ]
   , "stability_levels": [
       { "name": "obsolete"    , "description": "This feature is no longer supported. Do not use it." }
@@ -167,7 +170,9 @@
     , "media": [
         "screen"
       , "print"
-      , "hover"
+      ]
+    , "pseudo": [
+        "hover"
       ]
     }
   , {
@@ -428,7 +433,9 @@
     , "media": [
         "screen"
       , "print"
-      , "hover"
+      ]
+    , "pseudo": [
+        "hover"
       ]
     }
   , {
@@ -449,16 +456,23 @@
       , { "name": "4"      , "code": "4" , "use": ".column-count(4);"    }
       , { "name": "5"      , "code": "5" , "use": ".column-count(5);"    }
       , { "name": "6"      , "code": "6" , "use": ".column-count(6);"    }
-      , { "name": "7"      , "code": "7" , "use": ".column-count(7);"    }
       , { "name": "8"      , "code": "8" , "use": ".column-count(8);"    }
-      , { "name": "9"      , "code": "9" , "use": ".column-count(9);"    }
       , { "name": "10"     , "code": "10", "use": ".column-count(10);"   }
-      , { "name": "11"     , "code": "11", "use": ".column-count(11);"   }
       , { "name": "12"     , "code": "12", "use": ".column-count(12);"   }
       ]
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -658,6 +672,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -784,6 +808,12 @@
       , "medium+"
       , "large+"
       , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -896,7 +926,9 @@
     , "media": [
         "screen"
       , "print"
-      , "hover"
+      ]
+    , "pseudo": [
+        "hover"
       ]
     }
   , {
@@ -914,7 +946,9 @@
     , "media": [
         "screen"
       , "print"
-      , "hover"
+      ]
+    , "pseudo": [
+        "hover"
       ]
     }
   , {
@@ -941,7 +975,9 @@
     , "media": [
         "screen"
       , "print"
-      , "hover"
+      ]
+    , "pseudo": [
+        "hover"
       ]
     }
   , {
@@ -1011,12 +1047,23 @@
       , { "name": "repeat(4 , 1fr)" , "code": "4" , "use": ".grid-template-columns(repeat(4 , 1fr));" }
       , { "name": "repeat(5 , 1fr)" , "code": "5" , "use": ".grid-template-columns(repeat(5 , 1fr));" }
       , { "name": "repeat(6 , 1fr)" , "code": "6" , "use": ".grid-template-columns(repeat(6 , 1fr));" }
-      , { "name": "repeat(7 , 1fr)" , "code": "7" , "use": ".grid-template-columns(repeat(7 , 1fr));" }
       , { "name": "repeat(8 , 1fr)" , "code": "8" , "use": ".grid-template-columns(repeat(8 , 1fr));" }
-      , { "name": "repeat(9 , 1fr)" , "code": "9" , "use": ".grid-template-columns(repeat(9 , 1fr));" }
       , { "name": "repeat(10, 1fr)" , "code": "10", "use": ".grid-template-columns(repeat(10, 1fr));" }
-      , { "name": "repeat(11, 1fr)" , "code": "11", "use": ".grid-template-columns(repeat(11, 1fr));" }
       , { "name": "repeat(12, 1fr)" , "code": "12", "use": ".grid-template-columns(repeat(12, 1fr));" }
+      ]
+    , "media": [
+        "screen"
+      , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1038,12 +1085,23 @@
       , { "name": "repeat(4 , 1fr)" , "code": "4" , "use": ".grid-template-rows(repeat(4 , 1fr));" }
       , { "name": "repeat(5 , 1fr)" , "code": "5" , "use": ".grid-template-rows(repeat(5 , 1fr));" }
       , { "name": "repeat(6 , 1fr)" , "code": "6" , "use": ".grid-template-rows(repeat(6 , 1fr));" }
-      , { "name": "repeat(7 , 1fr)" , "code": "7" , "use": ".grid-template-rows(repeat(7 , 1fr));" }
       , { "name": "repeat(8 , 1fr)" , "code": "8" , "use": ".grid-template-rows(repeat(8 , 1fr));" }
-      , { "name": "repeat(9 , 1fr)" , "code": "9" , "use": ".grid-template-rows(repeat(9 , 1fr));" }
       , { "name": "repeat(10, 1fr)" , "code": "10", "use": ".grid-template-rows(repeat(10, 1fr));" }
-      , { "name": "repeat(11, 1fr)" , "code": "11", "use": ".grid-template-rows(repeat(11, 1fr));" }
       , { "name": "repeat(12, 1fr)" , "code": "12", "use": ".grid-template-rows(repeat(12, 1fr));" }
+      ]
+    , "media": [
+        "screen"
+      , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1360,7 +1418,9 @@
     , "media": [
         "screen"
       , "print"
-      , "hover"
+      ]
+    , "pseudo": [
+        "hover"
       ]
     }
   , {
@@ -1642,7 +1702,9 @@
     , "media": [
         "screen"
       , "print"
-      , "hover"
+      ]
+    , "pseudo": [
+        "hover"
       ]
     }
   , {
@@ -1712,7 +1774,9 @@
     , "media": [
         "screen"
       , "print"
-      , "hover"
+      ]
+    , "pseudo": [
+        "hover"
       ]
     }
   , {
@@ -1863,6 +1927,12 @@
       , "medium+"
       , "large+"
       , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {

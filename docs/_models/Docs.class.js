@@ -3,7 +3,7 @@ var Page = require('sitepage').Page
 module.exports = (function () {
   // CONSTRUCTOR
   /**
-   * A set of static members used for the site.
+   * A set of static members used for the documentation subsite.
    * Similar to a utility class.
    * @constructor
    */
@@ -30,10 +30,6 @@ module.exports = (function () {
       .description('This file lists information about each property and its supported values.')
       .add(new Page({ name: 'Layout', url: '/docs/props.html#ss-layout' })
         .add(new Page({ name: 'display'          , url: '/docs/props.html#display' }))
-        .add(new Page({ name: 'flex-direction'   , url: '/docs/props.html#flex-direction' }))
-        .add(new Page({ name: 'flex-wrap'        , url: '/docs/props.html#flex-wrap' }))
-        .add(new Page({ name: 'flex'             , url: '/docs/props.html#flex' }))
-        .add(new Page({ name: 'order'            , url: '/docs/props.html#order' }))
         .add(new Page({ name: 'column-width'     , url: '/docs/props.html#column-width' }))
         .add(new Page({ name: 'column-count'     , url: '/docs/props.html#column-count' }))
         .add(new Page({ name: 'column-gap'       , url: '/docs/props.html#column-gap' }))
@@ -44,6 +40,10 @@ module.exports = (function () {
         .add(new Page({ name: 'column-span'      , url: '/docs/props.html#column-span' }))
         .add(new Page({ name: 'page-break-before', url: '/docs/props.html#page-break-before' }))
         .add(new Page({ name: 'page-break-after' , url: '/docs/props.html#page-break-after' }))
+        .add(new Page({ name: 'flex-direction'   , url: '/docs/props.html#flex-direction' }))
+        .add(new Page({ name: 'flex-wrap'        , url: '/docs/props.html#flex-wrap' }))
+        .add(new Page({ name: 'flex'             , url: '/docs/props.html#flex' }))
+        .add(new Page({ name: 'order'            , url: '/docs/props.html#order' }))
         .add(new Page({ name: 'grid-template-columns', url: '/docs/props.html#grid-template-columns' }))
         .add(new Page({ name: 'grid-template-rows'   , url: '/docs/props.html#grid-template-rows' }))
         .add(new Page({ name: 'grid-column-gap'      , url: '/docs/props.html#grid-column-gap' }))
@@ -121,48 +121,6 @@ module.exports = (function () {
         .add(new Page({ name: 'list-style-image'   , url: '/docs/props.html#list-style-image' }))
       )
     )
-
-  /**
-   * This project’s data as JSON.
-   * @type {Object}
-   */
-  Docs.DATA = require('../../bangs.json')
-
-  Docs.generatePercentsFileAsync = function generatePercentsFileAsync(prefix, mixin, callback) {
-    function media(suffix) {
-      suffix = suffix || ''
-      let denoms = [1, 2, 3, 4, 5, 6, 8, 10, 12]
-      let unique_values = []
-      let ruleset = []
-      for (let i = 0; i < denoms.length; i++) {
-        for (let j = 1; j <= denoms[i]; j++) {
-          let fraction = j/denoms[i]
-          let classname = `.-${prefix}-${j}o${denoms[i]}${(suffix) ? `-${suffix}` : ''}`
-          let selector = unique_values.find(function (el) { return el.value === fraction })
-          if (selector) {
-            selector.classes.push(classname)
-          } else {
-            unique_values.push({ value: fraction, classes: [classname] })
-          }
-        }
-      }
-      for (let selector of unique_values) {
-        ruleset.push(`${selector.classes.join(', ')} { ${mixin.call(null, selector.value)} !important; }`)
-      }
-      if (suffix) {
-        return `
-          @media ${Docs.DATA.global.media.find(function (el) { return el.code === suffix}).query} {
-            ${ruleset.join('\n')}
-          }
-        `
-      } else return ruleset.join('\n')
-    }
-    try {
-      callback.call(null, null, [''].concat(Docs.DATA.global.media.map(function (el) { return el.code })).map(media).join(''))
-    } catch (e) {
-      callback.call(null, e, null)
-    }
-  }
 
   return Docs
 })()

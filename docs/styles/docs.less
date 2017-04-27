@@ -9,10 +9,12 @@
 \*================================*/
 @import (reference) url('../../node_modules/xmeter/src/__tool.borders.less');
 @import (reference) url('../../node_modules/xmeter/src/__tool.fontsize.less');
+
 a:hover {
   text-decoration: underline; // HACK fallback
   text-decoration-line: underline;
 }
+
 .o-Alert,
 .c-Property__Desc,
 .c-Property__Classes {
@@ -40,6 +42,10 @@ a:hover {
   max-height: 300px;
   overflow: scroll;
   background-color: fadeout(white, 50%);
+}
+.c-Property__Classes--suffixes {
+  background-color: fadeout(black, 50%);
+  color: #fff;
 }
 .c-Label {
   margin-left: 1rem;
@@ -80,6 +86,10 @@ a:hover {
 .t-stability-experimental { background-color: #ffe433; }
 .t-stability-stable       { background-color: #9acc7a; }
 .t-stability-locked       { background-color: #99daff; }
+
+.-fz-mod-mill {
+  .font-size-mod(@g-font_size_mill;)
+}
 
 body > a:last-of-type {
   // TODO use a class instead

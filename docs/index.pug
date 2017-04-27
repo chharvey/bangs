@@ -109,29 +109,39 @@ block append main
       Even further, there are more sets of classes that provide support for
       additional media queries and hover/focus, and these are mentioned on a per-property basis below.
     table
-      caption Media Query Support
+      caption Media Query &amp; Pseudo-Class Support
       thead: tr
         th suffix
-        th query
+        th query/pseudo
         th property support
+      mixin list(item, ext)
+        -
+          let props = Bangs.DATA.properties.filter(function (el) { return el[ext] && el[ext].indexOf(item.name) >= 0 })
+          let complement = props.length >= Bangs.DATA.properties.length / 2
+          if (complement) {
+            props = Bangs.DATA.properties.filter(function (el) { return !el[ext] || el[ext].indexOf(item.name) < 0 })
+          }
+        if complement
+          strong all properties except:
+        ul.o-List.-mb-z
+          each prop in props
+            li.h-Inline.-mr-1: a(href=`props.html#${prop.name}`)= prop.name
       tbody
-        tr #[td no suffix] #[td no media queries (same as #[code @media all])] #[td all properties]
-        tr #[td: code -s] #[td: code @media screen] #[td all properties except column-[gap, rule-[width,style,color], fill, span]]
-        tr #[td: code -p] #[td: code @media print] #[td all properties  except column-[gap, rule-[width,style,color], fill, span]]
-        tr #[td: code -sK] #[td #[code @media screen  and (min-width: 30em)] (small+)]    #[td display, order, flex, column-width, width, margin, padding]
-        tr #[td: code -sM] #[td #[code @media screen  and (min-width: 45em)] (medium+)]   #[td display, order, flex, column-width, width, margin, padding]
-        tr #[td: code -sG] #[td #[code @media screen  and (min-width: 60em)] (large+)]    #[td display, order, flex, column-width, width, margin, padding]
-        tr #[td: code -sT] #[td #[code @media screen  and (min-width: 75em)] (x-large+)]  #[td display, order, flex, column-width, width, margin, padding]
-        tr #[td: code -sP] #[td #[code @media screen  and (min-width: 90em)] (xx-large+)] #[td flex, column-width, width]
-        tr #[td: code -nK] #[td #[code @media not all and (min-width: 30em)] (x-small-)]  #[td display, flex, column-width, width]
-        tr #[td: code -nM] #[td #[code @media not all and (min-width: 45em)] (small-)]    #[td display, flex, column-width, width]
-        tr #[td: code -nG] #[td #[code @media not all and (min-width: 60em)] (medium-)]   #[td display, flex, column-width, width]
-        tr #[td: code -nT] #[td #[code @media not all and (min-width: 75em)] (large-)]    #[td display, flex, column-width, width]
-        tr #[td: code -nP] #[td #[code @media not all and (min-width: 90em)] (x-large-)]  #[td flex, column-width, width]
         tr
-          td: code -h
-          td pseudo-classes #[code :hover, :focus]
-          td font-[style,variant,weight], background-color, opacity, color, text-[transform,decoration]
+          td no suffix
+          td no media query (same as #[code @media all]) or pseudo-class
+          td all properties
+        each item in Bangs.DATA.global.media
+          tr
+            td: code -#{item.code}
+            td #[code= `@media ${item.query}`] (#{item.name})
+            td: +list(item, 'media')
+      tbody
+        each item in Bangs.DATA.global.pseudo
+          tr
+            td: code -#{item.code}
+            td: code= item.selectors.join()
+            td: +list(item, 'pseudo')
   section#trends
     h2 Trends
     p.

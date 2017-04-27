@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "pug:docs": "pug -O docs/_models/options.js docs/{index,props}.pug",
-    "lessc:gen": "node src/build.js",
-    "lessc:bangs": "npm run lessc:gen  &&  lessc bangs.less bangs.css",
-    "lessc:all": "npm run lessc:bangs",
+    "lessc:build": "node src/build.js",
+    "lessc:bangs": "lessc bangs.less bangs.css",
+    "lessc:all": "npm run lessc:build  &&  npm run lessc:bangs",
     "minify": "cleancss bangs.css -o bangs.min.css",
     "unbuild": "rm bangs.css bangs.min.css",
     "build": "npm run lessc:all  &&  npm run minify"
