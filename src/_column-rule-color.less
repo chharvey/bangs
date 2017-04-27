@@ -1,0 +1,24 @@
+
+/*################################*\
+    bangs  |  _column-rule-color.less
+\*################################*/
+
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2017-04-22
+
+.column-rule-color(@color: currentColor) {
+  -webkit-column-rule-color: @color;
+     -moz-column-rule-color: @color;
+          column-rule-color: @color;
+}
+
+.-crc-i  {          .column-rule-color(inherit) !important; }
+.-crc-0  { .-crc-c; .column-rule-color(initial) !important; }
+.-crc-u  { .-crc-0; .column-rule-color(unset  ) !important; }
+
+.-crc-t { .column-rule-color(transparent)  !important; }
+.-crc-c { .column-rule-color(currentColor) !important; }
+.-crc-b { .column-rule-color(#000)         !important; }
+.-crc-w { .column-rule-color(#fff)         !important; }

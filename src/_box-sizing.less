@@ -3,41 +3,26 @@
     bangs  |  _box-sizing.less
 \*################################*/
 
-// Alters the CSS box model used to calculate width and height.
-//
-// kz  =  box-sizing
-//
-// 0  =  initial
-// i  =  inherit
-// c  =  content-box
-// b  =  border-box
-//
-// ^initial
-// : `content-box`
-// ^inherited
-// : false
-// ^url
-// : https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2016-07-08
+// : 2017-03-29
 
 .-kz-0 { .-kz-c; box-sizing: initial     !important; }
 .-kz-i {         box-sizing: inherit     !important; }
 .-kz-c {         box-sizing: content-box !important; }
-.-kz-b {         box-sizing: border-box  !important; }
+.-kz-r {         box-sizing: border-box  !important; }
 
 @media screen {
   .-kz-0-s { .-kz-0; }
   .-kz-i-s { .-kz-i; }
   .-kz-c-s { .-kz-c; }
-  .-kz-b-s { .-kz-b; }
+  .-kz-r-s { .-kz-r; }
 }
 
 @media print {
   .-kz-0-p { .-kz-0; }
   .-kz-i-p { .-kz-i; }
   .-kz-c-p { .-kz-c; }
-  .-kz-b-p { .-kz-b; }
+  .-kz-r-p { .-kz-r; }
 }

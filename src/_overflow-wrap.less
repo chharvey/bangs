@@ -3,43 +3,26 @@
     bangs  |  _overflow-wrap.less
 \*################################*/
 
-// Specifies whether words can be broken and wrapped to prevent overflow.
-// Formerly known as `word-wrap`.
-// Legacy support is included.
-//
-// ww  =  overflow-wrap
-//
-// 0  =  initial
-// i  =  inherit
-// n  =  normal
-// b  =  break-word
-//
-// ^initial
-// : `normal`
-// ^inherited
-// : true
-// ^url
-// : https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2015-10-15
+// : 2017-03-28
 
-.-ww-0 { .-ww-n; word-wrap: initial    !important; overflow-wrap: initial    !important; }
-.-ww-i {         word-wrap: inherit    !important; overflow-wrap: inherit    !important; }
-.-ww-n {         word-wrap: normal     !important; overflow-wrap: normal     !important; }
-.-ww-b {         word-wrap: break-word !important; overflow-wrap: break-word !important; }
+.-ow-0 { .-ow-n; word-wrap: initial    !important; overflow-wrap: initial    !important; }
+.-ow-i {         word-wrap: inherit    !important; overflow-wrap: inherit    !important; }
+.-ow-n {         word-wrap: normal     !important; overflow-wrap: normal     !important; }
+.-ow-b {         word-wrap: break-word !important; overflow-wrap: break-word !important; }
 
 @media screen {
-  .-ww-0-s { .-ww-0; }
-  .-ww-i-s { .-ww-i; }
-  .-ww-n-s { .-ww-n; }
-  .-ww-b-s { .-ww-b; }
+  .-ow-0-s { .-ow-0; }
+  .-ow-i-s { .-ow-i; }
+  .-ow-n-s { .-ow-n; }
+  .-ow-b-s { .-ow-b; }
 }
 
 @media print {
-  .-ww-0-p { .-ww-0; }
-  .-ww-i-p { .-ww-i; }
-  .-ww-n-p { .-ww-n; }
-  .-ww-b-p { .-ww-b; }
+  .-ow-0-p { .-ow-0; }
+  .-ow-i-p { .-ow-i; }
+  .-ow-n-p { .-ow-n; }
+  .-ow-b-p { .-ow-b; }
 }

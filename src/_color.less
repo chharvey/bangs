@@ -3,24 +3,6 @@
     bangs  |  _color.less
 \*################################*/
 
-// Sets the text color.
-//
-// c  =  color
-//
-// 0  =  initial
-// i  =  inherit
-// t  =  transparent
-// c  =  currentColor
-//
-// :b  =  #000000
-// :w  =  #ffffff
-//
-// ^initial
-// : user agent setting
-// ^inherited
-// : true
-// ^url
-// : https://developer.mozilla.org/en-US/docs/Web/CSS/color
 // ^author
 // : Chris Harvey
 // ^updated
@@ -30,16 +12,14 @@
 .-c-i {        color: inherit      !important; }
 .-c-t {        color: transparent  !important; }
 .-c-c {        color: currentColor !important; } // basically same as `inherit`
-
-.-c-b { color: #000000 !important; }
-.-c-w { color: #ffffff !important; }
+.-c-b {        color: #000000      !important; }
+.-c-w {        color: #ffffff      !important; }
 
 @media screen {
   .-c-0-s { .-c-0; }
   .-c-i-s { .-c-i; }
   .-c-t-s { .-c-t; }
   .-c-c-s { .-c-c; }
-
   .-c-b-s { .-c-b; }
   .-c-w-s { .-c-w; }
 }
@@ -49,7 +29,6 @@
   .-c-i-p { .-c-i; }
   .-c-t-p { .-c-t; }
   .-c-c-p { .-c-c; }
-
   .-c-b-p { .-c-b; }
   .-c-w-p { .-c-w; }
 }
@@ -58,6 +37,5 @@
 .-c-i-h { &:hover, &:focus { .-c-i; } }
 .-c-t-h { &:hover, &:focus { .-c-t; } }
 .-c-c-h { &:hover, &:focus { .-c-c; } }
-
 .-c-b-h { &:hover, &:focus { .-c-b; } }
 .-c-w-h { &:hover, &:focus { .-c-w; } }

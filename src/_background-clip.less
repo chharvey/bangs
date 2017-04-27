@@ -3,39 +3,23 @@
     bangs  |  _background-clip.less
 \*################################*/
 
-// Sets whether the background image/color extends beneath the padding/border.
-//
-// bk  =  background-clip
-//
-// 0  =  initial
-// i  =  inherit
-// c  =  content-box
-// p  =  padding-box
-// b  =  border-box
-//
-// ^initial
-// : `border-box`
-// ^inherited
-// : false
-// ^url
-// : https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2016-03-31
+// : 2017-03-29
 
-.-bk-0 { .-bk-b; background-clip: initial     !important; }
+.-bk-0 { .-bk-r; background-clip: initial     !important; }
 .-bk-i {         background-clip: inherit     !important; }
 .-bk-c {         background-clip: content-box !important; }
 .-bk-p {         background-clip: padding-box !important; }
-.-bk-b {         background-clip: border-box  !important; }
+.-bk-r {         background-clip: border-box  !important; }
 
 @media screen {
   .-bk-0-s { .-bk-0; }
   .-bk-i-s { .-bk-i; }
   .-bk-c-s { .-bk-c; }
   .-bk-p-s { .-bk-p; }
-  .-bk-b-s { .-bk-b; }
+  .-bk-r-s { .-bk-r; }
 }
 
 @media print {
@@ -43,5 +27,5 @@
   .-bk-i-p { .-bk-i; }
   .-bk-c-p { .-bk-c; }
   .-bk-p-p { .-bk-p; }
-  .-bk-b-p { .-bk-b; }
+  .-bk-r-p { .-bk-r; }
 }

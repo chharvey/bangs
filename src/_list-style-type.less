@@ -3,35 +3,6 @@
     bangs  |  _list-style-type.less
 \*################################*/
 
-// Specifies the appearance of list item markers.
-// NOTE that this utility must be
-// an item with `display: list-item;`
-// in order to mean anything.
-//
-// lst  =  list-style-type
-//
-// 0   =  initial
-// i   =  inherit
-// n   =  none
-// dc  =  decimal               //   1.   2.   3.
-// dz  =  decimal-leading-zero  //  01.  02.  03.
-// lr  =  lower-roman           //   i.  ii. iii.
-// ur  =  upper-roman           //   I.  II. III.
-// la  =  lower-alpha           //   a.   b.   c.
-// ua  =  upper-alpha           //   A.   B.   C.
-// ll  =  lower-latin           //   a.   b.   c.
-// ul  =  upper-latin           //   A.   B.   C.
-// lg  =  lower-greek           //   α.   β.   γ.
-// d   =  disc                  //  •
-// c   =  circle                //  ◦
-// s   =  square                //  ▪
-//
-// ^initial
-// : `disc`
-// ^inherited
-// : true
-// ^url
-// : https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type
 // ^author
 // : Chris Harvey
 // ^updated
@@ -40,18 +11,18 @@
 .-lst-0  { .-lst-d; list-style-type: initial              !important; }
 .-lst-i  {          list-style-type: inherit              !important; }
 .-lst-n  {          list-style-type: none                 !important; }
-.-lst-dc {          list-style-type: decimal              !important; }
-.-lst-dz {          list-style-type: decimal-leading-zero !important; }
-.-lst-lr {          list-style-type: lower-roman          !important; }
-.-lst-ur {          list-style-type: upper-roman          !important; }
-.-lst-la {          list-style-type: lower-alpha          !important; }
-.-lst-ua {          list-style-type: upper-alpha          !important; }
-.-lst-ll {          list-style-type: lower-latin          !important; }
-.-lst-ul {          list-style-type: upper-latin          !important; }
-.-lst-lg {          list-style-type: lower-greek          !important; }
-.-lst-d  {          list-style-type: disc                 !important; }
-.-lst-c  {          list-style-type: circle               !important; }
-.-lst-s  {          list-style-type: square               !important; }
+.-lst-dc {          list-style-type: decimal              !important; } //   1.   2.   3.
+.-lst-dz {          list-style-type: decimal-leading-zero !important; } //  01.  02.  03.
+.-lst-lr {          list-style-type: lower-roman          !important; } //   i.  ii. iii.
+.-lst-ur {          list-style-type: upper-roman          !important; } //   I.  II. III.
+.-lst-la {          list-style-type: lower-alpha          !important; } //   a.   b.   c.
+.-lst-ua {          list-style-type: upper-alpha          !important; } //   A.   B.   C.
+.-lst-ll {          list-style-type: lower-latin          !important; } //   a.   b.   c.
+.-lst-ul {          list-style-type: upper-latin          !important; } //   A.   B.   C.
+.-lst-lg {          list-style-type: lower-greek          !important; } //   α.   β.   γ.
+.-lst-d  {          list-style-type: disc                 !important; } //  •
+.-lst-c  {          list-style-type: circle               !important; } //  ◦
+.-lst-s  {          list-style-type: square               !important; } //  ▪
 
 @media screen {
   .-lst-0-s  { .-lst-0 ; }
