@@ -315,17 +315,9 @@
       ]
     }
   , {
-      "name": "border-style"
-    , "code": {
-        "left"      : "rls"
-      , "right"     : "rrs"
-      , "top"       : "rts"
-      , "bottom"    : "rbs"
-      , "horizontal": "rhs"
-      , "vertical"  : "rvs"
-      , "all"       : "ras"
-      }
-    , "summary"  : "Sets the line style of the border on a side of an element."
+      "name"     : "border-style"
+    , "code"     : "rs"
+    , "summary"  : "Sets the line style of an element’s border."
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/border-style"
     , "inherited": false
     , "initial"  : "none"

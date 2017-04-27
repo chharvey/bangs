@@ -109,10 +109,6 @@
 ## Box Cosmetics
 
 ### `border-*-style`
-```
-.-rls  .-rrs  .-rts  .-rbs  .-rhs  .-rvs  .-ras
-```
-(for `-left`, `-right`, `-top`, `-bottom`, ‘horizontal’, ‘vertical’, or ‘all’, respectively)
 
 ### `border-*-color`
 ```
