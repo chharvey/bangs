@@ -96,7 +96,10 @@ block append main
                   if (property.media && property.media.length) || (property.pseudo && property.pseudo.length)
                     dl.c-Property__Classes.c-Property__Classes--suffixes
                       each ext in property.media || []
-                        dt: code= `-${Bangs.DATA.global.media.find(function (el) { return el.name === ext }).code}`
+                        dt
+                          code= `-${Bangs.DATA.global.media.find(function (el) { return el.name === ext }).code}`
+                          if ext==='screen' || ext==='print'
+                            small.c-Label(class="t-stability-deprecated"): b deprecated
                         dd: code= ext
                       each ext in property.pseudo || []
                         dt: code= `-${Bangs.DATA.global.pseudo.find(function (el) { return el.name === ext }).code}`
