@@ -10,7 +10,7 @@
     "lessc:bangs": "lessc bangs.less bangs.css",
     "lessc:all": "npm run lessc:build  &&  npm run lessc:bangs",
     "minify": "cleancss bangs.css -o bangs.min.css",
-    "unbuild": "rm bangs.css bangs.min.css",
+    "unbuild": "rm docs/{index,props}.html bangs.css bangs.min.css",
     "build": "npm run lessc:all  &&  npm run minify"
   },
   "repository": {
