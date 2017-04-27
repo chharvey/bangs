@@ -288,17 +288,9 @@
       ]
     }
   , {
-      "name": "border-color"
-    , "code": {
-        "left"      : "rlc"
-      , "right"     : "rrc"
-      , "top"       : "rtc"
-      , "bottom"    : "rbc"
-      , "horizontal": "rhc"
-      , "vertical"  : "rvc"
-      , "all"       : "rac"
-      }
-    , "summary"  : "Sets the color of the border on a side of an element."
+      "name"     : "border-color"
+    , "code"     : "rc"
+    , "summary"  : "Sets the color of an element’s border."
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/border-color"
     , "inherited": false
     , "initial"  : "currentColor"
@@ -315,17 +307,28 @@
       ]
     }
   , {
-      "name": "border-style"
-    , "code": {
-        "left"      : "rls"
-      , "right"     : "rrs"
-      , "top"       : "rts"
-      , "bottom"    : "rbs"
-      , "horizontal": "rhs"
-      , "vertical"  : "rvs"
-      , "all"       : "ras"
-      }
-    , "summary"  : "Sets the line style of the border on a side of an element."
+      "name"     : "border-radius"
+    , "code"     : "rr"
+    , "summary"  : "Defines rounded corners on an element."
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius"
+    , "inherited": false
+    , "initial"  : "0"
+    , "stability": 2
+    , "values"   : [
+        { "name": "0"      , "code": "z" }
+      , { "name": "0.25rem", "code": "q" }
+      , { "name": "0.5rem" , "code": "h" }
+      , { "name": "1rem"   , "code": "1" }
+      , { "name": "2rem"   , "code": "2" }
+      , { "name": "50%"    , "code": "1o2" }
+      ]
+    , "media": [
+      ]
+    }
+  , {
+      "name"     : "border-style"
+    , "code"     : "rs"
+    , "summary"  : "Sets the line style of an element’s border."
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/border-style"
     , "inherited": false
     , "initial"  : "none"
@@ -345,6 +348,25 @@
     , "media": [
         "screen"
       , "print"
+      ]
+    }
+  , {
+      "name"     : "border-width"
+    , "code"     : "rw"
+    , "summary"  : "Sets the line width of an element’s border."
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/border-width"
+    , "inherited": false
+    , "initial"  : "medium"
+    , "stability": 2
+    , "values"   : [
+        { "name": "0"    , "code": "z" }
+      , { "name": "1px"  , "code": "1" }
+      , { "name": "2px"  , "code": "2" }
+      , { "name": "4px"  , "code": "4" }
+      , { "name": "8px"  , "code": "8" }
+      , { "name": "16px" , "code": "g" }
+      ]
+    , "media": [
       ]
     }
   , {
