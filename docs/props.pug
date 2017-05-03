@@ -1,0 +1,107 @@
+extends _docs.tpl.pug
+
+block append vars
+  - let page = Docs.DOCS.find('/docs/props.html')
+  mixin proptoc(args, inner)
+    //- NOTE parameter validation
+    -
+      var pages   = args.pages   || []
+      var depth   = +args.depth  || 0
+    ol&attributes(inner ? {} : { role: 'tree' })
+      each item in pages
+        li
+          if item.findAll().length && depth > 0
+            | <details class="-mb-u -mb-0">
+            |   <summary>
+          a(href=item.url())= item.name()
+          if item.findAll().length && depth > 0
+            |   </summary>
+            +proptoc({pages: item.findAll(), depth: depth-1}, true)
+            | </details>
+        //- NOTE equivalent:
+        //- li
+          if item.findAll().length && depth > 0
+            details
+              summary: a(href=item.url())= item.name()
+              +proptoc({pages: item.findAll(), depth: depth-1}, true)
+          else
+            a(href=item.url())= item.name()
+  mixin stabilityLevel(stab)
+    p.o-Alert(class=`t-stability-${stab.name}`)
+      span.o-Alert__Hn.h-Block
+        span.h-Block.-ps-a= `Stability ${Bangs.DATA.global.stability_levels.indexOf(stab)}:`
+        b.-tt-h.-tt-uc= `${stab.name.charAt(0).toUpperCase() + stab.name.slice(1)}`
+      span.h-Block= stab.description
+
+block toc
+  nav#contents
+    h2 Contents
+    +proptoc({pages: page.findAll(), depth: 1})
+
+block append main
+  aside.-mh-1#stability-levels
+    h2 Stability Levels
+    p.
+      Please note the following stability levels.
+      Each CSS property in this project is assigned a level describing its stability;
+      some values or pseudo-classes under a property might possibly have their own level,
+      in which case this would override the property&rsquo;s stability level.
+    p.
+      For example, the group of classes #[code .-d] (corresponding to the CSS property #[code display])
+      might have Stability 4, but #[code .-d-fx] (for #[code display: flex]) could have Stability 3, and
+      #[code .-d-il-nK] (for #[code display: inline] on extra-small screens) could have Stability 2.
+    ol.o-List
+      each item in Bangs.DATA.global.stability_levels
+        li.o-List__Item: +stabilityLevel(item)
+  section#properties
+    h2 Properties
+    each subpage in page.findAll()
+      - let id = subpage.url().split('#')[1]
+      section._ss(id=id)
+        h3
+          = subpage.name()
+          include ../node_modules/xmeter/_views/_c-Permalink.view.pug
+          //- +permalink(id)
+        each propertypage in subpage.findAll()
+          - let property = Bangs.DATA.properties.find(function (p) { return p.name === propertypage.name() })
+          if property
+            - let stab = Bangs.DATA.global.stability_levels[property.stability]
+            section.c-Property(id=property.name)
+              h4.-fz-giga
+                = property.name
+                include ../node_modules/xmeter/_views/_c-Permalink.view.pug
+                +permalink(property.name)
+              blockquote.c-Property__Desc
+                a(href=property.url rel="external")= property.summary
+                if property.inherited
+                  small.c-Label.c-Label--inherited
+                    a(title="read about inherited properties" href="https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance" rel="external")
+                      | inherited
+              +stabilityLevel(stab)
+              dl.c-Property__Classes
+                each val in Bangs.DATA.global.values
+                  dt: code= `.-${property.code}-${val.code}`
+                  dd: code= val.name
+                each val in property.values.filter(function (v) { return Bangs.DATA.global.values.every(function (u) { return u.name !== v.name }) })
+                  dt
+                    code= `.-${property.code}-${val.code}`
+                    if val.stability >= 0
+                      - let kwd = Bangs.DATA.global.stability_levels[val.stability].name
+                      small.c-Label(class=`t-stability-${kwd}`): b= kwd
+                  dd
+                    code= val.name
+                    if val.name === property.initial
+                      small.c-Label.c-Label--initial
+                        a(title="read about initial values" href="https://developer.mozilla.org/en-US/docs/Web/CSS/initial_value" rel="external")
+                          | initial value
+              if (property.media && property.media.length) || (property.pseudo && property.pseudo.length)
+                dl.c-Property__Classes.c-Property__Classes--suffixes
+                  each ext in property.media || []
+                    dt: code= `-${Bangs.DATA.global.media.find(function (el) { return el.name === ext }).code}`
+                    dd: code= ext
+                  each ext in property.pseudo || []
+                    dt: code= `-${Bangs.DATA.global.pseudo.find(function (el) { return el.name === ext }).code}`
+                    dd: code= ext
+          else
+            section.c-Property
+              h4.-fz-giga #{propertypage.name()} Not Found

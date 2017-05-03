@@ -2,60 +2,58 @@
 /*################################*\
     bangs  |  _align-self.less
 \*################################*/
-@import (reference) url('../node_modules/xmeter/src/__fallback.flexbox.less');
+@import (reference) url('../node_modules/xmeter/src/__fallback.align-self.less');
 
-// Overrides behavior of `align-items` for aligining one specific flex item along cross-axis.
-// (align vertically for `flex-direction: row` or horizontally for `flex-direction: column`)
-//
-// xas  =  align-self
-//
-// 0   =  initial
-// i   =  inherit
-// a   =  auto
-// s   =  stretch
-// xs  =  flex-start
-// xe  =  flex-end
-// c   =  center
-// b   =  baseline
-//
-// ^initial
-// : `auto`
-// ^inherited
-// : false
-// ^url
-// : https://developer.mozilla.org/en-US/docs/Web/CSS/align-self
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2015-10-15
+// : 2017-04-26
 
-.-xas-0  { .-xas-a; .flex-align-self(initial)    !important; }
-.-xas-i  {          .flex-align-self(inherit)    !important; }
-.-xas-a  {          .flex-align-self(auto)       !important; }
-.-xas-s  {          .flex-align-self(stretch)    !important; }
-.-xas-xs {          .flex-align-self(flex-start) !important; }
-.-xas-xe {          .flex-align-self(flex-end)   !important; }
-.-xas-c  {          .flex-align-self(center)     !important; }
-.-xas-b  {          .flex-align-self(baseline)   !important; }
+.-as-i  {         .align-self(inherit) !important; }
+.-as-0  { .-as-a; .align-self(initial) !important; }
+.-as-u  { .-as-0; .align-self(unset)   !important; }
+
+.-as-a  { .align-self(auto)          !important; }
+.-as-n  { .align-self(normal)        !important; }
+.-as-c  { .align-self(center)        !important; }
+.-as-s  { .align-self(start)         !important; }
+.-as-e  { .align-self(end)           !important; }
+.-as-st { .align-self(stretch)       !important; }
+.-as-xs { .align-self(flex-start)    !important; }
+.-as-xe { .align-self(flex-end)      !important; }
+.-as-ss { .align-self(self-start)    !important; }
+.-as-se { .align-self(self-end)      !important; }
 
 @media screen {
-  .-xas-0-s  { .-xas-0 ; }
-  .-xas-i-s  { .-xas-i ; }
-  .-xas-a-p  { .-xas-a ; }
-  .-xas-s-s  { .-xas-s ; }
-  .-xas-xs-s { .-xas-xs; }
-  .-xas-xe-s { .-xas-xe; }
-  .-xas-c-s  { .-xas-c ; }
-  .-xas-b-s  { .-xas-b ; }
+  .-as-i-s  { .-as-i; }
+  .-as-0-s  { .-as-0; }
+  .-as-u-s  { .-as-u; }
+
+  .-as-a-s  { .-as-a ; }
+  .-as-n-s  { .-as-n ; }
+  .-as-c-s  { .-as-c ; }
+  .-as-s-s  { .-as-s ; }
+  .-as-e-s  { .-as-e ; }
+  .-as-st-s { .-as-st; }
+  .-as-xs-s { .-as-xs; }
+  .-as-xe-s { .-as-xe; }
+  .-as-ss-s { .-as-ss; }
+  .-as-se-s { .-as-se; }
 }
 
 @media print {
-  .-xas-0-p  { .-xas-0 ; }
-  .-xas-i-p  { .-xas-i ; }
-  .-xas-a-p  { .-xas-a ; }
-  .-xas-s-p  { .-xas-s ; }
-  .-xas-xs-p { .-xas-xs; }
-  .-xas-xe-p { .-xas-xe; }
-  .-xas-c-p  { .-xas-c ; }
-  .-xas-b-p  { .-xas-b ; }
+  .-as-i-p  { .-as-i; }
+  .-as-0-p  { .-as-0; }
+  .-as-u-p  { .-as-u; }
+
+  .-as-a-p  { .-as-a ; }
+  .-as-n-p  { .-as-n ; }
+  .-as-c-p  { .-as-c ; }
+  .-as-s-p  { .-as-s ; }
+  .-as-e-p  { .-as-e ; }
+  .-as-st-p { .-as-st; }
+  .-as-xs-p { .-as-xs; }
+  .-as-xe-p { .-as-xe; }
+  .-as-ss-p { .-as-ss; }
+  .-as-se-p { .-as-se; }
 }

@@ -3,28 +3,10 @@
     bangs  |  _background-repeat.less
 \*################################*/
 
-// Defines how the background image repeats.
-// NOTE the `space` and `round` values are not widely supported yet so they are left out for now.
-//
-// br  =  background-repeat
-//
-// 0  =  initial
-// i  =  inherit
-// n  =  no-repeat (no-repeat no-repeat)
-// a  =  repeat    (repeat    repeat)
-// x  =  repeat-x  (repeat    no-repeat)
-// y  =  repeat-y  (no-repeat repeat)
-//
-// ^initial
-// : `repeat`
-// ^inherited
-// : false
-// ^url
-// : https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2015-10-14
+// : 2016-04-15
 
 .-br-0  { .-br-r; background-repeat: initial   !important; }
 .-br-i  {         background-repeat: inherit   !important; }
@@ -35,44 +17,44 @@
 
 .-br-rx {
   // background-repeat: repeat no-repeat !important; // HACK fallback
-  background-repeat: repeat-x !important;
+     background-repeat: repeat-x !important;
 }
 .-br-ry {
   // background-repeat: no-repeat repeat !important; // HACK fallback
-  background-repeat: repeat-y !important;
+     background-repeat: repeat-y !important;
 }
 .-br-spx {
-  background-repeat: space no-repeat !important; // HACK fallback
+  background-repeat: space no-repeat !important; // fallback
   background-repeat: space-x !important; // NOTE non-standardized
 }
 .-br-spy {
-  background-repeat: no-repeat space !important; // HACK fallback
+  background-repeat: no-repeat space !important; // fallback
   background-repeat: space-y !important; // NOTE non-standardized
 }
 .-br-rdx {
-  background-repeat: round no-repeat !important; // HACK fallback
+  background-repeat: round no-repeat !important; // fallback
   background-repeat: round-x !important; // NOTE non-standardized
 }
 .-br-rdy {
-  background-repeat: no-repeat round !important; // HACK fallback
+  background-repeat: no-repeat round !important; // fallback
   background-repeat: round-y !important; // NOTE non-standardized
 }
 
 // .-br-r_r   { background-repeat: repeat    repeat    !important; }
 // .-br-r_nr  { background-repeat: repeat    no-repeat !important; }
-.-br-r_sp  { background-repeat: repeat    space     !important; }
-.-br-r_rd  { background-repeat: repeat    round     !important; }
+   .-br-r_sp  { background-repeat: repeat    space     !important; }
+   .-br-r_rd  { background-repeat: repeat    round     !important; }
 // .-br-nr_r  { background-repeat: no-repeat repeat    !important; }
 // .-br-nr_nr { background-repeat: no-repeat no-repeat !important; }
 // .-br-nr_sp { background-repeat: no-repeat space     !important; }
 // .-br-nr_rd { background-repeat: no-repeat round     !important; }
-.-br-sp_r  { background-repeat: space     repeat    !important; }
+   .-br-sp_r  { background-repeat: space     repeat    !important; }
 // .-br-sp_nr { background-repeat: space     no-repeat !important; }
 // .-br-sp_sp { background-repeat: space     space     !important; }
-.-br-sp_rd { background-repeat: space     round     !important; }
-.-br-rd_r  { background-repeat: round     repeat    !important; }
+   .-br-sp_rd { background-repeat: space     round     !important; }
+   .-br-rd_r  { background-repeat: round     repeat    !important; }
 // .-br-rd_nr { background-repeat: round     no-repeat !important; }
-.-br-rd_sp { background-repeat: round     space     !important; }
+   .-br-rd_sp { background-repeat: round     space     !important; }
 // .-br-rd_rd { background-repeat: round     round     !important; }
 
 @media screen {

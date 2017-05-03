@@ -4,37 +4,96 @@
 \*################################*/
 @import (reference) url('../node_modules/xmeter/src/__fallback.column-width.less');
 
-// Sets the width of columns of text.
-//
-// cw  =  column-width
-//
-// 0   =  initial
-// i   =  inherit
-// a   =  auto
-//
-// ^initial
-// : `auto`
-// ^inherited
-// : false
-// ^url
-// : https://developer.mozilla.org/en-US/docs/Web/CSS/column-width
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2016-02-13
+// : 2017-04-22
 
-.-cw-0 { .-cw-a; .column-width(initial) !important; }
 .-cw-i {         .column-width(inherit) !important; }
+.-cw-0 { .-cw-a; .column-width(initial) !important; }
 .-cw-a {         .column-width(auto   ) !important; }
+.-cw-z {         .column-width(0      ) !important; }
 
 @media screen {
-  .-cw-0-s { .-cw-0; }
   .-cw-i-s { .-cw-i; }
+  .-cw-0-s { .-cw-0; }
   .-cw-a-s { .-cw-a; }
+  .-cw-z-s { .-cw-z; }
 }
 
 @media print {
-  .-cw-0-p { .-cw-0; }
   .-cw-i-p { .-cw-i; }
+  .-cw-0-p { .-cw-0; }
   .-cw-a-p { .-cw-a; }
+  .-cw-z-p { .-cw-z; }
+}
+
+@media screen and (min-width: 30em) {
+  .-cw-i-sK { .-cw-i; }
+  .-cw-0-sK { .-cw-0; }
+  .-cw-a-sK { .-cw-a; }
+  .-cw-z-sK { .-cw-z; }
+}
+
+@media screen and (min-width: 45em) {
+  .-cw-i-sM { .-cw-i; }
+  .-cw-0-sM { .-cw-0; }
+  .-cw-a-sM { .-cw-a; }
+  .-cw-z-sM { .-cw-z; }
+}
+
+@media screen and (min-width: 60em) {
+  .-cw-i-sG { .-cw-i; }
+  .-cw-0-sG { .-cw-0; }
+  .-cw-a-sG { .-cw-a; }
+  .-cw-z-sG { .-cw-z; }
+}
+
+@media screen and (min-width: 75em) {
+  .-cw-i-sT { .-cw-i; }
+  .-cw-0-sT { .-cw-0; }
+  .-cw-a-sT { .-cw-a; }
+  .-cw-z-sT { .-cw-z; }
+}
+
+@media screen and (min-width: 90em) {
+  .-cw-i-sP { .-cw-i; }
+  .-cw-0-sP { .-cw-0; }
+  .-cw-a-sP { .-cw-a; }
+  .-cw-z-sP { .-cw-z; }
+}
+
+@media not all and (min-width: 30em) {
+  .-cw-i-nK { .-cw-i; }
+  .-cw-0-nK { .-cw-0; }
+  .-cw-a-nK { .-cw-a; }
+  .-cw-z-nK { .-cw-z; }
+}
+
+@media not all and (min-width: 45em) {
+  .-cw-i-nM { .-cw-i; }
+  .-cw-0-nM { .-cw-0; }
+  .-cw-a-nM { .-cw-a; }
+  .-cw-z-nM { .-cw-z; }
+}
+
+@media not all and (min-width: 60em) {
+  .-cw-i-nG { .-cw-i; }
+  .-cw-0-nG { .-cw-0; }
+  .-cw-a-nG { .-cw-a; }
+  .-cw-z-nG { .-cw-z; }
+}
+
+@media not all and (min-width: 75em) {
+  .-cw-i-nT { .-cw-i; }
+  .-cw-0-nT { .-cw-0; }
+  .-cw-a-nT { .-cw-a; }
+  .-cw-z-nT { .-cw-z; }
+}
+
+@media not all and (min-width: 90em) {
+  .-cw-i-nP { .-cw-i; }
+  .-cw-0-nP { .-cw-0; }
+  .-cw-a-nP { .-cw-a; }
+  .-cw-z-nP { .-cw-z; }
 }
