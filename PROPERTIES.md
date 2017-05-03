@@ -1,5 +1,8 @@
 # Properties
 
+**WARNING!**
+This file has been moved. Go to https://chharvey.github.io/bangs/docs/props.html for the updated version.
+
 ## Layout
 
 ### `display`

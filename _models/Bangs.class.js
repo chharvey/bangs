@@ -13,12 +13,13 @@ module.exports = (function () {
   Bangs.DATA = require('../bangs.json')
 
   /**
-   * Automate track percentages.
+   * Automate track fractions.
+   * Fractions can be percentages, or in another unit such as `vw`.
    * @param  {string} prop abbreviation for css property
    * @param  {function(number)=string} mixin function outputting the css value
    * @param  {Function} callback callback function to call after execution. standard callback params.
    */
-  Bangs.generateTrackPercentsAsync = function generatePercentsAsync(prop, mixin, callback) {
+  Bangs.generateTrackFracsAsync = function generateFracsAsync(prop, mixin, callback) {
     /**
      * Return a media query containing rulesets.
      * If no suffix is given, the media query will be ommitted (equivalent to `@media all`).

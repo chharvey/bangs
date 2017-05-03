@@ -470,7 +470,7 @@
     , "stability": 2
     , "values"   : [
         { "name": "inherit",               "use": ".column-count(inherit);" }
-      , { "name": "initial",               "use": ".column-count(auto); .column-count(initial);" }
+      , { "name": "initial",               "use": ".column-count(initial);" }
       , { "name": "auto"   , "code": "a" , "use": ".column-count(auto);" }
       , { "name": "1"      , "code": "1" , "use": ".column-count(1);"    }
       , { "name": "2"      , "code": "2" , "use": ".column-count(2);"    }
@@ -635,61 +635,10 @@
     , "initial"  : "auto"
     , "stability": 2
     , "values"   : [
-        { "name": "initial",              "use": ".column-width(auto); .column-width(initial);" }
-      , { "name": "inherit",              "use": ".column-width(inherit);" }
+        { "name": "inherit",              "use": ".column-width(inherit);" }
+      , { "name": "initial",              "use": ".column-width(initial);" }
       , { "name": "auto"   , "code": "a", "use": ".column-width(auto);"    }
       , { "name": "0"      , "code": "z", "use": ".column-width(0);"       }
-      , { "name": "100%", "code": "1o1"  , "use": ".column-width(( 1/ 1) * 100%);" }
-      , { "name":  "50%", "code": "1o2"  , "use": ".column-width(( 1/ 2) * 100%);" }
-      , { "name": "100%", "code": "2o2"  , "use": ".column-width(( 2/ 2) * 100%);" }
-      , { "name":  "33%", "code": "1o3"  , "use": ".column-width(( 1/ 3) * 100%);" }
-      , { "name":  "67%", "code": "2o3"  , "use": ".column-width(( 2/ 3) * 100%);" }
-      , { "name": "100%", "code": "3o3"  , "use": ".column-width(( 3/ 3) * 100%);" }
-      , { "name":  "25%", "code": "1o4"  , "use": ".column-width(( 1/ 4) * 100%);" }
-      , { "name":  "50%", "code": "2o4"  , "use": ".column-width(( 2/ 4) * 100%);" }
-      , { "name":  "75%", "code": "3o4"  , "use": ".column-width(( 3/ 4) * 100%);" }
-      , { "name": "100%", "code": "4o4"  , "use": ".column-width(( 4/ 4) * 100%);" }
-      , { "name":  "20%", "code": "1o5"  , "use": ".column-width(( 1/ 5) * 100%);" }
-      , { "name":  "40%", "code": "2o5"  , "use": ".column-width(( 2/ 5) * 100%);" }
-      , { "name":  "60%", "code": "3o5"  , "use": ".column-width(( 3/ 5) * 100%);" }
-      , { "name":  "80%", "code": "4o5"  , "use": ".column-width(( 4/ 5) * 100%);" }
-      , { "name": "100%", "code": "5o5"  , "use": ".column-width(( 5/ 5) * 100%);" }
-      , { "name":  "16%", "code": "1o6"  , "use": ".column-width(( 1/ 6) * 100%);" }
-      , { "name":  "33%", "code": "2o6"  , "use": ".column-width(( 2/ 6) * 100%);" }
-      , { "name":  "50%", "code": "3o6"  , "use": ".column-width(( 3/ 6) * 100%);" }
-      , { "name":  "67%", "code": "4o6"  , "use": ".column-width(( 4/ 6) * 100%);" }
-      , { "name":  "83%", "code": "5o6"  , "use": ".column-width(( 5/ 6) * 100%);" }
-      , { "name": "100%", "code": "6o6"  , "use": ".column-width(( 6/ 6) * 100%);" }
-      , { "name":  "13%", "code": "1o8"  , "use": ".column-width(( 1/ 8) * 100%);" }
-      , { "name":  "25%", "code": "2o8"  , "use": ".column-width(( 2/ 8) * 100%);" }
-      , { "name":  "38%", "code": "3o8"  , "use": ".column-width(( 3/ 8) * 100%);" }
-      , { "name":  "50%", "code": "4o8"  , "use": ".column-width(( 4/ 8) * 100%);" }
-      , { "name":  "63%", "code": "5o8"  , "use": ".column-width(( 5/ 8) * 100%);" }
-      , { "name":  "75%", "code": "6o8"  , "use": ".column-width(( 6/ 8) * 100%);" }
-      , { "name":  "88%", "code": "7o8"  , "use": ".column-width(( 7/ 8) * 100%);" }
-      , { "name": "100%", "code": "8o8"  , "use": ".column-width(( 8/ 8) * 100%);" }
-      , { "name":  "10%", "code": "1o10" , "use": ".column-width(( 1/10) * 100%);" }
-      , { "name":  "20%", "code": "2o10" , "use": ".column-width(( 2/10) * 100%);" }
-      , { "name":  "30%", "code": "3o10" , "use": ".column-width(( 3/10) * 100%);" }
-      , { "name":  "40%", "code": "4o10" , "use": ".column-width(( 4/10) * 100%);" }
-      , { "name":  "50%", "code": "5o10" , "use": ".column-width(( 5/10) * 100%);" }
-      , { "name":  "60%", "code": "6o10" , "use": ".column-width(( 6/10) * 100%);" }
-      , { "name":  "70%", "code": "7o10" , "use": ".column-width(( 7/10) * 100%);" }
-      , { "name":  "80%", "code": "8o10" , "use": ".column-width(( 8/10) * 100%);" }
-      , { "name":  "90%", "code": "9o10" , "use": ".column-width(( 9/10) * 100%);" }
-      , { "name": "100%", "code": "10o10", "use": ".column-width((10/10) * 100%);" }
-      , { "name":   "8%", "code": "1o12" , "use": ".column-width(( 1/12) * 100%);" }
-      , { "name":  "17%", "code": "2o12" , "use": ".column-width(( 2/12) * 100%);" }
-      , { "name":  "25%", "code": "3o12" , "use": ".column-width(( 3/12) * 100%);" }
-      , { "name":  "33%", "code": "4o12" , "use": ".column-width(( 4/12) * 100%);" }
-      , { "name":  "42%", "code": "5o12" , "use": ".column-width(( 5/12) * 100%);" }
-      , { "name":  "50%", "code": "6o12" , "use": ".column-width(( 6/12) * 100%);" }
-      , { "name":  "58%", "code": "7o12" , "use": ".column-width(( 7/12) * 100%);" }
-      , { "name":  "67%", "code": "8o12" , "use": ".column-width(( 8/12) * 100%);" }
-      , { "name":  "75%", "code": "9o12" , "use": ".column-width(( 9/12) * 100%);" }
-      , { "name":  "83%", "code": "10o12", "use": ".column-width((10/12) * 100%);" }
-      , { "name":  "92%", "code": "11o12", "use": ".column-width((11/12) * 100%);" }
-      , { "name": "100%", "code": "12o12", "use": ".column-width((12/12) * 100%);" }
       ]
     , "media": [
         "screen"
@@ -1612,7 +1561,7 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/page-break-after"
     , "inherited": false
     , "initial"  : "auto"
-    , "stability": 1
+    , "stability": 0
     , "values"   : [
         { "name": "auto"  , "code": "a" }
       , { "name": "always", "code": "t" }
@@ -1626,7 +1575,7 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/page-break-before"
     , "inherited": false
     , "initial"  : "auto"
-    , "stability": 1
+    , "stability": 0
     , "values"   : [
         { "name": "auto"  , "code": "a" }
       , { "name": "always", "code": "t" }
