@@ -7,10 +7,6 @@ fs.mkdir('build/', function (err, data) {
     if (err) console.error(err)
     else fs.writeFile(`${__dirname}/../build/_width.less`, data, function (err, data) { if (err) throw err })
   })
-  Bangs.generateTrackFracsAsync('cw', function (val) { return `.column-width(${val} * 100vw)` }, function (err, data) {
-    if (err) console.error(err)
-    else fs.writeFile(`${__dirname}/../build/_column-width.less`, data, function (err, data) { if (err) throw err })
-  })
   Bangs.generateTrackFracsAsync('x', function (val) { return `.flex(${val} * 100%)` }, function (err, data) {
     if (err) console.error(err)
     else fs.writeFile(`${__dirname}/../build/_flex.less`, data, function (err, data) { if (err) throw err })
