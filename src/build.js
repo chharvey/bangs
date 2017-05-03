@@ -3,15 +3,11 @@ let path = require('path')
 let Bangs = require('../_models/Bangs.class.js')
 
 fs.mkdir('build/', function (err, data) {
-  Bangs.generateTrackPercentsAsync('w', function (val) { return `width: (${val} * 100%)` }, function (err, data) {
+  Bangs.generateTrackFracsAsync('w', function (val) { return `width: (${val} * 100%)` }, function (err, data) {
     if (err) console.error(err)
     else fs.writeFile(`${__dirname}/../build/_width.less`, data, function (err, data) { if (err) throw err })
   })
-  Bangs.generateTrackPercentsAsync('cw', function (val) { return `.column-width(${val} * 100%)` }, function (err, data) {
-    if (err) console.error(err)
-    else fs.writeFile(`${__dirname}/../build/_column-width.less`, data, function (err, data) { if (err) throw err })
-  })
-  Bangs.generateTrackPercentsAsync('x', function (val) { return `.flex(${val} * 100%)` }, function (err, data) {
+  Bangs.generateTrackFracsAsync('x', function (val) { return `.flex(${val} * 100%)` }, function (err, data) {
     if (err) console.error(err)
     else fs.writeFile(`${__dirname}/../build/_flex.less`, data, function (err, data) { if (err) throw err })
   })
