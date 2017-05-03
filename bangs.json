@@ -1539,7 +1539,7 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/page-break-after"
     , "inherited": false
     , "initial"  : "auto"
-    , "stability": 1
+    , "stability": 0
     , "values"   : [
         { "name": "auto"  , "code": "a" }
       , { "name": "always", "code": "t" }
@@ -1553,7 +1553,7 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/page-break-before"
     , "inherited": false
     , "initial"  : "auto"
-    , "stability": 1
+    , "stability": 0
     , "values"   : [
         { "name": "auto"  , "code": "a" }
       , { "name": "always", "code": "t" }
