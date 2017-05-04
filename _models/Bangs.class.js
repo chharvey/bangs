@@ -49,10 +49,11 @@ module.exports = (function () {
   /**
    * Automate track fractions.
    * Fractions can be percentages, or in another unit such as `vw`.
-   * @param  {string} prop abbreviation for css property
-   * @param  {function(number)=string} mixin function outputting the css value
+   * @param  {string} prop css property name
    */
-  Bangs.generateTrackFracs = function generateTrackFracs(prop, mixin) {
+  Bangs.generateTrackFracs = function generateTrackFracs(prop) {
+    let property = Bangs.DATA.properties.find((p) => p.name===prop)
+    let unique_values = []
     /**
      * Return a media query containing rulesets.
      * If no suffix is given, the media query will be ommitted (equivalent to `@media all`).
@@ -60,32 +61,28 @@ module.exports = (function () {
      * @return {string} complete css media query as a string
      */
     function queryblock(suffix) {
-      suffix = suffix || ''
-      const DENOMS = Bangs.DATA.global.common.tracks
-      let unique_values = []
       let rulesets = []
-      for (let i = 0; i < DENOMS.length; i++) {
-        for (let j = 1; j <= DENOMS[i]; j++) {
-          let fraction = j/DENOMS[i]
-          let classname = `.-${prop}-${j}o${DENOMS[i]}${(suffix) ? `-${suffix}` : ''}`
-          let unique_item = unique_values.find((el) => el.value===fraction)
-          if (unique_item) {
-            unique_item.classes.push(classname)
-          } else {
-            unique_values.push({ value: fraction, classes: [classname] })
-          }
-        }
-      }
       for (let item of unique_values) {
-        // if suffix, include non-suffixed class; else, write new declaration
-        let declaration = (suffix) ? item.classes[0].split('-').slice(0,-1).join('-') : `${mixin.call(null, item.value)} !important`
-        rulesets.push(`${item.classes.join(', ')} { ${declaration}; }`)
+        let canonical = property.values.find((v) => v.code===item.codes[0] || v.name===item.qty)
+        // FIXME this is bad design! redesign data so that values have UNIQUE names... then they can have multiple codes.
+        let classes = item.codes.map((c) => `.-${property.code}-${c}${(suffix) ? `-${suffix}` : ''}`).join(', ')
+        let declaration = (suffix) ? `.-${property.code}-${canonical.code}` : `${canonical.use || canonical.name} !important`
+        rulesets.push(`${classes} { ${declaration}; }`)
       }
       return (suffix) ? `
         @media ${Bangs.DATA.global.media.find((m) => m.code===suffix).query} {
           ${rulesets.join('\n')}
         }
       ` : rulesets.join('\n')
+    }
+    for (value of property.values) {
+      let val_code = value.code || Bangs.DATA.global.values.find((v) => v.name===value.name).code
+      let unique_item = unique_values.find((el) => el.qty===value.name)
+      if (unique_item) {
+        unique_item.codes.push(val_code)
+      } else {
+        unique_values.push({ qty: value.name, codes: [val_code] })
+      }
     }
     return [''].concat(Bangs.DATA.global.media.map((m) => m.code)).map(queryblock).join('')
   }

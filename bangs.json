@@ -690,66 +690,19 @@
     , "initial"  : "0 1 auto"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit",               "use": ".flex(inherit);" }
-      , { "name": "initial",               "use": ".flex(0 1 auto); .flex(initial);" }
-      , { "name": "auto"   , "code": "a" , "use": ".flex(auto);"    }
-      , { "name": "content", "code": "c" , "use": ".flex(content);" }
-      , { "name": "0"      , "code": "z" , "use": ".flex(0);"       }
-      , { "name": "0.5"    , "code": "h" , "use": ".flex(0.5);"     }
-      , { "name": "1"      , "code": "1" , "use": ".flex(1);"       }
-      , { "name": "2"      , "code": "2" , "use": ".flex(2);"       }
-      , { "name": "100%", "code": "1o1"  , "use": ".flex(( 1/ 1) * 100%);" }
-      , { "name":  "50%", "code": "1o2"  , "use": ".flex(( 1/ 2) * 100%);" }
-      , { "name": "100%", "code": "2o2"  , "use": ".flex(( 2/ 2) * 100%);" }
-      , { "name":  "33%", "code": "1o3"  , "use": ".flex(( 1/ 3) * 100%);" }
-      , { "name":  "67%", "code": "2o3"  , "use": ".flex(( 2/ 3) * 100%);" }
-      , { "name": "100%", "code": "3o3"  , "use": ".flex(( 3/ 3) * 100%);" }
-      , { "name":  "25%", "code": "1o4"  , "use": ".flex(( 1/ 4) * 100%);" }
-      , { "name":  "50%", "code": "2o4"  , "use": ".flex(( 2/ 4) * 100%);" }
-      , { "name":  "75%", "code": "3o4"  , "use": ".flex(( 3/ 4) * 100%);" }
-      , { "name": "100%", "code": "4o4"  , "use": ".flex(( 4/ 4) * 100%);" }
-      , { "name":  "20%", "code": "1o5"  , "use": ".flex(( 1/ 5) * 100%);" }
-      , { "name":  "40%", "code": "2o5"  , "use": ".flex(( 2/ 5) * 100%);" }
-      , { "name":  "60%", "code": "3o5"  , "use": ".flex(( 3/ 5) * 100%);" }
-      , { "name":  "80%", "code": "4o5"  , "use": ".flex(( 4/ 5) * 100%);" }
-      , { "name": "100%", "code": "5o5"  , "use": ".flex(( 5/ 5) * 100%);" }
-      , { "name":  "16%", "code": "1o6"  , "use": ".flex(( 1/ 6) * 100%);" }
-      , { "name":  "33%", "code": "2o6"  , "use": ".flex(( 2/ 6) * 100%);" }
-      , { "name":  "50%", "code": "3o6"  , "use": ".flex(( 3/ 6) * 100%);" }
-      , { "name":  "67%", "code": "4o6"  , "use": ".flex(( 4/ 6) * 100%);" }
-      , { "name":  "83%", "code": "5o6"  , "use": ".flex(( 5/ 6) * 100%);" }
-      , { "name": "100%", "code": "6o6"  , "use": ".flex(( 6/ 6) * 100%);" }
-      , { "name":  "13%", "code": "1o8"  , "use": ".flex(( 1/ 8) * 100%);" }
-      , { "name":  "25%", "code": "2o8"  , "use": ".flex(( 2/ 8) * 100%);" }
-      , { "name":  "38%", "code": "3o8"  , "use": ".flex(( 3/ 8) * 100%);" }
-      , { "name":  "50%", "code": "4o8"  , "use": ".flex(( 4/ 8) * 100%);" }
-      , { "name":  "63%", "code": "5o8"  , "use": ".flex(( 5/ 8) * 100%);" }
-      , { "name":  "75%", "code": "6o8"  , "use": ".flex(( 6/ 8) * 100%);" }
-      , { "name":  "88%", "code": "7o8"  , "use": ".flex(( 7/ 8) * 100%);" }
-      , { "name": "100%", "code": "8o8"  , "use": ".flex(( 8/ 8) * 100%);" }
-      , { "name":  "10%", "code": "1o10" , "use": ".flex(( 1/10) * 100%);" }
-      , { "name":  "20%", "code": "2o10" , "use": ".flex(( 2/10) * 100%);" }
-      , { "name":  "30%", "code": "3o10" , "use": ".flex(( 3/10) * 100%);" }
-      , { "name":  "40%", "code": "4o10" , "use": ".flex(( 4/10) * 100%);" }
-      , { "name":  "50%", "code": "5o10" , "use": ".flex(( 5/10) * 100%);" }
-      , { "name":  "60%", "code": "6o10" , "use": ".flex(( 6/10) * 100%);" }
-      , { "name":  "70%", "code": "7o10" , "use": ".flex(( 7/10) * 100%);" }
-      , { "name":  "80%", "code": "8o10" , "use": ".flex(( 8/10) * 100%);" }
-      , { "name":  "90%", "code": "9o10" , "use": ".flex(( 9/10) * 100%);" }
-      , { "name": "100%", "code": "10o10", "use": ".flex((10/10) * 100%);" }
-      , { "name":   "8%", "code": "1o12" , "use": ".flex(( 1/12) * 100%);" }
-      , { "name":  "17%", "code": "2o12" , "use": ".flex(( 2/12) * 100%);" }
-      , { "name":  "25%", "code": "3o12" , "use": ".flex(( 3/12) * 100%);" }
-      , { "name":  "33%", "code": "4o12" , "use": ".flex(( 4/12) * 100%);" }
-      , { "name":  "42%", "code": "5o12" , "use": ".flex(( 5/12) * 100%);" }
-      , { "name":  "50%", "code": "6o12" , "use": ".flex(( 6/12) * 100%);" }
-      , { "name":  "58%", "code": "7o12" , "use": ".flex(( 7/12) * 100%);" }
-      , { "name":  "67%", "code": "8o12" , "use": ".flex(( 8/12) * 100%);" }
-      , { "name":  "75%", "code": "9o12" , "use": ".flex(( 9/12) * 100%);" }
-      , { "name":  "83%", "code": "10o12", "use": ".flex((10/12) * 100%);" }
-      , { "name":  "92%", "code": "11o12", "use": ".flex((11/12) * 100%);" }
-      , { "name": "100%", "code": "12o12", "use": ".flex((12/12) * 100%);" }
+        { "name": "inherit",               "use": ".flex(inherit)" }
+      , { "name": "initial",               "use": ".flex(0 1 auto); .flex(initial)" }
+      , { "name": "auto"   , "code": "a" , "use": ".flex(auto)"    }
+      , { "name": "content", "code": "c" , "use": ".flex(content)" }
+      , { "name": "0"      , "code": "z" , "use": ".flex(0)"       }
+      , { "name": "0.5"    , "code": "h" , "use": ".flex(0.5)"     }
+      , { "name": "1"      , "code": "1" , "use": ".flex(1)"       }
+      , { "name": "2"      , "code": "2" , "use": ".flex(2)"       }
       ]
+    , "generator": {
+        "name" : "generateFracValues"
+      , "mixin": "(val) => `.flex(${val} * 100%)`"
+      }
     , "media": [
         "screen"
       , "print"
@@ -1819,7 +1772,7 @@
       , { "name":   "0" , "code": "z" }
       ]
     , "generator": {
-        "name": "generateFracValues"
+        "name" : "generateFracValues"
       , "mixin": "(val) => `width: (${val} * 100%)`"
       }
     , "media": [
