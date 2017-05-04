@@ -7,10 +7,41 @@ module.exports = (function () {
   function Bangs() {}
 
   /**
-   * This project’s data as JSON.
+   * This project’s data, compiled from raw JSON.
+   * Call functions on CSS properties, pushing entries to their `values` arrays.
+   * The function called on each CSS property is specified by its `generator` property.
+   * See `/bangs.json` for more information
    * @type {Object}
    */
-  Bangs.DATA = require('../bangs.json')
+  Bangs.DATA = (function compileData(data) {
+    /**
+     * Automate track fractions.
+     * Fractions can be percentages or any length unit, depending on the mixin passed.
+     * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
+     * @param  {string} prop abbreviation for css property
+     * @param  {?function(number)=string} mixin function outputting the css value
+     */
+    function generateFracValues(prop, mixin) {
+      const _DENOMS = data.global.common.tracks
+      let property = data.properties.find((el) => el.code===prop)
+      for (let i = 0; i < _DENOMS.length; i++) {
+        for (let j = 1; j <= _DENOMS[i]; j++) {
+          let value = {
+            name: `${Math.round(10000 * (j/_DENOMS[i]))/100}%`
+          , code: `${j}o${_DENOMS[i]}`
+          }
+          if (mixin) value.use = mixin.call(null, `(${j}/${_DENOMS[i]})`)
+          property.values.push(value)
+        }
+      }
+    }
+    for (let prop of data.properties) {
+      if (prop.generator) {
+        eval(prop.generator.name).call(null, prop.code, eval(prop.generator.mixin) || null)
+      }
+    }
+    return data
+  })(require('../bangs.json'))
 
   /**
    * Automate track fractions.
