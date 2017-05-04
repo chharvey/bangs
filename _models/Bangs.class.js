@@ -59,7 +59,7 @@ module.exports = (function () {
      * @param  {string=''} suffix media query code, e.g. ('-sK')
      * @return {string} complete css media query as a string
      */
-    function media(suffix) {
+    function queryblock(suffix) {
       suffix = suffix || ''
       const DENOMS = Bangs.DATA.global.common.tracks
       let unique_values = []
@@ -68,7 +68,7 @@ module.exports = (function () {
         for (let j = 1; j <= DENOMS[i]; j++) {
           let fraction = j/DENOMS[i]
           let classname = `.-${prop}-${j}o${DENOMS[i]}${(suffix) ? `-${suffix}` : ''}`
-          let unique_item = unique_values.find(function (el) { return el.value === fraction })
+          let unique_item = unique_values.find((el) => el.value===fraction)
           if (unique_item) {
             unique_item.classes.push(classname)
           } else {
@@ -82,12 +82,12 @@ module.exports = (function () {
         rulesets.push(`${item.classes.join(', ')} { ${declaration}; }`)
       }
       return (suffix) ? `
-        @media ${Bangs.DATA.global.media.find(function (el) { return el.code === suffix}).query} {
+        @media ${Bangs.DATA.global.media.find((m) => m.code===suffix).query} {
           ${rulesets.join('\n')}
         }
       ` : rulesets.join('\n')
     }
-    return [''].concat(Bangs.DATA.global.media.map(function (el) { return el.code })).map(media).join('')
+    return [''].concat(Bangs.DATA.global.media.map((m) => m.code)).map(queryblock).join('')
   }
 
   /**
