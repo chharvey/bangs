@@ -1,3 +1,5 @@
+let Util = require('./Util.class.js')
+
 module.exports = (function () {
   /**
    * A set of static members used for the site.
@@ -8,6 +10,7 @@ module.exports = (function () {
 
   /**
    * This project’s data, compiled from raw JSON.
+   * NOTE: WARNING: IMPURE FUNCTION (modifies parameter).
    * Call functions on CSS properties, pushing entries to their `values` arrays.
    * The function called on each CSS property is specified by its `generator` property.
    * See `/bangs.json` for more information
@@ -41,7 +44,7 @@ module.exports = (function () {
       }
     }
     return data
-  })(require('../bangs.json'))
+  })(Util.cloneDeep(require('../bangs.json')))
 
   /**
    * Automate track fractions.
