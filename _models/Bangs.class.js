@@ -1,4 +1,4 @@
-let Util = require('./Util.class.js')
+var Util = require('./Util.class.js')
 
 module.exports = (function () {
   /**
@@ -22,7 +22,7 @@ module.exports = (function () {
      * Fractions can be percentages or any length unit, depending on the mixin passed.
      * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
      * @param  {string} prop abbreviation for css property
-     * @param  {?function(number)=string} mixin function outputting the css value
+     * @param  {?function(number|string)=string} mixin function outputting the css value
      */
     function generateFracValues(prop, mixin) {
       const _DENOMS = data.global.common.tracks
@@ -34,7 +34,16 @@ module.exports = (function () {
           , code: `${j}o${_DENOMS[i]}`
           }
           if (mixin) value.use = mixin.call(null, `(${j}/${_DENOMS[i]})`)
+          let oldvalue = property.values.find((v) => v.name===value.name)
+          if (oldvalue) {
+            if (!oldvalue.codes) { // type(codes) == Array<string>; type(code) == <string>
+              oldvalue.codes = [oldvalue.code]
+              oldvalue.code = ''
+            }
+            oldvalue.codes.push(oldvalue.code)
+          } else {
           property.values.push(value)
+          }
         }
       }
     }
