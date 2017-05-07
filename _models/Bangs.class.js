@@ -46,6 +46,24 @@ module.exports = (function () {
         }
       }
     }
+    /**
+     * Automate counts.
+     * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
+     * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
+     * @param  {?function(number)=string} namefn function determining the value name
+     * @param  {?function(number)=string} usefn  function determining the value use
+     */
+    function generateCountValues(namefn, usefn) {
+      const _DENOMS = data.global.common.tracks
+      for (let i = 0; i < _DENOMS.length; i++) {
+        let newvalue = {
+          name: (namefn) ? namefn.call(null, _DENOMS[i]) : _DENOMS[i].toString()
+        , code: _DENOMS[i].toString()
+        }
+        if (usefn) newvalue.use = usefn.call(null, _DENOMS[i])
+        this.values.push(newvalue)
+      }
+    }
     for (let property of data.properties) {
       for (let generator of (property.generators || [])) {
         eval(generator.name).call(property, ...generator.args.map(eval))

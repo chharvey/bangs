@@ -450,15 +450,12 @@
         { "name": "inherit",               "use": ".column-count(inherit);" }
       , { "name": "initial",               "use": ".column-count(initial);" }
       , { "name": "auto"   , "code": "a" , "use": ".column-count(auto);" }
-      , { "name": "1"      , "code": "1" , "use": ".column-count(1);"    }
-      , { "name": "2"      , "code": "2" , "use": ".column-count(2);"    }
-      , { "name": "3"      , "code": "3" , "use": ".column-count(3);"    }
-      , { "name": "4"      , "code": "4" , "use": ".column-count(4);"    }
-      , { "name": "5"      , "code": "5" , "use": ".column-count(5);"    }
-      , { "name": "6"      , "code": "6" , "use": ".column-count(6);"    }
-      , { "name": "8"      , "code": "8" , "use": ".column-count(8);"    }
-      , { "name": "10"     , "code": "10", "use": ".column-count(10);"   }
-      , { "name": "12"     , "code": "12", "use": ".column-count(12);"   }
+      ]
+    , "generators": [
+        {
+          "name": "generateCountValues"
+        , "args": [null, "(val) => `.column-count(${val})`"]
+        }
       ]
     , "media": [
         "screen"
@@ -945,15 +942,12 @@
       , { "name": "initial"         ,               "use": ".grid-template-columns(initial);" }
       , { "name": "unset"           ,               "use": ".grid-template-columns(unset);"   }
       , { "name": "none"            , "code": "n",  "use": ".grid-template-columns(none);"    }
-      , { "name": "repeat(1 , 1fr)" , "code": "1" , "use": ".grid-template-columns(repeat(1 , 1fr));" }
-      , { "name": "repeat(2 , 1fr)" , "code": "2" , "use": ".grid-template-columns(repeat(2 , 1fr));" }
-      , { "name": "repeat(3 , 1fr)" , "code": "3" , "use": ".grid-template-columns(repeat(3 , 1fr));" }
-      , { "name": "repeat(4 , 1fr)" , "code": "4" , "use": ".grid-template-columns(repeat(4 , 1fr));" }
-      , { "name": "repeat(5 , 1fr)" , "code": "5" , "use": ".grid-template-columns(repeat(5 , 1fr));" }
-      , { "name": "repeat(6 , 1fr)" , "code": "6" , "use": ".grid-template-columns(repeat(6 , 1fr));" }
-      , { "name": "repeat(8 , 1fr)" , "code": "8" , "use": ".grid-template-columns(repeat(8 , 1fr));" }
-      , { "name": "repeat(10, 1fr)" , "code": "10", "use": ".grid-template-columns(repeat(10, 1fr));" }
-      , { "name": "repeat(12, 1fr)" , "code": "12", "use": ".grid-template-columns(repeat(12, 1fr));" }
+      ]
+    , "generators": [
+        {
+          "name": "generateCountValues"
+        , "args": ["(val) => `repeat(${val}, 1fr)`", "(val) => `.grid-template-columns(repeat(${val}, 1fr))`"]
+        }
       ]
     , "media": [
         "screen"
@@ -983,15 +977,12 @@
       , { "name": "initial"         ,               "use": ".grid-template-rows(initial);" }
       , { "name": "unset"           ,               "use": ".grid-template-rows(unset);"   }
       , { "name": "none"            , "code": "n",  "use": ".grid-template-rows(none);"    }
-      , { "name": "repeat(1 , 1fr)" , "code": "1" , "use": ".grid-template-rows(repeat(1 , 1fr));" }
-      , { "name": "repeat(2 , 1fr)" , "code": "2" , "use": ".grid-template-rows(repeat(2 , 1fr));" }
-      , { "name": "repeat(3 , 1fr)" , "code": "3" , "use": ".grid-template-rows(repeat(3 , 1fr));" }
-      , { "name": "repeat(4 , 1fr)" , "code": "4" , "use": ".grid-template-rows(repeat(4 , 1fr));" }
-      , { "name": "repeat(5 , 1fr)" , "code": "5" , "use": ".grid-template-rows(repeat(5 , 1fr));" }
-      , { "name": "repeat(6 , 1fr)" , "code": "6" , "use": ".grid-template-rows(repeat(6 , 1fr));" }
-      , { "name": "repeat(8 , 1fr)" , "code": "8" , "use": ".grid-template-rows(repeat(8 , 1fr));" }
-      , { "name": "repeat(10, 1fr)" , "code": "10", "use": ".grid-template-rows(repeat(10, 1fr));" }
-      , { "name": "repeat(12, 1fr)" , "code": "12", "use": ".grid-template-rows(repeat(12, 1fr));" }
+      ]
+    , "generators": [
+        {
+          "name": "generateCountValues"
+        , "args": ["(val) => `repeat(${val}, 1fr)`", "(val) => `.grid-template-rows(repeat(${val}, 1fr))`"]
+        }
       ]
     , "media": [
         "screen"
