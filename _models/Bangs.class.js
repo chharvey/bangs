@@ -47,9 +47,9 @@ module.exports = (function () {
         }
       }
     }
-    for (let prop of data.properties) {
-      if (prop.generator) {
-        eval(prop.generator.name).call(null, prop.code, eval(prop.generator.mixin) || null)
+    for (let property of data.properties) {
+      for (let generator of property.generators) {
+        eval(generator.name).call(null, property.code, eval(generator.mixin) || null)
       }
     }
     return data

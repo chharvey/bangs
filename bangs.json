@@ -699,10 +699,12 @@
       , { "name": "1"      , "code": "1" , "use": ".flex(1)"       }
       , { "name": "2"      , "code": "2" , "use": ".flex(2)"       }
       ]
-    , "generator": {
-        "name" : "generateFracValues"
-      , "mixin": "(val) => `.flex(${val} * 100%)`"
-      }
+    , "generators": [
+        {
+          "name" : "generateFracValues"
+        , "mixin": "(val) => `.flex(${val} * 100%)`"
+        }
+      ]
     , "media": [
         "screen"
       , "print"
@@ -1771,10 +1773,12 @@
         { "name": "auto", "code": "a" }
       , { "name":   "0" , "code": "z" }
       ]
-    , "generator": {
-        "name" : "generateFracValues"
-      , "mixin": "(val) => `width: (${val} * 100%)`"
-      }
+    , "generators": [
+        {
+          "name" : "generateFracValues"
+        , "mixin": "(val) => `width: (${val} * 100%)`"
+        }
+      ]
     , "media": [
         "screen"
       , "print"
