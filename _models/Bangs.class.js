@@ -29,20 +29,20 @@ module.exports = (function () {
       let property = data.properties.find((el) => el.code===prop)
       for (let i = 0; i < _DENOMS.length; i++) {
         for (let j = 1; j <= _DENOMS[i]; j++) {
-          let value = {
+          let newvalue = {
             name: `${Math.round(10000 * (j/_DENOMS[i]))/100}%`
           , code: `${j}o${_DENOMS[i]}`
           }
-          if (mixin) value.use = mixin.call(null, `(${j}/${_DENOMS[i]})`)
-          let oldvalue = property.values.find((v) => v.name===value.name)
-          if (oldvalue) {
-            if (!oldvalue.codes) { // type(codes) == Array<string>; type(code) == <string>
-              oldvalue.codes = [oldvalue.code]
-              oldvalue.code = ''
+          if (mixin) newvalue.use = mixin.call(null, `(${j}/${_DENOMS[i]})`)
+          let value = property.values.find((v) => v.name===newvalue.name)
+          if (value) {
+            if (!value.codes) { // type(codes) == Array<string>; type(code) == <string>
+              value.codes = [value.code]
+              value.code = ''
             }
-            oldvalue.codes.push(oldvalue.code)
+            value.codes.push(newvalue.code)
           } else {
-          property.values.push(value)
+            property.values.push(newvalue)
           }
         }
       }
