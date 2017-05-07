@@ -12,7 +12,7 @@ module.exports = (function () {
    * This project’s data, compiled from raw JSON.
    * NOTE: WARNING: IMPURE FUNCTION (modifies parameter).
    * Call functions on CSS properties, pushing entries to their `values` arrays.
-   * The function called on each CSS property is specified by its `generator` property.
+   * The function called on each CSS property is specified by items in its `generators` array.
    * See `/bangs.json` for more information
    * @type {Object}
    */
@@ -21,10 +21,10 @@ module.exports = (function () {
      * Automate track fractions.
      * Fractions can be percentages or any length unit, depending on the mixin passed.
      * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
-     * @param  {Object} property the css property
+     * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
      * @param  {?function(string)=string} mixin function outputting the css value
      */
-    function generateFracValues(property, mixin) {
+    function generateFracValues(mixin) {
       const _DENOMS = data.global.common.tracks
       for (let i = 0; i < _DENOMS.length; i++) {
         for (let j = 1; j <= _DENOMS[i]; j++) {
@@ -33,7 +33,7 @@ module.exports = (function () {
           , code: `${j}o${_DENOMS[i]}`
           }
           if (mixin) newvalue.use = mixin.call(null, `(${j}/${_DENOMS[i]})`)
-          let value = property.values.find((v) => v.name===newvalue.name)
+          let value = this.values.find((v) => v.name===newvalue.name)
           if (value) {
             if (!value.codes) { // type(codes) == Array<string>; type(code) == <string>
               value.codes = [value.code]
@@ -41,14 +41,14 @@ module.exports = (function () {
             }
             value.codes.push(newvalue.code)
           } else {
-            property.values.push(newvalue)
+            this.values.push(newvalue)
           }
         }
       }
     }
     for (let property of data.properties) {
       for (let generator of (property.generators || [])) {
-        eval(generator.name).call(null, property, ...generator.args.map(eval))
+        eval(generator.name).call(property, ...generator.args.map(eval))
       }
     }
     return data
