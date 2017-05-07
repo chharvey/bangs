@@ -71,11 +71,12 @@ module.exports = (function () {
      */
     function queryblock(suffix) {
       let rulesets = []
-      for (let item of unique_values) {
-        let canonical = property.values.find((v) => v.code===item.codes[0] || v.name===item.qty)
-        // FIXME this is bad design! redesign data so that values have UNIQUE names... then they can have multiple codes.
-        let classes = item.codes.map((c) => `.-${property.code}-${c}${(suffix) ? `-${suffix}` : ''}`).join(', ')
-        let declaration = (suffix) ? `.-${property.code}-${canonical.code}` : `${canonical.use || canonical.name} !important`
+      for (let value of property.values) {
+        if (!value.codes) {
+          value.codes = [value.code || Bangs.DATA.global.values.find((v) => v.name===value.name).code]
+        }
+        let classes = value.codes.map((c) => `.-${property.code}-${c}${(suffix) ? `-${suffix}` : ''}`).join(', ')
+        let declaration = (suffix) ? `.-${property.code}-${value.codes[0]}` : `${value.use || value.name} !important`
         rulesets.push(`${classes} { ${declaration}; }`)
       }
       return (suffix) ? `
@@ -83,15 +84,6 @@ module.exports = (function () {
           ${rulesets.join('\n')}
         }
       ` : rulesets.join('\n')
-    }
-    for (value of property.values) {
-      let val_code = value.code || Bangs.DATA.global.values.find((v) => v.name===value.name).code
-      let unique_item = unique_values.find((el) => el.qty===value.name)
-      if (unique_item) {
-        unique_item.codes.push(val_code)
-      } else {
-        unique_values.push({ qty: value.name, codes: [val_code] })
-      }
     }
     return [''].concat(Bangs.DATA.global.media.map((m) => m.code)).map(queryblock).join('')
   }
