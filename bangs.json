@@ -701,8 +701,8 @@
       ]
     , "generators": [
         {
-          "name" : "generateFracValues"
-        , "mixin": "(val) => `.flex(${val} * 100%)`"
+          "name": "generateFracValues"
+        , "args": ["(val) => `.flex(${val} * 100%)`"]
         }
       ]
     , "media": [
@@ -1775,8 +1775,8 @@
       ]
     , "generators": [
         {
-          "name" : "generateFracValues"
-        , "mixin": "(val) => `width: (${val} * 100%)`"
+          "name": "generateFracValues"
+        , "args": ["(val) => `width: (${val} * 100%)`"]
         }
       ]
     , "media": [

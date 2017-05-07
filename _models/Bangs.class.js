@@ -21,12 +21,11 @@ module.exports = (function () {
      * Automate track fractions.
      * Fractions can be percentages or any length unit, depending on the mixin passed.
      * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
-     * @param  {string} prop abbreviation for css property
-     * @param  {?function(number|string)=string} mixin function outputting the css value
+     * @param  {Object} property the css property
+     * @param  {?function(string)=string} mixin function outputting the css value
      */
-    function generateFracValues(prop, mixin) {
+    function generateFracValues(property, mixin) {
       const _DENOMS = data.global.common.tracks
-      let property = data.properties.find((el) => el.code===prop)
       for (let i = 0; i < _DENOMS.length; i++) {
         for (let j = 1; j <= _DENOMS[i]; j++) {
           let newvalue = {
@@ -48,8 +47,8 @@ module.exports = (function () {
       }
     }
     for (let property of data.properties) {
-      for (let generator of property.generators) {
-        eval(generator.name).call(null, property.code, eval(generator.mixin) || null)
+      for (let generator of (property.generators || [])) {
+        eval(generator.name).call(null, property, ...generator.args.map(eval))
       }
     }
     return data

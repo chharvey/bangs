@@ -79,7 +79,7 @@ module.exports = (function () {
       for (let val of obj) {
         result.push(Util.cloneDeep(val))
       }
-    } else if (typeof obj === 'object') {
+    } else if (typeof obj === 'object' && obj !== null) {
       result = {}
       for (let key in obj) {
         result[key] = Util.cloneDeep(obj[key])
