@@ -447,9 +447,9 @@
     , "initial"  : "auto"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit",               "use": ".column-count(inherit);" }
-      , { "name": "initial",               "use": ".column-count(initial);" }
-      , { "name": "auto"   , "code": "a" , "use": ".column-count(auto);" }
+        { "name": "inherit",              "use": ".column-count(inherit)" }
+      , { "name": "initial",              "use": ".column-count(initial)" }
+      , { "name": "auto"   , "code": "a", "use": ".column-count(auto)"    }
       ]
     , "generators": [
         {
@@ -687,14 +687,14 @@
     , "initial"  : "0 1 auto"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit",               "use": ".flex(inherit)" }
-      , { "name": "initial",               "use": ".flex(0 1 auto); .flex(initial)" }
-      , { "name": "auto"   , "code": "a" , "use": ".flex(auto)"    }
-      , { "name": "content", "code": "c" , "use": ".flex(content)" }
-      , { "name": "0"      , "code": "z" , "use": ".flex(0)"       }
-      , { "name": "0.5"    , "code": "h" , "use": ".flex(0.5)"     }
-      , { "name": "1"      , "code": "1" , "use": ".flex(1)"       }
-      , { "name": "2"      , "code": "2" , "use": ".flex(2)"       }
+        { "name": "inherit",              "use": ".flex(inherit)" }
+      , { "name": "initial",              "use": ".flex(initial)" }
+      , { "name": "auto"   , "code": "a", "use": ".flex(auto)"    }
+      , { "name": "content", "code": "c", "use": ".flex(content)" }
+      , { "name": "0"      , "code": "z", "use": ".flex(0)"       }
+      , { "name": "0.5"    , "code": "h", "use": ".flex(0.5)"     }
+      , { "name": "1"      , "code": "1", "use": ".flex(1)"       }
+      , { "name": "2"      , "code": "2", "use": ".flex(2)"       }
       ]
     , "generators": [
         {
@@ -938,10 +938,10 @@
     , "initial"  : "none"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit"         ,               "use": ".grid-template-columns(inherit);" }
-      , { "name": "initial"         ,               "use": ".grid-template-columns(initial);" }
-      , { "name": "unset"           ,               "use": ".grid-template-columns(unset);"   }
-      , { "name": "none"            , "code": "n",  "use": ".grid-template-columns(none);"    }
+        { "name": "inherit",              "use": ".grid-template-columns(inherit)" }
+      , { "name": "initial",              "use": ".grid-template-columns(initial)" }
+      , { "name": "unset"  ,              "use": ".grid-template-columns(unset)"   }
+      , { "name": "none"   , "code": "n", "use": ".grid-template-columns(none)"    }
       ]
     , "generators": [
         {
@@ -973,10 +973,10 @@
     , "initial"  : "none"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit"         ,               "use": ".grid-template-rows(inherit);" }
-      , { "name": "initial"         ,               "use": ".grid-template-rows(initial);" }
-      , { "name": "unset"           ,               "use": ".grid-template-rows(unset);"   }
-      , { "name": "none"            , "code": "n",  "use": ".grid-template-rows(none);"    }
+        { "name": "inherit",              "use": ".grid-template-rows(inherit)" }
+      , { "name": "initial",              "use": ".grid-template-rows(initial)" }
+      , { "name": "unset"  ,              "use": ".grid-template-rows(unset)"   }
+      , { "name": "none"   , "code": "n", "use": ".grid-template-rows(none)"    }
       ]
     , "generators": [
         {

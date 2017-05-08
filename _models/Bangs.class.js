@@ -73,27 +73,19 @@ module.exports = (function () {
   })(Util.cloneDeep(require('../bangs.json')))
 
   /**
-   * Automate track fractions.
-   * Fractions can be percentages, or in another unit such as `vw`.
+   * Generate Less from the compiled data.
    * @param  {string} prop css property name
    */
-  Bangs.generateTrackFracs = function generateTrackFracs(prop) {
+  Bangs.generateLess = function generateLess(prop) {
     let property = Bangs.DATA.properties.find((p) => p.name===prop)
-    let unique_values = []
-    /**
-     * Return a media query containing rulesets.
-     * If no suffix is given, the media query will be ommitted (equivalent to `@media all`).
-     * @param  {string=''} suffix media query code, e.g. ('-sK')
-     * @return {string} complete css media query as a string
-     */
-    function queryblock(suffix) {
+    return [''].concat(Bangs.DATA.global.media.map((m) => m.code)).map(function queryblock(suffix) {
       let rulesets = []
       for (let value of property.values) {
         if (!value.codes) {
           value.codes = [value.code || Bangs.DATA.global.values.find((v) => v.name===value.name).code]
         }
         let classes = value.codes.map((c) => `.-${property.code}-${c}${(suffix) ? `-${suffix}` : ''}`).join(', ')
-        let declaration = (suffix) ? `.-${property.code}-${value.codes[0]}` : `${value.use || value.name} !important`
+        let declaration = (suffix) ? `.-${property.code}-${value.codes[0]}` : `${value.use || `${property.name}: ${value.name}`} !important`
         rulesets.push(`${classes} { ${declaration}; }`)
       }
       return (suffix) ? `
@@ -101,39 +93,7 @@ module.exports = (function () {
           ${rulesets.join('\n')}
         }
       ` : rulesets.join('\n')
-    }
-    return [''].concat(Bangs.DATA.global.media.map((m) => m.code)).map(queryblock).join('')
-  }
-
-  /**
-   * Automate track counts (column-count, grid-template-columns, etc).
-   * @param  {string} prop abbreviation for css property
-   * @param  {function(number)=string} mixin function outputting the css value
-   */
-  Bangs.generateTrackCounts = function generateTrackCounts(prop, mixin) {
-    /**
-     * Return a media query containing rulesets.
-     * If no suffix is given, the media query will be ommitted (equivalent to `@media all`).
-     * @param  {string=''} suffix media query code, e.g. ('-sK')
-     * @return {string} complete css media query as a string
-     */
-    function media(suffix) {
-      suffix = suffix || ''
-      const DENOMS = Bangs.DATA.global.common.tracks
-      let rulesets = []
-      for (let i = 0; i < DENOMS.length; i++) {
-        let classname = `.-${prop}-${DENOMS[i]}${(suffix) ? `-${suffix}` : ''}`
-        // if suffix, include non-suffixed class; else, write new declaration
-        let declaration = (suffix) ? classname.split('-').slice(0,-1).join('-') : `${mixin.call(null, DENOMS[i])} !important`
-        rulesets.push(`${classname} { ${declaration}; }`)
-      }
-      return (suffix) ? `
-        @media ${Bangs.DATA.global.media.find(function (el) { return el.code === suffix}).query} {
-          ${rulesets.join('\n')}
-        }
-      ` : rulesets.join('\n')
-    }
-    return [''].concat(Bangs.DATA.global.media.map(function (el) { return el.code })).map(media).join('')
+    }).join('')
   }
 
   return Bangs
