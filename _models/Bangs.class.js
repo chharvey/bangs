@@ -1,3 +1,5 @@
+var Util = require('./Util.class.js')
+
 module.exports = (function () {
   /**
    * A set of static members used for the site.
@@ -7,92 +9,89 @@ module.exports = (function () {
   function Bangs() {}
 
   /**
-   * This project’s data as JSON.
+   * This project’s data, compiled from raw JSON.
+   * NOTE: WARNING: IMPURE FUNCTION (modifies parameter).
+   * Call functions on CSS properties, pushing entries to their `values` arrays.
+   * The function called on each CSS property is specified by items in its `generators` array.
+   * See `/bangs.json` for more information
    * @type {Object}
    */
-  Bangs.DATA = require('../bangs.json')
-
-  /**
-   * Automate track fractions.
-   * Fractions can be percentages, or in another unit such as `vw`.
-   * @param  {string} prop abbreviation for css property
-   * @param  {function(number)=string} mixin function outputting the css value
-   * @param  {Function} callback callback function to call after execution. standard callback params.
-   */
-  Bangs.generateTrackFracsAsync = function generateFracsAsync(prop, mixin, callback) {
+  Bangs.DATA = (function compileData(data) {
     /**
-     * Return a media query containing rulesets.
-     * If no suffix is given, the media query will be ommitted (equivalent to `@media all`).
-     * @param  {string=''} suffix media query code, e.g. ('-sK')
-     * @return {string} complete css media query as a string
+     * Automate track fractions.
+     * Fractions can be percentages or any length unit, depending on the mixin passed.
+     * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
+     * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
+     * @param  {?function(string)=string} mixin function outputting the css value
      */
-    function media(suffix) {
-      suffix = suffix || ''
-      const DENOMS = Bangs.DATA.global.common.tracks
-      let unique_values = []
-      let rulesets = []
-      for (let i = 0; i < DENOMS.length; i++) {
-        for (let j = 1; j <= DENOMS[i]; j++) {
-          let fraction = j/DENOMS[i]
-          let classname = `.-${prop}-${j}o${DENOMS[i]}${(suffix) ? `-${suffix}` : ''}`
-          let selector = unique_values.find(function (el) { return el.value === fraction })
-          if (selector) {
-            selector.classes.push(classname)
+    function generateFracValues(mixin) {
+      const _DENOMS = data.global.common.tracks
+      for (let i = 0; i < _DENOMS.length; i++) {
+        for (let j = 1; j <= _DENOMS[i]; j++) {
+          let newvalue = {
+            name: `${Math.round(10000 * (j/_DENOMS[i]))/100}%`
+          , code: `${j}o${_DENOMS[i]}`
+          }
+          if (mixin) newvalue.use = mixin.call(null, `(${j}/${_DENOMS[i]})`)
+          let value = this.values.find((v) => v.name===newvalue.name)
+          if (value) {
+            if (!value.codes) { // type(codes) == Array<string>; type(code) == <string>
+              value.codes = [value.code]
+              value.code = ''
+            }
+            value.codes.push(newvalue.code)
           } else {
-            unique_values.push({ value: fraction, classes: [classname] })
+            this.values.push(newvalue)
           }
         }
       }
-      for (let selector of unique_values) {
-        let rule = (suffix) ? selector.classes[0].split('-').slice(0,-1).join('-') : `${mixin.call(null, selector.value)} !important`
-        rulesets.push(`${selector.classes.join(', ')} { ${rule}; }`)
-      }
-      return (suffix) ? `
-        @media ${Bangs.DATA.global.media.find(function (el) { return el.code === suffix}).query} {
-          ${rulesets.join('\n')}
+    }
+    /**
+     * Automate counts.
+     * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
+     * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
+     * @param  {?function(number)=string} namefn function determining the value name
+     * @param  {?function(number)=string} usefn  function determining the value use
+     */
+    function generateCountValues(namefn, usefn) {
+      const _DENOMS = data.global.common.tracks
+      for (let i = 0; i < _DENOMS.length; i++) {
+        let newvalue = {
+          name: (namefn) ? namefn.call(null, _DENOMS[i]) : _DENOMS[i].toString()
+        , code: _DENOMS[i].toString()
         }
-      ` : rulesets.join('\n')
+        if (usefn) newvalue.use = usefn.call(null, _DENOMS[i])
+        this.values.push(newvalue)
+      }
     }
-    try {
-      callback.call(null, null, [''].concat(Bangs.DATA.global.media.map(function (el) { return el.code })).map(media).join(''))
-    } catch (e) {
-      callback.call(null, e, null)
+    for (let property of data.properties) {
+      for (let generator of (property.generators || [])) {
+        eval(generator.name).call(property, ...generator.args.map(eval))
+      }
     }
-  }
+    return data
+  })(Util.cloneDeep(require('../bangs.json')))
 
   /**
-   * Automate track counts (column-count, grid-template-columns, etc).
-   * @param  {string} prop abbreviation for css property
-   * @param  {function(number)=string} mixin function outputting the css value
-   * @param  {Function} callback callback function to call after execution. standard callback params.
+   * Generate Less from the compiled data.
+   * @param  {string} prop css property name
    */
-  Bangs.generateTrackCountsAsync = function generateCountsAsync(prop, mixin, callback) {
-    /**
-     * Return a media query containing rulesets.
-     * If no suffix is given, the media query will be ommitted (equivalent to `@media all`).
-     * @param  {string=''} suffix media query code, e.g. ('-sK')
-     * @return {string} complete css media query as a string
-     */
-    function media(suffix) {
-      suffix = suffix || ''
-      const DENOMS = Bangs.DATA.global.common.tracks
+  Bangs.generateLess = function generateLess(prop) {
+    let property = Bangs.DATA.properties.find((p) => p.name===prop)
+    return [''].concat(Bangs.DATA.global.media.map((m) => m.code)).map(function queryblock(suffix) {
       let rulesets = []
-      for (let i = 0; i < DENOMS.length; i++) {
-        let classname = `.-${prop}-${DENOMS[i]}${(suffix) ? `-${suffix}` : ''}`
-        let rule = (suffix) ? classname.split('-').slice(0,-1).join('-') : `${mixin.call(null, DENOMS[i])} !important`
-        rulesets.push(`${classname} { ${rule}; }`)
+      for (let value of property.values) {
+        let codes_arr = value.codes || [value.code || Bangs.DATA.global.values.find((v) => v.name===value.name).code]
+        let classes = codes_arr.map((c) => `.-${property.code}-${c}${(suffix) ? `-${suffix}` : ''}`).join(', ')
+        let declaration = (suffix) ? `.-${property.code}-${codes_arr[0]}` : `${value.use || `${property.name}: ${value.name}`} !important`
+        rulesets.push(`${classes} { ${declaration}; }`)
       }
       return (suffix) ? `
-        @media ${Bangs.DATA.global.media.find(function (el) { return el.code === suffix}).query} {
+        @media ${Bangs.DATA.global.media.find((m) => m.code===suffix).query} {
           ${rulesets.join('\n')}
         }
       ` : rulesets.join('\n')
-    }
-    try {
-      callback.call(null, null, [''].concat(Bangs.DATA.global.media.map(function (el) { return el.code })).map(media).join(''))
-    } catch (e) {
-      callback.call(null, e, null)
-    }
+    }).join('')
   }
 
   return Bangs
