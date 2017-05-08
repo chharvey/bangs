@@ -81,11 +81,9 @@ module.exports = (function () {
     return [''].concat(Bangs.DATA.global.media.map((m) => m.code)).map(function queryblock(suffix) {
       let rulesets = []
       for (let value of property.values) {
-        if (!value.codes) {
-          value.codes = [value.code || Bangs.DATA.global.values.find((v) => v.name===value.name).code]
-        }
-        let classes = value.codes.map((c) => `.-${property.code}-${c}${(suffix) ? `-${suffix}` : ''}`).join(', ')
-        let declaration = (suffix) ? `.-${property.code}-${value.codes[0]}` : `${value.use || `${property.name}: ${value.name}`} !important`
+        let codes_arr = value.codes || [value.code || Bangs.DATA.global.values.find((v) => v.name===value.name).code]
+        let classes = codes_arr.map((c) => `.-${property.code}-${c}${(suffix) ? `-${suffix}` : ''}`).join(', ')
+        let declaration = (suffix) ? `.-${property.code}-${codes_arr[0]}` : `${value.use || `${property.name}: ${value.name}`} !important`
         rulesets.push(`${classes} { ${declaration}; }`)
       }
       return (suffix) ? `

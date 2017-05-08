@@ -63,9 +63,8 @@ block append main
           include ../node_modules/xmeter/_views/_c-Permalink.view.pug
           //- +permalink(id)
         each propertypage in subpage.findAll()
-          - let property = Bangs.DATA.properties.find(function (p) { return p.name === propertypage.name() })
+          - let property = Bangs.DATA.properties.find((p) => p.name===propertypage.name())
           if property
-            - let stab = Bangs.DATA.global.stability_levels[property.stability]
             section.c-Property(id=property.name)
               h4.-fz-giga
                 = property.name
@@ -77,23 +76,33 @@ block append main
                   small.c-Label.c-Label--inherited
                     a(title="read about inherited properties" href="https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance" rel="external")
                       | inherited
-              +stabilityLevel(stab)
+              +stabilityLevel(Bangs.DATA.global.stability_levels[property.stability])
               dl.c-Property__Classes
-                each val in Bangs.DATA.global.values
-                  dt: code= `.-${property.code}-${val.code}`
-                  dd: code= val.name
-                each val in property.values.filter(function (v) { return Bangs.DATA.global.values.every(function (u) { return u.name !== v.name }) })
-                  dt
-                    code= `.-${property.code}-${val.code}`
-                    if val.stability >= 0
-                      - let kwd = Bangs.DATA.global.stability_levels[val.stability].name
-                      small.c-Label(class=`t-stability-${kwd}`): b= kwd
-                  dd
-                    code= val.name
-                    if val.name === property.initial
-                      small.c-Label.c-Label--initial
-                        a(title="read about initial values" href="https://developer.mozilla.org/en-US/docs/Web/CSS/initial_value" rel="external")
-                          | initial value
+                - function classname(val) { return `.-${property.code}-${val}` }
+                mixin initialMarker(keyword)
+                  if keyword === property.initial
+                    small.c-Label.c-Label--initial
+                      a(title="read about initial values" href="https://developer.mozilla.org/en-US/docs/Web/CSS/initial_value" rel="external")
+                        | initial value
+                each value in Bangs.DATA.global.values
+                  dt: code= classname(value.code)
+                  dd: code= value.name
+                each value in property.values.filter((v) => Bangs.DATA.global.values.every((u) => u.name!==v.name))
+                  if !value.codes
+                    dt
+                      code= classname(value.code)
+                      if value.stability >= 0
+                        - let stab = Bangs.DATA.global.stability_levels[value.stability]
+                        small.c-Label(class=`t-stability-${stab.name}` title=stab.description): b= stab.name
+                    dd
+                      code= value.name
+                      +initialMarker(value.name)
+                  else
+                    each code in value.codes
+                      dt: code= classname(code)
+                      dd
+                        code= value.name
+                        +initialMarker(value.name)
               if (property.media && property.media.length) || (property.pseudo && property.pseudo.length)
                 dl.c-Property__Classes.c-Property__Classes--suffixes
                   each ext in property.media || []
