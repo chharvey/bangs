@@ -82,9 +82,28 @@ module.exports = (function () {
       let rulesets = []
       for (let value of property.values) {
         let codes_arr = value.codes || [value.code || Bangs.DATA.global.values.find((v) => v.name===value.name).code]
-        let classes = codes_arr.map((c) => `.-${property.code}-${c}${(suffix) ? `-${suffix}` : ''}`).join(', ')
-        let declaration = (suffix) ? `.-${property.code}-${codes_arr[0]}` : `${value.use || `${property.name}: ${value.name}`} !important`
-        rulesets.push(`${classes} { ${declaration}; }`)
+        let selector = codes_arr.map((c) => `.-${property.code}-${c}${(suffix) ? `-${suffix}` : ''}`).join(', ')
+        let rules = (suffix) ? `.-${property.code}-${codes_arr[0]}`
+        : (function () {
+            function declaration(val) {
+              return (property.fallback) ?
+                new Function(...property.fallback).call(null, val) : `${property.name}: ${val}`
+            }
+            let global_fallback = ({
+              'initial': (function () {
+                  let has_initial = property.values.find((v) => v.name===property.initial)
+                  return (has_initial) ? `.-${property.code}-${has_initial.code}` : declaration(property.initial)
+                })()
+            , 'unset'  : `.-${property.code}-${Bangs.DATA.global.values.find((v) => v.name===(
+                (property.inherited) ? 'inherit' : 'initial'
+              )).code}`
+            })[value.name]
+            return (
+              ( (global_fallback) ? global_fallback + '; ' : '' )
+            + ( ((value.use) ? value.use : declaration(value.name)) + ' !important;' )
+            )
+          })()
+        rulesets.push(`${selector} { ${rules}; }`)
       }
       return (suffix) ? `
         @media ${Bangs.DATA.global.media.find((m) => m.code===suffix).query} {
