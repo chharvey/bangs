@@ -11,9 +11,10 @@ module.exports = (function () {
   /**
    * This project’s data, compiled from raw JSON.
    * NOTE: WARNING: IMPURE FUNCTION (modifies parameter).
-   * Call functions on CSS properties, pushing entries to their `values` arrays.
+   * 1) Call functions on CSS properties, pushing entries to their `values` arrays.
    * The function called on each CSS property is specified by items in its `generators` array.
    * See `/bangs.json` for more information
+   * 2) adds global values to individual properties
    * @type {Object}
    */
   Bangs.DATA = (function compileData(data) {
@@ -65,6 +66,9 @@ module.exports = (function () {
       }
     }
     for (let property of data.properties) {
+      // push global values
+      property.values.unshift(...data.global.values)
+      // push automated values
       for (let generator of (property.generators || [])) {
         eval(generator.name).call(property, ...generator.args.map((el) => (el) ? new Function(...el) : null))
       }
@@ -94,7 +98,7 @@ module.exports = (function () {
                   let has_initial = property.values.find((v) => v.name===property.initial)
                   return (has_initial) ? `.-${property.code}-${has_initial.code}` : declaration(property.initial)
                 })()
-            , 'unset'  : `.-${property.code}-${Bangs.DATA.global.values.find((v) => v.name===(
+            , 'unset': `.-${property.code}-${Bangs.DATA.global.values.find((v) => v.name===(
                 (property.inherited) ? 'inherit' : 'initial'
               )).code}`
             })[value.name]

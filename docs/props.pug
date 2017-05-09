@@ -78,31 +78,28 @@ block append main
                       | inherited
               +stabilityLevel(Bangs.DATA.global.stability_levels[property.stability])
               dl.c-Property__Classes
-                - function classname(val) { return `.-${property.code}-${val}` }
                 mixin initialMarker(keyword)
                   if keyword === property.initial
                     small.c-Label.c-Label--initial
                       a(title="read about initial values" href="https://developer.mozilla.org/en-US/docs/Web/CSS/initial_value" rel="external")
                         | initial value
-                each value in Bangs.DATA.global.values
-                  dt: code= classname(value.code)
-                  dd: code= value.name
-                each value in property.values.filter((v) => Bangs.DATA.global.values.every((u) => u.name!==v.name))
-                  if !value.codes
+                each value in property.values
+                  - function classname(val) { return `.-${property.code}-${val}` }
+                  mixin item(code)
                     dt
-                      code= classname(value.code)
+                      code= classname(code)
                       if value.stability >= 0
                         - let stab = Bangs.DATA.global.stability_levels[value.stability]
                         small.c-Label(class=`t-stability-${stab.name}` title=stab.description): b= stab.name
                     dd
                       code= value.name
                       +initialMarker(value.name)
+                    dd(class=classname(code).slice(1)): span(class=classname(code).slice(1)) test
+                  if !value.codes
+                    +item(value.code)
                   else
-                    each code in value.codes
-                      dt: code= classname(code)
-                      dd
-                        code= value.name
-                        +initialMarker(value.name)
+                    each c in value.codes
+                      +item(c)
               if (property.media && property.media.length) || (property.pseudo && property.pseudo.length)
                 dl.c-Property__Classes.c-Property__Classes--suffixes
                   each ext in property.media || []
