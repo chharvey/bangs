@@ -83,7 +83,16 @@ module.exports = (function () {
       for (let value of property.values) {
         let codes_arr = value.codes || [value.code || Bangs.DATA.global.values.find((v) => v.name===value.name).code]
         let classes = codes_arr.map((c) => `.-${property.code}-${c}${(suffix) ? `-${suffix}` : ''}`).join(', ')
-        let declaration = (suffix) ? `.-${property.code}-${codes_arr[0]}` : `${value.use || `${property.name}: ${value.name}`} !important`
+        let declaration = (suffix) ? `.-${property.code}-${codes_arr[0]}`
+        : (function () {
+            let fallback = ({
+              'initial': `.-${property.code}-${property.values.find((v) => v.name===property.initial).code}; `
+            , 'unset'  : (property.inherited) ?
+                `.-${property.code}-${Bangs.DATA.global.values.find((v) => v.name==='inherit').code}; `
+              : `.-${property.code}-${Bangs.DATA.global.values.find((v) => v.name==='initial').code}; `
+            })[value.name]
+            return (fallback || '') + `${value.use || `${property.name}: ${value.name}`} !important`
+          })()
         rulesets.push(`${classes} { ${declaration}; }`)
       }
       return (suffix) ? `
