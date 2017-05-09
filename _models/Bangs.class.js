@@ -22,9 +22,9 @@ module.exports = (function () {
      * Fractions can be percentages or any length unit, depending on the mixin passed.
      * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
      * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
-     * @param  {?function(string)=string} mixin function outputting the css value
+     * @param  {?function(string)=string} usefn  function determining the value use
      */
-    function generateFracValues(mixin) {
+    function generateFracValues(usefn) {
       const _DENOMS = data.global.common.tracks
       for (let i = 0; i < _DENOMS.length; i++) {
         for (let j = 1; j <= _DENOMS[i]; j++) {
@@ -32,7 +32,7 @@ module.exports = (function () {
             name: `${Math.round(10000 * (j/_DENOMS[i]))/100}%`
           , code: `${j}o${_DENOMS[i]}`
           }
-          if (mixin) newvalue.use = mixin.call(null, `(${j}/${_DENOMS[i]})`)
+          if (usefn) newvalue.use = usefn.call(null, `(${j}/${_DENOMS[i]} * 100%)`)
           let value = this.values.find((v) => v.name===newvalue.name)
           if (value) {
             if (!value.codes) { // type(codes) == Array<string>; type(code) == <string>
@@ -66,7 +66,7 @@ module.exports = (function () {
     }
     for (let property of data.properties) {
       for (let generator of (property.generators || [])) {
-        eval(generator.name).call(property, ...generator.args.map(eval))
+        eval(generator.name).call(property, ...generator.args.map((el) => (el) ? new Function(...el) : null))
       }
     }
     return data

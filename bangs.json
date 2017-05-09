@@ -468,7 +468,7 @@
     , "generators": [
         {
           "name": "generateCountValues"
-        , "args": [null, "(val) => `.column-count(${val})`"]
+        , "args": [null, null]
         }
       ]
     , "fallback": ["val", "return `.column-count(${val})`"]
@@ -699,7 +699,7 @@
     , "generators": [
         {
           "name": "generateFracValues"
-        , "args": ["(val) => `.flex(${val} * 100%)`"]
+        , "args": [["percentage", "return `.flex(${percentage})`"]]
         }
       ]
     , "fallback": ["val", "return `.flex(${val})`"]
@@ -938,7 +938,7 @@
     , "generators": [
         {
           "name": "generateCountValues"
-        , "args": ["(val) => `repeat(${val}, 1fr)`", "(val) => `.grid-template-columns(repeat(${val}, 1fr))`"]
+        , "args": [["number", "return `repeat(${number}, 1fr)`"], null]
         }
       ]
     , "fallback": ["val", "return `.grid-template-columns(${val})`"]
@@ -971,7 +971,7 @@
     , "generators": [
         {
           "name": "generateCountValues"
-        , "args": ["(val) => `repeat(${val}, 1fr)`", "(val) => `.grid-template-rows(repeat(${val}, 1fr))`"]
+        , "args": [["number", "return `repeat(${number}, 1fr)`"], null]
         }
       ]
     , "fallback": ["val", "return `.grid-template-rows(${val})`"]
@@ -1751,7 +1751,7 @@
     , "generators": [
         {
           "name": "generateFracValues"
-        , "args": ["(val) => `width: (${val} * 100%)`"]
+        , "args": [["percentage", "return `width: ${percentage}`"]]
         }
       ]
     , "media": [
