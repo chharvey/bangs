@@ -1026,6 +1026,18 @@
       ]
     , "fallback": ["val", "return `.grid-row-gap(${val})`"]
     , "media": [
+        "screen"
+      , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
