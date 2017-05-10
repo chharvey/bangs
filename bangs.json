@@ -43,23 +43,31 @@
     , "initial"  : "normal"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit"      ,               "use": ".align-content(inherit);"       }
-      , { "name": "initial"      ,               "use": ".align-content(initial);"       }
-      , { "name": "unset"        ,               "use": ".align-content(unset);"         }
-      , { "name": "normal"       , "code": "n" , "use": ".align-content(normal);"        }
-      , { "name": "center"       , "code": "c" , "use": ".align-content(center);"        }
-      , { "name": "start"        , "code": "s" , "use": ".align-content(start);"         }
-      , { "name": "end"          , "code": "e" , "use": ".align-content(end);"           }
-      , { "name": "stretch"      , "code": "st", "use": ".align-content(stretch);"       }
-      , { "name": "space-between", "code": "sb", "use": ".align-content(space-between);" }
-      , { "name": "space-around" , "code": "sa", "use": ".align-content(space-around);"  }
-      , { "name": "space-evenly" , "code": "sv", "use": ".align-content(space-evenly);"  }
-      , { "name": "flex-start"   , "code": "xs", "use": ".align-content(flex-start);"    }
-      , { "name": "flex-end"     , "code": "xe", "use": ".align-content(flex-end);"      }
+        { "name": "normal"       , "code": "n"  }
+      , { "name": "center"       , "code": "c"  }
+      , { "name": "start"        , "code": "s"  }
+      , { "name": "end"          , "code": "e"  }
+      , { "name": "stretch"      , "code": "st" }
+      , { "name": "space-between", "code": "sb" }
+      , { "name": "space-around" , "code": "sa" }
+      , { "name": "space-evenly" , "code": "sv" }
+      , { "name": "flex-start"   , "code": "xs" }
+      , { "name": "flex-end"     , "code": "xe" }
       ]
+    , "fallback": ["val", "return `.align-content(${val})`"]
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -71,22 +79,30 @@
     , "initial"  : "normal"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit"      ,               "use": ".align-items(inherit);"       }
-      , { "name": "initial"      ,               "use": ".align-items(initial);"       }
-      , { "name": "unset"        ,               "use": ".align-items(unset);"         }
-      , { "name": "normal"       , "code": "n" , "use": ".align-items(normal);"        }
-      , { "name": "center"       , "code": "c" , "use": ".align-items(center);"        }
-      , { "name": "start"        , "code": "s" , "use": ".align-items(start);"         }
-      , { "name": "end"          , "code": "e" , "use": ".align-items(end);"           }
-      , { "name": "stretch"      , "code": "st", "use": ".align-items(stretch);"       }
-      , { "name": "flex-start"   , "code": "xs", "use": ".align-items(flex-start);"    }
-      , { "name": "flex-end"     , "code": "xe", "use": ".align-items(flex-end);"      }
-      , { "name": "self-start"   , "code": "ss", "use": ".align-items(self-start);"    }
-      , { "name": "self-end"     , "code": "se", "use": ".align-items(self-end);"      }
+        { "name": "normal"       , "code": "n"  }
+      , { "name": "center"       , "code": "c"  }
+      , { "name": "start"        , "code": "s"  }
+      , { "name": "end"          , "code": "e"  }
+      , { "name": "stretch"      , "code": "st" }
+      , { "name": "flex-start"   , "code": "xs" }
+      , { "name": "flex-end"     , "code": "xe" }
+      , { "name": "self-start"   , "code": "ss" }
+      , { "name": "self-end"     , "code": "se" }
       ]
+    , "fallback": ["val", "return `.align-items(${val})`"]
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -98,23 +114,31 @@
     , "initial"  : "auto"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit"      ,               "use": ".align-self(inherit);"       }
-      , { "name": "initial"      ,               "use": ".align-self(initial);"       }
-      , { "name": "unset"        ,               "use": ".align-self(unset);"         }
-      , { "name": "auto"         , "code": "a" , "use": ".align-self(auto);"          }
-      , { "name": "normal"       , "code": "n" , "use": ".align-self(normal);"        }
-      , { "name": "center"       , "code": "c" , "use": ".align-self(center);"        }
-      , { "name": "start"        , "code": "s" , "use": ".align-self(start);"         }
-      , { "name": "end"          , "code": "e" , "use": ".align-self(end);"           }
-      , { "name": "stretch"      , "code": "st", "use": ".align-self(stretch);"       }
-      , { "name": "flex-start"   , "code": "xs", "use": ".align-self(flex-start);"    }
-      , { "name": "flex-end"     , "code": "xe", "use": ".align-self(flex-end);"      }
-      , { "name": "self-start"   , "code": "ss", "use": ".align-self(self-start);"    }
-      , { "name": "self-end"     , "code": "se", "use": ".align-self(self-end);"      }
+        { "name": "auto"         , "code": "a"  }
+      , { "name": "normal"       , "code": "n"  }
+      , { "name": "center"       , "code": "c"  }
+      , { "name": "start"        , "code": "s"  }
+      , { "name": "end"          , "code": "e"  }
+      , { "name": "stretch"      , "code": "st" }
+      , { "name": "flex-start"   , "code": "xs" }
+      , { "name": "flex-end"     , "code": "xe" }
+      , { "name": "self-start"   , "code": "ss" }
+      , { "name": "self-end"     , "code": "se" }
       ]
+    , "fallback": ["val", "return `.align-self(${val})`"]
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -133,6 +157,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -151,6 +185,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -170,6 +214,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     , "pseudo": [
         "hover"
@@ -189,6 +243,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -207,6 +271,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -236,6 +310,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -247,16 +331,16 @@
     , "initial"  : "repeat"
     , "stability": 2
     , "values"   : [
-        { "name": "repeat"   , "code": "r"  , "alt": "background-repeat: repeat    repeat   ;" }
-      , { "name": "no-repeat", "code": "nr" , "alt": "background-repeat: no-repeat no-repeat;" }
-      , { "name": "space"    , "code": "sp" , "alt": "background-repeat: space     space    ;" }
-      , { "name": "round"    , "code": "rd" , "alt": "background-repeat: round     round    ;" }
-      , { "name": "repeat-x" , "code": "rx" , "alt": "background-repeat: repeat no-repeat;" }
-      , { "name": "repeat-y" , "code": "ry" , "alt": "background-repeat: no-repeat repeat;" }
-      , { "name": "space-x"  , "code": "spx", "use": "background-repeat: space no-repeat ;" }
-      , { "name": "space-y"  , "code": "spy", "use": "background-repeat: no-repeat space ;" }
-      , { "name": "round-x"  , "code": "rdx", "use": "background-repeat: round no-repeat ;" }
-      , { "name": "round-y"  , "code": "rdy", "use": "background-repeat: no-repeat round ;" }
+        { "name": "repeat"   , "code": "r"  , "alt": "background-repeat: repeat    repeat   " }
+      , { "name": "no-repeat", "code": "nr" , "alt": "background-repeat: no-repeat no-repeat" }
+      , { "name": "space"    , "code": "sp" , "alt": "background-repeat: space     space    " }
+      , { "name": "round"    , "code": "rd" , "alt": "background-repeat: round     round    " }
+      , { "name": "repeat-x" , "code": "rx" , "alt": "background-repeat: repeat no-repeat" }
+      , { "name": "repeat-y" , "code": "ry" , "alt": "background-repeat: no-repeat repeat" }
+      , { "name": "space-x"  , "code": "spx", "use": "background-repeat: space no-repeat " }
+      , { "name": "space-y"  , "code": "spy", "use": "background-repeat: no-repeat space " }
+      , { "name": "round-x"  , "code": "rdx", "use": "background-repeat: round no-repeat " }
+      , { "name": "round-y"  , "code": "rdy", "use": "background-repeat: no-repeat round " }
       , { "name": "repeat space" , "code": "r_sp"  }
       , { "name": "repeat round" , "code": "r_rd"  }
       , { "name": "space  repeat", "code": "sp_r"  }
@@ -267,6 +351,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -285,6 +379,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -304,6 +408,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -323,6 +437,18 @@
       , { "name": "50%"    , "code": "1o2" }
       ]
     , "media": [
+        "screen"
+      , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -348,6 +474,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -367,6 +503,18 @@
       , { "name": "16px" , "code": "g" }
       ]
     , "media": [
+        "screen"
+      , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -384,6 +532,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -400,6 +558,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -417,6 +585,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -436,6 +614,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -455,6 +643,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     , "pseudo": [
         "hover"
@@ -469,16 +667,15 @@
     , "initial"  : "auto"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit",              "use": ".column-count(inherit)" }
-      , { "name": "initial",              "use": ".column-count(initial)" }
-      , { "name": "auto"   , "code": "a", "use": ".column-count(auto)"    }
+        { "name": "auto", "code": "a" }
       ]
     , "generators": [
         {
           "name": "generateCountValues"
-        , "args": [null, "(val) => `.column-count(${val})`"]
+        , "args": [null, null]
         }
       ]
+    , "fallback": ["val", "return `.column-count(${val})`"]
     , "media": [
         "screen"
       , "print"
@@ -503,13 +700,23 @@
     , "initial"  : "balance"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit",              "use": ".column-fill(inherit);" }
-      , { "name": "initial",              "use": ".column-fill(initial);" }
-      , { "name": "unset"  ,              "use": ".column-fill(unset);"   }
-      , { "name": "balance", "code": "b", "use": ".column-fill(balance);" }
-      , { "name": "auto"   , "code": "a", "use": ".column-fill(auto);"    }
+        { "name": "balance", "code": "b" }
+      , { "name": "auto"   , "code": "a" }
       ]
+    , "fallback": ["val", "return `.column-fill(${val})`"]
     , "media": [
+        "screen"
+      , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -521,20 +728,30 @@
     , "initial"  : "normal"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit",              "use": ".column-gap(inherit);" }
-      , { "name": "initial",              "use": ".column-gap(initial);" }
-      , { "name": "unset"  ,              "use": ".column-gap(unset);"   }
-      , { "name": "normal" , "code": "n", "use": ".column-gap(normal);"  }
-      , { "name": "0"      , "code": "z", "use": ".column-gap(0);"       }
-      , { "name": "0.25rem", "code": "q", "use": ".column-gap(0.25rem);" }
-      , { "name": "0.5rem" , "code": "h", "use": ".column-gap(0.5rem);"  }
-      , { "name": "1rem"   , "code": "1", "use": ".column-gap(1rem);"    }
-      , { "name": "2rem"   , "code": "2", "use": ".column-gap(2rem);"    }
-      , { "name": "4rem"   , "code": "4", "use": ".column-gap(4rem);"    }
-      , { "name": "8rem"   , "code": "8", "use": ".column-gap(8rem);"    }
-      , { "name": "16rem"  , "code": "g", "use": ".column-gap(16rem);"   }
+        { "name": "normal" , "code": "n" }
+      , { "name": "0"      , "code": "z" }
+      , { "name": "0.25rem", "code": "q" }
+      , { "name": "0.5rem" , "code": "h" }
+      , { "name": "1rem"   , "code": "1" }
+      , { "name": "2rem"   , "code": "2" }
+      , { "name": "4rem"   , "code": "4" }
+      , { "name": "8rem"   , "code": "8" }
+      , { "name": "16rem"  , "code": "g" }
       ]
+    , "fallback": ["val", "return `.column-gap(${val})`"]
     , "media": [
+        "screen"
+      , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -546,15 +763,25 @@
     , "initial"  : "currentColor"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit",                   "use": ".column-rule-color(inherit);" }
-      , { "name": "initial",                   "use": ".column-rule-color(initial);" }
-      , { "name": "unset"  ,                   "use": ".column-rule-color(unset);"   }
-      , { "name": "transparent" , "code": "t" }
+        { "name": "transparent" , "code": "t" }
       , { "name": "currentColor", "code": "c" }
       , { "name": "#000"        , "code": "b" }
       , { "name": "#fff"        , "code": "w" }
       ]
+    , "fallback": ["val", "return `.column-rule-color(${val})`"]
     , "media": [
+        "screen"
+      , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -566,10 +793,7 @@
     , "initial"  : "none"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit",              "use": ".column-rule-style(inherit);" }
-      , { "name": "initial",              "use": ".column-rule-style(initial);" }
-      , { "name": "unset"  ,              "use": ".column-rule-style(unset);"   }
-      , { "name": "none"   , "code": "n"  }
+        { "name": "none"   , "code": "n"  }
       , { "name": "hidden" , "code": "h"  }
       , { "name": "solid"  , "code": "s"  }
       , { "name": "dotted" , "code": "do" }
@@ -580,7 +804,20 @@
       , { "name": "inset"  , "code": "is" }
       , { "name": "outset" , "code": "os" }
       ]
+    , "fallback": ["val", "return `.column-rule-style(${val})`"]
     , "media": [
+        "screen"
+      , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -592,17 +829,27 @@
     , "initial"  : "medium"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit",              "use": ".column-rule-width(inherit);" }
-      , { "name": "initial",              "use": ".column-rule-width(initial);" }
-      , { "name": "unset"  ,              "use": ".column-rule-width(unset);"   }
-      , { "name": "0"      , "code": "z", "use": ".column-rule-width(0);"       }
-      , { "name": "1px"    , "code": "1", "use": ".column-rule-width(1px);"     }
-      , { "name": "2px"    , "code": "2", "use": ".column-rule-width(2px);"     }
-      , { "name": "4px"    , "code": "4", "use": ".column-rule-width(4px);"     }
-      , { "name": "8px"    , "code": "8", "use": ".column-rule-width(8px);"     }
-      , { "name": "16px"   , "code": "g", "use": ".column-rule-width(16px);"    }
+        { "name": "0"   , "code": "z" }
+      , { "name": "1px" , "code": "1" }
+      , { "name": "2px" , "code": "2" }
+      , { "name": "4px" , "code": "4" }
+      , { "name": "8px" , "code": "8" }
+      , { "name": "16px", "code": "g" }
       ]
+    , "fallback": ["val", "return `.column-rule-width(${val})`"]
     , "media": [
+        "screen"
+      , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -614,13 +861,23 @@
     , "initial"  : "none"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit",              "use": ".column-span(inherit);" }
-      , { "name": "initial",              "use": ".column-span(initial);" }
-      , { "name": "unset"  ,              "use": ".column-span(unset);"   }
-      , { "name": "none"   , "code": "n", "use": ".column-span(none);"    }
-      , { "name": "all"    , "code": "a", "use": ".column-span(all);"     }
+        { "name": "none", "code": "n" }
+      , { "name": "all" , "code": "a" }
       ]
+    , "fallback": ["val", "return `.column-span(${val})`"]
     , "media": [
+        "screen"
+      , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -632,11 +889,10 @@
     , "initial"  : "auto"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit",              "use": ".column-width(inherit);" }
-      , { "name": "initial",              "use": ".column-width(initial);" }
-      , { "name": "auto"   , "code": "a", "use": ".column-width(auto);"    }
-      , { "name": "0"      , "code": "z", "use": ".column-width(0);"       }
+        { "name": "auto", "code": "a" }
+      , { "name": "0"   , "code": "z" }
       ]
+    , "fallback": ["val", "return `.column-width(${val})`"]
     , "media": [
         "screen"
       , "print"
@@ -671,21 +927,21 @@
       , { "name": "table"              , "code": "t"  , "stability": 0 }
       , { "name": "flex"               , "code": "x"  ,                 "use": ".flexbox()" }
       , { "name": "grid"               , "code": "g"  ,                 "use": ".grid()"    }
-      , { "name": "list-item"          , "code": "s"                   }
-      , { "name": "list-item flow-root", "code": "s_o"                 }
-      , { "name": "list-item inline"   , "code": "s_l"                 }
-      , { "name": "inline-block"       , "code": "lb" , "stability": 1 }
-      , { "name": "inline-list-item"   , "code": "ls" , "stability": 1 }
-      , { "name": "inline-table"       , "code": "lt" , "stability": 1 }
-      , { "name": "inline-flex"        , "code": "lf" , "stability": 1 }
-      , { "name": "inline-grid"        , "code": "lg" , "stability": 1 }
-      , { "name": "table-row"          , "code": "tr" , "stability": 0 }
-      , { "name": "table-column"       , "code": "tl" , "stability": 0 }
-      , { "name": "table-cell"         , "code": "tc" , "stability": 0 }
       , { "name": "table-row-group"    , "code": "trg", "stability": 0 }
       , { "name": "table-header-group" , "code": "thg", "stability": 0 }
       , { "name": "table-footer-group" , "code": "tfg", "stability": 0 }
+      , { "name": "table-row"          , "code": "tr" , "stability": 0 }
+      , { "name": "table-cell"         , "code": "tc" , "stability": 0 }
       , { "name": "table-column-group" , "code": "tlg", "stability": 0 }
+      , { "name": "table-column"       , "code": "tl" , "stability": 0 }
+      , { "name": "list-item"          , "code": "s"                   }
+      , { "name": "list-item flow-root", "code": "s_o"                 }
+      , { "name": "list-item inline"   , "code": "s_l"                 }
+      , { "name": "inline-block"       , "code": "lb" , "stability": 1, "alt": "display: inline flow-root" }
+      , { "name": "inline-list-item"   , "code": "ls" , "stability": 1, "alt": "display: list-item inline flow" }
+      , { "name": "inline-table"       , "code": "lt" , "stability": 1, "alt": "display: inline table" }
+      , { "name": "inline-flex"        , "code": "lf" , "stability": 1, "alt": "display: inline flex" }
+      , { "name": "inline-grid"        , "code": "lg" , "stability": 1, "alt": "display: inline grid" }
       ]
     , "media": [
         "screen"
@@ -694,10 +950,12 @@
       , "medium+"
       , "large+"
       , "xlarge+"
+      , "xxlarge+"
       , "xsmall-"
       , "small-"
       , "medium-"
       , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -709,21 +967,20 @@
     , "initial"  : "0 1 auto"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit",              "use": ".flex(inherit)" }
-      , { "name": "initial",              "use": ".flex(initial)" }
-      , { "name": "auto"   , "code": "a", "use": ".flex(auto)"    }
-      , { "name": "content", "code": "c", "use": ".flex(content)" }
-      , { "name": "0"      , "code": "z", "use": ".flex(0)"       }
-      , { "name": "0.5"    , "code": "h", "use": ".flex(0.5)"     }
-      , { "name": "1"      , "code": "1", "use": ".flex(1)"       }
-      , { "name": "2"      , "code": "2", "use": ".flex(2)"       }
+        { "name": "auto"   , "code": "a" }
+      , { "name": "content", "code": "c" }
+      , { "name": "0"      , "code": "z" }
+      , { "name": "0.5"    , "code": "h" }
+      , { "name": "1"      , "code": "1" }
+      , { "name": "2"      , "code": "2" }
       ]
     , "generators": [
         {
           "name": "generateFracValues"
-        , "args": ["(val) => `.flex(${val} * 100%)`"]
+        , "args": [["percentage", "return `.flex(${percentage})`"]]
         }
       ]
+    , "fallback": ["val", "return `.flex(${val})`"]
     , "media": [
         "screen"
       , "print"
@@ -748,16 +1005,25 @@
     , "initial"  : "row"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit"       ,               "use": ".flex-direction(inherit);" }
-      , { "name": "initial"       ,               "use": ".flex-direction(row); .flex-direction(initial);" }
-      , { "name": "row"           , "code": "r" , "use": ".flex-direction(row);"            }
-      , { "name": "column"        , "code": "c" , "use": ".flex-direction(column);"         }
-      , { "name": "row-reverse"   , "code": "rr", "use": ".flex-direction(row-reverse);"    }
-      , { "name": "column-reverse", "code": "cr", "use": ".flex-direction(column-reverse);" }
+        { "name": "row"           , "code": "r"  }
+      , { "name": "column"        , "code": "c"  }
+      , { "name": "row-reverse"   , "code": "rr" }
+      , { "name": "column-reverse", "code": "cr" }
       ]
+    , "fallback": ["val", "return `.flex-direction(${val})`"]
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -769,15 +1035,24 @@
     , "initial"  : "nowrap"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit"     ,               "use": ".flex-wrap(inherit);" }
-      , { "name": "initial"     ,               "use": ".flex-wrap(nowrap); .flex-wrap(initial);" }
-      , { "name": "nowrap"      , "code": "nw", "use": ".flex-wrap(nowrap);"       }
-      , { "name": "wrap"        , "code": "wp", "use": ".flex-wrap(wrap);"         }
-      , { "name": "wrap-reverse", "code": "wr", "use": ".flex-wrap(wrap-reverse);" }
+        { "name": "nowrap"      , "code": "nw" }
+      , { "name": "wrap"        , "code": "wp" }
+      , { "name": "wrap-reverse", "code": "wr" }
       ]
+    , "fallback": ["val", "return `.flex-wrap(${val})`"]
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -796,6 +1071,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -816,6 +1101,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -832,6 +1127,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -849,6 +1154,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     , "pseudo": [
         "hover"
@@ -869,6 +1184,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     , "pseudo": [
         "hover"
@@ -898,6 +1223,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     , "pseudo": [
         "hover"
@@ -912,19 +1247,29 @@
     , "initial"  : "0"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit",              "use": ".grid-column-gap(inherit);" }
-      , { "name": "initial",              "use": ".grid-column-gap(initial);" }
-      , { "name": "unset"  ,              "use": ".grid-column-gap(unset);"   }
-      , { "name": "0"      , "code": "z", "use": ".grid-column-gap(0);"       }
-      , { "name": "0.25rem", "code": "q", "use": ".grid-column-gap(0.25rem);" }
-      , { "name": "0.5rem" , "code": "h", "use": ".grid-column-gap(0.5rem);"  }
-      , { "name": "1rem"   , "code": "1", "use": ".grid-column-gap(1rem);"    }
-      , { "name": "2rem"   , "code": "2", "use": ".grid-column-gap(2rem);"    }
-      , { "name": "4rem"   , "code": "4", "use": ".grid-column-gap(4rem);"    }
-      , { "name": "8rem"   , "code": "8", "use": ".grid-column-gap(8rem);"    }
-      , { "name": "16rem"  , "code": "g", "use": ".grid-column-gap(16rem);"   }
+        { "name": "0"      , "code": "z" }
+      , { "name": "0.25rem", "code": "q" }
+      , { "name": "0.5rem" , "code": "h" }
+      , { "name": "1rem"   , "code": "1" }
+      , { "name": "2rem"   , "code": "2" }
+      , { "name": "4rem"   , "code": "4" }
+      , { "name": "8rem"   , "code": "8" }
+      , { "name": "16rem"  , "code": "g" }
       ]
+    , "fallback": ["val", "return `.grid-column-gap(${val})`"]
     , "media": [
+        "screen"
+      , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -936,19 +1281,29 @@
     , "initial"  : "0"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit",              "use": ".grid-row-gap(inherit);" }
-      , { "name": "initial",              "use": ".grid-row-gap(initial);" }
-      , { "name": "unset"  ,              "use": ".grid-row-gap(unset);"   }
-      , { "name": "0"      , "code": "z", "use": ".grid-row-gap(0);"       }
-      , { "name": "0.25rem", "code": "q", "use": ".grid-row-gap(0.25rem);" }
-      , { "name": "0.5rem" , "code": "h", "use": ".grid-row-gap(0.5rem);"  }
-      , { "name": "1rem"   , "code": "1", "use": ".grid-row-gap(1rem);"    }
-      , { "name": "2rem"   , "code": "2", "use": ".grid-row-gap(2rem);"    }
-      , { "name": "4rem"   , "code": "4", "use": ".grid-row-gap(4rem);"    }
-      , { "name": "8rem"   , "code": "8", "use": ".grid-row-gap(8rem);"    }
-      , { "name": "16rem"  , "code": "g", "use": ".grid-row-gap(16rem);"   }
+        { "name": "0"      , "code": "z" }
+      , { "name": "0.25rem", "code": "q" }
+      , { "name": "0.5rem" , "code": "h" }
+      , { "name": "1rem"   , "code": "1" }
+      , { "name": "2rem"   , "code": "2" }
+      , { "name": "4rem"   , "code": "4" }
+      , { "name": "8rem"   , "code": "8" }
+      , { "name": "16rem"  , "code": "g" }
       ]
+    , "fallback": ["val", "return `.grid-row-gap(${val})`"]
     , "media": [
+        "screen"
+      , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -960,17 +1315,15 @@
     , "initial"  : "none"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit",              "use": ".grid-template-columns(inherit)" }
-      , { "name": "initial",              "use": ".grid-template-columns(initial)" }
-      , { "name": "unset"  ,              "use": ".grid-template-columns(unset)"   }
-      , { "name": "none"   , "code": "n", "use": ".grid-template-columns(none)"    }
+        { "name": "none", "code": "n" }
       ]
     , "generators": [
         {
           "name": "generateCountValues"
-        , "args": ["(val) => `repeat(${val}, 1fr)`", "(val) => `.grid-template-columns(repeat(${val}, 1fr))`"]
+        , "args": [["number", "return `repeat(${number}, 1fr)`"], null]
         }
       ]
+    , "fallback": ["val", "return `.grid-template-columns(${val})`"]
     , "media": [
         "screen"
       , "print"
@@ -995,17 +1348,15 @@
     , "initial"  : "none"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit",              "use": ".grid-template-rows(inherit)" }
-      , { "name": "initial",              "use": ".grid-template-rows(initial)" }
-      , { "name": "unset"  ,              "use": ".grid-template-rows(unset)"   }
-      , { "name": "none"   , "code": "n", "use": ".grid-template-rows(none)"    }
+        { "name": "none", "code": "n" }
       ]
     , "generators": [
         {
           "name": "generateCountValues"
-        , "args": ["(val) => `repeat(${val}, 1fr)`", "(val) => `.grid-template-rows(repeat(${val}, 1fr))`"]
+        , "args": [["number", "return `repeat(${number}, 1fr)`"], null]
         }
       ]
+    , "fallback": ["val", "return `.grid-template-rows(${val})`"]
     , "media": [
         "screen"
       , "print"
@@ -1030,23 +1381,31 @@
     , "initial"  : "normal"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit"      ,               "use": ".justify-content(inherit);"       }
-      , { "name": "initial"      ,               "use": ".justify-content(initial);"       }
-      , { "name": "unset"        ,               "use": ".justify-content(unset);"         }
-      , { "name": "normal"       , "code": "n" , "use": ".justify-content(normal);"        }
-      , { "name": "center"       , "code": "c" , "use": ".justify-content(center);"        }
-      , { "name": "start"        , "code": "s" , "use": ".justify-content(start);"         }
-      , { "name": "end"          , "code": "e" , "use": ".justify-content(end);"           }
-      , { "name": "stretch"      , "code": "st", "use": ".justify-content(stretch);"       }
-      , { "name": "space-between", "code": "sb", "use": ".justify-content(space-between);" }
-      , { "name": "space-around" , "code": "sa", "use": ".justify-content(space-around);"  }
-      , { "name": "space-evenly" , "code": "sv", "use": ".justify-content(space-evenly);"  }
-      , { "name": "flex-start"   , "code": "xs", "use": ".justify-content(flex-start);"    }
-      , { "name": "flex-end"     , "code": "xe", "use": ".justify-content(flex-end);"      }
+        { "name": "normal"       , "code": "n"  }
+      , { "name": "center"       , "code": "c"  }
+      , { "name": "start"        , "code": "s"  }
+      , { "name": "end"          , "code": "e"  }
+      , { "name": "stretch"      , "code": "st" }
+      , { "name": "space-between", "code": "sb" }
+      , { "name": "space-around" , "code": "sa" }
+      , { "name": "space-evenly" , "code": "sv" }
+      , { "name": "flex-start"   , "code": "xs" }
+      , { "name": "flex-end"     , "code": "xe" }
       ]
+    , "fallback": ["val", "return `.justify-content(${val})`"]
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1058,22 +1417,30 @@
     , "initial"  : "normal"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit"      ,               "use": ".justify-items(inherit);"       }
-      , { "name": "initial"      ,               "use": ".justify-items(initial);"       }
-      , { "name": "unset"        ,               "use": ".justify-items(unset);"         }
-      , { "name": "normal"       , "code": "n" , "use": ".justify-items(normal);"        }
-      , { "name": "center"       , "code": "c" , "use": ".justify-items(center);"        }
-      , { "name": "start"        , "code": "s" , "use": ".justify-items(start);"         }
-      , { "name": "end"          , "code": "e" , "use": ".justify-items(end);"           }
-      , { "name": "stretch"      , "code": "st", "use": ".justify-items(stretch);"       }
-      , { "name": "flex-start"   , "code": "xs", "use": ".justify-items(flex-start);"    }
-      , { "name": "flex-end"     , "code": "xe", "use": ".justify-items(flex-end);"      }
-      , { "name": "self-start"   , "code": "ss", "use": ".justify-items(self-start);"    }
-      , { "name": "self-end"     , "code": "se", "use": ".justify-items(self-end);"      }
+        { "name": "normal"       , "code": "n"  }
+      , { "name": "center"       , "code": "c"  }
+      , { "name": "start"        , "code": "s"  }
+      , { "name": "end"          , "code": "e"  }
+      , { "name": "stretch"      , "code": "st" }
+      , { "name": "flex-start"   , "code": "xs" }
+      , { "name": "flex-end"     , "code": "xe" }
+      , { "name": "self-start"   , "code": "ss" }
+      , { "name": "self-end"     , "code": "se" }
       ]
+    , "fallback": ["val", "return `.justify-items(${val})`"]
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1085,23 +1452,31 @@
     , "initial"  : "auto"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit"      ,               "use": ".justify-self(inherit);"       }
-      , { "name": "initial"      ,               "use": ".justify-self(initial);"       }
-      , { "name": "unset"        ,               "use": ".justify-self(unset);"         }
-      , { "name": "auto"         , "code": "a" , "use": ".justify-self(auto);"          }
-      , { "name": "normal"       , "code": "n" , "use": ".justify-self(normal);"        }
-      , { "name": "center"       , "code": "c" , "use": ".justify-self(center);"        }
-      , { "name": "start"        , "code": "s" , "use": ".justify-self(start);"         }
-      , { "name": "end"          , "code": "e" , "use": ".justify-self(end);"           }
-      , { "name": "stretch"      , "code": "st", "use": ".justify-self(stretch);"       }
-      , { "name": "flex-start"   , "code": "xs", "use": ".justify-self(flex-start);"    }
-      , { "name": "flex-end"     , "code": "xe", "use": ".justify-self(flex-end);"      }
-      , { "name": "self-start"   , "code": "ss", "use": ".justify-self(self-start);"    }
-      , { "name": "self-end"     , "code": "se", "use": ".justify-self(self-end);"      }
+        { "name": "auto"         , "code": "a"  }
+      , { "name": "normal"       , "code": "n"  }
+      , { "name": "center"       , "code": "c"  }
+      , { "name": "start"        , "code": "s"  }
+      , { "name": "end"          , "code": "e"  }
+      , { "name": "stretch"      , "code": "st" }
+      , { "name": "flex-start"   , "code": "xs" }
+      , { "name": "flex-end"     , "code": "xe" }
+      , { "name": "self-start"   , "code": "ss" }
+      , { "name": "self-end"     , "code": "se" }
       ]
+    , "fallback": ["val", "return `.justify-self(${val})`"]
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1119,6 +1494,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1136,6 +1521,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1153,6 +1548,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1169,6 +1574,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1186,6 +1601,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1198,22 +1623,32 @@
     , "stability": 3
     , "values"   : [
         { "name": "none"                , "code": "n"  }
-      , { "name": "decimal"             , "code": "dc" }
-      , { "name": "decimal-leading-zero", "code": "dz" }
-      , { "name": "lower-roman"         , "code": "lr" }
-      , { "name": "upper-roman"         , "code": "ur" }
-      , { "name": "lower-alpha"         , "code": "la" }
-      , { "name": "upper-alpha"         , "code": "ua" }
-      , { "name": "lower-latin"         , "code": "ll" }
-      , { "name": "upper-latin"         , "code": "ul" }
-      , { "name": "lower-greek"         , "code": "lg" }
-      , { "name": "disc"                , "code": "d"  }
-      , { "name": "circle"              , "code": "c"  }
-      , { "name": "square"              , "code": "s"  }
+      , { "name": "decimal"             , "code": "dc" , "e.g.": " 1.   2.   3." }
+      , { "name": "decimal-leading-zero", "code": "dz" , "e.g.": "01.  02.  03." }
+      , { "name": "lower-roman"         , "code": "lr" , "e.g.": " i.  ii. iii." }
+      , { "name": "upper-roman"         , "code": "ur" , "e.g.": " I.  II. III." }
+      , { "name": "lower-alpha"         , "code": "la" , "e.g.": " a.   b.   c.", "stability": 1 }
+      , { "name": "upper-alpha"         , "code": "ua" , "e.g.": " A.   B.   C.", "stability": 1 }
+      , { "name": "lower-latin"         , "code": "ll" , "e.g.": " a.   b.   c." }
+      , { "name": "upper-latin"         , "code": "ul" , "e.g.": " A.   B.   C." }
+      , { "name": "lower-greek"         , "code": "lg" , "e.g.": " α.   β.   γ." }
+      , { "name": "disc"                , "code": "d"  , "e.g.": "•" }
+      , { "name": "circle"              , "code": "c"  , "e.g.": "◦" }
+      , { "name": "square"              , "code": "s"  , "e.g.": "▪" }
       ]
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1335,6 +1770,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     , "pseudo": [
         "hover"
@@ -1349,24 +1794,23 @@
     , "initial"  : "0"
     , "stability": 2
     , "values"   : [
-        { "name": "inherit",               "use": ".flex-order(inherit);" }
-      , { "name": "initial",               "use": ".flex-order(0); .flex-order(initial);" }
-      , { "name": "0"      , "code": "z" , "use": ".flex-order(0);"  }
-      , { "name": "1"      , "code": "1" , "use": ".flex-order(1);"  }
-      , { "name": "2"      , "code": "2" , "use": ".flex-order(2);"  }
-      , { "name": "3"      , "code": "3" , "use": ".flex-order(3);"  }
-      , { "name": "4"      , "code": "4" , "use": ".flex-order(4);"  }
-      , { "name": "5"      , "code": "5" , "use": ".flex-order(5);"  }
-      , { "name": "6"      , "code": "6" , "use": ".flex-order(6);"  }
-      , { "name": "7"      , "code": "7" , "use": ".flex-order(7);"  }
-      , { "name": "-1"     , "code": "_1", "use": ".flex-order(-1);" }
-      , { "name": "-2"     , "code": "_2", "use": ".flex-order(-2);" }
-      , { "name": "-3"     , "code": "_3", "use": ".flex-order(-3);" }
-      , { "name": "-4"     , "code": "_4", "use": ".flex-order(-4);" }
-      , { "name": "-5"     , "code": "_5", "use": ".flex-order(-5);" }
-      , { "name": "-6"     , "code": "_6", "use": ".flex-order(-6);" }
-      , { "name": "-7"     , "code": "_7", "use": ".flex-order(-7);" }
+        { "name": "0" , "code": "z"  }
+      , { "name": "1" , "code": "1"  }
+      , { "name": "2" , "code": "2"  }
+      , { "name": "3" , "code": "3"  }
+      , { "name": "4" , "code": "4"  }
+      , { "name": "5" , "code": "5"  }
+      , { "name": "6" , "code": "6"  }
+      , { "name": "7" , "code": "7"  }
+      , { "name": "-1", "code": "_1" }
+      , { "name": "-2", "code": "_2" }
+      , { "name": "-3", "code": "_3" }
+      , { "name": "-4", "code": "_4" }
+      , { "name": "-5", "code": "_5" }
+      , { "name": "-6", "code": "_6" }
+      , { "name": "-7", "code": "_7" }
       ]
+    , "fallback": ["val", "return `.flex-order(${val})`"]
     , "media": [
         "screen"
       , "print"
@@ -1374,6 +1818,12 @@
       , "medium+"
       , "large+"
       , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1393,6 +1843,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1546,6 +2006,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1562,6 +2032,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1579,6 +2059,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1600,6 +2090,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1619,6 +2119,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     , "pseudo": [
         "hover"
@@ -1638,6 +2148,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1656,6 +2176,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1672,6 +2202,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1691,6 +2231,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     , "pseudo": [
         "hover"
@@ -1711,6 +2261,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1734,6 +2294,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1752,6 +2322,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1772,6 +2352,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1789,7 +2379,7 @@
     , "generators": [
         {
           "name": "generateFracValues"
-        , "args": ["(val) => `width: (${val} * 100%)`"]
+        , "args": [["percentage", "return `width: ${percentage}`"]]
         }
       ]
     , "media": [
@@ -1822,6 +2412,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1853,6 +2453,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   ]

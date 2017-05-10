@@ -22,9 +22,9 @@ module.exports = (function () {
      * Fractions can be percentages or any length unit, depending on the mixin passed.
      * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
      * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
-     * @param  {?function(string)=string} mixin function outputting the css value
+     * @param  {?function(string)=string} usefn  function determining the value use
      */
-    function generateFracValues(mixin) {
+    function generateFracValues(usefn) {
       const _DENOMS = data.global.common.tracks
       for (let i = 0; i < _DENOMS.length; i++) {
         for (let j = 1; j <= _DENOMS[i]; j++) {
@@ -32,7 +32,7 @@ module.exports = (function () {
             name: `${Math.round(10000 * (j/_DENOMS[i]))/100}%`
           , code: `${j}o${_DENOMS[i]}`
           }
-          if (mixin) newvalue.use = mixin.call(null, `(${j}/${_DENOMS[i]})`)
+          if (usefn) newvalue.use = usefn.call(null, `(${j}/${_DENOMS[i]} * 100%)`)
           let value = this.values.find((v) => v.name===newvalue.name)
           if (value) {
             if (!value.codes) { // type(codes) == Array<string>; type(code) == <string>
@@ -66,7 +66,7 @@ module.exports = (function () {
     }
     for (let property of data.properties) {
       for (let generator of (property.generators || [])) {
-        eval(generator.name).call(property, ...generator.args.map(eval))
+        eval(generator.name).call(property, ...generator.args.map((el) => (el) ? new Function(...el) : null))
       }
     }
     return data
@@ -80,11 +80,42 @@ module.exports = (function () {
     let property = Bangs.DATA.properties.find((p) => p.name===prop)
     return [''].concat(Bangs.DATA.global.media.map((m) => m.code)).map(function queryblock(suffix) {
       let rulesets = []
-      for (let value of property.values) {
+      for (let value of Bangs.DATA.global.values.concat(property.values)) {
         let codes_arr = value.codes || [value.code || Bangs.DATA.global.values.find((v) => v.name===value.name).code]
-        let classes = codes_arr.map((c) => `.-${property.code}-${c}${(suffix) ? `-${suffix}` : ''}`).join(', ')
-        let declaration = (suffix) ? `.-${property.code}-${codes_arr[0]}` : `${value.use || `${property.name}: ${value.name}`} !important`
-        rulesets.push(`${classes} { ${declaration}; }`)
+        let selector = codes_arr.map((c) => `.-${property.code}-${c}${(suffix) ? `-${suffix}` : ''}`).join(', ')
+        let rules = (suffix) ? `.-${property.code}-${codes_arr[0]};`
+        : (function () {
+            /**
+             * Return a CSS/Less declaration string.
+             * The string will be one of the following forms:
+             * - `property: value`  - if the property has no vendor fallback
+             * - the result of calling the property’s vendor fallback function, with `val` as the argument
+             * @param  {string} val a string representing a CSS value
+             * @return {string}     a string representing a CSS declaration
+             */
+            function declaration(val) {
+              return (property.fallback) ?
+                new Function(...property.fallback).call(null, val) : `${property.name}: ${val}`
+            }
+            let global_fallback = ({
+              'initial': (function () {
+                if (!property.initial) return ''
+                let initial_val = property.values.find((v) => v.name===property.initial)
+                return (initial_val) ? `.-${property.code}-${initial_val.code};` : `${declaration(property.initial)} !important;`
+              })()
+            , 'unset': (function () {
+                let val_code = Bangs.DATA.global.values.find((v) => v.name===(
+                  (property.inherited) ? 'inherit' : 'initial'
+                )).code
+                return `.-${property.code}-${val_code};`
+              })()
+            })[value.name]
+            return (
+              ((global_fallback) ? global_fallback + ' ' : '')
+            + `${(value.use) ? value.use : declaration(value.name)} !important;`
+            )
+          })()
+        rulesets.push(`${selector} { ${rules} }`)
       }
       return (suffix) ? `
         @media ${Bangs.DATA.global.media.find((m) => m.code===suffix).query} {
