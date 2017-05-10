@@ -12,6 +12,7 @@ fs.mkdir('build/', function (err, data) {
   , 'column-rule-width'
   , 'column-rule-style'
   , 'column-rule-color'
+  , 'column-fill'
   , 'grid-template-columns'
   , 'grid-template-rows'
   ].forEach(function (prop) {
