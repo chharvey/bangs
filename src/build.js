@@ -15,6 +15,7 @@ fs.mkdir('build/', function (err, data) {
   , 'column-fill'
   , 'column-span'
   , 'flex-direction'
+  , 'flex-wrap'
   , 'grid-template-columns'
   , 'grid-template-rows'
   ].forEach(function (prop) {
