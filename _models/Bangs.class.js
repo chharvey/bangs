@@ -83,27 +83,38 @@ module.exports = (function () {
       for (let value of Bangs.DATA.global.values.concat(property.values)) {
         let codes_arr = value.codes || [value.code || Bangs.DATA.global.values.find((v) => v.name===value.name).code]
         let selector = codes_arr.map((c) => `.-${property.code}-${c}${(suffix) ? `-${suffix}` : ''}`).join(', ')
-        let rules = (suffix) ? `.-${property.code}-${codes_arr[0]}`
+        let rules = (suffix) ? `.-${property.code}-${codes_arr[0]};`
         : (function () {
+            /**
+             * Return a CSS/Less declaration string.
+             * The string will be one of the following forms:
+             * - `property: value`  - if the property has no vendor fallback
+             * - the result of calling the property’s vendor fallback function, with `val` as the argument
+             * @param  {string} val a string representing a CSS value
+             * @return {string}     a string representing a CSS declaration
+             */
             function declaration(val) {
               return (property.fallback) ?
                 new Function(...property.fallback).call(null, val) : `${property.name}: ${val}`
             }
             let global_fallback = ({
               'initial': (function () {
-                  let has_initial = property.values.find((v) => v.name===property.initial)
-                  return (has_initial) ? `.-${property.code}-${has_initial.code}` : declaration(property.initial)
-                })()
-            , 'unset': `.-${property.code}-${Bangs.DATA.global.values.find((v) => v.name===(
-                (property.inherited) ? 'inherit' : 'initial'
-              )).code}`
+                let initial_val = property.values.find((v) => v.name===property.initial)
+                return (initial_val) ? `.-${property.code}-${initial_val.code};` : (`${declaration(property.initial)} !important;`)
+              })()
+            , 'unset': (function () {
+                let val_code = Bangs.DATA.global.values.find((v) => v.name===(
+                  (property.inherited) ? 'inherit' : 'initial'
+                )).code
+                return `.-${property.code}-${val_code};`
+              })()
             })[value.name]
             return (
-              ( (global_fallback) ? global_fallback + '; ' : '' )
-            + ( ((value.use) ? value.use : declaration(value.name)) + ' !important;' )
+              ((global_fallback) ? global_fallback + ' ' : '')
+            + `${(value.use) ? value.use : declaration(value.name)} !important;`
             )
           })()
-        rulesets.push(`${selector} { ${rules}; }`)
+        rulesets.push(`${selector} { ${rules} }`)
       }
       return (suffix) ? `
         @media ${Bangs.DATA.global.media.find((m) => m.code===suffix).query} {
