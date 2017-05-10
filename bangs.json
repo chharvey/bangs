@@ -643,6 +643,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     , "pseudo": [
         "hover"
@@ -1992,6 +2002,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -2069,6 +2089,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     , "pseudo": [
         "hover"
@@ -2142,6 +2172,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
