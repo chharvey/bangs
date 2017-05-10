@@ -58,6 +58,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -83,6 +93,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -109,6 +129,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -378,6 +408,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -411,6 +451,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -430,6 +480,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -723,21 +783,21 @@
       , { "name": "table"              , "code": "t"  , "stability": 0 }
       , { "name": "flex"               , "code": "x"  ,                 "use": ".flexbox()" }
       , { "name": "grid"               , "code": "g"  ,                 "use": ".grid()"    }
-      , { "name": "list-item"          , "code": "s"                   }
-      , { "name": "list-item flow-root", "code": "s_o"                 }
-      , { "name": "list-item inline"   , "code": "s_l"                 }
-      , { "name": "inline-block"       , "code": "lb" , "stability": 1 }
-      , { "name": "inline-list-item"   , "code": "ls" , "stability": 1 }
-      , { "name": "inline-table"       , "code": "lt" , "stability": 1 }
-      , { "name": "inline-flex"        , "code": "lf" , "stability": 1 }
-      , { "name": "inline-grid"        , "code": "lg" , "stability": 1 }
-      , { "name": "table-row"          , "code": "tr" , "stability": 0 }
-      , { "name": "table-column"       , "code": "tl" , "stability": 0 }
-      , { "name": "table-cell"         , "code": "tc" , "stability": 0 }
       , { "name": "table-row-group"    , "code": "trg", "stability": 0 }
       , { "name": "table-header-group" , "code": "thg", "stability": 0 }
       , { "name": "table-footer-group" , "code": "tfg", "stability": 0 }
+      , { "name": "table-row"          , "code": "tr" , "stability": 0 }
+      , { "name": "table-cell"         , "code": "tc" , "stability": 0 }
       , { "name": "table-column-group" , "code": "tlg", "stability": 0 }
+      , { "name": "table-column"       , "code": "tl" , "stability": 0 }
+      , { "name": "list-item"          , "code": "s"                   }
+      , { "name": "list-item flow-root", "code": "s_o"                 }
+      , { "name": "list-item inline"   , "code": "s_l"                 }
+      , { "name": "inline-block"       , "code": "lb" , "stability": 1, "alt": "display: inline flow-root" }
+      , { "name": "inline-list-item"   , "code": "ls" , "stability": 1, "alt": "display: list-item inline flow" }
+      , { "name": "inline-table"       , "code": "lt" , "stability": 1, "alt": "display: inline table" }
+      , { "name": "inline-flex"        , "code": "lf" , "stability": 1, "alt": "display: inline flex" }
+      , { "name": "inline-grid"        , "code": "lg" , "stability": 1, "alt": "display: inline grid" }
       ]
     , "media": [
         "screen"
@@ -746,10 +806,12 @@
       , "medium+"
       , "large+"
       , "xlarge+"
+      , "xxlarge+"
       , "xsmall-"
       , "small-"
       , "medium-"
       , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -865,6 +927,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -885,6 +957,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -901,6 +983,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -918,6 +1010,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     , "pseudo": [
         "hover"
@@ -938,6 +1040,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     , "pseudo": [
         "hover"
@@ -967,6 +1079,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     , "pseudo": [
         "hover"
@@ -1130,6 +1252,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1155,6 +1287,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1181,6 +1323,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1198,6 +1350,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1215,6 +1377,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1232,6 +1404,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1477,6 +1659,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1630,6 +1822,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1663,6 +1865,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1684,6 +1896,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1722,6 +1944,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1740,6 +1972,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1775,6 +2017,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     , "pseudo": [
         "hover"
@@ -1795,6 +2047,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1818,6 +2080,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1856,6 +2128,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1906,6 +2188,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1937,6 +2229,16 @@
     , "media": [
         "screen"
       , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   ]
