@@ -11,10 +11,9 @@ module.exports = (function () {
   /**
    * This project’s data, compiled from raw JSON.
    * NOTE: WARNING: IMPURE FUNCTION (modifies parameter).
-   * 1) Call functions on CSS properties, pushing entries to their `values` arrays.
+   * Call functions on CSS properties, pushing entries to their `values` arrays.
    * The function called on each CSS property is specified by items in its `generators` array.
    * See `/bangs.json` for more information
-   * 2) adds global values to individual properties
    * @type {Object}
    */
   Bangs.DATA = (function compileData(data) {
@@ -66,9 +65,6 @@ module.exports = (function () {
       }
     }
     for (let property of data.properties) {
-      // push global values
-      property.values.unshift(...data.global.values)
-      // push automated values
       for (let generator of (property.generators || [])) {
         eval(generator.name).call(property, ...generator.args.map((el) => (el) ? new Function(...el) : null))
       }
@@ -84,7 +80,7 @@ module.exports = (function () {
     let property = Bangs.DATA.properties.find((p) => p.name===prop)
     return [''].concat(Bangs.DATA.global.media.map((m) => m.code)).map(function queryblock(suffix) {
       let rulesets = []
-      for (let value of property.values) {
+      for (let value of Bangs.DATA.global.values.concat(property.values)) {
         let codes_arr = value.codes || [value.code || Bangs.DATA.global.values.find((v) => v.name===value.name).code]
         let selector = codes_arr.map((c) => `.-${property.code}-${c}${(suffix) ? `-${suffix}` : ''}`).join(', ')
         let rules = (suffix) ? `.-${property.code}-${codes_arr[0]}`
