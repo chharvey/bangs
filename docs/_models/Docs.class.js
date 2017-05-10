@@ -119,8 +119,8 @@ module.exports = (function () {
       )
       .add(new Page({ name: 'Miscellaneous', url: '/docs/props.html#ss-misc' })
         .add(new Page({ name: 'list-style-type'    , url: '/docs/props.html#list-style-type' }))
-        .add(new Page({ name: 'list-style-position', url: '/docs/props.html#list-style-position' }))
         .add(new Page({ name: 'list-style-image'   , url: '/docs/props.html#list-style-image' }))
+        .add(new Page({ name: 'list-style-position', url: '/docs/props.html#list-style-position' }))
       )
     )
 
