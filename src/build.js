@@ -60,6 +60,13 @@ fs.mkdir('build/', function (err, data) {
   , 'background-size'
   , 'background-attachment'
   , 'background-color'
+  , 'border-width'
+  , 'border-style'
+  , 'border-color'
+  , 'border-radius'
+  , 'box-shadow'
+  , 'opacity'
+  , 'visibility'
   ].forEach(function (prop) {
     fs.writeFile(`${__dirname}/../build/_${prop}.less`, Bangs.generateLess(prop), function (err, data) { if (err) throw err })
   })
