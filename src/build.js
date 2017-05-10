@@ -52,6 +52,14 @@ fs.mkdir('build/', function (err, data) {
   , 'word-spacing'
   , 'letter-spacing'
   , 'text-indent'
+  , 'background-image'
+  , 'background-position'
+  , 'background-repeat'
+  , 'background-origin'
+  , 'background-clip'
+  , 'background-size'
+  , 'background-attachment'
+  , 'background-color'
   ].forEach(function (prop) {
     fs.writeFile(`${__dirname}/../build/_${prop}.less`, Bangs.generateLess(prop), function (err, data) { if (err) throw err })
   })
