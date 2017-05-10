@@ -99,8 +99,9 @@ module.exports = (function () {
             }
             let global_fallback = ({
               'initial': (function () {
+                if (!property.initial) return ''
                 let initial_val = property.values.find((v) => v.name===property.initial)
-                return (initial_val) ? `.-${property.code}-${initial_val.code};` : (`${declaration(property.initial)} !important;`)
+                return (initial_val) ? `.-${property.code}-${initial_val.code};` : `${declaration(property.initial)} !important;`
               })()
             , 'unset': (function () {
                 let val_code = Bangs.DATA.global.values.find((v) => v.name===(
