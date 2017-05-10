@@ -242,11 +242,11 @@
     , "initial"  : "0% 0%"
     , "stability": 3
     , "values"   : [
-        { "name": "left"         , "code": "l"  }
-      , { "name": "right"        , "code": "r"  }
-      , { "name": "center"       , "code": "c"  }
-      , { "name": "top"          , "code": "t"  }
-      , { "name": "bottom"       , "code": "b"  }
+        { "name": "left"         , "code": "l"  , "alt": "background-position: left   center" }
+      , { "name": "right"        , "code": "r"  , "alt": "background-position: right  center" }
+      , { "name": "center"       , "code": "c"  , "alt": "background-position: center center" }
+      , { "name": "top"          , "code": "t"  , "alt": "background-position: center top"    }
+      , { "name": "bottom"       , "code": "b"  , "alt": "background-position: center bottom" }
       , { "name": "left   top   ", "code": "lt" }
       , { "name": "left   center", "code": "lc" }
       , { "name": "left   bottom", "code": "lb" }
