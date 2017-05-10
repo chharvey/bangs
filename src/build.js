@@ -5,7 +5,6 @@ let Bangs = require('../_models/Bangs.class.js')
 fs.mkdir('build/', function (err, data) {
   [
   , 'width'
-  , 'flex'
   , 'column-count'
   , 'column-width'
   , 'column-gap'
@@ -16,6 +15,8 @@ fs.mkdir('build/', function (err, data) {
   , 'column-span'
   , 'flex-direction'
   , 'flex-wrap'
+  , 'flex'
+  , 'order'
   , 'grid-template-columns'
   , 'grid-template-rows'
   ].forEach(function (prop) {
