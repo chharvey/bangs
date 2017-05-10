@@ -21,6 +21,12 @@ fs.mkdir('build/', function (err, data) {
   , 'grid-template-rows'
   , 'grid-column-gap'
   , 'grid-row-gap'
+  , 'justify-content'
+  , 'align-content'
+  , 'justify-items'
+  , 'align-items'
+  , 'justify-self'
+  , 'align-self'
   ].forEach(function (prop) {
     fs.writeFile(`${__dirname}/../build/_${prop}.less`, Bangs.generateLess(prop), function (err, data) { if (err) throw err })
   })
