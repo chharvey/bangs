@@ -10,6 +10,7 @@ fs.mkdir('build/', function (err, data) {
   , 'column-width'
   , 'column-gap'
   , 'column-rule-width'
+  , 'column-rule-style'
   , 'grid-template-columns'
   , 'grid-template-rows'
   ].forEach(function (prop) {
