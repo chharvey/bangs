@@ -4,7 +4,7 @@ let Bangs = require('../_models/Bangs.class.js')
 
 fs.mkdir('build/', function (err, data) {
   [
-  , 'width'
+    'display'
   , 'column-count'
   , 'column-width'
   , 'column-gap'
@@ -35,6 +35,7 @@ fs.mkdir('build/', function (err, data) {
   , 'float'
   , 'clear'
   , 'z-index'
+  , 'width'
   ].forEach(function (prop) {
     fs.writeFile(`${__dirname}/../build/_${prop}.less`, Bangs.generateLess(prop), function (err, data) { if (err) throw err })
   })
