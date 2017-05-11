@@ -3,414 +3,291 @@
     bangs  |  _margin.less
 \*################################*/
 
-// m  =  margin
-//
-// l  =  left
-// r  =  right
-// t  =  top
-// b  =  bottom
-// h  =  horizontal
-// v  =  vertical
-// a  =  all
-//
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2017-04-04
-@p-vru: 1.5rem;
+// : 2017-05-10
 
-.-mt-0  { .-mt-z; margin-top: initial !important; }
-.-mt-i  {         margin-top: inherit !important; }
-.-mt-a  {         margin-top: auto    !important; }
-.-mt-z  {         margin-top: 0       !important; }
-.-mt-q  {         margin-top: calc(0.25  ~'*' var(--vru, @p-vru)) !important; }
-.-mt-h  {         margin-top: calc(0.5   ~'*' var(--vru, @p-vru)) !important; }
-.-mt-1  {         margin-top: calc(1     ~'*' var(--vru, @p-vru)) !important; }
-.-mt-2  {         margin-top: calc(2     ~'*' var(--vru, @p-vru)) !important; }
-.-mt-4  {         margin-top: calc(4     ~'*' var(--vru, @p-vru)) !important; }
-.-mt-8  {         margin-top: calc(8     ~'*' var(--vru, @p-vru)) !important; }
-.-mt-g  {         margin-top: calc(16    ~'*' var(--vru, @p-vru)) !important; }
-.-mt-_q {         margin-top: calc(-0.25 ~'*' var(--vru, @p-vru)) !important; }
-.-mt-_h {         margin-top: calc(-0.5  ~'*' var(--vru, @p-vru)) !important; }
-.-mt-_1 {         margin-top: calc(-1    ~'*' var(--vru, @p-vru)) !important; }
-.-mt-_2 {         margin-top: calc(-2    ~'*' var(--vru, @p-vru)) !important; }
-.-mt-_4 {         margin-top: calc(-4    ~'*' var(--vru, @p-vru)) !important; }
-.-mt-_8 {         margin-top: calc(-8    ~'*' var(--vru, @p-vru)) !important; }
-.-mt-_g {         margin-top: calc(-16   ~'*' var(--vru, @p-vru)) !important; }
-
-.-mb-0  { .-mb-z; margin-bottom: initial !important; }
-.-mb-i  {         margin-bottom: inherit !important; }
-.-mb-a  {         margin-bottom: auto    !important; }
-.-mb-z  {         margin-bottom: 0       !important; }
-.-mb-q  {         margin-bottom: calc(0.25  ~'*' var(--vru, @p-vru)) !important; }
-.-mb-h  {         margin-bottom: calc(0.5   ~'*' var(--vru, @p-vru)) !important; }
-.-mb-1  {         margin-bottom: calc(1     ~'*' var(--vru, @p-vru)) !important; }
-.-mb-2  {         margin-bottom: calc(2     ~'*' var(--vru, @p-vru)) !important; }
-.-mb-4  {         margin-bottom: calc(4     ~'*' var(--vru, @p-vru)) !important; }
-.-mb-8  {         margin-bottom: calc(8     ~'*' var(--vru, @p-vru)) !important; }
-.-mb-g  {         margin-bottom: calc(16    ~'*' var(--vru, @p-vru)) !important; }
-.-mb-_q {         margin-bottom: calc(-0.25 ~'*' var(--vru, @p-vru)) !important; }
-.-mb-_h {         margin-bottom: calc(-0.5  ~'*' var(--vru, @p-vru)) !important; }
-.-mb-_1 {         margin-bottom: calc(-1    ~'*' var(--vru, @p-vru)) !important; }
-.-mb-_2 {         margin-bottom: calc(-2    ~'*' var(--vru, @p-vru)) !important; }
-.-mb-_4 {         margin-bottom: calc(-4    ~'*' var(--vru, @p-vru)) !important; }
-.-mb-_8 {         margin-bottom: calc(-8    ~'*' var(--vru, @p-vru)) !important; }
-.-mb-_g {         margin-bottom: calc(-16   ~'*' var(--vru, @p-vru)) !important; }
-
-.-mv-0  { .-mt-0 ; .-mb-0 ; }
-.-mv-i  { .-mt-i ; .-mb-i ; }
-.-mv-a  { .-mt-a ; .-mb-a ; }
-.-mv-z  { .-mt-z ; .-mb-z ; }
-.-mv-q  { .-mt-q ; .-mb-q ; }
-.-mv-h  { .-mt-h ; .-mb-h ; }
-.-mv-1  { .-mt-1 ; .-mb-1 ; }
-.-mv-2  { .-mt-2 ; .-mb-2 ; }
-.-mv-4  { .-mt-4 ; .-mb-4 ; }
-.-mv-8  { .-mt-8 ; .-mb-8 ; }
-.-mv-g  { .-mt-g ; .-mb-g ; }
-.-mv-_q { .-mt-_q; .-mb-_q; }
-.-mv-_h { .-mt-_h; .-mb-_h; }
-.-mv-_1 { .-mt-_1; .-mb-_1; }
-.-mv-_2 { .-mt-_2; .-mb-_2; }
-.-mv-_4 { .-mt-_4; .-mb-_4; }
-.-mv-_8 { .-mt-_8; .-mb-_8; }
-.-mv-_g { .-mt-_g; .-mb-_g; }
-
-.-ml-0  { .-ml-z; margin-left: initial !important; }
-.-ml-i  {         margin-left: inherit !important; }
-.-ml-a  {         margin-left: auto    !important; }
-.-ml-z  {         margin-left: 0       !important; }
-.-ml-q  {         margin-left: 0.25rem !important; }
-.-ml-h  {         margin-left: 0.5rem  !important; }
-.-ml-1  {         margin-left: 1rem    !important; }
-.-ml-2  {         margin-left: 2rem    !important; }
-.-ml-4  {         margin-left: 4rem    !important; }
-.-ml-8  {         margin-left: 8rem    !important; }
-.-ml-g  {         margin-left: 16rem   !important; }
-.-ml-_q {         margin-left: -0.25rem !important; }
-.-ml-_h {         margin-left: -0.5rem  !important; }
-.-ml-_1 {         margin-left: -1rem    !important; }
-.-ml-_2 {         margin-left: -2rem    !important; }
-.-ml-_4 {         margin-left: -4rem    !important; }
-.-ml-_8 {         margin-left: -8rem    !important; }
-.-ml-_g {         margin-left: -16rem   !important; }
-
-.-mr-0  { .-mr-z; margin-right: initial !important; }
-.-mr-i  {         margin-right: inherit !important; }
-.-mr-a  {         margin-right: auto    !important; }
-.-mr-z  {         margin-right: 0       !important; }
-.-mr-q  {         margin-right: 0.25rem !important; }
-.-mr-h  {         margin-right: 0.5rem  !important; }
-.-mr-1  {         margin-right: 1rem    !important; }
-.-mr-2  {         margin-right: 2rem    !important; }
-.-mr-4  {         margin-right: 4rem    !important; }
-.-mr-8  {         margin-right: 8rem    !important; }
-.-mr-g  {         margin-right: 16rem   !important; }
-.-mr-_q {         margin-right: -0.25rem !important; }
-.-mr-_h {         margin-right: -0.5rem  !important; }
-.-mr-_1 {         margin-right: -1rem    !important; }
-.-mr-_2 {         margin-right: -2rem    !important; }
-.-mr-_4 {         margin-right: -4rem    !important; }
-.-mr-_8 {         margin-right: -8rem    !important; }
-.-mr-_g {         margin-right: -16rem   !important; }
-
-.-mh-0  { .-ml-0 ; .-mr-0 ; }
-.-mh-i  { .-ml-i ; .-mr-i ; }
-.-mh-a  { .-ml-a ; .-mr-a ; }
-.-mh-z  { .-ml-z ; .-mr-z ; }
-.-mh-q  { .-ml-q ; .-mr-q ; }
-.-mh-h  { .-ml-h ; .-mr-h ; }
-.-mh-1  { .-ml-1 ; .-mr-1 ; }
-.-mh-2  { .-ml-2 ; .-mr-2 ; }
-.-mh-4  { .-ml-4 ; .-mr-4 ; }
-.-mh-8  { .-ml-8 ; .-mr-8 ; }
-.-mh-g  { .-ml-g ; .-mr-g ; }
-.-mh-_q { .-ml-_q; .-mr-_q; }
-.-mh-_h { .-ml-_h; .-mr-_h; }
-.-mh-_1 { .-ml-_1; .-mr-_1; }
-.-mh-_2 { .-ml-_2; .-mr-_2; }
-.-mh-_4 { .-ml-_4; .-mr-_4; }
-.-mh-_8 { .-ml-_8; .-mr-_8; }
-.-mh-_g { .-ml-_g; .-mr-_g; }
-
-.-m-i {        margin: inherit !important; }
-.-m-0 { .-m-z; margin: initial !important; }
-.-m-u { .-m-0; margin: unset   !important; }
-.-m-a {        margin: auto    !important; }
-.-m-z {        margin: 0       !important; }
+.-mv-i  { .-mt-i ; .-mb-i ; }    .-mh-i  { .-ml-i ; .-mr-i ; }
+.-mv-0  { .-mt-0 ; .-mb-0 ; }    .-mh-0  { .-ml-0 ; .-mr-0 ; }
+.-mv-u  { .-mt-u ; .-mb-u ; }    .-mh-u  { .-ml-u ; .-mr-u ; }
+.-mv-a  { .-mt-a ; .-mb-a ; }    .-mh-a  { .-ml-a ; .-mr-a ; }
+.-mv-z  { .-mt-z ; .-mb-z ; }    .-mh-z  { .-ml-z ; .-mr-z ; }
+.-mv-q  { .-mt-q ; .-mb-q ; }    .-mh-q  { .-ml-q ; .-mr-q ; }
+.-mv-h  { .-mt-h ; .-mb-h ; }    .-mh-h  { .-ml-h ; .-mr-h ; }
+.-mv-1  { .-mt-1 ; .-mb-1 ; }    .-mh-1  { .-ml-1 ; .-mr-1 ; }
+.-mv-2  { .-mt-2 ; .-mb-2 ; }    .-mh-2  { .-ml-2 ; .-mr-2 ; }
+.-mv-4  { .-mt-4 ; .-mb-4 ; }    .-mh-4  { .-ml-4 ; .-mr-4 ; }
+.-mv-8  { .-mt-8 ; .-mb-8 ; }    .-mh-8  { .-ml-8 ; .-mr-8 ; }
+.-mv-g  { .-mt-g ; .-mb-g ; }    .-mh-g  { .-ml-g ; .-mr-g ; }
+.-mv-_q { .-mt-_q; .-mb-_q; }    .-mh-_q { .-ml-_q; .-mr-_q; }
+.-mv-_h { .-mt-_h; .-mb-_h; }    .-mh-_h { .-ml-_h; .-mr-_h; }
+.-mv-_1 { .-mt-_1; .-mb-_1; }    .-mh-_1 { .-ml-_1; .-mr-_1; }
+.-mv-_2 { .-mt-_2; .-mb-_2; }    .-mh-_2 { .-ml-_2; .-mr-_2; }
+.-mv-_4 { .-mt-_4; .-mb-_4; }    .-mh-_4 { .-ml-_4; .-mr-_4; }
+.-mv-_8 { .-mt-_8; .-mb-_8; }    .-mh-_8 { .-ml-_8; .-mr-_8; }
+.-mv-_g { .-mt-_g; .-mb-_g; }    .-mh-_g { .-ml-_g; .-mr-_g; }
 
 @media screen {
-  .-mt-0-s  { .-mt-0 ; }    .-mb-0-s  { .-mb-0 ; }    .-mv-0-s  { .-mv-0 ; }
-  .-mt-i-s  { .-mt-i ; }    .-mb-i-s  { .-mb-i ; }    .-mv-i-s  { .-mv-i ; }
-  .-mt-a-s  { .-mt-a ; }    .-mb-a-s  { .-mb-a ; }    .-mv-a-s  { .-mv-a ; }
-  .-mt-z-s  { .-mt-z ; }    .-mb-z-s  { .-mb-z ; }    .-mv-z-s  { .-mv-z ; }
-  .-mt-q-s  { .-mt-q ; }    .-mb-q-s  { .-mb-q ; }    .-mv-q-s  { .-mv-q ; }
-  .-mt-h-s  { .-mt-h ; }    .-mb-h-s  { .-mb-h ; }    .-mv-h-s  { .-mv-h ; }
-  .-mt-1-s  { .-mt-1 ; }    .-mb-1-s  { .-mb-1 ; }    .-mv-1-s  { .-mv-1 ; }
-  .-mt-2-s  { .-mt-2 ; }    .-mb-2-s  { .-mb-2 ; }    .-mv-2-s  { .-mv-2 ; }
-  .-mt-4-s  { .-mt-4 ; }    .-mb-4-s  { .-mb-4 ; }    .-mv-4-s  { .-mv-4 ; }
-  .-mt-8-s  { .-mt-8 ; }    .-mb-8-s  { .-mb-8 ; }    .-mv-8-s  { .-mv-8 ; }
-  .-mt-g-s  { .-mt-g ; }    .-mb-g-s  { .-mb-g ; }    .-mv-g-s  { .-mv-g ; }
-  .-mt-_q-s { .-mt-_q; }    .-mb-_q-s { .-mb-_q; }    .-mv-_q-s { .-mv-_q; }
-  .-mt-_h-s { .-mt-_h; }    .-mb-_h-s { .-mb-_h; }    .-mv-_h-s { .-mv-_h; }
-  .-mt-_1-s { .-mt-_1; }    .-mb-_1-s { .-mb-_1; }    .-mv-_1-s { .-mv-_1; }
-  .-mt-_2-s { .-mt-_2; }    .-mb-_2-s { .-mb-_2; }    .-mv-_2-s { .-mv-_2; }
-  .-mt-_4-s { .-mt-_4; }    .-mb-_4-s { .-mb-_4; }    .-mv-_4-s { .-mv-_4; }
-  .-mt-_8-s { .-mt-_8; }    .-mb-_8-s { .-mb-_8; }    .-mv-_8-s { .-mv-_8; }
-  .-mt-_g-s { .-mt-_g; }    .-mb-_g-s { .-mb-_g; }    .-mv-_g-s { .-mv-_g; }
-
-  .-ml-0-s  { .-ml-0 ; }    .-mr-0-s  { .-mr-0 ; }    .-mh-0-s  { .-mh-0 ; }
-  .-ml-i-s  { .-ml-i ; }    .-mr-i-s  { .-mr-i ; }    .-mh-i-s  { .-mh-i ; }
-  .-ml-a-s  { .-ml-a ; }    .-mr-a-s  { .-mr-a ; }    .-mh-a-s  { .-mh-a ; }
-  .-ml-z-s  { .-ml-z ; }    .-mr-z-s  { .-mr-z ; }    .-mh-z-s  { .-mh-z ; }
-  .-ml-q-s  { .-ml-q ; }    .-mr-q-s  { .-mr-q ; }    .-mh-q-s  { .-mh-q ; }
-  .-ml-h-s  { .-ml-h ; }    .-mr-h-s  { .-mr-h ; }    .-mh-h-s  { .-mh-h ; }
-  .-ml-1-s  { .-ml-1 ; }    .-mr-1-s  { .-mr-1 ; }    .-mh-1-s  { .-mh-1 ; }
-  .-ml-2-s  { .-ml-2 ; }    .-mr-2-s  { .-mr-2 ; }    .-mh-2-s  { .-mh-2 ; }
-  .-ml-4-s  { .-ml-4 ; }    .-mr-4-s  { .-mr-4 ; }    .-mh-4-s  { .-mh-4 ; }
-  .-ml-8-s  { .-ml-8 ; }    .-mr-8-s  { .-mr-8 ; }    .-mh-8-s  { .-mh-8 ; }
-  .-ml-g-s  { .-ml-g ; }    .-mr-g-s  { .-mr-g ; }    .-mh-g-s  { .-mh-g ; }
-  .-ml-_q-s { .-ml-_q; }    .-mr-_q-s { .-mr-_q; }    .-mh-_q-s { .-mh-_q; }
-  .-ml-_h-s { .-ml-_h; }    .-mr-_h-s { .-mr-_h; }    .-mh-_h-s { .-mh-_h; }
-  .-ml-_1-s { .-ml-_1; }    .-mr-_1-s { .-mr-_1; }    .-mh-_1-s { .-mh-_1; }
-  .-ml-_2-s { .-ml-_2; }    .-mr-_2-s { .-mr-_2; }    .-mh-_2-s { .-mh-_2; }
-  .-ml-_4-s { .-ml-_4; }    .-mr-_4-s { .-mr-_4; }    .-mh-_4-s { .-mh-_4; }
-  .-ml-_8-s { .-ml-_8; }    .-mr-_8-s { .-mr-_8; }    .-mh-_8-s { .-mh-_8; }
-  .-ml-_g-s { .-ml-_g; }    .-mr-_g-s { .-mr-_g; }    .-mh-_g-s { .-mh-_g; }
-
-  .-m-i-s { .-m-i; }
-  .-m-0-s { .-m-0; }
-  .-m-u-s { .-m-u; }
-  .-m-a-s { .-m-a; }
-  .-m-z-s { .-m-z; }
+  .-mv-i-s  { .-mv-i ; }    .-mh-i-s  { .-mh-i ; }
+  .-mv-0-s  { .-mv-0 ; }    .-mh-0-s  { .-mh-0 ; }
+  .-mv-u-s  { .-mv-u ; }    .-mh-u-s  { .-mh-u ; }
+  .-mv-a-s  { .-mv-a ; }    .-mh-a-s  { .-mh-a ; }
+  .-mv-z-s  { .-mv-z ; }    .-mh-z-s  { .-mh-z ; }
+  .-mv-q-s  { .-mv-q ; }    .-mh-q-s  { .-mh-q ; }
+  .-mv-h-s  { .-mv-h ; }    .-mh-h-s  { .-mh-h ; }
+  .-mv-1-s  { .-mv-1 ; }    .-mh-1-s  { .-mh-1 ; }
+  .-mv-2-s  { .-mv-2 ; }    .-mh-2-s  { .-mh-2 ; }
+  .-mv-4-s  { .-mv-4 ; }    .-mh-4-s  { .-mh-4 ; }
+  .-mv-8-s  { .-mv-8 ; }    .-mh-8-s  { .-mh-8 ; }
+  .-mv-g-s  { .-mv-g ; }    .-mh-g-s  { .-mh-g ; }
+  .-mv-_q-s { .-mv-_q; }    .-mh-_q-s { .-mh-_q; }
+  .-mv-_h-s { .-mv-_h; }    .-mh-_h-s { .-mh-_h; }
+  .-mv-_1-s { .-mv-_1; }    .-mh-_1-s { .-mh-_1; }
+  .-mv-_2-s { .-mv-_2; }    .-mh-_2-s { .-mh-_2; }
+  .-mv-_4-s { .-mv-_4; }    .-mh-_4-s { .-mh-_4; }
+  .-mv-_8-s { .-mv-_8; }    .-mh-_8-s { .-mh-_8; }
+  .-mv-_g-s { .-mv-_g; }    .-mh-_g-s { .-mh-_g; }
 }
 
 @media print {
-  .-mt-0-p  { .-mt-0 ; }    .-mb-0-p  { .-mb-0 ; }    .-mv-0-p  { .-mv-0 ; }
-  .-mt-i-p  { .-mt-i ; }    .-mb-i-p  { .-mb-i ; }    .-mv-i-p  { .-mv-i ; }
-  .-mt-a-p  { .-mt-a ; }    .-mb-a-p  { .-mb-a ; }    .-mv-a-p  { .-mv-a ; }
-  .-mt-z-p  { .-mt-z ; }    .-mb-z-p  { .-mb-z ; }    .-mv-z-p  { .-mv-z ; }
-  .-mt-q-p  { .-mt-q ; }    .-mb-q-p  { .-mb-q ; }    .-mv-q-p  { .-mv-q ; }
-  .-mt-h-p  { .-mt-h ; }    .-mb-h-p  { .-mb-h ; }    .-mv-h-p  { .-mv-h ; }
-  .-mt-1-p  { .-mt-1 ; }    .-mb-1-p  { .-mb-1 ; }    .-mv-1-p  { .-mv-1 ; }
-  .-mt-2-p  { .-mt-2 ; }    .-mb-2-p  { .-mb-2 ; }    .-mv-2-p  { .-mv-2 ; }
-  .-mt-4-p  { .-mt-4 ; }    .-mb-4-p  { .-mb-4 ; }    .-mv-4-p  { .-mv-4 ; }
-  .-mt-8-p  { .-mt-8 ; }    .-mb-8-p  { .-mb-8 ; }    .-mv-8-p  { .-mv-8 ; }
-  .-mt-g-p  { .-mt-g ; }    .-mb-g-p  { .-mb-g ; }    .-mv-g-p  { .-mv-g ; }
-  .-mt-_q-p { .-mt-_q; }    .-mb-_q-p { .-mb-_q; }    .-mv-_q-p { .-mv-_q; }
-  .-mt-_h-p { .-mt-_h; }    .-mb-_h-p { .-mb-_h; }    .-mv-_h-p { .-mv-_h; }
-  .-mt-_1-p { .-mt-_1; }    .-mb-_1-p { .-mb-_1; }    .-mv-_1-p { .-mv-_1; }
-  .-mt-_2-p { .-mt-_2; }    .-mb-_2-p { .-mb-_2; }    .-mv-_2-p { .-mv-_2; }
-  .-mt-_4-p { .-mt-_4; }    .-mb-_4-p { .-mb-_4; }    .-mv-_4-p { .-mv-_4; }
-  .-mt-_8-p { .-mt-_8; }    .-mb-_8-p { .-mb-_8; }    .-mv-_8-p { .-mv-_8; }
-  .-mt-_g-p { .-mt-_g; }    .-mb-_g-p { .-mb-_g; }    .-mv-_g-p { .-mv-_g; }
-
-  .-ml-0-p  { .-ml-0 ; }    .-mr-0-p  { .-mr-0 ; }    .-mh-0-p  { .-mh-0 ; }
-  .-ml-i-p  { .-ml-i ; }    .-mr-i-p  { .-mr-i ; }    .-mh-i-p  { .-mh-i ; }
-  .-ml-a-p  { .-ml-a ; }    .-mr-a-p  { .-mr-a ; }    .-mh-a-p  { .-mh-a ; }
-  .-ml-z-p  { .-ml-z ; }    .-mr-z-p  { .-mr-z ; }    .-mh-z-p  { .-mh-z ; }
-  .-ml-q-p  { .-ml-q ; }    .-mr-q-p  { .-mr-q ; }    .-mh-q-p  { .-mh-q ; }
-  .-ml-h-p  { .-ml-h ; }    .-mr-h-p  { .-mr-h ; }    .-mh-h-p  { .-mh-h ; }
-  .-ml-1-p  { .-ml-1 ; }    .-mr-1-p  { .-mr-1 ; }    .-mh-1-p  { .-mh-1 ; }
-  .-ml-2-p  { .-ml-2 ; }    .-mr-2-p  { .-mr-2 ; }    .-mh-2-p  { .-mh-2 ; }
-  .-ml-4-p  { .-ml-4 ; }    .-mr-4-p  { .-mr-4 ; }    .-mh-4-p  { .-mh-4 ; }
-  .-ml-8-p  { .-ml-8 ; }    .-mr-8-p  { .-mr-8 ; }    .-mh-8-p  { .-mh-8 ; }
-  .-ml-g-p  { .-ml-g ; }    .-mr-g-p  { .-mr-g ; }    .-mh-g-p  { .-mh-g ; }
-  .-ml-_q-p { .-ml-_q; }    .-mr-_q-p { .-mr-_q; }    .-mh-_q-p { .-mh-_q; }
-  .-ml-_h-p { .-ml-_h; }    .-mr-_h-p { .-mr-_h; }    .-mh-_h-p { .-mh-_h; }
-  .-ml-_1-p { .-ml-_1; }    .-mr-_1-p { .-mr-_1; }    .-mh-_1-p { .-mh-_1; }
-  .-ml-_2-p { .-ml-_2; }    .-mr-_2-p { .-mr-_2; }    .-mh-_2-p { .-mh-_2; }
-  .-ml-_4-p { .-ml-_4; }    .-mr-_4-p { .-mr-_4; }    .-mh-_4-p { .-mh-_4; }
-  .-ml-_8-p { .-ml-_8; }    .-mr-_8-p { .-mr-_8; }    .-mh-_8-p { .-mh-_8; }
-  .-ml-_g-p { .-ml-_g; }    .-mr-_g-p { .-mr-_g; }    .-mh-_g-p { .-mh-_g; }
-
-  .-m-i-p { .-m-i; }
-  .-m-0-p { .-m-0; }
-  .-m-u-p { .-m-u; }
-  .-m-a-p { .-m-a; }
-  .-m-z-p { .-m-z; }
+  .-mv-i-p  { .-mv-i ; }    .-mh-i-p  { .-mh-i ; }
+  .-mv-0-p  { .-mv-0 ; }    .-mh-0-p  { .-mh-0 ; }
+  .-mv-u-p  { .-mv-u ; }    .-mh-u-p  { .-mh-u ; }
+  .-mv-a-p  { .-mv-a ; }    .-mh-a-p  { .-mh-a ; }
+  .-mv-z-p  { .-mv-z ; }    .-mh-z-p  { .-mh-z ; }
+  .-mv-q-p  { .-mv-q ; }    .-mh-q-p  { .-mh-q ; }
+  .-mv-h-p  { .-mv-h ; }    .-mh-h-p  { .-mh-h ; }
+  .-mv-1-p  { .-mv-1 ; }    .-mh-1-p  { .-mh-1 ; }
+  .-mv-2-p  { .-mv-2 ; }    .-mh-2-p  { .-mh-2 ; }
+  .-mv-4-p  { .-mv-4 ; }    .-mh-4-p  { .-mh-4 ; }
+  .-mv-8-p  { .-mv-8 ; }    .-mh-8-p  { .-mh-8 ; }
+  .-mv-g-p  { .-mv-g ; }    .-mh-g-p  { .-mh-g ; }
+  .-mv-_q-p { .-mv-_q; }    .-mh-_q-p { .-mh-_q; }
+  .-mv-_h-p { .-mv-_h; }    .-mh-_h-p { .-mh-_h; }
+  .-mv-_1-p { .-mv-_1; }    .-mh-_1-p { .-mh-_1; }
+  .-mv-_2-p { .-mv-_2; }    .-mh-_2-p { .-mh-_2; }
+  .-mv-_4-p { .-mv-_4; }    .-mh-_4-p { .-mh-_4; }
+  .-mv-_8-p { .-mv-_8; }    .-mh-_8-p { .-mh-_8; }
+  .-mv-_g-p { .-mv-_g; }    .-mh-_g-p { .-mh-_g; }
 }
 
 @media screen and (min-width: 30em) {
-  .-mt-0-sK  { .-mt-0 ; }    .-mb-0-sK  { .-mb-0 ; }    .-mv-0-sK  { .-mv-0 ; }
-  .-mt-i-sK  { .-mt-i ; }    .-mb-i-sK  { .-mb-i ; }    .-mv-i-sK  { .-mv-i ; }
-  .-mt-a-sK  { .-mt-a ; }    .-mb-a-sK  { .-mb-a ; }    .-mv-a-sK  { .-mv-a ; }
-  .-mt-z-sK  { .-mt-z ; }    .-mb-z-sK  { .-mb-z ; }    .-mv-z-sK  { .-mv-z ; }
-  .-mt-q-sK  { .-mt-q ; }    .-mb-q-sK  { .-mb-q ; }    .-mv-q-sK  { .-mv-q ; }
-  .-mt-h-sK  { .-mt-h ; }    .-mb-h-sK  { .-mb-h ; }    .-mv-h-sK  { .-mv-h ; }
-  .-mt-1-sK  { .-mt-1 ; }    .-mb-1-sK  { .-mb-1 ; }    .-mv-1-sK  { .-mv-1 ; }
-  .-mt-2-sK  { .-mt-2 ; }    .-mb-2-sK  { .-mb-2 ; }    .-mv-2-sK  { .-mv-2 ; }
-  .-mt-4-sK  { .-mt-4 ; }    .-mb-4-sK  { .-mb-4 ; }    .-mv-4-sK  { .-mv-4 ; }
-  .-mt-8-sK  { .-mt-8 ; }    .-mb-8-sK  { .-mb-8 ; }    .-mv-8-sK  { .-mv-8 ; }
-  .-mt-g-sK  { .-mt-g ; }    .-mb-g-sK  { .-mb-g ; }    .-mv-g-sK  { .-mv-g ; }
-  .-mt-_q-sK { .-mt-_q; }    .-mb-_q-sK { .-mb-_q; }    .-mv-_q-sK { .-mv-_q; }
-  .-mt-_h-sK { .-mt-_h; }    .-mb-_h-sK { .-mb-_h; }    .-mv-_h-sK { .-mv-_h; }
-  .-mt-_1-sK { .-mt-_1; }    .-mb-_1-sK { .-mb-_1; }    .-mv-_1-sK { .-mv-_1; }
-  .-mt-_2-sK { .-mt-_2; }    .-mb-_2-sK { .-mb-_2; }    .-mv-_2-sK { .-mv-_2; }
-  .-mt-_4-sK { .-mt-_4; }    .-mb-_4-sK { .-mb-_4; }    .-mv-_4-sK { .-mv-_4; }
-  .-mt-_8-sK { .-mt-_8; }    .-mb-_8-sK { .-mb-_8; }    .-mv-_8-sK { .-mv-_8; }
-  .-mt-_g-sK { .-mt-_g; }    .-mb-_g-sK { .-mb-_g; }    .-mv-_g-sK { .-mv-_g; }
-
-  .-ml-0-sK  { .-ml-0 ; }    .-mr-0-sK  { .-mr-0 ; }    .-mh-0-sK  { .-mh-0 ; }
-  .-ml-i-sK  { .-ml-i ; }    .-mr-i-sK  { .-mr-i ; }    .-mh-i-sK  { .-mh-i ; }
-  .-ml-a-sK  { .-ml-a ; }    .-mr-a-sK  { .-mr-a ; }    .-mh-a-sK  { .-mh-a ; }
-  .-ml-z-sK  { .-ml-z ; }    .-mr-z-sK  { .-mr-z ; }    .-mh-z-sK  { .-mh-z ; }
-  .-ml-q-sK  { .-ml-q ; }    .-mr-q-sK  { .-mr-q ; }    .-mh-q-sK  { .-mh-q ; }
-  .-ml-h-sK  { .-ml-h ; }    .-mr-h-sK  { .-mr-h ; }    .-mh-h-sK  { .-mh-h ; }
-  .-ml-1-sK  { .-ml-1 ; }    .-mr-1-sK  { .-mr-1 ; }    .-mh-1-sK  { .-mh-1 ; }
-  .-ml-2-sK  { .-ml-2 ; }    .-mr-2-sK  { .-mr-2 ; }    .-mh-2-sK  { .-mh-2 ; }
-  .-ml-4-sK  { .-ml-4 ; }    .-mr-4-sK  { .-mr-4 ; }    .-mh-4-sK  { .-mh-4 ; }
-  .-ml-8-sK  { .-ml-8 ; }    .-mr-8-sK  { .-mr-8 ; }    .-mh-8-sK  { .-mh-8 ; }
-  .-ml-g-sK  { .-ml-g ; }    .-mr-g-sK  { .-mr-g ; }    .-mh-g-sK  { .-mh-g ; }
-  .-ml-_q-sK { .-ml-_q; }    .-mr-_q-sK { .-mr-_q; }    .-mh-_q-sK { .-mh-_q; }
-  .-ml-_h-sK { .-ml-_h; }    .-mr-_h-sK { .-mr-_h; }    .-mh-_h-sK { .-mh-_h; }
-  .-ml-_1-sK { .-ml-_1; }    .-mr-_1-sK { .-mr-_1; }    .-mh-_1-sK { .-mh-_1; }
-  .-ml-_2-sK { .-ml-_2; }    .-mr-_2-sK { .-mr-_2; }    .-mh-_2-sK { .-mh-_2; }
-  .-ml-_4-sK { .-ml-_4; }    .-mr-_4-sK { .-mr-_4; }    .-mh-_4-sK { .-mh-_4; }
-  .-ml-_8-sK { .-ml-_8; }    .-mr-_8-sK { .-mr-_8; }    .-mh-_8-sK { .-mh-_8; }
-  .-ml-_g-sK { .-ml-_g; }    .-mr-_g-sK { .-mr-_g; }    .-mh-_g-sK { .-mh-_g; }
-
-  .-m-i-sK { .-m-i; }
-  .-m-0-sK { .-m-0; }
-  .-m-u-sK { .-m-u; }
-  .-m-a-sK { .-m-a; }
-  .-m-z-sK { .-m-z; }
+  .-mv-i-sK  { .-mv-i ; }    .-mh-i-sK  { .-mh-i ; }
+  .-mv-0-sK  { .-mv-0 ; }    .-mh-0-sK  { .-mh-0 ; }
+  .-mv-u-sK  { .-mv-u ; }    .-mh-u-sK  { .-mh-u ; }
+  .-mv-a-sK  { .-mv-a ; }    .-mh-a-sK  { .-mh-a ; }
+  .-mv-z-sK  { .-mv-z ; }    .-mh-z-sK  { .-mh-z ; }
+  .-mv-q-sK  { .-mv-q ; }    .-mh-q-sK  { .-mh-q ; }
+  .-mv-h-sK  { .-mv-h ; }    .-mh-h-sK  { .-mh-h ; }
+  .-mv-1-sK  { .-mv-1 ; }    .-mh-1-sK  { .-mh-1 ; }
+  .-mv-2-sK  { .-mv-2 ; }    .-mh-2-sK  { .-mh-2 ; }
+  .-mv-4-sK  { .-mv-4 ; }    .-mh-4-sK  { .-mh-4 ; }
+  .-mv-8-sK  { .-mv-8 ; }    .-mh-8-sK  { .-mh-8 ; }
+  .-mv-g-sK  { .-mv-g ; }    .-mh-g-sK  { .-mh-g ; }
+  .-mv-_q-sK { .-mv-_q; }    .-mh-_q-sK { .-mh-_q; }
+  .-mv-_h-sK { .-mv-_h; }    .-mh-_h-sK { .-mh-_h; }
+  .-mv-_1-sK { .-mv-_1; }    .-mh-_1-sK { .-mh-_1; }
+  .-mv-_2-sK { .-mv-_2; }    .-mh-_2-sK { .-mh-_2; }
+  .-mv-_4-sK { .-mv-_4; }    .-mh-_4-sK { .-mh-_4; }
+  .-mv-_8-sK { .-mv-_8; }    .-mh-_8-sK { .-mh-_8; }
+  .-mv-_g-sK { .-mv-_g; }    .-mh-_g-sK { .-mh-_g; }
 }
 
 @media screen and (min-width: 45em) {
-  .-mt-0-sM  { .-mt-0 ; }    .-mb-0-sM  { .-mb-0 ; }    .-mv-0-sM  { .-mv-0 ; }
-  .-mt-i-sM  { .-mt-i ; }    .-mb-i-sM  { .-mb-i ; }    .-mv-i-sM  { .-mv-i ; }
-  .-mt-a-sM  { .-mt-a ; }    .-mb-a-sM  { .-mb-a ; }    .-mv-a-sM  { .-mv-a ; }
-  .-mt-z-sM  { .-mt-z ; }    .-mb-z-sM  { .-mb-z ; }    .-mv-z-sM  { .-mv-z ; }
-  .-mt-q-sM  { .-mt-q ; }    .-mb-q-sM  { .-mb-q ; }    .-mv-q-sM  { .-mv-q ; }
-  .-mt-h-sM  { .-mt-h ; }    .-mb-h-sM  { .-mb-h ; }    .-mv-h-sM  { .-mv-h ; }
-  .-mt-1-sM  { .-mt-1 ; }    .-mb-1-sM  { .-mb-1 ; }    .-mv-1-sM  { .-mv-1 ; }
-  .-mt-2-sM  { .-mt-2 ; }    .-mb-2-sM  { .-mb-2 ; }    .-mv-2-sM  { .-mv-2 ; }
-  .-mt-4-sM  { .-mt-4 ; }    .-mb-4-sM  { .-mb-4 ; }    .-mv-4-sM  { .-mv-4 ; }
-  .-mt-8-sM  { .-mt-8 ; }    .-mb-8-sM  { .-mb-8 ; }    .-mv-8-sM  { .-mv-8 ; }
-  .-mt-g-sM  { .-mt-g ; }    .-mb-g-sM  { .-mb-g ; }    .-mv-g-sM  { .-mv-g ; }
-  .-mt-_q-sM { .-mt-_q; }    .-mb-_q-sM { .-mb-_q; }    .-mv-_q-sM { .-mv-_q; }
-  .-mt-_h-sM { .-mt-_h; }    .-mb-_h-sM { .-mb-_h; }    .-mv-_h-sM { .-mv-_h; }
-  .-mt-_1-sM { .-mt-_1; }    .-mb-_1-sM { .-mb-_1; }    .-mv-_1-sM { .-mv-_1; }
-  .-mt-_2-sM { .-mt-_2; }    .-mb-_2-sM { .-mb-_2; }    .-mv-_2-sM { .-mv-_2; }
-  .-mt-_4-sM { .-mt-_4; }    .-mb-_4-sM { .-mb-_4; }    .-mv-_4-sM { .-mv-_4; }
-  .-mt-_8-sM { .-mt-_8; }    .-mb-_8-sM { .-mb-_8; }    .-mv-_8-sM { .-mv-_8; }
-  .-mt-_g-sM { .-mt-_g; }    .-mb-_g-sM { .-mb-_g; }    .-mv-_g-sM { .-mv-_g; }
-
-  .-ml-0-sM  { .-ml-0 ; }    .-mr-0-sM  { .-mr-0 ; }    .-mh-0-sM  { .-mh-0 ; }
-  .-ml-i-sM  { .-ml-i ; }    .-mr-i-sM  { .-mr-i ; }    .-mh-i-sM  { .-mh-i ; }
-  .-ml-a-sM  { .-ml-a ; }    .-mr-a-sM  { .-mr-a ; }    .-mh-a-sM  { .-mh-a ; }
-  .-ml-z-sM  { .-ml-z ; }    .-mr-z-sM  { .-mr-z ; }    .-mh-z-sM  { .-mh-z ; }
-  .-ml-q-sM  { .-ml-q ; }    .-mr-q-sM  { .-mr-q ; }    .-mh-q-sM  { .-mh-q ; }
-  .-ml-h-sM  { .-ml-h ; }    .-mr-h-sM  { .-mr-h ; }    .-mh-h-sM  { .-mh-h ; }
-  .-ml-1-sM  { .-ml-1 ; }    .-mr-1-sM  { .-mr-1 ; }    .-mh-1-sM  { .-mh-1 ; }
-  .-ml-2-sM  { .-ml-2 ; }    .-mr-2-sM  { .-mr-2 ; }    .-mh-2-sM  { .-mh-2 ; }
-  .-ml-4-sM  { .-ml-4 ; }    .-mr-4-sM  { .-mr-4 ; }    .-mh-4-sM  { .-mh-4 ; }
-  .-ml-8-sM  { .-ml-8 ; }    .-mr-8-sM  { .-mr-8 ; }    .-mh-8-sM  { .-mh-8 ; }
-  .-ml-g-sM  { .-ml-g ; }    .-mr-g-sM  { .-mr-g ; }    .-mh-g-sM  { .-mh-g ; }
-  .-ml-_q-sM { .-ml-_q; }    .-mr-_q-sM { .-mr-_q; }    .-mh-_q-sM { .-mh-_q; }
-  .-ml-_h-sM { .-ml-_h; }    .-mr-_h-sM { .-mr-_h; }    .-mh-_h-sM { .-mh-_h; }
-  .-ml-_1-sM { .-ml-_1; }    .-mr-_1-sM { .-mr-_1; }    .-mh-_1-sM { .-mh-_1; }
-  .-ml-_2-sM { .-ml-_2; }    .-mr-_2-sM { .-mr-_2; }    .-mh-_2-sM { .-mh-_2; }
-  .-ml-_4-sM { .-ml-_4; }    .-mr-_4-sM { .-mr-_4; }    .-mh-_4-sM { .-mh-_4; }
-  .-ml-_8-sM { .-ml-_8; }    .-mr-_8-sM { .-mr-_8; }    .-mh-_8-sM { .-mh-_8; }
-  .-ml-_g-sM { .-ml-_g; }    .-mr-_g-sM { .-mr-_g; }    .-mh-_g-sM { .-mh-_g; }
-
-  .-m-i-sM { .-m-i; }
-  .-m-0-sM { .-m-0; }
-  .-m-u-sM { .-m-u; }
-  .-m-a-sM { .-m-a; }
-  .-m-z-sM { .-m-z; }
+  .-mv-i-sM  { .-mv-i ; }    .-mh-i-sM  { .-mh-i ; }
+  .-mv-0-sM  { .-mv-0 ; }    .-mh-0-sM  { .-mh-0 ; }
+  .-mv-u-sM  { .-mv-u ; }    .-mh-u-sM  { .-mh-u ; }
+  .-mv-a-sM  { .-mv-a ; }    .-mh-a-sM  { .-mh-a ; }
+  .-mv-z-sM  { .-mv-z ; }    .-mh-z-sM  { .-mh-z ; }
+  .-mv-q-sM  { .-mv-q ; }    .-mh-q-sM  { .-mh-q ; }
+  .-mv-h-sM  { .-mv-h ; }    .-mh-h-sM  { .-mh-h ; }
+  .-mv-1-sM  { .-mv-1 ; }    .-mh-1-sM  { .-mh-1 ; }
+  .-mv-2-sM  { .-mv-2 ; }    .-mh-2-sM  { .-mh-2 ; }
+  .-mv-4-sM  { .-mv-4 ; }    .-mh-4-sM  { .-mh-4 ; }
+  .-mv-8-sM  { .-mv-8 ; }    .-mh-8-sM  { .-mh-8 ; }
+  .-mv-g-sM  { .-mv-g ; }    .-mh-g-sM  { .-mh-g ; }
+  .-mv-_q-sM { .-mv-_q; }    .-mh-_q-sM { .-mh-_q; }
+  .-mv-_h-sM { .-mv-_h; }    .-mh-_h-sM { .-mh-_h; }
+  .-mv-_1-sM { .-mv-_1; }    .-mh-_1-sM { .-mh-_1; }
+  .-mv-_2-sM { .-mv-_2; }    .-mh-_2-sM { .-mh-_2; }
+  .-mv-_4-sM { .-mv-_4; }    .-mh-_4-sM { .-mh-_4; }
+  .-mv-_8-sM { .-mv-_8; }    .-mh-_8-sM { .-mh-_8; }
+  .-mv-_g-sM { .-mv-_g; }    .-mh-_g-sM { .-mh-_g; }
 }
 
 @media screen and (min-width: 60em) {
-  .-mt-0-sG  { .-mt-0 ; }    .-mb-0-sG  { .-mb-0 ; }    .-mv-0-sG  { .-mv-0 ; }
-  .-mt-i-sG  { .-mt-i ; }    .-mb-i-sG  { .-mb-i ; }    .-mv-i-sG  { .-mv-i ; }
-  .-mt-a-sG  { .-mt-a ; }    .-mb-a-sG  { .-mb-a ; }    .-mv-a-sG  { .-mv-a ; }
-  .-mt-z-sG  { .-mt-z ; }    .-mb-z-sG  { .-mb-z ; }    .-mv-z-sG  { .-mv-z ; }
-  .-mt-q-sG  { .-mt-q ; }    .-mb-q-sG  { .-mb-q ; }    .-mv-q-sG  { .-mv-q ; }
-  .-mt-h-sG  { .-mt-h ; }    .-mb-h-sG  { .-mb-h ; }    .-mv-h-sG  { .-mv-h ; }
-  .-mt-1-sG  { .-mt-1 ; }    .-mb-1-sG  { .-mb-1 ; }    .-mv-1-sG  { .-mv-1 ; }
-  .-mt-2-sG  { .-mt-2 ; }    .-mb-2-sG  { .-mb-2 ; }    .-mv-2-sG  { .-mv-2 ; }
-  .-mt-4-sG  { .-mt-4 ; }    .-mb-4-sG  { .-mb-4 ; }    .-mv-4-sG  { .-mv-4 ; }
-  .-mt-8-sG  { .-mt-8 ; }    .-mb-8-sG  { .-mb-8 ; }    .-mv-8-sG  { .-mv-8 ; }
-  .-mt-g-sG  { .-mt-g ; }    .-mb-g-sG  { .-mb-g ; }    .-mv-g-sG  { .-mv-g ; }
-  .-mt-_q-sG { .-mt-_q; }    .-mb-_q-sG { .-mb-_q; }    .-mv-_q-sG { .-mv-_q; }
-  .-mt-_h-sG { .-mt-_h; }    .-mb-_h-sG { .-mb-_h; }    .-mv-_h-sG { .-mv-_h; }
-  .-mt-_1-sG { .-mt-_1; }    .-mb-_1-sG { .-mb-_1; }    .-mv-_1-sG { .-mv-_1; }
-  .-mt-_2-sG { .-mt-_2; }    .-mb-_2-sG { .-mb-_2; }    .-mv-_2-sG { .-mv-_2; }
-  .-mt-_4-sG { .-mt-_4; }    .-mb-_4-sG { .-mb-_4; }    .-mv-_4-sG { .-mv-_4; }
-  .-mt-_8-sG { .-mt-_8; }    .-mb-_8-sG { .-mb-_8; }    .-mv-_8-sG { .-mv-_8; }
-  .-mt-_g-sG { .-mt-_g; }    .-mb-_g-sG { .-mb-_g; }    .-mv-_g-sG { .-mv-_g; }
-
-  .-ml-0-sG  { .-ml-0 ; }    .-mr-0-sG  { .-mr-0 ; }    .-mh-0-sG  { .-mh-0 ; }
-  .-ml-i-sG  { .-ml-i ; }    .-mr-i-sG  { .-mr-i ; }    .-mh-i-sG  { .-mh-i ; }
-  .-ml-a-sG  { .-ml-a ; }    .-mr-a-sG  { .-mr-a ; }    .-mh-a-sG  { .-mh-a ; }
-  .-ml-z-sG  { .-ml-z ; }    .-mr-z-sG  { .-mr-z ; }    .-mh-z-sG  { .-mh-z ; }
-  .-ml-q-sG  { .-ml-q ; }    .-mr-q-sG  { .-mr-q ; }    .-mh-q-sG  { .-mh-q ; }
-  .-ml-h-sG  { .-ml-h ; }    .-mr-h-sG  { .-mr-h ; }    .-mh-h-sG  { .-mh-h ; }
-  .-ml-1-sG  { .-ml-1 ; }    .-mr-1-sG  { .-mr-1 ; }    .-mh-1-sG  { .-mh-1 ; }
-  .-ml-2-sG  { .-ml-2 ; }    .-mr-2-sG  { .-mr-2 ; }    .-mh-2-sG  { .-mh-2 ; }
-  .-ml-4-sG  { .-ml-4 ; }    .-mr-4-sG  { .-mr-4 ; }    .-mh-4-sG  { .-mh-4 ; }
-  .-ml-8-sG  { .-ml-8 ; }    .-mr-8-sG  { .-mr-8 ; }    .-mh-8-sG  { .-mh-8 ; }
-  .-ml-g-sG  { .-ml-g ; }    .-mr-g-sG  { .-mr-g ; }    .-mh-g-sG  { .-mh-g ; }
-  .-ml-_q-sG { .-ml-_q; }    .-mr-_q-sG { .-mr-_q; }    .-mh-_q-sG { .-mh-_q; }
-  .-ml-_h-sG { .-ml-_h; }    .-mr-_h-sG { .-mr-_h; }    .-mh-_h-sG { .-mh-_h; }
-  .-ml-_1-sG { .-ml-_1; }    .-mr-_1-sG { .-mr-_1; }    .-mh-_1-sG { .-mh-_1; }
-  .-ml-_2-sG { .-ml-_2; }    .-mr-_2-sG { .-mr-_2; }    .-mh-_2-sG { .-mh-_2; }
-  .-ml-_4-sG { .-ml-_4; }    .-mr-_4-sG { .-mr-_4; }    .-mh-_4-sG { .-mh-_4; }
-  .-ml-_8-sG { .-ml-_8; }    .-mr-_8-sG { .-mr-_8; }    .-mh-_8-sG { .-mh-_8; }
-  .-ml-_g-sG { .-ml-_g; }    .-mr-_g-sG { .-mr-_g; }    .-mh-_g-sG { .-mh-_g; }
-
-  .-m-i-sG { .-m-i; }
-  .-m-0-sG { .-m-0; }
-  .-m-u-sG { .-m-u; }
-  .-m-a-sG { .-m-a; }
-  .-m-z-sG { .-m-z; }
+  .-mv-i-sG  { .-mv-i ; }    .-mh-i-sG  { .-mh-i ; }
+  .-mv-0-sG  { .-mv-0 ; }    .-mh-0-sG  { .-mh-0 ; }
+  .-mv-u-sG  { .-mv-u ; }    .-mh-u-sG  { .-mh-u ; }
+  .-mv-a-sG  { .-mv-a ; }    .-mh-a-sG  { .-mh-a ; }
+  .-mv-z-sG  { .-mv-z ; }    .-mh-z-sG  { .-mh-z ; }
+  .-mv-q-sG  { .-mv-q ; }    .-mh-q-sG  { .-mh-q ; }
+  .-mv-h-sG  { .-mv-h ; }    .-mh-h-sG  { .-mh-h ; }
+  .-mv-1-sG  { .-mv-1 ; }    .-mh-1-sG  { .-mh-1 ; }
+  .-mv-2-sG  { .-mv-2 ; }    .-mh-2-sG  { .-mh-2 ; }
+  .-mv-4-sG  { .-mv-4 ; }    .-mh-4-sG  { .-mh-4 ; }
+  .-mv-8-sG  { .-mv-8 ; }    .-mh-8-sG  { .-mh-8 ; }
+  .-mv-g-sG  { .-mv-g ; }    .-mh-g-sG  { .-mh-g ; }
+  .-mv-_q-sG { .-mv-_q; }    .-mh-_q-sG { .-mh-_q; }
+  .-mv-_h-sG { .-mv-_h; }    .-mh-_h-sG { .-mh-_h; }
+  .-mv-_1-sG { .-mv-_1; }    .-mh-_1-sG { .-mh-_1; }
+  .-mv-_2-sG { .-mv-_2; }    .-mh-_2-sG { .-mh-_2; }
+  .-mv-_4-sG { .-mv-_4; }    .-mh-_4-sG { .-mh-_4; }
+  .-mv-_8-sG { .-mv-_8; }    .-mh-_8-sG { .-mh-_8; }
+  .-mv-_g-sG { .-mv-_g; }    .-mh-_g-sG { .-mh-_g; }
 }
 
 @media screen and (min-width: 75em) {
-  .-mt-0-sT  { .-mt-0 ; }    .-mb-0-sT  { .-mb-0 ; }    .-mv-0-sT  { .-mv-0 ; }
-  .-mt-i-sT  { .-mt-i ; }    .-mb-i-sT  { .-mb-i ; }    .-mv-i-sT  { .-mv-i ; }
-  .-mt-a-sT  { .-mt-a ; }    .-mb-a-sT  { .-mb-a ; }    .-mv-a-sT  { .-mv-a ; }
-  .-mt-z-sT  { .-mt-z ; }    .-mb-z-sT  { .-mb-z ; }    .-mv-z-sT  { .-mv-z ; }
-  .-mt-q-sT  { .-mt-q ; }    .-mb-q-sT  { .-mb-q ; }    .-mv-q-sT  { .-mv-q ; }
-  .-mt-h-sT  { .-mt-h ; }    .-mb-h-sT  { .-mb-h ; }    .-mv-h-sT  { .-mv-h ; }
-  .-mt-1-sT  { .-mt-1 ; }    .-mb-1-sT  { .-mb-1 ; }    .-mv-1-sT  { .-mv-1 ; }
-  .-mt-2-sT  { .-mt-2 ; }    .-mb-2-sT  { .-mb-2 ; }    .-mv-2-sT  { .-mv-2 ; }
-  .-mt-4-sT  { .-mt-4 ; }    .-mb-4-sT  { .-mb-4 ; }    .-mv-4-sT  { .-mv-4 ; }
-  .-mt-8-sT  { .-mt-8 ; }    .-mb-8-sT  { .-mb-8 ; }    .-mv-8-sT  { .-mv-8 ; }
-  .-mt-g-sT  { .-mt-g ; }    .-mb-g-sT  { .-mb-g ; }    .-mv-g-sT  { .-mv-g ; }
-  .-mt-_q-sT { .-mt-_q; }    .-mb-_q-sT { .-mb-_q; }    .-mv-_q-sT { .-mv-_q; }
-  .-mt-_h-sT { .-mt-_h; }    .-mb-_h-sT { .-mb-_h; }    .-mv-_h-sT { .-mv-_h; }
-  .-mt-_1-sT { .-mt-_1; }    .-mb-_1-sT { .-mb-_1; }    .-mv-_1-sT { .-mv-_1; }
-  .-mt-_2-sT { .-mt-_2; }    .-mb-_2-sT { .-mb-_2; }    .-mv-_2-sT { .-mv-_2; }
-  .-mt-_4-sT { .-mt-_4; }    .-mb-_4-sT { .-mb-_4; }    .-mv-_4-sT { .-mv-_4; }
-  .-mt-_8-sT { .-mt-_8; }    .-mb-_8-sT { .-mb-_8; }    .-mv-_8-sT { .-mv-_8; }
-  .-mt-_g-sT { .-mt-_g; }    .-mb-_g-sT { .-mb-_g; }    .-mv-_g-sT { .-mv-_g; }
+  .-mv-i-sT  { .-mv-i ; }    .-mh-i-sT  { .-mh-i ; }
+  .-mv-0-sT  { .-mv-0 ; }    .-mh-0-sT  { .-mh-0 ; }
+  .-mv-u-sT  { .-mv-u ; }    .-mh-u-sT  { .-mh-u ; }
+  .-mv-a-sT  { .-mv-a ; }    .-mh-a-sT  { .-mh-a ; }
+  .-mv-z-sT  { .-mv-z ; }    .-mh-z-sT  { .-mh-z ; }
+  .-mv-q-sT  { .-mv-q ; }    .-mh-q-sT  { .-mh-q ; }
+  .-mv-h-sT  { .-mv-h ; }    .-mh-h-sT  { .-mh-h ; }
+  .-mv-1-sT  { .-mv-1 ; }    .-mh-1-sT  { .-mh-1 ; }
+  .-mv-2-sT  { .-mv-2 ; }    .-mh-2-sT  { .-mh-2 ; }
+  .-mv-4-sT  { .-mv-4 ; }    .-mh-4-sT  { .-mh-4 ; }
+  .-mv-8-sT  { .-mv-8 ; }    .-mh-8-sT  { .-mh-8 ; }
+  .-mv-g-sT  { .-mv-g ; }    .-mh-g-sT  { .-mh-g ; }
+  .-mv-_q-sT { .-mv-_q; }    .-mh-_q-sT { .-mh-_q; }
+  .-mv-_h-sT { .-mv-_h; }    .-mh-_h-sT { .-mh-_h; }
+  .-mv-_1-sT { .-mv-_1; }    .-mh-_1-sT { .-mh-_1; }
+  .-mv-_2-sT { .-mv-_2; }    .-mh-_2-sT { .-mh-_2; }
+  .-mv-_4-sT { .-mv-_4; }    .-mh-_4-sT { .-mh-_4; }
+  .-mv-_8-sT { .-mv-_8; }    .-mh-_8-sT { .-mh-_8; }
+  .-mv-_g-sT { .-mv-_g; }    .-mh-_g-sT { .-mh-_g; }
+}
 
-  .-ml-0-sT  { .-ml-0 ; }    .-mr-0-sT  { .-mr-0 ; }    .-mh-0-sT  { .-mh-0 ; }
-  .-ml-i-sT  { .-ml-i ; }    .-mr-i-sT  { .-mr-i ; }    .-mh-i-sT  { .-mh-i ; }
-  .-ml-a-sT  { .-ml-a ; }    .-mr-a-sT  { .-mr-a ; }    .-mh-a-sT  { .-mh-a ; }
-  .-ml-z-sT  { .-ml-z ; }    .-mr-z-sT  { .-mr-z ; }    .-mh-z-sT  { .-mh-z ; }
-  .-ml-q-sT  { .-ml-q ; }    .-mr-q-sT  { .-mr-q ; }    .-mh-q-sT  { .-mh-q ; }
-  .-ml-h-sT  { .-ml-h ; }    .-mr-h-sT  { .-mr-h ; }    .-mh-h-sT  { .-mh-h ; }
-  .-ml-1-sT  { .-ml-1 ; }    .-mr-1-sT  { .-mr-1 ; }    .-mh-1-sT  { .-mh-1 ; }
-  .-ml-2-sT  { .-ml-2 ; }    .-mr-2-sT  { .-mr-2 ; }    .-mh-2-sT  { .-mh-2 ; }
-  .-ml-4-sT  { .-ml-4 ; }    .-mr-4-sT  { .-mr-4 ; }    .-mh-4-sT  { .-mh-4 ; }
-  .-ml-8-sT  { .-ml-8 ; }    .-mr-8-sT  { .-mr-8 ; }    .-mh-8-sT  { .-mh-8 ; }
-  .-ml-g-sT  { .-ml-g ; }    .-mr-g-sT  { .-mr-g ; }    .-mh-g-sT  { .-mh-g ; }
-  .-ml-_q-sT { .-ml-_q; }    .-mr-_q-sT { .-mr-_q; }    .-mh-_q-sT { .-mh-_q; }
-  .-ml-_h-sT { .-ml-_h; }    .-mr-_h-sT { .-mr-_h; }    .-mh-_h-sT { .-mh-_h; }
-  .-ml-_1-sT { .-ml-_1; }    .-mr-_1-sT { .-mr-_1; }    .-mh-_1-sT { .-mh-_1; }
-  .-ml-_2-sT { .-ml-_2; }    .-mr-_2-sT { .-mr-_2; }    .-mh-_2-sT { .-mh-_2; }
-  .-ml-_4-sT { .-ml-_4; }    .-mr-_4-sT { .-mr-_4; }    .-mh-_4-sT { .-mh-_4; }
-  .-ml-_8-sT { .-ml-_8; }    .-mr-_8-sT { .-mr-_8; }    .-mh-_8-sT { .-mh-_8; }
-  .-ml-_g-sT { .-ml-_g; }    .-mr-_g-sT { .-mr-_g; }    .-mh-_g-sT { .-mh-_g; }
+@media screen and (min-width: 90em) {
+  .-mv-i-sP  { .-mv-i ; }    .-mh-i-sP  { .-mh-i ; }
+  .-mv-0-sP  { .-mv-0 ; }    .-mh-0-sP  { .-mh-0 ; }
+  .-mv-u-sP  { .-mv-u ; }    .-mh-u-sP  { .-mh-u ; }
+  .-mv-a-sP  { .-mv-a ; }    .-mh-a-sP  { .-mh-a ; }
+  .-mv-z-sP  { .-mv-z ; }    .-mh-z-sP  { .-mh-z ; }
+  .-mv-q-sP  { .-mv-q ; }    .-mh-q-sP  { .-mh-q ; }
+  .-mv-h-sP  { .-mv-h ; }    .-mh-h-sP  { .-mh-h ; }
+  .-mv-1-sP  { .-mv-1 ; }    .-mh-1-sP  { .-mh-1 ; }
+  .-mv-2-sP  { .-mv-2 ; }    .-mh-2-sP  { .-mh-2 ; }
+  .-mv-4-sP  { .-mv-4 ; }    .-mh-4-sP  { .-mh-4 ; }
+  .-mv-8-sP  { .-mv-8 ; }    .-mh-8-sP  { .-mh-8 ; }
+  .-mv-g-sP  { .-mv-g ; }    .-mh-g-sP  { .-mh-g ; }
+  .-mv-_q-sP { .-mv-_q; }    .-mh-_q-sP { .-mh-_q; }
+  .-mv-_h-sP { .-mv-_h; }    .-mh-_h-sP { .-mh-_h; }
+  .-mv-_1-sP { .-mv-_1; }    .-mh-_1-sP { .-mh-_1; }
+  .-mv-_2-sP { .-mv-_2; }    .-mh-_2-sP { .-mh-_2; }
+  .-mv-_4-sP { .-mv-_4; }    .-mh-_4-sP { .-mh-_4; }
+  .-mv-_8-sP { .-mv-_8; }    .-mh-_8-sP { .-mh-_8; }
+  .-mv-_g-sP { .-mv-_g; }    .-mh-_g-sP { .-mh-_g; }
+}
 
-  .-m-i-sT { .-m-i; }
-  .-m-0-sT { .-m-0; }
-  .-m-u-sT { .-m-u; }
-  .-m-a-sT { .-m-a; }
-  .-m-z-sT { .-m-z; }
+@media not all and (min-width: 30em) {
+  .-mv-i-nK  { .-mv-i ; }    .-mh-i-nK  { .-mh-i ; }
+  .-mv-0-nK  { .-mv-0 ; }    .-mh-0-nK  { .-mh-0 ; }
+  .-mv-u-nK  { .-mv-u ; }    .-mh-u-nK  { .-mh-u ; }
+  .-mv-a-nK  { .-mv-a ; }    .-mh-a-nK  { .-mh-a ; }
+  .-mv-z-nK  { .-mv-z ; }    .-mh-z-nK  { .-mh-z ; }
+  .-mv-q-nK  { .-mv-q ; }    .-mh-q-nK  { .-mh-q ; }
+  .-mv-h-nK  { .-mv-h ; }    .-mh-h-nK  { .-mh-h ; }
+  .-mv-1-nK  { .-mv-1 ; }    .-mh-1-nK  { .-mh-1 ; }
+  .-mv-2-nK  { .-mv-2 ; }    .-mh-2-nK  { .-mh-2 ; }
+  .-mv-4-nK  { .-mv-4 ; }    .-mh-4-nK  { .-mh-4 ; }
+  .-mv-8-nK  { .-mv-8 ; }    .-mh-8-nK  { .-mh-8 ; }
+  .-mv-g-nK  { .-mv-g ; }    .-mh-g-nK  { .-mh-g ; }
+  .-mv-_q-nK { .-mv-_q; }    .-mh-_q-nK { .-mh-_q; }
+  .-mv-_h-nK { .-mv-_h; }    .-mh-_h-nK { .-mh-_h; }
+  .-mv-_1-nK { .-mv-_1; }    .-mh-_1-nK { .-mh-_1; }
+  .-mv-_2-nK { .-mv-_2; }    .-mh-_2-nK { .-mh-_2; }
+  .-mv-_4-nK { .-mv-_4; }    .-mh-_4-nK { .-mh-_4; }
+  .-mv-_8-nK { .-mv-_8; }    .-mh-_8-nK { .-mh-_8; }
+  .-mv-_g-nK { .-mv-_g; }    .-mh-_g-nK { .-mh-_g; }
+}
+
+@media not all and (min-width: 45em) {
+  .-mv-i-nM  { .-mv-i ; }    .-mh-i-nM  { .-mh-i ; }
+  .-mv-0-nM  { .-mv-0 ; }    .-mh-0-nM  { .-mh-0 ; }
+  .-mv-u-nM  { .-mv-u ; }    .-mh-u-nM  { .-mh-u ; }
+  .-mv-a-nM  { .-mv-a ; }    .-mh-a-nM  { .-mh-a ; }
+  .-mv-z-nM  { .-mv-z ; }    .-mh-z-nM  { .-mh-z ; }
+  .-mv-q-nM  { .-mv-q ; }    .-mh-q-nM  { .-mh-q ; }
+  .-mv-h-nM  { .-mv-h ; }    .-mh-h-nM  { .-mh-h ; }
+  .-mv-1-nM  { .-mv-1 ; }    .-mh-1-nM  { .-mh-1 ; }
+  .-mv-2-nM  { .-mv-2 ; }    .-mh-2-nM  { .-mh-2 ; }
+  .-mv-4-nM  { .-mv-4 ; }    .-mh-4-nM  { .-mh-4 ; }
+  .-mv-8-nM  { .-mv-8 ; }    .-mh-8-nM  { .-mh-8 ; }
+  .-mv-g-nM  { .-mv-g ; }    .-mh-g-nM  { .-mh-g ; }
+  .-mv-_q-nM { .-mv-_q; }    .-mh-_q-nM { .-mh-_q; }
+  .-mv-_h-nM { .-mv-_h; }    .-mh-_h-nM { .-mh-_h; }
+  .-mv-_1-nM { .-mv-_1; }    .-mh-_1-nM { .-mh-_1; }
+  .-mv-_2-nM { .-mv-_2; }    .-mh-_2-nM { .-mh-_2; }
+  .-mv-_4-nM { .-mv-_4; }    .-mh-_4-nM { .-mh-_4; }
+  .-mv-_8-nM { .-mv-_8; }    .-mh-_8-nM { .-mh-_8; }
+  .-mv-_g-nM { .-mv-_g; }    .-mh-_g-nM { .-mh-_g; }
+}
+
+@media not all and (min-width: 60em) {
+  .-mv-i-nG  { .-mv-i ; }    .-mh-i-nG  { .-mh-i ; }
+  .-mv-0-nG  { .-mv-0 ; }    .-mh-0-nG  { .-mh-0 ; }
+  .-mv-u-nG  { .-mv-u ; }    .-mh-u-nG  { .-mh-u ; }
+  .-mv-a-nG  { .-mv-a ; }    .-mh-a-nG  { .-mh-a ; }
+  .-mv-z-nG  { .-mv-z ; }    .-mh-z-nG  { .-mh-z ; }
+  .-mv-q-nG  { .-mv-q ; }    .-mh-q-nG  { .-mh-q ; }
+  .-mv-h-nG  { .-mv-h ; }    .-mh-h-nG  { .-mh-h ; }
+  .-mv-1-nG  { .-mv-1 ; }    .-mh-1-nG  { .-mh-1 ; }
+  .-mv-2-nG  { .-mv-2 ; }    .-mh-2-nG  { .-mh-2 ; }
+  .-mv-4-nG  { .-mv-4 ; }    .-mh-4-nG  { .-mh-4 ; }
+  .-mv-8-nG  { .-mv-8 ; }    .-mh-8-nG  { .-mh-8 ; }
+  .-mv-g-nG  { .-mv-g ; }    .-mh-g-nG  { .-mh-g ; }
+  .-mv-_q-nG { .-mv-_q; }    .-mh-_q-nG { .-mh-_q; }
+  .-mv-_h-nG { .-mv-_h; }    .-mh-_h-nG { .-mh-_h; }
+  .-mv-_1-nG { .-mv-_1; }    .-mh-_1-nG { .-mh-_1; }
+  .-mv-_2-nG { .-mv-_2; }    .-mh-_2-nG { .-mh-_2; }
+  .-mv-_4-nG { .-mv-_4; }    .-mh-_4-nG { .-mh-_4; }
+  .-mv-_8-nG { .-mv-_8; }    .-mh-_8-nG { .-mh-_8; }
+  .-mv-_g-nG { .-mv-_g; }    .-mh-_g-nG { .-mh-_g; }
+}
+
+@media not all and (min-width: 75em) {
+  .-mv-i-nT  { .-mv-i ; }    .-mh-i-nT  { .-mh-i ; }
+  .-mv-0-nT  { .-mv-0 ; }    .-mh-0-nT  { .-mh-0 ; }
+  .-mv-u-nT  { .-mv-u ; }    .-mh-u-nT  { .-mh-u ; }
+  .-mv-a-nT  { .-mv-a ; }    .-mh-a-nT  { .-mh-a ; }
+  .-mv-z-nT  { .-mv-z ; }    .-mh-z-nT  { .-mh-z ; }
+  .-mv-q-nT  { .-mv-q ; }    .-mh-q-nT  { .-mh-q ; }
+  .-mv-h-nT  { .-mv-h ; }    .-mh-h-nT  { .-mh-h ; }
+  .-mv-1-nT  { .-mv-1 ; }    .-mh-1-nT  { .-mh-1 ; }
+  .-mv-2-nT  { .-mv-2 ; }    .-mh-2-nT  { .-mh-2 ; }
+  .-mv-4-nT  { .-mv-4 ; }    .-mh-4-nT  { .-mh-4 ; }
+  .-mv-8-nT  { .-mv-8 ; }    .-mh-8-nT  { .-mh-8 ; }
+  .-mv-g-nT  { .-mv-g ; }    .-mh-g-nT  { .-mh-g ; }
+  .-mv-_q-nT { .-mv-_q; }    .-mh-_q-nT { .-mh-_q; }
+  .-mv-_h-nT { .-mv-_h; }    .-mh-_h-nT { .-mh-_h; }
+  .-mv-_1-nT { .-mv-_1; }    .-mh-_1-nT { .-mh-_1; }
+  .-mv-_2-nT { .-mv-_2; }    .-mh-_2-nT { .-mh-_2; }
+  .-mv-_4-nT { .-mv-_4; }    .-mh-_4-nT { .-mh-_4; }
+  .-mv-_8-nT { .-mv-_8; }    .-mh-_8-nT { .-mh-_8; }
+  .-mv-_g-nT { .-mv-_g; }    .-mh-_g-nT { .-mh-_g; }
+}
+
+@media not all and (min-width: 90em) {
+  .-mv-i-nP  { .-mv-i ; }    .-mh-i-nP  { .-mh-i ; }
+  .-mv-0-nP  { .-mv-0 ; }    .-mh-0-nP  { .-mh-0 ; }
+  .-mv-u-nP  { .-mv-u ; }    .-mh-u-nP  { .-mh-u ; }
+  .-mv-a-nP  { .-mv-a ; }    .-mh-a-nP  { .-mh-a ; }
+  .-mv-z-nP  { .-mv-z ; }    .-mh-z-nP  { .-mh-z ; }
+  .-mv-q-nP  { .-mv-q ; }    .-mh-q-nP  { .-mh-q ; }
+  .-mv-h-nP  { .-mv-h ; }    .-mh-h-nP  { .-mh-h ; }
+  .-mv-1-nP  { .-mv-1 ; }    .-mh-1-nP  { .-mh-1 ; }
+  .-mv-2-nP  { .-mv-2 ; }    .-mh-2-nP  { .-mh-2 ; }
+  .-mv-4-nP  { .-mv-4 ; }    .-mh-4-nP  { .-mh-4 ; }
+  .-mv-8-nP  { .-mv-8 ; }    .-mh-8-nP  { .-mh-8 ; }
+  .-mv-g-nP  { .-mv-g ; }    .-mh-g-nP  { .-mh-g ; }
+  .-mv-_q-nP { .-mv-_q; }    .-mh-_q-nP { .-mh-_q; }
+  .-mv-_h-nP { .-mv-_h; }    .-mh-_h-nP { .-mh-_h; }
+  .-mv-_1-nP { .-mv-_1; }    .-mh-_1-nP { .-mh-_1; }
+  .-mv-_2-nP { .-mv-_2; }    .-mh-_2-nP { .-mh-_2; }
+  .-mv-_4-nP { .-mv-_4; }    .-mh-_4-nP { .-mh-_4; }
+  .-mv-_8-nP { .-mv-_8; }    .-mh-_8-nP { .-mh-_8; }
+  .-mv-_g-nP { .-mv-_g; }    .-mh-_g-nP { .-mh-_g; }
 }

@@ -1658,7 +1658,7 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/margin"
     , "inherited": false
     , "initial"  : "0"
-    , "stability": 2
+    , "stability": 3
     , "values"   : [
         { "name": "auto", "code": "a" }
       , { "name": "0"   , "code": "z" }
@@ -1670,39 +1670,39 @@
       , "medium+"
       , "large+"
       , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
-      "name": "margin-horizontal"
-    , "code": {
-        "ml": "margin-left"
-      , "mr": "margin-right"
-      , "mh": "margin-horizontal"
-      }
-    , "summary"  : "Sets the left, right, or left and right margin space on an element."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/margin"
+      "name"     : "margin-bottom"
+    , "code"     : "mb"
+    , "summary"  : "Sets the bottom margin space on an element."
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/margin-bottom"
     , "inherited": false
     , "initial"  : "0"
-    , "stability": 2
+    , "stability": 3
     , "values"   : [
-        { "name": "inherit" ,               "use": { "mh": ".-ml-i ; .-mr-i ;" } }
-      , { "name": "initial" ,               "use": { "mh": ".-ml-0 ; .-mr-0 ;" } }
-      , { "name": "auto"    , "code": "a" , "use": { "mh": ".-ml-a ; .-mr-a ;" } }
-      , { "name": "0"       , "code": "z" , "use": { "mh": ".-ml-z ; .-mr-z ;" } }
-      , { "name": "0.25rem" , "code": "q" , "use": { "mh": ".-ml-q ; .-mr-q ;" } }
-      , { "name": "0.5rem"  , "code": "h" , "use": { "mh": ".-ml-h ; .-mr-h ;" } }
-      , { "name": "1rem"    , "code": "1" , "use": { "mh": ".-ml-1 ; .-mr-1 ;" } }
-      , { "name": "2rem"    , "code": "2" , "use": { "mh": ".-ml-2 ; .-mr-2 ;" } }
-      , { "name": "4rem"    , "code": "4" , "use": { "mh": ".-ml-4 ; .-mr-4 ;" } }
-      , { "name": "8rem"    , "code": "8" , "use": { "mh": ".-ml-8 ; .-mr-8 ;" } }
-      , { "name": "16rem"   , "code": "g" , "use": { "mh": ".-ml-g ; .-mr-g ;" } }
-      , { "name": "-0.25rem", "code": "_q", "use": { "mh": ".-ml-_q; .-mr-_q;" } }
-      , { "name": "-0.5rem" , "code": "_h", "use": { "mh": ".-ml-_h; .-mr-_h;" } }
-      , { "name": "-1rem"   , "code": "_1", "use": { "mh": ".-ml-_1; .-mr-_1;" } }
-      , { "name": "-2rem"   , "code": "_2", "use": { "mh": ".-ml-_2; .-mr-_2;" } }
-      , { "name": "-4rem"   , "code": "_4", "use": { "mh": ".-ml-_4; .-mr-_4;" } }
-      , { "name": "-8rem"   , "code": "_8", "use": { "mh": ".-ml-_8; .-mr-_8;" } }
-      , { "name": "-16rem"  , "code": "_g", "use": { "mh": ".-ml-_g; .-mr-_g;" } }
+        { "name": "auto"    , "code": "a" }
+      , { "name": "0"       , "code": "z" }
+      , { "name": "0.25vru" , "code": "q" , "use": "margin-bottom: calc(0.25  ~'*' var(--vru, @g-vru))" }
+      , { "name": "0.5vru"  , "code": "h" , "use": "margin-bottom: calc(0.5   ~'*' var(--vru, @g-vru))" }
+      , { "name": "1vru"    , "code": "1" , "use": "margin-bottom: calc(1     ~'*' var(--vru, @g-vru))" }
+      , { "name": "2vru"    , "code": "2" , "use": "margin-bottom: calc(2     ~'*' var(--vru, @g-vru))" }
+      , { "name": "4vru"    , "code": "4" , "use": "margin-bottom: calc(4     ~'*' var(--vru, @g-vru))" }
+      , { "name": "8vru"    , "code": "8" , "use": "margin-bottom: calc(8     ~'*' var(--vru, @g-vru))" }
+      , { "name": "16vru"   , "code": "g" , "use": "margin-bottom: calc(16    ~'*' var(--vru, @g-vru))" }
+      , { "name": "-0.25vru", "code": "_q", "use": "margin-bottom: calc(-0.25 ~'*' var(--vru, @g-vru))" }
+      , { "name": "-0.5vru" , "code": "_h", "use": "margin-bottom: calc(-0.5  ~'*' var(--vru, @g-vru))" }
+      , { "name": "-1vru"   , "code": "_1", "use": "margin-bottom: calc(-1    ~'*' var(--vru, @g-vru))" }
+      , { "name": "-2vru"   , "code": "_2", "use": "margin-bottom: calc(-2    ~'*' var(--vru, @g-vru))" }
+      , { "name": "-4vru"   , "code": "_4", "use": "margin-bottom: calc(-4    ~'*' var(--vru, @g-vru))" }
+      , { "name": "-8vru"   , "code": "_8", "use": "margin-bottom: calc(-8    ~'*' var(--vru, @g-vru))" }
+      , { "name": "-16vru"  , "code": "_g", "use": "margin-bottom: calc(-16   ~'*' var(--vru, @g-vru))" }
       ]
     , "media": [
         "screen"
@@ -1711,39 +1711,39 @@
       , "medium+"
       , "large+"
       , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
-      "name": "margin-vertical"
-    , "code": {
-        "mt": "margin-top"
-      , "mb": "margin-bottom"
-      , "mv": "margin-vertical"
-      }
-    , "summary"  : "Sets the top, bottom, or top and bottom margin space on an element."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/margin"
+      "name"     : "margin-left"
+    , "code"     : "ml"
+    , "summary"  : "Sets the left margin space on an element."
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/margin-left"
     , "inherited": false
     , "initial"  : "0"
-    , "stability": 2
+    , "stability": 3
     , "values"   : [
-        { "name": "inherit" ,               "use": { "mv": ".-mt-i ; .-mb-i ;" } }
-      , { "name": "initial" ,               "use": { "mv": ".-mt-0 ; .-mb-0 ;" } }
-      , { "name": "auto"    , "code": "a" , "use": { "mv": ".-mt-a ; .-mb-a ;" } }
-      , { "name": "0"       , "code": "z" , "use": { "mv": ".-mt-z ; .-mb-z ;" } }
-      , { "name": "0.25vru" , "code": "q" , "use": { "mv": ".-mt-q ; .-mb-q ;", "mt": "margin-top: calc(0.25  ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(0.25  ~'*' var(--vru, 1.5rem));" } }
-      , { "name": "0.5vru"  , "code": "h" , "use": { "mv": ".-mt-h ; .-mb-h ;", "mt": "margin-top: calc(0.5   ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(0.5   ~'*' var(--vru, 1.5rem));" } }
-      , { "name": "1vru"    , "code": "1" , "use": { "mv": ".-mt-1 ; .-mb-1 ;", "mt": "margin-top: calc(1     ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(1     ~'*' var(--vru, 1.5rem));" } }
-      , { "name": "2vru"    , "code": "2" , "use": { "mv": ".-mt-2 ; .-mb-2 ;", "mt": "margin-top: calc(2     ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(2     ~'*' var(--vru, 1.5rem));" } }
-      , { "name": "4vru"    , "code": "4" , "use": { "mv": ".-mt-4 ; .-mb-4 ;", "mt": "margin-top: calc(4     ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(4     ~'*' var(--vru, 1.5rem));" } }
-      , { "name": "8vru"    , "code": "8" , "use": { "mv": ".-mt-8 ; .-mb-8 ;", "mt": "margin-top: calc(8     ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(8     ~'*' var(--vru, 1.5rem));" } }
-      , { "name": "16vru"   , "code": "g" , "use": { "mv": ".-mt-g ; .-mb-g ;", "mt": "margin-top: calc(16    ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(16    ~'*' var(--vru, 1.5rem));" } }
-      , { "name": "-0.25vru", "code": "_q", "use": { "mv": ".-mt-_q; .-mb-_q;", "mt": "margin-top: calc(-0.25 ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(-0.25 ~'*' var(--vru, 1.5rem));" } }
-      , { "name": "-0.5vru" , "code": "_h", "use": { "mv": ".-mt-_h; .-mb-_h;", "mt": "margin-top: calc(-0.5  ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(-0.5  ~'*' var(--vru, 1.5rem));" } }
-      , { "name": "-1vru"   , "code": "_1", "use": { "mv": ".-mt-_1; .-mb-_1;", "mt": "margin-top: calc(-1    ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(-1    ~'*' var(--vru, 1.5rem));" } }
-      , { "name": "-2vru"   , "code": "_2", "use": { "mv": ".-mt-_2; .-mb-_2;", "mt": "margin-top: calc(-2    ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(-2    ~'*' var(--vru, 1.5rem));" } }
-      , { "name": "-4vru"   , "code": "_4", "use": { "mv": ".-mt-_4; .-mb-_4;", "mt": "margin-top: calc(-4    ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(-4    ~'*' var(--vru, 1.5rem));" } }
-      , { "name": "-8vru"   , "code": "_8", "use": { "mv": ".-mt-_8; .-mb-_8;", "mt": "margin-top: calc(-8    ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(-8    ~'*' var(--vru, 1.5rem));" } }
-      , { "name": "-16vru"  , "code": "_g", "use": { "mv": ".-mt-_g; .-mb-_g;", "mt": "margin-top: calc(-16   ~'*' var(--vru, 1.5rem));", "mb": "margin-bottom: calc(-16   ~'*' var(--vru, 1.5rem));" } }
+        { "name": "auto"    , "code": "a"  }
+      , { "name": "0"       , "code": "z"  }
+      , { "name": "0.25rem" , "code": "q"  }
+      , { "name": "0.5rem"  , "code": "h"  }
+      , { "name": "1rem"    , "code": "1"  }
+      , { "name": "2rem"    , "code": "2"  }
+      , { "name": "4rem"    , "code": "4"  }
+      , { "name": "8rem"    , "code": "8"  }
+      , { "name": "16rem"   , "code": "g"  }
+      , { "name": "-0.25rem", "code": "_q" }
+      , { "name": "-0.5rem" , "code": "_h" }
+      , { "name": "-1rem"   , "code": "_1" }
+      , { "name": "-2rem"   , "code": "_2" }
+      , { "name": "-4rem"   , "code": "_4" }
+      , { "name": "-8rem"   , "code": "_8" }
+      , { "name": "-16rem"  , "code": "_g" }
       ]
     , "media": [
         "screen"
@@ -1752,6 +1752,94 @@
       , "medium+"
       , "large+"
       , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
+      ]
+    }
+  , {
+      "name"     : "margin-right"
+    , "code"     : "mr"
+    , "summary"  : "Sets the right margin space on an element."
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/margin-right"
+    , "inherited": false
+    , "initial"  : "0"
+    , "stability": 3
+    , "values"   : [
+        { "name": "auto"    , "code": "a"  }
+      , { "name": "0"       , "code": "z"  }
+      , { "name": "0.25rem" , "code": "q"  }
+      , { "name": "0.5rem"  , "code": "h"  }
+      , { "name": "1rem"    , "code": "1"  }
+      , { "name": "2rem"    , "code": "2"  }
+      , { "name": "4rem"    , "code": "4"  }
+      , { "name": "8rem"    , "code": "8"  }
+      , { "name": "16rem"   , "code": "g"  }
+      , { "name": "-0.25rem", "code": "_q" }
+      , { "name": "-0.5rem" , "code": "_h" }
+      , { "name": "-1rem"   , "code": "_1" }
+      , { "name": "-2rem"   , "code": "_2" }
+      , { "name": "-4rem"   , "code": "_4" }
+      , { "name": "-8rem"   , "code": "_8" }
+      , { "name": "-16rem"  , "code": "_g" }
+      ]
+    , "media": [
+        "screen"
+      , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
+      ]
+    }
+  , {
+      "name"     : "margin-top"
+    , "code"     : "mt"
+    , "summary"  : "Sets the top margin space on an element."
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/margin-top"
+    , "inherited": false
+    , "initial"  : "0"
+    , "stability": 3
+    , "values"   : [
+        { "name": "auto"    , "code": "a" }
+      , { "name": "0"       , "code": "z" }
+      , { "name": "0.25vru" , "code": "q" , "use": "margin-top: calc(0.25  ~'*' var(--vru, @g-vru))" }
+      , { "name": "0.5vru"  , "code": "h" , "use": "margin-top: calc(0.5   ~'*' var(--vru, @g-vru))" }
+      , { "name": "1vru"    , "code": "1" , "use": "margin-top: calc(1     ~'*' var(--vru, @g-vru))" }
+      , { "name": "2vru"    , "code": "2" , "use": "margin-top: calc(2     ~'*' var(--vru, @g-vru))" }
+      , { "name": "4vru"    , "code": "4" , "use": "margin-top: calc(4     ~'*' var(--vru, @g-vru))" }
+      , { "name": "8vru"    , "code": "8" , "use": "margin-top: calc(8     ~'*' var(--vru, @g-vru))" }
+      , { "name": "16vru"   , "code": "g" , "use": "margin-top: calc(16    ~'*' var(--vru, @g-vru))" }
+      , { "name": "-0.25vru", "code": "_q", "use": "margin-top: calc(-0.25 ~'*' var(--vru, @g-vru))" }
+      , { "name": "-0.5vru" , "code": "_h", "use": "margin-top: calc(-0.5  ~'*' var(--vru, @g-vru))" }
+      , { "name": "-1vru"   , "code": "_1", "use": "margin-top: calc(-1    ~'*' var(--vru, @g-vru))" }
+      , { "name": "-2vru"   , "code": "_2", "use": "margin-top: calc(-2    ~'*' var(--vru, @g-vru))" }
+      , { "name": "-4vru"   , "code": "_4", "use": "margin-top: calc(-4    ~'*' var(--vru, @g-vru))" }
+      , { "name": "-8vru"   , "code": "_8", "use": "margin-top: calc(-8    ~'*' var(--vru, @g-vru))" }
+      , { "name": "-16vru"  , "code": "_g", "use": "margin-top: calc(-16   ~'*' var(--vru, @g-vru))" }
+      ]
+    , "media": [
+        "screen"
+      , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
