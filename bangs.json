@@ -1950,12 +1950,10 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap"
     , "inherited": true
     , "initial"  : "normal"
-    , "stability": 2
+    , "stability": 1
     , "values"   : [
-        { "name": "inherit"   ,              "use": "word-wrap: inherit;    overflow-wrap: inherit;" }
-      , { "name": "initial"   ,              "use": "word-wrap: normal;     overflow-wrap: normal; word-wrap: initial; overflow-wrap: initial;" }
-      , { "name": "normal"    , "code": "n", "use": "word-wrap: normal;     overflow-wrap: normal;"     }
-      , { "name": "break-word", "code": "b", "use": "word-wrap: break-word; overflow-wrap: break-word;" }
+        { "name": "normal"    , "code": "n" }
+      , { "name": "break-word", "code": "b" }
       ]
     , "media": [
         "screen"
