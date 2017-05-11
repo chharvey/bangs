@@ -37,13 +37,15 @@ a:hover {
 .c-Property__Classes {
   display: -ms-grid;
   display:     grid;
-  -ms-grid-template-columns: 200px auto;
-      grid-template-columns: 200px auto;
+  -ms-grid-template-columns: 200px auto 100px;
+      grid-template-columns: 200px auto 100px;
   max-height: 300px;
   overflow: scroll;
   background-color: fadeout(white, 50%);
 }
 .c-Property__Classes--suffixes {
+  -ms-grid-template-columns: 200px auto;
+      grid-template-columns: 200px auto;
   background-color: fadeout(black, 50%);
   color: #fff;
 }

@@ -3,28 +3,88 @@ let path = require('path')
 let Bangs = require('../_models/Bangs.class.js')
 
 fs.mkdir('build/', function (err, data) {
-  Bangs.generateTrackPercentsAsync('w', function (val) { return `width: (${val} * 100%)` }, function (err, data) {
-    if (err) console.error(err)
-    else fs.writeFile(`${__dirname}/../build/_width.less`, data, function (err, data) { if (err) throw err })
-  })
-  Bangs.generateTrackPercentsAsync('cw', function (val) { return `.column-width(${val} * 100%)` }, function (err, data) {
-    if (err) console.error(err)
-    else fs.writeFile(`${__dirname}/../build/_column-width.less`, data, function (err, data) { if (err) throw err })
-  })
-  Bangs.generateTrackPercentsAsync('x', function (val) { return `.flex(${val} * 100%)` }, function (err, data) {
-    if (err) console.error(err)
-    else fs.writeFile(`${__dirname}/../build/_flex.less`, data, function (err, data) { if (err) throw err })
-  })
-  Bangs.generateTrackCountsAsync('cc', function (val) { return `.column-count(${val})` }, function (err, data) {
-    if (err) console.error(err)
-    else fs.writeFile(`${__dirname}/../build/_column-count.less`, data, function (err, data) { if (err) throw err })
-  })
-  Bangs.generateTrackCountsAsync('gtc', function (val) { return `.grid-template-columns(repeat(${val}, 1fr))` }, function (err, data) {
-    if (err) console.error(err)
-    else fs.writeFile(`${__dirname}/../build/_grid-template-columns.less`, data, function (err, data) { if (err) throw err })
-  })
-  Bangs.generateTrackCountsAsync('gtr', function (val) { return `.grid-template-rows(repeat(${val}, 1fr))` }, function (err, data) {
-    if (err) console.error(err)
-    else fs.writeFile(`${__dirname}/../build/_grid-template-rows.less`, data, function (err, data) { if (err) throw err })
+  [
+    'display'
+  , 'column-count'
+  , 'column-width'
+  , 'column-gap'
+  , 'column-rule-width'
+  , 'column-rule-style'
+  , 'column-rule-color'
+  , 'column-fill'
+  , 'column-span'
+  , 'flex-direction'
+  , 'flex-wrap'
+  , 'flex'
+  , 'order'
+  , 'grid-template-columns'
+  , 'grid-template-rows'
+  , 'grid-column-gap'
+  , 'grid-row-gap'
+  , 'justify-content'
+  , 'align-content'
+  , 'justify-items'
+  , 'align-items'
+  , 'justify-self'
+  , 'align-self'
+  , 'position'
+  , 'top'
+  , 'bottom'
+  , 'left'
+  , 'right'
+  , 'float'
+  , 'clear'
+  , 'z-index'
+  , 'box-sizing'
+  , 'width'
+  , 'margin'
+  , 'margin-top'
+  , 'margin-bottom'
+  , 'margin-left'
+  , 'margin-right'
+  , 'padding'
+  , 'padding-top'
+  , 'padding-bottom'
+  , 'padding-left'
+  , 'padding-right'
+  , 'overflow'
+  , 'text-overflow'
+  , 'font-family'
+  , 'font-weight'
+  , 'font-style'
+  , 'font-size'
+  , 'font-variant'
+  , 'line-height'
+  , 'text-transform'
+  , 'white-space'
+  , 'text-align'
+  , 'vertical-align'
+  , 'word-spacing'
+  , 'letter-spacing'
+  , 'text-indent'
+  , 'background-image'
+  , 'background-position'
+  , 'background-repeat'
+  , 'background-origin'
+  , 'background-clip'
+  , 'background-size'
+  , 'background-attachment'
+  , 'background-color'
+  , 'border-width'
+  , 'border-style'
+  , 'border-color'
+  , 'border-radius'
+  , 'box-shadow'
+  , 'opacity'
+  , 'visibility'
+  , 'color'
+  , 'text-decoration'
+  , 'text-shadow'
+  , 'quotes'
+  , 'list-style-type'
+  , 'list-style-image'
+  , 'list-style-position'
+  ].forEach(function (prop) {
+    fs.writeFile(`${__dirname}/../build/_${prop}.less`, Bangs.generateLess(prop), function (err, data) { if (err) throw err })
   })
 })
