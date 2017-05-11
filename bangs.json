@@ -1969,7 +1969,7 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/padding"
     , "inherited": false
     , "initial"  : "0"
-    , "stability": 2
+    , "stability": 3
     , "values"   : [
         { "name": "0", "code": "z" }
       ]
@@ -1980,31 +1980,31 @@
       , "medium+"
       , "large+"
       , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
-      "name": "padding-horizontal"
-    , "code": {
-        "pl": "padding-left"
-      , "pr": "padding-right"
-      , "ph": "padding-horizontal"
-      }
-    , "summary"  : "Sets the left, right, or left and right padding space on an element."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/margin"
+      "name"     : "padding-bottom"
+    , "code"     : "pb"
+    , "summary"  : "Sets the bottom padding space on an element."
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/padding-bottom"
     , "inherited": false
     , "initial"  : "0"
-    , "stability": 2
+    , "stability": 3
     , "values"   : [
-        { "name": "inherit",              "use": { "ph": ".-pl-i; .-pr-i;" } }
-      , { "name": "initial",              "use": { "ph": ".-pl-0; .-pr-0;" } }
-      , { "name": "0"      , "code": "z", "use": { "ph": ".-pl-z; .-pr-z;" } }
-      , { "name": "0.25rem", "code": "q", "use": { "ph": ".-pl-q; .-pr-q;" } }
-      , { "name": "0.5rem" , "code": "h", "use": { "ph": ".-pl-h; .-pr-h;" } }
-      , { "name": "1rem"   , "code": "1", "use": { "ph": ".-pl-1; .-pr-1;" } }
-      , { "name": "2rem"   , "code": "2", "use": { "ph": ".-pl-2; .-pr-2;" } }
-      , { "name": "4rem"   , "code": "4", "use": { "ph": ".-pl-4; .-pr-4;" } }
-      , { "name": "8rem"   , "code": "8", "use": { "ph": ".-pl-8; .-pr-8;" } }
-      , { "name": "16rem"  , "code": "g", "use": { "ph": ".-pl-g; .-pr-g;" } }
+        { "name": "0"      , "code": "z" }
+      , { "name": "0.25vru", "code": "q", "use": "padding-bottom: calc(0.25 ~'*' var(--vru, @g-vru))" }
+      , { "name": "0.5vru" , "code": "h", "use": "padding-bottom: calc(0.5  ~'*' var(--vru, @g-vru))" }
+      , { "name": "1vru"   , "code": "1", "use": "padding-bottom: calc(1    ~'*' var(--vru, @g-vru))" }
+      , { "name": "2vru"   , "code": "2", "use": "padding-bottom: calc(2    ~'*' var(--vru, @g-vru))" }
+      , { "name": "4vru"   , "code": "4", "use": "padding-bottom: calc(4    ~'*' var(--vru, @g-vru))" }
+      , { "name": "8vru"   , "code": "8", "use": "padding-bottom: calc(8    ~'*' var(--vru, @g-vru))" }
+      , { "name": "16vru"  , "code": "g", "use": "padding-bottom: calc(16   ~'*' var(--vru, @g-vru))" }
       ]
     , "media": [
         "screen"
@@ -2013,31 +2013,31 @@
       , "medium+"
       , "large+"
       , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
-      "name": "padding-vertical"
-    , "code": {
-        "pt": "padding-top"
-      , "pb": "padding-bottom"
-      , "pv": "padding-vertical"
-      }
-    , "summary"  : "Sets the top, bottom, or top and bottom padding space on an element."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/margin"
+      "name"     : "padding-left"
+    , "code"     : "pl"
+    , "summary"  : "Sets the left padding space on an element."
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/padding-left"
     , "inherited": false
     , "initial"  : "0"
-    , "stability": 2
+    , "stability": 3
     , "values"   : [
-        { "name": "inherit",              "use": { "pv": ".-pt-i; .-pb-i;" } }
-      , { "name": "initial",              "use": { "pv": ".-pt-0; .-pb-0;" } }
-      , { "name": "0"      , "code": "z", "use": { "pv": ".-pt-z; .-pb-z;" } }
-      , { "name": "0.25vru", "code": "q", "use": { "pv": ".-pt-q; .-pb-q;", "pt": "padding-top: calc(0.25 ~'*' var(--vru, 1.5rem));", "pb": "padding-bottom: calc(0.25 ~'*' var(--vru, 1.5rem));" } }
-      , { "name": "0.5vru" , "code": "h", "use": { "pv": ".-pt-h; .-pb-h;", "pt": "padding-top: calc(0.5  ~'*' var(--vru, 1.5rem));", "pb": "padding-bottom: calc(0.5  ~'*' var(--vru, 1.5rem));" } }
-      , { "name": "1vru"   , "code": "1", "use": { "pv": ".-pt-1; .-pb-1;", "pt": "padding-top: calc(1    ~'*' var(--vru, 1.5rem));", "pb": "padding-bottom: calc(1    ~'*' var(--vru, 1.5rem));" } }
-      , { "name": "2vru"   , "code": "2", "use": { "pv": ".-pt-2; .-pb-2;", "pt": "padding-top: calc(2    ~'*' var(--vru, 1.5rem));", "pb": "padding-bottom: calc(2    ~'*' var(--vru, 1.5rem));" } }
-      , { "name": "4vru"   , "code": "4", "use": { "pv": ".-pt-4; .-pb-4;", "pt": "padding-top: calc(4    ~'*' var(--vru, 1.5rem));", "pb": "padding-bottom: calc(4    ~'*' var(--vru, 1.5rem));" } }
-      , { "name": "8vru"   , "code": "8", "use": { "pv": ".-pt-8; .-pb-8;", "pt": "padding-top: calc(8    ~'*' var(--vru, 1.5rem));", "pb": "padding-bottom: calc(8    ~'*' var(--vru, 1.5rem));" } }
-      , { "name": "16vru"  , "code": "g", "use": { "pv": ".-pt-g; .-pb-g;", "pt": "padding-top: calc(16   ~'*' var(--vru, 1.5rem));", "pb": "padding-bottom: calc(16   ~'*' var(--vru, 1.5rem));" } }
+        { "name": "0"      , "code": "z" }
+      , { "name": "0.25rem", "code": "q" }
+      , { "name": "0.5rem" , "code": "h" }
+      , { "name": "1rem"   , "code": "1" }
+      , { "name": "2rem"   , "code": "2" }
+      , { "name": "4rem"   , "code": "4" }
+      , { "name": "8rem"   , "code": "8" }
+      , { "name": "16rem"  , "code": "g" }
       ]
     , "media": [
         "screen"
@@ -2046,6 +2046,78 @@
       , "medium+"
       , "large+"
       , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
+      ]
+    }
+  , {
+      "name"     : "padding-right"
+    , "code"     : "pr"
+    , "summary"  : "Sets the right padding space on an element."
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/padding-right"
+    , "inherited": false
+    , "initial"  : "0"
+    , "stability": 3
+    , "values"   : [
+        { "name": "0"      , "code": "z" }
+      , { "name": "0.25rem", "code": "q" }
+      , { "name": "0.5rem" , "code": "h" }
+      , { "name": "1rem"   , "code": "1" }
+      , { "name": "2rem"   , "code": "2" }
+      , { "name": "4rem"   , "code": "4" }
+      , { "name": "8rem"   , "code": "8" }
+      , { "name": "16rem"  , "code": "g" }
+      ]
+    , "media": [
+        "screen"
+      , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
+      ]
+    }
+  , {
+      "name"     : "padding-top"
+    , "code"     : "pt"
+    , "summary"  : "Sets the top padding space on an element."
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/padding-top"
+    , "inherited": false
+    , "initial"  : "0"
+    , "stability": 3
+    , "values"   : [
+        { "name": "0"      , "code": "z" }
+      , { "name": "0.25vru", "code": "q", "use": "padding-top: calc(0.25 ~'*' var(--vru, @g-vru))" }
+      , { "name": "0.5vru" , "code": "h", "use": "padding-top: calc(0.5  ~'*' var(--vru, @g-vru))" }
+      , { "name": "1vru"   , "code": "1", "use": "padding-top: calc(1    ~'*' var(--vru, @g-vru))" }
+      , { "name": "2vru"   , "code": "2", "use": "padding-top: calc(2    ~'*' var(--vru, @g-vru))" }
+      , { "name": "4vru"   , "code": "4", "use": "padding-top: calc(4    ~'*' var(--vru, @g-vru))" }
+      , { "name": "8vru"   , "code": "8", "use": "padding-top: calc(8    ~'*' var(--vru, @g-vru))" }
+      , { "name": "16vru"  , "code": "g", "use": "padding-top: calc(16   ~'*' var(--vru, @g-vru))" }
+      ]
+    , "media": [
+        "screen"
+      , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
