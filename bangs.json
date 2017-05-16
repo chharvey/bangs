@@ -21,6 +21,12 @@
       , { "name": "inset"  , "code": "is" }
       , { "name": "outset" , "code": "os" }
       ]
+    , "colors": [
+        { "name": "transparent" , "code": "t" }
+      , { "name": "currentColor", "code": "c" }
+      , { "name": "#000"        , "code": "b" }
+      , { "name": "#fff"        , "code": "w" }
+      ]
     }
   , "media": [
       { "name": "screen"  , "code": "s" , "query": "screen" }
@@ -220,10 +226,12 @@
     , "initial"  : "transparent"
     , "stability": 3
     , "values"   : [
-        { "name": "transparent" , "code": "t" }
-      , { "name": "currentColor", "code": "c" }
-      , { "name": "#000000"     , "code": "b" }
-      , { "name": "#ffffff"     , "code": "w" }
+      ]
+    , "generators": [
+        {
+          "name": "generateColors"
+        , "args": [null, null, null]
+        }
       ]
     , "media": [
         "screen"
@@ -414,10 +422,12 @@
     , "initial"  : "currentColor"
     , "stability": 2
     , "values"   : [
-        { "name": "transparent" , "code": "t" }
-      , { "name": "currentColor", "code": "c" }
-      , { "name": "#000000"     , "code": "b" }
-      , { "name": "#ffffff"     , "code": "w" }
+      ]
+    , "generators": [
+        {
+          "name": "generateColors"
+        , "args": [null, null, null]
+        }
       ]
     , "media": [
         "screen"
@@ -646,10 +656,12 @@
     , "initial"  : ""
     , "stability": 3
     , "values"   : [
-        { "name": "transparent" , "code": "t" }
-      , { "name": "currentColor", "code": "c" }
-      , { "name": "#000000"     , "code": "b" }
-      , { "name": "#ffffff"     , "code": "w" }
+      ]
+    , "generators": [
+        {
+          "name": "generateColors"
+        , "args": [null, null, null]
+        }
       ]
     , "media": [
         "screen"
@@ -774,10 +786,12 @@
     , "initial"  : "currentColor"
     , "stability": 2
     , "values"   : [
-        { "name": "transparent" , "code": "t" }
-      , { "name": "currentColor", "code": "c" }
-      , { "name": "#000"        , "code": "b" }
-      , { "name": "#fff"        , "code": "w" }
+      ]
+    , "generators": [
+        {
+          "name": "generateColors"
+        , "args": [null, null, null]
+        }
       ]
     , "fallback": ["val", "return `.column-rule-color(${val})`"]
     , "media": [
