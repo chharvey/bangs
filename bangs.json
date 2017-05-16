@@ -8,25 +8,6 @@
   , "common": {
       "tracks": [1, 2, 3, 4, 5, 6, 8, 10, 12]
     , "count_max": 8
-    , "line_widths": [1, 2, 4, 8, 16]
-    , "line_styles": [
-        { "name": "none"   , "code": "n"  }
-      , { "name": "hidden" , "code": "h"  }
-      , { "name": "solid"  , "code": "s"  }
-      , { "name": "dotted" , "code": "do" }
-      , { "name": "dashed" , "code": "da" }
-      , { "name": "double" , "code": "db" }
-      , { "name": "groove" , "code": "gv" }
-      , { "name": "ridge"  , "code": "rg" }
-      , { "name": "inset"  , "code": "is" }
-      , { "name": "outset" , "code": "os" }
-      ]
-    , "colors": [
-        { "name": "transparent" , "code": "t" }
-      , { "name": "currentColor", "code": "c" }
-      , { "name": "#000"        , "code": "b" }
-      , { "name": "#fff"        , "code": "w" }
-      ]
     }
   , "media": [
       { "name": "screen"  , "code": "s" , "query": "screen" }
@@ -53,6 +34,44 @@
     , { "name": "locked"      , "description": "Only patches will be made to this feature. It is no longer in development. It may be heavily relied upon and will not be removed in future versions." }
     ]
   }
+, "types": [
+    {
+      "name": "<line-width>"
+    , "url" : "https://developer.mozilla.org/en-US/docs/Web/CSS/length"
+    , "values": [
+        { "name": "1px"  , "code": "1" }
+      , { "name": "2px"  , "code": "2" }
+      , { "name": "4px"  , "code": "4" }
+      , { "name": "8px"  , "code": "8" }
+      , { "name": "16px" , "code": "g" }
+      ]
+    }
+  , {
+      "name": "<line-style>"
+    , "values": [
+        { "name": "none"   , "code": "n"  }
+      , { "name": "hidden" , "code": "h"  }
+      , { "name": "solid"  , "code": "s"  }
+      , { "name": "dotted" , "code": "do" }
+      , { "name": "dashed" , "code": "da" }
+      , { "name": "double" , "code": "db" }
+      , { "name": "groove" , "code": "gv" }
+      , { "name": "ridge"  , "code": "rg" }
+      , { "name": "inset"  , "code": "is" }
+      , { "name": "outset" , "code": "os" }
+      ]
+    }
+  , {
+      "name": "<color>"
+    , "url" : "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value"
+    , "values": [
+        { "name": "transparent" , "code": "t" }
+      , { "name": "currentColor", "code": "c" }
+      , { "name": "#000"        , "code": "b" }
+      , { "name": "#fff"        , "code": "w" }
+      ]
+    }
+  ]
 , "properties": [
     {
       "name"     : "align-content"
@@ -520,7 +539,7 @@
     , "generators": [
         {
           "name": "generateLineWidths"
-        , "args": [["width", "return `${width}px`"], ["width", "return (width===16) ? 'g' : `${width}`"], null]
+        , "args": [null, null, null]
         }
       ]
     , "media": [
@@ -855,7 +874,7 @@
     , "generators": [
         {
           "name": "generateLineWidths"
-        , "args": [["width", "return `${width}px`"], ["width", "return (width===16) ? 'g' : `${width}`"], null]
+        , "args": [null, null, null]
         }
       ]
     , "fallback": ["val", "return `.column-rule-width(${val})`"]
@@ -1904,7 +1923,7 @@
     , "initial"  : "0"
     , "stability": 2
     , "values"   : [
-        { "name": "0" , "code": "z"  }
+        { "name": "0", "code": "z" }
       ]
     , "generators": [
         {
@@ -2605,8 +2624,8 @@
     , "initial"  : "auto"
     , "stability": 3
     , "values"   : [
-        { "name": "auto", "code": "a"  }
-      , { "name": "0"   , "code": "z"  }
+        { "name": "auto", "code": "a" }
+      , { "name": "0"   , "code": "z" }
       ]
     , "generators": [
         {

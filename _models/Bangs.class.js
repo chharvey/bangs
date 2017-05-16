@@ -68,7 +68,6 @@ module.exports = (function () {
      * Automate counts.
      * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
      * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
-     * @param  {string} source name of source array from which to take counts; must be a member of `data.global.common`
      * @param  {?function(number)=string} namefn function determining the value name
      * @param  {?function(number)=string} codefn function determining the value code
      * @param  {?function(number)=string} usefn  function determining the value use
@@ -102,15 +101,7 @@ module.exports = (function () {
      * @param  {?function(number)=string} usefn  function determining the value use
      */
     function generateLineWidths(namefn, codefn, usefn) {
-      const WIDTHS = data.global.common.line_widths
-      for (let w of WIDTHS) {
-        let newvalue = {
-          name: (namefn) ? namefn.call(null, w) : w.toString()
-        , code: (codefn) ? codefn.call(null, w) : w.toString()
-        , use : (usefn ) ?  usefn.call(null, w) : ''
-        }
-        this.values.push(newvalue)
-      }
+      this.values.push(...data.types.find((el) => el.name==='<line-width>').values)
     }
     /**
      * Automate line styles.
@@ -121,7 +112,7 @@ module.exports = (function () {
      * @param  {?function(number)=string} usefn  function determining the value use
      */
     function generateLineStyles(namefn, codefn, usefn) {
-      this.values.push(...data.global.common.line_styles)
+      this.values.push(...data.types.find((el) => el.name==='<line-style>').values)
     }
     /**
      * Automate colors.
@@ -132,7 +123,7 @@ module.exports = (function () {
      * @param  {?function(number)=string} usefn  function determining the value use
      */
     function generateColors(namefn, codefn, usefn) {
-      this.values.push(...data.global.common.colors)
+      this.values.push(...data.types.find((el) => el.name==='<color>').values)
     }
     for (let property of data.properties) {
       for (let generator of (property.generators || [])) {
