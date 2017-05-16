@@ -9,6 +9,18 @@
       "tracks": [1, 2, 3, 4, 5, 6, 8, 10, 12]
     , "count_max": 8
     , "line_widths": [1, 2, 4, 8, 16]
+    , "line_styles": [
+        { "name": "none"   , "code": "n"  }
+      , { "name": "hidden" , "code": "h"  }
+      , { "name": "solid"  , "code": "s"  }
+      , { "name": "dotted" , "code": "do" }
+      , { "name": "dashed" , "code": "da" }
+      , { "name": "double" , "code": "db" }
+      , { "name": "groove" , "code": "gv" }
+      , { "name": "ridge"  , "code": "rg" }
+      , { "name": "inset"  , "code": "is" }
+      , { "name": "outset" , "code": "os" }
+      ]
     }
   , "media": [
       { "name": "screen"  , "code": "s" , "query": "screen" }
@@ -462,16 +474,12 @@
     , "initial"  : "none"
     , "stability": 2
     , "values"   : [
-        { "name": "none"  , "code": "n"  }
-      , { "name": "hidden", "code": "h"  }
-      , { "name": "solid" , "code": "s"  }
-      , { "name": "dotted", "code": "do" }
-      , { "name": "dashed", "code": "da" }
-      , { "name": "double", "code": "db" }
-      , { "name": "groove", "code": "gv" }
-      , { "name": "ridge" , "code": "rg" }
-      , { "name": "inset" , "code": "is" }
-      , { "name": "outset", "code": "os" }
+      ]
+    , "generators": [
+        {
+          "name": "generateLineStyles"
+        , "args": [null, null, null]
+        }
       ]
     , "media": [
         "screen"
@@ -796,16 +804,12 @@
     , "initial"  : "none"
     , "stability": 2
     , "values"   : [
-        { "name": "none"   , "code": "n"  }
-      , { "name": "hidden" , "code": "h"  }
-      , { "name": "solid"  , "code": "s"  }
-      , { "name": "dotted" , "code": "do" }
-      , { "name": "dashed" , "code": "da" }
-      , { "name": "double" , "code": "db" }
-      , { "name": "groove" , "code": "gv" }
-      , { "name": "ridge"  , "code": "rg" }
-      , { "name": "inset"  , "code": "is" }
-      , { "name": "outset" , "code": "os" }
+      ]
+    , "generators": [
+        {
+          "name": "generateLineStyles"
+        , "args": [null, null, null]
+        }
       ]
     , "fallback": ["val", "return `.column-rule-style(${val})`"]
     , "media": [
