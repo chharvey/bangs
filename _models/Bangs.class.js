@@ -93,6 +93,25 @@ module.exports = (function () {
         this.values.push(newvalue_neg)
       }
     }
+    /**
+     * Automate line widths.
+     * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
+     * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
+     * @param  {?function(number)=string} namefn function determining the value name
+     * @param  {?function(number)=string} codefn function determining the value code
+     * @param  {?function(number)=string} usefn  function determining the value use
+     */
+    function generateLineWidths(namefn, codefn, usefn) {
+      const WIDTHS = data.global.common.line_widths
+      for (let w of WIDTHS) {
+        let newvalue = {
+          name: (namefn) ? namefn.call(null, w) : w.toString()
+        , code: (codefn) ? codefn.call(null, w) : w.toString()
+        , use : (usefn ) ?  usefn.call(null, w) : ''
+        }
+        this.values.push(newvalue)
+      }
+    }
     for (let property of data.properties) {
       for (let generator of (property.generators || [])) {
         eval(generator.name).call(property, ...generator.args.map((el) => (el) ? new Function(...el) : null))

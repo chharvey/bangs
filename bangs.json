@@ -8,6 +8,7 @@
   , "common": {
       "tracks": [1, 2, 3, 4, 5, 6, 8, 10, 12]
     , "count_max": 8
+    , "line_widths": [1, 2, 4, 8, 16]
     }
   , "media": [
       { "name": "screen"  , "code": "s" , "query": "screen" }
@@ -496,12 +497,13 @@
     , "initial"  : "medium"
     , "stability": 2
     , "values"   : [
-        { "name": "0"    , "code": "z" }
-      , { "name": "1px"  , "code": "1" }
-      , { "name": "2px"  , "code": "2" }
-      , { "name": "4px"  , "code": "4" }
-      , { "name": "8px"  , "code": "8" }
-      , { "name": "16px" , "code": "g" }
+        { "name": "0", "code": "z" }
+      ]
+    , "generators": [
+        {
+          "name": "generateLineWidths"
+        , "args": [["width", "return `${width}px`"], ["width", "return (width===16) ? 'g' : `${width}`"], null]
+        }
       ]
     , "media": [
         "screen"
@@ -830,12 +832,13 @@
     , "initial"  : "medium"
     , "stability": 2
     , "values"   : [
-        { "name": "0"   , "code": "z" }
-      , { "name": "1px" , "code": "1" }
-      , { "name": "2px" , "code": "2" }
-      , { "name": "4px" , "code": "4" }
-      , { "name": "8px" , "code": "8" }
-      , { "name": "16px", "code": "g" }
+        { "name": "0", "code": "z" }
+      ]
+    , "generators": [
+        {
+          "name": "generateLineWidths"
+        , "args": [["width", "return `${width}px`"], ["width", "return (width===16) ? 'g' : `${width}`"], null]
+        }
       ]
     , "fallback": ["val", "return `.column-rule-width(${val})`"]
     , "media": [
