@@ -64,6 +64,35 @@ module.exports = (function () {
         this.values.push(newvalue)
       }
     }
+    /**
+     * Automate counts.
+     * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
+     * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
+     * @param  {string} source name of source array from which to take counts; must be a member of `data.global.common`
+     * @param  {?function(number)=string} namefn function determining the value name
+     * @param  {?function(number)=string} codefn function determining the value code
+     * @param  {?function(number)=string} usefn  function determining the value use
+     */
+    function generateCounts(namefn, codefn, usefn) {
+      // REVIEW TODO abstract this function and `generateCountValues` function
+      const COUNT = data.global.common.count_max
+      for (let i = 1; i <= COUNT; i++) {
+        let newvalue_pos = {
+          name: (namefn) ? namefn.call(null, i) : i.toString()
+        , code: (codefn) ? codefn.call(null, i) : i.toString()
+        , use : (usefn ) ?  usefn.call(null, i) : ''
+        }
+        this.values.push(newvalue_pos)
+      }
+      for (let i = 1; i <= COUNT; i++) {
+        let newvalue_neg = {
+          name: (namefn) ? namefn.call(null, -i) : (-i).toString()
+        , code: (codefn) ? codefn.call(null, -i) : (-i).toString()
+        , use : (usefn ) ?  usefn.call(null, -i) : ''
+        }
+        this.values.push(newvalue_neg)
+      }
+    }
     for (let property of data.properties) {
       for (let generator of (property.generators || [])) {
         eval(generator.name).call(property, ...generator.args.map((el) => (el) ? new Function(...el) : null))
