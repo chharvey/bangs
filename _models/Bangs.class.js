@@ -86,7 +86,7 @@ module.exports = (function () {
       for (let i = 1; i <= COUNT; i++) {
         let newvalue_neg = {
           name: (namefn) ? namefn.call(null, -i) : (-i).toString()
-        , code: (codefn) ? codefn.call(null, -i) : (-i).toString()
+        , code: (codefn) ? codefn.call(null, -i) : `_${i}`
         , use : (usefn ) ?  usefn.call(null, -i) : ''
         }
         this.values.push(newvalue_neg)
