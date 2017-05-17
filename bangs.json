@@ -248,10 +248,7 @@
     , "values"   : [
       ]
     , "generators": [
-        {
-          "name": "generateColors"
-        , "args": [null, null, null]
-        }
+        { "name": "generateColors" }
       ]
     , "media": [
         "screen"
@@ -444,10 +441,7 @@
     , "values"   : [
       ]
     , "generators": [
-        {
-          "name": "generateColors"
-        , "args": [null, null, null]
-        }
+        { "name": "generateColors" }
       ]
     , "media": [
         "screen"
@@ -506,10 +500,7 @@
     , "values"   : [
       ]
     , "generators": [
-        {
-          "name": "generateLineStyles"
-        , "args": [null, null, null]
-        }
+        { "name": "generateLineStyles" }
       ]
     , "media": [
         "screen"
@@ -538,10 +529,7 @@
         { "name": "0", "code": "z" }
       ]
     , "generators": [
-        {
-          "name": "generateLineWidths"
-        , "args": [null, null, null]
-        }
+        { "name": "generateLineWidths" }
       ]
     , "media": [
         "screen"
@@ -678,10 +666,7 @@
     , "values"   : [
       ]
     , "generators": [
-        {
-          "name": "generateColors"
-        , "args": [null, null, null]
-        }
+        { "name": "generateColors" }
       ]
     , "media": [
         "screen"
@@ -713,10 +698,7 @@
         { "name": "auto", "code": "a" }
       ]
     , "generators": [
-        {
-          "name": "generateCountValues"
-        , "args": [null, null]
-        }
+        { "name": "generateCountValues" }
       ]
     , "fallback": ["val", "return `.column-count(${val})`"]
     , "media": [
@@ -777,7 +759,7 @@
     , "generators": [
         {
           "name": "generateSpaces"
-        , "args": [["length", "return `${length}rem`"], null, null]
+        , "transforms": { "namefn": ["length", "return `${length}rem`"] }
         }
       ]
     , "fallback": ["val", "return `.column-gap(${val})`"]
@@ -807,10 +789,7 @@
     , "values"   : [
       ]
     , "generators": [
-        {
-          "name": "generateColors"
-        , "args": [null, null, null]
-        }
+        { "name": "generateColors" }
       ]
     , "fallback": ["val", "return `.column-rule-color(${val})`"]
     , "media": [
@@ -839,10 +818,7 @@
     , "values"   : [
       ]
     , "generators": [
-        {
-          "name": "generateLineStyles"
-        , "args": [null, null, null]
-        }
+        { "name": "generateLineStyles" }
       ]
     , "fallback": ["val", "return `.column-rule-style(${val})`"]
     , "media": [
@@ -872,10 +848,7 @@
         { "name": "0", "code": "z" }
       ]
     , "generators": [
-        {
-          "name": "generateLineWidths"
-        , "args": [null, null, null]
-        }
+        { "name": "generateLineWidths" }
       ]
     , "fallback": ["val", "return `.column-rule-width(${val})`"]
     , "media": [
@@ -1018,7 +991,7 @@
     , "generators": [
         {
           "name": "generateFracValues"
-        , "args": [["percentage", "return `.flex(${percentage})`"]]
+        , "transforms": { "usefn": ["percentage", "return `.flex(${percentage})`"] }
         }
       ]
     , "fallback": ["val", "return `.flex(${val})`"]
@@ -1293,7 +1266,7 @@
     , "generators": [
         {
           "name": "generateSpaces"
-        , "args": [["length", "return `${length}rem`"], null, null]
+        , "transforms": { "namefn": ["length", "return `${length}rem`"] }
         }
       ]
     , "fallback": ["val", "return `.grid-column-gap(${val})`"]
@@ -1326,7 +1299,10 @@
     , "generators": [
         {
           "name": "generateSpaces"
-        , "args": [["length", "return `${length}vru`"], null, ["length", "return `.grid-row-gap(calc(${length} ~'*' var(--vru, @g-vru)))`"]]
+        , "transforms": {
+            "namefn": ["length", "return `${length}vru`"]
+          , "usefn" : ["length", "return `.grid-row-gap(calc(${length} ~'*' var(--vru, @g-vru)))`"]
+          }
         }
       ]
     , "fallback": ["val", "return `.grid-row-gap(${val})`"]
@@ -1359,7 +1335,7 @@
     , "generators": [
         {
           "name": "generateCountValues"
-        , "args": [["number", "return `repeat(${number}, 1fr)`"], null]
+        , "transforms": { "namefn": ["number", "return `repeat(${number}, 1fr)`"] }
         }
       ]
     , "fallback": ["val", "return `.grid-template-columns(${val})`"]
@@ -1392,7 +1368,7 @@
     , "generators": [
         {
           "name": "generateCountValues"
-        , "args": [["number", "return `repeat(${number}, 1fr)`"], null]
+        , "transforms": { "namefn": ["number", "return `repeat(${number}, 1fr)`"] }
         }
       ]
     , "fallback": ["val", "return `.grid-template-rows(${val})`"]
@@ -1732,11 +1708,17 @@
     , "generators": [
         {
           "name": "generateSpaces"
-        , "args": [["length", "return `${length}vru`"], null, ["length", "return `margin-bottom: calc(${length} ~'*' var(--vru, @g-vru))`"]]
+        , "transforms": {
+            "namefn": ["length", "return `${length}vru`"]
+          , "usefn" : ["length", "return `margin-bottom: calc(${length} ~'*' var(--vru, @g-vru))`"]
+          }
         }
       , {
           "name": "generateSpacesNegative"
-        , "args": [["length", "return `${length}vru`"], null, ["length", "return `margin-bottom: calc(${length} ~'*' var(--vru, @g-vru))`"]]
+        , "transforms": {
+            "namefn": ["length", "return `${length}vru`"]
+          , "usefn" : ["length", "return `margin-bottom: calc(${length} ~'*' var(--vru, @g-vru))`"]
+          }
         }
       ]
     , "media": [
@@ -1769,11 +1751,11 @@
     , "generators": [
         {
           "name": "generateSpaces"
-        , "args": [["length", "return `${length}rem`"], null, null]
+        , "transforms": { "namefn": ["length", "return `${length}rem`"] }
         }
       , {
           "name": "generateSpacesNegative"
-        , "args": [["length", "return `${length}rem`"], null, null]
+        , "transforms": { "namefn": ["length", "return `${length}rem`"] }
         }
       ]
     , "media": [
@@ -1806,11 +1788,11 @@
     , "generators": [
         {
           "name": "generateSpaces"
-        , "args": [["length", "return `${length}rem`"], null, null]
+        , "transforms": { "namefn": ["length", "return `${length}rem`"] }
         }
       , {
           "name": "generateSpacesNegative"
-        , "args": [["length", "return `${length}rem`"], null, null]
+        , "transforms": { "namefn": ["length", "return `${length}rem`"] }
         }
       ]
     , "media": [
@@ -1843,11 +1825,17 @@
     , "generators": [
         {
           "name": "generateSpaces"
-        , "args": [["length", "return `${length}vru`"], null, ["length", "return `margin-top: calc(${length} ~'*' var(--vru, @g-vru))`"]]
+        , "transforms": {
+            "namefn": ["length", "return `${length}vru`"]
+          , "usefn" : ["length", "return `margin-top: calc(${length} ~'*' var(--vru, @g-vru))`"]
+          }
         }
       , {
           "name": "generateSpacesNegative"
-        , "args": [["length", "return `${length}vru`"], null, ["length", "return `margin-top: calc(${length} ~'*' var(--vru, @g-vru))`"]]
+        , "transforms": {
+            "namefn": ["length", "return `${length}vru`"]
+          , "usefn" : ["length", "return `margin-top: calc(${length} ~'*' var(--vru, @g-vru))`"]
+          }
         }
       ]
     , "media": [
@@ -1908,14 +1896,8 @@
         { "name": "0", "code": "z" }
       ]
     , "generators": [
-        {
-          "name": "generateCounts"
-        , "args": [null, null, null]
-        }
-      , {
-          "name": "generateCountsNegative"
-        , "args": [null, null, null]
-        }
+        { "name": "generateCounts" }
+      , { "name": "generateCountsNegative" }
       ]
     , "fallback": ["val", "return `.flex-order(${val})`"]
     , "media": [
@@ -2019,7 +2001,10 @@
     , "generators": [
         {
           "name": "generateSpaces"
-        , "args": [["length", "return `${length}vru`"], null, ["length", "return `padding-bottom: calc(${length} ~'*' var(--vru, @g-vru))`"]]
+        , "transforms": {
+            "namefn": ["length", "return `${length}vru`"]
+          , "usefn" : ["length", "return `padding-bottom: calc(${length} ~'*' var(--vru, @g-vru))`"]
+          }
         }
       ]
     , "media": [
@@ -2051,7 +2036,7 @@
     , "generators": [
         {
           "name": "generateSpaces"
-        , "args": [["length", "return `${length}rem`"], null, null]
+        , "transforms": { "namefn": ["length", "return `${length}rem`"] }
         }
       ]
     , "media": [
@@ -2083,7 +2068,7 @@
     , "generators": [
         {
           "name": "generateSpaces"
-        , "args": [["length", "return `${length}rem`"], null, null]
+        , "transforms": { "namefn": ["length", "return `${length}rem`"] }
         }
       ]
     , "media": [
@@ -2115,7 +2100,10 @@
     , "generators": [
         {
           "name": "generateSpaces"
-        , "args": [["length", "return `${length}vru`"], null, ["length", "return `padding-top: calc(${length} ~'*' var(--vru, @g-vru))`"]]
+        , "transforms": {
+            "namefn": ["length", "return `${length}vru`"]
+          , "usefn" : ["length", "return `padding-top: calc(${length} ~'*' var(--vru, @g-vru))`"]
+          }
         }
       ]
     , "media": [
@@ -2552,7 +2540,7 @@
     , "generators": [
         {
           "name": "generateFracValues"
-        , "args": [["percentage", "return `width: ${percentage}`"]]
+        , "transforms": { "usefn": ["percentage", "return `width: ${percentage}`"] }
         }
       ]
     , "media": [
@@ -2610,14 +2598,8 @@
       , { "name": "0"   , "code": "z" }
       ]
     , "generators": [
-        {
-          "name": "generateCounts"
-        , "args": [null, null, null]
-        }
-      , {
-          "name": "generateCountsNegative"
-        , "args": [null, null, null]
-        }
+        { "name": "generateCounts" }
+      , { "name": "generateCountsNegative" }
       ]
     , "media": [
         "screen"
