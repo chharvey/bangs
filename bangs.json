@@ -35,6 +35,9 @@
     , { "name": "locked"      , "description": "Only patches will be made to this feature. It is no longer in development. It may be heavily relied upon and will not be removed in future versions." }
     ]
   }
+, "common": {
+    "tracks": [1, 2, 3, 4, 5, 6, 8, 10, 12]
+  }
 , "types": [
     {
       "name": "<line-width>"
@@ -990,8 +993,9 @@
       ]
     , "generators": [
         {
-          "name": "generateFracValues"
+          "name": "generateFracs"
         , "transforms": { "usefn": ["percentage", "return `.flex(${percentage})`"] }
+        , "options": { "domain": "tracks" }
         }
       ]
     , "fallback": ["val", "return `.flex(${val})`"]
@@ -2539,8 +2543,9 @@
       ]
     , "generators": [
         {
-          "name": "generateFracValues"
+          "name": "generateFracs"
         , "transforms": { "usefn": ["percentage", "return `width: ${percentage}`"] }
+        , "options": { "domain": "tracks" }
         }
       ]
     , "media": [

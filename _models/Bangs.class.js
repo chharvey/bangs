@@ -34,15 +34,25 @@ module.exports = (function () {
      * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
      * @param  {TransformObj} transforms a set of possible transformations
      * @param  {!Object={}} options a set of possible options
+     * @param  {(number|Array<number>|string)=1} options.domain if {number}, use 1–n tracks; if {Array}, use those entries; if {string}, get own property of `data.common`
      */
-    function generateFracValues(transforms, options={}) {
-      const _DENOMS = data.global.common.tracks
-      for (let i = 0; i < _DENOMS.length; i++) {
-        for (let j = 1; j <= _DENOMS[i]; j++) {
+    function generateFracs(transforms, options={}) {
+      let arr = []
+      if (typeof options.domain === 'number') {
+        for (let n = 1; n <= options.domain; n++) { arr.push(n) }
+      } else if (Array.isArray(options.domain)) {
+        arr = options.domain
+      } else if (typeof options.domain === 'string') {
+        arr = data.common[options.domain]
+      } else {
+        arr = [1]
+      }
+      arr.forEach(function (den) {
+        for (let num = 1; num <= den; num++) {
           let newvalue = {
-            name: `${Math.round(10000 * (j/_DENOMS[i]))/100}%`
-          , code: `${j}o${_DENOMS[i]}`
-          , use : (transforms.usefn) ? transforms.usefn.call(null, `(${j}/${_DENOMS[i]} * 100%)`) : ''
+            name: `${Math.round(10000 * (num/den))/100}%`
+          , code: `${num}o${den}`
+          , use : (transforms.usefn) ? transforms.usefn.call(null, `(${num}/${den} * 100%)`) : ''
           }
           let value = this.values.find((v) => v.name===newvalue.name)
           if (value) {
@@ -55,7 +65,7 @@ module.exports = (function () {
             this.values.push(newvalue)
           }
         }
-      }
+      }, this)
     }
     /**
      * Automate counts.
