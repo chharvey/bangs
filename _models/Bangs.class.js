@@ -93,6 +93,46 @@ module.exports = (function () {
       }
     }
     /**
+     * Automate spacing.
+     * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
+     * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
+     * @param  {?function(number)=string} namefn function determining the value name
+     * @param  {?function(number)=string} codefn function determining the value code
+     * @param  {?function(number)=string} usefn  function determining the value use
+     */
+    function generateSpaces(namefn, codefn, usefn) {
+      const SPACES = data.global.common.spaces
+      let short = {
+        0.25: 'q'
+      , 0.5 : 'h'
+      , 16  : 'g'
+      }
+      SPACES.forEach(function (sp) {
+        let newvalue_pos = {
+          name: (namefn) ? namefn.call(null, sp) : sp.toString()
+        , code: (codefn) ? codefn.call(null, sp) : (short[sp] || sp.toString())
+        , use : (usefn ) ?  usefn.call(null, sp) : ''
+        }
+        this.values.push(newvalue_pos)
+      }, this)
+    }
+    function generateSpacesNegative(namefn, codefn, usefn) {
+      const SPACES = data.global.common.spaces.map((n) => -n)
+      let short = {
+        0.25: 'q'
+      , 0.5 : 'h'
+      , 16  : 'g'
+      }
+      SPACES.forEach(function (sp) {
+        let newvalue_neg = {
+          name: (namefn) ? namefn.call(null, sp) : sp.toString()
+        , code: (codefn) ? codefn.call(null, sp) : `_${short[-sp] || -sp}`
+        , use : (usefn ) ?  usefn.call(null, sp) : ''
+        }
+        this.values.push(newvalue_neg)
+      }, this)
+    }
+    /**
      * Automate line widths.
      * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
      * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.

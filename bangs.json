@@ -8,6 +8,7 @@
   , "common": {
       "tracks": [1, 2, 3, 4, 5, 6, 8, 10, 12]
     , "count_max": 8
+    , "spaces": [0.25, 0.5, 1, 2, 4, 8, 16]
     }
   , "media": [
       { "name": "screen"  , "code": "s" , "query": "screen" }
@@ -770,15 +771,14 @@
     , "initial"  : "normal"
     , "stability": 2
     , "values"   : [
-        { "name": "normal" , "code": "n" }
-      , { "name": "0"      , "code": "z" }
-      , { "name": "0.25rem", "code": "q" }
-      , { "name": "0.5rem" , "code": "h" }
-      , { "name": "1rem"   , "code": "1" }
-      , { "name": "2rem"   , "code": "2" }
-      , { "name": "4rem"   , "code": "4" }
-      , { "name": "8rem"   , "code": "8" }
-      , { "name": "16rem"  , "code": "g" }
+        { "name": "normal", "code": "n" }
+      , { "name": "0"     , "code": "z" }
+      ]
+    , "generators": [
+        {
+          "name": "generateSpaces"
+        , "args": [["length", "return `${length}rem`"], null, null]
+        }
       ]
     , "fallback": ["val", "return `.column-gap(${val})`"]
     , "media": [
@@ -1288,14 +1288,13 @@
     , "initial"  : "0"
     , "stability": 2
     , "values"   : [
-        { "name": "0"      , "code": "z" }
-      , { "name": "0.25rem", "code": "q" }
-      , { "name": "0.5rem" , "code": "h" }
-      , { "name": "1rem"   , "code": "1" }
-      , { "name": "2rem"   , "code": "2" }
-      , { "name": "4rem"   , "code": "4" }
-      , { "name": "8rem"   , "code": "8" }
-      , { "name": "16rem"  , "code": "g" }
+        { "name": "0", "code": "z" }
+      ]
+    , "generators": [
+        {
+          "name": "generateSpaces"
+        , "args": [["length", "return `${length}rem`"], null, null]
+        }
       ]
     , "fallback": ["val", "return `.grid-column-gap(${val})`"]
     , "media": [
@@ -1322,14 +1321,13 @@
     , "initial"  : "0"
     , "stability": 2
     , "values"   : [
-        { "name": "0"      , "code": "z" }
-      , { "name": "0.25rem", "code": "q" }
-      , { "name": "0.5rem" , "code": "h" }
-      , { "name": "1rem"   , "code": "1" }
-      , { "name": "2rem"   , "code": "2" }
-      , { "name": "4rem"   , "code": "4" }
-      , { "name": "8rem"   , "code": "8" }
-      , { "name": "16rem"  , "code": "g" }
+        { "name": "0", "code": "z" }
+      ]
+    , "generators": [
+        {
+          "name": "generateSpaces"
+        , "args": [["length", "return `${length}vru`"], null, ["length", "return `.grid-row-gap(calc(${length} ~'*' var(--vru, @g-vru)))`"]]
+        }
       ]
     , "fallback": ["val", "return `.grid-row-gap(${val})`"]
     , "media": [
@@ -1728,22 +1726,18 @@
     , "initial"  : "0"
     , "stability": 3
     , "values"   : [
-        { "name": "auto"    , "code": "a" }
-      , { "name": "0"       , "code": "z" }
-      , { "name": "0.25vru" , "code": "q" , "use": "margin-bottom: calc(0.25  ~'*' var(--vru, @g-vru))" }
-      , { "name": "0.5vru"  , "code": "h" , "use": "margin-bottom: calc(0.5   ~'*' var(--vru, @g-vru))" }
-      , { "name": "1vru"    , "code": "1" , "use": "margin-bottom: calc(1     ~'*' var(--vru, @g-vru))" }
-      , { "name": "2vru"    , "code": "2" , "use": "margin-bottom: calc(2     ~'*' var(--vru, @g-vru))" }
-      , { "name": "4vru"    , "code": "4" , "use": "margin-bottom: calc(4     ~'*' var(--vru, @g-vru))" }
-      , { "name": "8vru"    , "code": "8" , "use": "margin-bottom: calc(8     ~'*' var(--vru, @g-vru))" }
-      , { "name": "16vru"   , "code": "g" , "use": "margin-bottom: calc(16    ~'*' var(--vru, @g-vru))" }
-      , { "name": "-0.25vru", "code": "_q", "use": "margin-bottom: calc(-0.25 ~'*' var(--vru, @g-vru))" }
-      , { "name": "-0.5vru" , "code": "_h", "use": "margin-bottom: calc(-0.5  ~'*' var(--vru, @g-vru))" }
-      , { "name": "-1vru"   , "code": "_1", "use": "margin-bottom: calc(-1    ~'*' var(--vru, @g-vru))" }
-      , { "name": "-2vru"   , "code": "_2", "use": "margin-bottom: calc(-2    ~'*' var(--vru, @g-vru))" }
-      , { "name": "-4vru"   , "code": "_4", "use": "margin-bottom: calc(-4    ~'*' var(--vru, @g-vru))" }
-      , { "name": "-8vru"   , "code": "_8", "use": "margin-bottom: calc(-8    ~'*' var(--vru, @g-vru))" }
-      , { "name": "-16vru"  , "code": "_g", "use": "margin-bottom: calc(-16   ~'*' var(--vru, @g-vru))" }
+        { "name": "auto", "code": "a" }
+      , { "name": "0"   , "code": "z" }
+      ]
+    , "generators": [
+        {
+          "name": "generateSpaces"
+        , "args": [["length", "return `${length}vru`"], null, ["length", "return `margin-bottom: calc(${length} ~'*' var(--vru, @g-vru))`"]]
+        }
+      , {
+          "name": "generateSpacesNegative"
+        , "args": [["length", "return `${length}vru`"], null, ["length", "return `margin-bottom: calc(${length} ~'*' var(--vru, @g-vru))`"]]
+        }
       ]
     , "media": [
         "screen"
@@ -1769,22 +1763,18 @@
     , "initial"  : "0"
     , "stability": 3
     , "values"   : [
-        { "name": "auto"    , "code": "a"  }
-      , { "name": "0"       , "code": "z"  }
-      , { "name": "0.25rem" , "code": "q"  }
-      , { "name": "0.5rem"  , "code": "h"  }
-      , { "name": "1rem"    , "code": "1"  }
-      , { "name": "2rem"    , "code": "2"  }
-      , { "name": "4rem"    , "code": "4"  }
-      , { "name": "8rem"    , "code": "8"  }
-      , { "name": "16rem"   , "code": "g"  }
-      , { "name": "-0.25rem", "code": "_q" }
-      , { "name": "-0.5rem" , "code": "_h" }
-      , { "name": "-1rem"   , "code": "_1" }
-      , { "name": "-2rem"   , "code": "_2" }
-      , { "name": "-4rem"   , "code": "_4" }
-      , { "name": "-8rem"   , "code": "_8" }
-      , { "name": "-16rem"  , "code": "_g" }
+        { "name": "auto", "code": "a" }
+      , { "name": "0"   , "code": "z" }
+      ]
+    , "generators": [
+        {
+          "name": "generateSpaces"
+        , "args": [["length", "return `${length}rem`"], null, null]
+        }
+      , {
+          "name": "generateSpacesNegative"
+        , "args": [["length", "return `${length}rem`"], null, null]
+        }
       ]
     , "media": [
         "screen"
@@ -1810,22 +1800,18 @@
     , "initial"  : "0"
     , "stability": 3
     , "values"   : [
-        { "name": "auto"    , "code": "a"  }
-      , { "name": "0"       , "code": "z"  }
-      , { "name": "0.25rem" , "code": "q"  }
-      , { "name": "0.5rem"  , "code": "h"  }
-      , { "name": "1rem"    , "code": "1"  }
-      , { "name": "2rem"    , "code": "2"  }
-      , { "name": "4rem"    , "code": "4"  }
-      , { "name": "8rem"    , "code": "8"  }
-      , { "name": "16rem"   , "code": "g"  }
-      , { "name": "-0.25rem", "code": "_q" }
-      , { "name": "-0.5rem" , "code": "_h" }
-      , { "name": "-1rem"   , "code": "_1" }
-      , { "name": "-2rem"   , "code": "_2" }
-      , { "name": "-4rem"   , "code": "_4" }
-      , { "name": "-8rem"   , "code": "_8" }
-      , { "name": "-16rem"  , "code": "_g" }
+        { "name": "auto", "code": "a" }
+      , { "name": "0"   , "code": "z" }
+      ]
+    , "generators": [
+        {
+          "name": "generateSpaces"
+        , "args": [["length", "return `${length}rem`"], null, null]
+        }
+      , {
+          "name": "generateSpacesNegative"
+        , "args": [["length", "return `${length}rem`"], null, null]
+        }
       ]
     , "media": [
         "screen"
@@ -1851,22 +1837,18 @@
     , "initial"  : "0"
     , "stability": 3
     , "values"   : [
-        { "name": "auto"    , "code": "a" }
-      , { "name": "0"       , "code": "z" }
-      , { "name": "0.25vru" , "code": "q" , "use": "margin-top: calc(0.25  ~'*' var(--vru, @g-vru))" }
-      , { "name": "0.5vru"  , "code": "h" , "use": "margin-top: calc(0.5   ~'*' var(--vru, @g-vru))" }
-      , { "name": "1vru"    , "code": "1" , "use": "margin-top: calc(1     ~'*' var(--vru, @g-vru))" }
-      , { "name": "2vru"    , "code": "2" , "use": "margin-top: calc(2     ~'*' var(--vru, @g-vru))" }
-      , { "name": "4vru"    , "code": "4" , "use": "margin-top: calc(4     ~'*' var(--vru, @g-vru))" }
-      , { "name": "8vru"    , "code": "8" , "use": "margin-top: calc(8     ~'*' var(--vru, @g-vru))" }
-      , { "name": "16vru"   , "code": "g" , "use": "margin-top: calc(16    ~'*' var(--vru, @g-vru))" }
-      , { "name": "-0.25vru", "code": "_q", "use": "margin-top: calc(-0.25 ~'*' var(--vru, @g-vru))" }
-      , { "name": "-0.5vru" , "code": "_h", "use": "margin-top: calc(-0.5  ~'*' var(--vru, @g-vru))" }
-      , { "name": "-1vru"   , "code": "_1", "use": "margin-top: calc(-1    ~'*' var(--vru, @g-vru))" }
-      , { "name": "-2vru"   , "code": "_2", "use": "margin-top: calc(-2    ~'*' var(--vru, @g-vru))" }
-      , { "name": "-4vru"   , "code": "_4", "use": "margin-top: calc(-4    ~'*' var(--vru, @g-vru))" }
-      , { "name": "-8vru"   , "code": "_8", "use": "margin-top: calc(-8    ~'*' var(--vru, @g-vru))" }
-      , { "name": "-16vru"  , "code": "_g", "use": "margin-top: calc(-16   ~'*' var(--vru, @g-vru))" }
+        { "name": "auto", "code": "a" }
+      , { "name": "0"   , "code": "z" }
+      ]
+    , "generators": [
+        {
+          "name": "generateSpaces"
+        , "args": [["length", "return `${length}vru`"], null, ["length", "return `margin-top: calc(${length} ~'*' var(--vru, @g-vru))`"]]
+        }
+      , {
+          "name": "generateSpacesNegative"
+        , "args": [["length", "return `${length}vru`"], null, ["length", "return `margin-top: calc(${length} ~'*' var(--vru, @g-vru))`"]]
+        }
       ]
     , "media": [
         "screen"
@@ -2028,14 +2010,13 @@
     , "initial"  : "0"
     , "stability": 3
     , "values"   : [
-        { "name": "0"      , "code": "z" }
-      , { "name": "0.25vru", "code": "q", "use": "padding-bottom: calc(0.25 ~'*' var(--vru, @g-vru))" }
-      , { "name": "0.5vru" , "code": "h", "use": "padding-bottom: calc(0.5  ~'*' var(--vru, @g-vru))" }
-      , { "name": "1vru"   , "code": "1", "use": "padding-bottom: calc(1    ~'*' var(--vru, @g-vru))" }
-      , { "name": "2vru"   , "code": "2", "use": "padding-bottom: calc(2    ~'*' var(--vru, @g-vru))" }
-      , { "name": "4vru"   , "code": "4", "use": "padding-bottom: calc(4    ~'*' var(--vru, @g-vru))" }
-      , { "name": "8vru"   , "code": "8", "use": "padding-bottom: calc(8    ~'*' var(--vru, @g-vru))" }
-      , { "name": "16vru"  , "code": "g", "use": "padding-bottom: calc(16   ~'*' var(--vru, @g-vru))" }
+        { "name": "0", "code": "z" }
+      ]
+    , "generators": [
+        {
+          "name": "generateSpaces"
+        , "args": [["length", "return `${length}vru`"], null, ["length", "return `padding-bottom: calc(${length} ~'*' var(--vru, @g-vru))`"]]
+        }
       ]
     , "media": [
         "screen"
@@ -2061,14 +2042,13 @@
     , "initial"  : "0"
     , "stability": 3
     , "values"   : [
-        { "name": "0"      , "code": "z" }
-      , { "name": "0.25rem", "code": "q" }
-      , { "name": "0.5rem" , "code": "h" }
-      , { "name": "1rem"   , "code": "1" }
-      , { "name": "2rem"   , "code": "2" }
-      , { "name": "4rem"   , "code": "4" }
-      , { "name": "8rem"   , "code": "8" }
-      , { "name": "16rem"  , "code": "g" }
+        { "name": "0", "code": "z" }
+      ]
+    , "generators": [
+        {
+          "name": "generateSpaces"
+        , "args": [["length", "return `${length}rem`"], null, null]
+        }
       ]
     , "media": [
         "screen"
@@ -2094,14 +2074,13 @@
     , "initial"  : "0"
     , "stability": 3
     , "values"   : [
-        { "name": "0"      , "code": "z" }
-      , { "name": "0.25rem", "code": "q" }
-      , { "name": "0.5rem" , "code": "h" }
-      , { "name": "1rem"   , "code": "1" }
-      , { "name": "2rem"   , "code": "2" }
-      , { "name": "4rem"   , "code": "4" }
-      , { "name": "8rem"   , "code": "8" }
-      , { "name": "16rem"  , "code": "g" }
+        { "name": "0", "code": "z" }
+      ]
+    , "generators": [
+        {
+          "name": "generateSpaces"
+        , "args": [["length", "return `${length}rem`"], null, null]
+        }
       ]
     , "media": [
         "screen"
@@ -2127,14 +2106,13 @@
     , "initial"  : "0"
     , "stability": 3
     , "values"   : [
-        { "name": "0"      , "code": "z" }
-      , { "name": "0.25vru", "code": "q", "use": "padding-top: calc(0.25 ~'*' var(--vru, @g-vru))" }
-      , { "name": "0.5vru" , "code": "h", "use": "padding-top: calc(0.5  ~'*' var(--vru, @g-vru))" }
-      , { "name": "1vru"   , "code": "1", "use": "padding-top: calc(1    ~'*' var(--vru, @g-vru))" }
-      , { "name": "2vru"   , "code": "2", "use": "padding-top: calc(2    ~'*' var(--vru, @g-vru))" }
-      , { "name": "4vru"   , "code": "4", "use": "padding-top: calc(4    ~'*' var(--vru, @g-vru))" }
-      , { "name": "8vru"   , "code": "8", "use": "padding-top: calc(8    ~'*' var(--vru, @g-vru))" }
-      , { "name": "16vru"  , "code": "g", "use": "padding-top: calc(16   ~'*' var(--vru, @g-vru))" }
+        { "name": "0", "code": "z" }
+      ]
+    , "generators": [
+        {
+          "name": "generateSpaces"
+        , "args": [["length", "return `${length}vru`"], null, ["length", "return `padding-top: calc(${length} ~'*' var(--vru, @g-vru))`"]]
+        }
       ]
     , "media": [
         "screen"
