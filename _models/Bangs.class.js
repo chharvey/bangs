@@ -75,7 +75,7 @@ module.exports = (function () {
      * @param  {!Object={}} options a set of possible options
      * @param  {(number|Array<number>|string)=1} options.domain if {number}, use 1–n tracks; if {Array}, use those entries; if {string}, get own property of `data.common`
      */
-    function generateCountValues(transforms, options={}) {
+    function generateCounts(transforms, options={}) {
       let arr = []
       if (typeof options.domain === 'number') {
         for (let n = 1; n <= options.domain; n++) { arr.push(n) }
@@ -93,23 +93,6 @@ module.exports = (function () {
         , use : (transforms.usefn)  ? transforms.usefn .call(null, ct) : ''
         })
       }, this)
-    }
-    /**
-     * Automate counts.
-     * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
-     * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
-     * @param  {TransformObj} transforms a set of possible transformations
-     * @param  {!Object={}} options a set of possible options
-     */
-    function generateCounts(transforms, options={}) {
-      // REVIEW TODO abstract this function and `generateCountValues` function
-      for (let i = 1; i <= data.global.common.count_max; i++) {
-        this.values.push({
-          name: (transforms.namefn) ? transforms.namefn.call(null, i) : i.toString()
-        , code: (transforms.codefn) ? transforms.codefn.call(null, i) : i.toString()
-        , use : (transforms.usefn ) ? transforms.usefn .call(null, i) : ''
-        })
-      }
     }
     function generateCountsNegative(transforms, options={}) {
       for (let i = 1; i <= data.global.common.count_max; i++) {

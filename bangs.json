@@ -701,7 +701,7 @@
       ]
     , "generators": [
         {
-          "name": "generateCountValues"
+          "name": "generateCounts"
         , "options": { "domain": "tracks" }
         }
       ]
@@ -1340,7 +1340,7 @@
       ]
     , "generators": [
         {
-          "name": "generateCountValues"
+          "name": "generateCounts"
         , "transforms": { "namefn": ["number", "return `repeat(${number}, 1fr)`"] }
         , "options": { "domain": "tracks" }
         }
@@ -1374,7 +1374,7 @@
       ]
     , "generators": [
         {
-          "name": "generateCountValues"
+          "name": "generateCounts"
         , "transforms": { "namefn": ["number", "return `repeat(${number}, 1fr)`"] }
         , "options": { "domain": "tracks" }
         }
@@ -1904,7 +1904,10 @@
         { "name": "0", "code": "z" }
       ]
     , "generators": [
-        { "name": "generateCounts" }
+        {
+          "name": "generateCounts"
+        , "options": { "domain": 16 }
+        }
       , { "name": "generateCountsNegative" }
       ]
     , "fallback": ["val", "return `.flex-order(${val})`"]
@@ -2607,7 +2610,10 @@
       , { "name": "0"   , "code": "z" }
       ]
     , "generators": [
-        { "name": "generateCounts" }
+        {
+          "name": "generateCounts"
+        , "options": { "domain": 16 }
+        }
       , { "name": "generateCountsNegative" }
       ]
     , "media": [
