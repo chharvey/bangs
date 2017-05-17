@@ -31,8 +31,8 @@ module.exports = (function () {
           let newvalue = {
             name: `${Math.round(10000 * (j/_DENOMS[i]))/100}%`
           , code: `${j}o${_DENOMS[i]}`
+          , use : (usefn) ? usefn.call(null, `(${j}/${_DENOMS[i]} * 100%)`) : ''
           }
-          if (usefn) newvalue.use = usefn.call(null, `(${j}/${_DENOMS[i]} * 100%)`)
           let value = this.values.find((v) => v.name===newvalue.name)
           if (value) {
             if (!value.codes) { // type(codes) == Array<string>; type(code) == <string>
@@ -54,15 +54,13 @@ module.exports = (function () {
      * @param  {?function(number)=string} usefn  function determining the value use
      */
     function generateCountValues(namefn, usefn) {
-      const _DENOMS = data.global.common.tracks
-      for (let i = 0; i < _DENOMS.length; i++) {
-        let newvalue = {
-          name: (namefn) ? namefn.call(null, _DENOMS[i]) : _DENOMS[i].toString()
-        , code: _DENOMS[i].toString()
-        }
-        if (usefn) newvalue.use = usefn.call(null, _DENOMS[i])
-        this.values.push(newvalue)
-      }
+      data.global.common.tracks.forEach(function (ct) {
+        this.values.push({
+          name: (namefn) ? namefn.call(null, ct) : ct.toString()
+        , code: ct.toString()
+        , use : (usefn) ? usefn.call(null, ct) : ''
+        })
+      }, this)
     }
     /**
      * Automate counts.
@@ -74,22 +72,21 @@ module.exports = (function () {
      */
     function generateCounts(namefn, codefn, usefn) {
       // REVIEW TODO abstract this function and `generateCountValues` function
-      const COUNT = data.global.common.count_max
-      for (let i = 1; i <= COUNT; i++) {
-        let newvalue_pos = {
+      for (let i = 1; i <= data.global.common.count_max; i++) {
+        this.values.push({
           name: (namefn) ? namefn.call(null, i) : i.toString()
         , code: (codefn) ? codefn.call(null, i) : i.toString()
         , use : (usefn ) ?  usefn.call(null, i) : ''
-        }
-        this.values.push(newvalue_pos)
+        })
       }
-      for (let i = 1; i <= COUNT; i++) {
-        let newvalue_neg = {
+    }
+    function generateCountsNegative(namefn, codefn, usefn) {
+      for (let i = 1; i <= data.global.common.count_max; i++) {
+        this.values.push({
           name: (namefn) ? namefn.call(null, -i) : (-i).toString()
         , code: (codefn) ? codefn.call(null, -i) : `_${i}`
         , use : (usefn ) ?  usefn.call(null, -i) : ''
-        }
-        this.values.push(newvalue_neg)
+        })
       }
     }
     /**
@@ -101,35 +98,21 @@ module.exports = (function () {
      * @param  {?function(number)=string} usefn  function determining the value use
      */
     function generateSpaces(namefn, codefn, usefn) {
-      const SPACES = data.global.common.spaces
-      let short = {
-        0.25: 'q'
-      , 0.5 : 'h'
-      , 16  : 'g'
-      }
-      SPACES.forEach(function (sp) {
-        let newvalue_pos = {
+      data.global.common.spaces.forEach(function (sp) {
+        this.values.push({
           name: (namefn) ? namefn.call(null, sp) : sp.toString()
-        , code: (codefn) ? codefn.call(null, sp) : (short[sp] || sp.toString())
+        , code: (codefn) ? codefn.call(null, sp) : `${({0.25:'q', 0.5:'h', 16:'g'})[sp] || sp}`
         , use : (usefn ) ?  usefn.call(null, sp) : ''
-        }
-        this.values.push(newvalue_pos)
+        })
       }, this)
     }
     function generateSpacesNegative(namefn, codefn, usefn) {
-      const SPACES = data.global.common.spaces.map((n) => -n)
-      let short = {
-        0.25: 'q'
-      , 0.5 : 'h'
-      , 16  : 'g'
-      }
-      SPACES.forEach(function (sp) {
-        let newvalue_neg = {
-          name: (namefn) ? namefn.call(null, sp) : sp.toString()
-        , code: (codefn) ? codefn.call(null, sp) : `_${short[-sp] || -sp}`
-        , use : (usefn ) ?  usefn.call(null, sp) : ''
-        }
-        this.values.push(newvalue_neg)
+      data.global.common.spaces.forEach(function (sp) {
+        this.values.push({
+          name: (namefn) ? namefn.call(null, -sp) : (-sp).toString()
+        , code: (codefn) ? codefn.call(null, -sp) : `_${({0.25:'q', 0.5:'h', 16:'g'})[sp] || sp}`
+        , use : (usefn ) ?  usefn.call(null, -sp) : ''
+        })
       }, this)
     }
     /**
@@ -165,11 +148,11 @@ module.exports = (function () {
     function generateColors(namefn, codefn, usefn) {
       this.values.push(...data.types.find((el) => el.name==='<color>').values)
     }
-    for (let property of data.properties) {
-      for (let generator of (property.generators || [])) {
+    data.properties.forEach(function (property) {
+      (property.generators || []).forEach(function (generator) {
         eval(generator.name).call(property, ...generator.args.map((el) => (el) ? new Function(...el) : null))
-      }
-    }
+      })
+    })
     return data
   })(Util.cloneDeep(require('../bangs.json')))
 
