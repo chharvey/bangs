@@ -90,5 +90,31 @@ module.exports = (function () {
     return result
   }
 
+  /**
+   * “Convert” an array, number, or string into an array. (Doesn’t really convert.)
+   * - If the argument is an array, it is returned unchanged.
+   * - If the argument is a number `n`, an array of length `n`, filled with increasing integers,
+   *   starting with 1, is returned. (E.g. if `n===5` then `[1,2,3,4,5]` is returned.)
+   * - If the argument is a string, that string is checked as an **own property** of the given database.
+   *   If the value of that property *is* a string, then *that* string is checked, and so on,
+   *   until an array or number is found. If no entry is found, an empty array is returned.
+   * @param  {(number|Array|string)} arg the argument to convert
+   * @param  {!Object={}} database a database to check against
+   * @return {Array} an array
+   */
+  Util.arrayify = function arrayify(arg, database={}) {
+    if (Array.isArray(arg)) {
+      return arg
+    } else if (typeof arg === 'number') {
+      let array = []
+      for (let n = 1; n <= arg; n++) { array.push(n) }
+      return array
+    } else if (typeof arg === 'string') {
+      return Util.arrayify(database[arg], database)
+    } else {
+      return []
+    }
+  }
+
   return Util
 })()

@@ -37,17 +37,7 @@ module.exports = (function () {
      * @param  {(number|Array<number>|string)=1} options.domain if {number}, use 1–n tracks; if {Array}, use those entries; if {string}, get own property of `data.common`
      */
     function generateFracs(transforms, options={}) {
-      let arr = []
-      if (typeof options.domain === 'number') {
-        for (let n = 1; n <= options.domain; n++) { arr.push(n) }
-      } else if (Array.isArray(options.domain)) {
-        arr = options.domain
-      } else if (typeof options.domain === 'string') {
-        arr = data.common[options.domain]
-      } else {
-        arr = [1]
-      }
-      arr.forEach(function (den) {
+      Util.arrayify(options.domain, data.common).forEach(function (den) {
         for (let num = 1; num <= den; num++) {
           let newvalue = {
             name: `${Math.round(10000 * (num/den))/100}%`
@@ -77,16 +67,7 @@ module.exports = (function () {
      * @param  {boolean=} options.negative if true, generate negative values as well (parallelling positive values)
      */
     function generateCounts(transforms, options={}) {
-      let arr = []
-      if (typeof options.domain === 'number') {
-        for (let n = 1; n <= options.domain; n++) { arr.push(n) }
-      } else if (Array.isArray(options.domain)) {
-        arr = options.domain
-      } else if (typeof options.domain === 'string') {
-        arr = data.common[options.domain]
-      } else {
-        arr = [1]
-      }
+      let arr = Util.arrayify(options.domain, data.common)
       arr.forEach(function (ct) {
         this.values.push({
           name: (transforms.namefn) ? transforms.namefn.call(null, ct) : ct.toString()
