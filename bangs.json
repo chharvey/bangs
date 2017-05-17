@@ -6,8 +6,7 @@
     , { "name": "unset"  , "code": "u" }
     ]
   , "common": {
-      "count_max": 8
-    , "spaces": [0.25, 0.5, 1, 2, 4, 8, 16]
+      "spaces": [0.25, 0.5, 1, 2, 4, 8, 16]
     }
   , "media": [
       { "name": "screen"  , "code": "s" , "query": "screen" }
@@ -36,6 +35,7 @@
   }
 , "common": {
     "tracks": [1, 2, 3, 4, 5, 6, 8, 10, 12]
+  , "count_max": 8
   }
 , "types": [
     {
@@ -1906,9 +1906,8 @@
     , "generators": [
         {
           "name": "generateCounts"
-        , "options": { "domain": 16 }
+        , "options": { "domain": "count_max", "negative": true }
         }
-      , { "name": "generateCountsNegative" }
       ]
     , "fallback": ["val", "return `.flex-order(${val})`"]
     , "media": [
@@ -2612,9 +2611,8 @@
     , "generators": [
         {
           "name": "generateCounts"
-        , "options": { "domain": 16 }
+        , "options": { "domain": "count_max", "negative": true }
         }
-      , { "name": "generateCountsNegative" }
       ]
     , "media": [
         "screen"

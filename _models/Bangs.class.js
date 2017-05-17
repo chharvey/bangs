@@ -74,6 +74,7 @@ module.exports = (function () {
      * @param  {TransformObj} transforms a set of possible transformations
      * @param  {!Object={}} options a set of possible options
      * @param  {(number|Array<number>|string)=1} options.domain if {number}, use 1–n tracks; if {Array}, use those entries; if {string}, get own property of `data.common`
+     * @param  {boolean=} options.negative if true, generate negative values as well (parallelling positive values)
      */
     function generateCounts(transforms, options={}) {
       let arr = []
@@ -93,14 +94,14 @@ module.exports = (function () {
         , use : (transforms.usefn)  ? transforms.usefn .call(null, ct) : ''
         })
       }, this)
-    }
-    function generateCountsNegative(transforms, options={}) {
-      for (let i = 1; i <= data.global.common.count_max; i++) {
+      if (options.negative) {
+      arr.forEach(function (i) {
         this.values.push({
           name: (transforms.namefn) ? transforms.namefn.call(null, -i) : (-i).toString()
         , code: (transforms.codefn) ? transforms.codefn.call(null, -i) : `_${i}`
         , use : (transforms.usefn ) ? transforms.usefn .call(null, -i) : ''
         })
+      }, this)
       }
     }
     /**
