@@ -87,12 +87,12 @@
       , { "name": "center"       , "code": "c"  }
       , { "name": "start"        , "code": "s"  }
       , { "name": "end"          , "code": "e"  }
+      , { "name": "flex-start"   , "code": "xs", "stability": 2 }
+      , { "name": "flex-end"     , "code": "xe", "stability": 2 }
       , { "name": "stretch"      , "code": "st" }
       , { "name": "space-between", "code": "sb" }
       , { "name": "space-around" , "code": "sa" }
       , { "name": "space-evenly" , "code": "sv" }
-      , { "name": "flex-start"   , "code": "xs" }
-      , { "name": "flex-end"     , "code": "xe" }
       ]
     , "fallback": ["val", "return `.align-content(${val})`"]
     , "media": [
@@ -123,11 +123,11 @@
       , { "name": "center"       , "code": "c"  }
       , { "name": "start"        , "code": "s"  }
       , { "name": "end"          , "code": "e"  }
-      , { "name": "stretch"      , "code": "st" }
-      , { "name": "flex-start"   , "code": "xs" }
-      , { "name": "flex-end"     , "code": "xe" }
+      , { "name": "flex-start"   , "code": "xs", "stability": 2 }
+      , { "name": "flex-end"     , "code": "xe", "stability": 2 }
       , { "name": "self-start"   , "code": "ss" }
       , { "name": "self-end"     , "code": "se" }
+      , { "name": "stretch"      , "code": "st" }
       ]
     , "fallback": ["val", "return `.align-items(${val})`"]
     , "media": [
@@ -159,11 +159,11 @@
       , { "name": "center"       , "code": "c"  }
       , { "name": "start"        , "code": "s"  }
       , { "name": "end"          , "code": "e"  }
-      , { "name": "stretch"      , "code": "st" }
-      , { "name": "flex-start"   , "code": "xs" }
-      , { "name": "flex-end"     , "code": "xe" }
+      , { "name": "flex-start"   , "code": "xs", "stability": 2 }
+      , { "name": "flex-end"     , "code": "xe", "stability": 2 }
       , { "name": "self-start"   , "code": "ss" }
       , { "name": "self-end"     , "code": "se" }
+      , { "name": "stretch"      , "code": "st" }
       ]
     , "fallback": ["val", "return `.align-self(${val})`"]
     , "media": [
@@ -1424,12 +1424,12 @@
       , { "name": "center"       , "code": "c"  }
       , { "name": "start"        , "code": "s"  }
       , { "name": "end"          , "code": "e"  }
+      , { "name": "flex-start"   , "code": "xs", "stability": 2 }
+      , { "name": "flex-end"     , "code": "xe", "stability": 2 }
       , { "name": "stretch"      , "code": "st" }
       , { "name": "space-between", "code": "sb" }
       , { "name": "space-around" , "code": "sa" }
       , { "name": "space-evenly" , "code": "sv" }
-      , { "name": "flex-start"   , "code": "xs" }
-      , { "name": "flex-end"     , "code": "xe" }
       ]
     , "fallback": ["val", "return `.justify-content(${val})`"]
     , "media": [
@@ -1460,11 +1460,11 @@
       , { "name": "center"       , "code": "c"  }
       , { "name": "start"        , "code": "s"  }
       , { "name": "end"          , "code": "e"  }
-      , { "name": "stretch"      , "code": "st" }
-      , { "name": "flex-start"   , "code": "xs" }
-      , { "name": "flex-end"     , "code": "xe" }
+      , { "name": "flex-start"   , "code": "xs", "stability": 2 }
+      , { "name": "flex-end"     , "code": "xe", "stability": 2 }
       , { "name": "self-start"   , "code": "ss" }
       , { "name": "self-end"     , "code": "se" }
+      , { "name": "stretch"      , "code": "st" }
       ]
     , "fallback": ["val", "return `.justify-items(${val})`"]
     , "media": [
@@ -1496,11 +1496,11 @@
       , { "name": "center"       , "code": "c"  }
       , { "name": "start"        , "code": "s"  }
       , { "name": "end"          , "code": "e"  }
-      , { "name": "stretch"      , "code": "st" }
-      , { "name": "flex-start"   , "code": "xs" }
-      , { "name": "flex-end"     , "code": "xe" }
+      , { "name": "flex-start"   , "code": "xs", "stability": 2 }
+      , { "name": "flex-end"     , "code": "xe", "stability": 2 }
       , { "name": "self-start"   , "code": "ss" }
       , { "name": "self-end"     , "code": "se" }
+      , { "name": "stretch"      , "code": "st" }
       ]
     , "fallback": ["val", "return `.justify-self(${val})`"]
     , "media": [
