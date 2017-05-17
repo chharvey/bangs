@@ -6,8 +6,7 @@
     , { "name": "unset"  , "code": "u" }
     ]
   , "common": {
-      "tracks": [1, 2, 3, 4, 5, 6, 8, 10, 12]
-    , "count_max": 8
+      "count_max": 8
     , "spaces": [0.25, 0.5, 1, 2, 4, 8, 16]
     }
   , "media": [
@@ -701,7 +700,10 @@
         { "name": "auto", "code": "a" }
       ]
     , "generators": [
-        { "name": "generateCountValues" }
+        {
+          "name": "generateCountValues"
+        , "options": { "domain": "tracks" }
+        }
       ]
     , "fallback": ["val", "return `.column-count(${val})`"]
     , "media": [
@@ -1340,6 +1342,7 @@
         {
           "name": "generateCountValues"
         , "transforms": { "namefn": ["number", "return `repeat(${number}, 1fr)`"] }
+        , "options": { "domain": "tracks" }
         }
       ]
     , "fallback": ["val", "return `.grid-template-columns(${val})`"]
@@ -1373,6 +1376,7 @@
         {
           "name": "generateCountValues"
         , "transforms": { "namefn": ["number", "return `repeat(${number}, 1fr)`"] }
+        , "options": { "domain": "tracks" }
         }
       ]
     , "fallback": ["val", "return `.grid-template-rows(${val})`"]
