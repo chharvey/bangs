@@ -66,6 +66,7 @@ block append main
           - let property = Bangs.DATA.properties.find((p) => p.name===propertypage.name())
           if property
             section.c-Property(id=property.name)
+              - let supported_media = Bangs.DATA.global.media.filter((m) => (property.non_media || []).every((n) => n!==m.name))
               h4.-fz-giga
                 = property.name
                 include ../node_modules/xmeter/_views/_c-Permalink.view.pug
@@ -98,14 +99,14 @@ block append main
                   else
                     each c in value.codes
                       +item(value, c)
-              if (property.media && property.media.length) || (property.pseudo && property.pseudo.length)
+              if supported_media.length || (property.pseudo && property.pseudo.length)
                 dl.c-Property__Classes.c-Property__Classes--suffixes
-                  each ext in property.media || []
+                  each medium in supported_media
                     dt
-                      code= `-${Bangs.DATA.global.media.find(function (el) { return el.name === ext }).code}`
-                      if ext==='screen' || ext==='print'
+                      code= `-${medium.code}`
+                      if ['screen','print'].includes(medium.name)
                         small.c-Label(class="t-stability-deprecated"): b deprecated
-                    dd: code= ext
+                    dd: code= medium.name
                   each ext in property.pseudo || []
                     dt: code= `-${Bangs.DATA.global.pseudo.find(function (el) { return el.name === ext }).code}`
                     dd: code= ext
