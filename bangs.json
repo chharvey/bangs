@@ -5,9 +5,6 @@
     , { "name": "initial", "code": "0" }
     , { "name": "unset"  , "code": "u" }
     ]
-  , "common": {
-      "tracks": [1, 2, 3, 4, 5, 6, 8, 10, 12]
-    }
   , "media": [
       { "name": "screen"  , "code": "s" , "query": "screen" }
     , { "name": "print"   , "code": "p" , "query": "print" }
@@ -33,6 +30,49 @@
     , { "name": "locked"      , "description": "Only patches will be made to this feature. It is no longer in development. It may be heavily relied upon and will not be removed in future versions." }
     ]
   }
+, "common": {
+    "tracks": [1, 2, 3, 4, 5, 6, 8, 10, 12]
+  , "spacing": [0.25, 0.5, 1, 2, 4, 8, 16]
+  , "count_max": 8
+  }
+, "types": [
+    {
+      "name": "<line-width>"
+    , "url" : "https://developer.mozilla.org/en-US/docs/Web/CSS/length"
+    , "values": [
+        { "name": "1px" , "code": "1"  }
+      , { "name": "2px" , "code": "2"  }
+      , { "name": "4px" , "code": "4"  }
+      , { "name": "8px" , "code": "8"  }
+      , { "name": "16px", "code": "16" }
+      ]
+    }
+  , {
+      "name": "<line-style>"
+    , "values": [
+        { "name": "none"   , "code": "n"  }
+      , { "name": "hidden" , "code": "h"  }
+      , { "name": "solid"  , "code": "s"  }
+      , { "name": "dotted" , "code": "do" }
+      , { "name": "dashed" , "code": "da" }
+      , { "name": "double" , "code": "db" }
+      , { "name": "groove" , "code": "gv" }
+      , { "name": "ridge"  , "code": "rg" }
+      , { "name": "inset"  , "code": "is" }
+      , { "name": "outset" , "code": "os" }
+      ]
+    }
+  , {
+      "name": "<color>"
+    , "url" : "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value"
+    , "values": [
+        { "name": "transparent" , "code": "t" }
+      , { "name": "currentColor", "code": "c" }
+      , { "name": "#000"        , "code": "b" }
+      , { "name": "#fff"        , "code": "w" }
+      ]
+    }
+  ]
 , "properties": [
     {
       "name"     : "align-content"
@@ -47,12 +87,12 @@
       , { "name": "center"       , "code": "c"  }
       , { "name": "start"        , "code": "s"  }
       , { "name": "end"          , "code": "e"  }
+      , { "name": "flex-start"   , "code": "xs", "stability": 2 }
+      , { "name": "flex-end"     , "code": "xe", "stability": 2 }
       , { "name": "stretch"      , "code": "st" }
       , { "name": "space-between", "code": "sb" }
       , { "name": "space-around" , "code": "sa" }
       , { "name": "space-evenly" , "code": "sv" }
-      , { "name": "flex-start"   , "code": "xs" }
-      , { "name": "flex-end"     , "code": "xe" }
       ]
     , "fallback": ["val", "return `.align-content(${val})`"]
     , "media": [
@@ -83,11 +123,11 @@
       , { "name": "center"       , "code": "c"  }
       , { "name": "start"        , "code": "s"  }
       , { "name": "end"          , "code": "e"  }
-      , { "name": "stretch"      , "code": "st" }
-      , { "name": "flex-start"   , "code": "xs" }
-      , { "name": "flex-end"     , "code": "xe" }
+      , { "name": "flex-start"   , "code": "xs", "stability": 2 }
+      , { "name": "flex-end"     , "code": "xe", "stability": 2 }
       , { "name": "self-start"   , "code": "ss" }
       , { "name": "self-end"     , "code": "se" }
+      , { "name": "stretch"      , "code": "st" }
       ]
     , "fallback": ["val", "return `.align-items(${val})`"]
     , "media": [
@@ -119,11 +159,11 @@
       , { "name": "center"       , "code": "c"  }
       , { "name": "start"        , "code": "s"  }
       , { "name": "end"          , "code": "e"  }
-      , { "name": "stretch"      , "code": "st" }
-      , { "name": "flex-start"   , "code": "xs" }
-      , { "name": "flex-end"     , "code": "xe" }
+      , { "name": "flex-start"   , "code": "xs", "stability": 2 }
+      , { "name": "flex-end"     , "code": "xe", "stability": 2 }
       , { "name": "self-start"   , "code": "ss" }
       , { "name": "self-end"     , "code": "se" }
+      , { "name": "stretch"      , "code": "st" }
       ]
     , "fallback": ["val", "return `.align-self(${val})`"]
     , "media": [
@@ -206,10 +246,9 @@
     , "initial"  : "transparent"
     , "stability": 3
     , "values"   : [
-        { "name": "transparent" , "code": "t" }
-      , { "name": "currentColor", "code": "c" }
-      , { "name": "#000000"     , "code": "b" }
-      , { "name": "#ffffff"     , "code": "w" }
+      ]
+    , "generators": [
+        { "name": "generateColors" }
       ]
     , "media": [
         "screen"
@@ -400,10 +439,9 @@
     , "initial"  : "currentColor"
     , "stability": 2
     , "values"   : [
-        { "name": "transparent" , "code": "t" }
-      , { "name": "currentColor", "code": "c" }
-      , { "name": "#000000"     , "code": "b" }
-      , { "name": "#ffffff"     , "code": "w" }
+      ]
+    , "generators": [
+        { "name": "generateColors" }
       ]
     , "media": [
         "screen"
@@ -460,16 +498,9 @@
     , "initial"  : "none"
     , "stability": 2
     , "values"   : [
-        { "name": "none"  , "code": "n"  }
-      , { "name": "hidden", "code": "h"  }
-      , { "name": "solid" , "code": "s"  }
-      , { "name": "dotted", "code": "do" }
-      , { "name": "dashed", "code": "da" }
-      , { "name": "double", "code": "db" }
-      , { "name": "groove", "code": "gv" }
-      , { "name": "ridge" , "code": "rg" }
-      , { "name": "inset" , "code": "is" }
-      , { "name": "outset", "code": "os" }
+      ]
+    , "generators": [
+        { "name": "generateLineStyles" }
       ]
     , "media": [
         "screen"
@@ -495,12 +526,10 @@
     , "initial"  : "medium"
     , "stability": 2
     , "values"   : [
-        { "name": "0"    , "code": "z" }
-      , { "name": "1px"  , "code": "1" }
-      , { "name": "2px"  , "code": "2" }
-      , { "name": "4px"  , "code": "4" }
-      , { "name": "8px"  , "code": "8" }
-      , { "name": "16px" , "code": "g" }
+        { "name": "0", "code": "z" }
+      ]
+    , "generators": [
+        { "name": "generateLineWidths" }
       ]
     , "media": [
         "screen"
@@ -635,10 +664,9 @@
     , "initial"  : ""
     , "stability": 3
     , "values"   : [
-        { "name": "transparent" , "code": "t" }
-      , { "name": "currentColor", "code": "c" }
-      , { "name": "#000000"     , "code": "b" }
-      , { "name": "#ffffff"     , "code": "w" }
+      ]
+    , "generators": [
+        { "name": "generateColors" }
       ]
     , "media": [
         "screen"
@@ -671,8 +699,8 @@
       ]
     , "generators": [
         {
-          "name": "generateCountValues"
-        , "args": [null, null]
+          "name": "generateCounts"
+        , "options": { "domain": "tracks" }
         }
       ]
     , "fallback": ["val", "return `.column-count(${val})`"]
@@ -728,15 +756,14 @@
     , "initial"  : "normal"
     , "stability": 2
     , "values"   : [
-        { "name": "normal" , "code": "n" }
-      , { "name": "0"      , "code": "z" }
-      , { "name": "0.25rem", "code": "q" }
-      , { "name": "0.5rem" , "code": "h" }
-      , { "name": "1rem"   , "code": "1" }
-      , { "name": "2rem"   , "code": "2" }
-      , { "name": "4rem"   , "code": "4" }
-      , { "name": "8rem"   , "code": "8" }
-      , { "name": "16rem"  , "code": "g" }
+        { "name": "normal", "code": "n" }
+      , { "name": "0"     , "code": "z" }
+      ]
+    , "generators": [
+        {
+          "name": "generateSpaces"
+        , "transforms": { "namefn": ["length", "return `${length}rem`"] }
+        }
       ]
     , "fallback": ["val", "return `.column-gap(${val})`"]
     , "media": [
@@ -763,10 +790,9 @@
     , "initial"  : "currentColor"
     , "stability": 2
     , "values"   : [
-        { "name": "transparent" , "code": "t" }
-      , { "name": "currentColor", "code": "c" }
-      , { "name": "#000"        , "code": "b" }
-      , { "name": "#fff"        , "code": "w" }
+      ]
+    , "generators": [
+        { "name": "generateColors" }
       ]
     , "fallback": ["val", "return `.column-rule-color(${val})`"]
     , "media": [
@@ -793,16 +819,9 @@
     , "initial"  : "none"
     , "stability": 2
     , "values"   : [
-        { "name": "none"   , "code": "n"  }
-      , { "name": "hidden" , "code": "h"  }
-      , { "name": "solid"  , "code": "s"  }
-      , { "name": "dotted" , "code": "do" }
-      , { "name": "dashed" , "code": "da" }
-      , { "name": "double" , "code": "db" }
-      , { "name": "groove" , "code": "gv" }
-      , { "name": "ridge"  , "code": "rg" }
-      , { "name": "inset"  , "code": "is" }
-      , { "name": "outset" , "code": "os" }
+      ]
+    , "generators": [
+        { "name": "generateLineStyles" }
       ]
     , "fallback": ["val", "return `.column-rule-style(${val})`"]
     , "media": [
@@ -829,12 +848,10 @@
     , "initial"  : "medium"
     , "stability": 2
     , "values"   : [
-        { "name": "0"   , "code": "z" }
-      , { "name": "1px" , "code": "1" }
-      , { "name": "2px" , "code": "2" }
-      , { "name": "4px" , "code": "4" }
-      , { "name": "8px" , "code": "8" }
-      , { "name": "16px", "code": "g" }
+        { "name": "0", "code": "z" }
+      ]
+    , "generators": [
+        { "name": "generateLineWidths" }
       ]
     , "fallback": ["val", "return `.column-rule-width(${val})`"]
     , "media": [
@@ -976,8 +993,9 @@
       ]
     , "generators": [
         {
-          "name": "generateFracValues"
-        , "args": [["percentage", "return `.flex(${percentage})`"]]
+          "name": "generateFracs"
+        , "transforms": { "usefn": ["percentage", "return `.flex(${percentage})`"] }
+        , "options": { "domain": "tracks" }
         }
       ]
     , "fallback": ["val", "return `.flex(${val})`"]
@@ -1247,14 +1265,13 @@
     , "initial"  : "0"
     , "stability": 2
     , "values"   : [
-        { "name": "0"      , "code": "z" }
-      , { "name": "0.25rem", "code": "q" }
-      , { "name": "0.5rem" , "code": "h" }
-      , { "name": "1rem"   , "code": "1" }
-      , { "name": "2rem"   , "code": "2" }
-      , { "name": "4rem"   , "code": "4" }
-      , { "name": "8rem"   , "code": "8" }
-      , { "name": "16rem"  , "code": "g" }
+        { "name": "0", "code": "z" }
+      ]
+    , "generators": [
+        {
+          "name": "generateSpaces"
+        , "transforms": { "namefn": ["length", "return `${length}rem`"] }
+        }
       ]
     , "fallback": ["val", "return `.grid-column-gap(${val})`"]
     , "media": [
@@ -1281,14 +1298,16 @@
     , "initial"  : "0"
     , "stability": 2
     , "values"   : [
-        { "name": "0"      , "code": "z" }
-      , { "name": "0.25rem", "code": "q" }
-      , { "name": "0.5rem" , "code": "h" }
-      , { "name": "1rem"   , "code": "1" }
-      , { "name": "2rem"   , "code": "2" }
-      , { "name": "4rem"   , "code": "4" }
-      , { "name": "8rem"   , "code": "8" }
-      , { "name": "16rem"  , "code": "g" }
+        { "name": "0", "code": "z" }
+      ]
+    , "generators": [
+        {
+          "name": "generateSpaces"
+        , "transforms": {
+            "namefn": ["length", "return `${length}vru`"]
+          , "usefn" : ["length", "return `.grid-row-gap(calc(${length} ~'*' var(--vru, @g-vru)))`"]
+          }
+        }
       ]
     , "fallback": ["val", "return `.grid-row-gap(${val})`"]
     , "media": [
@@ -1319,8 +1338,9 @@
       ]
     , "generators": [
         {
-          "name": "generateCountValues"
-        , "args": [["number", "return `repeat(${number}, 1fr)`"], null]
+          "name": "generateCounts"
+        , "transforms": { "namefn": ["number", "return `repeat(${number}, 1fr)`"] }
+        , "options": { "domain": "tracks" }
         }
       ]
     , "fallback": ["val", "return `.grid-template-columns(${val})`"]
@@ -1352,8 +1372,9 @@
       ]
     , "generators": [
         {
-          "name": "generateCountValues"
-        , "args": [["number", "return `repeat(${number}, 1fr)`"], null]
+          "name": "generateCounts"
+        , "transforms": { "namefn": ["number", "return `repeat(${number}, 1fr)`"] }
+        , "options": { "domain": "tracks" }
         }
       ]
     , "fallback": ["val", "return `.grid-template-rows(${val})`"]
@@ -1385,12 +1406,12 @@
       , { "name": "center"       , "code": "c"  }
       , { "name": "start"        , "code": "s"  }
       , { "name": "end"          , "code": "e"  }
+      , { "name": "flex-start"   , "code": "xs", "stability": 2 }
+      , { "name": "flex-end"     , "code": "xe", "stability": 2 }
       , { "name": "stretch"      , "code": "st" }
       , { "name": "space-between", "code": "sb" }
       , { "name": "space-around" , "code": "sa" }
       , { "name": "space-evenly" , "code": "sv" }
-      , { "name": "flex-start"   , "code": "xs" }
-      , { "name": "flex-end"     , "code": "xe" }
       ]
     , "fallback": ["val", "return `.justify-content(${val})`"]
     , "media": [
@@ -1421,11 +1442,11 @@
       , { "name": "center"       , "code": "c"  }
       , { "name": "start"        , "code": "s"  }
       , { "name": "end"          , "code": "e"  }
-      , { "name": "stretch"      , "code": "st" }
-      , { "name": "flex-start"   , "code": "xs" }
-      , { "name": "flex-end"     , "code": "xe" }
+      , { "name": "flex-start"   , "code": "xs", "stability": 2 }
+      , { "name": "flex-end"     , "code": "xe", "stability": 2 }
       , { "name": "self-start"   , "code": "ss" }
       , { "name": "self-end"     , "code": "se" }
+      , { "name": "stretch"      , "code": "st" }
       ]
     , "fallback": ["val", "return `.justify-items(${val})`"]
     , "media": [
@@ -1457,11 +1478,11 @@
       , { "name": "center"       , "code": "c"  }
       , { "name": "start"        , "code": "s"  }
       , { "name": "end"          , "code": "e"  }
-      , { "name": "stretch"      , "code": "st" }
-      , { "name": "flex-start"   , "code": "xs" }
-      , { "name": "flex-end"     , "code": "xe" }
+      , { "name": "flex-start"   , "code": "xs", "stability": 2 }
+      , { "name": "flex-end"     , "code": "xe", "stability": 2 }
       , { "name": "self-start"   , "code": "ss" }
       , { "name": "self-end"     , "code": "se" }
+      , { "name": "stretch"      , "code": "st" }
       ]
     , "fallback": ["val", "return `.justify-self(${val})`"]
     , "media": [
@@ -1687,22 +1708,18 @@
     , "initial"  : "0"
     , "stability": 3
     , "values"   : [
-        { "name": "auto"    , "code": "a" }
-      , { "name": "0"       , "code": "z" }
-      , { "name": "0.25vru" , "code": "q" , "use": "margin-bottom: calc(0.25  ~'*' var(--vru, @g-vru))" }
-      , { "name": "0.5vru"  , "code": "h" , "use": "margin-bottom: calc(0.5   ~'*' var(--vru, @g-vru))" }
-      , { "name": "1vru"    , "code": "1" , "use": "margin-bottom: calc(1     ~'*' var(--vru, @g-vru))" }
-      , { "name": "2vru"    , "code": "2" , "use": "margin-bottom: calc(2     ~'*' var(--vru, @g-vru))" }
-      , { "name": "4vru"    , "code": "4" , "use": "margin-bottom: calc(4     ~'*' var(--vru, @g-vru))" }
-      , { "name": "8vru"    , "code": "8" , "use": "margin-bottom: calc(8     ~'*' var(--vru, @g-vru))" }
-      , { "name": "16vru"   , "code": "g" , "use": "margin-bottom: calc(16    ~'*' var(--vru, @g-vru))" }
-      , { "name": "-0.25vru", "code": "_q", "use": "margin-bottom: calc(-0.25 ~'*' var(--vru, @g-vru))" }
-      , { "name": "-0.5vru" , "code": "_h", "use": "margin-bottom: calc(-0.5  ~'*' var(--vru, @g-vru))" }
-      , { "name": "-1vru"   , "code": "_1", "use": "margin-bottom: calc(-1    ~'*' var(--vru, @g-vru))" }
-      , { "name": "-2vru"   , "code": "_2", "use": "margin-bottom: calc(-2    ~'*' var(--vru, @g-vru))" }
-      , { "name": "-4vru"   , "code": "_4", "use": "margin-bottom: calc(-4    ~'*' var(--vru, @g-vru))" }
-      , { "name": "-8vru"   , "code": "_8", "use": "margin-bottom: calc(-8    ~'*' var(--vru, @g-vru))" }
-      , { "name": "-16vru"  , "code": "_g", "use": "margin-bottom: calc(-16   ~'*' var(--vru, @g-vru))" }
+        { "name": "auto", "code": "a" }
+      , { "name": "0"   , "code": "z" }
+      ]
+    , "generators": [
+        {
+          "name": "generateSpaces"
+        , "transforms": {
+            "namefn": ["length", "return `${length}vru`"]
+          , "usefn" : ["length", "return `margin-bottom: calc(${length} ~'*' var(--vru, @g-vru))`"]
+          }
+        , "options": { "domain": "spacing", "negative": true }
+        }
       ]
     , "media": [
         "screen"
@@ -1728,22 +1745,15 @@
     , "initial"  : "0"
     , "stability": 3
     , "values"   : [
-        { "name": "auto"    , "code": "a"  }
-      , { "name": "0"       , "code": "z"  }
-      , { "name": "0.25rem" , "code": "q"  }
-      , { "name": "0.5rem"  , "code": "h"  }
-      , { "name": "1rem"    , "code": "1"  }
-      , { "name": "2rem"    , "code": "2"  }
-      , { "name": "4rem"    , "code": "4"  }
-      , { "name": "8rem"    , "code": "8"  }
-      , { "name": "16rem"   , "code": "g"  }
-      , { "name": "-0.25rem", "code": "_q" }
-      , { "name": "-0.5rem" , "code": "_h" }
-      , { "name": "-1rem"   , "code": "_1" }
-      , { "name": "-2rem"   , "code": "_2" }
-      , { "name": "-4rem"   , "code": "_4" }
-      , { "name": "-8rem"   , "code": "_8" }
-      , { "name": "-16rem"  , "code": "_g" }
+        { "name": "auto", "code": "a" }
+      , { "name": "0"   , "code": "z" }
+      ]
+    , "generators": [
+        {
+          "name": "generateSpaces"
+        , "transforms": { "namefn": ["length", "return `${length}rem`"] }
+        , "options": { "domain": "spacing", "negative": true }
+        }
       ]
     , "media": [
         "screen"
@@ -1769,22 +1779,15 @@
     , "initial"  : "0"
     , "stability": 3
     , "values"   : [
-        { "name": "auto"    , "code": "a"  }
-      , { "name": "0"       , "code": "z"  }
-      , { "name": "0.25rem" , "code": "q"  }
-      , { "name": "0.5rem"  , "code": "h"  }
-      , { "name": "1rem"    , "code": "1"  }
-      , { "name": "2rem"    , "code": "2"  }
-      , { "name": "4rem"    , "code": "4"  }
-      , { "name": "8rem"    , "code": "8"  }
-      , { "name": "16rem"   , "code": "g"  }
-      , { "name": "-0.25rem", "code": "_q" }
-      , { "name": "-0.5rem" , "code": "_h" }
-      , { "name": "-1rem"   , "code": "_1" }
-      , { "name": "-2rem"   , "code": "_2" }
-      , { "name": "-4rem"   , "code": "_4" }
-      , { "name": "-8rem"   , "code": "_8" }
-      , { "name": "-16rem"  , "code": "_g" }
+        { "name": "auto", "code": "a" }
+      , { "name": "0"   , "code": "z" }
+      ]
+    , "generators": [
+        {
+          "name": "generateSpaces"
+        , "transforms": { "namefn": ["length", "return `${length}rem`"] }
+        , "options": { "domain": "spacing", "negative": true }
+        }
       ]
     , "media": [
         "screen"
@@ -1810,22 +1813,18 @@
     , "initial"  : "0"
     , "stability": 3
     , "values"   : [
-        { "name": "auto"    , "code": "a" }
-      , { "name": "0"       , "code": "z" }
-      , { "name": "0.25vru" , "code": "q" , "use": "margin-top: calc(0.25  ~'*' var(--vru, @g-vru))" }
-      , { "name": "0.5vru"  , "code": "h" , "use": "margin-top: calc(0.5   ~'*' var(--vru, @g-vru))" }
-      , { "name": "1vru"    , "code": "1" , "use": "margin-top: calc(1     ~'*' var(--vru, @g-vru))" }
-      , { "name": "2vru"    , "code": "2" , "use": "margin-top: calc(2     ~'*' var(--vru, @g-vru))" }
-      , { "name": "4vru"    , "code": "4" , "use": "margin-top: calc(4     ~'*' var(--vru, @g-vru))" }
-      , { "name": "8vru"    , "code": "8" , "use": "margin-top: calc(8     ~'*' var(--vru, @g-vru))" }
-      , { "name": "16vru"   , "code": "g" , "use": "margin-top: calc(16    ~'*' var(--vru, @g-vru))" }
-      , { "name": "-0.25vru", "code": "_q", "use": "margin-top: calc(-0.25 ~'*' var(--vru, @g-vru))" }
-      , { "name": "-0.5vru" , "code": "_h", "use": "margin-top: calc(-0.5  ~'*' var(--vru, @g-vru))" }
-      , { "name": "-1vru"   , "code": "_1", "use": "margin-top: calc(-1    ~'*' var(--vru, @g-vru))" }
-      , { "name": "-2vru"   , "code": "_2", "use": "margin-top: calc(-2    ~'*' var(--vru, @g-vru))" }
-      , { "name": "-4vru"   , "code": "_4", "use": "margin-top: calc(-4    ~'*' var(--vru, @g-vru))" }
-      , { "name": "-8vru"   , "code": "_8", "use": "margin-top: calc(-8    ~'*' var(--vru, @g-vru))" }
-      , { "name": "-16vru"  , "code": "_g", "use": "margin-top: calc(-16   ~'*' var(--vru, @g-vru))" }
+        { "name": "auto", "code": "a" }
+      , { "name": "0"   , "code": "z" }
+      ]
+    , "generators": [
+        {
+          "name": "generateSpaces"
+        , "transforms": {
+            "namefn": ["length", "return `${length}vru`"]
+          , "usefn" : ["length", "return `margin-top: calc(${length} ~'*' var(--vru, @g-vru))`"]
+          }
+        , "options": { "domain": "spacing", "negative": true }
+        }
       ]
     , "media": [
         "screen"
@@ -1882,21 +1881,13 @@
     , "initial"  : "0"
     , "stability": 2
     , "values"   : [
-        { "name": "0" , "code": "z"  }
-      , { "name": "1" , "code": "1"  }
-      , { "name": "2" , "code": "2"  }
-      , { "name": "3" , "code": "3"  }
-      , { "name": "4" , "code": "4"  }
-      , { "name": "5" , "code": "5"  }
-      , { "name": "6" , "code": "6"  }
-      , { "name": "7" , "code": "7"  }
-      , { "name": "-1", "code": "_1" }
-      , { "name": "-2", "code": "_2" }
-      , { "name": "-3", "code": "_3" }
-      , { "name": "-4", "code": "_4" }
-      , { "name": "-5", "code": "_5" }
-      , { "name": "-6", "code": "_6" }
-      , { "name": "-7", "code": "_7" }
+        { "name": "0", "code": "z" }
+      ]
+    , "generators": [
+        {
+          "name": "generateCounts"
+        , "options": { "domain": "count_max", "negative": true }
+        }
       ]
     , "fallback": ["val", "return `.flex-order(${val})`"]
     , "media": [
@@ -1995,14 +1986,17 @@
     , "initial"  : "0"
     , "stability": 3
     , "values"   : [
-        { "name": "0"      , "code": "z" }
-      , { "name": "0.25vru", "code": "q", "use": "padding-bottom: calc(0.25 ~'*' var(--vru, @g-vru))" }
-      , { "name": "0.5vru" , "code": "h", "use": "padding-bottom: calc(0.5  ~'*' var(--vru, @g-vru))" }
-      , { "name": "1vru"   , "code": "1", "use": "padding-bottom: calc(1    ~'*' var(--vru, @g-vru))" }
-      , { "name": "2vru"   , "code": "2", "use": "padding-bottom: calc(2    ~'*' var(--vru, @g-vru))" }
-      , { "name": "4vru"   , "code": "4", "use": "padding-bottom: calc(4    ~'*' var(--vru, @g-vru))" }
-      , { "name": "8vru"   , "code": "8", "use": "padding-bottom: calc(8    ~'*' var(--vru, @g-vru))" }
-      , { "name": "16vru"  , "code": "g", "use": "padding-bottom: calc(16   ~'*' var(--vru, @g-vru))" }
+        { "name": "0", "code": "z" }
+      ]
+    , "generators": [
+        {
+          "name": "generateSpaces"
+        , "transforms": {
+            "namefn": ["length", "return `${length}vru`"]
+          , "usefn" : ["length", "return `padding-bottom: calc(${length} ~'*' var(--vru, @g-vru))`"]
+          }
+        , "options": { "domain": "spacing" }
+        }
       ]
     , "media": [
         "screen"
@@ -2028,14 +2022,14 @@
     , "initial"  : "0"
     , "stability": 3
     , "values"   : [
-        { "name": "0"      , "code": "z" }
-      , { "name": "0.25rem", "code": "q" }
-      , { "name": "0.5rem" , "code": "h" }
-      , { "name": "1rem"   , "code": "1" }
-      , { "name": "2rem"   , "code": "2" }
-      , { "name": "4rem"   , "code": "4" }
-      , { "name": "8rem"   , "code": "8" }
-      , { "name": "16rem"  , "code": "g" }
+        { "name": "0", "code": "z" }
+      ]
+    , "generators": [
+        {
+          "name": "generateSpaces"
+        , "transforms": { "namefn": ["length", "return `${length}rem`"] }
+        , "options": { "domain": "spacing" }
+        }
       ]
     , "media": [
         "screen"
@@ -2061,14 +2055,14 @@
     , "initial"  : "0"
     , "stability": 3
     , "values"   : [
-        { "name": "0"      , "code": "z" }
-      , { "name": "0.25rem", "code": "q" }
-      , { "name": "0.5rem" , "code": "h" }
-      , { "name": "1rem"   , "code": "1" }
-      , { "name": "2rem"   , "code": "2" }
-      , { "name": "4rem"   , "code": "4" }
-      , { "name": "8rem"   , "code": "8" }
-      , { "name": "16rem"  , "code": "g" }
+        { "name": "0", "code": "z" }
+      ]
+    , "generators": [
+        {
+          "name": "generateSpaces"
+        , "transforms": { "namefn": ["length", "return `${length}rem`"] }
+        , "options": { "domain": "spacing" }
+        }
       ]
     , "media": [
         "screen"
@@ -2094,14 +2088,17 @@
     , "initial"  : "0"
     , "stability": 3
     , "values"   : [
-        { "name": "0"      , "code": "z" }
-      , { "name": "0.25vru", "code": "q", "use": "padding-top: calc(0.25 ~'*' var(--vru, @g-vru))" }
-      , { "name": "0.5vru" , "code": "h", "use": "padding-top: calc(0.5  ~'*' var(--vru, @g-vru))" }
-      , { "name": "1vru"   , "code": "1", "use": "padding-top: calc(1    ~'*' var(--vru, @g-vru))" }
-      , { "name": "2vru"   , "code": "2", "use": "padding-top: calc(2    ~'*' var(--vru, @g-vru))" }
-      , { "name": "4vru"   , "code": "4", "use": "padding-top: calc(4    ~'*' var(--vru, @g-vru))" }
-      , { "name": "8vru"   , "code": "8", "use": "padding-top: calc(8    ~'*' var(--vru, @g-vru))" }
-      , { "name": "16vru"  , "code": "g", "use": "padding-top: calc(16   ~'*' var(--vru, @g-vru))" }
+        { "name": "0", "code": "z" }
+      ]
+    , "generators": [
+        {
+          "name": "generateSpaces"
+        , "transforms": {
+            "namefn": ["length", "return `${length}vru`"]
+          , "usefn" : ["length", "return `padding-top: calc(${length} ~'*' var(--vru, @g-vru))`"]
+          }
+        , "options": { "domain": "spacing" }
+        }
       ]
     , "media": [
         "screen"
@@ -2536,8 +2533,9 @@
       ]
     , "generators": [
         {
-          "name": "generateFracValues"
-        , "args": [["percentage", "return `width: ${percentage}`"]]
+          "name": "generateFracs"
+        , "transforms": { "usefn": ["percentage", "return `width: ${percentage}`"] }
+        , "options": { "domain": "tracks" }
         }
       ]
     , "media": [
@@ -2591,22 +2589,14 @@
     , "initial"  : "auto"
     , "stability": 3
     , "values"   : [
-        { "name": "auto", "code": "a"  }
-      , { "name": "0"   , "code": "z"  }
-      , { "name": "1"   , "code": "1"  }
-      , { "name": "2"   , "code": "2"  }
-      , { "name": "3"   , "code": "3"  }
-      , { "name": "4"   , "code": "4"  }
-      , { "name": "5"   , "code": "5"  }
-      , { "name": "6"   , "code": "6"  }
-      , { "name": "7"   , "code": "7"  }
-      , { "name": "-1"  , "code": "_1" }
-      , { "name": "-2"  , "code": "_2" }
-      , { "name": "-3"  , "code": "_3" }
-      , { "name": "-4"  , "code": "_4" }
-      , { "name": "-5"  , "code": "_5" }
-      , { "name": "-6"  , "code": "_6" }
-      , { "name": "-7"  , "code": "_7" }
+        { "name": "auto", "code": "a" }
+      , { "name": "0"   , "code": "z" }
+      ]
+    , "generators": [
+        {
+          "name": "generateCounts"
+        , "options": { "domain": "count_max", "negative": true }
+        }
       ]
     , "media": [
         "screen"

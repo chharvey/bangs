@@ -18,21 +18,32 @@ module.exports = (function () {
    */
   Bangs.DATA = (function compileData(data) {
     /**
+     * A `TransformObj` object defines 3 nullable functions that determine how to transform a pure data value
+     * into a css `<value>` type (the type used to denote values of css properties).
+     * Each function takes 1 argument (of unknown type, depending on the function that requires it as a parameter),
+     * and returns a string.
+     * @typedef  {!Object} TransformObj
+     * @property {?function(?):string} TransformObj.namefn a function returning the value.name
+     * @property {?function(?):string} TransformObj.codefn a function returning the value.code
+     * @property {?function(?):string} TransformObj.usefn  a function returning the value.use
+     */
+    /**
      * Automate track fractions.
      * Fractions can be percentages or any length unit, depending on the mixin passed.
      * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
      * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
-     * @param  {?function(string)=string} usefn  function determining the value use
+     * @param  {TransformObj} transforms a set of possible transformations
+     * @param  {!Object={}} options a set of possible options
+     * @param  {(number|Array<number>|string)=1} options.domain if {number}, use 1–n tracks; if {Array}, use those entries; if {string}, get own property of `data.common`
      */
-    function generateFracValues(usefn) {
-      const _DENOMS = data.global.common.tracks
-      for (let i = 0; i < _DENOMS.length; i++) {
-        for (let j = 1; j <= _DENOMS[i]; j++) {
+    function generateFracs(transforms, options={}) {
+      Util.arrayify(options.domain, data.common).forEach(function (den) {
+        for (let num = 1; num <= den; num++) {
           let newvalue = {
-            name: `${Math.round(10000 * (j/_DENOMS[i]))/100}%`
-          , code: `${j}o${_DENOMS[i]}`
+            name: `${Math.round(10000 * (num/den))/100}%`
+          , code: `${num}o${den}`
+          , use : (transforms.usefn) ? transforms.usefn.call(null, `(${num}/${den} * 100%)`) : ''
           }
-          if (usefn) newvalue.use = usefn.call(null, `(${j}/${_DENOMS[i]} * 100%)`)
           let value = this.values.find((v) => v.name===newvalue.name)
           if (value) {
             if (!value.codes) { // type(codes) == Array<string>; type(code) == <string>
@@ -44,31 +55,109 @@ module.exports = (function () {
             this.values.push(newvalue)
           }
         }
-      }
+      }, this)
     }
     /**
      * Automate counts.
      * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
      * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
-     * @param  {?function(number)=string} namefn function determining the value name
-     * @param  {?function(number)=string} usefn  function determining the value use
+     * @param  {TransformObj} transforms a set of possible transformations
+     * @param  {!Object={}} options a set of possible options
+     * @param  {(number|Array<number>|string)=1} options.domain if {number}, use 1–n tracks; if {Array}, use those entries; if {string}, get own property of `data.common`
+     * @param  {boolean=} options.negative if true, generate negative values as well (parallelling positive values)
      */
-    function generateCountValues(namefn, usefn) {
-      const _DENOMS = data.global.common.tracks
-      for (let i = 0; i < _DENOMS.length; i++) {
-        let newvalue = {
-          name: (namefn) ? namefn.call(null, _DENOMS[i]) : _DENOMS[i].toString()
-        , code: _DENOMS[i].toString()
-        }
-        if (usefn) newvalue.use = usefn.call(null, _DENOMS[i])
-        this.values.push(newvalue)
+    function generateCounts(transforms, options={}) {
+      let arr = Util.arrayify(options.domain, data.common)
+      arr.forEach(function (ct) {
+        this.values.push({
+          name: (transforms.namefn) ? transforms.namefn.call(null, ct) : ct.toString()
+        , code: (transforms.codefn) ? transforms.codefn.call(null, ct) : ct.toString()
+        , use : (transforms.usefn)  ? transforms.usefn .call(null, ct) : ''
+        })
+      }, this)
+      if (options.negative) {
+      arr.forEach(function (i) {
+        this.values.push({
+          name: (transforms.namefn) ? transforms.namefn.call(null, -i) : (-i).toString()
+        , code: (transforms.codefn) ? transforms.codefn.call(null, -i) : `_${i}`
+        , use : (transforms.usefn ) ? transforms.usefn .call(null, -i) : ''
+        })
+      }, this)
       }
     }
-    for (let property of data.properties) {
-      for (let generator of (property.generators || [])) {
-        eval(generator.name).call(property, ...generator.args.map((el) => (el) ? new Function(...el) : null))
+    /**
+     * Automate spacing.
+     * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
+     * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
+     * @param  {TransformObj} transforms a set of possible transformations
+     * @param  {!Object={}} options a set of possible options
+     * @param  {(number|Array<number>|string)=1} options.domain if {number}, use 1–n tracks; if {Array}, use those entries; if {string}, get own property of `data.common`
+     * @param  {boolean=} options.negative if true, generate negative values as well (parallelling positive values)
+     */
+    function generateSpaces(transforms, options={}) {
+      const ABBR = {
+        0.25: 'q'
+      , 0.5 : 'h'
+      }
+      let arr = Util.arrayify(options.domain, data.common)
+      arr.forEach(function (sp) {
+        this.values.push({
+          name: (transforms.namefn) ? transforms.namefn.call(null, sp) : sp.toString()
+        , code: (transforms.codefn) ? transforms.codefn.call(null, sp) : `${ABBR[sp] || sp}`
+        , use : (transforms.usefn ) ? transforms.usefn .call(null, sp) : ''
+        })
+      }, this)
+      if (options.negative) {
+      arr.forEach(function (sp) {
+        this.values.push({
+          name: (transforms.namefn) ? transforms.namefn.call(null, -sp) : (-sp).toString()
+        , code: (transforms.codefn) ? transforms.codefn.call(null, -sp) : `_${ABBR[sp] || sp}`
+        , use : (transforms.usefn ) ? transforms.usefn .call(null, -sp) : ''
+        })
+      }, this)
       }
     }
+    /**
+     * Automate line widths.
+     * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
+     * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
+     * @param  {TransformObj} transforms a set of possible transformations
+     * @param  {!Object={}} options a set of possible options
+     */
+    function generateLineWidths(transforms, options={}) {
+      this.values.push(...data.types.find((el) => el.name==='<line-width>').values)
+    }
+    /**
+     * Automate line styles.
+     * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
+     * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
+     * @param  {TransformObj} transforms a set of possible transformations
+     * @param  {!Object={}} options a set of possible options
+     */
+    function generateLineStyles(transforms, options={}) {
+      this.values.push(...data.types.find((el) => el.name==='<line-style>').values)
+    }
+    /**
+     * Automate colors.
+     * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
+     * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
+     * @param  {TransformObj} transforms a set of possible transformations
+     * @param  {!Object={}} options a set of possible options
+     */
+    function generateColors(transforms, options={}) {
+      this.values.push(...data.types.find((el) => el.name==='<color>').values)
+    }
+    data.properties.forEach(function (property) {
+      (property.generators || []).forEach(function (generator) {
+        eval(generator.name).call(property, (function () {
+          let t = {}
+          ;['namefn','codefn','usefn'].forEach(function (key) {
+            t[key] = (generator.transforms && generator.transforms[key]) ? new Function(...generator.transforms[key]) : null
+          })
+          return t
+        })(), generator.options)
+      })
+    })
     return data
   })(Util.cloneDeep(require('../bangs.json')))
 
