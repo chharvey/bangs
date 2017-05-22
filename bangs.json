@@ -40,11 +40,11 @@
       "name": "<line-width>"
     , "url" : "https://developer.mozilla.org/en-US/docs/Web/CSS/length"
     , "values": [
-        { "name": "1px"  , "code": "1" }
-      , { "name": "2px"  , "code": "2" }
-      , { "name": "4px"  , "code": "4" }
-      , { "name": "8px"  , "code": "8" }
-      , { "name": "16px" , "code": "g" }
+        { "name": "1px" , "code": "1"  }
+      , { "name": "2px" , "code": "2"  }
+      , { "name": "4px" , "code": "4"  }
+      , { "name": "8px" , "code": "8"  }
+      , { "name": "16px", "code": "16" }
       ]
     }
   , {

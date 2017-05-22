@@ -95,11 +95,15 @@ module.exports = (function () {
      * @param  {boolean=} options.negative if true, generate negative values as well (parallelling positive values)
      */
     function generateSpaces(transforms, options={}) {
+      const ABBR = {
+        0.25: 'q'
+      , 0.5 : 'h'
+      }
       let arr = Util.arrayify(options.domain, data.common)
       arr.forEach(function (sp) {
         this.values.push({
           name: (transforms.namefn) ? transforms.namefn.call(null, sp) : sp.toString()
-        , code: (transforms.codefn) ? transforms.codefn.call(null, sp) : `${({0.25:'q', 0.5:'h', 16:'g'})[sp] || sp}`
+        , code: (transforms.codefn) ? transforms.codefn.call(null, sp) : `${ABBR[sp] || sp}`
         , use : (transforms.usefn ) ? transforms.usefn .call(null, sp) : ''
         })
       }, this)
@@ -107,7 +111,7 @@ module.exports = (function () {
       arr.forEach(function (sp) {
         this.values.push({
           name: (transforms.namefn) ? transforms.namefn.call(null, -sp) : (-sp).toString()
-        , code: (transforms.codefn) ? transforms.codefn.call(null, -sp) : `_${({0.25:'q', 0.5:'h', 16:'g'})[sp] || sp}`
+        , code: (transforms.codefn) ? transforms.codefn.call(null, -sp) : `_${ABBR[sp] || sp}`
         , use : (transforms.usefn ) ? transforms.usefn .call(null, -sp) : ''
         })
       }, this)
