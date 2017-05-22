@@ -91,24 +91,27 @@ module.exports = (function () {
      * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
      * @param  {TransformObj} transforms a set of possible transformations
      * @param  {!Object={}} options a set of possible options
+     * @param  {(number|Array<number>|string)=1} options.domain if {number}, use 1–n tracks; if {Array}, use those entries; if {string}, get own property of `data.common`
+     * @param  {boolean=} options.negative if true, generate negative values as well (parallelling positive values)
      */
     function generateSpaces(transforms, options={}) {
-      data.global.common.spaces.forEach(function (sp) {
+      let arr = Util.arrayify(options.domain, data.common)
+      arr.forEach(function (sp) {
         this.values.push({
           name: (transforms.namefn) ? transforms.namefn.call(null, sp) : sp.toString()
         , code: (transforms.codefn) ? transforms.codefn.call(null, sp) : `${({0.25:'q', 0.5:'h', 16:'g'})[sp] || sp}`
         , use : (transforms.usefn ) ? transforms.usefn .call(null, sp) : ''
         })
       }, this)
-    }
-    function generateSpacesNegative(transforms, options={}) {
-      data.global.common.spaces.forEach(function (sp) {
+      if (options.negative) {
+      arr.forEach(function (sp) {
         this.values.push({
           name: (transforms.namefn) ? transforms.namefn.call(null, -sp) : (-sp).toString()
         , code: (transforms.codefn) ? transforms.codefn.call(null, -sp) : `_${({0.25:'q', 0.5:'h', 16:'g'})[sp] || sp}`
         , use : (transforms.usefn ) ? transforms.usefn .call(null, -sp) : ''
         })
       }, this)
+      }
     }
     /**
      * Automate line widths.
