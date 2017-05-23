@@ -66,7 +66,8 @@ block append main
           - let property = Bangs.DATA.properties.find((p) => p.name===propertypage.name())
           if property
             section.c-Property(id=property.name)
-              - let supported_media = Bangs.DATA.global.media.filter((m) => (property.non_media || []).every((n) => n!==m.name))
+              - let supported_media = Bangs.DATA.global.media.filter((m) => !(property.non_media || []).includes(m.name))
+              - let supported_pseudos = Bangs.DATA.global.pseudo.filter((p) => (property.pseudo || []).includes(p.name))
               h4.-fz-giga
                 = property.name
                 include ../node_modules/xmeter/_views/_c-Permalink.view.pug
@@ -99,17 +100,17 @@ block append main
                   else
                     each c in value.codes
                       +item(value, c)
-              if supported_media.length || (property.pseudo && property.pseudo.length)
+              if supported_media.length || supported_pseudos.length
                 dl.c-Property__Classes.c-Property__Classes--suffixes
-                  each medium in supported_media
+                  each query in supported_media
                     dt
-                      code= `-${medium.code}`
-                      if ['screen','print'].includes(medium.name)
+                      code= `-${query.code}`
+                      if ['screen','print'].includes(query.name)
                         small.c-Label(class="t-stability-deprecated"): b deprecated
-                    dd: code= medium.name
-                  each ext in property.pseudo || []
-                    dt: code= `-${Bangs.DATA.global.pseudo.find(function (el) { return el.name === ext }).code}`
-                    dd: code= ext
+                    dd: code= query.name
+                  each pseudo in supported_pseudos
+                    dt: code= `-${pseudo.code}`
+                    dd: code= pseudo.name
           else
             section.c-Property
               h4.-fz-giga #{propertypage.name()} Not Found

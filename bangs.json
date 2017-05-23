@@ -95,20 +95,6 @@
       , { "name": "space-evenly" , "code": "sv" }
       ]
     , "fallback": ["val", "return `.align-content(${val})`"]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "align-items"
@@ -130,20 +116,6 @@
       , { "name": "stretch"      , "code": "st" }
       ]
     , "fallback": ["val", "return `.align-items(${val})`"]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "align-self"
@@ -166,20 +138,6 @@
       , { "name": "stretch"      , "code": "st" }
       ]
     , "fallback": ["val", "return `.align-self(${val})`"]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "background-attachment"
@@ -193,20 +151,6 @@
         { "name": "scroll", "code": "s" }
       , { "name": "fixed" , "code": "f" }
       , { "name": "local" , "code": "l" }
-      ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     }
   , {
@@ -222,20 +166,6 @@
       , { "name": "padding-box", "code": "p" }
       , { "name": "border-box" , "code": "r", "stability": 2 }
       ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "background-color"
@@ -249,20 +179,6 @@
       ]
     , "generators": [
         { "name": "generateColors" }
-      ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     , "pseudo": [
         "hover"
@@ -279,20 +195,6 @@
     , "values"   : [
         { "name": "none", "code": "n" }
       ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "background-origin"
@@ -306,20 +208,6 @@
         { "name": "content-box", "code": "c" }
       , { "name": "padding-box", "code": "p" }
       , { "name": "border-box" , "code": "r", "stability": 2 }
-      ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     }
   , {
@@ -345,20 +233,6 @@
       , { "name": "right  top   ", "code": "rt" }
       , { "name": "right  center", "code": "rc" }
       , { "name": "right  bottom", "code": "rb" }
-      ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     }
   , {
@@ -387,20 +261,6 @@
       , { "name": "round  repeat", "code": "rd_r"  }
       , { "name": "round  space" , "code": "rd_sp" }
       ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "background-size"
@@ -415,20 +275,6 @@
       , { "name": "contain", "code": "cn", "stability": 2 }
       , { "name": "cover"  , "code": "cr", "stability": 2 }
       ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "border-color"
@@ -442,20 +288,6 @@
       ]
     , "generators": [
         { "name": "generateColors" }
-      ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     }
   , {
@@ -474,20 +306,6 @@
       , { "name": "2rem"   , "code": "2" }
       , { "name": "50%"    , "code": "1o2" }
       ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "border-style"
@@ -501,20 +319,6 @@
       ]
     , "generators": [
         { "name": "generateLineStyles" }
-      ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     }
   , {
@@ -531,20 +335,6 @@
     , "generators": [
         { "name": "generateLineWidths" }
       ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "bottom"
@@ -558,20 +348,6 @@
         { "name": "auto", "code": "a" }
       , { "name": "0"   , "code": "z" }
       ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "box-shadow"
@@ -583,20 +359,6 @@
     , "stability": 3
     , "values"   : [
         { "name": "none", "code": "n" }
-      ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     }
   , {
@@ -610,20 +372,6 @@
     , "values"   : [
         { "name": "content-box", "code": "c" }
       , { "name": "border-box" , "code": "r", "stability": 2 }
-      ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     }
   , {
@@ -640,20 +388,6 @@
       , { "name": "right", "code": "r" }
       , { "name": "both" , "code": "b" }
       ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "color"
@@ -667,20 +401,6 @@
       ]
     , "generators": [
         { "name": "generateColors" }
-      ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     , "pseudo": [
         "hover"
@@ -704,20 +424,6 @@
         }
       ]
     , "fallback": ["val", "return `.column-count(${val})`"]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "column-fill"
@@ -732,20 +438,6 @@
       , { "name": "auto"   , "code": "a" }
       ]
     , "fallback": ["val", "return `.column-fill(${val})`"]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "column-gap"
@@ -766,20 +458,6 @@
         }
       ]
     , "fallback": ["val", "return `.column-gap(${val})`"]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "column-rule-color"
@@ -795,20 +473,6 @@
         { "name": "generateColors" }
       ]
     , "fallback": ["val", "return `.column-rule-color(${val})`"]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "column-rule-style"
@@ -824,20 +488,6 @@
         { "name": "generateLineStyles" }
       ]
     , "fallback": ["val", "return `.column-rule-style(${val})`"]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "column-rule-width"
@@ -854,20 +504,6 @@
         { "name": "generateLineWidths" }
       ]
     , "fallback": ["val", "return `.column-rule-width(${val})`"]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "column-span"
@@ -882,20 +518,6 @@
       , { "name": "all" , "code": "a" }
       ]
     , "fallback": ["val", "return `.column-span(${val})`"]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "column-width"
@@ -910,20 +532,6 @@
       , { "name": "0"   , "code": "z" }
       ]
     , "fallback": ["val", "return `.column-width(${val})`"]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "display"
@@ -960,20 +568,6 @@
       , { "name": "inline-flex"        , "code": "lf" , "stability": 1, "alt": "display: inline flex" }
       , { "name": "inline-grid"        , "code": "lg" , "stability": 1, "alt": "display: inline grid" }
       ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "flex"
@@ -999,20 +593,6 @@
         }
       ]
     , "fallback": ["val", "return `.flex(${val})`"]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "flex-direction"
@@ -1029,20 +609,6 @@
       , { "name": "column-reverse", "code": "cr" }
       ]
     , "fallback": ["val", "return `.flex-direction(${val})`"]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "flex-wrap"
@@ -1058,20 +624,6 @@
       , { "name": "wrap-reverse", "code": "wr" }
       ]
     , "fallback": ["val", "return `.flex-wrap(${val})`"]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "float"
@@ -1085,20 +637,6 @@
         { "name": "none" , "code": "n" }
       , { "name": "left" , "code": "l" }
       , { "name": "right", "code": "r" }
-      ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     }
   , {
@@ -1116,20 +654,6 @@
       , { "name": "fantasy"   , "code": "fy" }
       , { "name": "cursive"   , "code": "cv", "stability": 2 }
       ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "font-size"
@@ -1141,20 +665,6 @@
     , "stability": 3
     , "values"   : [
         { "name": "0", "code": "z" }
-      ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     }
   , {
@@ -1168,20 +678,6 @@
     , "values"   : [
         { "name": "normal", "code": "n" }
       , { "name": "italic", "code": "t" }
-      ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     , "pseudo": [
         "hover"
@@ -1198,20 +694,6 @@
     , "values"   : [
         { "name": "normal"    , "code": "n" }
       , { "name": "small-caps", "code": "s" }
-      ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     , "pseudo": [
         "hover"
@@ -1238,20 +720,6 @@
       , { "name": "800"   , "code": "800" }
       , { "name": "900"   , "code": "900" }
       ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     , "pseudo": [
         "hover"
       ]
@@ -1274,20 +742,6 @@
         }
       ]
     , "fallback": ["val", "return `.grid-column-gap(${val})`"]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "grid-row-gap"
@@ -1310,20 +764,6 @@
         }
       ]
     , "fallback": ["val", "return `.grid-row-gap(${val})`"]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "grid-template-columns"
@@ -1344,20 +784,6 @@
         }
       ]
     , "fallback": ["val", "return `.grid-template-columns(${val})`"]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "grid-template-rows"
@@ -1378,20 +804,6 @@
         }
       ]
     , "fallback": ["val", "return `.grid-template-rows(${val})`"]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "justify-content"
@@ -1414,20 +826,6 @@
       , { "name": "space-evenly" , "code": "sv" }
       ]
     , "fallback": ["val", "return `.justify-content(${val})`"]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "justify-items"
@@ -1449,20 +847,6 @@
       , { "name": "stretch"      , "code": "st" }
       ]
     , "fallback": ["val", "return `.justify-items(${val})`"]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "justify-self"
@@ -1485,20 +869,6 @@
       , { "name": "stretch"      , "code": "st" }
       ]
     , "fallback": ["val", "return `.justify-self(${val})`"]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "left"
@@ -1511,20 +881,6 @@
     , "values"   : [
         { "name": "auto", "code": "a" }
       , { "name": "0"   , "code": "z" }
-      ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     }
   , {
@@ -1539,20 +895,6 @@
         { "name": "normal", "code": "n" }
       , { "name": "0"     , "code": "z" }
       ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "line-height"
@@ -1566,20 +908,6 @@
         { "name": "normal", "code": "n" }
       , { "name": "0"     , "code": "z" }
       ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "list-style-image"
@@ -1591,20 +919,6 @@
     , "stability": 3
     , "values"   : [
         { "name": "none", "code": "n" }
-      ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     }
   , {
@@ -1618,20 +932,6 @@
     , "values"   : [
         { "name": "outside", "code": "os" }
       , { "name": "inside" , "code": "is" }
-      ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     }
   , {
@@ -1657,20 +957,6 @@
       , { "name": "circle"              , "code": "c"  , "e.g.": "◦" }
       , { "name": "square"              , "code": "s"  , "e.g.": "▪" }
       ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "margin"
@@ -1683,20 +969,6 @@
     , "values"   : [
         { "name": "auto", "code": "a" }
       , { "name": "0"   , "code": "z" }
-      ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     }
   , {
@@ -1721,20 +993,6 @@
         , "options": { "domain": "spacing", "negative": true }
         }
       ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "margin-left"
@@ -1755,20 +1013,6 @@
         , "options": { "domain": "spacing", "negative": true }
         }
       ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "margin-right"
@@ -1788,20 +1032,6 @@
         , "transforms": { "namefn": ["length", "return `${length}rem`"] }
         , "options": { "domain": "spacing", "negative": true }
         }
-      ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     }
   , {
@@ -1826,20 +1056,6 @@
         , "options": { "domain": "spacing", "negative": true }
         }
       ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "opacity"
@@ -1853,20 +1069,6 @@
         { "name": "0.0", "code": "z" }
       , { "name": "0.5", "code": "h" }
       , { "name": "1.0", "code": "1" }
-      ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     , "pseudo": [
         "hover"
@@ -1890,20 +1092,6 @@
         }
       ]
     , "fallback": ["val", "return `.flex-order(${val})`"]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "overflow"
@@ -1919,20 +1107,6 @@
       , { "name": "hidden" , "code": "h" }
       , { "name": "scroll" , "code": "s" }
       ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "overflow-wrap"
@@ -1946,9 +1120,17 @@
         { "name": "normal"    , "code": "n" }
       , { "name": "break-word", "code": "b" }
       ]
-    , "media": [
-        "screen"
-      , "print"
+    , "non_media": [
+        "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -1961,20 +1143,6 @@
     , "stability": 3
     , "values"   : [
         { "name": "0", "code": "z" }
-      ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     }
   , {
@@ -1998,20 +1166,6 @@
         , "options": { "domain": "spacing" }
         }
       ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "padding-left"
@@ -2031,20 +1185,6 @@
         , "options": { "domain": "spacing" }
         }
       ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "padding-right"
@@ -2063,20 +1203,6 @@
         , "transforms": { "namefn": ["length", "return `${length}rem`"] }
         , "options": { "domain": "spacing" }
         }
-      ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     }
   , {
@@ -2100,7 +1226,21 @@
         , "options": { "domain": "spacing" }
         }
       ]
-    , "media": [
+    }
+  , {
+      "name"     : "page-break-after"
+    , "code"     : "pba"
+    , "summary"  : "Defines a page-break after an element."
+    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/page-break-after"
+    , "inherited": false
+    , "initial"  : "auto"
+    , "stability": 0
+    , "values"   : [
+        { "name": "auto"  , "code": "a" }
+      , { "name": "always", "code": "t" }
+      , { "name": "avoid" , "code": "f" }
+      ]
+    , "non_media": [
         "screen"
       , "print"
       , "small+"
@@ -2116,20 +1256,6 @@
       ]
     }
   , {
-      "name"     : "page-break-after"
-    , "code"     : "pba"
-    , "summary"  : "Defines a page-break after an element."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/page-break-after"
-    , "inherited": false
-    , "initial"  : "auto"
-    , "stability": 0
-    , "values"   : [
-        { "name": "auto"  , "code": "a" }
-      , { "name": "always", "code": "t" }
-      , { "name": "avoid" , "code": "f" }
-      ]
-    }
-  , {
       "name"     : "page-break-before"
     , "code"     : "pbb"
     , "summary"  : "Defines a page-break before an element."
@@ -2141,6 +1267,20 @@
         { "name": "auto"  , "code": "a" }
       , { "name": "always", "code": "t" }
       , { "name": "avoid" , "code": "f" }
+      ]
+    , "non_media": [
+        "screen"
+      , "print"
+      , "small+"
+      , "medium+"
+      , "large+"
+      , "xlarge+"
+      , "xxlarge+"
+      , "xsmall-"
+      , "small-"
+      , "medium-"
+      , "large-"
+      , "xlarge-"
       ]
     }
   , {
@@ -2158,20 +1298,6 @@
       , { "name": "fixed"   , "code": "f" }
       , { "name": "sticky"  , "code": "k", "stability": 2 }
       ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "quotes"
@@ -2183,20 +1309,6 @@
     , "stability": 2
     , "values"   : [
         { "name": "none", "code": "n"  }
-      ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     }
   , {
@@ -2210,20 +1322,6 @@
     , "values"   : [
         { "name": "auto", "code": "a" }
       , { "name": "0"   , "code": "z" }
-      ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     }
   , {
@@ -2242,20 +1340,6 @@
       , { "name": "center" , "code": "c" }
       , { "name": "justify", "code": "j" }
       ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "text-decoration"
@@ -2270,20 +1354,6 @@
       , { "name": "underline"   , "code": "ul" }
       , { "name": "overline"    , "code": "ol" }
       , { "name": "line-through", "code": "lt" }
-      ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     , "pseudo": [
         "hover"
@@ -2300,20 +1370,6 @@
     , "values"   : [
         { "name": "0", "code": "z" }
       ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "text-overflow"
@@ -2328,20 +1384,6 @@
       , { "name": "ellipsis", "code": "e" }
       , { "name": "fade"    , "code": "f", "stability": 2 }
       ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "text-shadow"
@@ -2353,20 +1395,6 @@
     , "stability": 3
     , "values"   : [
         { "name": "none", "code": "n" }
-      ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     }
   , {
@@ -2383,20 +1411,6 @@
       , { "name": "uppercase" , "code": "uc", "stability": 2 }
       , { "name": "lowercase" , "code": "lc", "stability": 2 }
       ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     , "pseudo": [
         "hover"
       ]
@@ -2412,20 +1426,6 @@
     , "values": [
         { "name": "auto", "code": "a" }
       , { "name": "0"   , "code": "z" }
-      ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     }
   , {
@@ -2446,20 +1446,6 @@
       , { "name": "sub"        , "code": "sb" }
       , { "name": "super"      , "code": "sp", "stability": 2 }
       ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "visibility"
@@ -2473,20 +1459,6 @@
         { "name": "visible" , "code": "v" }
       , { "name": "hidden"  , "code": "h" }
       , { "name": "collapse", "code": "c" }
-      ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     }
   , {
@@ -2503,20 +1475,6 @@
       , { "name": "pre"     , "code": "pr" }
       , { "name": "pre-wrap", "code": "pw" }
       , { "name": "pre-line", "code": "pl" }
-      ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     }
   , {
@@ -2538,20 +1496,6 @@
         , "options": { "domain": "tracks" }
         }
       ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
     }
   , {
       "name"     : "word-spacing"
@@ -2564,20 +1508,6 @@
     , "values"   : [
         { "name": "normal", "code": "n" }
       , { "name": "0"     , "code": "z" }
-      ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     }
   , {
@@ -2597,20 +1527,6 @@
           "name": "generateCounts"
         , "options": { "domain": "count_max", "negative": true }
         }
-      ]
-    , "media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     }
   ]
