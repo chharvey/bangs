@@ -83,10 +83,12 @@
       "description": "Describes a CSS value.",
       "type": "object",
       "required": ["name", "code"],
+      "additionalProperties": false,
       "properties": {
         "name": { "type": "string", "description": "Actual CSS value generated." },
         "code": { "type": "string", "description": "Code used in Bang classname." },
         "use" : { "type": "string", "description": "Overrides any generated CSS code for this value." },
+        "alt" : { "type": "string", "description": "Alternative CSS code, overridden by generated code and by 'use'." },
         "stability": {
           "allOf": [{ "$ref": "#/definitions/CSS_Property/properties/stability" }],
           "description": "Stability level of the CSS value. Overrides that of the property it belongs to."
@@ -95,6 +97,7 @@
     }
   },
   "type": "object",
+  "additionalProperties": false,
   "properties": {
     "global": {
       "description": "Describes JSON data reused throughout the project.",
@@ -119,7 +122,7 @@
               "url" : { "type": "string", "description": "Link to an external resource." },
               "values": {
                 "description": "List of enumerated, verbatim values for this type.",
-                "allOf": [{ "$ref": "#/definitions/CSS_Property/properties/values" }],
+                "allOf": [{ "$ref": "#/definitions/CSS_Property/properties/values" }]
               }
             }
           }

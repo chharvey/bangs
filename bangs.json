@@ -943,18 +943,18 @@
     , "stability": 3
     , "values"   : [
         { "name": "none"                , "code": "n"  }
-      , { "name": "decimal"             , "code": "dc" , "e.g.": " 1.   2.   3." }
-      , { "name": "decimal-leading-zero", "code": "dz" , "e.g.": "01.  02.  03." }
-      , { "name": "lower-roman"         , "code": "lr" , "e.g.": " i.  ii. iii." }
-      , { "name": "upper-roman"         , "code": "ur" , "e.g.": " I.  II. III." }
-      , { "name": "lower-alpha"         , "code": "la" , "e.g.": " a.   b.   c.", "stability": 1 }
-      , { "name": "upper-alpha"         , "code": "ua" , "e.g.": " A.   B.   C.", "stability": 1 }
-      , { "name": "lower-latin"         , "code": "ll" , "e.g.": " a.   b.   c." }
-      , { "name": "upper-latin"         , "code": "ul" , "e.g.": " A.   B.   C." }
-      , { "name": "lower-greek"         , "code": "lg" , "e.g.": " α.   β.   γ." }
-      , { "name": "disc"                , "code": "d"  , "e.g.": "•" }
-      , { "name": "circle"              , "code": "c"  , "e.g.": "◦" }
-      , { "name": "square"              , "code": "s"  , "e.g.": "▪" }
+      , { "name": "decimal"             , "code": "dc" }
+      , { "name": "decimal-leading-zero", "code": "dz" }
+      , { "name": "lower-roman"         , "code": "lr" }
+      , { "name": "upper-roman"         , "code": "ur" }
+      , { "name": "lower-alpha"         , "code": "la" , "stability": 1 }
+      , { "name": "upper-alpha"         , "code": "ua" , "stability": 1 }
+      , { "name": "lower-latin"         , "code": "ll" }
+      , { "name": "upper-latin"         , "code": "ul" }
+      , { "name": "lower-greek"         , "code": "lg" }
+      , { "name": "disc"                , "code": "d"  }
+      , { "name": "circle"              , "code": "c"  }
+      , { "name": "square"              , "code": "s"  }
       ]
     }
   , {
