@@ -71,7 +71,6 @@
 , "common": {
     "tracks": [1, 2, 3, 4, 5, 6, 8, 10, 12]
   , "spacing": [0.25, 0.5, 1, 2, 4, 8, 16]
-  , "count_max": 8
   }
 , "properties": [
     {
@@ -1088,7 +1087,7 @@
     , "generators": [
         {
           "name": "generateCounts"
-        , "options": { "domain": "count_max", "negative": true }
+        , "options": { "domain": 8, "negative": true }
         }
       ]
     , "fallback": ["val", "return `.flex-order(${val})`"]
@@ -1525,7 +1524,7 @@
     , "generators": [
         {
           "name": "generateCounts"
-        , "options": { "domain": "count_max", "negative": true }
+        , "options": { "domain": 8, "negative": true }
         }
       ]
     }
