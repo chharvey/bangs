@@ -1,3 +1,4 @@
+var Ajv = require('ajv')
 var Util = require('./Util.class.js')
 
 module.exports = (function () {
@@ -27,6 +28,7 @@ module.exports = (function () {
      * @property {?function(?):string} TransformObj.codefn a function returning the value.code
      * @property {?function(?):string} TransformObj.usefn  a function returning the value.use
      */
+
     /**
      * Automate track fractions.
      * Fractions can be percentages or any length unit, depending on the mixin passed.
@@ -56,6 +58,7 @@ module.exports = (function () {
         }
       }, this)
     }
+
     /**
      * Automate counts.
      * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
@@ -84,6 +87,7 @@ module.exports = (function () {
       }, this)
       }
     }
+
     /**
      * Automate spacing.
      * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
@@ -116,6 +120,7 @@ module.exports = (function () {
       }, this)
       }
     }
+
     /**
      * Automate line widths.
      * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
@@ -126,6 +131,7 @@ module.exports = (function () {
     function generateLineWidths(transforms, options={}) {
       this.values.push(...data.global.types.find((el) => el.name==='<line-width>').values)
     }
+
     /**
      * Automate line styles.
      * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
@@ -136,6 +142,7 @@ module.exports = (function () {
     function generateLineStyles(transforms, options={}) {
       this.values.push(...data.global.types.find((el) => el.name==='<line-style>').values)
     }
+
     /**
      * Automate colors.
      * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
@@ -146,6 +153,10 @@ module.exports = (function () {
     function generateColors(transforms, options={}) {
       this.values.push(...data.global.types.find((el) => el.name==='<color>').values)
     }
+
+    return (function () {
+      let ajv = new Ajv()
+      let isValid = ajv.compile(require('../bangs.schema.json'))
     data.properties.forEach(function (property) {
       (property.generators || []).forEach(function (generator) {
         eval(generator.name).call(property, (function () {
@@ -157,7 +168,12 @@ module.exports = (function () {
         })(), generator.options)
       })
     })
+      if (!isValid(data)) {
+        console.error(isValid.errors)
+        throw new Error('Data does not valiate against schema!')
+      }
     return data
+    })()
   })(Util.cloneDeep(require('../bangs.json')))
 
   /**
