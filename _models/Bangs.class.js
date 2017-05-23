@@ -1,3 +1,4 @@
+var Ajv = require('ajv')
 var Util = require('./Util.class.js')
 
 module.exports = (function () {
@@ -27,6 +28,7 @@ module.exports = (function () {
      * @property {?function(?):string} TransformObj.codefn a function returning the value.code
      * @property {?function(?):string} TransformObj.usefn  a function returning the value.use
      */
+
     /**
      * Automate track fractions.
      * Fractions can be percentages or any length unit, depending on the mixin passed.
@@ -34,10 +36,10 @@ module.exports = (function () {
      * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
      * @param  {TransformObj} transforms a set of possible transformations
      * @param  {!Object={}} options a set of possible options
-     * @param  {(number|Array<number>|string)=1} options.domain if {number}, use 1–n tracks; if {Array}, use those entries; if {string}, get own property of `data.common`
+     * @param  {(number|Array<number>|string)=1} options.domain if {number}, use 1–n tracks; if {Array}, use those entries; if {string}, get own property of `data.global.common_data`
      */
     function generateFracs(transforms, options={}) {
-      Util.arrayify(options.domain, data.common).forEach(function (den) {
+      Util.arrayify(options.domain, data.global.common_data).forEach(function (den) {
         for (let num = 1; num <= den; num++) {
           let newvalue = {
             name: `${Math.round(10000 * (num/den))/100}%`
@@ -46,28 +48,28 @@ module.exports = (function () {
           }
           let value = this.values.find((v) => v.name===newvalue.name)
           if (value) {
-            if (!value.codes) { // type(codes) == Array<string>; type(code) == <string>
-              value.codes = [value.code]
-              value.code = ''
+            if (typeof value.code === 'string') {
+              value.code = [value.code]
             }
-            value.codes.push(newvalue.code)
+            value.code.push(newvalue.code)
           } else {
             this.values.push(newvalue)
           }
         }
       }, this)
     }
+
     /**
      * Automate counts.
      * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
      * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
      * @param  {TransformObj} transforms a set of possible transformations
      * @param  {!Object={}} options a set of possible options
-     * @param  {(number|Array<number>|string)=1} options.domain if {number}, use 1–n tracks; if {Array}, use those entries; if {string}, get own property of `data.common`
+     * @param  {(number|Array<number>|string)=1} options.domain if {number}, use 1–n tracks; if {Array}, use those entries; if {string}, get own property of `data.global.common_data`
      * @param  {boolean=} options.negative if true, generate negative values as well (parallelling positive values)
      */
     function generateCounts(transforms, options={}) {
-      let arr = Util.arrayify(options.domain, data.common)
+      let arr = Util.arrayify(options.domain, data.global.common_data)
       arr.forEach(function (ct) {
         this.values.push({
           name: (transforms.namefn) ? transforms.namefn.call(null, ct) : ct.toString()
@@ -85,13 +87,14 @@ module.exports = (function () {
       }, this)
       }
     }
+
     /**
      * Automate spacing.
      * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
      * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
      * @param  {TransformObj} transforms a set of possible transformations
      * @param  {!Object={}} options a set of possible options
-     * @param  {(number|Array<number>|string)=1} options.domain if {number}, use 1–n tracks; if {Array}, use those entries; if {string}, get own property of `data.common`
+     * @param  {(number|Array<number>|string)=1} options.domain if {number}, use 1–n tracks; if {Array}, use those entries; if {string}, get own property of `data.global.common_data`
      * @param  {boolean=} options.negative if true, generate negative values as well (parallelling positive values)
      */
     function generateSpaces(transforms, options={}) {
@@ -99,7 +102,7 @@ module.exports = (function () {
         0.25: 'q'
       , 0.5 : 'h'
       }
-      let arr = Util.arrayify(options.domain, data.common)
+      let arr = Util.arrayify(options.domain, data.global.common_data)
       arr.forEach(function (sp) {
         this.values.push({
           name: (transforms.namefn) ? transforms.namefn.call(null, sp) : sp.toString()
@@ -117,6 +120,7 @@ module.exports = (function () {
       }, this)
       }
     }
+
     /**
      * Automate line widths.
      * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
@@ -125,8 +129,9 @@ module.exports = (function () {
      * @param  {!Object={}} options a set of possible options
      */
     function generateLineWidths(transforms, options={}) {
-      this.values.push(...data.types.find((el) => el.name==='<line-width>').values)
+      this.values.push(...data.global.types.find((el) => el.name==='<line-width>').values)
     }
+
     /**
      * Automate line styles.
      * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
@@ -135,8 +140,9 @@ module.exports = (function () {
      * @param  {!Object={}} options a set of possible options
      */
     function generateLineStyles(transforms, options={}) {
-      this.values.push(...data.types.find((el) => el.name==='<line-style>').values)
+      this.values.push(...data.global.types.find((el) => el.name==='<line-style>').values)
     }
+
     /**
      * Automate colors.
      * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
@@ -145,8 +151,12 @@ module.exports = (function () {
      * @param  {!Object={}} options a set of possible options
      */
     function generateColors(transforms, options={}) {
-      this.values.push(...data.types.find((el) => el.name==='<color>').values)
+      this.values.push(...data.global.types.find((el) => el.name==='<color>').values)
     }
+
+    return (function () {
+      let ajv = new Ajv()
+      let isValid = ajv.compile(require('../bangs.schema.json'))
     data.properties.forEach(function (property) {
       (property.generators || []).forEach(function (generator) {
         eval(generator.name).call(property, (function () {
@@ -158,19 +168,24 @@ module.exports = (function () {
         })(), generator.options)
       })
     })
+      if (!isValid(data)) {
+        console.error(isValid.errors)
+        throw new Error('Data does not valiate against schema!')
+      }
     return data
+    })()
   })(Util.cloneDeep(require('../bangs.json')))
 
   /**
    * Generate Less from the compiled data.
-   * @param  {string} prop css property name
+   * @param  {!Object} property a CSS property JSON object
    */
-  Bangs.generateLess = function generateLess(prop) {
-    let property = Bangs.DATA.properties.find((p) => p.name===prop)
-    return [''].concat(Bangs.DATA.global.media.map((m) => m.code)).map(function queryblock(suffix) {
+  Bangs.generateLess = function generateLess(property) {
+    let supported_media = Bangs.DATA.global.media.filter((m) => !(property.non_media || []).includes(m.name))
+    return [''].concat(supported_media.map((m) => m.code)).map(function atRule(suffix) {
       let rulesets = []
       for (let value of Bangs.DATA.global.values.concat(property.values)) {
-        let codes_arr = value.codes || [value.code || Bangs.DATA.global.values.find((v) => v.name===value.name).code]
+        let codes_arr = (Array.isArray(value.code)) ? value.code : [value.code] // use this if cannot find value.code (shant, as it’s required) // || Bangs.DATA.global.values.find((v) => v.name===value.name).code
         let selector = codes_arr.map((c) => `.-${property.code}-${c}${(suffix) ? `-${suffix}` : ''}`).join(', ')
         let rules = (suffix) ? `.-${property.code}-${codes_arr[0]};`
         : (function () {

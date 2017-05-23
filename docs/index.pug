@@ -114,13 +114,7 @@ block append main
         th suffix
         th query/pseudo
         th property support
-      mixin list(item, ext)
-        -
-          let props = Bangs.DATA.properties.filter(function (el) { return el[ext] && el[ext].indexOf(item.name) >= 0 })
-          let complement = props.length >= Bangs.DATA.properties.length / 2
-          if (complement) {
-            props = Bangs.DATA.properties.filter(function (el) { return !el[ext] || el[ext].indexOf(item.name) < 0 })
-          }
+      mixin list(props, complement)
         if complement
           strong all properties except:
         ul.o-List.-mb-z
@@ -131,17 +125,31 @@ block append main
           td no suffix
           td no media query (same as #[code @media all]) or pseudo-class
           td all properties
-        each item in Bangs.DATA.global.media
+        each at_rule in Bangs.DATA.global.media
           tr
-            td: code -#{item.code}
-            td #[code= `@media ${item.query}`] (#{item.name})
-            td: +list(item, 'media')
+            td: code -#{at_rule.code}
+            td #[code= `@media ${at_rule.query}`] (#{at_rule.name})
+            td
+              -
+                let propslist = Bangs.DATA.properties.filter((prop) => !prop.non_media || !prop.non_media.includes(at_rule.name))
+                let complement = propslist.length >= Bangs.DATA.properties.length / 2
+                if (complement) {
+                  propslist = Bangs.DATA.properties.filter((prop) => propslist.every((p) => p.name!==prop.name))
+                }
+              +list(propslist, complement)
       tbody
-        each item in Bangs.DATA.global.pseudo
+        each ext in Bangs.DATA.global.pseudo
           tr
-            td: code -#{item.code}
-            td: code= item.selectors.join()
-            td: +list(item, 'pseudo')
+            td: code -#{ext.code}
+            td: code= ext.selectors.join()
+            td
+              -
+                let propslist = Bangs.DATA.properties.filter((prop) => prop.pseudo && prop.pseudo.includes(ext.name))
+                let complement = propslist.length >= Bangs.DATA.properties.length / 2
+                if (complement) {
+                  propslist = Bangs.DATA.properties.filter((prop) => propslist.every((p) => p.name!==prop.name))
+                }
+              +list(propslist, complement)
   section#trends
     h2 Trends
     p.
