@@ -98,11 +98,8 @@ block append main
                           | initial value
                   dd: div(class=classname(code).slice(1)): span(class=classname(code).slice(1)) test
                 each value in Bangs.DATA.global.values.concat(property.values)
-                  if !value.codes
-                    +item(value, value.code)
-                  else
-                    each c in value.codes
-                      +item(value, c)
+                  each c in (Array.isArray(value.code) ? value.code : [value.code])
+                    +item(value, c)
               if supported_media.length || supported_pseudos.length
                 dl.c-Property__Classes.c-Property__Classes--suffixes
                   each at_rule in supported_media

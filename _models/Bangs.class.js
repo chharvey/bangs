@@ -46,11 +46,10 @@ module.exports = (function () {
           }
           let value = this.values.find((v) => v.name===newvalue.name)
           if (value) {
-            if (!value.codes) { // type(codes) == Array<string>; type(code) == <string>
-              value.codes = [value.code]
-              value.code = ''
+            if (typeof value.code === 'string') {
+              value.code = [value.code]
             }
-            value.codes.push(newvalue.code)
+            value.code.push(newvalue.code)
           } else {
             this.values.push(newvalue)
           }
@@ -170,7 +169,7 @@ module.exports = (function () {
     return [''].concat(supported_media.map((m) => m.code)).map(function atRule(suffix) {
       let rulesets = []
       for (let value of Bangs.DATA.global.values.concat(property.values)) {
-        let codes_arr = value.codes || [value.code || Bangs.DATA.global.values.find((v) => v.name===value.name).code]
+        let codes_arr = (Array.isArray(value.code)) ? value.code : [value.code] // use this if cannot find value.code (shant, as it’s required) // || Bangs.DATA.global.values.find((v) => v.name===value.name).code
         let selector = codes_arr.map((c) => `.-${property.code}-${c}${(suffix) ? `-${suffix}` : ''}`).join(', ')
         let rules = (suffix) ? `.-${property.code}-${codes_arr[0]};`
         : (function () {

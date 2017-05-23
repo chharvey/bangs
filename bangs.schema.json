@@ -46,17 +46,20 @@
             "description": "Describes a generator function.",
             "type": "object",
             "required": ["name"],
+            "additionalProperties": false,
             "properties": {
-              "name": { "type": "string" },
+              "name": { "type": "string", "description": "Name of the generator function to be called." },
               "transforms": {
+                "description": "Defines functions that transform a pure data value into a CSS_Value type.",
                 "type": "object",
+                "additionalProperties": false,
                 "properties": {
                   "namefn": { "allOf": [{ "$ref": "#/definitions/Function" }], "description": "Determines how to compute the `name` JSON property of a CSS value." },
                   "codefn": { "allOf": [{ "$ref": "#/definitions/Function" }], "description": "Determines how to compute the `code` JSON property of a CSS value." },
                   "usefn":  { "allOf": [{ "$ref": "#/definitions/Function" }], "description": "Determines how to compute the `use`  JSON property of a CSS value." }
                 }
               },
-              "options": { "type": "object" }
+              "options": { "type": "object", "description": "A set of possible auxiliary options when calling the generator function." }
             }
           }
         },
@@ -86,12 +89,18 @@
       "additionalProperties": false,
       "properties": {
         "name": { "type": "string", "description": "Actual CSS value generated." },
-        "code": { "type": "string", "description": "Code used in Bang classname." },
         "use" : { "type": "string", "description": "Overrides any generated CSS code for this value." },
         "alt" : { "type": "string", "description": "Alternative CSS code, overridden by generated code and by 'use'." },
         "stability": {
           "allOf": [{ "$ref": "#/definitions/CSS_Property/properties/stability" }],
           "description": "Stability level of the CSS value. Overrides that of the property it belongs to."
+        },
+        "code": {
+          "description": "Code(s) used in Bang classname.",
+          "type": ["string", "array"],
+          "minLength": 1,
+          "uniqueItems": true,
+          "items": { "type": "string" }
         }
       }
     }
