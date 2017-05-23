@@ -105,6 +105,25 @@
           "uniqueItems": true,
           "items": { "allOf": [{ "$ref": "#/definitions/CSS_Value" }] }
         },
+        "types": {
+          "description": "Value types that different valuesets may share.",
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "title": "Value Type",
+            "type": "object",
+            "required": ["name", "values"],
+            "additionalProperties": false,
+            "properties": {
+              "name": { "type": "string", "description": "Name of the value type." },
+              "url" : { "type": "string", "description": "Link to an external resource." },
+              "values": {
+                "description": "List of enumerated, verbatim values for this type.",
+                "allOf": [{ "$ref": "#/definitions/CSS_Property/properties/values" }],
+              }
+            }
+          }
+        },
         "media": {
           "description": "List of media at-rules supported throughout the project.",
           "type": "array",
@@ -158,26 +177,6 @@
     "common": {
       "description": "Common values or valuesets used in many CSS properties. Eliminates duplicate code.",
       "type": "object"
-    },
-    "types": {
-      "description": "Value types that different valuesets may share.",
-      "type": "array",
-      "uniqueItems": true,
-      "items": {
-        "title": "Value Type",
-        "type": "object",
-        "required": ["name", "values"],
-        "properties": {
-          "name": { "type": "string", "description": "Name of the value type." },
-          "url" : { "type": "string", "description": "Link to an external resource." },
-          "values": {
-            "description": "List of enumerated, verbatim values for this type.",
-            "type": "array",
-            "uniqueItems": true,
-            "items": { "allOf": [{ "$ref": "#/definitions/CSS_Value" }] }
-          }
-        }
-      }
     },
     "properties": {
       "description": "List of all CSS properties supported in the project.",

@@ -125,7 +125,7 @@ module.exports = (function () {
      * @param  {!Object={}} options a set of possible options
      */
     function generateLineWidths(transforms, options={}) {
-      this.values.push(...data.types.find((el) => el.name==='<line-width>').values)
+      this.values.push(...data.global.types.find((el) => el.name==='<line-width>').values)
     }
     /**
      * Automate line styles.
@@ -135,7 +135,7 @@ module.exports = (function () {
      * @param  {!Object={}} options a set of possible options
      */
     function generateLineStyles(transforms, options={}) {
-      this.values.push(...data.types.find((el) => el.name==='<line-style>').values)
+      this.values.push(...data.global.types.find((el) => el.name==='<line-style>').values)
     }
     /**
      * Automate colors.
@@ -145,7 +145,7 @@ module.exports = (function () {
      * @param  {!Object={}} options a set of possible options
      */
     function generateColors(transforms, options={}) {
-      this.values.push(...data.types.find((el) => el.name==='<color>').values)
+      this.values.push(...data.global.types.find((el) => el.name==='<color>').values)
     }
     data.properties.forEach(function (property) {
       (property.generators || []).forEach(function (generator) {
