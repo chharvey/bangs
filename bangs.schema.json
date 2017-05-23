@@ -97,6 +97,7 @@
     }
   },
   "type": "object",
+  "required": ["global", "properties"],
   "additionalProperties": false,
   "properties": {
     "global": {
@@ -126,6 +127,10 @@
               }
             }
           }
+        },
+        "common_data": {
+          "description": "Common values or valuesets used in many CSS properties. Eliminates duplicate code.",
+          "type": "object"
         },
         "media": {
           "description": "List of media at-rules supported throughout the project.",
@@ -176,10 +181,6 @@
           }
         }
       }
-    },
-    "common": {
-      "description": "Common values or valuesets used in many CSS properties. Eliminates duplicate code.",
-      "type": "object"
     },
     "properties": {
       "description": "List of all CSS properties supported in the project.",

@@ -34,10 +34,10 @@ module.exports = (function () {
      * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
      * @param  {TransformObj} transforms a set of possible transformations
      * @param  {!Object={}} options a set of possible options
-     * @param  {(number|Array<number>|string)=1} options.domain if {number}, use 1–n tracks; if {Array}, use those entries; if {string}, get own property of `data.common`
+     * @param  {(number|Array<number>|string)=1} options.domain if {number}, use 1–n tracks; if {Array}, use those entries; if {string}, get own property of `data.global.common_data`
      */
     function generateFracs(transforms, options={}) {
-      Util.arrayify(options.domain, data.common).forEach(function (den) {
+      Util.arrayify(options.domain, data.global.common_data).forEach(function (den) {
         for (let num = 1; num <= den; num++) {
           let newvalue = {
             name: `${Math.round(10000 * (num/den))/100}%`
@@ -63,11 +63,11 @@ module.exports = (function () {
      * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
      * @param  {TransformObj} transforms a set of possible transformations
      * @param  {!Object={}} options a set of possible options
-     * @param  {(number|Array<number>|string)=1} options.domain if {number}, use 1–n tracks; if {Array}, use those entries; if {string}, get own property of `data.common`
+     * @param  {(number|Array<number>|string)=1} options.domain if {number}, use 1–n tracks; if {Array}, use those entries; if {string}, get own property of `data.global.common_data`
      * @param  {boolean=} options.negative if true, generate negative values as well (parallelling positive values)
      */
     function generateCounts(transforms, options={}) {
-      let arr = Util.arrayify(options.domain, data.common)
+      let arr = Util.arrayify(options.domain, data.global.common_data)
       arr.forEach(function (ct) {
         this.values.push({
           name: (transforms.namefn) ? transforms.namefn.call(null, ct) : ct.toString()
@@ -91,7 +91,7 @@ module.exports = (function () {
      * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
      * @param  {TransformObj} transforms a set of possible transformations
      * @param  {!Object={}} options a set of possible options
-     * @param  {(number|Array<number>|string)=1} options.domain if {number}, use 1–n tracks; if {Array}, use those entries; if {string}, get own property of `data.common`
+     * @param  {(number|Array<number>|string)=1} options.domain if {number}, use 1–n tracks; if {Array}, use those entries; if {string}, get own property of `data.global.common_data`
      * @param  {boolean=} options.negative if true, generate negative values as well (parallelling positive values)
      */
     function generateSpaces(transforms, options={}) {
@@ -99,7 +99,7 @@ module.exports = (function () {
         0.25: 'q'
       , 0.5 : 'h'
       }
-      let arr = Util.arrayify(options.domain, data.common)
+      let arr = Util.arrayify(options.domain, data.global.common_data)
       arr.forEach(function (sp) {
         this.values.push({
           name: (transforms.namefn) ? transforms.namefn.call(null, sp) : sp.toString()
