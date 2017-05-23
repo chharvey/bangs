@@ -17,6 +17,7 @@
       "description": "Describes a CSS property.",
       "type": "object",
       "required": ["name", "code", "summary", "url", "inherited", "initial", "stability", "values"],
+      "additionalProperties": false,
       "properties": {
         "name"     : { "type": "string" , "description": "Actual CSS property name generated." },
         "code"     : { "type": "string" , "description": "Code used in Bang classname." },
@@ -63,15 +64,11 @@
           "allOf": [{ "$ref": "#/definitions/Function" }],
           "description": "Provides a fallback mixin for browser vendor prefixes."
         },
-        "media": {
-          "description": "List of media queries this CSS property supports.",
+        "non_media": {
+          "description": "Lists exceptions to supported media at-rules.",
           "type": "array",
           "uniqueItems": true,
           "items": { "type": "string" }
-        },
-        "non_media": {
-          "description": "Lists exceptions to supported media queries.",
-          "allOf": [{ "$ref": "#/definitions/CSS_Property/properties/media" }]
         },
         "pseudo": {
           "description": "List of pseudo-classes this CSS property supports.",
@@ -109,14 +106,15 @@
           "items": { "allOf": [{ "$ref": "#/definitions/CSS_Value" }] }
         },
         "media": {
-          "description": "List of media queries supported throughout the project. Rename to 'atrule'",
+          "description": "List of media at-rules supported throughout the project.",
           "type": "array",
           "uniqueItems": true,
           "items": {
+            "title": "Media At-Rule",
             "type": "object",
             "required": ["name", "code", "query"],
             "properties": {
-              "name" : { "type": "string", "description": "Identifier/keyword for the query." },
+              "name" : { "type": "string", "description": "Identifier/keyword for the at-rule." },
               "code" : { "type": "string", "description": "Code used in Bang classname." },
               "query": { "type": "string", "description": "The query for the at-rule." }
             }
