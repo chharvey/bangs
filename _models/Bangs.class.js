@@ -163,10 +163,9 @@ module.exports = (function () {
 
   /**
    * Generate Less from the compiled data.
-   * @param  {string} prop css property name
+   * @param  {!Object} property a CSS property JSON object
    */
-  Bangs.generateLess = function generateLess(prop) {
-    let property = Bangs.DATA.properties.find((p) => p.name===prop)
+  Bangs.generateLess = function generateLess(property) {
     let supported_media = Bangs.DATA.global.media.filter((m) => !(property.non_media || []).includes(m.name))
     return [''].concat(supported_media.map((m) => m.code)).map(function atRule(suffix) {
       let rulesets = []
