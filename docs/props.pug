@@ -66,8 +66,15 @@ block append main
           - let property = Bangs.DATA.properties.find((p) => p.name===propertypage.name())
           if property
             section.c-Property(id=property.name)
-              - let supported_media = Bangs.DATA.global.media.filter((m) => !(property.non_media || []).includes(m.name))
-              - let supported_pseudos = Bangs.DATA.global.pseudo.filter((p) => (property.pseudo || []).includes(p.name))
+              -
+                let supported_media = Bangs.DATA.global.media.filter((m) => !(property.non_media || []).includes(m.name))
+                let supported_pseudos = Bangs.DATA.global.pseudo.filter((p) => (property.pseudo || []).includes(p.name))
+              mixin codeTerm(str, num)
+                dt
+                  code= str
+                  if num >= 0
+                    - let stab = Bangs.DATA.global.stability_levels[num]
+                    small.c-Label(class=`t-stability-${stab.name}` title=stab.description): b= stab.name
               h4.-fz-giga
                 = property.name
                 include ../node_modules/xmeter/_views/_c-Permalink.view.pug
@@ -82,11 +89,7 @@ block append main
               dl.c-Property__Classes
                 - function classname(val) { return `.-${property.code}-${val}` }
                 mixin item(value, code)
-                  dt
-                    code= classname(code)
-                    if value.stability >= 0
-                      - let stab = Bangs.DATA.global.stability_levels[value.stability]
-                      small.c-Label(class=`t-stability-${stab.name}` title=stab.description): b= stab.name
+                  +codeTerm(classname(code), value.stability)
                   dd
                     code= value.name
                     if value.name === property.initial
@@ -102,15 +105,12 @@ block append main
                       +item(value, c)
               if supported_media.length || supported_pseudos.length
                 dl.c-Property__Classes.c-Property__Classes--suffixes
-                  each query in supported_media
-                    dt
-                      code= `-${query.code}`
-                      if ['screen','print'].includes(query.name)
-                        small.c-Label(class="t-stability-deprecated"): b deprecated
-                    dd: code= query.name
-                  each pseudo in supported_pseudos
-                    dt: code= `-${pseudo.code}`
-                    dd: code= pseudo.name
+                  each at_rule in supported_media
+                    +codeTerm(`-${at_rule.code}`, at_rule.stability)
+                    dd: code= at_rule.name
+                  each ext in supported_pseudos
+                    +codeTerm(`-${ext.code}`, ext.stability)
+                    dd: code= ext.name
           else
             section.c-Property
               h4.-fz-giga #{propertypage.name()} Not Found

@@ -168,7 +168,7 @@ module.exports = (function () {
   Bangs.generateLess = function generateLess(prop) {
     let property = Bangs.DATA.properties.find((p) => p.name===prop)
     let supported_media = Bangs.DATA.global.media.filter((m) => !(property.non_media || []).includes(m.name))
-    return [''].concat(supported_media.map((m) => m.code)).map(function queryblock(suffix) {
+    return [''].concat(supported_media.map((m) => m.code)).map(function atRule(suffix) {
       let rulesets = []
       for (let value of Bangs.DATA.global.values.concat(property.values)) {
         let codes_arr = value.codes || [value.code || Bangs.DATA.global.values.find((v) => v.name===value.name).code]

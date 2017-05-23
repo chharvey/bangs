@@ -6,8 +6,8 @@
     , { "name": "unset"  , "code": "u" }
     ]
   , "media": [
-      { "name": "screen"  , "code": "s" , "query": "screen" }
-    , { "name": "print"   , "code": "p" , "query": "print" }
+      { "name": "screen"  , "code": "s" , "query": "screen", "stability": 1 }
+    , { "name": "print"   , "code": "p" , "query": "print" , "stability": 1 }
     , { "name": "small+"  , "code": "sK", "query": "screen  and (min-width: 30em)" }
     , { "name": "medium+" , "code": "sM", "query": "screen  and (min-width: 45em)" }
     , { "name": "large+"  , "code": "sG", "query": "screen  and (min-width: 60em)" }
