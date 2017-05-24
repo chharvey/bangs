@@ -1347,7 +1347,7 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration"
     , "inherited": false
     , "initial"  : "none"
-    , "stability": 1
+    , "stability": 2
     , "values"   : [
         { "name": "none"        , "code": "n" }
       , { "name": "underline"   , "code": "ul" }

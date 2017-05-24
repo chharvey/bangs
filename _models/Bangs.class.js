@@ -182,51 +182,90 @@ module.exports = (function () {
    */
   Bangs.generateLess = function generateLess(property) {
     let supported_media = Bangs.DATA.global.media.filter((m) => !(property.non_media || []).includes(m.name))
-    return [''].concat(supported_media.map((m) => m.code)).map(function atRule(suffix) {
+    let supported_pseudos = Bangs.DATA.global.pseudo.filter((p) => (property.pseudo || []).includes(p.name))
+    /**
+     * Output multiple CSS rulesets corresponding to a set of values.
+     * @return {string} multiple rulesets concatenated into a string
+     */
+    function output() {
       let rulesets = []
-      for (let value of Bangs.DATA.global.values.concat(property.values)) {
+      Bangs.DATA.global.values.concat(property.values).forEach(function (value) {
         let codes_arr = (Array.isArray(value.code)) ? value.code : [value.code] // use this if cannot find value.code (shant, as it’s required) // || Bangs.DATA.global.values.find((v) => v.name===value.name).code
-        let selector = codes_arr.map((c) => `.-${property.code}-${c}${(suffix) ? `-${suffix}` : ''}`).join(', ')
-        let rules = (suffix) ? `.-${property.code}-${codes_arr[0]};`
-        : (function () {
-            /**
-             * Return a CSS/Less declaration string.
-             * The string will be one of the following forms:
-             * - `property: value`  - if the property has no vendor fallback
-             * - the result of calling the property’s vendor fallback function, with `val` as the argument
-             * @param  {string} val a string representing a CSS value
-             * @return {string}     a string representing a CSS declaration
-             */
-            function declaration(val) {
-              return (property.fallback) ?
-                new Function(...property.fallback).call(null, val) : `${property.name}: ${val}`
-            }
-            let global_fallback = ({
-              'initial': (function () {
-                if (!property.initial) return ''
-                let initial_val = property.values.find((v) => v.name===property.initial)
-                return (initial_val) ? `.-${property.code}-${initial_val.code};` : `${declaration(property.initial)} !important;`
-              })()
-            , 'unset': (function () {
-                let val_code = Bangs.DATA.global.values.find((v) => v.name===(
-                  (property.inherited) ? 'inherit' : 'initial'
-                )).code
-                return `.-${property.code}-${val_code};`
-              })()
-            })[value.name]
-            return (
-              ((global_fallback) ? global_fallback + ' ' : '')
-            + `${(value.use) ? value.use : declaration(value.name)} !important;`
-            )
-          })()
+        let selector = codes_arr.map((c) => `.-${property.code}-${c}`).join(', ')
+        let rules = (function () {
+          /**
+           * Return a CSS/Less declaration string.
+           * The string will be one of the following forms:
+           * - `property: value`  - if the property has no vendor fallback
+           * - the result of calling the property’s vendor fallback function, with `val` as the argument
+           * @param  {string} val a string representing a CSS value
+           * @return {string}     a string representing a CSS declaration
+           */
+          function declaration(val) {
+            return (property.fallback) ?
+              new Function(...property.fallback).call(null, val) : `${property.name}: ${val}`
+          }
+          let global_fallback = ({
+            // TODO remove `initial` fallback once widely supported
+            'initial': (function () {
+              let initial_val = property.values.find((v) => v.name===property.initial)
+              return (initial_val) ? `.-${property.code}-${initial_val.code};` : `${declaration(property.initial)} !important;`
+            })()
+            // TODO remove `unset` fallback once widely supported
+          , 'unset': (function () {
+              let val_code = Bangs.DATA.global.values.find((v) => v.name===(
+                (property.inherited) ? 'inherit' : 'initial'
+              )).code
+              return `.-${property.code}-${val_code};`
+            })()
+          })[value.name]
+          return (
+            ((global_fallback) ? global_fallback + ' ' : '')
+          + `${(value.use) ? value.use : declaration(value.name)} !important;`
+          )
+        })()
         rulesets.push(`${selector} { ${rules} }`)
-      }
-      return (suffix) ? `
+      })
+      return rulesets.join('\n')
+    }
+    /**
+     * Similar to `output()`, but with a suffix for an at-rule.
+     * @param  {string} suffix suffix appended to classname
+     * @return {string}        multiple rulesets wrapped in an at-rule block
+     */
+    function atRule(suffix) {
+      let rulesets = []
+      Bangs.DATA.global.values.concat(property.values).forEach(function (value) {
+        let codes_arr = (Array.isArray(value.code)) ? value.code : [value.code]
+        let selector = codes_arr.map((c) => `.-${property.code}-${c}-${suffix}`).join(', ')
+        let rules = `.-${property.code}-${codes_arr[0]};`
+        rulesets.push(`${selector} { ${rules} }`)
+      })
+      return `
         @media ${Bangs.DATA.global.media.find((m) => m.code===suffix).query} {
           ${rulesets.join('\n')}
         }
-      ` : rulesets.join('\n')
-    }).join('')
+      `
+    }
+    /**
+     * Similar to `output()`, but with a suffix for a pseudo-class.
+     * @param  {string} suffix suffix appended to classname
+     * @return {string}        multiple rulesets in a string
+     */
+    function pseudoClass(suffix) {
+      let rulesets = []
+      Bangs.DATA.global.values.concat(property.values).forEach(function (value) {
+        let codes_arr = (Array.isArray(value.code)) ? value.code : [value.code]
+        let selector = codes_arr.map((c) => `.-${property.code}-${c}-${suffix}`).join(', ')
+        let less_parent = Bangs.DATA.global.pseudo.find((p) => p.code===suffix).selectors.map((s) => `&${s}`).join(', ')
+        let rules = `.-${property.code}-${codes_arr[0]};`
+        rulesets.push(`${selector} { ${less_parent} { ${rules} } }`)
+      })
+      return rulesets.join('\n')
+    }
+    return output()
+      + supported_media.map((m) => m.code).map(atRule).join('')
+      + supported_pseudos.map((p) => p.code).map(pseudoClass).join('')
   }
 
   return Bangs
