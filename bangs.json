@@ -1304,7 +1304,7 @@
     , "summary"  : "Specifies how quotation marks should be rendered."
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/quotes"
     , "inherited": true
-    , "initial"  : "'“' '”'"
+    , "initial"  : "'\\“' '\\”'"
     , "stability": 2
     , "values"   : [
         { "name": "none", "code": "n"  }
@@ -1326,10 +1326,10 @@
   , {
       "name"     : "text-align"
     , "code"     : "ta"
-    , "summary"  : "Horizontally aligns text in a block."
+    , "summary"  : "Aligns inline content in a block."
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/text-align"
     , "inherited": true
-    , "initial"  : "left"
+    , "initial"  : "start"
     , "stability": 3
     , "values"   : [
         { "name": "left"   , "code": "l" }
@@ -1430,7 +1430,7 @@
   , {
       "name"     : "vertical-align"
     , "code"     : "va"
-    , "summary"  : "Vertically aligns text in an inline or table-cell box."
+    , "summary"  : "Vertically aligns an inline or table-cell box."
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align"
     , "inherited": false
     , "initial"  : "baseline"
