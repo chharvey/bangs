@@ -122,36 +122,13 @@ module.exports = (function () {
     }
 
     /**
-     * Automate line widths.
-     * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
-     * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
+     * Add values from a Value Type to a property.
      * @param  {TransformObj} transforms a set of possible transformations
      * @param  {!Object={}} options a set of possible options
+     * @param  {string=} options.name the name of the value type to inherit
      */
-    function generateLineWidths(transforms, options={}) {
-      this.values.push(...data.global.types.find((el) => el.name==='<line-width>').values)
-    }
-
-    /**
-     * Automate line styles.
-     * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
-     * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
-     * @param  {TransformObj} transforms a set of possible transformations
-     * @param  {!Object={}} options a set of possible options
-     */
-    function generateLineStyles(transforms, options={}) {
-      this.values.push(...data.global.types.find((el) => el.name==='<line-style>').values)
-    }
-
-    /**
-     * Automate colors.
-     * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
-     * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
-     * @param  {TransformObj} transforms a set of possible transformations
-     * @param  {!Object={}} options a set of possible options
-     */
-    function generateColors(transforms, options={}) {
-      this.values.push(...data.global.types.find((el) => el.name==='<color>').values)
+    function importValueType(transforms, options={}) {
+      this.values.push(...data.global.types.find((el) => el.name===options.name).values)
     }
 
     return (function () {
@@ -160,11 +137,11 @@ module.exports = (function () {
     data.properties.forEach(function (property) {
       (property.generators || []).forEach(function (generator) {
         eval(generator.name).call(property, (function () {
-          let t = {}
+          let transforms = {}
           ;['namefn','codefn','usefn'].forEach(function (key) {
-            t[key] = (generator.transforms && generator.transforms[key]) ? new Function(...generator.transforms[key]) : null
+            transforms[key] = (generator.transforms && generator.transforms[key]) ? new Function(...generator.transforms[key]) : null
           })
-          return t
+          return transforms
         })(), generator.options)
       })
     })

@@ -177,7 +177,10 @@
     , "values"   : [
       ]
     , "generators": [
-        { "name": "generateColors" }
+        {
+          "name": "importValueType"
+        , "options": { "name": "<color>" }
+        }
       ]
     , "pseudo": [
         "hover"
@@ -286,7 +289,10 @@
     , "values"   : [
       ]
     , "generators": [
-        { "name": "generateColors" }
+        {
+          "name": "importValueType"
+        , "options": { "name": "<color>" }
+        }
       ]
     }
   , {
@@ -317,7 +323,10 @@
     , "values"   : [
       ]
     , "generators": [
-        { "name": "generateLineStyles" }
+        {
+          "name": "importValueType"
+        , "options": { "name": "<line-style>" }
+        }
       ]
     }
   , {
@@ -332,7 +341,10 @@
         { "name": "0", "code": "z" }
       ]
     , "generators": [
-        { "name": "generateLineWidths" }
+        {
+          "name": "importValueType"
+        , "options": { "name": "<line-width>" }
+        }
       ]
     }
   , {
@@ -399,7 +411,10 @@
     , "values"   : [
       ]
     , "generators": [
-        { "name": "generateColors" }
+        {
+          "name": "importValueType"
+        , "options": { "name": "<color>" }
+        }
       ]
     , "pseudo": [
         "hover"
@@ -469,7 +484,10 @@
     , "values"   : [
       ]
     , "generators": [
-        { "name": "generateColors" }
+        {
+          "name": "importValueType"
+        , "options": { "name": "<color>" }
+        }
       ]
     , "fallback": ["val", "return `.column-rule-color(${val})`"]
     }
@@ -484,7 +502,10 @@
     , "values"   : [
       ]
     , "generators": [
-        { "name": "generateLineStyles" }
+        {
+          "name": "importValueType"
+        , "options": { "name": "<line-style>" }
+        }
       ]
     , "fallback": ["val", "return `.column-rule-style(${val})`"]
     }
@@ -500,7 +521,10 @@
         { "name": "0", "code": "z" }
       ]
     , "generators": [
-        { "name": "generateLineWidths" }
+        {
+          "name": "importValueType"
+        , "options": { "name": "<line-width>" }
+        }
       ]
     , "fallback": ["val", "return `.column-rule-width(${val})`"]
     }
