@@ -1132,31 +1132,6 @@
       ]
     }
   , {
-      "name"     : "overflow-wrap"
-    , "code"     : "ow"
-    , "summary"  : "Specifies whether words can be broken and wrapped to prevent overflow."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap"
-    , "inherited": true
-    , "initial"  : "normal"
-    , "stability": 1
-    , "values"   : [
-        { "name": "normal"    , "code": "n" }
-      , { "name": "break-word", "code": "b" }
-      ]
-    , "non_media": [
-        "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
-    }
-  , {
       "name"     : "padding"
     , "code"     : "p"
     , "summary"  : "Sets the padding space on an element."

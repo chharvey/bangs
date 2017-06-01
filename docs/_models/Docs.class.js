@@ -90,7 +90,6 @@ module.exports = (function () {
         .add(new Page({ name: 'line-height'   , url: '/docs/props.html#line-height' }))
         .add(new Page({ name: 'text-transform', url: '/docs/props.html#text-transform' }))
         .add(new Page({ name: 'white-space'   , url: '/docs/props.html#white-space' }))
-        .add(new Page({ name: 'overflow-wrap' , url: '/docs/props.html#overflow-wrap' }))
         .add(new Page({ name: 'text-align'    , url: '/docs/props.html#text-align' }))
         .add(new Page({ name: 'text-justify'  , url: '/docs/props.html#text-justify' }))
         .add(new Page({ name: 'vertical-align', url: '/docs/props.html#vertical-align' }))
