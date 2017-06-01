@@ -38,8 +38,6 @@ module.exports = (function () {
         .add(new Page({ name: 'column-rule-color', url: '/docs/props.html#column-rule-color' }))
         .add(new Page({ name: 'column-fill'      , url: '/docs/props.html#column-fill' }))
         .add(new Page({ name: 'column-span'      , url: '/docs/props.html#column-span' }))
-        .add(new Page({ name: 'page-break-before', url: '/docs/props.html#page-break-before' }))
-        .add(new Page({ name: 'page-break-after' , url: '/docs/props.html#page-break-after' }))
         .add(new Page({ name: 'flex-direction'   , url: '/docs/props.html#flex-direction' }))
         .add(new Page({ name: 'flex-wrap'        , url: '/docs/props.html#flex-wrap' }))
         .add(new Page({ name: 'flex'             , url: '/docs/props.html#flex' }))
