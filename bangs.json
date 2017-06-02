@@ -93,7 +93,6 @@
       , { "name": "space-around" , "code": "sa" }
       , { "name": "space-evenly" , "code": "sv" }
       ]
-    , "fallback": ["val", "return `.align-content(${val})`"]
     }
   , {
       "name"     : "align-items"
@@ -114,7 +113,6 @@
       , { "name": "self-end"     , "code": "se" }
       , { "name": "stretch"      , "code": "st" }
       ]
-    , "fallback": ["val", "return `.align-items(${val})`"]
     }
   , {
       "name"     : "align-self"
@@ -136,7 +134,6 @@
       , { "name": "self-end"     , "code": "se" }
       , { "name": "stretch"      , "code": "st" }
       ]
-    , "fallback": ["val", "return `.align-self(${val})`"]
     }
   , {
       "name"     : "background-attachment"
