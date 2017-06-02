@@ -63,10 +63,6 @@
             }
           }
         },
-        "fallback": {
-          "allOf": [{ "$ref": "#/definitions/Function" }],
-          "description": "Provides a fallback mixin for browser vendor prefixes."
-        },
         "non_media": {
           "description": "Lists exceptions to supported media at-rules.",
           "type": "array",

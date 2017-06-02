@@ -178,10 +178,7 @@ module.exports = (function () {
            * @param  {string} val a string representing a CSS value
            * @return {string}     a string representing a CSS declaration
            */
-          function declaration(val) {
-            return (property.fallback) ?
-              new Function(...property.fallback).call(null, val) : `${property.name}: ${val}`
-          }
+          function declaration(val) { return `${property.name}: ${val}` }
           let global_fallback = ({
             // TODO remove `initial` fallback once widely supported
             'initial': (function () {
