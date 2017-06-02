@@ -845,7 +845,6 @@
       , { "name": "space-around" , "code": "sa" }
       , { "name": "space-evenly" , "code": "sv" }
       ]
-    , "fallback": ["val", "return `.justify-content(${val})`"]
     }
   , {
       "name"     : "justify-items"
@@ -866,7 +865,6 @@
       , { "name": "self-end"     , "code": "se" }
       , { "name": "stretch"      , "code": "st" }
       ]
-    , "fallback": ["val", "return `.justify-items(${val})`"]
     }
   , {
       "name"     : "justify-self"
@@ -888,7 +886,6 @@
       , { "name": "self-end"     , "code": "se" }
       , { "name": "stretch"      , "code": "st" }
       ]
-    , "fallback": ["val", "return `.justify-self(${val})`"]
     }
   , {
       "name"     : "left"
