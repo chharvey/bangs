@@ -185,6 +185,7 @@ module.exports = (function () {
           let global_fallback = ({
             // TODO remove `initial` fallback once widely supported
             'initial': (function () {
+              if (!property.initial) return '' // if the inital value is not specified by CSS specs
               let initial_val = property.values.find((v) => v.name===property.initial)
               return (initial_val) ? `.-${property.code}-${initial_val.code};` : `${declaration(property.initial)} !important;`
             })()
