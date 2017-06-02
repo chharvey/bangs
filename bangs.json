@@ -750,7 +750,6 @@
         , "transforms": { "namefn": ["length", "return `${length}rem`"] }
         }
       ]
-    , "fallback": ["val", "return `.grid-column-gap(${val})`"]
     }
   , {
       "name"     : "grid-row-gap"
@@ -772,7 +771,6 @@
           }
         }
       ]
-    , "fallback": ["val", "return `.grid-row-gap(${val})`"]
     }
   , {
       "name"     : "grid-template-columns"
@@ -792,7 +790,6 @@
         , "options": { "domain": "tracks" }
         }
       ]
-    , "fallback": ["val", "return `.grid-template-columns(${val})`"]
     }
   , {
       "name"     : "grid-template-rows"
@@ -812,7 +809,6 @@
         , "options": { "domain": "tracks" }
         }
       ]
-    , "fallback": ["val", "return `.grid-template-rows(${val})`"]
     }
   , {
       "name"     : "justify-content"
