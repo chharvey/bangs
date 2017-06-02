@@ -155,24 +155,34 @@ module.exports = (function () {
     }
 
     return (function () {
-      let ajv = new Ajv()
-      let isValid = ajv.compile(require('../bangs.schema.json'))
-    data.properties.forEach(function (property) {
-      (property.generators || []).forEach(function (generator) {
-        eval(generator.name).call(property, (function () {
-          let t = {}
-          ;['namefn','codefn','usefn'].forEach(function (key) {
-            t[key] = (generator.transforms && generator.transforms[key]) ? new Function(...generator.transforms[key]) : null
-          })
-          return t
-        })(), generator.options)
+      data.properties.forEach(function (property) {
+        (property.generators || []).forEach(function (generator) {
+          eval(generator.name).call(property, (function () {
+            let t = {}
+            ;['namefn','codefn','usefn'].forEach(function (key) {
+              t[key] = (generator.transforms && generator.transforms[key]) ? new Function(...generator.transforms[key]) : null
+            })
+            return t
+          })(), generator.options)
+        })
       })
-    })
-      if (!isValid(data)) {
-        console.error(isValid.errors)
-        throw new Error('Data does not valiate against schema!')
-      }
-    return data
+      ;(function () {
+        let ajv = new Ajv()
+        let is_schema_valid = ajv.validateSchema(require('../bangs.schema.json'))
+        if (!is_schema_valid) {
+          console.error(ajv.errors)
+          throw new Error('Schema is not a valid schema!')
+        }
+      })()
+      ;(function () {
+        let ajv = new Ajv()
+        let is_data_valid = ajv.validate(require('../bangs.schema.json'), data)
+        if (!is_data_valid) {
+          console.error(ajv.errors)
+          throw new Error('Data does not valiate against schema!')
+        }
+      })()
+      return data
     })()
   })(Util.cloneDeep(require('../bangs.json')))
 
@@ -208,6 +218,7 @@ module.exports = (function () {
           let global_fallback = ({
             // TODO remove `initial` fallback once widely supported
             'initial': (function () {
+              if (!property.initial) return '' // if the inital value is not specified by CSS specs
               let initial_val = property.values.find((v) => v.name===property.initial)
               return (initial_val) ? `.-${property.code}-${initial_val.code};` : `${declaration(property.initial)} !important;`
             })()

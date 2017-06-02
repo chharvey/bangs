@@ -454,6 +454,7 @@
         {
           "name": "generateSpaces"
         , "transforms": { "namefn": ["length", "return `${length}rem`"] }
+        , "options": { "domain": "spacing" }
         }
       ]
     , "fallback": ["val", "return `.column-gap(${val})`"]
@@ -738,6 +739,7 @@
         {
           "name": "generateSpaces"
         , "transforms": { "namefn": ["length", "return `${length}rem`"] }
+        , "options": { "domain": "spacing" }
         }
       ]
     , "fallback": ["val", "return `.grid-column-gap(${val})`"]
@@ -760,6 +762,7 @@
             "namefn": ["length", "return `${length}vru`"]
           , "usefn" : ["length", "return `.grid-row-gap(calc(${length} ~'*' var(--vru, @g-vru)))`"]
           }
+        , "options": { "domain": "spacing" }
         }
       ]
     , "fallback": ["val", "return `.grid-row-gap(${val})`"]
