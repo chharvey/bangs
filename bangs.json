@@ -434,7 +434,6 @@
         , "options": { "domain": "tracks" }
         }
       ]
-    , "fallback": ["val", "return `.column-count(${val})`"]
     }
   , {
       "name"     : "column-fill"
@@ -448,7 +447,6 @@
         { "name": "balance", "code": "b" }
       , { "name": "auto"   , "code": "a" }
       ]
-    , "fallback": ["val", "return `.column-fill(${val})`"]
     }
   , {
       "name"     : "column-gap"
@@ -468,7 +466,6 @@
         , "transforms": { "namefn": ["length", "return `${length}rem`"] }
         }
       ]
-    , "fallback": ["val", "return `.column-gap(${val})`"]
     }
   , {
       "name"     : "column-rule-color"
@@ -486,7 +483,6 @@
         , "options": { "name": "<color>" }
         }
       ]
-    , "fallback": ["val", "return `.column-rule-color(${val})`"]
     }
   , {
       "name"     : "column-rule-style"
@@ -504,7 +500,6 @@
         , "options": { "name": "<line-style>" }
         }
       ]
-    , "fallback": ["val", "return `.column-rule-style(${val})`"]
     }
   , {
       "name"     : "column-rule-width"
@@ -523,7 +518,6 @@
         , "options": { "name": "<line-width>" }
         }
       ]
-    , "fallback": ["val", "return `.column-rule-width(${val})`"]
     }
   , {
       "name"     : "column-span"
@@ -537,7 +531,6 @@
         { "name": "none", "code": "n" }
       , { "name": "all" , "code": "a" }
       ]
-    , "fallback": ["val", "return `.column-span(${val})`"]
     }
   , {
       "name"     : "column-width"
@@ -551,7 +544,6 @@
         { "name": "auto", "code": "a" }
       , { "name": "0"   , "code": "z" }
       ]
-    , "fallback": ["val", "return `.column-width(${val})`"]
     }
   , {
       "name"     : "display"
