@@ -134,22 +134,22 @@ module.exports = (function () {
     return (function () {
       let ajv = new Ajv()
       let isValid = ajv.compile(require('../bangs.schema.json'))
-    data.properties.forEach(function (property) {
-      (property.generators || []).forEach(function (generator) {
-        eval(generator.name).call(property, (function () {
-          let transforms = {}
-          ;['namefn','codefn','usefn'].forEach(function (key) {
-            transforms[key] = (generator.transforms && generator.transforms[key]) ? new Function(...generator.transforms[key]) : null
-          })
-          return transforms
-        })(), generator.options)
+      data.properties.forEach(function (property) {
+        (property.generators || []).forEach(function (generator) {
+          eval(generator.name).call(property, (function () {
+            let transforms = {}
+            ;['namefn','codefn','usefn'].forEach(function (key) {
+              transforms[key] = (generator.transforms && generator.transforms[key]) ? new Function(...generator.transforms[key]) : null
+            })
+            return transforms
+          })(), generator.options)
+        })
       })
-    })
       if (!isValid(data)) {
         console.error(isValid.errors)
         throw new Error('Data does not valiate against schema!')
       }
-    return data
+      return data
     })()
   })(Util.cloneDeep(require('../bangs.json')))
 
