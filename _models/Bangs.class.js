@@ -178,13 +178,11 @@ module.exports = (function () {
            * @param  {string} val a string representing a CSS value
            * @return {string}     a string representing a CSS declaration
            */
-          function declaration(val) {
-            return (property.fallback) ?
-              new Function(...property.fallback).call(null, val) : `${property.name}: ${val}`
-          }
+          function declaration(val) { return `${property.name}: ${val}` }
           let global_fallback = ({
             // TODO remove `initial` fallback once widely supported
             'initial': (function () {
+              if (!property.initial) return '' // if the inital value is not specified by CSS specs
               let initial_val = property.values.find((v) => v.name===property.initial)
               return (initial_val) ? `.-${property.code}-${initial_val.code};` : `${declaration(property.initial)} !important;`
             })()

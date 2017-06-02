@@ -19,12 +19,12 @@
       "required": ["name", "code", "summary", "url", "inherited", "initial", "stability", "values"],
       "additionalProperties": false,
       "properties": {
-        "name"     : { "type": "string" , "description": "Actual CSS property name generated." },
-        "code"     : { "type": "string" , "description": "Code used in Bang classname." },
-        "summary"  : { "type": "string" , "description": "Summary of the CSS property. Used in documentation." },
-        "url"      : { "type": "string" , "description": "Link to an external resource." },
-        "inherited": { "type": "boolean", "description": "Whether the CSS property is inherited through the cascade." },
+        "name"     : { "type": "string" , "minLength": 1, "description": "Actual CSS property name generated." },
+        "code"     : { "type": "string" , "minLength": 1, "description": "Code used in Bang classname." },
+        "summary"  : { "type": "string" , "minLength": 1, "description": "Summary of the CSS property. Used in documentation." },
+        "url"      : { "type": "string" , "minLength": 1, "description": "Link to an external resource." },
         "initial"  : { "type": "string" , "description": "The specified initial value of the CSS property." },
+        "inherited": { "type": "boolean", "description": "Whether the CSS property is inherited through the cascade." },
         "stability": {
           "description": "Stability level of the entire CSS property, and any values thereof unless explicitly overridden.",
           "type": "integer",
@@ -62,10 +62,6 @@
               "options": { "type": "object", "description": "A set of possible auxiliary options when calling the generator function." }
             }
           }
-        },
-        "fallback": {
-          "allOf": [{ "$ref": "#/definitions/Function" }],
-          "description": "Provides a fallback mixin for browser vendor prefixes."
         },
         "non_media": {
           "description": "Lists exceptions to supported media at-rules.",

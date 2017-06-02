@@ -1,6 +1,6 @@
 {
   "name": "bangs",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "description": "Bangs are unopinionated, single-responsibility CSS class selectors marked with !important.",
   "main": "bangs.css",
   "scripts": {
@@ -25,6 +25,7 @@
   "devDependencies": {
     "ajv": "^5.1.3",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
     "gulp-clean-css": "^3.4.1",
     "gulp-less": "^3.3.0",
     "gulp-pug": "^3.3.0",

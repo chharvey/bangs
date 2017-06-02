@@ -4,6 +4,7 @@ var gulp = require('gulp')
 var rename = require('gulp-rename')
 var pug = require('gulp-pug')
 var less = require('gulp-less')
+var autoprefixer = require('gulp-autoprefixer')
 var clean_css = require('gulp-clean-css')
 
 var Bangs = require('./_models/Bangs.class.js')
@@ -31,11 +32,17 @@ gulp.task('src:less', function () {
     })
   })
   return;
+  // return gulp.src('build/*.less')
+  //   .pipe(less())
+  //   .pipe(gulp.dest('build/'))
 })
 
 gulp.task('lessc:bangs', ['src:less'], function () {
   return gulp.src('bangs.less')
     .pipe(less())
+    .pipe(autoprefixer({
+      grid: true
+    }))
     .pipe(gulp.dest('./'))
 })
 

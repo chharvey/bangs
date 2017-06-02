@@ -93,7 +93,6 @@
       , { "name": "space-around" , "code": "sa" }
       , { "name": "space-evenly" , "code": "sv" }
       ]
-    , "fallback": ["val", "return `.align-content(${val})`"]
     }
   , {
       "name"     : "align-items"
@@ -114,7 +113,6 @@
       , { "name": "self-end"     , "code": "se" }
       , { "name": "stretch"      , "code": "st" }
       ]
-    , "fallback": ["val", "return `.align-items(${val})`"]
     }
   , {
       "name"     : "align-self"
@@ -136,7 +134,6 @@
       , { "name": "self-end"     , "code": "se" }
       , { "name": "stretch"      , "code": "st" }
       ]
-    , "fallback": ["val", "return `.align-self(${val})`"]
     }
   , {
       "name"     : "background-attachment"
@@ -437,7 +434,6 @@
         , "options": { "domain": "tracks" }
         }
       ]
-    , "fallback": ["val", "return `.column-count(${val})`"]
     }
   , {
       "name"     : "column-fill"
@@ -451,7 +447,6 @@
         { "name": "balance", "code": "b" }
       , { "name": "auto"   , "code": "a" }
       ]
-    , "fallback": ["val", "return `.column-fill(${val})`"]
     }
   , {
       "name"     : "column-gap"
@@ -469,9 +464,9 @@
         {
           "name": "generateSpaces"
         , "transforms": { "namefn": ["length", "return `${length}rem`"] }
+        , "options": { "domain": "spacing" }
         }
       ]
-    , "fallback": ["val", "return `.column-gap(${val})`"]
     }
   , {
       "name"     : "column-rule-color"
@@ -489,7 +484,6 @@
         , "options": { "name": "<color>" }
         }
       ]
-    , "fallback": ["val", "return `.column-rule-color(${val})`"]
     }
   , {
       "name"     : "column-rule-style"
@@ -507,7 +501,6 @@
         , "options": { "name": "<line-style>" }
         }
       ]
-    , "fallback": ["val", "return `.column-rule-style(${val})`"]
     }
   , {
       "name"     : "column-rule-width"
@@ -526,7 +519,6 @@
         , "options": { "name": "<line-width>" }
         }
       ]
-    , "fallback": ["val", "return `.column-rule-width(${val})`"]
     }
   , {
       "name"     : "column-span"
@@ -540,7 +532,6 @@
         { "name": "none", "code": "n" }
       , { "name": "all" , "code": "a" }
       ]
-    , "fallback": ["val", "return `.column-span(${val})`"]
     }
   , {
       "name"     : "column-width"
@@ -554,7 +545,6 @@
         { "name": "auto", "code": "a" }
       , { "name": "0"   , "code": "z" }
       ]
-    , "fallback": ["val", "return `.column-width(${val})`"]
     }
   , {
       "name"     : "display"
@@ -573,8 +563,8 @@
       , { "name": "flow"               , "code": "f"                   }
       , { "name": "flow-root"          , "code": "o"                   }
       , { "name": "table"              , "code": "t"  , "stability": 0 }
-      , { "name": "flex"               , "code": "x"  ,                 "use": ".flexbox()" }
-      , { "name": "grid"               , "code": "g"  ,                 "use": ".grid()"    }
+      , { "name": "flex"               , "code": "x"  , "stability": 2 }
+      , { "name": "grid"               , "code": "g"  , "stability": 2 }
       , { "name": "table-row-group"    , "code": "trg", "stability": 0 }
       , { "name": "table-header-group" , "code": "thg", "stability": 0 }
       , { "name": "table-footer-group" , "code": "tfg", "stability": 0 }
@@ -611,11 +601,10 @@
     , "generators": [
         {
           "name": "generateFracs"
-        , "transforms": { "usefn": ["percentage", "return `.flex(${percentage})`"] }
+        , "transforms": { "usefn": ["percentage", "return `flex: ${percentage}`"] }
         , "options": { "domain": "tracks" }
         }
       ]
-    , "fallback": ["val", "return `.flex(${val})`"]
     }
   , {
       "name"     : "flex-direction"
@@ -631,7 +620,6 @@
       , { "name": "row-reverse"   , "code": "rr" }
       , { "name": "column-reverse", "code": "cr" }
       ]
-    , "fallback": ["val", "return `.flex-direction(${val})`"]
     }
   , {
       "name"     : "flex-wrap"
@@ -646,7 +634,6 @@
       , { "name": "wrap"        , "code": "wp" }
       , { "name": "wrap-reverse", "code": "wr" }
       ]
-    , "fallback": ["val", "return `.flex-wrap(${val})`"]
     }
   , {
       "name"     : "float"
@@ -762,9 +749,9 @@
         {
           "name": "generateSpaces"
         , "transforms": { "namefn": ["length", "return `${length}rem`"] }
+        , "options": { "domain": "spacing" }
         }
       ]
-    , "fallback": ["val", "return `.grid-column-gap(${val})`"]
     }
   , {
       "name"     : "grid-row-gap"
@@ -782,11 +769,11 @@
           "name": "generateSpaces"
         , "transforms": {
             "namefn": ["length", "return `${length}vru`"]
-          , "usefn" : ["length", "return `.grid-row-gap(calc(${length} ~'*' var(--vru, @g-vru)))`"]
+          , "usefn" : ["length", "return `grid-row-gap: calc(${length} ~'*' var(--vru, @g-vru))`"]
           }
+        , "options": { "domain": "spacing" }
         }
       ]
-    , "fallback": ["val", "return `.grid-row-gap(${val})`"]
     }
   , {
       "name"     : "grid-template-columns"
@@ -806,7 +793,6 @@
         , "options": { "domain": "tracks" }
         }
       ]
-    , "fallback": ["val", "return `.grid-template-columns(${val})`"]
     }
   , {
       "name"     : "grid-template-rows"
@@ -826,7 +812,6 @@
         , "options": { "domain": "tracks" }
         }
       ]
-    , "fallback": ["val", "return `.grid-template-rows(${val})`"]
     }
   , {
       "name"     : "justify-content"
@@ -848,7 +833,6 @@
       , { "name": "space-around" , "code": "sa" }
       , { "name": "space-evenly" , "code": "sv" }
       ]
-    , "fallback": ["val", "return `.justify-content(${val})`"]
     }
   , {
       "name"     : "justify-items"
@@ -869,7 +853,6 @@
       , { "name": "self-end"     , "code": "se" }
       , { "name": "stretch"      , "code": "st" }
       ]
-    , "fallback": ["val", "return `.justify-items(${val})`"]
     }
   , {
       "name"     : "justify-self"
@@ -891,7 +874,6 @@
       , { "name": "self-end"     , "code": "se" }
       , { "name": "stretch"      , "code": "st" }
       ]
-    , "fallback": ["val", "return `.justify-self(${val})`"]
     }
   , {
       "name"     : "left"
@@ -1114,7 +1096,6 @@
         , "options": { "domain": 8, "negative": true }
         }
       ]
-    , "fallback": ["val", "return `.flex-order(${val})`"]
     }
   , {
       "name"     : "overflow"

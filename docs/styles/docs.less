@@ -7,7 +7,7 @@
 /*================================*\
     docs.less
 \*================================*/
-@import (reference) url('../../node_modules/xmeter/src/__tool.borders.less');
+@import (reference) url('../../node_modules/xmeter/src/__fallback.grid.less');
 @import (reference) url('../../node_modules/xmeter/src/__tool.fontsize.less');
 
 a:hover {
@@ -35,17 +35,14 @@ a:hover {
   text-align: center;
 }
 .c-Property__Classes {
-  display: -ms-grid;
-  display:     grid;
-  -ms-grid-template-columns: 200px auto 100px;
-      grid-template-columns: 200px auto 100px;
+  .grid();
+  .grid-template-columns(200px auto 100px);
   max-height: calc(~'13 * var(--vru)');
   overflow: scroll;
   background-color: fadeout(white, 50%);
 }
 .c-Property__Classes--suffixes {
-  -ms-grid-template-columns: 200px auto;
-      grid-template-columns: 200px auto;
+  .grid-template-columns(200px auto);
   background-color: fadeout(black, 50%);
   color: #fff;
 }
@@ -70,9 +67,7 @@ a:hover {
 ._ss {
   padding: var(--vru) 1rem;
   & > h3 {
-    .border-vert(bottom, 2px);
-    border-style: solid;
-    border-color: fadeout(black, 50%);
+    box-shadow: 0 2px 0 0 fadeout(black, 50%); // HACK border-bottom hack
     padding-bottom: calc(~'var(--vru) / 4');
     text-align: center;
   }
