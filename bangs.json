@@ -604,7 +604,6 @@
         , "options": { "domain": "tracks" }
         }
       ]
-    , "fallback": ["val", "return `.flex(${val})`"]
     }
   , {
       "name"     : "flex-direction"
@@ -620,7 +619,6 @@
       , { "name": "row-reverse"   , "code": "rr" }
       , { "name": "column-reverse", "code": "cr" }
       ]
-    , "fallback": ["val", "return `.flex-direction(${val})`"]
     }
   , {
       "name"     : "flex-wrap"
@@ -635,7 +633,6 @@
       , { "name": "wrap"        , "code": "wp" }
       , { "name": "wrap-reverse", "code": "wr" }
       ]
-    , "fallback": ["val", "return `.flex-wrap(${val})`"]
     }
   , {
       "name"     : "float"
@@ -1100,7 +1097,6 @@
         , "options": { "domain": 8, "negative": true }
         }
       ]
-    , "fallback": ["val", "return `.flex-order(${val})`"]
     }
   , {
       "name"     : "overflow"
