@@ -563,8 +563,8 @@
       , { "name": "flow"               , "code": "f"                   }
       , { "name": "flow-root"          , "code": "o"                   }
       , { "name": "table"              , "code": "t"  , "stability": 0 }
-      , { "name": "flex"               , "code": "x"  ,                 "use": ".flexbox()" }
-      , { "name": "grid"               , "code": "g"  ,                 "use": ".grid()"    }
+      , { "name": "flex"               , "code": "x"  , "stability": 2 }
+      , { "name": "grid"               , "code": "g"  , "stability": 2 }
       , { "name": "table-row-group"    , "code": "trg", "stability": 0 }
       , { "name": "table-header-group" , "code": "thg", "stability": 0 }
       , { "name": "table-footer-group" , "code": "tfg", "stability": 0 }
@@ -601,7 +601,7 @@
     , "generators": [
         {
           "name": "generateFracs"
-        , "transforms": { "usefn": ["percentage", "return `.flex(${percentage})`"] }
+        , "transforms": { "usefn": ["percentage", "return `flex: ${percentage}`"] }
         , "options": { "domain": "tracks" }
         }
       ]
@@ -769,7 +769,7 @@
           "name": "generateSpaces"
         , "transforms": {
             "namefn": ["length", "return `${length}vru`"]
-          , "usefn" : ["length", "return `.grid-row-gap(calc(${length} ~'*' var(--vru, @g-vru)))`"]
+          , "usefn" : ["length", "return `grid-row-gap: calc(${length} ~'*' var(--vru, @g-vru))`"]
           }
         , "options": { "domain": "spacing" }
         }
