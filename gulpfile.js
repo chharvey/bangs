@@ -21,6 +21,12 @@ gulp.task('pug:docs', function () {
     .pipe(gulp.dest('./docs/'))
 })
 
+gulp.task('lessc:docs', function () {
+  return gulp.src('docs/styles/docs.less')
+    .pipe(less())
+    .pipe(gulp.dest('./docs/styles/'))
+})
+
 gulp.task('src:less', function () {
   fs.mkdir(`${__dirname}/build/`, function (err, data) {
     Bangs.DATA.properties.filter((p) => ![
@@ -44,12 +50,6 @@ gulp.task('lessc:bangs', ['src:less'], function () {
       grid: true
     }))
     .pipe(gulp.dest('./'))
-})
-
-gulp.task('lessc:docs', function () {
-  return gulp.src('docs/styles/docs.less')
-    .pipe(less())
-    .pipe(gulp.dest('docs/styles/'))
 })
 
 gulp.task('minify', ['lessc:bangs'], function () {
