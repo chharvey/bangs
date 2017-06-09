@@ -137,18 +137,30 @@ module.exports = (function () {
       data.properties.forEach(function (property) {
         (property.generators || []).forEach(function (generator) {
           eval(generator.name).call(property, (function () {
-            let transforms = {}
+            let t = {}
             ;['namefn','codefn','usefn'].forEach(function (key) {
-              transforms[key] = (generator.transforms && generator.transforms[key]) ? new Function(...generator.transforms[key]) : null
+              t[key] = (generator.transforms && generator.transforms[key]) ? new Function(...generator.transforms[key]) : null
             })
-            return transforms
+            return t
           })(), generator.options)
         })
       })
-      if (!isValid(data)) {
-        console.error(isValid.errors)
-        throw new Error('Data does not valiate against schema!')
-      }
+      ;(function () {
+        let ajv = new Ajv()
+        let is_schema_valid = ajv.validateSchema(require('../bangs.schema.json'))
+        if (!is_schema_valid) {
+          console.error(ajv.errors)
+          throw new Error('Schema is not a valid schema!')
+        }
+      })()
+      ;(function () {
+        let ajv = new Ajv()
+        let is_data_valid = ajv.validate(require('../bangs.schema.json'), data)
+        if (!is_data_valid) {
+          console.error(ajv.errors)
+          throw new Error('Data does not valiate against schema!')
+        }
+      })()
       return data
     })()
   })(Util.cloneDeep(require('../bangs.json')))
