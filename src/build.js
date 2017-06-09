@@ -1,26 +1,16 @@
-let fs = require('fs')
-let path = require('path')
-let Bangs = require('../_models/Bangs.class.js')
+var fs = require('fs')
+var path = require('path')
+var Bangs = require('../_models/Bangs.class.js')
 
 fs.mkdir('build/', function (err, data) {
-  Bangs.generateTrackFracsAsync('w', function (val) { return `width: (${val} * 100%)` }, function (err, data) {
-    if (err) console.error(err)
-    else fs.writeFile(`${__dirname}/../build/_width.less`, data, function (err, data) { if (err) throw err })
-  })
-  Bangs.generateTrackFracsAsync('x', function (val) { return `.flex(${val} * 100%)` }, function (err, data) {
-    if (err) console.error(err)
-    else fs.writeFile(`${__dirname}/../build/_flex.less`, data, function (err, data) { if (err) throw err })
-  })
-  Bangs.generateTrackCountsAsync('cc', function (val) { return `.column-count(${val})` }, function (err, data) {
-    if (err) console.error(err)
-    else fs.writeFile(`${__dirname}/../build/_column-count.less`, data, function (err, data) { if (err) throw err })
-  })
-  Bangs.generateTrackCountsAsync('gtc', function (val) { return `.grid-template-columns(repeat(${val}, 1fr))` }, function (err, data) {
-    if (err) console.error(err)
-    else fs.writeFile(`${__dirname}/../build/_grid-template-columns.less`, data, function (err, data) { if (err) throw err })
-  })
-  Bangs.generateTrackCountsAsync('gtr', function (val) { return `.grid-template-rows(repeat(${val}, 1fr))` }, function (err, data) {
-    if (err) console.error(err)
-    else fs.writeFile(`${__dirname}/../build/_grid-template-rows.less`, data, function (err, data) { if (err) throw err })
+  Bangs.DATA.properties.filter((p) => ![
+    'page-break-before' // CHANGED deprecated
+  , 'page-break-after' // CHANGED deprecated
+  , 'font-stretch' // TODO v0.14.0
+  , 'font-kerning' // TODO v0.14.0
+  , 'text-justify' // TODO v0.14.0
+  , 'overflow-wrap' // CHANGED deprecated
+  ].includes(p.name)).forEach(function (property) {
+    fs.writeFile(`${__dirname}/../build/_${property.name}.less`, Bangs.generateLess(property), function (err, data) { if (err) throw err })
   })
 })

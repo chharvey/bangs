@@ -1,6 +1,6 @@
 {
   "name": "bangs",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "description": "Bangs are unopinionated, single-responsibility CSS class selectors marked with !important.",
   "main": "bangs.css",
   "scripts": {
@@ -8,9 +8,10 @@
     "pug:docs": "pug -O docs/_models/options.js docs/{index,props}.pug",
     "lessc:build": "node src/build.js",
     "lessc:bangs": "lessc bangs.less bangs.css",
-    "lessc:all": "npm run lessc:build  &&  npm run lessc:bangs",
+    "lessc:docs": "lessc docs/styles/docs.less docs/styles/docs.css",
+    "lessc:all": "npm run lessc:build  &&  npm run lessc:bangs  &&  npm run lessc:docs",
     "minify": "cleancss bangs.css -o bangs.min.css",
-    "unbuild": "rm bangs.css bangs.min.css",
+    "unbuild": "rm docs/{index,props}.html bangs.css bangs.min.css",
     "build": "npm run lessc:all  &&  npm run minify"
   },
   "repository": {
@@ -28,7 +29,8 @@
   },
   "homepage": "http://chharvey.github.io/bangs/",
   "devDependencies": {
-    "clean-css": "^3.4.5",
+    "ajv": "^5.1.3",
+    "clean-css-cli": "^4.1.0",
     "less": "^2.5.3",
     "pug-cli": "^1.0.0-alpha6",
     "sitepage": "^1.0.0",

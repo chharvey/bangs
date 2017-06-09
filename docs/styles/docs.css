@@ -1,0 +1,176 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
+    Bangs!
+\*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*================================*\
+    docs.less
+\*================================*/
+a:hover {
+  text-decoration: underline;
+  text-decoration-line: underline;
+}
+.o-Alert,
+.c-Property__Desc,
+.c-Property__Classes {
+  width: 66.667%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.o-Alert,
+.c-Property__Classes {
+  padding: calc(var(--vru) / 2) 1rem;
+}
+.o-Alert {
+  margin-bottom: var(--vru);
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+.o-Alert > * {
+  --vru: calc(0.875  * var(--line-height) * 1rem);
+}
+.o-Alert h1,
+.o-Alert h2,
+.o-Alert h3,
+.o-Alert h4,
+.o-Alert h5,
+.o-Alert h6,
+.o-Alert p,
+.o-Alert pre,
+.o-Alert figure,
+.o-Alert blockquote,
+.o-Alert ol,
+.o-Alert ul,
+.o-Alert dl,
+.o-Alert table,
+.o-Alert form,
+.o-Alert fieldset,
+.o-Alert textarea,
+.o-Alert details {
+  margin-bottom: 1.3125rem;
+  margin-bottom: var(--vru);
+}
+.o-Alert h1 {
+  padding-top: 1.3125rem;
+  padding-top: var(--vru);
+}
+.o-Alert__Hn {
+  margin-bottom: var(--vru);
+  text-align: center;
+}
+.c-Property__Classes {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-template-columns: 200px auto 100px;
+  grid-template-columns: 200px auto 100px;
+  max-height: calc(13 * var(--vru));
+  overflow: scroll;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.c-Property__Classes--suffixes {
+  -ms-grid-template-columns: 200px auto;
+  grid-template-columns: 200px auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+.c-Label {
+  margin-left: 1rem;
+  padding: calc(var(--vru) / 8) 0.25rem;
+  font-variant: small-caps;
+}
+.c-Label--inherited,
+.c-Label--initial {
+  text-transform: uppercase;
+  background-color: #ff99c0;
+}
+._ss {
+  padding: var(--vru) 1rem;
+}
+._ss > h3 {
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.5);
+  padding-bottom: calc(var(--vru) / 4);
+  text-align: center;
+}
+#ss-layout {
+  background: linear-gradient(to bottom, #ffe5f2, #ffbfbf);
+}
+#ss-box-model {
+  background: linear-gradient(to bottom, #fff2e5, #ffffbf);
+}
+#ss-typography {
+  background: linear-gradient(to bottom, #f2ffe5, #bfffbf);
+}
+#ss-box-cosmetics {
+  background: linear-gradient(to bottom, #e5fff2, #bfffff);
+}
+#ss-text-cosmetics {
+  background: linear-gradient(to bottom, #e5f2ff, #bfbfff);
+}
+#ss-misc {
+  background: linear-gradient(to bottom, #f2e5ff, #ffbfff);
+}
+.t-stability-obsolete {
+  background-color: black;
+  color: white;
+}
+.t-stability-deprecated {
+  background-color: #ff4b33;
+  color: white;
+}
+.t-stability-experimental {
+  background-color: #ffe433;
+}
+.t-stability-stable {
+  background-color: #9acc7a;
+}
+.t-stability-locked {
+  background-color: #99daff;
+}
+.-fz-mod-mill {
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+.-fz-mod-mill > * {
+  --vru: calc(0.75  * var(--line-height) * 1rem);
+}
+.-fz-mod-mill h1,
+.-fz-mod-mill h2,
+.-fz-mod-mill h3,
+.-fz-mod-mill h4,
+.-fz-mod-mill h5,
+.-fz-mod-mill h6,
+.-fz-mod-mill p,
+.-fz-mod-mill pre,
+.-fz-mod-mill figure,
+.-fz-mod-mill blockquote,
+.-fz-mod-mill ol,
+.-fz-mod-mill ul,
+.-fz-mod-mill dl,
+.-fz-mod-mill table,
+.-fz-mod-mill form,
+.-fz-mod-mill fieldset,
+.-fz-mod-mill textarea,
+.-fz-mod-mill details {
+  margin-bottom: 1.125rem;
+  margin-bottom: var(--vru);
+}
+.-fz-mod-mill h1 {
+  padding-top: 1.125rem;
+  padding-top: var(--vru);
+}
+body > a:last-of-type {
+  position: fixed;
+  bottom: var(--vru);
+  right: 1rem;
+}
+@media screen and (min-width: 60em) {
+  body {
+    width: 75%;
+  }
+  #contents {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 25%;
+    overflow: auto;
+  }
+}

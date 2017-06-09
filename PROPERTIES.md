@@ -112,16 +112,8 @@ This file has been moved. Go to https://chharvey.github.io/bangs/docs/props.html
 ## Box Cosmetics
 
 ### `border-*-style`
-```
-.-rls  .-rrs  .-rts  .-rbs  .-rhs  .-rvs  .-ras
-```
-(for `-left`, `-right`, `-top`, `-bottom`, ‘horizontal’, ‘vertical’, or ‘all’, respectively)
 
 ### `border-*-color`
-```
-.-rlc  .-rrc  .-rtc  .-rbc  .-rhc  .-rvc  .-rac
-```
-(for `-left`, `-right`, `-top`, `-bottom`, ‘horizontal’, ‘vertical’, or ‘all’, respectively)
 
 ### `background-image`
 
