@@ -48,9 +48,7 @@
     , "spacing": [0.25, 0.5, 1, 2, 4, 8, 16]
     }
   , "media": [
-      { "name": "screen"  , "code": "s" , "query": "screen", "stability": 1 }
-    , { "name": "print"   , "code": "p" , "query": "print" , "stability": 1 }
-    , { "name": "small+"  , "code": "sK", "query": "screen  and (min-width: 30em)" }
+      { "name": "small+"  , "code": "sK", "query": "screen  and (min-width: 30em)" }
     , { "name": "medium+" , "code": "sM", "query": "screen  and (min-width: 45em)" }
     , { "name": "large+"  , "code": "sG", "query": "screen  and (min-width: 60em)" }
     , { "name": "xlarge+" , "code": "sT", "query": "screen  and (min-width: 75em)" }
