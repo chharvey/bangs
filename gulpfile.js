@@ -48,6 +48,7 @@ gulp.task('lessc:bangs', ['src:less'], function () {
     .pipe(less())
     .pipe(autoprefixer({
       grid: true
+    , cascade: false
     }))
     .pipe(gulp.dest('./'))
 })
