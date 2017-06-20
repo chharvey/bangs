@@ -7,7 +7,6 @@
 /*================================*\
     docs.less
 \*================================*/
-@import (reference) url('../../node_modules/xmeter/src/__fallback.grid.less');
 @import (reference) url('../../node_modules/xmeter/src/__tool.fontsize.less');
 
 a:hover {
@@ -35,14 +34,14 @@ a:hover {
   text-align: center;
 }
 .c-Property__Classes {
-  .grid();
-  .grid-template-columns(200px auto 100px);
+  display: grid;
+  grid-template-columns: 200px auto 100px;
   max-height: calc(~'13 * var(--vru)');
   overflow: scroll;
   background-color: fadeout(white, 50%);
 }
 .c-Property__Classes--suffixes {
-  .grid-template-columns(200px auto);
+  grid-template-columns: 200px auto;
   background-color: fadeout(black, 50%);
   color: #fff;
 }

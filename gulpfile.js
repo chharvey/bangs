@@ -24,6 +24,10 @@ gulp.task('pug:docs', function () {
 gulp.task('lessc:docs', function () {
   return gulp.src('docs/styles/docs.less')
     .pipe(less())
+    .pipe(autoprefixer({
+      grid: true
+    , cascade: false
+    }))
     .pipe(gulp.dest('./docs/styles/'))
 })
 
