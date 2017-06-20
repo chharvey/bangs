@@ -563,13 +563,6 @@
       , { "name": "table"              , "code": "t"  , "stability": 0 }
       , { "name": "flex"               , "code": "x"  , "stability": 2 }
       , { "name": "grid"               , "code": "g"  , "stability": 2 }
-      , { "name": "table-row-group"    , "code": "trg", "stability": 0 }
-      , { "name": "table-header-group" , "code": "thg", "stability": 0 }
-      , { "name": "table-footer-group" , "code": "tfg", "stability": 0 }
-      , { "name": "table-row"          , "code": "tr" , "stability": 0 }
-      , { "name": "table-cell"         , "code": "tc" , "stability": 0 }
-      , { "name": "table-column-group" , "code": "tlg", "stability": 0 }
-      , { "name": "table-column"       , "code": "tl" , "stability": 0 }
       , { "name": "list-item"          , "code": "s"                   }
       , { "name": "list-item flow-root", "code": "s_o"                 }
       , { "name": "list-item inline"   , "code": "s_l"                 }
