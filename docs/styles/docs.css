@@ -6,6 +6,7 @@
 \*================================*/
 a:hover {
   text-decoration: underline;
+  -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
 }
 .o-Alert,
@@ -59,14 +60,14 @@ a:hover {
 .c-Property__Classes {
   display: -ms-grid;
   display: grid;
-  -ms-grid-template-columns: 200px auto 100px;
+  -ms-grid-columns: 200px auto 100px;
   grid-template-columns: 200px auto 100px;
   max-height: calc(13 * var(--vru));
   overflow: scroll;
   background-color: rgba(255, 255, 255, 0.5);
 }
 .c-Property__Classes--suffixes {
-  -ms-grid-template-columns: 200px auto;
+  -ms-grid-columns: 200px auto;
   grid-template-columns: 200px auto;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
@@ -85,26 +86,33 @@ a:hover {
   padding: var(--vru) 1rem;
 }
 ._ss > h3 {
+  -webkit-box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.5);
   box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.5);
   padding-bottom: calc(var(--vru) / 4);
   text-align: center;
 }
 #ss-layout {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffe5f2), to(#ffbfbf));
   background: linear-gradient(to bottom, #ffe5f2, #ffbfbf);
 }
 #ss-box-model {
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff2e5), to(#ffffbf));
   background: linear-gradient(to bottom, #fff2e5, #ffffbf);
 }
 #ss-typography {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f2ffe5), to(#bfffbf));
   background: linear-gradient(to bottom, #f2ffe5, #bfffbf);
 }
 #ss-box-cosmetics {
+  background: -webkit-gradient(linear, left top, left bottom, from(#e5fff2), to(#bfffff));
   background: linear-gradient(to bottom, #e5fff2, #bfffff);
 }
 #ss-text-cosmetics {
+  background: -webkit-gradient(linear, left top, left bottom, from(#e5f2ff), to(#bfbfff));
   background: linear-gradient(to bottom, #e5f2ff, #bfbfff);
 }
 #ss-misc {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f2e5ff), to(#ffbfff));
   background: linear-gradient(to bottom, #f2e5ff, #ffbfff);
 }
 .t-stability-obsolete {
