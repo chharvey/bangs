@@ -122,39 +122,18 @@ module.exports = (function () {
     }
 
     /**
-     * Automate line widths.
-     * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
-     * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
+     * Add values from a Value Type to a property.
      * @param  {TransformObj} transforms a set of possible transformations
      * @param  {!Object={}} options a set of possible options
+     * @param  {string=} options.name the name of the value type to inherit
      */
-    function generateLineWidths(transforms, options={}) {
-      this.values.push(...data.global.types.find((el) => el.name==='<line-width>').values)
-    }
-
-    /**
-     * Automate line styles.
-     * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
-     * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
-     * @param  {TransformObj} transforms a set of possible transformations
-     * @param  {!Object={}} options a set of possible options
-     */
-    function generateLineStyles(transforms, options={}) {
-      this.values.push(...data.global.types.find((el) => el.name==='<line-style>').values)
-    }
-
-    /**
-     * Automate colors.
-     * NOTE: WARNING: STATEFUL FUNCTION (uses `data` parameter above).
-     * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
-     * @param  {TransformObj} transforms a set of possible transformations
-     * @param  {!Object={}} options a set of possible options
-     */
-    function generateColors(transforms, options={}) {
-      this.values.push(...data.global.types.find((el) => el.name==='<color>').values)
+    function importValueType(transforms, options={}) {
+      this.values.push(...data.global.types.find((el) => el.name===options.name).values)
     }
 
     return (function () {
+      let ajv = new Ajv()
+      let isValid = ajv.compile(require('../bangs.schema.json'))
       data.properties.forEach(function (property) {
         (property.generators || []).forEach(function (generator) {
           eval(generator.name).call(property, (function () {
@@ -211,10 +190,7 @@ module.exports = (function () {
            * @param  {string} val a string representing a CSS value
            * @return {string}     a string representing a CSS declaration
            */
-          function declaration(val) {
-            return (property.fallback) ?
-              new Function(...property.fallback).call(null, val) : `${property.name}: ${val}`
-          }
+          function declaration(val) { return `${property.name}: ${val}` }
           let global_fallback = ({
             // TODO remove `initial` fallback once widely supported
             'initial': (function () {

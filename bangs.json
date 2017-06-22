@@ -48,9 +48,7 @@
     , "spacing": [0.25, 0.5, 1, 2, 4, 8, 16]
     }
   , "media": [
-      { "name": "screen"  , "code": "s" , "query": "screen", "stability": 1 }
-    , { "name": "print"   , "code": "p" , "query": "print" , "stability": 1 }
-    , { "name": "small+"  , "code": "sK", "query": "screen  and (min-width: 30em)" }
+      { "name": "small+"  , "code": "sK", "query": "screen  and (min-width: 30em)" }
     , { "name": "medium+" , "code": "sM", "query": "screen  and (min-width: 45em)" }
     , { "name": "large+"  , "code": "sG", "query": "screen  and (min-width: 60em)" }
     , { "name": "xlarge+" , "code": "sT", "query": "screen  and (min-width: 75em)" }
@@ -69,7 +67,7 @@
     , { "name": "deprecated"  , "description": "Breaking changes are planned for this feature, or it will be removed in future versions. It is no longer in development, and should not be relied upon." }
     , { "name": "experimental", "description": "This feature is in development, but is unsupported or subject to change. It could be removed in future versions." }
     , { "name": "stable"      , "description": "This feature has been tested and proven satisfactory. It is in development, but no breaking changes will be made unless absolutely necessary." }
-    , { "name": "locked"      , "description": "Only patches will be made to this feature. It is no longer in development. It may be heavily relied upon and will not be removed in future versions." }
+    , { "name": "locked"      , "description": "Only patches will be made to this feature. It may be heavily relied upon and will not be removed in future versions." }
     ]
   }
 , "properties": [
@@ -80,20 +78,19 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/align-content"
     , "inherited": false
     , "initial"  : "normal"
-    , "stability": 2
+    , "stability": 3
     , "values"   : [
         { "name": "normal"       , "code": "n"  }
       , { "name": "center"       , "code": "c"  }
-      , { "name": "start"        , "code": "s"  }
-      , { "name": "end"          , "code": "e"  }
       , { "name": "flex-start"   , "code": "xs", "stability": 2 }
       , { "name": "flex-end"     , "code": "xe", "stability": 2 }
+      , { "name": "start"        , "code": "s"  }
+      , { "name": "end"          , "code": "e"  }
       , { "name": "stretch"      , "code": "st" }
       , { "name": "space-between", "code": "sb" }
       , { "name": "space-around" , "code": "sa" }
       , { "name": "space-evenly" , "code": "sv" }
       ]
-    , "fallback": ["val", "return `.align-content(${val})`"]
     }
   , {
       "name"     : "align-items"
@@ -102,19 +99,18 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/align-items"
     , "inherited": false
     , "initial"  : "normal"
-    , "stability": 2
+    , "stability": 3
     , "values"   : [
         { "name": "normal"       , "code": "n"  }
       , { "name": "center"       , "code": "c"  }
-      , { "name": "start"        , "code": "s"  }
-      , { "name": "end"          , "code": "e"  }
       , { "name": "flex-start"   , "code": "xs", "stability": 2 }
       , { "name": "flex-end"     , "code": "xe", "stability": 2 }
+      , { "name": "start"        , "code": "s"  }
+      , { "name": "end"          , "code": "e"  }
       , { "name": "self-start"   , "code": "ss" }
       , { "name": "self-end"     , "code": "se" }
       , { "name": "stretch"      , "code": "st" }
       ]
-    , "fallback": ["val", "return `.align-items(${val})`"]
     }
   , {
       "name"     : "align-self"
@@ -123,20 +119,19 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/align-self"
     , "inherited": false
     , "initial"  : "auto"
-    , "stability": 2
+    , "stability": 3
     , "values"   : [
         { "name": "auto"         , "code": "a"  }
       , { "name": "normal"       , "code": "n"  }
       , { "name": "center"       , "code": "c"  }
-      , { "name": "start"        , "code": "s"  }
-      , { "name": "end"          , "code": "e"  }
       , { "name": "flex-start"   , "code": "xs", "stability": 2 }
       , { "name": "flex-end"     , "code": "xe", "stability": 2 }
+      , { "name": "start"        , "code": "s"  }
+      , { "name": "end"          , "code": "e"  }
       , { "name": "self-start"   , "code": "ss" }
       , { "name": "self-end"     , "code": "se" }
       , { "name": "stretch"      , "code": "st" }
       ]
-    , "fallback": ["val", "return `.align-self(${val})`"]
     }
   , {
       "name"     : "background-attachment"
@@ -163,7 +158,7 @@
     , "values"   : [
         { "name": "content-box", "code": "c" }
       , { "name": "padding-box", "code": "p" }
-      , { "name": "border-box" , "code": "r", "stability": 2 }
+      , { "name": "border-box" , "code": "r" }
       ]
     }
   , {
@@ -177,7 +172,10 @@
     , "values"   : [
       ]
     , "generators": [
-        { "name": "generateColors" }
+        {
+          "name": "importValueType"
+        , "options": { "name": "<color>" }
+        }
       ]
     , "pseudo": [
         "hover"
@@ -206,7 +204,7 @@
     , "values"   : [
         { "name": "content-box", "code": "c" }
       , { "name": "padding-box", "code": "p" }
-      , { "name": "border-box" , "code": "r", "stability": 2 }
+      , { "name": "border-box" , "code": "r" }
       ]
     }
   , {
@@ -216,7 +214,7 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/background-position"
     , "inherited": false
     , "initial"  : "0% 0%"
-    , "stability": 3
+    , "stability": 2
     , "values"   : [
         { "name": "left"         , "code": "l"  }
       , { "name": "right"        , "code": "r"  }
@@ -243,22 +241,22 @@
     , "initial"  : "repeat"
     , "stability": 2
     , "values"   : [
-        { "name": "repeat"   , "code": "r"  , "alt": "background-repeat: repeat    repeat   " }
+        { "name": "repeat"   , "code": "r"  , "alt": "background-repeat: repeat repeat"       }
       , { "name": "no-repeat", "code": "nr" , "alt": "background-repeat: no-repeat no-repeat" }
-      , { "name": "space"    , "code": "sp" , "alt": "background-repeat: space     space    " }
-      , { "name": "round"    , "code": "rd" , "alt": "background-repeat: round     round    " }
-      , { "name": "repeat-x" , "code": "rx" , "alt": "background-repeat: repeat no-repeat" }
-      , { "name": "repeat-y" , "code": "ry" , "alt": "background-repeat: no-repeat repeat" }
-      , { "name": "space-x"  , "code": "spx", "use": "background-repeat: space no-repeat " }
-      , { "name": "space-y"  , "code": "spy", "use": "background-repeat: no-repeat space " }
-      , { "name": "round-x"  , "code": "rdx", "use": "background-repeat: round no-repeat " }
-      , { "name": "round-y"  , "code": "rdy", "use": "background-repeat: no-repeat round " }
-      , { "name": "repeat space" , "code": "r_sp"  }
-      , { "name": "repeat round" , "code": "r_rd"  }
-      , { "name": "space  repeat", "code": "sp_r"  }
-      , { "name": "space  round" , "code": "sp_rd" }
-      , { "name": "round  repeat", "code": "rd_r"  }
-      , { "name": "round  space" , "code": "rd_sp" }
+      , { "name": "space"    , "code": "sp" , "alt": "background-repeat: space space"         }
+      , { "name": "round"    , "code": "rd" , "alt": "background-repeat: round round"         }
+      , { "name": "repeat-x" , "code": "rx" , "alt": "background-repeat: repeat no-repeat"    }
+      , { "name": "repeat-y" , "code": "ry" , "alt": "background-repeat: no-repeat repeat"    }
+      , { "name": "space-x"  , "code": "spx", "use": "background-repeat: space no-repeat"     }
+      , { "name": "space-y"  , "code": "spy", "use": "background-repeat: no-repeat space"     }
+      , { "name": "round-x"  , "code": "rdx", "use": "background-repeat: round no-repeat"     }
+      , { "name": "round-y"  , "code": "rdy", "use": "background-repeat: no-repeat round"     }
+      , { "name": "repeat space", "code": "r_sp"  }
+      , { "name": "repeat round", "code": "r_rd"  }
+      , { "name": "space repeat", "code": "sp_r"  }
+      , { "name": "space round" , "code": "sp_rd" }
+      , { "name": "round repeat", "code": "rd_r"  }
+      , { "name": "round space" , "code": "rd_sp" }
       ]
     }
   , {
@@ -270,9 +268,9 @@
     , "initial"  : "auto auto"
     , "stability": 3
     , "values"   : [
-        { "name": "auto"   , "code": "a" }
-      , { "name": "contain", "code": "cn", "stability": 2 }
-      , { "name": "cover"  , "code": "cr", "stability": 2 }
+        { "name": "auto"   , "code": "a"  }
+      , { "name": "contain", "code": "cn" }
+      , { "name": "cover"  , "code": "cr" }
       ]
     }
   , {
@@ -282,11 +280,14 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/border-color"
     , "inherited": false
     , "initial"  : "currentColor"
-    , "stability": 2
+    , "stability": 3
     , "values"   : [
       ]
     , "generators": [
-        { "name": "generateColors" }
+        {
+          "name": "importValueType"
+        , "options": { "name": "<color>" }
+        }
       ]
     }
   , {
@@ -313,11 +314,14 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/border-style"
     , "inherited": false
     , "initial"  : "none"
-    , "stability": 2
+    , "stability": 3
     , "values"   : [
       ]
     , "generators": [
-        { "name": "generateLineStyles" }
+        {
+          "name": "importValueType"
+        , "options": { "name": "<line-style>" }
+        }
       ]
     }
   , {
@@ -327,12 +331,15 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/border-width"
     , "inherited": false
     , "initial"  : "medium"
-    , "stability": 2
+    , "stability": 3
     , "values"   : [
         { "name": "0", "code": "z" }
       ]
     , "generators": [
-        { "name": "generateLineWidths" }
+        {
+          "name": "importValueType"
+        , "options": { "name": "<line-width>" }
+        }
       ]
     }
   , {
@@ -370,7 +377,7 @@
     , "stability": 3
     , "values"   : [
         { "name": "content-box", "code": "c" }
-      , { "name": "border-box" , "code": "r", "stability": 2 }
+      , { "name": "border-box" , "code": "r" }
       ]
     }
   , {
@@ -399,7 +406,10 @@
     , "values"   : [
       ]
     , "generators": [
-        { "name": "generateColors" }
+        {
+          "name": "importValueType"
+        , "options": { "name": "<color>" }
+        }
       ]
     , "pseudo": [
         "hover"
@@ -412,7 +422,7 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-count"
     , "inherited": false
     , "initial"  : "auto"
-    , "stability": 2
+    , "stability": 3
     , "values"   : [
         { "name": "auto", "code": "a" }
       ]
@@ -422,7 +432,6 @@
         , "options": { "domain": "tracks" }
         }
       ]
-    , "fallback": ["val", "return `.column-count(${val})`"]
     }
   , {
       "name"     : "column-fill"
@@ -431,12 +440,11 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-fill"
     , "inherited": false
     , "initial"  : "balance"
-    , "stability": 2
+    , "stability": 3
     , "values"   : [
         { "name": "balance", "code": "b" }
       , { "name": "auto"   , "code": "a" }
       ]
-    , "fallback": ["val", "return `.column-fill(${val})`"]
     }
   , {
       "name"     : "column-gap"
@@ -445,7 +453,7 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-gap"
     , "inherited": false
     , "initial"  : "normal"
-    , "stability": 2
+    , "stability": 3
     , "values"   : [
         { "name": "normal", "code": "n" }
       , { "name": "0"     , "code": "z" }
@@ -457,7 +465,6 @@
         , "options": { "domain": "spacing" }
         }
       ]
-    , "fallback": ["val", "return `.column-gap(${val})`"]
     }
   , {
       "name"     : "column-rule-color"
@@ -466,13 +473,15 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule-color"
     , "inherited": false
     , "initial"  : "currentColor"
-    , "stability": 2
+    , "stability": 3
     , "values"   : [
       ]
     , "generators": [
-        { "name": "generateColors" }
+        {
+          "name": "importValueType"
+        , "options": { "name": "<color>" }
+        }
       ]
-    , "fallback": ["val", "return `.column-rule-color(${val})`"]
     }
   , {
       "name"     : "column-rule-style"
@@ -481,13 +490,15 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule-style"
     , "inherited": false
     , "initial"  : "none"
-    , "stability": 2
+    , "stability": 3
     , "values"   : [
       ]
     , "generators": [
-        { "name": "generateLineStyles" }
+        {
+          "name": "importValueType"
+        , "options": { "name": "<line-style>" }
+        }
       ]
-    , "fallback": ["val", "return `.column-rule-style(${val})`"]
     }
   , {
       "name"     : "column-rule-width"
@@ -496,14 +507,16 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule-width"
     , "inherited": false
     , "initial"  : "medium"
-    , "stability": 2
+    , "stability": 3
     , "values"   : [
         { "name": "0", "code": "z" }
       ]
     , "generators": [
-        { "name": "generateLineWidths" }
+        {
+          "name": "importValueType"
+        , "options": { "name": "<line-width>" }
+        }
       ]
-    , "fallback": ["val", "return `.column-rule-width(${val})`"]
     }
   , {
       "name"     : "column-span"
@@ -512,12 +525,11 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-span"
     , "inherited": false
     , "initial"  : "none"
-    , "stability": 2
+    , "stability": 3
     , "values"   : [
         { "name": "none", "code": "n" }
       , { "name": "all" , "code": "a" }
       ]
-    , "fallback": ["val", "return `.column-span(${val})`"]
     }
   , {
       "name"     : "column-width"
@@ -526,12 +538,11 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-width"
     , "inherited": false
     , "initial"  : "auto"
-    , "stability": 2
+    , "stability": 3
     , "values"   : [
         { "name": "auto", "code": "a" }
       , { "name": "0"   , "code": "z" }
       ]
-    , "fallback": ["val", "return `.column-width(${val})`"]
     }
   , {
       "name"     : "display"
@@ -550,15 +561,8 @@
       , { "name": "flow"               , "code": "f"                   }
       , { "name": "flow-root"          , "code": "o"                   }
       , { "name": "table"              , "code": "t"  , "stability": 0 }
-      , { "name": "flex"               , "code": "x"  ,                 "use": ".flexbox()" }
-      , { "name": "grid"               , "code": "g"  ,                 "use": ".grid()"    }
-      , { "name": "table-row-group"    , "code": "trg", "stability": 0 }
-      , { "name": "table-header-group" , "code": "thg", "stability": 0 }
-      , { "name": "table-footer-group" , "code": "tfg", "stability": 0 }
-      , { "name": "table-row"          , "code": "tr" , "stability": 0 }
-      , { "name": "table-cell"         , "code": "tc" , "stability": 0 }
-      , { "name": "table-column-group" , "code": "tlg", "stability": 0 }
-      , { "name": "table-column"       , "code": "tl" , "stability": 0 }
+      , { "name": "flex"               , "code": "x"  , "stability": 2 }
+      , { "name": "grid"               , "code": "g"  , "stability": 2 }
       , { "name": "list-item"          , "code": "s"                   }
       , { "name": "list-item flow-root", "code": "s_o"                 }
       , { "name": "list-item inline"   , "code": "s_l"                 }
@@ -588,11 +592,10 @@
     , "generators": [
         {
           "name": "generateFracs"
-        , "transforms": { "usefn": ["percentage", "return `.flex(${percentage})`"] }
+        , "transforms": { "usefn": ["percentage", "return `flex: ${percentage}`"] }
         , "options": { "domain": "tracks" }
         }
       ]
-    , "fallback": ["val", "return `.flex(${val})`"]
     }
   , {
       "name"     : "flex-direction"
@@ -608,7 +611,6 @@
       , { "name": "row-reverse"   , "code": "rr" }
       , { "name": "column-reverse", "code": "cr" }
       ]
-    , "fallback": ["val", "return `.flex-direction(${val})`"]
     }
   , {
       "name"     : "flex-wrap"
@@ -623,7 +625,6 @@
       , { "name": "wrap"        , "code": "wp" }
       , { "name": "wrap-reverse", "code": "wr" }
       ]
-    , "fallback": ["val", "return `.flex-wrap(${val})`"]
     }
   , {
       "name"     : "float"
@@ -652,7 +653,7 @@
       , { "name": "serif"     , "code": "sf" }
       , { "name": "monospace" , "code": "ms" }
       , { "name": "fantasy"   , "code": "fy" }
-      , { "name": "cursive"   , "code": "cv", "stability": 2 }
+      , { "name": "cursive"   , "code": "cv" }
       ]
     }
   , {
@@ -690,7 +691,7 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant"
     , "inherited": true
     , "initial"  : "normal"
-    , "stability": 3
+    , "stability": 2
     , "values"   : [
         { "name": "normal"    , "code": "n" }
       , { "name": "small-caps", "code": "s" }
@@ -731,7 +732,7 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-gap"
     , "inherited": false
     , "initial"  : "0"
-    , "stability": 2
+    , "stability": 3
     , "values"   : [
         { "name": "0", "code": "z" }
       ]
@@ -742,7 +743,6 @@
         , "options": { "domain": "spacing" }
         }
       ]
-    , "fallback": ["val", "return `.grid-column-gap(${val})`"]
     }
   , {
       "name"     : "grid-row-gap"
@@ -751,7 +751,7 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-gap"
     , "inherited": false
     , "initial"  : "0"
-    , "stability": 2
+    , "stability": 3
     , "values"   : [
         { "name": "0", "code": "z" }
       ]
@@ -760,12 +760,11 @@
           "name": "generateSpaces"
         , "transforms": {
             "namefn": ["length", "return `${length}vru`"]
-          , "usefn" : ["length", "return `.grid-row-gap(calc(${length} ~'*' var(--vru, @g-vru)))`"]
+          , "usefn" : ["length", "return `grid-row-gap: calc(${length} ~'*' var(--vru, @g-vru))`"]
           }
         , "options": { "domain": "spacing" }
         }
       ]
-    , "fallback": ["val", "return `.grid-row-gap(${val})`"]
     }
   , {
       "name"     : "grid-template-columns"
@@ -785,7 +784,6 @@
         , "options": { "domain": "tracks" }
         }
       ]
-    , "fallback": ["val", "return `.grid-template-columns(${val})`"]
     }
   , {
       "name"     : "grid-template-rows"
@@ -805,7 +803,6 @@
         , "options": { "domain": "tracks" }
         }
       ]
-    , "fallback": ["val", "return `.grid-template-rows(${val})`"]
     }
   , {
       "name"     : "justify-content"
@@ -814,20 +811,19 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content"
     , "inherited": false
     , "initial"  : "normal"
-    , "stability": 2
+    , "stability": 3
     , "values"   : [
         { "name": "normal"       , "code": "n"  }
       , { "name": "center"       , "code": "c"  }
-      , { "name": "start"        , "code": "s"  }
-      , { "name": "end"          , "code": "e"  }
       , { "name": "flex-start"   , "code": "xs", "stability": 2 }
       , { "name": "flex-end"     , "code": "xe", "stability": 2 }
+      , { "name": "start"        , "code": "s"  }
+      , { "name": "end"          , "code": "e"  }
       , { "name": "stretch"      , "code": "st" }
       , { "name": "space-between", "code": "sb" }
       , { "name": "space-around" , "code": "sa" }
       , { "name": "space-evenly" , "code": "sv" }
       ]
-    , "fallback": ["val", "return `.justify-content(${val})`"]
     }
   , {
       "name"     : "justify-items"
@@ -836,19 +832,18 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items"
     , "inherited": false
     , "initial"  : "normal"
-    , "stability": 2
+    , "stability": 3
     , "values"   : [
         { "name": "normal"       , "code": "n"  }
       , { "name": "center"       , "code": "c"  }
-      , { "name": "start"        , "code": "s"  }
-      , { "name": "end"          , "code": "e"  }
       , { "name": "flex-start"   , "code": "xs", "stability": 2 }
       , { "name": "flex-end"     , "code": "xe", "stability": 2 }
+      , { "name": "start"        , "code": "s"  }
+      , { "name": "end"          , "code": "e"  }
       , { "name": "self-start"   , "code": "ss" }
       , { "name": "self-end"     , "code": "se" }
       , { "name": "stretch"      , "code": "st" }
       ]
-    , "fallback": ["val", "return `.justify-items(${val})`"]
     }
   , {
       "name"     : "justify-self"
@@ -857,20 +852,19 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self"
     , "inherited": false
     , "initial"  : "auto"
-    , "stability": 2
+    , "stability": 3
     , "values"   : [
         { "name": "auto"         , "code": "a"  }
       , { "name": "normal"       , "code": "n"  }
       , { "name": "center"       , "code": "c"  }
-      , { "name": "start"        , "code": "s"  }
-      , { "name": "end"          , "code": "e"  }
       , { "name": "flex-start"   , "code": "xs", "stability": 2 }
       , { "name": "flex-end"     , "code": "xe", "stability": 2 }
+      , { "name": "start"        , "code": "s"  }
+      , { "name": "end"          , "code": "e"  }
       , { "name": "self-start"   , "code": "ss" }
       , { "name": "self-end"     , "code": "se" }
       , { "name": "stretch"      , "code": "st" }
       ]
-    , "fallback": ["val", "return `.justify-self(${val})`"]
     }
   , {
       "name"     : "left"
@@ -1066,7 +1060,7 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/opacity"
     , "inherited": false
     , "initial"  : "1.0"
-    , "stability": 3
+    , "stability": 2
     , "values"   : [
         { "name": "0.0", "code": "z" }
       , { "name": "0.5", "code": "h" }
@@ -1093,7 +1087,6 @@
         , "options": { "domain": 8, "negative": true }
         }
       ]
-    , "fallback": ["val", "return `.flex-order(${val})`"]
     }
   , {
       "name"     : "overflow"
@@ -1102,37 +1095,12 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/overflow"
     , "inherited": false
     , "initial"  : "visible"
-    , "stability": 2
+    , "stability": 3
     , "values"   : [
         { "name": "auto"   , "code": "a" }
       , { "name": "visible", "code": "v" }
       , { "name": "hidden" , "code": "h" }
       , { "name": "scroll" , "code": "s" }
-      ]
-    }
-  , {
-      "name"     : "overflow-wrap"
-    , "code"     : "ow"
-    , "summary"  : "Specifies whether words can be broken and wrapped to prevent overflow."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap"
-    , "inherited": true
-    , "initial"  : "normal"
-    , "stability": 1
-    , "values"   : [
-        { "name": "normal"    , "code": "n" }
-      , { "name": "break-word", "code": "b" }
-      ]
-    , "non_media": [
-        "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
       ]
     }
   , {
@@ -1230,62 +1198,6 @@
       ]
     }
   , {
-      "name"     : "page-break-after"
-    , "code"     : "pba"
-    , "summary"  : "Defines a page-break after an element."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/page-break-after"
-    , "inherited": false
-    , "initial"  : "auto"
-    , "stability": 0
-    , "values"   : [
-        { "name": "auto"  , "code": "a" }
-      , { "name": "always", "code": "t" }
-      , { "name": "avoid" , "code": "f" }
-      ]
-    , "non_media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
-    }
-  , {
-      "name"     : "page-break-before"
-    , "code"     : "pbb"
-    , "summary"  : "Defines a page-break before an element."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/page-break-before"
-    , "inherited": false
-    , "initial"  : "auto"
-    , "stability": 0
-    , "values"   : [
-        { "name": "auto"  , "code": "a" }
-      , { "name": "always", "code": "t" }
-      , { "name": "avoid" , "code": "f" }
-      ]
-    , "non_media": [
-        "screen"
-      , "print"
-      , "small+"
-      , "medium+"
-      , "large+"
-      , "xlarge+"
-      , "xxlarge+"
-      , "xsmall-"
-      , "small-"
-      , "medium-"
-      , "large-"
-      , "xlarge-"
-      ]
-    }
-  , {
       "name"     : "position"
     , "code"     : "ps"
     , "summary"  : "Sets the position of box rendered."
@@ -1308,7 +1220,7 @@
     , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/quotes"
     , "inherited": true
     , "initial"  : "'\\“' '\\”'"
-    , "stability": 2
+    , "stability": 3
     , "values"   : [
         { "name": "none", "code": "n"  }
       ]
@@ -1382,7 +1294,7 @@
     , "initial"  : "clip"
     , "stability": 3
     , "values"   : [
-        { "name": "clip"    , "code": "k", "stability": 2 }
+        { "name": "clip"    , "code": "k" }
       , { "name": "ellipsis", "code": "e" }
       , { "name": "fade"    , "code": "f", "stability": 2 }
       ]
@@ -1409,9 +1321,9 @@
     , "stability": 3
     , "values"   : [
         { "name": "none"      , "code": "n" }
-      , { "name": "capitalize", "code": "cp", "stability": 2 }
-      , { "name": "uppercase" , "code": "uc", "stability": 2 }
-      , { "name": "lowercase" , "code": "lc", "stability": 2 }
+      , { "name": "capitalize", "code": "cp" }
+      , { "name": "uppercase" , "code": "uc" }
+      , { "name": "lowercase" , "code": "lc" }
       ]
     , "pseudo": [
         "hover"
@@ -1441,12 +1353,12 @@
     , "values"   : [
         { "name": "baseline"   , "code": "a"  }
       , { "name": "bottom"     , "code": "b"  }
-      , { "name": "middle"     , "code": "c" , "stability": 2 }
+      , { "name": "middle"     , "code": "c"  }
       , { "name": "top"        , "code": "t"  }
       , { "name": "text-bottom", "code": "tb" }
       , { "name": "text-top"   , "code": "tt" }
       , { "name": "sub"        , "code": "sb" }
-      , { "name": "super"      , "code": "sp", "stability": 2 }
+      , { "name": "super"      , "code": "sp" }
       ]
     }
   , {

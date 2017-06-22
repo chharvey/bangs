@@ -97,16 +97,9 @@ This file has been moved. Go to https://chharvey.github.io/bangs/docs/props.html
 
 ### `white-space`
 
-### `overflow-wrap`
-
 ### `column-count`
 
 ### `column-width`
-
-### `page-break-[before|after]`
-```
-.-pbb  .-pba
-```
 
 
 ## Box Cosmetics

@@ -104,10 +104,9 @@ block append main
   section#extensions
     h2 Extensions
     p.
-      By default, all bangs work in all media types. Additionally, each bang supports the
-      #[code screen] and #[code print] media queries.
-      Even further, there are more sets of classes that provide support for
-      additional media queries and hover/focus, and these are mentioned on a per-property basis below.
+      By default, all bangs work in all media types. Additionally,
+      there are more sets of classes that provide support for
+      additional media queries and pseudo-classes.
     table
       caption Media Query &amp; Pseudo-Class Support
       thead: tr
@@ -115,7 +114,9 @@ block append main
         th query/pseudo
         th property support
       mixin list(props, complement)
-        if complement
+        if props.length === 0
+          strong all properties
+        else if props.length > 0 && complement
           strong all properties except:
         ul.o-List.-mb-z
           each prop in props
