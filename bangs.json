@@ -82,10 +82,10 @@
     , "values"   : [
         { "name": "normal"       , "code": "n"  }
       , { "name": "center"       , "code": "c"  }
-      , { "name": "start"        , "code": "s"  }
-      , { "name": "end"          , "code": "e"  }
       , { "name": "flex-start"   , "code": "xs", "stability": 2 }
       , { "name": "flex-end"     , "code": "xe", "stability": 2 }
+      , { "name": "start"        , "code": "s"  }
+      , { "name": "end"          , "code": "e"  }
       , { "name": "stretch"      , "code": "st" }
       , { "name": "space-between", "code": "sb" }
       , { "name": "space-around" , "code": "sa" }
@@ -103,10 +103,10 @@
     , "values"   : [
         { "name": "normal"       , "code": "n"  }
       , { "name": "center"       , "code": "c"  }
-      , { "name": "start"        , "code": "s"  }
-      , { "name": "end"          , "code": "e"  }
       , { "name": "flex-start"   , "code": "xs", "stability": 2 }
       , { "name": "flex-end"     , "code": "xe", "stability": 2 }
+      , { "name": "start"        , "code": "s"  }
+      , { "name": "end"          , "code": "e"  }
       , { "name": "self-start"   , "code": "ss" }
       , { "name": "self-end"     , "code": "se" }
       , { "name": "stretch"      , "code": "st" }
@@ -124,10 +124,10 @@
         { "name": "auto"         , "code": "a"  }
       , { "name": "normal"       , "code": "n"  }
       , { "name": "center"       , "code": "c"  }
-      , { "name": "start"        , "code": "s"  }
-      , { "name": "end"          , "code": "e"  }
       , { "name": "flex-start"   , "code": "xs", "stability": 2 }
       , { "name": "flex-end"     , "code": "xe", "stability": 2 }
+      , { "name": "start"        , "code": "s"  }
+      , { "name": "end"          , "code": "e"  }
       , { "name": "self-start"   , "code": "ss" }
       , { "name": "self-end"     , "code": "se" }
       , { "name": "stretch"      , "code": "st" }
@@ -815,10 +815,10 @@
     , "values"   : [
         { "name": "normal"       , "code": "n"  }
       , { "name": "center"       , "code": "c"  }
-      , { "name": "start"        , "code": "s"  }
-      , { "name": "end"          , "code": "e"  }
       , { "name": "flex-start"   , "code": "xs", "stability": 2 }
       , { "name": "flex-end"     , "code": "xe", "stability": 2 }
+      , { "name": "start"        , "code": "s"  }
+      , { "name": "end"          , "code": "e"  }
       , { "name": "stretch"      , "code": "st" }
       , { "name": "space-between", "code": "sb" }
       , { "name": "space-around" , "code": "sa" }
@@ -836,10 +836,10 @@
     , "values"   : [
         { "name": "normal"       , "code": "n"  }
       , { "name": "center"       , "code": "c"  }
-      , { "name": "start"        , "code": "s"  }
-      , { "name": "end"          , "code": "e"  }
       , { "name": "flex-start"   , "code": "xs", "stability": 2 }
       , { "name": "flex-end"     , "code": "xe", "stability": 2 }
+      , { "name": "start"        , "code": "s"  }
+      , { "name": "end"          , "code": "e"  }
       , { "name": "self-start"   , "code": "ss" }
       , { "name": "self-end"     , "code": "se" }
       , { "name": "stretch"      , "code": "st" }
@@ -857,10 +857,10 @@
         { "name": "auto"         , "code": "a"  }
       , { "name": "normal"       , "code": "n"  }
       , { "name": "center"       , "code": "c"  }
-      , { "name": "start"        , "code": "s"  }
-      , { "name": "end"          , "code": "e"  }
       , { "name": "flex-start"   , "code": "xs", "stability": 2 }
       , { "name": "flex-end"     , "code": "xe", "stability": 2 }
+      , { "name": "start"        , "code": "s"  }
+      , { "name": "end"          , "code": "e"  }
       , { "name": "self-start"   , "code": "ss" }
       , { "name": "self-end"     , "code": "se" }
       , { "name": "stretch"      , "code": "st" }
