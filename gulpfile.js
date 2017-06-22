@@ -59,7 +59,17 @@ gulp.task('lessc:bangs', ['src:less'], function () {
 
 gulp.task('minify', ['lessc:bangs'], function () {
   return gulp.src('bangs.css')
-    .pipe(clean_css())
+    .pipe(clean_css({
+      level: {
+        1: {
+          optimizeFontWeight: false // browsers may not always map `{ normal: 400, bold: 700 }`
+        }
+      , 2: {
+          overrideProperties: false // need fallbacks for `initial` and `unset`
+        , restructureRules: true // combines selectors having the same rule (akin to `&:extend()`) // REVIEW be careful here
+        }
+      }
+    }))
     .pipe(rename('bangs.min.css')) // TODO: use a SourceMap!
     .pipe(gulp.dest('./'))
 })
