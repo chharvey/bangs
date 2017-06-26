@@ -6,6 +6,7 @@ var pug = require('gulp-pug')
 var less = require('gulp-less')
 var autoprefixer = require('gulp-autoprefixer')
 var clean_css = require('gulp-clean-css')
+var sourcemaps = require('gulp-sourcemaps')
 
 var Bangs = require('./_models/Bangs.class.js')
 
@@ -59,6 +60,7 @@ gulp.task('lessc:bangs', ['src:less'], function () {
 
 gulp.task('minify', ['lessc:bangs'], function () {
   return gulp.src('bangs.css')
+    .pipe(sourcemaps.init())
     .pipe(clean_css({
       level: {
         1: {
@@ -70,7 +72,8 @@ gulp.task('minify', ['lessc:bangs'], function () {
         }
       }
     }))
-    .pipe(rename('bangs.min.css')) // TODO: use a SourceMap!
+    .pipe(rename('bangs.min.css'))
+    .pipe(sourcemaps.write('./')) // writes to an external .map file
     .pipe(gulp.dest('./'))
 })
 
