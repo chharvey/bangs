@@ -1,24 +1,10 @@
 var Ajv = require('ajv')
 var Util = require('./Util.class.js')
 
-module.exports = (function () {
-  /**
-   * A set of static members used for the site.
-   * Similar to a utility class.
-   * @constructor
-   */
-  function Bangs() {}
-
-  /**
-   * This project’s data, compiled from raw JSON.
-   * NOTE: WARNING: IMPURE FUNCTION (modifies parameter).
-   * Call functions on CSS properties, pushing entries to their `values` arrays.
-   * The function called on each CSS property is specified by items in its `generators` array.
-   * See `/bangs.json` for more information
-   * @type {Object}
-   */
-  Bangs.DATA = (function compileData(data) {
+const DATA = (function compileData(data) {
+  // REVIEW indentation
     /**
+     * NOTE: type definition
      * A `TransformObj` object defines 3 nullable functions that determine how to transform a pure data value
      * into a css `<value>` type (the type used to denote values of css properties).
      * Each function takes 1 argument (of unknown type, depending on the function that requires it as a parameter),
@@ -165,13 +151,32 @@ module.exports = (function () {
     })()
   })(Util.cloneDeep(require('../bangs.json')))
 
+module.exports = class Bangs {
+  /**
+   * A set of static members used for the site.
+   * Similar to a utility class.
+   * @constructor
+   */
+  constructor() {}
+
+  /**
+   * This project’s data, compiled from raw JSON.
+   * NOTE: WARNING: IMPURE FUNCTION (modifies parameter).
+   * Call functions on CSS properties, pushing entries to their `values` arrays.
+   * The function called on each CSS property is specified by items in its `generators` array.
+   * See `/bangs.json` for more information
+   * @type {Object}
+   */
+  static get DATA() { return DATA }
+
   /**
    * Generate Less from the compiled data.
    * @param  {!Object} property a CSS property JSON object
    */
-  Bangs.generateLess = function generateLess(property) {
+  static generateLess(property) {
     let supported_media = Bangs.DATA.global.media.filter((m) => !(property.non_media || []).includes(m.name))
     let supported_pseudos = Bangs.DATA.global.pseudo.filter((p) => (property.pseudo || []).includes(p.name))
+
     /**
      * Output multiple CSS rulesets corresponding to a set of values.
      * @return {string} multiple rulesets concatenated into a string
@@ -215,6 +220,7 @@ module.exports = (function () {
       })
       return rulesets.join('\n')
     }
+
     /**
      * Similar to `output()`, but with a suffix for an at-rule.
      * @param  {string} suffix suffix appended to classname
@@ -234,6 +240,7 @@ module.exports = (function () {
         }
       `
     }
+
     /**
      * Similar to `output()`, but with a suffix for a pseudo-class.
      * @param  {string} suffix suffix appended to classname
@@ -250,10 +257,9 @@ module.exports = (function () {
       })
       return rulesets.join('\n')
     }
+
     return output()
       + supported_media.map((m) => m.code).map(atRule).join('')
       + supported_pseudos.map((p) => p.code).map(pseudoClass).join('')
   }
-
-  return Bangs
-})()
+}

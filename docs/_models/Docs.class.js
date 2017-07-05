@@ -1,22 +1,7 @@
 var Page = require('sitepage').Page
 
-module.exports = (function () {
-  // CONSTRUCTOR
-  /**
-   * A set of static members used for the documentation subsite.
-   * Similar to a utility class.
-   * @constructor
-   */
-  function Docs() {}
-
-  // METHODS
-
-  // STATIC MEMBERS
-  /**
-   * Documentation site for this project.
-   * @type {Page}
-   */
-  Docs.DOCS = new Page({ name: 'Bangs!', url: '/docs/' })
+const DOCS = new Page({ name: 'Bangs!', url: '/docs/' })
+  // REVIEW indentation
     .title('Bangs! by Chris Harvey')
     .description('Unopinionated, single-responsibility CSS class selectors marked with !important.')
     .add(new Page({ name: 'Home', url: '/docs/index.html' })
@@ -125,5 +110,17 @@ module.exports = (function () {
       )
     )
 
-  return Docs
-})()
+module.exports = class Docs {
+  /**
+   * A set of static members used for the documentation subsite.
+   * Similar to a utility class.
+   * @constructor
+   */
+  constructor() {}
+
+  /**
+   * Documentation site for this project.
+   * @type {Page}
+   */
+  static get DOCS() { return DOCS }
+}
