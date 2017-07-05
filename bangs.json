@@ -1,1445 +1,1445 @@
 {
   "global": {
     "values": [
-      { "name": "inherit", "code": "i" }
-    , { "name": "initial", "code": "0" }
-    , { "name": "unset"  , "code": "u" }
-    ]
-  , "types": [
+      { "name": "inherit", "code": "i" },
+      { "name": "initial", "code": "0" },
+      { "name": "unset"  , "code": "u" }
+    ],
+    "types": [
       {
-        "name": "<line-width>"
-      , "url" : "https://developer.mozilla.org/en-US/docs/Web/CSS/length"
-      , "values": [
-          { "name": "1px" , "code": "1"  }
-        , { "name": "2px" , "code": "2"  }
-        , { "name": "4px" , "code": "4"  }
-        , { "name": "8px" , "code": "8"  }
-        , { "name": "16px", "code": "16" }
+        "name": "<line-width>",
+        "url" : "https://developer.mozilla.org/en-US/docs/Web/CSS/length",
+        "values": [
+          { "name": "1px" , "code": "1"  },
+          { "name": "2px" , "code": "2"  },
+          { "name": "4px" , "code": "4"  },
+          { "name": "8px" , "code": "8"  },
+          { "name": "16px", "code": "16" }
+        ]
+      },
+      {
+        "name": "<line-style>",
+        "values": [
+          { "name": "none"   , "code": "n"  },
+          { "name": "hidden" , "code": "h"  },
+          { "name": "solid"  , "code": "s"  },
+          { "name": "dotted" , "code": "do" },
+          { "name": "dashed" , "code": "da" },
+          { "name": "double" , "code": "db" },
+          { "name": "groove" , "code": "gv" },
+          { "name": "ridge"  , "code": "rg" },
+          { "name": "inset"  , "code": "is" },
+          { "name": "outset" , "code": "os" }
+        ]
+      },
+      {
+        "name": "<color>",
+        "url" : "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value",
+        "values": [
+          { "name": "transparent" , "code": "t" },
+          { "name": "currentColor", "code": "c" },
+          { "name": "#000"        , "code": "b" },
+          { "name": "#fff"        , "code": "w" }
         ]
       }
-    , {
-        "name": "<line-style>"
-      , "values": [
-          { "name": "none"   , "code": "n"  }
-        , { "name": "hidden" , "code": "h"  }
-        , { "name": "solid"  , "code": "s"  }
-        , { "name": "dotted" , "code": "do" }
-        , { "name": "dashed" , "code": "da" }
-        , { "name": "double" , "code": "db" }
-        , { "name": "groove" , "code": "gv" }
-        , { "name": "ridge"  , "code": "rg" }
-        , { "name": "inset"  , "code": "is" }
-        , { "name": "outset" , "code": "os" }
-        ]
-      }
-    , {
-        "name": "<color>"
-      , "url" : "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value"
-      , "values": [
-          { "name": "transparent" , "code": "t" }
-        , { "name": "currentColor", "code": "c" }
-        , { "name": "#000"        , "code": "b" }
-        , { "name": "#fff"        , "code": "w" }
-        ]
-      }
-    ]
-  , "common_data": {
-      "tracks": [1, 2, 3, 4, 5, 6, 8, 10, 12]
-    , "spacing": [0.25, 0.5, 1, 2, 4, 8, 16]
-    }
-  , "media": [
-      { "name": "small+"  , "code": "sK", "query": "screen  and (min-width: 30em)" }
-    , { "name": "medium+" , "code": "sM", "query": "screen  and (min-width: 45em)" }
-    , { "name": "large+"  , "code": "sG", "query": "screen  and (min-width: 60em)" }
-    , { "name": "xlarge+" , "code": "sT", "query": "screen  and (min-width: 75em)" }
-    , { "name": "xxlarge+", "code": "sP", "query": "screen  and (min-width: 90em)" }
-    , { "name": "xsmall-" , "code": "nK", "query": "not all and (min-width: 30em)" }
-    , { "name": "small-"  , "code": "nM", "query": "not all and (min-width: 45em)" }
-    , { "name": "medium-" , "code": "nG", "query": "not all and (min-width: 60em)" }
-    , { "name": "large-"  , "code": "nT", "query": "not all and (min-width: 75em)" }
-    , { "name": "xlarge-" , "code": "nP", "query": "not all and (min-width: 90em)" }
-    ]
-  , "pseudo": [
+    ],
+    "common_data": {
+      "tracks": [1, 2, 3, 4, 5, 6, 8, 10, 12],
+      "spacing": [0.25, 0.5, 1, 2, 4, 8, 16]
+    },
+    "media": [
+      { "name": "small+"  , "code": "sK", "query": "screen  and (min-width: 30em)" },
+      { "name": "medium+" , "code": "sM", "query": "screen  and (min-width: 45em)" },
+      { "name": "large+"  , "code": "sG", "query": "screen  and (min-width: 60em)" },
+      { "name": "xlarge+" , "code": "sT", "query": "screen  and (min-width: 75em)" },
+      { "name": "xxlarge+", "code": "sP", "query": "screen  and (min-width: 90em)" },
+      { "name": "xsmall-" , "code": "nK", "query": "not all and (min-width: 30em)" },
+      { "name": "small-"  , "code": "nM", "query": "not all and (min-width: 45em)" },
+      { "name": "medium-" , "code": "nG", "query": "not all and (min-width: 60em)" },
+      { "name": "large-"  , "code": "nT", "query": "not all and (min-width: 75em)" },
+      { "name": "xlarge-" , "code": "nP", "query": "not all and (min-width: 90em)" }
+    ],
+    "pseudo": [
       { "name": "hover", "code": "h", "selectors": [":hover", ":focus"] }
+    ],
+    "stability_levels": [
+      { "name": "obsolete"    , "description": "This feature is no longer supported. Do not use it." },
+      { "name": "deprecated"  , "description": "Breaking changes are planned for this feature, or it will be removed in future versions. It is no longer in development, and should not be relied upon." },
+      { "name": "experimental", "description": "This feature is in development, but is unsupported or subject to change. It could be removed in future versions." },
+      { "name": "stable"      , "description": "This feature has been tested and proven satisfactory. It is in development, but no breaking changes will be made unless absolutely necessary." },
+      { "name": "locked"      , "description": "Only patches will be made to this feature. It may be heavily relied upon and will not be removed in future versions." }
     ]
-  , "stability_levels": [
-      { "name": "obsolete"    , "description": "This feature is no longer supported. Do not use it." }
-    , { "name": "deprecated"  , "description": "Breaking changes are planned for this feature, or it will be removed in future versions. It is no longer in development, and should not be relied upon." }
-    , { "name": "experimental", "description": "This feature is in development, but is unsupported or subject to change. It could be removed in future versions." }
-    , { "name": "stable"      , "description": "This feature has been tested and proven satisfactory. It is in development, but no breaking changes will be made unless absolutely necessary." }
-    , { "name": "locked"      , "description": "Only patches will be made to this feature. It may be heavily relied upon and will not be removed in future versions." }
-    ]
-  }
-, "properties": [
+  },
+  "properties": [
     {
-      "name"     : "align-content"
-    , "code"     : "ac"
-    , "summary"  : "Defines how space is distributed along the block/cross/column-axis."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/align-content"
-    , "inherited": false
-    , "initial"  : "normal"
-    , "stability": 3
-    , "values"   : [
-        { "name": "normal"       , "code": "n"  }
-      , { "name": "center"       , "code": "c"  }
-      , { "name": "flex-start"   , "code": "xs", "stability": 2 }
-      , { "name": "flex-end"     , "code": "xe", "stability": 2 }
-      , { "name": "start"        , "code": "s"  }
-      , { "name": "end"          , "code": "e"  }
-      , { "name": "stretch"      , "code": "st" }
-      , { "name": "space-between", "code": "sb" }
-      , { "name": "space-around" , "code": "sa" }
-      , { "name": "space-evenly" , "code": "sv" }
+      "name"     : "align-content",
+      "code"     : "ac",
+      "summary"  : "Defines how space is distributed along the block/cross/column-axis.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/align-content",
+      "inherited": false,
+      "initial"  : "normal",
+      "stability": 3,
+      "values"   : [
+        { "name": "normal"       , "code": "n"  },
+        { "name": "center"       , "code": "c"  },
+        { "name": "flex-start"   , "code": "xs", "stability": 2 },
+        { "name": "flex-end"     , "code": "xe", "stability": 2 },
+        { "name": "start"        , "code": "s"  },
+        { "name": "end"          , "code": "e"  },
+        { "name": "stretch"      , "code": "st" },
+        { "name": "space-between", "code": "sb" },
+        { "name": "space-around" , "code": "sa" },
+        { "name": "space-evenly" , "code": "sv" }
       ]
-    }
-  , {
-      "name"     : "align-items"
-    , "code"     : "ai"
-    , "summary"  : "Defines how item contents are aligned along the block/cross/column-axis."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/align-items"
-    , "inherited": false
-    , "initial"  : "normal"
-    , "stability": 3
-    , "values"   : [
-        { "name": "normal"       , "code": "n"  }
-      , { "name": "center"       , "code": "c"  }
-      , { "name": "flex-start"   , "code": "xs", "stability": 2 }
-      , { "name": "flex-end"     , "code": "xe", "stability": 2 }
-      , { "name": "start"        , "code": "s"  }
-      , { "name": "end"          , "code": "e"  }
-      , { "name": "self-start"   , "code": "ss" }
-      , { "name": "self-end"     , "code": "se" }
-      , { "name": "stretch"      , "code": "st" }
+    },
+    {
+      "name"     : "align-items",
+      "code"     : "ai",
+      "summary"  : "Defines how item contents are aligned along the block/cross/column-axis.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/align-items",
+      "inherited": false,
+      "initial"  : "normal",
+      "stability": 3,
+      "values"   : [
+        { "name": "normal"       , "code": "n"  },
+        { "name": "center"       , "code": "c"  },
+        { "name": "flex-start"   , "code": "xs", "stability": 2 },
+        { "name": "flex-end"     , "code": "xe", "stability": 2 },
+        { "name": "start"        , "code": "s"  },
+        { "name": "end"          , "code": "e"  },
+        { "name": "self-start"   , "code": "ss" },
+        { "name": "self-end"     , "code": "se" },
+        { "name": "stretch"      , "code": "st" }
       ]
-    }
-  , {
-      "name"     : "align-self"
-    , "code"     : "as"
-    , "summary"  : "Overrides parent `align-items` property."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/align-self"
-    , "inherited": false
-    , "initial"  : "auto"
-    , "stability": 3
-    , "values"   : [
-        { "name": "auto"         , "code": "a"  }
-      , { "name": "normal"       , "code": "n"  }
-      , { "name": "center"       , "code": "c"  }
-      , { "name": "flex-start"   , "code": "xs", "stability": 2 }
-      , { "name": "flex-end"     , "code": "xe", "stability": 2 }
-      , { "name": "start"        , "code": "s"  }
-      , { "name": "end"          , "code": "e"  }
-      , { "name": "self-start"   , "code": "ss" }
-      , { "name": "self-end"     , "code": "se" }
-      , { "name": "stretch"      , "code": "st" }
+    },
+    {
+      "name"     : "align-self",
+      "code"     : "as",
+      "summary"  : "Overrides parent `align-items` property.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/align-self",
+      "inherited": false,
+      "initial"  : "auto",
+      "stability": 3,
+      "values"   : [
+        { "name": "auto"         , "code": "a"  },
+        { "name": "normal"       , "code": "n"  },
+        { "name": "center"       , "code": "c"  },
+        { "name": "flex-start"   , "code": "xs", "stability": 2 },
+        { "name": "flex-end"     , "code": "xe", "stability": 2 },
+        { "name": "start"        , "code": "s"  },
+        { "name": "end"          , "code": "e"  },
+        { "name": "self-start"   , "code": "ss" },
+        { "name": "self-end"     , "code": "se" },
+        { "name": "stretch"      , "code": "st" }
       ]
-    }
-  , {
-      "name"     : "background-attachment"
-    , "code"     : "ba"
-    , "summary"  : "Sets how the background image is attached to the viewport."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment"
-    , "inherited": false
-    , "initial"  : "scroll"
-    , "stability": 3
-    , "values"   : [
-        { "name": "scroll", "code": "s" }
-      , { "name": "fixed" , "code": "f" }
-      , { "name": "local" , "code": "l" }
+    },
+    {
+      "name"     : "background-attachment",
+      "code"     : "ba",
+      "summary"  : "Sets how the background image is attached to the viewport.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment",
+      "inherited": false,
+      "initial"  : "scroll",
+      "stability": 3,
+      "values"   : [
+        { "name": "scroll", "code": "s" },
+        { "name": "fixed" , "code": "f" },
+        { "name": "local" , "code": "l" }
       ]
-    }
-  , {
-      "name"     : "background-clip"
-    , "code"     : "bk"
-    , "summary"  : "Sets whether the background image/color extends beneath the padding/border."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip"
-    , "inherited": false
-    , "initial"  : "border-box"
-    , "stability": 3
-    , "values"   : [
-        { "name": "content-box", "code": "c" }
-      , { "name": "padding-box", "code": "p" }
-      , { "name": "border-box" , "code": "r" }
+    },
+    {
+      "name"     : "background-clip",
+      "code"     : "bk",
+      "summary"  : "Sets whether the background image/color extends beneath the padding/border.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip",
+      "inherited": false,
+      "initial"  : "border-box",
+      "stability": 3,
+      "values"   : [
+        { "name": "content-box", "code": "c" },
+        { "name": "padding-box", "code": "p" },
+        { "name": "border-box" , "code": "r" }
       ]
-    }
-  , {
-      "name"     : "background-color"
-    , "code"     : "bc"
-    , "summary"  : "Sets the background color."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/background-color"
-    , "inherited": false
-    , "initial"  : "transparent"
-    , "stability": 3
-    , "values"   : [
-      ]
-    , "generators": [
+    },
+    {
+      "name"     : "background-color",
+      "code"     : "bc",
+      "summary"  : "Sets the background color.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/background-color",
+      "inherited": false,
+      "initial"  : "transparent",
+      "stability": 3,
+      "values"   : [
+      ],
+      "generators": [
         {
-          "name": "importValueType"
-        , "options": { "name": "<color>" }
+          "name": "importValueType",
+          "options": { "name": "<color>" }
         }
-      ]
-    , "pseudo": [
+      ],
+     "pseudo": [
         "hover"
       ]
-    }
-  , {
-      "name"     : "background-image"
-    , "code"     : "bi"
-    , "summary"  : "Sets the background image."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/background-image"
-    , "inherited": false
-    , "initial"  : "none"
-    , "stability": 3
-    , "values"   : [
+    },
+    {
+      "name"     : "background-image",
+      "code"     : "bi",
+      "summary"  : "Sets the background image.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/background-image",
+      "inherited": false,
+      "initial"  : "none",
+      "stability": 3,
+      "values"   : [
         { "name": "none", "code": "n" }
       ]
-    }
-  , {
-      "name"     : "background-origin"
-    , "code"     : "bo"
-    , "summary"  : "Sets the position of the origin of the background image."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin"
-    , "inherited": false
-    , "initial"  : "padding-box"
-    , "stability": 3
-    , "values"   : [
-        { "name": "content-box", "code": "c" }
-      , { "name": "padding-box", "code": "p" }
-      , { "name": "border-box" , "code": "r" }
+    },
+    {
+      "name"     : "background-origin",
+      "code"     : "bo",
+      "summary"  : "Sets the position of the origin of the background image.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin",
+      "inherited": false,
+      "initial"  : "padding-box",
+      "stability": 3,
+      "values"   : [
+        { "name": "content-box", "code": "c" },
+        { "name": "padding-box", "code": "p" },
+        { "name": "border-box" , "code": "r" }
       ]
-    }
-  , {
-      "name"     : "background-position"
-    , "code"     : "bp"
-    , "summary"  : "Sets the position of the background image."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/background-position"
-    , "inherited": false
-    , "initial"  : "0% 0%"
-    , "stability": 2
-    , "values"   : [
-        { "name": "left"         , "code": "l"  }
-      , { "name": "right"        , "code": "r"  }
-      , { "name": "center"       , "code": "c"  }
-      , { "name": "top"          , "code": "t"  }
-      , { "name": "bottom"       , "code": "b"  }
-      , { "name": "left   top   ", "code": "lt" }
-      , { "name": "left   center", "code": "lc" }
-      , { "name": "left   bottom", "code": "lb" }
-      , { "name": "center top   ", "code": "ct" }
-      , { "name": "center center", "code": "cc" }
-      , { "name": "center bottom", "code": "cb" }
-      , { "name": "right  top   ", "code": "rt" }
-      , { "name": "right  center", "code": "rc" }
-      , { "name": "right  bottom", "code": "rb" }
+    },
+    {
+      "name"     : "background-position",
+      "code"     : "bp",
+      "summary"  : "Sets the position of the background image.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/background-position",
+      "inherited": false,
+      "initial"  : "0% 0%",
+      "stability": 2,
+      "values"   : [
+        { "name": "left"         , "code": "l"  },
+        { "name": "right"        , "code": "r"  },
+        { "name": "center"       , "code": "c"  },
+        { "name": "top"          , "code": "t"  },
+        { "name": "bottom"       , "code": "b"  },
+        { "name": "left   top   ", "code": "lt" },
+        { "name": "left   center", "code": "lc" },
+        { "name": "left   bottom", "code": "lb" },
+        { "name": "center top   ", "code": "ct" },
+        { "name": "center center", "code": "cc" },
+        { "name": "center bottom", "code": "cb" },
+        { "name": "right  top   ", "code": "rt" },
+        { "name": "right  center", "code": "rc" },
+        { "name": "right  bottom", "code": "rb" }
       ]
-    }
-  , {
-      "name"     : "background-repeat"
-    , "code"     : "br"
-    , "summary"  : "Defines how the background image repeats."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat"
-    , "inherited": false
-    , "initial"  : "repeat"
-    , "stability": 2
-    , "values"   : [
-        { "name": "repeat"   , "code": "r"  , "alt": "background-repeat: repeat repeat"       }
-      , { "name": "no-repeat", "code": "nr" , "alt": "background-repeat: no-repeat no-repeat" }
-      , { "name": "space"    , "code": "sp" , "alt": "background-repeat: space space"         }
-      , { "name": "round"    , "code": "rd" , "alt": "background-repeat: round round"         }
-      , { "name": "repeat-x" , "code": "rx" , "alt": "background-repeat: repeat no-repeat"    }
-      , { "name": "repeat-y" , "code": "ry" , "alt": "background-repeat: no-repeat repeat"    }
-      , { "name": "space-x"  , "code": "spx", "use": "background-repeat: space no-repeat"     }
-      , { "name": "space-y"  , "code": "spy", "use": "background-repeat: no-repeat space"     }
-      , { "name": "round-x"  , "code": "rdx", "use": "background-repeat: round no-repeat"     }
-      , { "name": "round-y"  , "code": "rdy", "use": "background-repeat: no-repeat round"     }
-      , { "name": "repeat space", "code": "r_sp"  }
-      , { "name": "repeat round", "code": "r_rd"  }
-      , { "name": "space repeat", "code": "sp_r"  }
-      , { "name": "space round" , "code": "sp_rd" }
-      , { "name": "round repeat", "code": "rd_r"  }
-      , { "name": "round space" , "code": "rd_sp" }
+    },
+    {
+      "name"     : "background-repeat",
+      "code"     : "br",
+      "summary"  : "Defines how the background image repeats.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat",
+      "inherited": false,
+      "initial"  : "repeat",
+      "stability": 2,
+      "values"   : [
+        { "name": "repeat"   , "code": "r"  , "alt": "background-repeat: repeat repeat"       },
+        { "name": "no-repeat", "code": "nr" , "alt": "background-repeat: no-repeat no-repeat" },
+        { "name": "space"    , "code": "sp" , "alt": "background-repeat: space space"         },
+        { "name": "round"    , "code": "rd" , "alt": "background-repeat: round round"         },
+        { "name": "repeat-x" , "code": "rx" , "alt": "background-repeat: repeat no-repeat"    },
+        { "name": "repeat-y" , "code": "ry" , "alt": "background-repeat: no-repeat repeat"    },
+        { "name": "space-x"  , "code": "spx", "use": "background-repeat: space no-repeat"     },
+        { "name": "space-y"  , "code": "spy", "use": "background-repeat: no-repeat space"     },
+        { "name": "round-x"  , "code": "rdx", "use": "background-repeat: round no-repeat"     },
+        { "name": "round-y"  , "code": "rdy", "use": "background-repeat: no-repeat round"     },
+        { "name": "repeat space", "code": "r_sp"  },
+        { "name": "repeat round", "code": "r_rd"  },
+        { "name": "space repeat", "code": "sp_r"  },
+        { "name": "space round" , "code": "sp_rd" },
+        { "name": "round repeat", "code": "rd_r"  },
+        { "name": "round space" , "code": "rd_sp" }
       ]
-    }
-  , {
-      "name"     : "background-size"
-    , "code"     : "bz"
-    , "summary"  : "Sets the size of the background image."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/background-size"
-    , "inherited": false
-    , "initial"  : "auto auto"
-    , "stability": 3
-    , "values"   : [
-        { "name": "auto"   , "code": "a"  }
-      , { "name": "contain", "code": "cn" }
-      , { "name": "cover"  , "code": "cr" }
+    },
+    {
+      "name"     : "background-size",
+      "code"     : "bz",
+      "summary"  : "Sets the size of the background image.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/background-size",
+      "inherited": false,
+      "initial"  : "auto auto",
+      "stability": 3,
+      "values"   : [
+        { "name": "auto"   , "code": "a"  },
+        { "name": "contain", "code": "cn" },
+        { "name": "cover"  , "code": "cr" }
       ]
-    }
-  , {
-      "name"     : "border-color"
-    , "code"     : "rc"
-    , "summary"  : "Sets the color of an element’s border."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/border-color"
-    , "inherited": false
-    , "initial"  : "currentColor"
-    , "stability": 3
-    , "values"   : [
-      ]
-    , "generators": [
+    },
+    {
+      "name"     : "border-color",
+      "code"     : "rc",
+      "summary"  : "Sets the color of an element’s border.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/border-color",
+      "inherited": false,
+      "initial"  : "currentColor",
+      "stability": 3,
+      "values"   : [
+      ],
+      "generators": [
         {
-          "name": "importValueType"
-        , "options": { "name": "<color>" }
+          "name": "importValueType",
+          "options": { "name": "<color>" }
         }
       ]
-    }
-  , {
-      "name"     : "border-radius"
-    , "code"     : "rr"
-    , "summary"  : "Defines rounded corners on an element."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius"
-    , "inherited": false
-    , "initial"  : "0"
-    , "stability": 2
-    , "values"   : [
-        { "name": "0"      , "code": "z" }
-      , { "name": "0.25rem", "code": "q" }
-      , { "name": "0.5rem" , "code": "h" }
-      , { "name": "1rem"   , "code": "1" }
-      , { "name": "2rem"   , "code": "2" }
-      , { "name": "50%"    , "code": "1o2" }
+    },
+    {
+      "name"     : "border-radius",
+      "code"     : "rr",
+      "summary"  : "Defines rounded corners on an element.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius",
+      "inherited": false,
+      "initial"  : "0",
+      "stability": 2,
+      "values"   : [
+        { "name": "0"      , "code": "z" },
+        { "name": "0.25rem", "code": "q" },
+        { "name": "0.5rem" , "code": "h" },
+        { "name": "1rem"   , "code": "1" },
+        { "name": "2rem"   , "code": "2" },
+        { "name": "50%"    , "code": "1o2" }
       ]
-    }
-  , {
-      "name"     : "border-style"
-    , "code"     : "rs"
-    , "summary"  : "Sets the line style of an element’s border."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/border-style"
-    , "inherited": false
-    , "initial"  : "none"
-    , "stability": 3
-    , "values"   : [
-      ]
-    , "generators": [
+    },
+    {
+      "name"     : "border-style",
+      "code"     : "rs",
+      "summary"  : "Sets the line style of an element’s border.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/border-style",
+      "inherited": false,
+      "initial"  : "none",
+      "stability": 3,
+      "values"   : [
+      ],
+      "generators": [
         {
-          "name": "importValueType"
-        , "options": { "name": "<line-style>" }
+          "name": "importValueType",
+          "options": { "name": "<line-style>" }
         }
       ]
-    }
-  , {
-      "name"     : "border-width"
-    , "code"     : "rw"
-    , "summary"  : "Sets the line width of an element’s border."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/border-width"
-    , "inherited": false
-    , "initial"  : "medium"
-    , "stability": 3
-    , "values"   : [
+    },
+    {
+      "name"     : "border-width",
+      "code"     : "rw",
+      "summary"  : "Sets the line width of an element’s border.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/border-width",
+      "inherited": false,
+      "initial"  : "medium",
+      "stability": 3,
+      "values"   : [
         { "name": "0", "code": "z" }
-      ]
-    , "generators": [
+      ],
+      "generators": [
         {
-          "name": "importValueType"
-        , "options": { "name": "<line-width>" }
+          "name": "importValueType",
+          "options": { "name": "<line-width>" }
         }
       ]
-    }
-  , {
-      "name"     : "bottom"
-    , "code"     : "b"
-    , "summary"  : "Specifies how far to position an element from the bottom."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/bottom"
-    , "inherited": false
-    , "initial"  : "auto"
-    , "stability": 3
-    , "values": [
-        { "name": "auto", "code": "a" }
-      , { "name": "0"   , "code": "z" }
+    },
+    {
+      "name"     : "bottom",
+      "code"     : "b",
+      "summary"  : "Specifies how far to position an element from the bottom.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/bottom",
+      "inherited": false,
+      "initial"  : "auto",
+      "stability": 3,
+      "values": [
+        { "name": "auto", "code": "a" },
+        { "name": "0"   , "code": "z" }
       ]
-    }
-  , {
-      "name"     : "box-shadow"
-    , "code"     : "ks"
-    , "summary"  : "Describes one or more shadow effects on the frame of an element."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow"
-    , "inherited": false
-    , "initial"  : "none"
-    , "stability": 3
-    , "values"   : [
+    },
+    {
+      "name"     : "box-shadow",
+      "code"     : "ks",
+      "summary"  : "Describes one or more shadow effects on the frame of an element.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow",
+      "inherited": false,
+      "initial"  : "none",
+      "stability": 3,
+      "values"   : [
         { "name": "none", "code": "n" }
       ]
-    }
-  , {
-      "name"     : "box-sizing"
-    , "code"     : "kz"
-    , "summary"  : "Alters the CSS box model used to calculate width and height."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing"
-    , "inherited": false
-    , "initial"  : "content-box"
-    , "stability": 3
-    , "values"   : [
-        { "name": "content-box", "code": "c" }
-      , { "name": "border-box" , "code": "r" }
+    },
+    {
+      "name"     : "box-sizing",
+      "code"     : "kz",
+      "summary"  : "Alters the CSS box model used to calculate width and height.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing",
+      "inherited": false,
+      "initial"  : "content-box",
+      "stability": 3,
+      "values"   : [
+        { "name": "content-box", "code": "c" },
+        { "name": "border-box" , "code": "r" }
       ]
-    }
-  , {
-      "name"     : "clear"
-    , "code"     : "cl"
-    , "summary"  : "Specifies positioning next to floating elements."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/clear"
-    , "inherited": false
-    , "initial"  : "none"
-    , "stability": 3
-    , "values"   : [
-        { "name": "none" , "code": "n" }
-      , { "name": "left" , "code": "l" }
-      , { "name": "right", "code": "r" }
-      , { "name": "both" , "code": "b" }
+    },
+    {
+      "name"     : "clear",
+      "code"     : "cl",
+      "summary"  : "Specifies positioning next to floating elements.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/clear",
+      "inherited": false,
+      "initial"  : "none",
+      "stability": 3,
+      "values"   : [
+        { "name": "none" , "code": "n" },
+        { "name": "left" , "code": "l" },
+        { "name": "right", "code": "r" },
+        { "name": "both" , "code": "b" }
       ]
-    }
-  , {
-      "name"     : "color"
-    , "code"     : "c"
-    , "summary"  : "Sets the text color."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/color"
-    , "inherited": true
-    , "initial"  : ""
-    , "stability": 3
-    , "values"   : [
-      ]
-    , "generators": [
+    },
+    {
+      "name"     : "color",
+      "code"     : "c",
+      "summary"  : "Sets the text color.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/color",
+      "inherited": true,
+      "initial"  : "",
+      "stability": 3,
+      "values"   : [
+      ],
+      "generators": [
         {
-          "name": "importValueType"
-        , "options": { "name": "<color>" }
+          "name": "importValueType",
+          "options": { "name": "<color>" }
         }
-      ]
-    , "pseudo": [
+      ],
+      "pseudo": [
         "hover"
       ]
-    }
-  , {
-      "name"     : "column-count"
-    , "code"     : "cc"
-    , "summary"  : "Sets the number of columns of content."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-count"
-    , "inherited": false
-    , "initial"  : "auto"
-    , "stability": 3
-    , "values"   : [
+    },
+    {
+      "name"     : "column-count",
+      "code"     : "cc",
+      "summary"  : "Sets the number of columns of content.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-count",
+      "inherited": false,
+      "initial"  : "auto",
+      "stability": 3,
+      "values"   : [
         { "name": "auto", "code": "a" }
-      ]
-    , "generators": [
+      ],
+      "generators": [
         {
-          "name": "generateCounts"
-        , "options": { "domain": "tracks" }
+          "name": "generateCounts",
+          "options": { "domain": "tracks" }
         }
       ]
-    }
-  , {
-      "name"     : "column-fill"
-    , "code"     : "cf"
-    , "summary"  : "Controls how contents are partitioned into columns."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-fill"
-    , "inherited": false
-    , "initial"  : "balance"
-    , "stability": 3
-    , "values"   : [
-        { "name": "balance", "code": "b" }
-      , { "name": "auto"   , "code": "a" }
-      ]
-    }
-  , {
-      "name"     : "column-gap"
-    , "code"     : "cg"
-    , "summary"  : "Sets the size of the gap between columns."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-gap"
-    , "inherited": false
-    , "initial"  : "normal"
-    , "stability": 3
-    , "values"   : [
-        { "name": "normal", "code": "n" }
-      , { "name": "0"     , "code": "z" }
-      ]
-    , "generators": [
-        {
-          "name": "generateSpaces"
-        , "transforms": { "namefn": ["length", "return `${length}rem`"] }
-        , "options": { "domain": "spacing" }
-        }
-      ]
-    }
-  , {
-      "name"     : "column-rule-color"
-    , "code"     : "crc"
-    , "summary"  : "Sets the color of the rule drawn between columns."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule-color"
-    , "inherited": false
-    , "initial"  : "currentColor"
-    , "stability": 3
-    , "values"   : [
-      ]
-    , "generators": [
-        {
-          "name": "importValueType"
-        , "options": { "name": "<color>" }
-        }
-      ]
-    }
-  , {
-      "name"     : "column-rule-style"
-    , "code"     : "crs"
-    , "summary"  : "Sets the line style of the rule drawn between columns."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule-style"
-    , "inherited": false
-    , "initial"  : "none"
-    , "stability": 3
-    , "values"   : [
-      ]
-    , "generators": [
-        {
-          "name": "importValueType"
-        , "options": { "name": "<line-style>" }
-        }
-      ]
-    }
-  , {
-      "name"     : "column-rule-width"
-    , "code"     : "crw"
-    , "summary"  : "Sets the width of the rule drawn between columns."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule-width"
-    , "inherited": false
-    , "initial"  : "medium"
-    , "stability": 3
-    , "values"   : [
-        { "name": "0", "code": "z" }
-      ]
-    , "generators": [
-        {
-          "name": "importValueType"
-        , "options": { "name": "<line-width>" }
-        }
-      ]
-    }
-  , {
-      "name"     : "column-span"
-    , "code"     : "cs"
-    , "summary"  : "Describes how many columns an element spans across."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-span"
-    , "inherited": false
-    , "initial"  : "none"
-    , "stability": 3
-    , "values"   : [
-        { "name": "none", "code": "n" }
-      , { "name": "all" , "code": "a" }
-      ]
-    }
-  , {
-      "name"     : "column-width"
-    , "code"     : "cw"
-    , "summary"  : "Suggests the optimal width for columns of content."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-width"
-    , "inherited": false
-    , "initial"  : "auto"
-    , "stability": 3
-    , "values"   : [
-        { "name": "auto", "code": "a" }
-      , { "name": "0"   , "code": "z" }
-      ]
-    }
-  , {
-      "name"     : "display"
-    , "code"     : "d"
-    , "summary"  : "Sets the type of box rendered."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/display"
-    , "inherited": false
-    , "initial"  : "inline"
-    , "stability": 2
-    , "values"   : [
-        { "name": "none"               , "code": "n"  , "stability": 3 }
-      , { "name": "contents"           , "code": "c"                   }
-      , { "name": "block"              , "code": "b"                   }
-      , { "name": "inline"             , "code": "l"                   }
-      , { "name": "run-in"             , "code": "r"                   }
-      , { "name": "flow"               , "code": "f"                   }
-      , { "name": "flow-root"          , "code": "o"                   }
-      , { "name": "table"              , "code": "t"  , "stability": 0 }
-      , { "name": "flex"               , "code": "x"  , "stability": 2 }
-      , { "name": "grid"               , "code": "g"  , "stability": 2 }
-      , { "name": "list-item"          , "code": "s"                   }
-      , { "name": "list-item flow-root", "code": "s_o"                 }
-      , { "name": "list-item inline"   , "code": "s_l"                 }
-      , { "name": "inline-block"       , "code": "lb" , "stability": 1, "alt": "display: inline flow-root" }
-      , { "name": "inline-list-item"   , "code": "ls" , "stability": 1, "alt": "display: list-item inline flow" }
-      , { "name": "inline-table"       , "code": "lt" , "stability": 1, "alt": "display: inline table" }
-      , { "name": "inline-flex"        , "code": "lf" , "stability": 1, "alt": "display: inline flex" }
-      , { "name": "inline-grid"        , "code": "lg" , "stability": 1, "alt": "display: inline grid" }
-      ]
-    }
-  , {
-      "name"     : "flex"
-    , "code"     : "x"
-    , "summary"  : "Shorthand for setting the flex-grow, flex-shrink, and flex-basis properties of an element."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/flex"
-    , "inherited": false
-    , "initial"  : "0 1 auto"
-    , "stability": 2
-    , "values"   : [
+    },
+    {
+      "name"     : "column-fill",
+      "code"     : "cf",
+      "summary"  : "Controls how contents are partitioned into columns.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-fill",
+      "inherited": false,
+      "initial"  : "balance",
+      "stability": 3,
+      "values"   : [
+        { "name": "balance", "code": "b" },
         { "name": "auto"   , "code": "a" }
-      , { "name": "content", "code": "c" }
-      , { "name": "0"      , "code": "z" }
-      , { "name": "0.5"    , "code": "h" }
-      , { "name": "1"      , "code": "1" }
-      , { "name": "2"      , "code": "2" }
       ]
-    , "generators": [
+    },
+    {
+      "name"     : "column-gap",
+      "code"     : "cg",
+      "summary"  : "Sets the size of the gap between columns.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-gap",
+      "inherited": false,
+      "initial"  : "normal",
+      "stability": 3,
+      "values"   : [
+        { "name": "normal", "code": "n" },
+        { "name": "0"     , "code": "z" }
+      ],
+      "generators": [
         {
-          "name": "generateFracs"
-        , "transforms": { "usefn": ["percentage", "return `flex: ${percentage}`"] }
-        , "options": { "domain": "tracks" }
+          "name": "generateSpaces",
+          "transforms": { "namefn": ["length", "return `${length}rem`"] },
+          "options": { "domain": "spacing" }
         }
       ]
-    }
-  , {
-      "name"     : "flex-direction"
-    , "code"     : "xd"
-    , "summary"  : "Specifies how flex items are placed in the flex container."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction"
-    , "inherited": false
-    , "initial"  : "row"
-    , "stability": 2
-    , "values"   : [
-        { "name": "row"           , "code": "r"  }
-      , { "name": "column"        , "code": "c"  }
-      , { "name": "row-reverse"   , "code": "rr" }
-      , { "name": "column-reverse", "code": "cr" }
-      ]
-    }
-  , {
-      "name"     : "flex-wrap"
-    , "code"     : "xw"
-    , "summary"  : "Determines whether boxes wrap to the next row or column."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap"
-    , "inherited": false
-    , "initial"  : "nowrap"
-    , "stability": 2
-    , "values"   : [
-        { "name": "nowrap"      , "code": "nw" }
-      , { "name": "wrap"        , "code": "wp" }
-      , { "name": "wrap-reverse", "code": "wr" }
-      ]
-    }
-  , {
-      "name"     : "float"
-    , "code"     : "fl"
-    , "summary"  : "Floats the box in content."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/float"
-    , "inherited": false
-    , "initial"  : "none"
-    , "stability": 3
-    , "values"   : [
-        { "name": "none" , "code": "n" }
-      , { "name": "left" , "code": "l" }
-      , { "name": "right", "code": "r" }
-      ]
-    }
-  , {
-      "name"     : "font-family"
-    , "code"     : "ff"
-    , "summary"  : "Sets the typeface."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/font-family"
-    , "inherited": true
-    , "initial"  : ""
-    , "stability": 3
-    , "values"   : [
-        { "name": "sans-serif", "code": "ss" }
-      , { "name": "serif"     , "code": "sf" }
-      , { "name": "monospace" , "code": "ms" }
-      , { "name": "fantasy"   , "code": "fy" }
-      , { "name": "cursive"   , "code": "cv" }
-      ]
-    }
-  , {
-      "name"     : "font-size"
-    , "code"     : "fz"
-    , "summary"  : "Sets the font size."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/font-size"
-    , "inherited": true
-    , "initial"  : "medium"
-    , "stability": 3
-    , "values"   : [
-        { "name": "0", "code": "z" }
-      ]
-    }
-  , {
-      "name"     : "font-style"
-    , "code"     : "fs"
-    , "summary"  : "Sets italics or oblique on the typeface."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/font-style"
-    , "inherited": true
-    , "initial"  : "normal"
-    , "stability": 3
-    , "values"   : [
-        { "name": "normal", "code": "n" }
-      , { "name": "italic", "code": "t" }
-      ]
-    , "pseudo": [
-        "hover"
-      ]
-    }
-  , {
-      "name"     : "font-variant"
-    , "code"     : "fv"
-    , "summary"  : "Sets small capitals on the typeface."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant"
-    , "inherited": true
-    , "initial"  : "normal"
-    , "stability": 2
-    , "values"   : [
-        { "name": "normal"    , "code": "n" }
-      , { "name": "small-caps", "code": "s" }
-      ]
-    , "pseudo": [
-        "hover"
-      ]
-    }
-  , {
-      "name"     : "font-weight"
-    , "code"     : "fw"
-    , "summary"  : "Sets weight on the typeface."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight"
-    , "inherited": true
-    , "initial"  : "normal"
-    , "stability": 3
-    , "values"   : [
-        { "name": "normal", "code": "n"   }
-      , { "name": "bold"  , "code": "b"   }
-      , { "name": "100"   , "code": "100" }
-      , { "name": "200"   , "code": "200" }
-      , { "name": "300"   , "code": "300" }
-      , { "name": "400"   , "code": "400" }
-      , { "name": "500"   , "code": "500" }
-      , { "name": "600"   , "code": "600" }
-      , { "name": "700"   , "code": "700" }
-      , { "name": "800"   , "code": "800" }
-      , { "name": "900"   , "code": "900" }
-      ]
-    , "pseudo": [
-        "hover"
-      ]
-    }
-  , {
-      "name"     : "grid-column-gap"
-    , "code"     : "gcg"
-    , "summary"  : "Sets the gutter size between grid columns."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-gap"
-    , "inherited": false
-    , "initial"  : "0"
-    , "stability": 3
-    , "values"   : [
-        { "name": "0", "code": "z" }
-      ]
-    , "generators": [
+    },
+    {
+      "name"     : "column-rule-color",
+      "code"     : "crc",
+      "summary"  : "Sets the color of the rule drawn between columns.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule-color",
+      "inherited": false,
+      "initial"  : "currentColor",
+      "stability": 3,
+      "values"   : [
+      ],
+      "generators": [
         {
-          "name": "generateSpaces"
-        , "transforms": { "namefn": ["length", "return `${length}rem`"] }
-        , "options": { "domain": "spacing" }
+          "name": "importValueType",
+          "options": { "name": "<color>" }
         }
       ]
-    }
-  , {
-      "name"     : "grid-row-gap"
-    , "code"     : "grg"
-    , "summary"  : "Sets the gutter size between grid rows."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-gap"
-    , "inherited": false
-    , "initial"  : "0"
-    , "stability": 3
-    , "values"   : [
-        { "name": "0", "code": "z" }
-      ]
-    , "generators": [
+    },
+    {
+      "name"     : "column-rule-style",
+      "code"     : "crs",
+      "summary"  : "Sets the line style of the rule drawn between columns.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule-style",
+      "inherited": false,
+      "initial"  : "none",
+      "stability": 3,
+      "values"   : [
+      ],
+      "generators": [
         {
-          "name": "generateSpaces"
-        , "transforms": {
-            "namefn": ["length", "return `${length}vru`"]
-          , "usefn" : ["length", "return `grid-row-gap: calc(${length} ~'*' var(--vru, @g-vru))`"]
-          }
-        , "options": { "domain": "spacing" }
+          "name": "importValueType",
+          "options": { "name": "<line-style>" }
         }
       ]
-    }
-  , {
-      "name"     : "grid-template-columns"
-    , "code"     : "gtc"
-    , "summary"  : "Defines track sizing functions of grid columns."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns"
-    , "inherited": false
-    , "initial"  : "none"
-    , "stability": 2
-    , "values"   : [
+    },
+    {
+      "name"     : "column-rule-width",
+      "code"     : "crw",
+      "summary"  : "Sets the width of the rule drawn between columns.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule-width",
+      "inherited": false,
+      "initial"  : "medium",
+      "stability": 3,
+      "values"   : [
+        { "name": "0", "code": "z" }
+      ],
+      "generators": [
+        {
+          "name": "importValueType",
+          "options": { "name": "<line-width>" }
+        }
+      ]
+    },
+    {
+      "name"     : "column-span",
+      "code"     : "cs",
+      "summary"  : "Describes how many columns an element spans across.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-span",
+      "inherited": false,
+      "initial"  : "none",
+      "stability": 3,
+      "values"   : [
+        { "name": "none", "code": "n" },
+        { "name": "all" , "code": "a" }
+      ]
+    },
+    {
+      "name"     : "column-width",
+      "code"     : "cw",
+      "summary"  : "Suggests the optimal width for columns of content.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/column-width",
+      "inherited": false,
+      "initial"  : "auto",
+      "stability": 3,
+      "values"   : [
+        { "name": "auto", "code": "a" },
+        { "name": "0"   , "code": "z" }
+      ]
+    },
+    {
+      "name"     : "display",
+      "code"     : "d",
+      "summary"  : "Sets the type of box rendered.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/display",
+      "inherited": false,
+      "initial"  : "inline",
+      "stability": 2,
+      "values"   : [
+        { "name": "none"               , "code": "n"  , "stability": 3 },
+        { "name": "contents"           , "code": "c"                   },
+        { "name": "block"              , "code": "b"                   },
+        { "name": "inline"             , "code": "l"                   },
+        { "name": "run-in"             , "code": "r"                   },
+        { "name": "flow"               , "code": "f"                   },
+        { "name": "flow-root"          , "code": "o"                   },
+        { "name": "table"              , "code": "t"  , "stability": 0 },
+        { "name": "flex"               , "code": "x"  , "stability": 2 },
+        { "name": "grid"               , "code": "g"  , "stability": 2 },
+        { "name": "list-item"          , "code": "s"                   },
+        { "name": "list-item flow-root", "code": "s_o"                 },
+        { "name": "list-item inline"   , "code": "s_l"                 },
+        { "name": "inline-block"       , "code": "lb" , "stability": 1, "alt": "display: inline flow-root" },
+        { "name": "inline-list-item"   , "code": "ls" , "stability": 1, "alt": "display: list-item inline flow" },
+        { "name": "inline-table"       , "code": "lt" , "stability": 1, "alt": "display: inline table" },
+        { "name": "inline-flex"        , "code": "lf" , "stability": 1, "alt": "display: inline flex" },
+        { "name": "inline-grid"        , "code": "lg" , "stability": 1, "alt": "display: inline grid" }
+      ]
+    },
+    {
+      "name"     : "flex",
+      "code"     : "x",
+      "summary"  : "Shorthand for setting the flex-grow, flex-shrink, and flex-basis properties of an element.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/flex",
+      "inherited": false,
+      "initial"  : "0 1 auto",
+      "stability": 2,
+      "values"   : [
+        { "name": "auto"   , "code": "a" },
+        { "name": "content", "code": "c" },
+        { "name": "0"      , "code": "z" },
+        { "name": "0.5"    , "code": "h" },
+        { "name": "1"      , "code": "1" },
+        { "name": "2"      , "code": "2" }
+      ],
+      "generators": [
+        {
+          "name": "generateFracs",
+          "transforms": { "usefn": ["percentage", "return `flex: ${percentage}`"] },
+          "options": { "domain": "tracks" }
+        }
+      ]
+    },
+    {
+      "name"     : "flex-direction",
+      "code"     : "xd",
+      "summary"  : "Specifies how flex items are placed in the flex container.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction",
+      "inherited": false,
+      "initial"  : "row",
+      "stability": 2,
+      "values"   : [
+        { "name": "row"           , "code": "r"  },
+        { "name": "column"        , "code": "c"  },
+        { "name": "row-reverse"   , "code": "rr" },
+        { "name": "column-reverse", "code": "cr" }
+      ]
+    },
+    {
+      "name"     : "flex-wrap",
+      "code"     : "xw",
+      "summary"  : "Determines whether boxes wrap to the next row or column.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap",
+      "inherited": false,
+      "initial"  : "nowrap",
+      "stability": 2,
+      "values"   : [
+        { "name": "nowrap"      , "code": "nw" },
+        { "name": "wrap"        , "code": "wp" },
+        { "name": "wrap-reverse", "code": "wr" }
+      ]
+    },
+    {
+      "name"     : "float",
+      "code"     : "fl",
+      "summary"  : "Floats the box in content.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/float",
+      "inherited": false,
+      "initial"  : "none",
+      "stability": 3,
+      "values"   : [
+        { "name": "none" , "code": "n" },
+        { "name": "left" , "code": "l" },
+        { "name": "right", "code": "r" }
+      ]
+    },
+    {
+      "name"     : "font-family",
+      "code"     : "ff",
+      "summary"  : "Sets the typeface.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/font-family",
+      "inherited": true,
+      "initial"  : "",
+      "stability": 3,
+      "values"   : [
+        { "name": "sans-serif", "code": "ss" },
+        { "name": "serif"     , "code": "sf" },
+        { "name": "monospace" , "code": "ms" },
+        { "name": "fantasy"   , "code": "fy" },
+        { "name": "cursive"   , "code": "cv" }
+      ]
+    },
+    {
+      "name"     : "font-size",
+      "code"     : "fz",
+      "summary"  : "Sets the font size.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/font-size",
+      "inherited": true,
+      "initial"  : "medium",
+      "stability": 3,
+      "values"   : [
+        { "name": "0", "code": "z" }
+      ]
+    },
+    {
+      "name"     : "font-style",
+      "code"     : "fs",
+      "summary"  : "Sets italics or oblique on the typeface.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/font-style",
+      "inherited": true,
+      "initial"  : "normal",
+      "stability": 3,
+      "values"   : [
+        { "name": "normal", "code": "n" },
+        { "name": "italic", "code": "t" }
+      ],
+      "pseudo": [
+        "hover"
+      ]
+    },
+    {
+      "name"     : "font-variant",
+      "code"     : "fv",
+      "summary"  : "Sets small capitals on the typeface.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant",
+      "inherited": true,
+      "initial"  : "normal",
+      "stability": 2,
+      "values"   : [
+        { "name": "normal"    , "code": "n" },
+        { "name": "small-caps", "code": "s" }
+      ],
+      "pseudo": [
+        "hover"
+      ]
+    },
+    {
+      "name"     : "font-weight",
+      "code"     : "fw",
+      "summary"  : "Sets weight on the typeface.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight",
+      "inherited": true,
+      "initial"  : "normal",
+      "stability": 3,
+      "values"   : [
+        { "name": "normal", "code": "n"   },
+        { "name": "bold"  , "code": "b"   },
+        { "name": "100"   , "code": "100" },
+        { "name": "200"   , "code": "200" },
+        { "name": "300"   , "code": "300" },
+        { "name": "400"   , "code": "400" },
+        { "name": "500"   , "code": "500" },
+        { "name": "600"   , "code": "600" },
+        { "name": "700"   , "code": "700" },
+        { "name": "800"   , "code": "800" },
+        { "name": "900"   , "code": "900" }
+      ],
+      "pseudo": [
+        "hover"
+      ]
+    },
+    {
+      "name"     : "grid-column-gap",
+      "code"     : "gcg",
+      "summary"  : "Sets the gutter size between grid columns.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-gap",
+      "inherited": false,
+      "initial"  : "0",
+      "stability": 3,
+      "values"   : [
+        { "name": "0", "code": "z" }
+      ],
+      "generators": [
+        {
+          "name": "generateSpaces",
+          "transforms": { "namefn": ["length", "return `${length}rem`"] },
+          "options": { "domain": "spacing" }
+        }
+      ]
+    },
+    {
+      "name"     : "grid-row-gap",
+      "code"     : "grg",
+      "summary"  : "Sets the gutter size between grid rows.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-gap",
+      "inherited": false,
+      "initial"  : "0",
+      "stability": 3,
+      "values"   : [
+        { "name": "0", "code": "z" }
+      ],
+      "generators": [
+        {
+          "name": "generateSpaces",
+          "transforms": {
+            "namefn": ["length", "return `${length}vru`"],
+            "usefn" : ["length", "return `grid-row-gap: calc(${length} ~'*' var(--vru, @g-vru))`"]
+          },
+          "options": { "domain": "spacing" }
+        }
+      ]
+    },
+    {
+      "name"     : "grid-template-columns",
+      "code"     : "gtc",
+      "summary"  : "Defines track sizing functions of grid columns.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns",
+      "inherited": false,
+      "initial"  : "none",
+      "stability": 2,
+      "values"   : [
+        { "name": "none", "code": "n" }
+      ],
+      "generators": [
+        {
+          "name": "generateCounts",
+          "transforms": { "namefn": ["number", "return `repeat(${number}, 1fr)`"] },
+          "options": { "domain": "tracks" }
+        }
+      ]
+    },
+    {
+      "name"     : "grid-template-rows",
+      "code"     : "gtr",
+      "summary"  : "Defines track sizing functions of grid rows.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows",
+      "inherited": false,
+      "initial"  : "none",
+      "stability": 2,
+      "values"   : [
+        { "name": "none", "code": "n" }
+      ],
+      "generators": [
+        {
+          "name": "generateCounts",
+          "transforms": { "namefn": ["number", "return `repeat(${number}, 1fr)`"] },
+          "options": { "domain": "tracks" }
+        }
+      ]
+    },
+    {
+      "name"     : "justify-content",
+      "code"     : "jc",
+      "summary"  : "Defines how space is distributed along the inline/main/row-axis.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content",
+      "inherited": false,
+      "initial"  : "normal",
+      "stability": 3,
+      "values"   : [
+        { "name": "normal"       , "code": "n"  },
+        { "name": "center"       , "code": "c"  },
+        { "name": "flex-start"   , "code": "xs", "stability": 2 },
+        { "name": "flex-end"     , "code": "xe", "stability": 2 },
+        { "name": "start"        , "code": "s"  },
+        { "name": "end"          , "code": "e"  },
+        { "name": "stretch"      , "code": "st" },
+        { "name": "space-between", "code": "sb" },
+        { "name": "space-around" , "code": "sa" },
+        { "name": "space-evenly" , "code": "sv" }
+      ]
+    },
+    {
+      "name"     : "justify-items",
+      "code"     : "ji",
+      "summary"  : "Defines how item contents are aligned along the inline/main/row-axis.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items",
+      "inherited": false,
+      "initial"  : "normal",
+      "stability": 3,
+      "values"   : [
+        { "name": "normal"       , "code": "n"  },
+        { "name": "center"       , "code": "c"  },
+        { "name": "flex-start"   , "code": "xs", "stability": 2 },
+        { "name": "flex-end"     , "code": "xe", "stability": 2 },
+        { "name": "start"        , "code": "s"  },
+        { "name": "end"          , "code": "e"  },
+        { "name": "self-start"   , "code": "ss" },
+        { "name": "self-end"     , "code": "se" },
+        { "name": "stretch"      , "code": "st" }
+      ]
+    },
+    {
+      "name"     : "justify-self",
+      "code"     : "js",
+      "summary"  : "Overrides parent `justify-items` property.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self",
+      "inherited": false,
+      "initial"  : "auto",
+      "stability": 3,
+      "values"   : [
+        { "name": "auto"         , "code": "a"  },
+        { "name": "normal"       , "code": "n"  },
+        { "name": "center"       , "code": "c"  },
+        { "name": "flex-start"   , "code": "xs", "stability": 2 },
+        { "name": "flex-end"     , "code": "xe", "stability": 2 },
+        { "name": "start"        , "code": "s"  },
+        { "name": "end"          , "code": "e"  },
+        { "name": "self-start"   , "code": "ss" },
+        { "name": "self-end"     , "code": "se" },
+        { "name": "stretch"      , "code": "st" }
+      ]
+    },
+    {
+      "name"     : "left",
+      "code"     : "l",
+      "summary"  : "Specifies how far to position an element from the left.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/left",
+      "inherited": false,
+      "initial"  : "auto",
+      "stability": 3,
+      "values"   : [
+        { "name": "auto", "code": "a" },
+        { "name": "0"   , "code": "z" }
+      ]
+    },
+    {
+      "name"     : "letter-spacing",
+      "code"     : "ls",
+      "summary"  : "Sets the spacing between characters in text.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing",
+      "inherited": true,
+      "initial"  : "normal",
+      "stability": 3,
+      "values"   : [
+        { "name": "normal", "code": "n" },
+        { "name": "0"     , "code": "z" }
+      ]
+    },
+    {
+      "name"     : "line-height",
+      "code"     : "lh",
+      "summary"  : "Sets the minimum height of line boxes.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/line-height",
+      "inherited": true,
+      "initial"  : "normal",
+      "stability": 3,
+      "values"   : [
+        { "name": "normal", "code": "n" },
+        { "name": "0"     , "code": "z" }
+      ]
+    },
+    {
+      "name"     : "list-style-image",
+      "code"     : "lsi",
+      "summary"  : "Sets the image used as list item markers.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-image",
+      "inherited": true,
+      "initial"  : "none",
+      "stability": 3,
+      "values"   : [
         { "name": "none", "code": "n" }
       ]
-    , "generators": [
+    },
+    {
+      "name"     : "list-style-position",
+      "code"     : "lsp",
+      "summary"  : "Sets the position of list item markers.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position",
+      "inherited": true,
+      "initial"  : "outside",
+      "stability": 3,
+      "values"   : [
+        { "name": "outside", "code": "os" },
+        { "name": "inside" , "code": "is" }
+      ]
+    },
+    {
+      "name"     : "list-style-type",
+      "code"     : "lst",
+      "summary"  : "Specifies the appearance of list item markers.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type",
+      "inherited": true,
+      "initial"  : "disc",
+      "stability": 3,
+      "values"   : [
+        { "name": "none"                , "code": "n"  },
+        { "name": "decimal"             , "code": "dc" },
+        { "name": "decimal-leading-zero", "code": "dz" },
+        { "name": "lower-roman"         , "code": "lr" },
+        { "name": "upper-roman"         , "code": "ur" },
+        { "name": "lower-alpha"         , "code": "la" , "stability": 1 },
+        { "name": "upper-alpha"         , "code": "ua" , "stability": 1 },
+        { "name": "lower-latin"         , "code": "ll" },
+        { "name": "upper-latin"         , "code": "ul" },
+        { "name": "lower-greek"         , "code": "lg" },
+        { "name": "disc"                , "code": "d"  },
+        { "name": "circle"              , "code": "c"  },
+        { "name": "square"              , "code": "s"  }
+      ]
+    },
+    {
+      "name"     : "margin",
+      "code"     : "m",
+      "summary"  : "Sets the margin space on an element.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/margin",
+      "inherited": false,
+      "initial"  : "0",
+      "stability": 3,
+      "values"   : [
+        { "name": "auto", "code": "a" },
+        { "name": "0"   , "code": "z" }
+      ]
+    },
+    {
+      "name"     : "margin-bottom",
+      "code"     : "mb",
+      "summary"  : "Sets the bottom margin space on an element.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/margin-bottom",
+      "inherited": false,
+      "initial"  : "0",
+      "stability": 3,
+      "values"   : [
+        { "name": "auto", "code": "a" },
+        { "name": "0"   , "code": "z" }
+      ],
+      "generators": [
         {
-          "name": "generateCounts"
-        , "transforms": { "namefn": ["number", "return `repeat(${number}, 1fr)`"] }
-        , "options": { "domain": "tracks" }
+          "name": "generateSpaces",
+          "transforms": {
+            "namefn": ["length", "return `${length}vru`"],
+            "usefn" : ["length", "return `margin-bottom: calc(${length} ~'*' var(--vru, @g-vru))`"]
+          },
+          "options": { "domain": "spacing", "negative": true }
         }
       ]
-    }
-  , {
-      "name"     : "grid-template-rows"
-    , "code"     : "gtr"
-    , "summary"  : "Defines track sizing functions of grid rows."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows"
-    , "inherited": false
-    , "initial"  : "none"
-    , "stability": 2
-    , "values"   : [
-        { "name": "none", "code": "n" }
-      ]
-    , "generators": [
+    },
+    {
+      "name"     : "margin-left",
+      "code"     : "ml",
+      "summary"  : "Sets the left margin space on an element.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/margin-left",
+      "inherited": false,
+      "initial"  : "0",
+      "stability": 3,
+      "values"   : [
+        { "name": "auto", "code": "a" }
+      , { "name": "0"   , "code": "z" }
+      ],
+      "generators": [
         {
-          "name": "generateCounts"
-        , "transforms": { "namefn": ["number", "return `repeat(${number}, 1fr)`"] }
-        , "options": { "domain": "tracks" }
+          "name": "generateSpaces",
+          "transforms": { "namefn": ["length", "return `${length}rem`"] },
+          "options": { "domain": "spacing", "negative": true }
         }
       ]
-    }
-  , {
-      "name"     : "justify-content"
-    , "code"     : "jc"
-    , "summary"  : "Defines how space is distributed along the inline/main/row-axis."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content"
-    , "inherited": false
-    , "initial"  : "normal"
-    , "stability": 3
-    , "values"   : [
-        { "name": "normal"       , "code": "n"  }
-      , { "name": "center"       , "code": "c"  }
-      , { "name": "flex-start"   , "code": "xs", "stability": 2 }
-      , { "name": "flex-end"     , "code": "xe", "stability": 2 }
-      , { "name": "start"        , "code": "s"  }
-      , { "name": "end"          , "code": "e"  }
-      , { "name": "stretch"      , "code": "st" }
-      , { "name": "space-between", "code": "sb" }
-      , { "name": "space-around" , "code": "sa" }
-      , { "name": "space-evenly" , "code": "sv" }
-      ]
-    }
-  , {
-      "name"     : "justify-items"
-    , "code"     : "ji"
-    , "summary"  : "Defines how item contents are aligned along the inline/main/row-axis."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items"
-    , "inherited": false
-    , "initial"  : "normal"
-    , "stability": 3
-    , "values"   : [
-        { "name": "normal"       , "code": "n"  }
-      , { "name": "center"       , "code": "c"  }
-      , { "name": "flex-start"   , "code": "xs", "stability": 2 }
-      , { "name": "flex-end"     , "code": "xe", "stability": 2 }
-      , { "name": "start"        , "code": "s"  }
-      , { "name": "end"          , "code": "e"  }
-      , { "name": "self-start"   , "code": "ss" }
-      , { "name": "self-end"     , "code": "se" }
-      , { "name": "stretch"      , "code": "st" }
-      ]
-    }
-  , {
-      "name"     : "justify-self"
-    , "code"     : "js"
-    , "summary"  : "Overrides parent `justify-items` property."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self"
-    , "inherited": false
-    , "initial"  : "auto"
-    , "stability": 3
-    , "values"   : [
-        { "name": "auto"         , "code": "a"  }
-      , { "name": "normal"       , "code": "n"  }
-      , { "name": "center"       , "code": "c"  }
-      , { "name": "flex-start"   , "code": "xs", "stability": 2 }
-      , { "name": "flex-end"     , "code": "xe", "stability": 2 }
-      , { "name": "start"        , "code": "s"  }
-      , { "name": "end"          , "code": "e"  }
-      , { "name": "self-start"   , "code": "ss" }
-      , { "name": "self-end"     , "code": "se" }
-      , { "name": "stretch"      , "code": "st" }
-      ]
-    }
-  , {
-      "name"     : "left"
-    , "code"     : "l"
-    , "summary"  : "Specifies how far to position an element from the left."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/left"
-    , "inherited": false
-    , "initial"  : "auto"
-    , "stability": 3
-    , "values"   : [
-        { "name": "auto", "code": "a" }
-      , { "name": "0"   , "code": "z" }
-      ]
-    }
-  , {
-      "name"     : "letter-spacing"
-    , "code"     : "ls"
-    , "summary"  : "Sets the spacing between characters in text."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing"
-    , "inherited": true
-    , "initial"  : "normal"
-    , "stability": 3
-    , "values"   : [
-        { "name": "normal", "code": "n" }
-      , { "name": "0"     , "code": "z" }
-      ]
-    }
-  , {
-      "name"     : "line-height"
-    , "code"     : "lh"
-    , "summary"  : "Sets the minimum height of line boxes."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/line-height"
-    , "inherited": true
-    , "initial"  : "normal"
-    , "stability": 3
-    , "values"   : [
-        { "name": "normal", "code": "n" }
-      , { "name": "0"     , "code": "z" }
-      ]
-    }
-  , {
-      "name"     : "list-style-image"
-    , "code"     : "lsi"
-    , "summary"  : "Sets the image used as list item markers."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-image"
-    , "inherited": true
-    , "initial"  : "none"
-    , "stability": 3
-    , "values"   : [
-        { "name": "none", "code": "n" }
-      ]
-    }
-  , {
-      "name"     : "list-style-position"
-    , "code"     : "lsp"
-    , "summary"  : "Sets the position of list item markers."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position"
-    , "inherited": true
-    , "initial"  : "outside"
-    , "stability": 3
-    , "values"   : [
-        { "name": "outside", "code": "os" }
-      , { "name": "inside" , "code": "is" }
-      ]
-    }
-  , {
-      "name"     : "list-style-type"
-    , "code"     : "lst"
-    , "summary"  : "Specifies the appearance of list item markers."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type"
-    , "inherited": true
-    , "initial"  : "disc"
-    , "stability": 3
-    , "values"   : [
-        { "name": "none"                , "code": "n"  }
-      , { "name": "decimal"             , "code": "dc" }
-      , { "name": "decimal-leading-zero", "code": "dz" }
-      , { "name": "lower-roman"         , "code": "lr" }
-      , { "name": "upper-roman"         , "code": "ur" }
-      , { "name": "lower-alpha"         , "code": "la" , "stability": 1 }
-      , { "name": "upper-alpha"         , "code": "ua" , "stability": 1 }
-      , { "name": "lower-latin"         , "code": "ll" }
-      , { "name": "upper-latin"         , "code": "ul" }
-      , { "name": "lower-greek"         , "code": "lg" }
-      , { "name": "disc"                , "code": "d"  }
-      , { "name": "circle"              , "code": "c"  }
-      , { "name": "square"              , "code": "s"  }
-      ]
-    }
-  , {
-      "name"     : "margin"
-    , "code"     : "m"
-    , "summary"  : "Sets the margin space on an element."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/margin"
-    , "inherited": false
-    , "initial"  : "0"
-    , "stability": 3
-    , "values"   : [
-        { "name": "auto", "code": "a" }
-      , { "name": "0"   , "code": "z" }
-      ]
-    }
-  , {
-      "name"     : "margin-bottom"
-    , "code"     : "mb"
-    , "summary"  : "Sets the bottom margin space on an element."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/margin-bottom"
-    , "inherited": false
-    , "initial"  : "0"
-    , "stability": 3
-    , "values"   : [
-        { "name": "auto", "code": "a" }
-      , { "name": "0"   , "code": "z" }
-      ]
-    , "generators": [
+    },
+    {
+      "name"     : "margin-right",
+      "code"     : "mr",
+      "summary"  : "Sets the right margin space on an element.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/margin-right",
+      "inherited": false,
+      "initial"  : "0",
+      "stability": 3,
+      "values"   : [
+        { "name": "auto", "code": "a" },
+        { "name": "0"   , "code": "z" }
+      ],
+      "generators": [
         {
-          "name": "generateSpaces"
-        , "transforms": {
-            "namefn": ["length", "return `${length}vru`"]
-          , "usefn" : ["length", "return `margin-bottom: calc(${length} ~'*' var(--vru, @g-vru))`"]
-          }
-        , "options": { "domain": "spacing", "negative": true }
+          "name": "generateSpaces",
+          "transforms": { "namefn": ["length", "return `${length}rem`"] },
+          "options": { "domain": "spacing", "negative": true }
         }
       ]
-    }
-  , {
-      "name"     : "margin-left"
-    , "code"     : "ml"
-    , "summary"  : "Sets the left margin space on an element."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/margin-left"
-    , "inherited": false
-    , "initial"  : "0"
-    , "stability": 3
-    , "values"   : [
-        { "name": "auto", "code": "a" }
-      , { "name": "0"   , "code": "z" }
-      ]
-    , "generators": [
+    },
+    {
+      "name"     : "margin-top",
+      "code"     : "mt",
+      "summary"  : "Sets the top margin space on an element.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/margin-top",
+      "inherited": false,
+      "initial"  : "0",
+      "stability": 3,
+      "values"   : [
+        { "name": "auto", "code": "a" },
+        { "name": "0"   , "code": "z" }
+      ],
+      "generators": [
         {
-          "name": "generateSpaces"
-        , "transforms": { "namefn": ["length", "return `${length}rem`"] }
-        , "options": { "domain": "spacing", "negative": true }
+          "name": "generateSpaces",
+          "transforms": {
+            "namefn": ["length", "return `${length}vru`"],
+            "usefn" : ["length", "return `margin-top: calc(${length} ~'*' var(--vru, @g-vru))`"]
+          },
+          "options": { "domain": "spacing", "negative": true }
         }
       ]
-    }
-  , {
-      "name"     : "margin-right"
-    , "code"     : "mr"
-    , "summary"  : "Sets the right margin space on an element."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/margin-right"
-    , "inherited": false
-    , "initial"  : "0"
-    , "stability": 3
-    , "values"   : [
-        { "name": "auto", "code": "a" }
-      , { "name": "0"   , "code": "z" }
-      ]
-    , "generators": [
-        {
-          "name": "generateSpaces"
-        , "transforms": { "namefn": ["length", "return `${length}rem`"] }
-        , "options": { "domain": "spacing", "negative": true }
-        }
-      ]
-    }
-  , {
-      "name"     : "margin-top"
-    , "code"     : "mt"
-    , "summary"  : "Sets the top margin space on an element."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/margin-top"
-    , "inherited": false
-    , "initial"  : "0"
-    , "stability": 3
-    , "values"   : [
-        { "name": "auto", "code": "a" }
-      , { "name": "0"   , "code": "z" }
-      ]
-    , "generators": [
-        {
-          "name": "generateSpaces"
-        , "transforms": {
-            "namefn": ["length", "return `${length}vru`"]
-          , "usefn" : ["length", "return `margin-top: calc(${length} ~'*' var(--vru, @g-vru))`"]
-          }
-        , "options": { "domain": "spacing", "negative": true }
-        }
-      ]
-    }
-  , {
-      "name"     : "opacity"
-    , "code"     : "o"
-    , "summary"  : "Sets the transparency of an element."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/opacity"
-    , "inherited": false
-    , "initial"  : "1.0"
-    , "stability": 2
-    , "values"   : [
-        { "name": "0.0", "code": "z" }
-      , { "name": "0.5", "code": "h" }
-      , { "name": "1.0", "code": "1" }
-      ]
-    , "pseudo": [
+    },
+    {
+      "name"     : "opacity",
+      "code"     : "o",
+      "summary"  : "Sets the transparency of an element.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/opacity",
+      "inherited": false,
+      "initial"  : "1.0",
+      "stability": 2,
+      "values"   : [
+        { "name": "0.0", "code": "z" },
+        { "name": "0.5", "code": "h" },
+        { "name": "1.0", "code": "1" }
+      ],
+      "pseudo": [
         "hover"
       ]
-    }
-  , {
-      "name"     : "order"
-    , "code"     : "xo"
-    , "summary"  : "Specifies the order used to lay out flex items."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/order"
-    , "inherited": false
-    , "initial"  : "0"
-    , "stability": 2
-    , "values"   : [
+    },
+    {
+      "name"     : "order",
+      "code"     : "xo",
+      "summary"  : "Specifies the order used to lay out flex items.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/order",
+      "inherited": false,
+      "initial"  : "0",
+      "stability": 2,
+      "values"   : [
         { "name": "0", "code": "z" }
-      ]
-    , "generators": [
+      ],
+      "generators": [
         {
-          "name": "generateCounts"
-        , "options": { "domain": 8, "negative": true }
+          "name": "generateCounts",
+          "options": { "domain": 8, "negative": true }
         }
       ]
-    }
-  , {
-      "name"     : "overflow"
-    , "code"     : "ko"
-    , "summary"  : "Defines how content outside the box is rendered."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/overflow"
-    , "inherited": false
-    , "initial"  : "visible"
-    , "stability": 3
-    , "values"   : [
-        { "name": "auto"   , "code": "a" }
-      , { "name": "visible", "code": "v" }
-      , { "name": "hidden" , "code": "h" }
-      , { "name": "scroll" , "code": "s" }
+    },
+    {
+      "name"     : "overflow",
+      "code"     : "ko",
+      "summary"  : "Defines how content outside the box is rendered.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/overflow",
+      "inherited": false,
+      "initial"  : "visible",
+      "stability": 3,
+      "values"   : [
+        { "name": "auto"   , "code": "a" },
+        { "name": "visible", "code": "v" },
+        { "name": "hidden" , "code": "h" },
+        { "name": "scroll" , "code": "s" }
       ]
-    }
-  , {
-      "name"     : "padding"
-    , "code"     : "p"
-    , "summary"  : "Sets the padding space on an element."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/padding"
-    , "inherited": false
-    , "initial"  : "0"
-    , "stability": 3
-    , "values"   : [
+    },
+    {
+      "name"     : "padding",
+      "code"     : "p",
+      "summary"  : "Sets the padding space on an element.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/padding",
+      "inherited": false,
+      "initial"  : "0",
+      "stability": 3,
+      "values"   : [
         { "name": "0", "code": "z" }
       ]
-    }
-  , {
-      "name"     : "padding-bottom"
-    , "code"     : "pb"
-    , "summary"  : "Sets the bottom padding space on an element."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/padding-bottom"
-    , "inherited": false
-    , "initial"  : "0"
-    , "stability": 3
-    , "values"   : [
+    },
+    {
+      "name"     : "padding-bottom",
+      "code"     : "pb",
+      "summary"  : "Sets the bottom padding space on an element.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/padding-bottom",
+      "inherited": false,
+      "initial"  : "0",
+      "stability": 3,
+      "values"   : [
         { "name": "0", "code": "z" }
-      ]
-    , "generators": [
+      ],
+      "generators": [
         {
-          "name": "generateSpaces"
-        , "transforms": {
-            "namefn": ["length", "return `${length}vru`"]
-          , "usefn" : ["length", "return `padding-bottom: calc(${length} ~'*' var(--vru, @g-vru))`"]
-          }
-        , "options": { "domain": "spacing" }
+          "name": "generateSpaces",
+          "transforms": {
+            "namefn": ["length", "return `${length}vru`"],
+            "usefn" : ["length", "return `padding-bottom: calc(${length} ~'*' var(--vru, @g-vru))`"]
+          },
+          "options": { "domain": "spacing" }
         }
       ]
-    }
-  , {
-      "name"     : "padding-left"
-    , "code"     : "pl"
-    , "summary"  : "Sets the left padding space on an element."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/padding-left"
-    , "inherited": false
-    , "initial"  : "0"
-    , "stability": 3
-    , "values"   : [
+    },
+    {
+      "name"     : "padding-left",
+      "code"     : "pl",
+      "summary"  : "Sets the left padding space on an element.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/padding-left",
+      "inherited": false,
+      "initial"  : "0",
+      "stability": 3,
+      "values"   : [
         { "name": "0", "code": "z" }
-      ]
-    , "generators": [
+      ],
+      "generators": [
         {
-          "name": "generateSpaces"
-        , "transforms": { "namefn": ["length", "return `${length}rem`"] }
-        , "options": { "domain": "spacing" }
+          "name": "generateSpaces",
+          "transforms": { "namefn": ["length", "return `${length}rem`"] },
+          "options": { "domain": "spacing" }
         }
       ]
-    }
-  , {
-      "name"     : "padding-right"
-    , "code"     : "pr"
-    , "summary"  : "Sets the right padding space on an element."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/padding-right"
-    , "inherited": false
-    , "initial"  : "0"
-    , "stability": 3
-    , "values"   : [
+    },
+    {
+      "name"     : "padding-right",
+      "code"     : "pr",
+      "summary"  : "Sets the right padding space on an element.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/padding-right",
+      "inherited": false,
+      "initial"  : "0",
+      "stability": 3,
+      "values"   : [
         { "name": "0", "code": "z" }
-      ]
-    , "generators": [
+      ],
+      "generators": [
         {
-          "name": "generateSpaces"
-        , "transforms": { "namefn": ["length", "return `${length}rem`"] }
-        , "options": { "domain": "spacing" }
+          "name": "generateSpaces",
+          "transforms": { "namefn": ["length", "return `${length}rem`"] },
+          "options": { "domain": "spacing" }
         }
       ]
-    }
-  , {
-      "name"     : "padding-top"
-    , "code"     : "pt"
-    , "summary"  : "Sets the top padding space on an element."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/padding-top"
-    , "inherited": false
-    , "initial"  : "0"
-    , "stability": 3
-    , "values"   : [
+    },
+    {
+      "name"     : "padding-top",
+      "code"     : "pt",
+      "summary"  : "Sets the top padding space on an element.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/padding-top",
+      "inherited": false,
+      "initial"  : "0",
+      "stability": 3,
+      "values"   : [
         { "name": "0", "code": "z" }
-      ]
-    , "generators": [
+      ],
+      "generators": [
         {
-          "name": "generateSpaces"
-        , "transforms": {
-            "namefn": ["length", "return `${length}vru`"]
-          , "usefn" : ["length", "return `padding-top: calc(${length} ~'*' var(--vru, @g-vru))`"]
-          }
-        , "options": { "domain": "spacing" }
+          "name": "generateSpaces",
+          "transforms": {
+            "namefn": ["length", "return `${length}vru`"],
+            "usefn" : ["length", "return `padding-top: calc(${length} ~'*' var(--vru, @g-vru))`"]
+          },
+          "options": { "domain": "spacing" }
         }
       ]
-    }
-  , {
-      "name"     : "position"
-    , "code"     : "ps"
-    , "summary"  : "Sets the position of box rendered."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/position"
-    , "inherited": false
-    , "initial"  : "static"
-    , "stability": 3
-    , "values"   : [
-        { "name": "static"  , "code": "s" }
-      , { "name": "relative", "code": "r" }
-      , { "name": "absolute", "code": "a" }
-      , { "name": "fixed"   , "code": "f" }
-      , { "name": "sticky"  , "code": "k", "stability": 2 }
+    },
+    {
+      "name"     : "position",
+      "code"     : "ps",
+      "summary"  : "Sets the position of box rendered.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/position",
+      "inherited": false,
+      "initial"  : "static",
+      "stability": 3,
+      "values"   : [
+        { "name": "static"  , "code": "s" },
+        { "name": "relative", "code": "r" },
+        { "name": "absolute", "code": "a" },
+        { "name": "fixed"   , "code": "f" },
+        { "name": "sticky"  , "code": "k", "stability": 2 }
       ]
-    }
-  , {
-      "name"     : "quotes"
-    , "code"     : "q"
-    , "summary"  : "Specifies how quotation marks should be rendered."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/quotes"
-    , "inherited": true
-    , "initial"  : "'\\“' '\\”'"
-    , "stability": 3
-    , "values"   : [
+    },
+    {
+      "name"     : "quotes",
+      "code"     : "q",
+      "summary"  : "Specifies how quotation marks should be rendered.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/quotes",
+      "inherited": true,
+      "initial"  : "'\\“' '\\”'",
+      "stability": 3,
+      "values"   : [
         { "name": "none", "code": "n"  }
       ]
-    }
-  , {
-      "name"     : "right"
-    , "code"     : "r"
-    , "summary"  : "Specifies how far to position an element from the right."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/right"
-    , "inherited": false
-    , "initial"  : "auto"
-    , "stability": 3
-    , "values"   : [
-        { "name": "auto", "code": "a" }
-      , { "name": "0"   , "code": "z" }
+    },
+    {
+      "name"     : "right",
+      "code"     : "r",
+      "summary"  : "Specifies how far to position an element from the right.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/right",
+      "inherited": false,
+      "initial"  : "auto",
+      "stability": 3,
+      "values"   : [
+        { "name": "auto", "code": "a" },
+        { "name": "0"   , "code": "z" }
       ]
-    }
-  , {
-      "name"     : "text-align"
-    , "code"     : "ta"
-    , "summary"  : "Aligns inline content in a block."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/text-align"
-    , "inherited": true
-    , "initial"  : "start"
-    , "stability": 3
-    , "values"   : [
-        { "name": "left"   , "code": "l" }
-      , { "name": "right"  , "code": "r" }
-      , { "name": "start"  , "code": "s", "stability": 2 }
-      , { "name": "end"    , "code": "e", "stability": 2 }
-      , { "name": "center" , "code": "c" }
-      , { "name": "justify", "code": "j" }
+    },
+    {
+      "name"     : "text-align",
+      "code"     : "ta",
+      "summary"  : "Aligns inline content in a block.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/text-align",
+      "inherited": true,
+      "initial"  : "start",
+      "stability": 3,
+      "values"   : [
+        { "name": "left"   , "code": "l" },
+        { "name": "right"  , "code": "r" },
+        { "name": "start"  , "code": "s", "stability": 2 },
+        { "name": "end"    , "code": "e", "stability": 2 },
+        { "name": "center" , "code": "c" },
+        { "name": "justify", "code": "j" }
       ]
-    }
-  , {
-      "name"     : "text-decoration"
-    , "code"     : "td"
-    , "summary"  : "Sets a line decoration to text."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration"
-    , "inherited": false
-    , "initial"  : "none"
-    , "stability": 2
-    , "values"   : [
-        { "name": "none"        , "code": "n" }
-      , { "name": "underline"   , "code": "ul" }
-      , { "name": "overline"    , "code": "ol" }
-      , { "name": "line-through", "code": "lt" }
-      ]
-    , "pseudo": [
+    },
+    {
+      "name"     : "text-decoration",
+      "code"     : "td",
+      "summary"  : "Sets a line decoration to text.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration",
+      "inherited": false,
+      "initial"  : "none",
+      "stability": 2,
+      "values"   : [
+        { "name": "none"        , "code": "n" },
+        { "name": "underline"   , "code": "ul" },
+        { "name": "overline"    , "code": "ol" },
+        { "name": "line-through", "code": "lt" }
+      ],
+      "pseudo": [
         "hover"
       ]
-    }
-  , {
-      "name"     : "text-indent"
-    , "code"     : "ti"
-    , "summary"  : "Leaves empty space before lines of text in a block."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent"
-    , "inherited": true
-    , "initial"  : "0"
-    , "stability": 3
-    , "values"   : [
+    },
+    {
+      "name"     : "text-indent",
+      "code"     : "ti",
+      "summary"  : "Leaves empty space before lines of text in a block.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent",
+      "inherited": true,
+      "initial"  : "0",
+      "stability": 3,
+      "values"   : [
         { "name": "0", "code": "z" }
       ]
-    }
-  , {
-      "name"     : "text-overflow"
-    , "code"     : "to"
-    , "summary"  : "Defines how invisible overflowed text content, if any, is rendered."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow"
-    , "inherited": false
-    , "initial"  : "clip"
-    , "stability": 3
-    , "values"   : [
-        { "name": "clip"    , "code": "k" }
-      , { "name": "ellipsis", "code": "e" }
-      , { "name": "fade"    , "code": "f", "stability": 2 }
+    },
+    {
+      "name"     : "text-overflow",
+      "code"     : "to",
+      "summary"  : "Defines how invisible overflowed text content, if any, is rendered.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow",
+      "inherited": false,
+      "initial"  : "clip",
+      "stability": 3,
+      "values"   : [
+        { "name": "clip"    , "code": "k" },
+        { "name": "ellipsis", "code": "e" },
+        { "name": "fade"    , "code": "f", "stability": 2 }
       ]
-    }
-  , {
-      "name"     : "text-shadow"
-    , "code"     : "ts"
-    , "summary"  : "Describes shadow effects on the text and text-decorations of an element."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow"
-    , "inherited": true
-    , "initial"  : "none"
-    , "stability": 3
-    , "values"   : [
+    },
+    {
+      "name"     : "text-shadow",
+      "code"     : "ts",
+      "summary"  : "Describes shadow effects on the text and text-decorations of an element.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow",
+      "inherited": true,
+      "initial"  : "none",
+      "stability": 3,
+      "values"   : [
         { "name": "none", "code": "n" }
       ]
-    }
-  , {
-      "name"     : "text-transform"
-    , "code"     : "tt"
-    , "summary"  : "Capitalizes text."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform"
-    , "inherited": true
-    , "initial"  : "none"
-    , "stability": 3
-    , "values"   : [
-        { "name": "none"      , "code": "n" }
-      , { "name": "capitalize", "code": "cp" }
-      , { "name": "uppercase" , "code": "uc" }
-      , { "name": "lowercase" , "code": "lc" }
-      ]
-    , "pseudo": [
+    },
+    {
+      "name"     : "text-transform",
+      "code"     : "tt",
+      "summary"  : "Capitalizes text.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform",
+      "inherited": true,
+      "initial"  : "none",
+      "stability": 3,
+      "values"   : [
+        { "name": "none"      , "code": "n" },
+        { "name": "capitalize", "code": "cp" },
+        { "name": "uppercase" , "code": "uc" },
+        { "name": "lowercase" , "code": "lc" }
+      ],
+      "pseudo": [
         "hover"
       ]
-    }
-  , {
-      "name"     : "top"
-    , "code"     : "t"
-    , "summary"  : "Specifies how far to position an element from the top."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/top"
-    , "inherited": false
-    , "initial"  : "auto"
-    , "stability": 3
-    , "values": [
-        { "name": "auto", "code": "a" }
-      , { "name": "0"   , "code": "z" }
+    },
+    {
+      "name"     : "top",
+      "code"     : "t",
+      "summary"  : "Specifies how far to position an element from the top.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/top",
+      "inherited": false,
+      "initial"  : "auto",
+      "stability": 3,
+      "values": [
+        { "name": "auto", "code": "a" },
+        { "name": "0"   , "code": "z" }
       ]
-    }
-  , {
-      "name"     : "vertical-align"
-    , "code"     : "va"
-    , "summary"  : "Vertically aligns an inline or table-cell box."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align"
-    , "inherited": false
-    , "initial"  : "baseline"
-    , "stability": 3
-    , "values"   : [
-        { "name": "baseline"   , "code": "a"  }
-      , { "name": "bottom"     , "code": "b"  }
-      , { "name": "middle"     , "code": "c"  }
-      , { "name": "top"        , "code": "t"  }
-      , { "name": "text-bottom", "code": "tb" }
-      , { "name": "text-top"   , "code": "tt" }
-      , { "name": "sub"        , "code": "sb" }
-      , { "name": "super"      , "code": "sp" }
+    },
+    {
+      "name"     : "vertical-align",
+      "code"     : "va",
+      "summary"  : "Vertically aligns an inline or table-cell box.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align",
+      "inherited": false,
+      "initial"  : "baseline",
+      "stability": 3,
+      "values"   : [
+        { "name": "baseline"   , "code": "a"  },
+        { "name": "bottom"     , "code": "b"  },
+        { "name": "middle"     , "code": "c"  },
+        { "name": "top"        , "code": "t"  },
+        { "name": "text-bottom", "code": "tb" },
+        { "name": "text-top"   , "code": "tt" },
+        { "name": "sub"        , "code": "sb" },
+        { "name": "super"      , "code": "sp" }
       ]
-    }
-  , {
-      "name"     : "visibility"
-    , "code"     : "v"
-    , "summary"  : "Specifies whether an element is visible or hidden."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/visibility"
-    , "inherited": true
-    , "initial"  : "visible"
-    , "stability": 3
-    , "values"   : [
-        { "name": "visible" , "code": "v" }
-      , { "name": "hidden"  , "code": "h" }
-      , { "name": "collapse", "code": "c" }
+    },
+    {
+      "name"     : "visibility",
+      "code"     : "v",
+      "summary"  : "Specifies whether an element is visible or hidden.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/visibility",
+      "inherited": true,
+      "initial"  : "visible",
+      "stability": 3,
+      "values"   : [
+        { "name": "visible" , "code": "v" },
+        { "name": "hidden"  , "code": "h" },
+        { "name": "collapse", "code": "c" }
       ]
-    }
-  , {
-      "name"     : "white-space"
-    , "code"     : "sp"
-    , "summary"  : "Determines how white space in source code is rendered."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/white-space"
-    , "inherited": true
-    , "initial"  : "normal"
-    , "stability": 3
-    , "values"   : [
-        { "name": "normal"  , "code": "n"  }
-      , { "name": "nowrap"  , "code": "nw" }
-      , { "name": "pre"     , "code": "pr" }
-      , { "name": "pre-wrap", "code": "pw" }
-      , { "name": "pre-line", "code": "pl" }
+    },
+    {
+      "name"     : "white-space",
+      "code"     : "sp",
+      "summary"  : "Determines how white space in source code is rendered.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/white-space",
+      "inherited": true,
+      "initial"  : "normal",
+      "stability": 3,
+      "values"   : [
+        { "name": "normal"  , "code": "n"  },
+        { "name": "nowrap"  , "code": "nw" },
+        { "name": "pre"     , "code": "pr" },
+        { "name": "pre-wrap", "code": "pw" },
+        { "name": "pre-line", "code": "pl" }
       ]
-    }
-  , {
-      "name"     : "width"
-    , "code"     : "w"
-    , "summary"  : "Sets the width of an element."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/width"
-    , "inherited": false
-    , "initial"  : "auto"
-    , "stability": 3
-    , "values"   : [
-        { "name": "auto", "code": "a" }
-      , { "name":   "0" , "code": "z" }
-      ]
-    , "generators": [
+    },
+    {
+      "name"     : "width",
+      "code"     : "w",
+      "summary"  : "Sets the width of an element.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/width",
+      "inherited": false,
+      "initial"  : "auto",
+      "stability": 3,
+      "values"   : [
+        { "name": "auto", "code": "a" },
+        { "name":   "0" , "code": "z" }
+      ],
+      "generators": [
         {
-          "name": "generateFracs"
-        , "transforms": { "usefn": ["percentage", "return `width: ${percentage}`"] }
-        , "options": { "domain": "tracks" }
+          "name": "generateFracs",
+          "transforms": { "usefn": ["percentage", "return `width: ${percentage}`"] },
+          "options": { "domain": "tracks" }
         }
       ]
-    }
-  , {
-      "name"     : "word-spacing"
-    , "code"     : "ws"
-    , "summary"  : "Sets the spacing between tags and words in text."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing"
-    , "inherited": true
-    , "initial"  : "normal"
-    , "stability": 3
-    , "values"   : [
-        { "name": "normal", "code": "n" }
-      , { "name": "0"     , "code": "z" }
+    },
+    {
+      "name"     : "word-spacing",
+      "code"     : "ws",
+      "summary"  : "Sets the spacing between tags and words in text.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing",
+      "inherited": true,
+      "initial"  : "normal",
+      "stability": 3,
+      "values"   : [
+        { "name": "normal", "code": "n" },
+        { "name": "0"     , "code": "z" }
       ]
-    }
-  , {
-      "name"     : "z-index"
-    , "code"     : "z"
-    , "summary"  : "Defines the z-order of an element and descendants. Z-order is defined as the order of elements in the direction perpendicular to the screen."
-    , "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/z-index"
-    , "inherited": false
-    , "initial"  : "auto"
-    , "stability": 3
-    , "values"   : [
-        { "name": "auto", "code": "a" }
-      , { "name": "0"   , "code": "z" }
-      ]
-    , "generators": [
+    },
+    {
+      "name"     : "z-index",
+      "code"     : "z",
+      "summary"  : "Defines the z-order of an element and descendants. Z-order is defined as the order of elements in the direction perpendicular to the screen.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/z-index",
+      "inherited": false,
+      "initial"  : "auto",
+      "stability": 3,
+      "values"   : [
+        { "name": "auto", "code": "a" },
+        { "name": "0"   , "code": "z" }
+      ],
+      "generators": [
         {
-          "name": "generateCounts"
-        , "options": { "domain": 8, "negative": true }
+          "name": "generateCounts",
+          "options": { "domain": 8, "negative": true }
         }
       ]
     }

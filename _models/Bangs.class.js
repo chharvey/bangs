@@ -42,9 +42,9 @@ module.exports = (function () {
       Util.arrayify(options.domain, data.global.common_data).forEach(function (den) {
         for (let num = 1; num <= den; num++) {
           let newvalue = {
-            name: `${Math.round(10000 * (num/den))/100}%`
-          , code: `${num}o${den}`
-          , use : (transforms.usefn) ? transforms.usefn.call(null, `(${num}/${den} * 100%)`) : ''
+            name: `${Math.round(10000 * (num/den))/100}%`,
+            code: `${num}o${den}`,
+            use : (transforms.usefn) ? transforms.usefn.call(null, `(${num}/${den} * 100%)`) : '',
           }
           let value = this.values.find((v) => v.name===newvalue.name)
           if (value) {
@@ -72,19 +72,19 @@ module.exports = (function () {
       let arr = Util.arrayify(options.domain, data.global.common_data)
       arr.forEach(function (ct) {
         this.values.push({
-          name: (transforms.namefn) ? transforms.namefn.call(null, ct) : ct.toString()
-        , code: (transforms.codefn) ? transforms.codefn.call(null, ct) : ct.toString()
-        , use : (transforms.usefn)  ? transforms.usefn .call(null, ct) : ''
+          name: (transforms.namefn) ? transforms.namefn.call(null, ct) : ct.toString(),
+          code: (transforms.codefn) ? transforms.codefn.call(null, ct) : ct.toString(),
+          use : (transforms.usefn)  ? transforms.usefn .call(null, ct) : '',
         })
       }, this)
       if (options.negative) {
-      arr.forEach(function (i) {
-        this.values.push({
-          name: (transforms.namefn) ? transforms.namefn.call(null, -i) : (-i).toString()
-        , code: (transforms.codefn) ? transforms.codefn.call(null, -i) : `_${i}`
-        , use : (transforms.usefn ) ? transforms.usefn .call(null, -i) : ''
-        })
-      }, this)
+        arr.forEach(function (i) {
+          this.values.push({
+            name: (transforms.namefn) ? transforms.namefn.call(null, -i) : (-i).toString(),
+            code: (transforms.codefn) ? transforms.codefn.call(null, -i) : `_${i}`,
+            use : (transforms.usefn ) ? transforms.usefn .call(null, -i) : '',
+          })
+        }, this)
       }
     }
 
@@ -105,19 +105,19 @@ module.exports = (function () {
       let arr = Util.arrayify(options.domain, data.global.common_data)
       arr.forEach(function (sp) {
         this.values.push({
-          name: (transforms.namefn) ? transforms.namefn.call(null, sp) : sp.toString()
-        , code: (transforms.codefn) ? transforms.codefn.call(null, sp) : `${ABBR[sp] || sp}`
-        , use : (transforms.usefn ) ? transforms.usefn .call(null, sp) : ''
+          name: (transforms.namefn) ? transforms.namefn.call(null, sp) : sp.toString(),
+          code: (transforms.codefn) ? transforms.codefn.call(null, sp) : `${ABBR[sp] || sp}`,
+          use : (transforms.usefn ) ? transforms.usefn .call(null, sp) : '',
         })
       }, this)
       if (options.negative) {
-      arr.forEach(function (sp) {
-        this.values.push({
-          name: (transforms.namefn) ? transforms.namefn.call(null, -sp) : (-sp).toString()
-        , code: (transforms.codefn) ? transforms.codefn.call(null, -sp) : `_${ABBR[sp] || sp}`
-        , use : (transforms.usefn ) ? transforms.usefn .call(null, -sp) : ''
-        })
-      }, this)
+        arr.forEach(function (sp) {
+          this.values.push({
+            name: (transforms.namefn) ? transforms.namefn.call(null, -sp) : (-sp).toString(),
+            code: (transforms.codefn) ? transforms.codefn.call(null, -sp) : `_${ABBR[sp] || sp}`,
+            use : (transforms.usefn ) ? transforms.usefn .call(null, -sp) : '',
+          })
+        }, this)
       }
     }
 
@@ -197,9 +197,9 @@ module.exports = (function () {
               if (!property.initial) return '' // if the inital value is not specified by CSS specs
               let initial_val = property.values.find((v) => v.name===property.initial)
               return (initial_val) ? `.-${property.code}-${initial_val.code};` : `${declaration(property.initial)} !important;`
-            })()
+            })(),
             // TODO remove `unset` fallback once widely supported
-          , 'unset': (function () {
+            'unset': (function () {
               let val_code = Bangs.DATA.global.values.find((v) => v.name===(
                 (property.inherited) ? 'inherit' : 'initial'
               )).code
@@ -208,7 +208,7 @@ module.exports = (function () {
           })[value.name]
           return (
             ((global_fallback) ? global_fallback + ' ' : '')
-          + `${(value.use) ? value.use : declaration(value.name)} !important;`
+            + `${(value.use) ? value.use : declaration(value.name)} !important;`
           )
         })()
         rulesets.push(`${selector} { ${rules} }`)
