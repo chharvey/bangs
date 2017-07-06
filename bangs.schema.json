@@ -48,7 +48,16 @@
             "required": ["name"],
             "additionalProperties": false,
             "properties": {
-              "name": { "type": "string", "description": "Name of the generator function to be called." },
+              "name": {
+                "type": "string",
+                "description": "Name of the generator function to be called.",
+                "enum": [
+                  "generateFracs",
+                  "generateCounts",
+                  "generateSpaces",
+                  "importValueType"
+                ]
+              },
               "transforms": {
                 "description": "Defines functions that transform a pure data value into a CSS_Value type.",
                 "type": "object",
