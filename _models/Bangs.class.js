@@ -156,6 +156,7 @@ module.exports = class Bangs {
    * A set of static members used for the site.
    * Similar to a utility class.
    * @constructor
+   * @private
    */
   constructor() {}
 

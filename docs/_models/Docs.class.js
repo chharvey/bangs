@@ -115,6 +115,7 @@ module.exports = class Docs {
    * A set of static members used for the documentation subsite.
    * Similar to a utility class.
    * @constructor
+   * @private
    */
   constructor() {}
 
