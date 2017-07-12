@@ -150,14 +150,12 @@ const DATA = (function compileData(data) {
   })()
 })(Util.cloneDeep(require('../bangs.json')))
 
+/**
+ * Static class for this project.
+ * @module
+ */
 module.exports = class Bangs {
-  /**
-   * A set of static members used for the site.
-   * Similar to a utility class.
-   * @private
-   * @constructor
-   */
-  constructor() {}
+  /** @private */ constructor() {}
 
   /**
    * This project’s data, compiled from raw JSON.

@@ -109,14 +109,12 @@ const DOCS = new Page({ name: 'Bangs!', url: '/docs/' })
     )
   )
 
+/**
+ * Static class for this project’s docs.
+ * @module
+ */
 module.exports = class Docs {
-  /**
-   * A set of static members used for the documentation subsite.
-   * Similar to a utility class.
-   * @private
-   * @constructor
-   */
-  constructor() {}
+  /** @private */ constructor() {}
 
   /**
    * Documentation site for this project.
