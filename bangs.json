@@ -583,6 +583,7 @@
       "stability": 2,
       "values"   : [
         { "name": "auto"   , "code": "a" },
+        { "name": "none"   , "code": "n" },
         { "name": "content", "code": "c" },
         { "name": "0"      , "code": "z" },
         { "name": "0.5"    , "code": "h" },
