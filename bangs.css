@@ -1,6 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     bangs
-    Version: 0.14.0
+    Version: 0.14.1
     Licence: MIT
     Repo   : https://github.com/chharvey/bangs.git
     Home   : http://chharvey.github.io/bangs/
@@ -6462,6 +6462,11 @@
   -ms-flex: auto !important;
   flex: auto !important;
 }
+.-x-n {
+  -webkit-box-flex: 0 !important;
+  -ms-flex: none !important;
+  flex: none !important;
+}
 .-x-c {
   -webkit-box-flex: content !important;
   -ms-flex: content !important;
@@ -6663,6 +6668,11 @@
     -webkit-box-flex: 1 !important;
     -ms-flex: auto !important;
     flex: auto !important;
+  }
+  .-x-n-sK {
+    -webkit-box-flex: 0 !important;
+    -ms-flex: none !important;
+    flex: none !important;
   }
   .-x-c-sK {
     -webkit-box-flex: content !important;
@@ -6867,6 +6877,11 @@
     -ms-flex: auto !important;
     flex: auto !important;
   }
+  .-x-n-sM {
+    -webkit-box-flex: 0 !important;
+    -ms-flex: none !important;
+    flex: none !important;
+  }
   .-x-c-sM {
     -webkit-box-flex: content !important;
     -ms-flex: content !important;
@@ -7069,6 +7084,11 @@
     -webkit-box-flex: 1 !important;
     -ms-flex: auto !important;
     flex: auto !important;
+  }
+  .-x-n-sG {
+    -webkit-box-flex: 0 !important;
+    -ms-flex: none !important;
+    flex: none !important;
   }
   .-x-c-sG {
     -webkit-box-flex: content !important;
@@ -7273,6 +7293,11 @@
     -ms-flex: auto !important;
     flex: auto !important;
   }
+  .-x-n-sT {
+    -webkit-box-flex: 0 !important;
+    -ms-flex: none !important;
+    flex: none !important;
+  }
   .-x-c-sT {
     -webkit-box-flex: content !important;
     -ms-flex: content !important;
@@ -7475,6 +7500,11 @@
     -webkit-box-flex: 1 !important;
     -ms-flex: auto !important;
     flex: auto !important;
+  }
+  .-x-n-sP {
+    -webkit-box-flex: 0 !important;
+    -ms-flex: none !important;
+    flex: none !important;
   }
   .-x-c-sP {
     -webkit-box-flex: content !important;
@@ -7679,6 +7709,11 @@
     -ms-flex: auto !important;
     flex: auto !important;
   }
+  .-x-n-nK {
+    -webkit-box-flex: 0 !important;
+    -ms-flex: none !important;
+    flex: none !important;
+  }
   .-x-c-nK {
     -webkit-box-flex: content !important;
     -ms-flex: content !important;
@@ -7881,6 +7916,11 @@
     -webkit-box-flex: 1 !important;
     -ms-flex: auto !important;
     flex: auto !important;
+  }
+  .-x-n-nM {
+    -webkit-box-flex: 0 !important;
+    -ms-flex: none !important;
+    flex: none !important;
   }
   .-x-c-nM {
     -webkit-box-flex: content !important;
@@ -8085,6 +8125,11 @@
     -ms-flex: auto !important;
     flex: auto !important;
   }
+  .-x-n-nG {
+    -webkit-box-flex: 0 !important;
+    -ms-flex: none !important;
+    flex: none !important;
+  }
   .-x-c-nG {
     -webkit-box-flex: content !important;
     -ms-flex: content !important;
@@ -8288,6 +8333,11 @@
     -ms-flex: auto !important;
     flex: auto !important;
   }
+  .-x-n-nT {
+    -webkit-box-flex: 0 !important;
+    -ms-flex: none !important;
+    flex: none !important;
+  }
   .-x-c-nT {
     -webkit-box-flex: content !important;
     -ms-flex: content !important;
@@ -8490,6 +8540,11 @@
     -webkit-box-flex: 1 !important;
     -ms-flex: auto !important;
     flex: auto !important;
+  }
+  .-x-n-nP {
+    -webkit-box-flex: 0 !important;
+    -ms-flex: none !important;
+    flex: none !important;
   }
   .-x-c-nP {
     -webkit-box-flex: content !important;
