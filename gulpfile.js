@@ -1,7 +1,6 @@
 var fs = require('fs')
 
 var gulp = require('gulp')
-var rename = require('gulp-rename')
 var pug = require('gulp-pug')
 var less = require('gulp-less')
 var autoprefixer = require('gulp-autoprefixer')
@@ -56,10 +55,6 @@ gulp.task('lessc:bangs', ['src:less'], function () {
       cascade: false,
     }))
     .pipe(gulp.dest('./'))
-})
-
-gulp.task('minify', ['lessc:bangs'], function () {
-  return gulp.src('bangs.css')
     .pipe(sourcemaps.init())
     .pipe(clean_css({
       level: {
@@ -72,9 +67,8 @@ gulp.task('minify', ['lessc:bangs'], function () {
         },
       }
     }))
-    .pipe(rename('bangs.min.css'))
     .pipe(sourcemaps.write('./')) // writes to an external .map file
     .pipe(gulp.dest('./'))
 })
 
-gulp.task('build', ['pug:docs', 'lessc:docs', 'minify'])
+gulp.task('build', ['pug:docs', 'lessc:docs', 'lessc:bangs'])
