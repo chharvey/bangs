@@ -712,6 +712,8 @@
       "values"   : [
         { "name": "normal", "code": "n"   },
         { "name": "bold"  , "code": "b"   },
+        { "name": "bolder", "code": "br"  },
+        { "name": "lighter","code": "lr"  },
         { "name": "100"   , "code": "100" },
         { "name": "200"   , "code": "200" },
         { "name": "300"   , "code": "300" },
