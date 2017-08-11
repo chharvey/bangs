@@ -660,7 +660,7 @@
     {
       "name"     : "font-kerning",
       "code"     : "fk",
-      "summary"  : "Controls the usage of kerning information from a font.",
+      "summary"  : "Controls the usage of a typeface’s kerning information.",
       "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/font-kerning",
       "inherited": true,
       "initial"  : "auto",
@@ -703,7 +703,7 @@
     {
       "name"     : "font-stretch",
       "code"     : "ft",
-      "summary"  : "Selects a normal, condensed, or expanded face from a font.",
+      "summary"  : "Selects a normal, condensed, or expanded face from a typeface.",
       "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/font-stretch",
       "inherited": true,
       "initial"  : "normal",
@@ -727,7 +727,7 @@
       "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant",
       "inherited": true,
       "initial"  : "normal",
-      "stability": 2,
+      "stability": 1,
       "values"   : [
         { "name": "normal"    , "code": "n" },
         { "name": "small-caps", "code": "s" }
