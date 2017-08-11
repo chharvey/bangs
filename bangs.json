@@ -679,7 +679,8 @@
       "stability": 3,
       "values"   : [
         { "name": "normal", "code": "n" },
-        { "name": "italic", "code": "t" }
+        { "name": "italic", "code": "t" },
+        { "name": "oblique", "code": "o" }
       ],
       "pseudo": [
         "hover"
