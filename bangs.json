@@ -658,6 +658,20 @@
       ]
     },
     {
+      "name"     : "font-kerning",
+      "code"     : "fk",
+      "summary"  : "Controls the usage of kerning information from a font.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/font-kerning",
+      "inherited": true,
+      "initial"  : "auto",
+      "stability": 2,
+      "values"   : [
+        { "name": "auto"  , "code": "a"     },
+        { "name": "normal", "code": "norm"  },
+        { "name": "none"  , "code": "none"  }
+      ]
+    },
+    {
       "name"     : "font-size",
       "code"     : "fz",
       "summary"  : "Sets the font size.",
@@ -679,10 +693,31 @@
       "stability": 3,
       "values"   : [
         { "name": "normal", "code": "n" },
-        { "name": "italic", "code": "t" }
+        { "name": "italic", "code": "t" },
+        { "name": "oblique", "code": "o" }
       ],
       "pseudo": [
         "hover"
+      ]
+    },
+    {
+      "name"     : "font-stretch",
+      "code"     : "ft",
+      "summary"  : "Selects a normal, condensed, or expanded face from a font.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/font-stretch",
+      "inherited": true,
+      "initial"  : "normal",
+      "stability": 2,
+      "values"   : [
+        { "name": "normal"         , "code": "n"  },
+        { "name": "semi-expanded"  , "code": "1"  },
+        { "name": "expanded"       , "code": "2"  },
+        { "name": "extra-expanded" , "code": "3"  },
+        { "name": "ultra-expanded" , "code": "4"  },
+        { "name": "semi-condensed" , "code": "_1" },
+        { "name": "condensed"      , "code": "_2" },
+        { "name": "extra-condensed", "code": "_3" },
+        { "name": "ultra-condensed", "code": "_4" }
       ]
     },
     {
@@ -712,6 +747,8 @@
       "values"   : [
         { "name": "normal", "code": "n"   },
         { "name": "bold"  , "code": "b"   },
+        { "name": "bolder", "code": "br"  },
+        { "name": "lighter","code": "lr"  },
         { "name": "100"   , "code": "100" },
         { "name": "200"   , "code": "200" },
         { "name": "300"   , "code": "300" },
