@@ -96,7 +96,7 @@ block append main
                       small.c-Label.c-Label--initial
                         a(title="read about initial values" href="https://developer.mozilla.org/en-US/docs/Web/CSS/initial_value" rel="external")
                           | initial value
-                  dd: div(class=classname(code).slice(1)): span(class=classname(code).slice(1)) test
+                  dd: div(class=classname(code).slice(1)): span(class=classname(code).slice(1)) Test
                 each value in Bangs.DATA.global.values.concat(property.values)
                   each c in (Array.isArray(value.code) ? value.code : [value.code])
                     +item(value, c)
