@@ -658,6 +658,20 @@
       ]
     },
     {
+      "name"     : "font-kerning",
+      "code"     : "fk",
+      "summary"  : "Controls the usage of kerning information from a font.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/font-kerning",
+      "inherited": true,
+      "initial"  : "auto",
+      "stability": 2,
+      "values"   : [
+        { "name": "auto"  , "code": "a"     },
+        { "name": "normal", "code": "norm"  },
+        { "name": "none"  , "code": "none"  }
+      ]
+    },
+    {
       "name"     : "font-size",
       "code"     : "fz",
       "summary"  : "Sets the font size.",
