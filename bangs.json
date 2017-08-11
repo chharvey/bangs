@@ -737,6 +737,41 @@
       ]
     },
     {
+      "name"     : "font-variant-caps",
+      "code"     : "fvc",
+      "summary"  : "Controls the usage of alternate glyphs for letters in cases.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-caps",
+      "inherited": true,
+      "initial"  : "normal",
+      "stability": 2,
+      "values"   : [
+        { "name": "normal"         , "code": "n"  },
+        { "name": "small-caps"     , "code": "s"  },
+        { "name": "all-small-caps" , "code": "sa" },
+        { "name": "petite-caps"    , "code": "p"  },
+        { "name": "all-petite-caps", "code": "pa" },
+        { "name": "unicase"        , "code": "uc" },
+        { "name": "titling-caps"   , "code": "tc" }
+      ],
+      "pseudo": [
+        "hover"
+      ]
+    },
+    {
+      "name"     : "font-variant-position",
+      "code"     : "fvp",
+      "summary"  : "Controls the usage of alternate glyphs positioned as subscript or superscript.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-position",
+      "inherited": true,
+      "initial"  : "normal",
+      "stability": 2,
+      "values"   : [
+        { "name": "normal", "code": "n"  },
+        { "name": "sub"   , "code": "sb" },
+        { "name": "super" , "code": "sp" }
+      ]
+    },
+    {
       "name"     : "font-weight",
       "code"     : "fw",
       "summary"  : "Sets weight on the typeface.",
