@@ -687,6 +687,26 @@
       ]
     },
     {
+      "name"     : "font-stretch",
+      "code"     : "ft",
+      "summary"  : "Selects a normal, condensed, or expanded face from a font.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/font-stretch",
+      "inherited": true,
+      "initial"  : "normal",
+      "stability": 2,
+      "values"   : [
+        { "name": "normal"         , "code": "n"  },
+        { "name": "semi-expanded"  , "code": "1"  },
+        { "name": "expanded"       , "code": "2"  },
+        { "name": "extra-expanded" , "code": "3"  },
+        { "name": "ultra-expanded" , "code": "4"  },
+        { "name": "semi-condensed" , "code": "_1" },
+        { "name": "condensed"      , "code": "_2" },
+        { "name": "extra-condensed", "code": "_3" },
+        { "name": "ultra-condensed", "code": "_4" }
+      ]
+    },
+    {
       "name"     : "font-variant",
       "code"     : "fv",
       "summary"  : "Sets small capitals on the typeface.",
