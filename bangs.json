@@ -737,6 +737,20 @@
       ]
     },
     {
+      "name"     : "font-variant-position",
+      "code"     : "fvp",
+      "summary"  : "Controls the usage of alternate glyphs positioned as subscript or superscript.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-position",
+      "inherited": true,
+      "initial"  : "normal",
+      "stability": 2,
+      "values"   : [
+        { "name": "normal", "code": "n"  },
+        { "name": "sub"   , "code": "sb" },
+        { "name": "super" , "code": "sp" }
+      ]
+    },
+    {
       "name"     : "font-weight",
       "code"     : "fw",
       "summary"  : "Sets weight on the typeface.",
