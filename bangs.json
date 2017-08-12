@@ -1359,6 +1359,21 @@
       ]
     },
     {
+      "name"     : "text-justify",
+      "code"     : "tj",
+      "summary"  : "Defines how justification should be applied when text is justified.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/text-justify",
+      "inherited": true,
+      "initial"  : "auto",
+      "stability": 2,
+      "values"   : [
+        { "name": "auto"           , "code": "a" },
+        { "name": "none"           , "code": "n" },
+        { "name": "inter-word"     , "code": "w" },
+        { "name": "inter-character", "code": "c" }
+      ]
+    },
+    {
       "name"     : "text-overflow",
       "code"     : "to",
       "summary"  : "Defines how invisible overflowed text content, if any, is rendered.",
