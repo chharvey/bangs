@@ -1393,10 +1393,11 @@
       "initial"  : "none",
       "stability": 3,
       "values"   : [
-        { "name": "none"      , "code": "n" },
+        { "name": "none"      , "code": "n"  },
         { "name": "capitalize", "code": "cp" },
         { "name": "uppercase" , "code": "uc" },
-        { "name": "lowercase" , "code": "lc" }
+        { "name": "lowercase" , "code": "lc" },
+        { "name": "full-width", "code": "fw" }
       ],
       "pseudo": [
         "hover"
