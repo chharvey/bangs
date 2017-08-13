@@ -1347,6 +1347,23 @@
       ]
     },
     {
+      "name"     : "text-decoration-color",
+      "code"     : "tdc",
+      "summary"  : "Sets the color of line decoration to text.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-color",
+      "inherited": false,
+      "initial"  : "currentColor",
+      "stability": 2,
+      "values"   : [
+      ],
+      "generators": [
+        {
+          "name": "importValueType",
+          "options": { "name": "<color>" }
+        }
+      ]
+    },
+    {
       "name"     : "text-decoration-line",
       "code"     : "tdl",
       "summary"  : "Sets a line decoration to text.",
