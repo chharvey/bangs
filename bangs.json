@@ -1335,15 +1335,66 @@
       "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration",
       "inherited": false,
       "initial"  : "none",
-      "stability": 2,
+      "stability": 1,
       "values"   : [
-        { "name": "none"        , "code": "n" },
+        { "name": "none"        , "code": "n"  },
         { "name": "underline"   , "code": "ul" },
         { "name": "overline"    , "code": "ol" },
         { "name": "line-through", "code": "lt" }
       ],
       "pseudo": [
         "hover"
+      ]
+    },
+    {
+      "name"     : "text-decoration-color",
+      "code"     : "tdc",
+      "summary"  : "Sets the color of line decoration to text.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-color",
+      "inherited": false,
+      "initial"  : "currentColor",
+      "stability": 2,
+      "values"   : [
+      ],
+      "generators": [
+        {
+          "name": "importValueType",
+          "options": { "name": "<color>" }
+        }
+      ]
+    },
+    {
+      "name"     : "text-decoration-line",
+      "code"     : "tdl",
+      "summary"  : "Sets a line decoration to text.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-line",
+      "inherited": false,
+      "initial"  : "none",
+      "stability": 2,
+      "values"   : [
+        { "name": "none"        , "code": "n"  },
+        { "name": "underline"   , "code": "ul" },
+        { "name": "overline"    , "code": "ol" },
+        { "name": "line-through", "code": "lt" }
+      ],
+      "pseudo": [
+        "hover"
+      ]
+    },
+    {
+      "name"     : "text-decoration-style",
+      "code"     : "tds",
+      "summary"  : "Sets the style of line decoration to text.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-style",
+      "inherited": false,
+      "initial"  : "solid",
+      "stability": 2,
+      "values"   : [
+        { "name": "solid" , "code": "s"  },
+        { "name": "dotted", "code": "do" },
+        { "name": "dashed", "code": "da" },
+        { "name": "double", "code": "db" },
+        { "name": "wavy"  , "code": "wv" }
       ]
     },
     {
