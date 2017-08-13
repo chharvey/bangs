@@ -34,7 +34,6 @@ gulp.task('lessc:docs', function () {
 gulp.task('src:less', function () {
   fs.mkdir(`${__dirname}/build/`, function (err, data) {
     Bangs.DATA.properties.filter((p) => ![
-      'text-justify', // TODO v0.15.0
     ].includes(p.name)).forEach(function (property) {
       fs.writeFile(`${__dirname}/build/_${property.name}.less`, Bangs.generateLess(property), function (err, data) { if (err) throw err })
     })
