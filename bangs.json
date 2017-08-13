@@ -1335,9 +1335,27 @@
       "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration",
       "inherited": false,
       "initial"  : "none",
+      "stability": 1,
+      "values"   : [
+        { "name": "none"        , "code": "n"  },
+        { "name": "underline"   , "code": "ul" },
+        { "name": "overline"    , "code": "ol" },
+        { "name": "line-through", "code": "lt" }
+      ],
+      "pseudo": [
+        "hover"
+      ]
+    },
+    {
+      "name"     : "text-decoration-line",
+      "code"     : "tdl",
+      "summary"  : "Sets a line decoration to text.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-line",
+      "inherited": false,
+      "initial"  : "none",
       "stability": 2,
       "values"   : [
-        { "name": "none"        , "code": "n" },
+        { "name": "none"        , "code": "n"  },
         { "name": "underline"   , "code": "ul" },
         { "name": "overline"    , "code": "ol" },
         { "name": "line-through", "code": "lt" }
