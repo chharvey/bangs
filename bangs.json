@@ -1365,6 +1365,22 @@
       ]
     },
     {
+      "name"     : "text-decoration-style",
+      "code"     : "tds",
+      "summary"  : "Sets the style of line decoration to text.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-style",
+      "inherited": false,
+      "initial"  : "solid",
+      "stability": 2,
+      "values"   : [
+        { "name": "solid" , "code": "s"  },
+        { "name": "dotted", "code": "do" },
+        { "name": "dashed", "code": "da" },
+        { "name": "double", "code": "db" },
+        { "name": "wavy"  , "code": "wv" }
+      ]
+    },
+    {
       "name"     : "text-indent",
       "code"     : "ti",
       "summary"  : "Leaves empty space before lines of text in a block.",
