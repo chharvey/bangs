@@ -353,6 +353,13 @@
       "values": [
         { "name": "auto", "code": "a" },
         { "name": "0"   , "code": "z" }
+      ],
+      "generators": [
+        {
+          "name": "generateSpaces",
+          "transforms": { "namefn": ["length", "return `${length}rem`"] },
+          "options": { "domain": "spacing", "negative": true }
+        }
       ]
     },
     {
@@ -950,6 +957,13 @@
       "values"   : [
         { "name": "auto", "code": "a" },
         { "name": "0"   , "code": "z" }
+      ],
+      "generators": [
+        {
+          "name": "generateSpaces",
+          "transforms": { "namefn": ["length", "return `${length}rem`"] },
+          "options": { "domain": "spacing", "negative": true }
+        }
       ]
     },
     {
@@ -1309,6 +1323,13 @@
       "values"   : [
         { "name": "auto", "code": "a" },
         { "name": "0"   , "code": "z" }
+      ],
+      "generators": [
+        {
+          "name": "generateSpaces",
+          "transforms": { "namefn": ["length", "return `${length}rem`"] },
+          "options": { "domain": "spacing", "negative": true }
+        }
       ]
     },
     {
@@ -1480,6 +1501,13 @@
       "values": [
         { "name": "auto", "code": "a" },
         { "name": "0"   , "code": "z" }
+      ],
+      "generators": [
+        {
+          "name": "generateSpaces",
+          "transforms": { "namefn": ["length", "return `${length}rem`"] },
+          "options": { "domain": "spacing", "negative": true }
+        }
       ]
     },
     {
