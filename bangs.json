@@ -353,6 +353,13 @@
       "values": [
         { "name": "auto", "code": "a" },
         { "name": "0"   , "code": "z" }
+      ],
+      "generators": [
+        {
+          "name": "generateSpaces",
+          "transforms": { "namefn": ["length", "return `${length}rem`"] },
+          "options": { "domain": "spacing", "negative": true }
+        }
       ]
     },
     {
@@ -658,6 +665,20 @@
       ]
     },
     {
+      "name"     : "font-kerning",
+      "code"     : "fk",
+      "summary"  : "Controls the usage of a typeface’s kerning information.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/font-kerning",
+      "inherited": true,
+      "initial"  : "auto",
+      "stability": 2,
+      "values"   : [
+        { "name": "auto"  , "code": "a"     },
+        { "name": "normal", "code": "norm"  },
+        { "name": "none"  , "code": "none"  }
+      ]
+    },
+    {
       "name"     : "font-size",
       "code"     : "fz",
       "summary"  : "Sets the font size.",
@@ -679,10 +700,31 @@
       "stability": 3,
       "values"   : [
         { "name": "normal", "code": "n" },
-        { "name": "italic", "code": "t" }
+        { "name": "italic", "code": "t" },
+        { "name": "oblique", "code": "o" }
       ],
       "pseudo": [
         "hover"
+      ]
+    },
+    {
+      "name"     : "font-stretch",
+      "code"     : "ft",
+      "summary"  : "Selects a normal, condensed, or expanded face from a typeface.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/font-stretch",
+      "inherited": true,
+      "initial"  : "normal",
+      "stability": 2,
+      "values"   : [
+        { "name": "normal"         , "code": "n"  },
+        { "name": "semi-expanded"  , "code": "1"  },
+        { "name": "expanded"       , "code": "2"  },
+        { "name": "extra-expanded" , "code": "3"  },
+        { "name": "ultra-expanded" , "code": "4"  },
+        { "name": "semi-condensed" , "code": "_1" },
+        { "name": "condensed"      , "code": "_2" },
+        { "name": "extra-condensed", "code": "_3" },
+        { "name": "ultra-condensed", "code": "_4" }
       ]
     },
     {
@@ -692,13 +734,48 @@
       "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant",
       "inherited": true,
       "initial"  : "normal",
-      "stability": 2,
+      "stability": 1,
       "values"   : [
         { "name": "normal"    , "code": "n" },
         { "name": "small-caps", "code": "s" }
       ],
       "pseudo": [
         "hover"
+      ]
+    },
+    {
+      "name"     : "font-variant-caps",
+      "code"     : "fvc",
+      "summary"  : "Controls the usage of alternate glyphs for letters in cases.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-caps",
+      "inherited": true,
+      "initial"  : "normal",
+      "stability": 2,
+      "values"   : [
+        { "name": "normal"         , "code": "n"  },
+        { "name": "small-caps"     , "code": "s"  },
+        { "name": "all-small-caps" , "code": "sa" },
+        { "name": "petite-caps"    , "code": "p"  },
+        { "name": "all-petite-caps", "code": "pa" },
+        { "name": "unicase"        , "code": "uc" },
+        { "name": "titling-caps"   , "code": "tc" }
+      ],
+      "pseudo": [
+        "hover"
+      ]
+    },
+    {
+      "name"     : "font-variant-position",
+      "code"     : "fvp",
+      "summary"  : "Controls the usage of alternate glyphs positioned as subscript or superscript.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-position",
+      "inherited": true,
+      "initial"  : "normal",
+      "stability": 2,
+      "values"   : [
+        { "name": "normal", "code": "n"  },
+        { "name": "sub"   , "code": "sb" },
+        { "name": "super" , "code": "sp" }
       ]
     },
     {
@@ -712,6 +789,8 @@
       "values"   : [
         { "name": "normal", "code": "n"   },
         { "name": "bold"  , "code": "b"   },
+        { "name": "bolder", "code": "br"  },
+        { "name": "lighter","code": "lr"  },
         { "name": "100"   , "code": "100" },
         { "name": "200"   , "code": "200" },
         { "name": "300"   , "code": "300" },
@@ -733,7 +812,7 @@
       "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-gap",
       "inherited": false,
       "initial"  : "0",
-      "stability": 3,
+      "stability": 2,
       "values"   : [
         { "name": "0", "code": "z" }
       ],
@@ -752,7 +831,7 @@
       "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-gap",
       "inherited": false,
       "initial"  : "0",
-      "stability": 3,
+      "stability": 2,
       "values"   : [
         { "name": "0", "code": "z" }
       ],
@@ -878,6 +957,13 @@
       "values"   : [
         { "name": "auto", "code": "a" },
         { "name": "0"   , "code": "z" }
+      ],
+      "generators": [
+        {
+          "name": "generateSpaces",
+          "transforms": { "namefn": ["length", "return `${length}rem`"] },
+          "options": { "domain": "spacing", "negative": true }
+        }
       ]
     },
     {
@@ -1237,6 +1323,13 @@
       "values"   : [
         { "name": "auto", "code": "a" },
         { "name": "0"   , "code": "z" }
+      ],
+      "generators": [
+        {
+          "name": "generateSpaces",
+          "transforms": { "namefn": ["length", "return `${length}rem`"] },
+          "options": { "domain": "spacing", "negative": true }
+        }
       ]
     },
     {
@@ -1263,15 +1356,66 @@
       "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration",
       "inherited": false,
       "initial"  : "none",
-      "stability": 2,
+      "stability": 1,
       "values"   : [
-        { "name": "none"        , "code": "n" },
+        { "name": "none"        , "code": "n"  },
         { "name": "underline"   , "code": "ul" },
         { "name": "overline"    , "code": "ol" },
         { "name": "line-through", "code": "lt" }
       ],
       "pseudo": [
         "hover"
+      ]
+    },
+    {
+      "name"     : "text-decoration-color",
+      "code"     : "tdc",
+      "summary"  : "Sets the color of line decoration to text.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-color",
+      "inherited": false,
+      "initial"  : "currentColor",
+      "stability": 2,
+      "values"   : [
+      ],
+      "generators": [
+        {
+          "name": "importValueType",
+          "options": { "name": "<color>" }
+        }
+      ]
+    },
+    {
+      "name"     : "text-decoration-line",
+      "code"     : "tdl",
+      "summary"  : "Sets a line decoration to text.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-line",
+      "inherited": false,
+      "initial"  : "none",
+      "stability": 2,
+      "values"   : [
+        { "name": "none"        , "code": "n"  },
+        { "name": "underline"   , "code": "ul" },
+        { "name": "overline"    , "code": "ol" },
+        { "name": "line-through", "code": "lt" }
+      ],
+      "pseudo": [
+        "hover"
+      ]
+    },
+    {
+      "name"     : "text-decoration-style",
+      "code"     : "tds",
+      "summary"  : "Sets the style of line decoration to text.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-style",
+      "inherited": false,
+      "initial"  : "solid",
+      "stability": 2,
+      "values"   : [
+        { "name": "solid" , "code": "s"  },
+        { "name": "dotted", "code": "do" },
+        { "name": "dashed", "code": "da" },
+        { "name": "double", "code": "db" },
+        { "name": "wavy"  , "code": "wv" }
       ]
     },
     {
@@ -1284,6 +1428,21 @@
       "stability": 3,
       "values"   : [
         { "name": "0", "code": "z" }
+      ]
+    },
+    {
+      "name"     : "text-justify",
+      "code"     : "tj",
+      "summary"  : "Defines how justification should be applied when text is justified.",
+      "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/text-justify",
+      "inherited": true,
+      "initial"  : "auto",
+      "stability": 2,
+      "values"   : [
+        { "name": "auto"           , "code": "a" },
+        { "name": "none"           , "code": "n" },
+        { "name": "inter-word"     , "code": "w" },
+        { "name": "inter-character", "code": "c" }
       ]
     },
     {
@@ -1321,10 +1480,11 @@
       "initial"  : "none",
       "stability": 3,
       "values"   : [
-        { "name": "none"      , "code": "n" },
+        { "name": "none"      , "code": "n"  },
         { "name": "capitalize", "code": "cp" },
         { "name": "uppercase" , "code": "uc" },
-        { "name": "lowercase" , "code": "lc" }
+        { "name": "lowercase" , "code": "lc" },
+        { "name": "full-width", "code": "fw" }
       ],
       "pseudo": [
         "hover"
@@ -1341,6 +1501,13 @@
       "values": [
         { "name": "auto", "code": "a" },
         { "name": "0"   , "code": "z" }
+      ],
+      "generators": [
+        {
+          "name": "generateSpaces",
+          "transforms": { "namefn": ["length", "return `${length}rem`"] },
+          "options": { "domain": "spacing", "negative": true }
+        }
       ]
     },
     {
