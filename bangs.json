@@ -812,7 +812,7 @@
       "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-gap",
       "inherited": false,
       "initial"  : "0",
-      "stability": 3,
+      "stability": 2,
       "values"   : [
         { "name": "0", "code": "z" }
       ],
@@ -831,7 +831,7 @@
       "url"      : "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-gap",
       "inherited": false,
       "initial"  : "0",
-      "stability": 3,
+      "stability": 2,
       "values"   : [
         { "name": "0", "code": "z" }
       ],
