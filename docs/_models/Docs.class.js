@@ -1,4 +1,4 @@
-var Page = require('sitepage').Page
+const Page = require('sitepage').Page
 
 const DOCS = new Page({ name: 'Bangs!', url: '/docs/' })
   .title('Bangs! by Chris Harvey')
