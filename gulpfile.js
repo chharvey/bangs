@@ -8,10 +8,11 @@ const sourcemaps   = require('gulp-sourcemaps')
 const Bangs        = require('./_models/Bangs.class.js')
 
 gulp.task('pug:docs', function () {
-  return gulp.src('docs/{index,props}.pug')
+  return gulp.src('./docs/{index,props}.pug')
     .pipe(pug({
       basedir: './',
       locals: {
+        Xmeter: require('xmeter'),
         Docs: require('./docs/_models/Docs.class.js'),
         Bangs: Bangs,
       }
@@ -20,36 +21,36 @@ gulp.task('pug:docs', function () {
 })
 
 gulp.task('lessc:docs', function () {
-  return gulp.src('docs/styles/docs.less')
+  return gulp.src('./docs/css/docs.less')
     .pipe(less())
     .pipe(autoprefixer({
       grid: true,
       cascade: false,
     }))
-    .pipe(gulp.dest('./docs/styles/'))
+    .pipe(gulp.dest('./docs/css/'))
 })
 
 gulp.task('src:less', function () {
-  fs.mkdir(`${__dirname}/build/`, function (err, data) {
-    Bangs.DATA.properties.filter((p) => ![
-    ].includes(p.name)).forEach(function (property) {
-      fs.writeFile(`${__dirname}/build/_${property.name}.less`, Bangs.generateLess(property), function (err, data) { if (err) throw err })
+  fs.mkdir(`${__dirname}/css/dist/`, function (err, data) {
+    Bangs.DATA.properties.forEach(function (property) {
+      fs.writeFile(`${__dirname}/css/dist/_${property.name}.less`, Bangs.generateLess(property), function (err, data) { if (err) throw err })
     })
   })
   return;
-  // return gulp.src('build/*.less')
+  // if we want each less file compiled separately:
+  // return gulp.src('./css/dist/*.less')
   //   .pipe(less())
-  //   .pipe(gulp.dest('build/'))
+  //   .pipe(gulp.dest('./css/dist/'))
 })
 
 gulp.task('lessc:bangs', ['src:less'], function () {
-  return gulp.src('bangs.less')
+  return gulp.src('./css/src/bangs.less')
     .pipe(less())
     .pipe(autoprefixer({
       grid: true,
       cascade: false,
     }))
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('./css/'))
     .pipe(sourcemaps.init())
     .pipe(clean_css({
       level: {
@@ -63,7 +64,7 @@ gulp.task('lessc:bangs', ['src:less'], function () {
       }
     }))
     .pipe(sourcemaps.write('./')) // writes to an external .map file
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('./css/'))
 })
 
 gulp.task('build', ['pug:docs', 'lessc:docs', 'lessc:bangs'])
