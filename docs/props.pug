@@ -60,8 +60,7 @@ block append main
       section._ss(id=id)
         h3
           = subpage.name()
-          include ../node_modules/xmeter/_views/_c-Permalink.view.pug
-          //- +permalink(id)
+          //- = Xmeter.view({id: id}).permalink()
         each propertypage in subpage.findAll()
           - let property = Bangs.DATA.properties.find((p) => p.name===propertypage.name())
           if property
@@ -77,8 +76,7 @@ block append main
                     small.c-Label(class=`t-stability-${stab.name}` title=stab.description): b= stab.name
               h4.-fz-giga
                 = property.name
-                include ../node_modules/xmeter/_views/_c-Permalink.view.pug
-                +permalink(property.name)
+                != Xmeter.view({id: property.name}).permalink()
               blockquote.c-Property__Desc
                 a(href=property.url rel="external")= property.summary
                 if property.inherited

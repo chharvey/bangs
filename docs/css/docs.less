@@ -7,7 +7,8 @@
 /*================================*\
     docs.less
 \*================================*/
-@import (reference) url('../../node_modules/xmeter/src/__tool.fontsize.less');
+@import (reference) url('../../node_modules/xmeter/css/src/__settings.less');
+@import (reference) url('../../node_modules/xmeter/css/src/__tool.fontsize.less');
 
 a:hover {
   text-decoration: underline; // HACK fallback
@@ -84,7 +85,7 @@ a:hover {
 .t-stability-locked       { background-color: #99daff; }
 
 .-fz-mod-mill {
-  .font-size-mod(@g-font_size_mill;)
+  .font-size-mod(@g-font-size-mill);
 }
 
 body > a:last-of-type {

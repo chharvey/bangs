@@ -32,6 +32,6 @@
     "gulp-pug": "^3.3.0",
     "gulp-sourcemaps": "^2.6.1",
     "sitepage": "^1.0.0",
-    "xmeter": "^5.3.1"
+    "xmeter": "^6.1.1"
   }
 }
