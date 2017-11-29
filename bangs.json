@@ -1,5 +1,4 @@
-{
-  "properties": [
+  [
     {
       "name"     : "align-content",
       "code"     : "ac",
@@ -1541,4 +1540,3 @@
       ]
     }
   ]
-}

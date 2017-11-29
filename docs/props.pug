@@ -62,7 +62,7 @@ block append main
           = subpage.name()
           //- = Xmeter.view({id: id}).permalink()
         each propertypage in subpage.findAll()
-          - let property = Bangs.DATA.properties.find((p) => p.name===propertypage.name())
+          - let property = Bangs.DATA.find((p) => p.name===propertypage.name())
           if property
             section.c-Property(id=property.name)
               -

@@ -15,7 +15,7 @@ const DATA = (function compileData(data) {
         throw new Error('Schema is not a valid schema!')
       }
     })()
-    data.properties = data.properties.map((propertyspec) => new PropertySpec(propertyspec))
+    data = data.map((propertyspec) => new PropertySpec(propertyspec))
     ;(function () {
       let ajv = new Ajv()
       let is_data_valid = ajv.validate(require('../bangs.schema.json'), data)

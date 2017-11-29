@@ -2,7 +2,6 @@
   "$schema": "http://json-schema.org/schema#",
   "$id": "http://chharvey.github.io/bangs/bangs.schema.json",
   "title": "Bangs!",
-  "description": "JSON data used to generate Bangs! stylesheets and documentation.",
   "definitions": {
     "Function": {
       "description": "Array of strings spread and then passed to `new Function()`.",
@@ -110,15 +109,8 @@
       }
     }
   },
-  "type": "object",
-  "required": ["properties"],
-  "additionalProperties": false,
-  "properties": {
-    "properties": {
       "description": "List of all CSS properties supported in the project.",
       "type": "array",
       "uniqueItems": true,
       "items": { "allOf": [{ "$ref": "#/definitions/CSS_Property" }] }
-    }
-  }
 }

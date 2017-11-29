@@ -132,10 +132,10 @@ block append main
             td #[code= `@media ${at_rule.query}`] (#{at_rule.name})
             td
               -
-                let propslist = Bangs.DATA.properties.filter((prop) => !prop.non_media || !prop.non_media.includes(at_rule.name))
-                let complement = propslist.length >= Bangs.DATA.properties.length / 2
+                let propslist = Bangs.DATA.filter((prop) => !prop.non_media || !prop.non_media.includes(at_rule.name))
+                let complement = propslist.length >= Bangs.DATA.length / 2
                 if (complement) {
-                  propslist = Bangs.DATA.properties.filter((prop) => propslist.every((p) => p.name!==prop.name))
+                  propslist = Bangs.DATA.filter((prop) => propslist.every((p) => p.name!==prop.name))
                 }
               +list(propslist, complement)
       tbody
@@ -145,10 +145,10 @@ block append main
             td: code= ext.selectors.join()
             td
               -
-                let propslist = Bangs.DATA.properties.filter((prop) => prop.pseudo && prop.pseudo.includes(ext.name))
-                let complement = propslist.length >= Bangs.DATA.properties.length / 2
+                let propslist = Bangs.DATA.filter((prop) => prop.pseudo && prop.pseudo.includes(ext.name))
+                let complement = propslist.length >= Bangs.DATA.length / 2
                 if (complement) {
-                  propslist = Bangs.DATA.properties.filter((prop) => propslist.every((p) => p.name!==prop.name))
+                  propslist = Bangs.DATA.filter((prop) => propslist.every((p) => p.name!==prop.name))
                 }
               +list(propslist, complement)
   section#trends
