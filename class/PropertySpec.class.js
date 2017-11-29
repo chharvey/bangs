@@ -1,5 +1,7 @@
 const xjs = require('extrajs')
 
+const GLOBAL = require('../global-data.json') // TODO once Bangs.class doesn’t require this class, set this const to Bangs.GLOBAL
+
 /**
  * @classdesc The potential of a css property.
  * An instance of this class represents the *potential* of a property,
@@ -8,7 +10,6 @@ const xjs = require('extrajs')
  */
 class PropertySpec {
   constructor(data) {
-    const data_global = require('../bangs.json').global // TODO separate global data into another json file
     /**
      * @summary A named list of possible generator functions.
      * @description Each function takes a {@link TransformObj} and an options object,
@@ -34,10 +35,10 @@ class PropertySpec {
    * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
    * @param  {TransformObj} transforms a set of possible transformations
    * @param  {!Object={}} options a set of possible options
-   * @param  {(number|Array<number>|string)=1} options.domain if {number}, use 1–n tracks; if {Array}, use those entries; if {string}, get own property of `data_global.common_data`
+   * @param  {(number|Array<number>|string)=1} options.domain if {number}, use 1–n tracks; if {Array}, use those entries; if {string}, get own property of `GLOBAL.common_data`
    */
   generateFracs(transforms, options={}) {
-    xjs.Array.toArray(options.domain, data_global.common_data).forEach(function (den) {
+    xjs.Array.toArray(options.domain, GLOBAL.common_data).forEach(function (den) {
       for (let num = 1; num <= den; num++) {
         let newvalue = {
           name: `${Math.round(10000 * (num/den))/100}%`,
@@ -62,11 +63,11 @@ class PropertySpec {
    * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
    * @param  {TransformObj} transforms a set of possible transformations
    * @param  {!Object={}} options a set of possible options
-   * @param  {(number|Array<number>|string)=1} options.domain if {number}, use 1–n tracks; if {Array}, use those entries; if {string}, get own property of `data_global.common_data`
+   * @param  {(number|Array<number>|string)=1} options.domain if {number}, use 1–n tracks; if {Array}, use those entries; if {string}, get own property of `GLOBAL.common_data`
    * @param  {boolean=} options.negative if true, generate negative values as well (parallelling positive values)
    */
   generateCounts(transforms, options={}) {
-    let arr = xjs.Array.toArray(options.domain, data_global.common_data)
+    let arr = xjs.Array.toArray(options.domain, GLOBAL.common_data)
     arr.forEach(function (ct) {
       this.values.push({
         name: (transforms.namefn) ? transforms.namefn.call(null, ct) : ct.toString(),
@@ -90,7 +91,7 @@ class PropertySpec {
    * NOTE: METHOD FUNCTION. This function uses `this`, so must be called on an object.
    * @param  {TransformObj} transforms a set of possible transformations
    * @param  {!Object={}} options a set of possible options
-   * @param  {(number|Array<number>|string)=1} options.domain if {number}, use 1–n tracks; if {Array}, use those entries; if {string}, get own property of `data_global.common_data`
+   * @param  {(number|Array<number>|string)=1} options.domain if {number}, use 1–n tracks; if {Array}, use those entries; if {string}, get own property of `GLOBAL.common_data`
    * @param  {boolean=} options.negative if true, generate negative values as well (parallelling positive values)
    */
   generateSpaces(transforms, options={}) {
@@ -98,7 +99,7 @@ class PropertySpec {
       0.25: 'q'
     , 0.5 : 'h'
     }
-    let arr = xjs.Array.toArray(options.domain, data_global.common_data)
+    let arr = xjs.Array.toArray(options.domain, GLOBAL.common_data)
     arr.forEach(function (sp) {
       this.values.push({
         name: (transforms.namefn) ? transforms.namefn.call(null, sp) : sp.toString(),
@@ -123,7 +124,7 @@ class PropertySpec {
    * @param  {string=} options.name the name of the value type to inherit
    */
   importValueType(transforms, options={}) {
-    this.values.push(...data_global.types.find((el) => el.name===options.name).values)
+    this.values.push(...GLOBAL.types.find((el) => el.name===options.name).values)
   },
     }
 

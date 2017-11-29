@@ -2,6 +2,7 @@ const Ajv = require('ajv')
 const xjs = require('extrajs')
 
 const PropertySpec = require('../class/PropertySpec.class.js')
+const GLOBAL       = require('../global-data.json')
 
 const DATA = (function compileData(data) {
 
@@ -34,6 +35,12 @@ class Bangs {
   /** @private */ constructor() {}
 
   /**
+   * JSON data reused throughout the project.
+   * @constant {!Object}
+   */
+  static get GLOBAL() { return GLOBAL }
+
+  /**
    * This project’s data, compiled from raw JSON.
    * See `/bangs.json` for more information
    * @type {Object}
@@ -45,8 +52,8 @@ class Bangs {
    * @param  {!Object} property a CSS property JSON object
    */
   static generateLess(property) {
-    let supported_media = Bangs.DATA.global.media.filter((m) => !(property.non_media || []).includes(m.name))
-    let supported_pseudos = Bangs.DATA.global.pseudo.filter((p) => (property.pseudo || []).includes(p.name))
+    let supported_media = Bangs.GLOBAL.media.filter((m) => !(property.non_media || []).includes(m.name))
+    let supported_pseudos = Bangs.GLOBAL.pseudo.filter((p) => (property.pseudo || []).includes(p.name))
 
     /**
      * Output multiple CSS rulesets corresponding to a set of values.
@@ -54,8 +61,8 @@ class Bangs {
      */
     function output() {
       let rulesets = []
-      Bangs.DATA.global.values.concat(property.values).forEach(function (value) {
-        let codes_arr = (Array.isArray(value.code)) ? value.code : [value.code] // use this if cannot find value.code (shant, as it’s required) // || Bangs.DATA.global.values.find((v) => v.name===value.name).code
+      Bangs.GLOBAL.values.concat(property.values).forEach(function (value) {
+        let codes_arr = (Array.isArray(value.code)) ? value.code : [value.code] // use this if cannot find value.code (shant, as it’s required) // || Bangs.GLOBAL.values.find((v) => v.name===value.name).code
         let selector = codes_arr.map((c) => `.-${property.code}-${c}`).join(', ')
         let rules = (function () {
           /**
@@ -76,7 +83,7 @@ class Bangs {
             })(),
             // TODO remove `unset` fallback once widely supported
             'unset': (function () {
-              let val_code = Bangs.DATA.global.values.find((v) => v.name===(
+              let val_code = Bangs.GLOBAL.values.find((v) => v.name===(
                 (property.inherited) ? 'inherit' : 'initial'
               )).code
               return `.-${property.code}-${val_code};`
@@ -99,14 +106,14 @@ class Bangs {
      */
     function atRule(suffix) {
       let rulesets = []
-      Bangs.DATA.global.values.concat(property.values).forEach(function (value) {
+      Bangs.GLOBAL.values.concat(property.values).forEach(function (value) {
         let codes_arr = (Array.isArray(value.code)) ? value.code : [value.code]
         let selector = codes_arr.map((c) => `.-${property.code}-${c}-${suffix}`).join(', ')
         let rules = `.-${property.code}-${codes_arr[0]};`
         rulesets.push(`${selector} { ${rules} }`)
       })
       return `
-        @media ${Bangs.DATA.global.media.find((m) => m.code===suffix).query} {
+        @media ${Bangs.GLOBAL.media.find((m) => m.code===suffix).query} {
           ${rulesets.join('\n')}
         }
       `
@@ -119,10 +126,10 @@ class Bangs {
      */
     function pseudoClass(suffix) {
       let rulesets = []
-      Bangs.DATA.global.values.concat(property.values).forEach(function (value) {
+      Bangs.GLOBAL.values.concat(property.values).forEach(function (value) {
         let codes_arr = (Array.isArray(value.code)) ? value.code : [value.code]
         let selector = codes_arr.map((c) => `.-${property.code}-${c}-${suffix}`).join(', ')
-        let less_parent = Bangs.DATA.global.pseudo.find((p) => p.code===suffix).selectors.map((s) => `&${s}`).join(', ')
+        let less_parent = Bangs.GLOBAL.pseudo.find((p) => p.code===suffix).selectors.map((s) => `&${s}`).join(', ')
         let rules = `.-${property.code}-${codes_arr[0]};`
         rulesets.push(`${selector} { ${less_parent} { ${rules} } }`)
       })

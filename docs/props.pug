@@ -29,7 +29,7 @@ block append vars
   mixin stabilityLevel(stab)
     p.o-Alert(class=`t-stability-${stab.name}`)
       span.o-Alert__Hn.h-Block
-        span.h-Block.-ps-a= `Stability ${Bangs.DATA.global.stability_levels.indexOf(stab)}:`
+        span.h-Block.-ps-a= `Stability ${Bangs.GLOBAL.stability_levels.indexOf(stab)}:`
         b.-tt-h.-tt-uc= `${stab.name.charAt(0).toUpperCase() + stab.name.slice(1)}`
       span.h-Block= stab.description
 
@@ -51,7 +51,7 @@ block append main
       might have Stability 4, but #[code .-d-fx] (for #[code display: flex]) could have Stability 3, and
       #[code .-d-il-nK] (for #[code display: inline] on extra-small screens) could have Stability 2.
     ol.o-List
-      each item in Bangs.DATA.global.stability_levels
+      each item in Bangs.GLOBAL.stability_levels
         li.o-List__Item: +stabilityLevel(item)
   section#properties
     h2 Properties
@@ -66,13 +66,13 @@ block append main
           if property
             section.c-Property(id=property.name)
               -
-                let supported_media = Bangs.DATA.global.media.filter((m) => !(property.non_media || []).includes(m.name))
-                let supported_pseudos = Bangs.DATA.global.pseudo.filter((p) => (property.pseudo || []).includes(p.name))
+                let supported_media = Bangs.GLOBAL.media.filter((m) => !(property.non_media || []).includes(m.name))
+                let supported_pseudos = Bangs.GLOBAL.pseudo.filter((p) => (property.pseudo || []).includes(p.name))
               mixin codeTerm(str, num)
                 dt
                   code= str
                   if num >= 0
-                    - let stab = Bangs.DATA.global.stability_levels[num]
+                    - let stab = Bangs.GLOBAL.stability_levels[num]
                     small.c-Label(class=`t-stability-${stab.name}` title=stab.description): b= stab.name
               h4.-fz-giga
                 = property.name
@@ -83,7 +83,7 @@ block append main
                   small.c-Label.c-Label--inherited
                     a(title="read about inherited properties" href="https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance" rel="external")
                       | inherited
-              +stabilityLevel(Bangs.DATA.global.stability_levels[property.stability])
+              +stabilityLevel(Bangs.GLOBAL.stability_levels[property.stability])
               dl.c-Property__Classes
                 - function classname(val) { return `.-${property.code}-${val}` }
                 mixin item(value, code)
@@ -95,7 +95,7 @@ block append main
                         a(title="read about initial values" href="https://developer.mozilla.org/en-US/docs/Web/CSS/initial_value" rel="external")
                           | initial value
                   dd: div(class=classname(code).slice(1)): span(class=classname(code).slice(1)) Test
-                each value in Bangs.DATA.global.values.concat(property.values)
+                each value in Bangs.GLOBAL.values.concat(property.values)
                   each c in (Array.isArray(value.code) ? value.code : [value.code])
                     +item(value, c)
               if supported_media.length || supported_pseudos.length

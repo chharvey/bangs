@@ -126,7 +126,7 @@ block append main
           td no suffix
           td no media query (same as #[code @media all]) or pseudo-class
           td all properties
-        each at_rule in Bangs.DATA.global.media
+        each at_rule in Bangs.GLOBAL.media
           tr
             td: code -#{at_rule.code}
             td #[code= `@media ${at_rule.query}`] (#{at_rule.name})
@@ -139,7 +139,7 @@ block append main
                 }
               +list(propslist, complement)
       tbody
-        each ext in Bangs.DATA.global.pseudo
+        each ext in Bangs.GLOBAL.pseudo
           tr
             td: code -#{ext.code}
             td: code= ext.selectors.join()
