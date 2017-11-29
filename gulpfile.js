@@ -33,7 +33,7 @@ gulp.task('lessc:docs', function () {
 gulp.task('src:less', function () {
   fs.mkdir(`${__dirname}/css/dist/`, function (err, data) {
     Bangs.DATA.properties.forEach(function (property) {
-      fs.writeFile(`${__dirname}/css/dist/_${property.name}.less`, Bangs.generateLess(property), function (err, data) { if (err) throw err })
+      fs.writeFile(`${__dirname}/css/dist/_${property.name}.less`, property.generateLess(), function (err, data) { if (err) throw err })
     })
   })
   return;

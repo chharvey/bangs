@@ -9,6 +9,10 @@ const GLOBAL = require('../global-data.json') // TODO once Bangs.class doesn’t
  * its initial value and whether it is inherited.
  */
 class PropertySpec {
+  /**
+   * Construct a new PropertySpec object.
+   * @param   {!Object} data JSON data to parse
+   */
   constructor(data) {
     /**
      * @summary A named list of possible generator functions.
@@ -148,6 +152,100 @@ class PropertySpec {
         return transform_obj
       })(g.transforms || {}), g.options)
     }, this)
+  }
+
+  /**
+   * Generate Less from this object.
+   * @returns {string} a Less stylesheet for this property
+   */
+  generateLess() {
+    let supported_media   = GLOBAL.media .filter((m) => !(this.non_media || []).includes(m.name))
+    let supported_pseudos = GLOBAL.pseudo.filter((p) =>  (this.pseudo    || []).includes(p.name))
+
+    /**
+     * Output multiple CSS rulesets corresponding to a set of values.
+     * @return {string} multiple rulesets concatenated into a string
+     */
+    let output = () => {
+      let rulesets = []
+      GLOBAL.values.concat(this.values).forEach(function (value) {
+        let codes_arr = (Array.isArray(value.code)) ? value.code : [value.code] // use this if cannot find value.code (shant, as it’s required) // || GLOBAL.values.find((v) => v.name===value.name).code
+        let selector = codes_arr.map((c) => `.-${this.code}-${c}`).join(', ')
+        let rules = (() => {
+          /**
+           * Return a CSS/Less declaration string.
+           * The string will be one of the following forms:
+           * - `property: value`  - if the property has no vendor fallback
+           * - the result of calling the property’s vendor fallback function, with `val` as the argument
+           * @param  {string} val a string representing a CSS value
+           * @return {string}     a string representing a CSS declaration
+           */
+          let declaration = (val) => `${this.name}: ${val}`
+          let global_fallback = ({
+            // TODO remove `initial` fallback once widely supported
+            'initial': (() => {
+              if (!this.initial) return '' // if the inital value is not specified by CSS specs
+              let initial_val = this.values.find((v) => v.name===this.initial)
+              return (initial_val) ? `.-${this.code}-${initial_val.code};` : `${declaration(this.initial)} !important;`
+            })(),
+            // TODO remove `unset` fallback once widely supported
+            'unset': (() => {
+              let val_code = GLOBAL.values.find((v) => v.name===(
+                (this.inherited) ? 'inherit' : 'initial'
+              )).code
+              return `.-${this.code}-${val_code};`
+            })()
+          })[value.name]
+          return (
+            ((global_fallback) ? `${global_fallback} ` : '')
+            + `${(value.use) ? value.use : declaration(value.name)} !important;`
+          )
+        })()
+        rulesets.push(`${selector} { ${rules} }`)
+      }, this)
+      return rulesets.join('\n')
+    }
+
+    /**
+     * Similar to `output()`, but with a suffix for an at-rule.
+     * @param  {string} suffix suffix appended to classname
+     * @return {string}        multiple rulesets wrapped in an at-rule block
+     */
+    function atRule(suffix) {
+      let rulesets = []
+      GLOBAL.values.concat(this.values).forEach(function (value) {
+        let codes_arr = (Array.isArray(value.code)) ? value.code : [value.code]
+        let selector = codes_arr.map((c) => `.-${this.code}-${c}-${suffix}`).join(', ')
+        let rules = `.-${this.code}-${codes_arr[0]};`
+        rulesets.push(`${selector} { ${rules} }`)
+      }, this)
+      return `
+        @media ${GLOBAL.media.find((m) => m.code===suffix).query} {
+          ${rulesets.join('\n')}
+        }
+      `
+    }
+
+    /**
+     * Similar to `output()`, but with a suffix for a pseudo-class.
+     * @param  {string} suffix suffix appended to classname
+     * @return {string}        multiple rulesets in a string
+     */
+    function pseudoClass(suffix) {
+      let rulesets = []
+      GLOBAL.values.concat(this.values).forEach(function (value) {
+        let codes_arr = (Array.isArray(value.code)) ? value.code : [value.code]
+        let selector = codes_arr.map((c) => `.-${this.code}-${c}-${suffix}`).join(', ')
+        let less_parent = GLOBAL.pseudo.find((p) => p.code===suffix).selectors.map((s) => `&${s}`).join(', ')
+        let rules = `.-${this.code}-${codes_arr[0]};`
+        rulesets.push(`${selector} { ${less_parent} { ${rules} } }`)
+      }, this)
+      return rulesets.join('\n')
+    }
+
+    return output()
+      + supported_media  .map((m) => m.code).map(atRule     , this).join('')
+      + supported_pseudos.map((p) => p.code).map(pseudoClass, this).join('')
   }
 }
 
