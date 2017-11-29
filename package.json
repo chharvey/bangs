@@ -23,14 +23,14 @@
   },
   "homepage": "http://chharvey.github.io/bangs/",
   "devDependencies": {
-    "ajv": "^5.1.3",
-    "extrajs": "^0.8.0",
+    "ajv": "^5.5.0",
+    "extrajs": "^0.10.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
-    "gulp-clean-css": "^3.4.1",
+    "gulp-clean-css": "^3.9.0",
     "gulp-less": "^3.3.0",
     "gulp-pug": "^3.3.0",
-    "gulp-sourcemaps": "^2.6.0",
+    "gulp-sourcemaps": "^2.6.1",
     "sitepage": "^1.0.0",
     "xmeter": "^5.3.1"
   }
