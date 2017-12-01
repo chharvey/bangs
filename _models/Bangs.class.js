@@ -4,29 +4,24 @@ const xjs = require('extrajs')
 const PropertySpec = require('../class/PropertySpec.class.js')
 const GLOBAL       = require('../global-data.json')
 
-const DATA = (function compileData(data) {
-
-  return (function () {
-    ;(function () {
+const DATA = (function (raw_data) {
+  const SCHEMA = (function (raw_schema) {
       let ajv = new Ajv()
-      let is_schema_valid = ajv.validateSchema(require('../bangs.schema.json'))
+      let is_schema_valid = ajv.validateSchema(raw_schema)
       if (!is_schema_valid) {
         console.error(ajv.errors)
         throw new Error('Schema is not a valid schema!')
       }
-    })()
-    data = data.map((propertyspec) => new PropertySpec(propertyspec))
-    ;(function () {
+      return raw_schema
+  })(require('../bangs.schema.json'))
       let ajv = new Ajv()
-      let is_data_valid = ajv.validate(require('../bangs.schema.json'), data)
+      let is_data_valid = ajv.validate(SCHEMA, raw_data)
       if (!is_data_valid) {
         console.error(ajv.errors)
         throw new Error('Data does not valiate against schema!')
       }
-    })()
-    return data
-  })()
-})(xjs.Object.cloneDeep(require('../bangs.json')))
+      return raw_data.map((propertyspec) => new PropertySpec(propertyspec))
+})(require('../bangs.json'))
 
 /**
  * Static class for this project.
@@ -42,8 +37,7 @@ class Bangs {
 
   /**
    * This project’s data, compiled from raw JSON.
-   * See `/bangs.json` for more information
-   * @type {Object}
+   * @constant {!Object}
    */
   static get DATA() { return DATA }
 }

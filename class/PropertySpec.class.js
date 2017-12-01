@@ -139,8 +139,9 @@ class PropertySpec {
     this.inherited = data.inherited
     this.initial   = data.initial
     this.stability = data.stability
-    this.values    = data.values
-    this.pseudo    = data.pseudo
+    this.values    = xjs.Object.cloneDeep(data.values)
+    this.non_media = xjs.Object.cloneDeep(data.non_media)
+    this.pseudo    = xjs.Object.cloneDeep(data.pseudo)
 
     ;(data.generators || []).forEach(function (g) {
       GENERATOR[g.name].call(this, (function (transforms_data) {
